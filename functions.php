@@ -25,10 +25,10 @@ if ( ! function_exists( 'fruitful_setup' ) ):
  * @since Fruitful theme 1.0
  */
  
-define('ADMIN_JQS',  						get_template_directory_uri() . '/inc/js/' );
-define('ADMIN_STYLE',  			    	get_template_directory_uri() . '/inc/css/' );
-define('GENERAL', 								TEMPLATEPATH . '/inc/');
-define('GENERAL_FUNCTIONS', 	TEMPLATEPATH . '/inc/functions/');
+define('ADMIN_JQS',  	get_template_directory_uri() . '/inc/js/' );
+define('ADMIN_STYLE',  get_template_directory_uri() . '/inc/css/' );
+define('GENERAL', 		TEMPLATEPATH . '/inc/');
+define('GENERAL_FUNCTIONS',	TEMPLATEPATH . '/inc/functions/');
 
 
 function fruitful_setup() {

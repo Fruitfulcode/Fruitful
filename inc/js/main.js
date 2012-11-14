@@ -169,7 +169,7 @@ jQuery(document).ready(function($) {
 			var data = {
 						action: 'fruitful_add_new_slide_action',
 						type:    'add_new_slide',
-						data: $('.slides').children().size() -1
+						data: $('.slides').children().size()
 					};	
 		 
 			jQuery.post(ajaxurl, data, function(response) {
