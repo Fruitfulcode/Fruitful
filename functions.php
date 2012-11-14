@@ -299,7 +299,7 @@ function get_all_style () {
 /*Get footer text*/
 function get_footer_text () {
 	$theme_options  = ret_options("fruitful_theme_options"); 
-	return $theme_options['footer_text'];
+	return stripslashes($theme_options['footer_text']);
 }
 
 /*Get footer social icons*/

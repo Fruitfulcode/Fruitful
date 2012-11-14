@@ -410,6 +410,7 @@ function fruitful_slider_images() {
 		</ul>
 		<input type="button" class="button-primary add_new_btn" value="Add New Slide" />
 		
+		
 <?php
 }
 

@@ -1049,7 +1049,7 @@ object
 
 #page .container .content .info_box_area .info_box .infobox_title   {margin:0 0 20px 0; font-weight:300}
 #page .container .content .info_box_area .info_box .info_box_text {padding:0 25px;}
-#page .container .content .info_box_area .info_box  img.icon  {display: block; min-height: 51px; margin: 0 auto 15px; min-width: 51px;}
+#page .container .content .info_box_area .info_box  img.icon  {display: block; min-height: 52px; margin: 0 auto 15px; min-width: 52px;}
 span.text_orange {color:#ff5d2a}
 
 .select-menu {display:none;width:100%; margin:0 0 25px 0 ; cursor:pointer;  padding:6px;  background:#f9f9f9;  border:1px solid #e3e3e3; color:#777; float:left}

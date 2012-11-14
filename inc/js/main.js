@@ -179,7 +179,7 @@ jQuery(document).ready(function($) {
 						} else {
 							$("ul.slides").append(response);
 					  }
-					  
+				  
 				  btnUploadInit('.upload_slide_btn', 'fruitful_theme_options_slider');
 				  btnResetInit('.reset_slide_btn', 'fruitful_theme_options_slider');
 	          });
@@ -197,9 +197,13 @@ jQuery(document).ready(function($) {
 			 if (vElem.css('display') == "none" ) { vElem.fadeIn('slow'); } else { vElem.fadeOut('slow'); }	
 		});
 	
-		$(".remove-slide").bind("click", function() {
+		$(".remove-slide").live("click", function() {
 			var vElemRemove = $(this).parent().parent();
-			$(this).parent().next().find('.reset_slide_btn').click();
+			console.log($(this).parent().next().find('.reset_slide_btn').length);
+			if ($(this).parent().next().find('.reset_slide_btn').length > 0) {
+			   $(this).parent().next().find('.reset_slide_btn').click();
+			}
+			
 			vElemRemove.remove();
 			
 			/*Update Array() for order slides on remove slide*/
