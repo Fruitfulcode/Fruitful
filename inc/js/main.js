@@ -2,14 +2,23 @@ jQuery(document).ready(function($) {
   
   $('#settings-section-0').fadeIn("slow");
   $('.form-admin-fruitful .content .menu-options ul li').click(function() {
+
 	$('.form-admin-fruitful .content .menu-options ul li').removeClass("current");
+	$(this).addClass("current");
+	$(this).prev().css({'border-bottom':'0'});
+	$(this).css({'border-top':'1px solid #E5E5E5'});
+	
 	$('.form-admin-fruitful .content .settings-section').hide();
 	
-		$(this).addClass("current");
+
+	
+		 
 		var index_a = $(this).find('a').attr("id");
 			 index_a = index_a.substr(index_a.indexOf('_') + 1);
 		$('#settings-section-' + index_a).fadeIn("slow");
-		
+			
+		 
+
   });
 	
 	$("#upload_bg_button").click(function() {
@@ -169,7 +178,7 @@ jQuery(document).ready(function($) {
 			var data = {
 						action: 'fruitful_add_new_slide_action',
 						type:    'add_new_slide',
-						data: $('.slides').children().size()
+						data: $('.slides').children().size() + 1
 					};	
 		 
 			jQuery.post(ajaxurl, data, function(response) {

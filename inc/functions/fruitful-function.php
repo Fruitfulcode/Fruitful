@@ -151,8 +151,8 @@ function fruitful_fonts_list() {
 			'label' => __( 'Comic Sans MS, cursive', 'fruitful' )
 		),
 		'9' => array(
-			'value' => 	    '"Open Sans", sans-serif',
-			'label' => __( '"Open Sans", sans-serif', 'fruitful' )
+			'value' => 	   'Open Sans, sans-serif',
+			'label' => __( 'Open Sans, sans-serif', 'fruitful' )
 		)
 	);
 
@@ -193,7 +193,7 @@ function custom_do_settings_fields($page, $section) {
          !isset($wp_settings_fields[$page]) ||
          !isset($wp_settings_fields[$page][$section]) )
         return;
-
+		
     foreach ( (array) $wp_settings_fields[$page][$section] as $field ) {
         print '<div id="set_form_row_' . $id_ .'" class="settings-form-row">';
         if ( !empty($field['args']['label_for']) )
@@ -201,13 +201,13 @@ function custom_do_settings_fields($page, $section) {
         else
             print '<h3 class="main-header-options">' . $field['title'];
 			print '</h3>';
+				print '<span class="add_element_info">'.$field['args']['info'].'</span>';
 				print '<div class="box-options">';
 				call_user_func($field['callback'], $field['args']);
 		print '</div></div>';
 			$id_++;		 
     }
 }
-
 
 function add_admin_style() {
 	wp_enqueue_style('admin-style', 		ADMIN_STYLE . 'admin.css');

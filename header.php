@@ -91,6 +91,29 @@
 			className: 'select-menu',
 			subMenuDash: '&nbsp;&nbsp;&ndash;'
 		});
+		
+		/*Fancy Box*/
+		
+		$(".fn_box_img").fancybox({
+				padding: 0,
+				openEffect : 'elastic',
+				openSpeed  : 150,
+				closeEffect : 'elastic',
+				closeSpeed  : 150,
+				width : 800,
+				height : 600,
+				maxWidth : 1024,
+				maxHeight : 768,
+				closeClick : true,
+				helpers : {
+					overlay : {
+						css : {
+							'background' : 'rgba(0,0,0,0.25)'
+						}
+					}
+				}
+			});
+			
 	});
 </script>
 
