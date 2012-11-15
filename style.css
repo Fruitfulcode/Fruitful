@@ -52,7 +52,7 @@ body
 	text-rendering: optimizelegibility;
 	color:#333333;
 	font-family: "Open Sans", sans-serif;
-	background-position: center center;
+	background-position: center center
 }
 
 .container { position: relative; width: 960px; margin: 0 auto; padding: 0; }
