@@ -21,37 +21,37 @@
 .form-admin-fruitful .content .menu-options ul li a			  {float: left; font-weight: bold; line-height: 25px; min-width: 10em; padding: 14px 5px; width: 146px; text-decoration:none; color:#818181;  }
 .form-admin-fruitful .content .menu-options ul li a:hover {color:#e1704b}
 
-.form-admin-fruitful .content .menu-options ul li a #menu_img_0, 
-.form-admin-fruitful .content .menu-options ul li a #menu_img_1,
+.form-admin-fruitful .content .menu-options ul li a #menu_img_1, 
 .form-admin-fruitful .content .menu-options ul li a #menu_img_2,
 .form-admin-fruitful .content .menu-options ul li a #menu_img_3,
 .form-admin-fruitful .content .menu-options ul li a #menu_img_4,
 .form-admin-fruitful .content .menu-options ul li a #menu_img_5,
-.form-admin-fruitful .content .menu-options ul li a #menu_img_6  {background-image:url(../images/admin_menu_icon.png); background-repeat:no-repeat; display:block; width:29px; height:25px; float:left; margin: 0 15px 0 0;}
+.form-admin-fruitful .content .menu-options ul li a #menu_img_6,
+.form-admin-fruitful .content .menu-options ul li a #menu_img_7  {background-image:url(../images/admin_menu_icon.png); background-repeat:no-repeat; display:block; width:29px; height:25px; float:left; margin: 0 15px 0 0;}
 
-.form-admin-fruitful .content .menu-options ul li a #menu_img_0 {background-position:0 0;}
-.form-admin-fruitful .content .menu-options ul li a #menu_img_1 {background-position: -93px 0;}
-.form-admin-fruitful .content .menu-options ul li a #menu_img_2 {background-position:-185px 0;}
-.form-admin-fruitful .content .menu-options ul li a #menu_img_3 {background-position:-275px 0;}
-.form-admin-fruitful .content .menu-options ul li a #menu_img_4 {background-position:-369px 0;}
-.form-admin-fruitful .content .menu-options ul li a #menu_img_5 {background-position:-463px 0;}
-.form-admin-fruitful .content .menu-options ul li a #menu_img_6 {background-position:-555px 0;}
+.form-admin-fruitful .content .menu-options ul li a #menu_img_1 {background-position:0 0;}
+.form-admin-fruitful .content .menu-options ul li a #menu_img_2 {background-position: -93px 0;}
+.form-admin-fruitful .content .menu-options ul li a #menu_img_3 {background-position:-185px 0;}
+.form-admin-fruitful .content .menu-options ul li a #menu_img_4 {background-position:-275px 0;}
+.form-admin-fruitful .content .menu-options ul li a #menu_img_5 {background-position:-369px 0;}
+.form-admin-fruitful .content .menu-options ul li a #menu_img_6 {background-position:-463px 0;}
+.form-admin-fruitful .content .menu-options ul li a #menu_img_7 {background-position:-555px 0;}
 
-.form-admin-fruitful .content .menu-options ul li.current a #menu_img_0 {background-position:-31px 0;}
-.form-admin-fruitful .content .menu-options ul li.current a #menu_img_1 {background-position:-124px 0;}
-.form-admin-fruitful .content .menu-options ul li.current a #menu_img_2 {background-position:-214px 0;}
-.form-admin-fruitful .content .menu-options ul li.current a #menu_img_3 {background-position:-307px 0;}
-.form-admin-fruitful .content .menu-options ul li.current a #menu_img_4 {background-position:-400px 0;}
-.form-admin-fruitful .content .menu-options ul li.current a #menu_img_5 {background-position:-494px 0;}
-.form-admin-fruitful .content .menu-options ul li.current a #menu_img_6 {background-position:-586px 0;}
+.form-admin-fruitful .content .menu-options ul li.current a #menu_img_1 {background-position:-31px 0;}
+.form-admin-fruitful .content .menu-options ul li.current a #menu_img_2 {background-position:-124px 0;}
+.form-admin-fruitful .content .menu-options ul li.current a #menu_img_3 {background-position:-214px 0;}
+.form-admin-fruitful .content .menu-options ul li.current a #menu_img_4 {background-position:-307px 0;}
+.form-admin-fruitful .content .menu-options ul li.current a #menu_img_5 {background-position:-400px 0;}
+.form-admin-fruitful .content .menu-options ul li.current a #menu_img_6 {background-position:-494px 0;}
+.form-admin-fruitful .content .menu-options ul li.current a #menu_img_7 {background-position:-586px 0;}
 
-.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_0 {background-position:-62px 0;}
-.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_1 {background-position:-155px 0;}
-.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_2 {background-position:-245px 0;}
-.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_3 {background-position:-338px 0;}
-.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_4 {background-position:-431px 0;}
-.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_5 {background-position:-525px 0;}
-.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_6 {background-position:-617px 0;}
+.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_1 {background-position:-62px 0;}
+.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_2 {background-position:-155px 0;}
+.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_3 {background-position:-245px 0;}
+.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_4 {background-position:-338px 0;}
+.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_5 {background-position:-431px 0;}
+.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_6 {background-position:-525px 0;}
+.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_7 {background-position:-617px 0;}
 
 
 .form-admin-fruitful .content .settings-section { background: #FFFFFF;  float: right; padding: 15px 34px 15px 0; width: 710px; display:none; min-height:600px}

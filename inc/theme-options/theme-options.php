@@ -24,6 +24,7 @@ function fruitful_theme_options_init() {
 		'' // The sanitization callback, see fruitful_theme_options_validate()
 	);
 	// Register our settings field group
+	add_settings_section('general_settings',	'',  '__return_false', 'theme_options' );
 	add_settings_section('background',		'',  '__return_false', 'theme_options' );
 	add_settings_section('logo', 				'',  '__return_false', 'theme_options' );
 	add_settings_section('menu', 				'',  '__return_false', 'theme_options' );
@@ -32,12 +33,14 @@ function fruitful_theme_options_init() {
 	add_settings_section('links', 				'',  '__return_false', 'theme_options' );
 	add_settings_section('footer', 				'',  '__return_false', 'theme_options' );
 	
+	add_settings_field( 'general_options', 		__( 'Post Comment', 'fruitful' ), 'fruitful_get_general_comment',  'theme_options',  'general_settings', array('info' => __( '', 'fruitful' )));
+	
 	add_settings_field( 'background_image', 	__( 'Background Image', 'fruitful' ), 'fruitful_get_background_img',  'theme_options',  'background', array('info' => __( 'Please upload needed image for site background. (Supported files .png, .jpg, .gif)', 'fruitful' )));
 	add_settings_field( 'background_color', 	__( 'Background Color ', 'fruitful' ), 'fruitful_get_background_color', 'theme_options', 'background');
 		
-	add_settings_field( 'logo_image', 			__( 'Logo Image', 'fruitful' ), 		'fruitful_get_logo_img',	'theme_options', 'logo', array('info' => __( 'Please upload needed image for site logo. (Supported files .png, .jpg, .gif)', 'fruitful' )));
-	add_settings_field( 'logo_size', 				__( 'Logo Size', 'fruitful' ), 		'fruitful_get_logo_wh',		'theme_options', 'logo', array('info' => __( 'Please select resolution for your logo image. Our theme will crop (timthumb) your image for need size.', 'fruitful' )) );
-	add_settings_field( 'menu_style',				__( 'Menu Style ', 'fruitful' ),	 	'fruitful_menu_style',		'theme_options', 'menu', array('info' => __( 'Please fill styles to display menu items.', 'fruitful' )) );
+	add_settings_field( 'logo_image', 			__( 'Logo Image', 'fruitful' ), 		'fruitful_get_logo_img',	'theme_options', 'logo', 	array('info' => __( 'Please upload needed image for site logo. (Supported files .png, .jpg, .gif)', 'fruitful' )));
+	add_settings_field( 'logo_size', 				__( 'Logo Size', 'fruitful' ), 		'fruitful_get_logo_wh',		'theme_options', 'logo', 	array('info' => __( 'Please select resolution for your logo image. Our theme will crop (timthumb) your image for need size.', 'fruitful' )) );
+	add_settings_field( 'menu_style',				__( 'Menu Style ', 'fruitful' ),	 	'fruitful_menu_style',		'theme_options', 'menu',  array('info' => __( 'Please fill styles to display menu items.', 'fruitful' )) );
 	add_settings_field( 'fonts_options', 			__( 'Fonts Options', 'fruitful' ), 	'fruitful_fonts_options',	'theme_options', 'fonts');
 	add_settings_field( 'slider_options',			__( 'Slider Options', 'fruitful' ), 	'fruitful_slider_options',	'theme_options', 'slider');
 	add_settings_field( 'slider_image',			__( 'Slider Images', 'fruitful' ), 	'fruitful_slider_images',	'theme_options', 'slider');
@@ -49,6 +52,24 @@ function fruitful_theme_options_init() {
 	add_option( 'fruitful_theme_slides_sort_options', '', '', 'yes' ); 
 }
 
+add_action( 'admin_bar_menu', 'wp_codex_search_form', 1000 );
+
+function wp_codex_search_form() {
+    global $wp_admin_bar, $wpdb;
+		if ( !is_super_admin() || !is_admin_bar_showing() )
+		return;
+			$codex_search = '<form style="margin: 5px 0 0;" action="http://wordpress.org/search/do-search.php" method="get">
+												<input class="adminbar-input" maxlength="100" name="search" size="13" type="text" value="' . __( 'Search the Codex', 'textdomain' ) . '" />
+												<button class="adminbar-button">
+												<span>Go</span>
+												</button>
+										</form>';
+    /* Add the main siteadmin menu item */
+    $wp_admin_bar->add_menu( array( 'id' => 'codex_search', 'title' => __( 'Search the Codex', 'textdomain' ), 'href' => FALSE ) );
+    $wp_admin_bar->add_menu( array( 'parent' => 'codex_search', 'title' => $codex_search, 'href' => FALSE ) );
+    }
+
+	
 add_action( 'admin_init', 'fruitful_theme_options_init' );
 
 add_action( 'admin_enqueue_scripts', 'add_admin_options_and_styles' );
@@ -82,7 +103,7 @@ add_filter( 'option_page_capability_fruitful_options', 'fruitful_option_page_cap
 function fruitful_theme_options_add_page() {
 	$theme_page = add_menu_page(
 		__( 'Fruitful Theme Options', 'fruitful' ),   	// Name of page
-		__( 'Fruitful Options', 'fruitful' ),   			    // Label in menu
+		__( 'Theme Options', 'fruitful' ),   			    // Label in menu
 			'edit_theme_options',          	 				// Capability required
 			'theme_options',                     				// Menu slug, used to uniquely identify the page
 			'fruitful_theme_options_render_page' 		// Function that renders the options page
@@ -238,6 +259,13 @@ function fruitful_settings_field_sample_textarea() {
 	<textarea class="large-text" type="text" name="fruitful_theme_options[sample_textarea]" id="sample-textarea" cols="50" rows="10" /><?php echo esc_textarea( $options['sample_textarea'] ); ?></textarea>
 	<label class="description" for="sample-textarea"><?php _e( 'Sample textarea', 'fruitful' ); ?></label>
 	<?php
+}
+
+function fruitful_get_general_comment() {
+$options = fruitful_get_theme_options();
+	?>
+
+	<?php	
 }
 	
 
@@ -474,13 +502,14 @@ function fruitful_theme_options_render_page() {
 			<div class="content">
 				<div class="menu-options">
 					<ul>
-						<li class="current"><a  id="item_0" href="javascript:void(0)" 	title="Background"><span id="menu_img_0"></span><?php _e( 'Background', 'fruitful' ); ?></a></li>
-						<li><a  id="item_1" href="javascript:void(0)" title="Logo">				<span id="menu_img_1"></span><?php _e( 'Logo',   'fruitful' ); ?></a></li>
-						<li><a  id="item_2" href="javascript:void(0)" title="Menu">				<span id="menu_img_2"></span><?php _e( 'Menu', 'fruitful' ); ?></a></li>
-						<li><a  id="item_3" href="javascript:void(0)" title="Fonts">			<span id="menu_img_3"></span><?php _e( 'Fonts', 'fruitful' ); ?></a></li>
-						<li><a  id="item_4" href="javascript:void(0)" title="Slider">			<span id="menu_img_4"></span><?php _e( 'Slider', 'fruitful' ); ?></a></li>
-						<li><a  id="item_5" href="javascript:void(0)" title="Social Links">	<span id="menu_img_5"></span><?php _e( 'Social Links', 'fruitful' ); ?></a></li>
-						<li><a  id="item_6" href="javascript:void(0)" title="Footer">			<span id="menu_img_6"></span><?php _e( 'Footer', 'fruitful' ); ?></a></li>
+						<li class="current"><a  id="item_0" href="javascript:void(0)" 	title="General Settings"><span id="menu_img_0"></span><?php _e( 'General Settings', 'fruitful' ); ?></a></li>
+						<li><a  id="item_1" href="javascript:void(0)"	title="Background">	<span id="menu_img_1"></span><?php _e( 'Background', 'fruitful' ); ?></a></li>
+						<li><a  id="item_2" href="javascript:void(0)" title="Logo">				<span id="menu_img_2"></span><?php _e( 'Logo',   'fruitful' ); ?></a></li>
+						<li><a  id="item_3" href="javascript:void(0)" title="Menu">				<span id="menu_img_3"></span><?php _e( 'Menu', 'fruitful' ); ?></a></li>
+						<li><a  id="item_4" href="javascript:void(0)" title="Fonts">			<span id="menu_img_4"></span><?php _e( 'Fonts', 'fruitful' ); ?></a></li>
+						<li><a  id="item_5" href="javascript:void(0)" title="Slider">			<span id="menu_img_5"></span><?php _e( 'Slider', 'fruitful' ); ?></a></li>
+						<li><a  id="item_6" href="javascript:void(0)" title="Social Links">	<span id="menu_img_6"></span><?php _e( 'Social Links', 'fruitful' ); ?></a></li>
+						<li><a  id="item_7" href="javascript:void(0)" title="Footer">			<span id="menu_img_7"></span><?php _e( 'Footer', 'fruitful' ); ?></a></li>
 					</ul>
 				</div> 	
 		

@@ -372,5 +372,5 @@ function remove_dir($dir)  {
 			}
 		}
 	}	
-}		
+}	
 ?>
