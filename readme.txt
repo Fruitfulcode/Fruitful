@@ -1,8 +1,7 @@
-<<<<<<< HEAD
-=== Fruitful theme===
->>>>>>>
 
-Hi. I'm a starter theme called Fruitful theme, or underscores, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+=== Fruitful theme===
+
+Hi. I'm a starter theme called Fruitful theme. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
 
 My ultra-minimal CSS might make me look like theme tartare but that means less stuff to get in your way when you're designing your awesome theme. Here are some of the other more interesting things you'll find here ...
 
@@ -83,5 +82,4 @@ Then, update the stylesheet header in style.css and the links in footer.php with
 
 Now you're ready to go! The next step is easy to say but harder to do: make an awesome WordPress theme. :)
 
->>>>>>> add 3
 Good luck!
