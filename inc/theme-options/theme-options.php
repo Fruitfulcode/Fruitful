@@ -33,7 +33,9 @@ function fruitful_theme_options_init() {
 	add_settings_section('links', 				'',  '__return_false', 'theme_options' );
 	add_settings_section('footer', 				'',  '__return_false', 'theme_options' );
 	
-	add_settings_field( 'general_options', 		__( 'Post Comment', 'fruitful' ), 'fruitful_get_general_comment',  'theme_options',  'general_settings', array('info' => __( '', 'fruitful' )));
+	add_settings_field( 'general_options_rs', 		__( 'Responsive', 'fruitful' ),	    'fruitful_get_responsive_design',	'theme_options',  'general_settings', array('info' => __( '', 'fruitful' )));
+	add_settings_field( 'general_options_cm',		__( 'Post Comment', 'fruitful' ), 'fruitful_get_general_comment',  	'theme_options',  'general_settings', array('info' => __( '', 'fruitful' )));
+	
 	
 	add_settings_field( 'background_image', 	__( 'Background Image', 'fruitful' ), 'fruitful_get_background_img',  'theme_options',  'background', array('info' => __( 'Please upload needed image for site background. (Supported files .png, .jpg, .gif)', 'fruitful' )));
 	add_settings_field( 'background_color', 	__( 'Background Color ', 'fruitful' ), 'fruitful_get_background_color', 'theme_options', 'background');
@@ -51,24 +53,6 @@ function fruitful_theme_options_init() {
 	add_option( 'fruitful_theme_slides_options', '', '', 'yes' ); 
 	add_option( 'fruitful_theme_slides_sort_options', '', '', 'yes' ); 
 }
-
-add_action( 'admin_bar_menu', 'wp_codex_search_form', 1000 );
-
-function wp_codex_search_form() {
-    global $wp_admin_bar, $wpdb;
-		if ( !is_super_admin() || !is_admin_bar_showing() )
-		return;
-			$codex_search = '<form style="margin: 5px 0 0;" action="http://wordpress.org/search/do-search.php" method="get">
-												<input class="adminbar-input" maxlength="100" name="search" size="13" type="text" value="' . __( 'Search the Codex', 'textdomain' ) . '" />
-												<button class="adminbar-button">
-												<span>Go</span>
-												</button>
-										</form>';
-    /* Add the main siteadmin menu item */
-    $wp_admin_bar->add_menu( array( 'id' => 'codex_search', 'title' => __( 'Search the Codex', 'textdomain' ), 'href' => FALSE ) );
-    $wp_admin_bar->add_menu( array( 'parent' => 'codex_search', 'title' => $codex_search, 'href' => FALSE ) );
-    }
-
 	
 add_action( 'admin_init', 'fruitful_theme_options_init' );
 
@@ -100,7 +84,8 @@ add_filter( 'option_page_capability_fruitful_options', 'fruitful_option_page_cap
  *
  * @since Fruitful theme 1.0
  */
-function fruitful_theme_options_add_page() {
+add_action( 'admin_menu', 'fruitful_theme_options_add_page' );
+ function fruitful_theme_options_add_page() {
 	$theme_page = add_menu_page(
 		__( 'Fruitful Theme Options', 'fruitful' ),   	// Name of page
 		__( 'Theme Options', 'fruitful' ),   			    // Label in menu
@@ -109,7 +94,17 @@ function fruitful_theme_options_add_page() {
 			'fruitful_theme_options_render_page' 		// Function that renders the options page
 	);
 }
-add_action( 'admin_menu', 'fruitful_theme_options_add_page' );
+
+
+add_action( 'admin_bar_menu', 'add_custom_link_options', 1000 );
+function add_custom_link_options() {
+    global $wp_admin_bar, $wpdb;
+		if ( !is_super_admin() || !is_admin_bar_showing() )
+		return;
+
+	/* Add the main siteadmin menu item */
+    $wp_admin_bar->add_menu( array( 'id' => 'fruitfultheme_options', 'title' => __( 'Theme Options', 'textdomain' ), 'href' => admin_url('admin.php?page=theme_options')));	
+}
 
 
 /**
@@ -120,6 +115,14 @@ add_action( 'admin_menu', 'fruitful_theme_options_add_page' );
 function fruitful_get_theme_options() {
 	$saved = (array) get_option( 'fruitful_theme_options' );
 	$defaults = array(
+		/*General Settings*/
+		'responsive'					=> 'on',
+		
+		'postcomment'				=> 'on',
+		'pagecomment'				=> 'on',
+		
+		
+		/*Background Image*/
 		'backgroung_img'        	=> '',
 		'background_color'			=> '#ffffff', 
 		'bg_repeating'				=> 'off',
@@ -134,14 +137,14 @@ function fruitful_get_theme_options() {
 		'menu_txtsh_color'			=> '#84442c',
 		'menu_font_color'			=> '#333333',		
 		/*fonts*/
-		'h_font_family'				=> '"Open Sans", sans-serif',
+		'h_font_family'				=> 'Open Sans, sans-serif',
 		'h1_size'						=> '26',
 		'h2_size'						=> '24',
 		'h3_size'						=> '18',
 		'h4_size'						=> '14',
 		'h5_size'						=> '12',
 		'h6_size'						=> '10',
-		'p_font_family'				=> '"Open Sans", sans-serif',
+		'p_font_family'				=> 'Open Sans, sans-serif',
 		'p_size'							=> '12',
 		/*slider*/
 		's_width'						=> '960',
@@ -261,10 +264,36 @@ function fruitful_settings_field_sample_textarea() {
 	<?php
 }
 
-function fruitful_get_general_comment() {
-$options = fruitful_get_theme_options();
-	?>
 
+function fruitful_get_responsive_design() { 
+	$options = fruitful_get_theme_options();
+	
+	?>
+	<div class="box-option">
+			<label for="responsive_ch">
+				<?php _e( 'Enable Responsive', 'fruitful' ); ?>
+				<input type="checkbox" name="fruitful_theme_options[responsive]" id="responsive_ch" <?php checked( 'on', $options['responsive']); ?> />
+			</label>
+	</div>
+<?php }
+
+function fruitful_get_general_comment() {
+	$options = fruitful_get_theme_options();
+	
+	?>
+		<div class="box-option">
+			<label for="postcomment_ch">
+				<?php _e( 'Enable on Post Comment', 'fruitful' ); ?>
+				<input type="checkbox" name="fruitful_theme_options[postcomment]" id="postcomment_ch" <?php checked( 'on', $options['postcomment']); ?> />
+			</label>
+		</div>
+					
+		<div class="box-option">
+			<label for="pagecomment_ch">
+				<?php _e( 'Enable on Page Comment', 'fruitful' ); ?>
+				<input type="checkbox" name="fruitful_theme_options[pagecomment]" id="pagecomment_ch" <?php checked( 'on', $options['pagecomment']); ?> />
+			</label>
+		</div>
 	<?php	
 }
 	
@@ -423,16 +452,20 @@ function fruitful_slider_images() {
 						foreach ($options_order as $value) {
 							$index = str_replace("slide_image_", "", $value);
 								if ($options_slides['slide_' . $index] != '') {
-									echo fruitful_get_slide($options_slides, $index, 538, 250); 
+									echo fruitful_get_slide($options_slides, $index, 608, 300); 
 								}
 						}
 					} else {
-					echo fruitful_get_slide($options_slides, 1, 538, 250); 
+					
+					if ($vcount_slide == 0) {
+						echo fruitful_get_slide($options_slides, 1,608, 300); 
+					}
 
 					
 					for ($i = 1; $i <= $vcount_slide; $i++) {
 						    if ($options_slides['slide_' . $i] != '') {
-								echo fruitful_get_slide($options_slides, $i, 538, 250); 
+								echo fruitful_get_slide($options_slides, $i, 608, 300); 
+								
 							}
 						}
 					}
@@ -576,14 +609,14 @@ add_action('wp_ajax_fruitful_add_new_slide_action', 'fruitful_new_slide');
 function fruitful_new_slide() {
 	$options_slides = (array) get_option( 'fruitful_theme_slides_options' );
 	$data 	 = $_POST['data'];
-	echo fruitful_get_slide($options_slides, $data, 538, 250); 
+	echo fruitful_get_slide($options_slides, $data, 608, 300); 
 	die();
 }
 
 add_action('wp_ajax_fruitful_theme_options_slider', 'fruitful_slides_save');
 function fruitful_slides_save() {
 	$type   = $_POST['type'];
-	echo file_upload($type, '/fruitfulimg/slides/', 'fruitful_theme_slides_options', 538, 250);
+	echo file_upload($type, '/fruitfulimg/slides/', 'fruitful_theme_slides_options', 608, 300);
 	die();  
 }
 

@@ -55,7 +55,7 @@
 
 
 .form-admin-fruitful .content .settings-section { background: #FFFFFF;  float: right; padding: 15px 34px 15px 0; width: 710px; display:none; min-height:600px}
-.form-admin-fruitful .content .settings-section input[type="text"] { float:left; width:100%; margin:0 0 10px 0}
+.form-admin-fruitful .content .settings-section input[type="text"] { float:left; width:100%; margin:0 0 10px 0; padding-left: 5px;}
 .form-admin-fruitful .content .settings-section input[type="file"]  { display:none}
 .form-admin-fruitful .content .settings-section .save-options {float:left; width:100%; min-height:20px; display:none }
 
@@ -142,5 +142,4 @@
 											}
 .sidebar-promo a.button_help:hover {opacity:1}											
 .form-admin-fruitful .content .settings-section .settings-form-row .box-options #slider_main_options {display:none; float: left; margin: 0 0 20px 0;}
-
 #logo-w, #logo-h {width:105px}

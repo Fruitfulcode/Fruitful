@@ -14,24 +14,18 @@
 <meta name="viewport" content="width=device-width" />
 
 <?php
-		$browser_ip 	= strpos($_SERVER['HTTP_USER_AGENT'],"iPhone");
-		$browser_an 	= strpos($_SERVER['HTTP_USER_AGENT'],"Android");
+		$browser_ip 		= strpos($_SERVER['HTTP_USER_AGENT'],"iPhone");
+		$browser_an 		= strpos($_SERVER['HTTP_USER_AGENT'],"Android");
 		$browser_ipad 	= strpos($_SERVER['HTTP_USER_AGENT'],"iPad");
 		
-	 if ($browser_ip  == true) { $browser = 'iphone'; }
-	 if ($browser_an == true) { $browser = 'android'; } 
-	 if ($browser_ipad == true) { $browser = 'ipad'; }
+	 if ($browser_ip  	== true) { $browser = 'iphone'; }
+	 if ($browser_an	 	== true) { $browser = 'android'; } 
+	 if ($browser_ipad 	== true) { $browser = 'ipad'; }
 ?>
 
-<?php if($browser == 'iphone') { ?>
-	<meta name="viewport" content="width=480">
-<?php } ?> 
-<?php if($browser == 'android') { ?>
-	<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width" />
-<?php } ?>
-<?php if($browser == 'ipad') { ?>
-	<meta name="viewport" content="width=768px, minimum-scale=1.0, maximum-scale=1.0" />
-<?php }?>  
+<?php if($browser == 'iphone') { ?> 	<meta name="viewport" content="width=480"> <?php } ?> 
+<?php if($browser == 'android') { ?> <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width" /> <?php } ?>
+<?php if($browser == 'ipad') { ?> 		<meta name="viewport" content="width=768px, minimum-scale=1.0, maximum-scale=1.0" /> <?php }?>  
 
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <!-- Style Font Family -->
@@ -61,7 +55,7 @@
 	?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+<?php echo get_responsive_style(); ?>
 
 <script type="text/javascript">
   var _gaq = _gaq || [];
@@ -107,19 +101,17 @@
 				closeClick : true,
 				helpers : {
 					overlay : {
-						css : {
-							'background' : 'rgba(0,0,0,0.25)'
-						}
-					}
-				}
-			});
+							css : {
+								'background' : 'rgba(0,0,0,0.25)'
+									}
+								}
+							}
+		});
 			
 	});
 </script>
 
 </head>
-
-
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 	<div class="container">
@@ -129,13 +121,9 @@
 				<hgroup>
 					<?php echo get_logo(); ?>
 				</hgroup>
-
 				<nav role="navigation" class="site-navigation main-navigation">
-					<!--<h1 class="assistive-text"><?php //_e( 'Menu', 'fruitful' ); ?></h1>-->
-					<!--<div class="assistive-text skip-link"><a href="#content" title="<?php //esc_attr_e( 'Skip to content', 'fruitful' ); ?>"><?php //_e( 'Skip to content', 'fruitful' ); ?></a></div>-->
 					<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 				</nav><!-- .site-navigation .main-navigation -->
 			</header><!-- #masthead .site-header -->
 		</div>
-	
 		<div class="sixteen columns">

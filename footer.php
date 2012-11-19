@@ -8,8 +8,6 @@
  * @since Fruitful theme 1.0
  */
 ?>
-	
-		
 		</div>
 			<div class="sixteen columns">
 			<footer id="colophon" class="site-footer" role="contentinfo">
@@ -22,11 +20,7 @@
 			</footer><!-- #colophon .site-footer -->
 		</div>
 		</div><!-- #main .site-main -->
-		
-		
 		</div><!-- #page .hfeed .site -->
-			
-		
 <?php wp_footer(); ?>
 </body>
 </html>

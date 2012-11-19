@@ -1,4 +1,5 @@
 jQuery(document).ready(function($) {
+  $('input[type=checkbox]').ezMark();
   
   $('#settings-section-0').fadeIn("slow");
   $('.form-admin-fruitful .content .menu-options ul li').click(function() {
@@ -9,16 +10,10 @@ jQuery(document).ready(function($) {
 	$(this).css({'border-top':'1px solid #E5E5E5'});
 	
 	$('.form-admin-fruitful .content .settings-section').hide();
-	
 
-	
-		 
-		var index_a = $(this).find('a').attr("id");
-			 index_a = index_a.substr(index_a.indexOf('_') + 1);
+	var index_a = $(this).find('a').attr("id");
+		 index_a = index_a.substr(index_a.indexOf('_') + 1);
 		$('#settings-section-' + index_a).fadeIn("slow");
-			
-		 
-
   });
 	
 	$("#upload_bg_button").click(function() {
@@ -156,6 +151,7 @@ jQuery(document).ready(function($) {
 			 change :function(event, ui) {/*make to chnage sort item index*/ }
 			 
 		});
+		 
 		
 			
 		$('#form-admin-fruitful').submit(function() {

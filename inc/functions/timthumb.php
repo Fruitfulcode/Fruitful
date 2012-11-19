@@ -10,7 +10,7 @@
  * http://www.binarymoon.co.uk/projects/timthumb/
  */
  
-define ('CACHE_SIZE', 1000);                		// number of files to store before clearing cache
+define ('CACHE_SIZE', 10000);					// number of files to store before clearing cache
 define ('CACHE_CLEAR', 20);                 	// maximum number of files to delete on each cache clear
 define ('CACHE_USE', TRUE);                 	// use the cache files? (mostly for testing)
 define ('CACHE_MAX_AGE', 864000);			// time to cache in the browser
@@ -19,7 +19,7 @@ define ('DIRECTORY_CACHE', './cache');		// cache directory
 define ('MAX_WIDTH', 2500);                 		// maximum image width
 define ('MAX_HEIGHT', 2500);                		// maximum image height
 define ('ALLOW_EXTERNAL', FALSE);		// allow external website (override security precaution - not advised!)
-define ('MEMORY_LIMIT', '30M');					// set PHP memory limit
+define ('MEMORY_LIMIT', '64M');					// set PHP memory limit
 define ('MAX_FILE_SIZE', 15000000);			// file size limit to prevent possible DOS attacks (roughly 1.5 megabytes)
 define ('CURL_TIMEOUT', 10);						// timeout duration. Tweak as you require (lower = better)
  

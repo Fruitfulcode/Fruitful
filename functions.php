@@ -219,7 +219,7 @@ function fruitful_get_slider($atts) {
 									}
 									} else {
 					
-									for ($i = 0; $i < $vcount_slider_img; $i++) {
+									for ($i = 1; $i <= $vcount_slider_img; $i++) {
 										$val = $slider_img['slide_' . $i]; 
 										if ($val != '') {
 											$slider_ .= '<li>' . chr(13);
@@ -397,3 +397,25 @@ function get_tracking_code() {
 	return $theme_options['tracking_code'];
 	
 }
+
+/*Enable Comment*/
+function state_post_comment () {
+	$theme_options  = ret_options("fruitful_theme_options"); 
+	return ($theme_options['postcomment'] == "on");
+	
+}
+
+function state_page_comment () {
+	$theme_options  = ret_options("fruitful_theme_options"); 
+	return ($theme_options['pagecomment'] == "on");
+}
+
+function get_responsive_style () {
+	$theme_options  = ret_options("fruitful_theme_options"); 
+	if ($theme_options['responsive'] == 'on') {
+		return '<link rel="stylesheet" type="text/css" media="all" href="'. get_bloginfo( 'stylesheet_url' ) .'" />';
+	} else {
+		return '<link rel="stylesheet" type="text/css" media="all" href="'. get_bloginfo( 'template_url' ) .'/style_nr.css" />';
+	}	
+}
+
