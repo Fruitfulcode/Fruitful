@@ -1,70 +1,4 @@
 <?php
-/**
- * Returns an array of sample radio options registered for Fruitful theme.
- *
- * @since Fruitful theme 1.0
- */
-function fruitful_sample_radio_buttons() {
-	$sample_radio_buttons = array(
-		'yes' => array(
-			'value' => 'yes',
-			'label' => __( 'Yes', 'fruitful' )
-		),
-		'no' => array(
-			'value' => 'no',
-			'label' => __( 'No', 'fruitful' )
-		),
-		'maybe' => array(
-			'value' => 'maybe',
-			'label' => __( 'Maybe', 'fruitful' )
-		)
-	);
-
-	return apply_filters( 'fruitful_sample_radio_buttons', $sample_radio_buttons );
-}
-
-
- /**
- * Returns an array of sample select options registered for Fruitful theme.
- *
- * @since Fruitful theme 1.0
- */
-function fruitful_sample_select_options() {
-	$sample_select_options = array(
-		'0' => array(
-			'value' =>	'0',
-			'label' => __( 'Zero', 'fruitful' )
-		),
-		'1' => array(
-			'value' =>	'1',
-			'label' => __( 'One', 'fruitful' )
-		),
-		'2' => array(
-			'value' => '2',
-			'label' => __( 'Two', 'fruitful' )
-		),
-		'3' => array(
-			'value' => '3',
-			'label' => __( 'Three', 'fruitful' )
-		),
-		'4' => array(
-			'value' => '4',
-			'label' => __( 'Four', 'fruitful' )
-		),
-		'5' => array(
-			'value' => '5',
-			'label' => __( 'Five', 'fruitful' )
-		),
-		'6' => array(
-			'value' => '6',
-			'label' => __( 'Six', 'fruitful' )
-		)
-	);
-
-	return apply_filters( 'fruitful_sample_select_options', $sample_select_options );
-}
-
-
 function fruitful_slide_anim_list() {
 	$slide_anim_options = array(
 		'0' => array(
@@ -106,7 +40,6 @@ function fruitful_bool_list() {
 			'label' => __( 'false', 'fruitful' )
 		)
 	);
-
 	return apply_filters( 'fruitful_bool_list', $font_bool_options);
 }
 
@@ -213,11 +146,12 @@ function add_admin_style() {
 	wp_enqueue_style('admin-style', 		ADMIN_STYLE . 'admin.css');
 	wp_enqueue_style('colorpicker-style',	ADMIN_JQS 	   . 'colorpicker/colorpicker.css');
 	wp_enqueue_style('ch-style',				ADMIN_JQS 	   . 'ch/ch.css');
+	wp_enqueue_style('sl-style',				ADMIN_JQS 	   . 'sl/sl.css');
 }
 
 function add_jquery_script() {
 	wp_deregister_script	("main-jquery");
-	wp_register_script		("main-jquery", "http://code.jquery.com/jquery-1.8.1.min.js", array('jquery'));
+	wp_register_script		("main-jquery", "http://code.jquery.com/jquery-1.8.2.min.js", array('jquery'));
 	wp_enqueue_script	("main-jquery");
 	
 	wp_enqueue_script('admin-jQuery-fruit',	ADMIN_JQS . "main.js", array('jquery'));
@@ -234,6 +168,7 @@ function add_jquery_script() {
 	wp_enqueue_script('position',					ADMIN_JQS . "ui/jquery.ui.position.min.js", array('jquery'));
 	
 	wp_enqueue_script('chJq',						ADMIN_JQS . "ch/ch.js", array('jquery'));
+	wp_enqueue_script('slJq',						ADMIN_JQS . "sl/sl.js", array('jquery'));
 	}
 
 function file_upload($action, $dir_upload = '/fruitfulimg/', $name_options= 'fruitful_theme_options', $w=400, $h=400)
@@ -376,4 +311,75 @@ function remove_dir($dir)  {
 		}
 	}	
 }	
+
+
+
+function get_default_array() {
+return array(
+				/*General Settings*/
+				'responsive'					=> 'on',
+			
+				'postcomment'				=> 'on',
+				'pagecomment'				=> 'on',
+		
+		
+				/*Background Image*/
+				'backgroung_img'        	=> '',
+				'background_color'			=> '#ffffff', 
+				'bg_repeating'				=> 'off',
+			
+				/*logo*/
+				'logo_img'						=> '',
+				'logo_w'							=> '160',
+				'logo_h'							=> '60',
+				
+				/*menu*/
+				'menu_btn_color'			=> '#e1704b',
+				'menu_boxsh_color'		=> '#000000',
+				'menu_hover_color'			=> '#ffffff',
+				'menu_txtsh_color'			=> '#84442c',
+				'menu_font_color'			=> '#333333',		
+				
+				/*fonts*/
+				'h_font_family'				=> 'Open Sans, sans-serif',
+				'h1_size'						=> '26',
+				'h2_size'						=> '24',
+				'h3_size'						=> '18',
+				'h4_size'						=> '14',
+				'h5_size'						=> '12',
+				'h6_size'						=> '10',
+				'p_font_family'				=> 'Open Sans, sans-serif',
+				'p_size'							=> '12',
+				
+				/*slider*/
+				's_width'						=> '960',
+				's_height'						=> '500',
+				's_animation'					=> 'fade', 
+				's_direction'					=> 'horizontal',
+				's_reverse'						=> 'false',
+				's_slideshow'					=> 'true',
+				's_slideshowSpeed'		=> '7000',
+				's_animationSpeed'		=> '600',
+				's_initDelay'					=> '0',
+				's_randomize'				=> 'false',
+				's_controlnav'					=> 'true',
+				
+				/*footer*/
+				'footer_text'					=> stripslashes('Fruitful theme powered by Wordpress'),
+				'tracking_code'				=> '',
+				
+				/*socials*/
+				'facebook_url' 				=> '',
+				'twitter_url' 					=> '',
+				'linkedin_url'					=> '',
+				'myspace_url'				=> '',
+				'googleplus_url'				=> '',
+				'dribbble_url'					=> '',
+				'skype_link'					=> '',
+				'flickr_link'						=> '',
+				'youtube_url'					=> '',
+				'rss_link'						=> ''			
+		);
+	
+}
 ?>

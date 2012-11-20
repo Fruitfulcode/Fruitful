@@ -114,185 +114,29 @@ function add_custom_link_options() {
  */
 function fruitful_get_theme_options() {
 	$saved = (array) get_option( 'fruitful_theme_options' );
-	$defaults = array(
-		/*General Settings*/
-		'responsive'					=> 'on',
-		
-		'postcomment'				=> 'on',
-		'pagecomment'				=> 'on',
-		
-		
-		/*Background Image*/
-		'backgroung_img'        	=> '',
-		'background_color'			=> '#ffffff', 
-		'bg_repeating'				=> 'off',
-		/*logo*/
-		'logo_img'						=> '',
-		'logo_w'							=> '160',
-		'logo_h'							=> '60',
-		/*menu*/
-		'menu_btn_color'			=> '#e1704b',
-		'menu_boxsh_color'		=> '#000000',
-		'menu_hover_color'			=> '#ffffff',
-		'menu_txtsh_color'			=> '#84442c',
-		'menu_font_color'			=> '#333333',		
-		/*fonts*/
-		'h_font_family'				=> 'Open Sans, sans-serif',
-		'h1_size'						=> '26',
-		'h2_size'						=> '24',
-		'h3_size'						=> '18',
-		'h4_size'						=> '14',
-		'h5_size'						=> '12',
-		'h6_size'						=> '10',
-		'p_font_family'				=> 'Open Sans, sans-serif',
-		'p_size'							=> '12',
-		/*slider*/
-		's_width'						=> '960',
-		's_height'						=> '500',
-		's_animation'					=> 'fade', 
-		's_direction'					=> 'horizontal',
-		's_reverse'						=> 'false',
-		's_slideshow'					=> 'true',
-		's_slideshowSpeed'		=> '7000',
-		's_animationSpeed'		=> '600',
-		's_initDelay'					=> '0',
-		's_randomize'				=> 'false',
-		's_controlnav'					=> 'true',
-		/*footer*/
-		'footer_text'					=> stripslashes('Fruitful theme powered by Wordpress'),
-		'tracking_code'				=> '',
-		/*socials*/
-		'facebook_url' 				=> '',
-		'twitter_url' 					=> '',
-		'linkedin_url'					=> '',
-		'myspace_url'				=> '',
-		'googleplus_url'				=> '',
-		'dribbble_url'					=> '',
-		'skype_link'					=> '',
-		'flickr_link'						=> '',
-		'youtube_url'					=> '',
-		'rss_link'						=> ''			
-	);
-
+	$defaults = get_default_array();
 	$defaults = apply_filters( 'fruitful_default_theme_options', $defaults );
-
 	$options = wp_parse_args( $saved, $defaults );
 	$options = array_intersect_key( $options, $defaults );
-
 	return $options;
 }
 
-
-/**
- * Renders the sample checkbox setting field.
- */
-function fruitful_settings_field_sample_checkbox() {
-	$options = fruitful_get_theme_options();
-	?>
-	<label for="sample-checkbox">
-		<input type="checkbox" name="fruitful_theme_options[sample_checkbox]" id="sample-checkbox" <?php checked( 'on', $options['sample_checkbox'] ); ?> />
-		<?php _e( 'A sample checkbox.', 'fruitful' ); ?>
-	</label>
-	<?php
-}
-
-/**
- * Renders the sample text input setting field.
- */
-function fruitful_settings_field_sample_text_input() {
-	$options = fruitful_get_theme_options();
-	?>
-	<input type="text" name="fruitful_theme_options[sample_text_input]" id="sample-text-input" value="<?php echo esc_attr( $options['sample_text_input'] ); ?>" />
-	<label class="description" for="sample-text-input"><?php _e( 'Sample text input', 'fruitful' ); ?></label>
-	<?php
-}
-
-/**
- * Renders the sample select options setting field.
- */
-function fruitful_settings_field_sample_select_options() {
-	$options = fruitful_get_theme_options();
-	?>
-	<select name="fruitful_theme_options[sample_select_options]" id="sample-select-options">
-		<?php
-			$selected = $options['sample_select_options'];
-			$p = '';
-			$r = '';
-
-			foreach ( fruitful_sample_select_options() as $option ) {
-				$label = $option['label'];
-				if ( $selected == $option['value'] ) // Make default first in list
-					$p = "\n\t<option style=\"padding-right: 10px;\" selected='selected' value='" . esc_attr( $option['value'] ) . "'>$label</option>";
-				else
-					$r .= "\n\t<option style=\"padding-right: 10px;\" value='" . esc_attr( $option['value'] ) . "'>$label</option>";
-			}
-			echo $p . $r;
-		?>
-	</select>
-	<label class="description" for="sample_theme_options[selectinput]"><?php _e( 'Sample select input', 'fruitful' ); ?></label>
-	<?php
-}
-
-/**
- * Renders the radio options setting field.
- *
- * @since Fruitful theme 1.0
- */
-function fruitful_settings_field_sample_radio_buttons() {
-	$options = fruitful_get_theme_options();
-
-	foreach ( fruitful_sample_radio_buttons() as $button ) {
-	?>
-	<div class="layout">
-		<label class="description">
-			<input type="radio" name="fruitful_theme_options[sample_radio_buttons]" value="<?php echo esc_attr( $button['value'] ); ?>" <?php checked( $options['sample_radio_buttons'], $button['value'] ); ?> />
-			<?php echo $button['label']; ?>
-		</label>
-	</div>
-	<?php
-	}
-}
-
-/**
- * Renders the sample textarea setting field.
- */
-function fruitful_settings_field_sample_textarea() {
-	$options = fruitful_get_theme_options();
-	?>
-	<textarea class="large-text" type="text" name="fruitful_theme_options[sample_textarea]" id="sample-textarea" cols="50" rows="10" /><?php echo esc_textarea( $options['sample_textarea'] ); ?></textarea>
-	<label class="description" for="sample-textarea"><?php _e( 'Sample textarea', 'fruitful' ); ?></label>
-	<?php
-}
-
-
 function fruitful_get_responsive_design() { 
 	$options = fruitful_get_theme_options();
-	
 	?>
 	<div class="box-option">
-			<label for="responsive_ch">
-				<?php _e( 'Enable Responsive', 'fruitful' ); ?>
-				<input type="checkbox" name="fruitful_theme_options[responsive]" id="responsive_ch" <?php checked( 'on', $options['responsive']); ?> />
-			</label>
+			<label for="responsive_ch"><?php _e( 'Enable Responsive', 'fruitful' ); ?><input type="checkbox" name="fruitful_theme_options[responsive]" id="responsive_ch" <?php checked( 'on', $options['responsive']); ?> /></label>
 	</div>
 <?php }
 
 function fruitful_get_general_comment() {
 	$options = fruitful_get_theme_options();
-	
 	?>
 		<div class="box-option">
-			<label for="postcomment_ch">
-				<?php _e( 'Enable on Post Comment', 'fruitful' ); ?>
-				<input type="checkbox" name="fruitful_theme_options[postcomment]" id="postcomment_ch" <?php checked( 'on', $options['postcomment']); ?> />
-			</label>
+			<label for="postcomment_ch"><?php _e( 'Enable on Post Comment', 'fruitful' ); ?><input type="checkbox" name="fruitful_theme_options[postcomment]" id="postcomment_ch" <?php checked( 'on', $options['postcomment']); ?> /></label>
 		</div>
-					
 		<div class="box-option">
-			<label for="pagecomment_ch">
-				<?php _e( 'Enable on Page Comment', 'fruitful' ); ?>
-				<input type="checkbox" name="fruitful_theme_options[pagecomment]" id="pagecomment_ch" <?php checked( 'on', $options['pagecomment']); ?> />
-			</label>
+			<label for="pagecomment_ch"><?php _e( 'Enable on Page Comment', 'fruitful' ); ?><input type="checkbox" name="fruitful_theme_options[pagecomment]" id="pagecomment_ch" <?php checked( 'on', $options['pagecomment']); ?> /></label>
 		</div>
 	<?php	
 }
@@ -377,7 +221,6 @@ function fruitful_fonts_options () {
 		<?php get_select_fields('p_font_family', $options, fruitful_fonts_list(), 'select-fonts'); ?>
 	</div>		
 	<h4><?php _e( 'Content size font', 'fruitful' ); ?></h4><input type="text" name="fruitful_theme_options[p_size]" id="p-size" value ="<?php echo $options['p_size']; ?>"/>
-	
 	<?php
 }
 
@@ -386,28 +229,17 @@ function fruitful_slider_options() {
 	?>
 	<input type="button" id="view_all_options" class="button-secondary" value="View Options" /> 
 	<div id="slider_main_options" class="slider-main-options">
-		<h4><?php _e( 'Width slider', 'fruitful' ); ?></h4>
-			<input type="text" id="width-slider" name="fruitful_theme_options[s_width]" value="<?php echo $options['s_width']; ?>"/>
-		<h4><?php _e( 'Height slider', 'fruitful' ); ?></h4>
-			<input type="text" id="height-slider" name="fruitful_theme_options[s_height]" value="<?php echo $options['s_height']; ?>"/>
-		<h4><?php _e( 'Select your animation type', 'fruitful' ); ?></h4>
-			<?php get_select_fields('s_animation',$options, fruitful_slide_anim_list()); ?>
-		<h4><?php _e( 'Select the sliding direction, "horizontal" or "vertical"', 'fruitful' ); ?></h4>
-			<?php get_select_fields('s_direction',$options, fruitful_slide_direction_list()); ?>
-		<h4><?php _e( 'Reverse the animation direction', 'fruitful' ); ?></h4>
-			<?php get_select_fields('s_reverse',$options, fruitful_bool_list()); ?>
-		<h4><?php _e( 'Animate slider automatically', 'fruitful' ); ?></h4>
-			<?php get_select_fields('s_slideshow',$options, fruitful_bool_list()); ?>
-		<h4><?php _e( 'Set the speed of the slideshow cycling, in milliseconds', 'fruitful' ); ?></h4>
-			<input type="text" id="speed-slideshow" name="fruitful_theme_options[s_slideshowSpeed]" value="<?php echo $options['s_slideshowSpeed']; ?>"/>
-		<h4><?php _e( 'Set the speed of animations, in milliseconds', 'fruitful' ); ?></h4>
-			<input type="text" id="speed-animation" name="fruitful_theme_options[s_animationSpeed]" value="<?php echo $options['s_animationSpeed']; ?>"/>
-		<h4><?php _e( 'Set an initialization delay, in milliseconds', 'fruitful' ); ?></h4>
-			<input type="text" id="init-delay" name="fruitful_theme_options[s_initDelay]" value="<?php echo $options['s_initDelay']; ?>"/>
-		<h4><?php _e( 'Randomize slide order', 'fruitful' ); ?></h4>
-			<?php get_select_fields('s_randomize',$options, fruitful_bool_list()); ?>
-		<h4><?php _e( 'Maual control usage', 'fruitful' ); ?></h4>
-			<?php get_select_fields('s_controlnav',$options, fruitful_bool_list()); ?>
+		<div class="option_block"><h4><?php _e( 'Width slider', 'fruitful' ); ?></h4><input type="text" id="width-slider" name="fruitful_theme_options[s_width]" value="<?php echo $options['s_width']; ?>"/></div>		
+		<div class="option_block"><h4><?php _e( 'Height slider', 'fruitful' ); ?></h4><input type="text" id="height-slider" name="fruitful_theme_options[s_height]" value="<?php echo $options['s_height']; ?>"/></div>		
+		<div class="option_block"><h4><?php _e( 'Select your animation type', 'fruitful' ); ?></h4><?php get_select_fields('s_animation',$options, fruitful_slide_anim_list()); ?></div>	
+		<div class="option_block"><h4><?php _e( 'Select the sliding direction, "horizontal" or "vertical"', 'fruitful' ); ?></h4><?php get_select_fields('s_direction',$options, fruitful_slide_direction_list()); ?></div>		
+		<div class="option_block"><h4><?php _e( 'Reverse the animation direction', 'fruitful' ); ?></h4><?php get_select_fields('s_reverse',$options, fruitful_bool_list()); ?></div>		
+		<div class="option_block"><h4><?php _e( 'Animate slider automatically', 'fruitful' ); ?></h4><?php get_select_fields('s_slideshow',$options, fruitful_bool_list()); ?></div>		
+		<div class="option_block"><h4><?php _e( 'Set the speed of the slideshow cycling, in milliseconds', 'fruitful' ); ?></h4><input type="text" id="speed-slideshow" name="fruitful_theme_options[s_slideshowSpeed]" value="<?php echo $options['s_slideshowSpeed']; ?>"/></div>		
+		<div class="option_block"><h4><?php _e( 'Set the speed of animations, in milliseconds', 'fruitful' ); ?></h4><input type="text" id="speed-animation" name="fruitful_theme_options[s_animationSpeed]" value="<?php echo $options['s_animationSpeed']; ?>"/></div>	
+		<div class="option_block"><h4><?php _e( 'Set an initialization delay, in milliseconds', 'fruitful' ); ?></h4><input type="text" id="init-delay" name="fruitful_theme_options[s_initDelay]" value="<?php echo $options['s_initDelay']; ?>"/></div>	
+		<div class="option_block"><h4><?php _e( 'Randomize slide order', 'fruitful' ); ?></h4><?php get_select_fields('s_randomize',$options, fruitful_bool_list()); ?></div>	
+		<div class="option_block"><h4><?php _e( 'Maual control usage', 'fruitful' ); ?></h4><?php get_select_fields('s_controlnav',$options, fruitful_bool_list()); ?></div>	
 	</div>
 	<?php
 }
@@ -437,7 +269,7 @@ function fruitful_slider_images() {
 	$options_slides = array_filter((array) get_option( 'fruitful_theme_slides_options' ));
 	$options_order  = array_filter((array) get_option( 'fruitful_theme_slides_sort_options' ));
 	
-	$vcount_slide = count($options_slides);
+	$vcount_slide  = count($options_slides);
 	$vcount_order = count($options_order);
 	
 	?>
@@ -472,8 +304,6 @@ function fruitful_slider_images() {
 			?>
 		</ul>
 		<input type="button" class="button-primary add_new_btn" value="Add New Slide" />
-		
-		
 <?php
 }
 
@@ -556,16 +386,13 @@ function fruitful_theme_options_render_page() {
 		<div class="footer">
 			<?php submit_button();  ?>
 			<input name="reset" type="reset" class="button-secondary reset-btn" value="<?php esc_attr_e('Reset Defaults', 'fruitful'); ?>" />		
-			
 			<div id="dialog-confirm" title="Reset all theme options?">
 				<p>
 					<span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>
 					<?php _e( 'Theme settings will be reset to default.', 'fruitful' ); ?>
 				</p>
 			</div>
-			
 		</div>
-		  
 		  <input type="hidden" name="action"    value="fruitful_theme_options_action" />
 		  <input type="hidden" name="security" value="<?php echo wp_create_nonce('fruitful_theme_data'); ?>" />
 		</form>
