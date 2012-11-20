@@ -28,10 +28,6 @@
 <?php if($browser == 'ipad') { ?> 		<meta name="viewport" content="width=768px, minimum-scale=1.0, maximum-scale=1.0" /> <?php }?>  
 
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<!-- Style Font Family -->
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-<!-- End Style Font Family -->
-
 <title><?php
 	/*
 	 * Print the <title> tag based on what is being viewed.

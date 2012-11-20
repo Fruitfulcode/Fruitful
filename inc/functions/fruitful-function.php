@@ -318,7 +318,6 @@ function get_default_array() {
 return array(
 				/*General Settings*/
 				'responsive'					=> 'on',
-			
 				'postcomment'				=> 'on',
 				'pagecomment'				=> 'on',
 		

@@ -334,8 +334,7 @@ function fade_message() {
 					var clickedObject = jQuery(this);
 					var clickedID 		  = jQuery(this).attr('id');
 					var theID 			  = jQuery(this).attr('title');	
-					console.log(theID);	
-					
+
 					var data = {
 						action: action_name,
 						type: 'upload_delete',
