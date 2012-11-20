@@ -197,10 +197,7 @@ function fruitful_get_slider($atts) {
 	$slider_order	   	 = ret_options("fruitful_theme_slides_sort_options");
 	
 	$vcount_slider_img = count($slider_img);
-	$vcount_order 		= count($slider_order);
-	
-	echo $vcount_slider_img;
-	echo $vcount_order;
+	$vcount_order = count($slider_order);
 	
 	$w_slider	=  $theme_options['s_width'];
 	$h_slider  =  $theme_options['s_height']; 
@@ -421,3 +418,4 @@ function get_responsive_style () {
 		return '<link rel="stylesheet" type="text/css" media="all" href="'. get_bloginfo( 'template_url' ) .'/style_nr.css" />';
 	}	
 }
+

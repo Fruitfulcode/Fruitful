@@ -72,7 +72,7 @@
 .form-admin-fruitful .content .settings-section  h3, 
 .form-admin-fruitful .content .settings-section  h4, 
 .form-admin-fruitful .content .settings-section  h5, 
-.form-admin-fruitful .content .settings-section  h6 {float: left; text-shadow: 0 1px 0 #FFFFFF; width: 100%;}
+.form-admin-fruitful .content .settings-section  h6 { text-shadow: 0 1px 0 #FFFFFF;}
 .form-admin-fruitful .content .settings-section .none  {display:none}
 
 .form-admin-fruitful .content .settings-section .upload-image {float:left; margin:10px 0; border: 1px solid #DFDFDF;}
@@ -81,11 +81,11 @@
 .form-admin-fruitful .content .settings-section .slides, 
 .form-admin-fruitful .content .settings-section .slides .slide 	 {float:left; width:100%; }
 .form-admin-fruitful .content .settings-section .slides .slide 	 {background-color: #F5F5F5; background-image: -moz-linear-gradient(center top , #F9F9F9, #F5F5F5);   border: 1px solid #DFDFDF; border-radius: 3px 3px 3px 3px; box-shadow: 0 1px 0 #FFFFFF inset; padding: 10px 10px 2px 10px	; width: 95%; margin: 0 0 20px;}
-.form-admin-fruitful .content .settings-section .slides .slide h4 {margin:0; cursor:move}
+.form-admin-fruitful .content .settings-section .slides .slide h4 {margin:0 0 10px 0; cursor:move}
 
 .form-admin-fruitful .content .settings-section .settings-form-row .box-options .slides .slide h4 span.content-close-slide	{cursor: pointer; float: right; height: 30px; width: 27px;  background: url("../images/arrows.png") no-repeat scroll 6px 7px transparent; margin: -5px 0 0;}
 .form-admin-fruitful .content .settings-section .settings-form-row .box-options .slides .slide h4 span.remove-slide			{cursor: pointer; float: right; height: 16px; width: 20px;  background: url("../images/cross.png")  no-repeat scroll 0 0 transparent;   margin: 1px 1px 0 0;}
-.form-admin-fruitful .content .settings-section .settings-form-row .box-options .add_new_btn { float:right; margin: 15px 10px 0 0; width: 84px;}
+.form-admin-fruitful .content .settings-section .settings-form-row .box-options .add_new_btn { float:right; margin:15px 0; width: 84px;}
 
 .form-admin-fruitful .content .settings-section .settings-form-row .box-options .slides-btn {float:left; width: 98.3%; margin:0 0 5px 0}
 .form-admin-fruitful .content .settings-section .settings-form-row .box-options .slides-btn .collapse_all,
@@ -99,7 +99,7 @@
 
 .form-admin-fruitful .content .settings-section .settings-form-row .box-options  h4.full-width { color: #3E3E3E; font-family: Arial; font-size: 13px; font-weight: normal; margin: 0 0 2px;} 
 
-.form-admin-fruitful .content .settings-section .settings-form-row .box-options .text_fonts .sample_text {float: left; width: 74px; border: 1px solid #DDD; margin: 0 250px 10px 0; padding: 10px;}
+.form-admin-fruitful .content .settings-section .settings-form-row .box-options .text_fonts .sample_text {float: left; width: 28%; border: 1px solid #DDD; margin: 0 220px 10px 0; padding: 10px;}
 .form-admin-fruitful .content .settings-section .settings-form-row .box-options .box-option {float:left; width:100%; margin:15px 0 10px 0;  }
 .form-admin-fruitful .content .settings-section .settings-form-row .box-options .upload_button_div {float:left; width:100%; margin-bottom:20px}
 
@@ -127,10 +127,10 @@
 
 .form-admin-fruitful .content .settings-section .settings-form-row {  float: left; padding: 0 40px; width: 90%; margin: 0 0 10px 0;}
 .form-admin-fruitful .content .settings-section .settings-form-row h3 {color: #3e3e3e;  font-family: Arial;  font-size:18px; font-weight:bold; padding:0; margin:0 0 5px}
-.form-admin-fruitful .content .settings-section .settings-form-row .add_element_info {color:#c1c1c5; font-family: Arial; font-size:14px; float:left; width:100%; display:block; margin: 0 0 10px;}
+.form-admin-fruitful .content .settings-section .settings-form-row .add_element_info {color:#c1c1c5; font-family: Arial; font-size:14px; float:left; width:100%; display:block; margin: 0 0 25px;}
 .form-admin-fruitful .content .settings-section .settings-form-row .box-options {float:left; width:100%}
 
-.sidebar-promo {float:left; width:204px; margin: 62px 0 0;  border: 1px solid #d7d7d7; padding: 18px 15px; border-radius: 2px; min-height: 204px; }
+.sidebar-promo {float:left; width:204px; margin: 62px 15px 0;  border: 1px solid #d7d7d7; padding: 18px 15px; border-radius: 2px; min-height: 204px; }
 .sidebar-promo p {color:#737373; font-size:12px; margin:0 0 1.5em 0; padding:0; font-family:Arial; }
 .sidebar-promo a.button_help {background-color:#c86f4e; color:#fff; font-size:18px; font-family: 'Open Sans', sans-serif; font-weight:bold; text-transform:uppercase; text-decoration:none; padding:12px 20px; display:block; 
 											-webkit-box-shadow: inset 0px 0px 1px 2px rgba(0, 0, 0, 0.1);
@@ -143,4 +143,3 @@
 .sidebar-promo a.button_help:hover {opacity:1}											
 .form-admin-fruitful .content .settings-section .settings-form-row .box-options #slider_main_options {display:none; float: left; margin: 0 0 20px 0;}
 #logo-w, #logo-h {width:105px}
-.option_block {display:block; float:left; width:100%; padding:0; margin:0;}
