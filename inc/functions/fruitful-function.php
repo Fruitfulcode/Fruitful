@@ -317,11 +317,11 @@ function remove_dir($dir)  {
 function get_default_array() {
 return array(
 				/*General Settings*/
-				'responsive'					=> 'on',
-				'postcomment'				=> 'on',
-				'pagecomment'				=> 'on',
-		
-		
+				'responsive'					=> 'off',
+				'postcomment'				=> 'off',
+				'pagecomment'				=> 'off',
+				'styletheme'					=> 'off',
+
 				/*Background Image*/
 				'backgroung_img'        	=> '',
 				'background_color'			=> '#ffffff', 
@@ -379,6 +379,5 @@ return array(
 				'youtube_url'					=> '',
 				'rss_link'						=> ''			
 		);
-	
 }
 ?>

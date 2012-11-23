@@ -24,7 +24,7 @@ function fruitful_theme_options_init() {
 		'' // The sanitization callback, see fruitful_theme_options_validate()
 	);
 	// Register our settings field group
-	add_settings_section('general_settings',	'',  '__return_false', 'theme_options' );
+	add_settings_section('general',			'',  '__return_false', 'theme_options' );
 	add_settings_section('background',		'',  '__return_false', 'theme_options' );
 	add_settings_section('logo', 				'',  '__return_false', 'theme_options' );
 	add_settings_section('menu', 				'',  '__return_false', 'theme_options' );
@@ -33,8 +33,9 @@ function fruitful_theme_options_init() {
 	add_settings_section('links', 				'',  '__return_false', 'theme_options' );
 	add_settings_section('footer', 				'',  '__return_false', 'theme_options' );
 	
-	add_settings_field( 'general_options_rs', 		__( 'Responsive', 'fruitful' ),	    'fruitful_get_responsive_design',	'theme_options',  'general_settings', array('info' => __( '', 'fruitful' )));
-	add_settings_field( 'general_options_cm',		__( 'Post Comment', 'fruitful' ), 'fruitful_get_general_comment',  	'theme_options',  'general_settings', array('info' => __( '', 'fruitful' )));
+	add_settings_field( 'general_rs', 		__( 'Responsive', 'fruitful' ),	    'fruitful_get_responsive_design',	'theme_options',  'general', array('info' => __( '', 'fruitful' )));
+	add_settings_field( 'general_cm',		__( 'Post Comment', 'fruitful' ), 'fruitful_get_general_comment',  	'theme_options',  'general', array('info' => __( '', 'fruitful' )));
+	add_settings_field( 'general_ds',		__( 'Theme Style', 'fruitful' ), 	'fruitful_get_style_theme',  			'theme_options',  'general', array('info' => __( '', 'fruitful' )));
 	
 	
 	add_settings_field( 'background_image', 	__( 'Background Image', 'fruitful' ), 'fruitful_get_background_img',  'theme_options',  'background', array('info' => __( 'Please upload needed image for site background. (Supported files .png, .jpg, .gif)', 'fruitful' )));
@@ -89,9 +90,9 @@ add_action( 'admin_menu', 'fruitful_theme_options_add_page' );
 	$theme_page = add_menu_page(
 		__( 'Fruitful Theme Options', 'fruitful' ),   	// Name of page
 		__( 'Theme Options', 'fruitful' ),   			    // Label in menu
-			'edit_theme_options',          	 				// Capability required
-			'theme_options',                     				// Menu slug, used to uniquely identify the page
-			'fruitful_theme_options_render_page' 		// Function that renders the options page
+			'edit_theme_options',          	 			// Capability required
+			'theme_options',                     			// Menu slug, used to uniquely identify the page
+			'fruitful_theme_options_render_page' 	// Function that renders the options page
 	);
 }
 
@@ -125,7 +126,9 @@ function fruitful_get_responsive_design() {
 	$options = fruitful_get_theme_options();
 	?>
 	<div class="box-option">
-			<label for="responsive_ch"><?php _e( 'Enable Responsive', 'fruitful' ); ?><input type="checkbox" name="fruitful_theme_options[responsive]" id="responsive_ch" <?php checked( 'on', $options['responsive']); ?> /></label>
+			<label for="responsive_ch"><input type="checkbox" name="fruitful_theme_options[responsive]" id="responsive_ch" <?php checked( 'on', $options['responsive']); ?> />
+			<?php _e( 'Responsive', 'fruitful' ); ?>
+			</label>
 	</div>
 <?php }
 
@@ -133,10 +136,25 @@ function fruitful_get_general_comment() {
 	$options = fruitful_get_theme_options();
 	?>
 		<div class="box-option">
-			<label for="postcomment_ch"><?php _e( 'Enable on Post Comment', 'fruitful' ); ?><input type="checkbox" name="fruitful_theme_options[postcomment]" id="postcomment_ch" <?php checked( 'on', $options['postcomment']); ?> /></label>
+			<label for="postcomment_ch"><input type="checkbox" name="fruitful_theme_options[postcomment]" id="postcomment_ch" <?php checked( 'on', $options['postcomment']); ?> />
+			<?php _e( 'Enable on Post Comment', 'fruitful' ); ?>
+			</label>
 		</div>
 		<div class="box-option">
-			<label for="pagecomment_ch"><?php _e( 'Enable on Page Comment', 'fruitful' ); ?><input type="checkbox" name="fruitful_theme_options[pagecomment]" id="pagecomment_ch" <?php checked( 'on', $options['pagecomment']); ?> /></label>
+			<label for="pagecomment_ch"><input type="checkbox" name="fruitful_theme_options[pagecomment]" id="pagecomment_ch" <?php checked( 'on', $options['pagecomment']); ?> />
+			<?php _e( 'Enable on Page Comment', 'fruitful' ); ?>
+			</label>
+		</div>
+	<?php	
+}
+
+function fruitful_get_style_theme() {
+	$options = fruitful_get_theme_options();
+	?>
+		<div class="box-option">
+			<label for="style_theme"><input type="checkbox" name="fruitful_theme_options[styletheme]" id="style_theme" <?php checked( 'on', $options['styletheme']); ?> />
+			<?php _e( 'Enable Theme Style', 'fruitful' ); ?>
+			</label>
 		</div>
 	<?php	
 }
