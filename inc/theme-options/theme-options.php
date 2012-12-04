@@ -33,18 +33,25 @@ function fruitful_theme_options_init() {
 	add_settings_section('links', 				'',  '__return_false', 'theme_options' );
 	add_settings_section('footer', 				'',  '__return_false', 'theme_options' );
 	
-	add_settings_field( 'general_rs', 		__( 'Responsive', 'fruitful' ),	    'fruitful_get_responsive_design',	'theme_options',  'general', array('info' => __( '', 'fruitful' )));
-	add_settings_field( 'general_cm',		__( 'Post Comment', 'fruitful' ), 'fruitful_get_general_comment',  	'theme_options',  'general', array('info' => __( '', 'fruitful' )));
-	add_settings_field( 'general_ds',		__( 'Theme Style', 'fruitful' ), 	'fruitful_get_style_theme',  			'theme_options',  'general', array('info' => __( '', 'fruitful' )));
+	add_settings_field( 'general_rs', 		__( 'Layout', 'fruitful' ),	    'fruitful_get_responsive_design',	'theme_options',  'general', array('info' => __( 'Theme supported 2 types of layout. Default static and responsive which adapt for mobile devices, if you will scale width of browser window, website will be collapsed. <a target="_blank" href="http://fruitfulcode.com/blog/responsive">Learn more</a> about Responsive. ', 'fruitful' )));
+	add_settings_field( 'general_cm',		__( 'Comments', 'fruitful' ), 'fruitful_get_general_comment',  	'theme_options',  'general', array('info' => __( 'If you want to display comments on your post page or page, please select options below.', 'fruitful' )));
+	add_settings_field( 'general_ds',		__( 'Default css', 'fruitful' ), 	'fruitful_get_style_theme',  			'theme_options',  'general', array('info' => __( 'Theme has styles by default, if you are using theme as based for development and dont what overwrite default css styles, you can disable our styles. ', 'fruitful' )));
 	
 	
-	add_settings_field( 'background_image', 	__( 'Background Image', 'fruitful' ), 'fruitful_get_background_img',  'theme_options',  'background', array('info' => __( 'Please upload needed image for site background. (Supported files .png, .jpg, .gif)', 'fruitful' )));
+	add_settings_field( 'background_image', 	__( 'Background Image', 'fruitful' ), 'fruitful_get_background_img',  'theme_options',  'background', array('info' => __( 'Upload needed image for site background. (Supported files .png, .jpg, .gif)', 'fruitful' )));
 	add_settings_field( 'background_color', 	__( 'Background Color ', 'fruitful' ), 'fruitful_get_background_color', 'theme_options', 'background');
 		
-	add_settings_field( 'logo_image', 			__( 'Logo Image', 'fruitful' ), 		'fruitful_get_logo_img',	'theme_options', 'logo', 	array('info' => __( 'Please upload needed image for site logo. (Supported files .png, .jpg, .gif)', 'fruitful' )));
-	add_settings_field( 'logo_size', 				__( 'Logo Size', 'fruitful' ), 		'fruitful_get_logo_wh',		'theme_options', 'logo', 	array('info' => __( 'Please select resolution for your logo image. Our theme will crop (timthumb) your image for need size.', 'fruitful' )) );
+	add_settings_field( 'logo_image', 			__( 'Logo Image', 'fruitful' ), 		'fruitful_get_logo_img',	'theme_options', 'logo', 	array('info' => __( 'Upload needed image for site logo. (Supported files .png, .jpg, .gif)', 'fruitful' )));
+	add_settings_field( 'logo_size', 				__( 'Logo Size', 'fruitful' ), 		'fruitful_get_logo_wh',		'theme_options', 'logo', 	array('info' => __( 'Specify resolution for your logo image. Our theme will crop (timthumb) your image for need size.', 'fruitful' )) );
 	add_settings_field( 'menu_style',				__( 'Menu Style ', 'fruitful' ),	 	'fruitful_menu_style',		'theme_options', 'menu',  array('info' => __( 'Please fill styles to display menu items.', 'fruitful' )) );
-	add_settings_field( 'fonts_options', 			__( 'Fonts Options', 'fruitful' ), 	'fruitful_fonts_options',	'theme_options', 'fonts');
+	add_settings_field( 'fonts_options', 			__( 'Fonts Options', 'fruitful' ), 	'fruitful_fonts_options',	'theme_options', 'fonts', array('info' => __( 'We collected web safe fonts and google web fonts in this option. You can select the desired font or upload own. <a target="_blank" href="http://fruitfulcode.com/fruitful/documentation">Learn more</a> about how to add own font to this option.', 'fruitful' )) );
+	
+	add_settings_field( 'fonts_headers', 			__( 'Headers', 'fruitful' ), 	'fruitful_fonts_headers',	'theme_options', 'fonts', array('info' => __( 'Choose font-family for all headlines.', 'fruitful' )) );
+		
+	add_settings_field( 'fonts_content', 			__( 'Content', 'fruitful' ), 	'fruitful_fonts_content',	'theme_options', 'fonts', array('info' => __( 'Choose font-family for text.', 'fruitful' )) );
+	
+	add_settings_field( 'fonts_size', 			__( 'Font size', 'fruitful' ), 	'fruitful_fonts_size',	'theme_options', 'fonts', array('info' => __( 'Choose font size for specific html elements. Set size as number, without px.', 'fruitful' )) );
+	
 	add_settings_field( 'slider_options',			__( 'Slider Options', 'fruitful' ), 	'fruitful_slider_options',	'theme_options', 'slider');
 	add_settings_field( 'slider_image',			__( 'Slider Images', 'fruitful' ), 	'fruitful_slider_images',	'theme_options', 'slider');
 	
@@ -137,12 +144,12 @@ function fruitful_get_general_comment() {
 	?>
 		<div class="box-option">
 			<label for="postcomment_ch"><input type="checkbox" name="fruitful_theme_options[postcomment]" id="postcomment_ch" <?php checked( 'on', $options['postcomment']); ?> />
-			<?php _e( 'Enable on Post Comment', 'fruitful' ); ?>
+			<?php _e( 'Display comment on posts page', 'fruitful' ); ?>
 			</label>
 		</div>
 		<div class="box-option">
 			<label for="pagecomment_ch"><input type="checkbox" name="fruitful_theme_options[pagecomment]" id="pagecomment_ch" <?php checked( 'on', $options['pagecomment']); ?> />
-			<?php _e( 'Enable on Page Comment', 'fruitful' ); ?>
+			<?php _e( 'Display comment on page', 'fruitful' ); ?>
 			</label>
 		</div>
 	<?php	
@@ -153,7 +160,7 @@ function fruitful_get_style_theme() {
 	?>
 		<div class="box-option">
 			<label for="style_theme"><input type="checkbox" name="fruitful_theme_options[styletheme]" id="style_theme" <?php checked( 'on', $options['styletheme']); ?> />
-			<?php _e( 'Enable Theme Style', 'fruitful' ); ?>
+			<?php _e( 'Enable default css', 'fruitful' ); ?>
 			</label>
 		</div>
 	<?php	
@@ -195,7 +202,7 @@ function fruitful_get_background_img () {
 	<div class="box-option">
 		<label for="bg_checkbox">
 			<input type="checkbox" name="fruitful_theme_options[bg_repeating]" id="bg_checkbox" <?php checked( 'on', $options['bg_repeating'] ); ?> />
-			<?php _e( 'Background  repeating', 'fruitful' ); ?>
+			<?php _e( 'Background  repeat', 'fruitful' ); ?>
 		</label>
 	</div>
 	
@@ -222,25 +229,47 @@ function fruitful_get_logo_img () {
 function fruitful_fonts_options () {
 	$options = fruitful_get_theme_options();
 	?>
-	<h4><?php _e( 'Headers Font Family', 'fruitful' ); ?></h4>
-	<div class="text_fonts">
+
+	<?php
+}
+
+function fruitful_fonts_headers () {
+	$options = fruitful_get_theme_options();
+	?>
+    <div class="text_fonts">
 		<div id="header_sample_font" class="sample_text">Sample Font</div>
 		<?php get_select_fields('h_font_family',$options, fruitful_fonts_list(), 'select-fonts'); ?>
 	</div>
-	<h4><?php _e( 'H1 size font', 'fruitful' ); ?></h4><input type="text" name="fruitful_theme_options[h1_size]" id="h1-size" value ="<?php echo $options['h1_size']; ?>"/>
-	<h4><?php _e( 'H2 size font', 'fruitful' ); ?></h4><input type="text" name="fruitful_theme_options[h2_size]" id="h2-size" value ="<?php echo $options['h2_size']; ?>"/>
-	<h4><?php _e( 'H3 size font', 'fruitful' ); ?></h4><input type="text" name="fruitful_theme_options[h3_size]" id="h4-size" value ="<?php echo $options['h3_size']; ?>"/>
-	<h4><?php _e( 'H4 size font', 'fruitful' ); ?></h4><input type="text" name="fruitful_theme_options[h4_size]" id="h4-size" value ="<?php echo $options['h4_size']; ?>"/>
-	<h4><?php _e( 'H5 size font', 'fruitful' ); ?></h4><input type="text" name="fruitful_theme_options[h5_size]" id="h5-size" value ="<?php echo $options['h5_size']; ?>"/>
-	<h4><?php _e( 'H6 size font', 'fruitful' ); ?></h4><input type="text" name="fruitful_theme_options[h6_size]" id="h6-size" value ="<?php echo $options['h6_size']; ?>"/>
-	<h4><?php _e( 'Content Font Family', 'fruitful' ); ?></h4>
-	<div class="text_fonts">
+
+	<?php
+}
+
+function fruitful_fonts_content () {
+	$options = fruitful_get_theme_options();
+	?>
+    <div class="text_fonts">
 		<div id="content_sample_font" class="sample_text">Sample Font</div>
 		<?php get_select_fields('p_font_family', $options, fruitful_fonts_list(), 'select-fonts'); ?>
 	</div>		
-	<h4><?php _e( 'Content size font', 'fruitful' ); ?></h4><input type="text" name="fruitful_theme_options[p_size]" id="p-size" value ="<?php echo $options['p_size']; ?>"/>
 	<?php
 }
+
+function fruitful_fonts_size () {
+	$options = fruitful_get_theme_options();
+	?>
+    <h4><?php _e( 'H1', 'fruitful' ); ?></h4><input type="text" name="fruitful_theme_options[h1_size]" id="h1-size" value ="<?php echo $options['h1_size']; ?>"/>
+	<h4><?php _e( 'H2', 'fruitful' ); ?></h4><input type="text" name="fruitful_theme_options[h2_size]" id="h2-size" value ="<?php echo $options['h2_size']; ?>"/>
+	<h4><?php _e( 'H3', 'fruitful' ); ?></h4><input type="text" name="fruitful_theme_options[h3_size]" id="h4-size" value ="<?php echo $options['h3_size']; ?>"/>
+	<h4><?php _e( 'H4', 'fruitful' ); ?></h4><input type="text" name="fruitful_theme_options[h4_size]" id="h4-size" value ="<?php echo $options['h4_size']; ?>"/>
+	<h4><?php _e( 'H5', 'fruitful' ); ?></h4><input type="text" name="fruitful_theme_options[h5_size]" id="h5-size" value ="<?php echo $options['h5_size']; ?>"/>
+	<h4><?php _e( 'H6', 'fruitful' ); ?></h4><input type="text" name="fruitful_theme_options[h6_size]" id="h6-size" value ="<?php echo $options['h6_size']; ?>"/>	
+	<h4><?php _e( 'P', 'fruitful' ); ?></h4><input type="text" name="fruitful_theme_options[p_size]" id="p-size" value ="<?php echo $options['p_size']; ?>"/>
+	<?php
+}
+
+
+
+
 
 function fruitful_slider_options() {
 	$options = fruitful_get_theme_options();

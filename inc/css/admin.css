@@ -78,6 +78,10 @@
 .form-admin-fruitful .content .settings-section  h5, 
 .form-admin-fruitful .content .settings-section  h6 { text-shadow: 0 1px 0 #FFFFFF;}
 .form-admin-fruitful .content .settings-section .none  {display:none}
+.form-admin-fruitful .content #settings-section-4 input[type="text"] {float: left; width: 50px;}
+.form-admin-fruitful .content #settings-section-4 #set_form_row_3 h4 {margin: 5px 0px; float: left; padding-right: 10px; text-align: right;}
+.form-admin-fruitful .content #settings-section-4 #set_form_row_3 .box-options {width: 85px;}
+
 
 .form-admin-fruitful .content .settings-section .upload-image {float:left; margin:10px 0; border: 1px solid #DFDFDF;}
 .form-admin-fruitful .content .settings-section hr {margin:20px 0; float:left; width:100%; background-color:#DFDFDF; color:#DFDFDF; border:0; height:1px}
@@ -104,7 +108,7 @@
 .form-admin-fruitful .content .settings-section .settings-form-row .box-options  h4.full-width { color: #3E3E3E; font-family: Arial; font-size: 13px; font-weight: normal; margin: 0 0 2px;} 
 
 .form-admin-fruitful .content .settings-section .settings-form-row .box-options .text_fonts .sample_text {  border: 1px solid #DDDDDD; float: left; margin: 0 250px 10px 0; padding: 10px; width: 275px;}
-.form-admin-fruitful .content .settings-section .settings-form-row .box-options .box-option {float:left; width:100%; margin:15px 0 10px 0;  }
+.form-admin-fruitful .content .settings-section .settings-form-row .box-options .box-option {float:left; width:100%; margin:0px 0 10px 0;  }
 .form-admin-fruitful .content .settings-section .settings-form-row .box-options .upload_button_div {float:left; width:100%; margin-bottom:20px}
 
 .ui-dialog 					 	{background: url(../images/form-reset.png) no-repeat 0 0 transparent; float:left}
@@ -129,12 +133,13 @@
 .save-options .icon-al  {background:url(../images/alert.png) no-repeat 0 0 transparent; }
 .save-options .text 	 {color: #FFFFFF; float: left; font-size: 20px; margin: 68px 0 0 14px; text-shadow: 1px 0 0 #f6f6f6; font-weight:300}
 
-.form-admin-fruitful .content .settings-section .settings-form-row {  float: left; padding: 0 40px; width: 90%; margin: 0 0 10px 0;}
+.form-admin-fruitful .content .settings-section .settings-form-row {  float: left; padding: 0 40px; width: 90%; margin: 0 0 25px 0;}
 .form-admin-fruitful .content .settings-section .settings-form-row h3 {color: #3e3e3e;  font-family: Arial;  font-size:18px; font-weight:bold; padding:0; margin:0 0 5px}
-.form-admin-fruitful .content .settings-section .settings-form-row .add_element_info {color:#c1c1c5; font-family: Arial; font-size:14px; float:left; width:100%; display:block; margin: 0 0 10px;}
+.form-admin-fruitful .content .settings-section .settings-form-row .add_element_info {color:#a0a0a0; font-family: Arial; font-size:13px; float:left; width:100%; display:block; margin: 0 0 10px;}
 .form-admin-fruitful .content .settings-section .settings-form-row .box-options {float:left; width:100%}
+.box-options label {font-family: Arial;}
 
-.sidebar-promo {float:left; width:204px; margin: 62px 15px 0;  border: 1px solid #d7d7d7; padding: 18px 15px; border-radius: 2px; min-height: 204px; }
+.sidebar-promo {float:right; width:204px; margin: 62px 15px 0;  border: 1px solid #d7d7d7; padding: 18px 15px; border-radius: 2px; min-height: 204px; }
 .sidebar-promo p {color:#737373; font-size:12px; margin:0 0 1.5em 0; padding:0; font-family:Arial; }
 .sidebar-promo a.button_help {background-color:#c86f4e; color:#fff; font-size:18px; font-family: 'Open Sans', sans-serif; font-weight:bold; text-transform:uppercase; text-decoration:none; padding:12px 20px; display:block; -webkit-box-shadow: inset 0px 0px 1px 2px rgba(0, 0, 0, 0.1); box-shadow: inset 0px 0px 1px 2px rgba(0, 0, 0, 0.1);	width: 82px; margin:0 auto; text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.45); opacity:0.9 }
 .sidebar-promo a.button_help:hover {opacity:1}											
