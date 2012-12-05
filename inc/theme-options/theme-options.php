@@ -447,7 +447,7 @@ function fruitful_theme_options_render_page() {
 		<div id="sidebar_promo" class="sidebar-promo">
 			<p><?php _e( 'If you faced with any problems or have a question you always can contact us with request.', 'fruitful' ); ?></p>
 			<p><?php _e( 'Our team can propose live consultation, web development,  web design, customization of our products.', 'fruitful' ); ?></p>
-			<a class="button_help" href="" target="_blank"><?php _e( 'Support', 'fruitful' ); ?></a>
+			<a class="button_help" href="mailto:support@fruitfulcode.com" target="_blank"><?php _e( 'Support', 'fruitful' ); ?></a>
 		</div>
 	</div>
 	<?php
