@@ -1,6 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300);
 
-.form-admin-fruitful {font-family: 'Open Sans', sans-serif;} 
+.form-admin-fruitful {font-family: 'Arial', sans-serif;} 
+.form-admin-fruitful h4 {font-weight: normal}
 .form-admin-fruitful .header, .form-admin-fruitful .footer, .form-admin-fruitful .content {float:left;  width: 914px;}
 .form-admin-fruitful .header, .form-admin-fruitful .footer  {padding: 10px 10px 10px 0; width: 892px;}
 .form-admin-fruitful .header  {}
@@ -59,9 +60,10 @@
 
 
 .form-admin-fruitful .content .settings-section { background: #FFFFFF;  float: right; padding: 15px 34px 15px 0; width: 710px; display:none; min-height:600px}
-.form-admin-fruitful .content .settings-section input[type="text"] { float:left; width:100%; margin:0 0 10px 0; padding-left: 5px;}
+.form-admin-fruitful .content .settings-section input[type="text"] { float:left; width:100%; margin:0 0 10px 0; padding-left: 5px; height: 30px;} 
 .form-admin-fruitful .content .settings-section input[type="file"]  { display:none}
 .form-admin-fruitful .content .settings-section .save-options {float:left; width:100%; min-height:20px; display:none }
+.form-admin-fruitful .content .settings-section input.of-input {width: 430px;}
 
 .form-admin-fruitful .content .settings-section input#background_color, 
 .form-admin-fruitful .content .settings-section input#menu_font_color, 
@@ -81,7 +83,7 @@
 .form-admin-fruitful .content #settings-section-4 input[type="text"] {float: left; width: 50px;}
 .form-admin-fruitful .content #settings-section-4 #set_form_row_3 h4 {margin: 5px 0px; float: left; padding-right: 10px; text-align: right;}
 .form-admin-fruitful .content #settings-section-4 #set_form_row_3 .box-options {width: 85px;}
-
+.form-admin-fruitful .content #settings-section-3 h4 {font-weight: normal}
 
 .form-admin-fruitful .content .settings-section .upload-image {float:left; margin:10px 0; border: 1px solid #DFDFDF;}
 .form-admin-fruitful .content .settings-section hr {margin:20px 0; float:left; width:100%; background-color:#DFDFDF; color:#DFDFDF; border:0; height:1px}
@@ -99,7 +101,7 @@
 .form-admin-fruitful .content .settings-section .settings-form-row .box-options .slides-btn .collapse_all,
 .form-admin-fruitful .content .settings-section .settings-form-row .box-options .slides-btn .expand_all   {float:right; width:80px; text-align: right;}
 .form-admin-fruitful .content .settings-section .settings-form-row .box-options .slides-btn .collapse_all:hover,
-.form-admin-fruitful .content .settings-section .settings-form-row .box-options .slides-btn .expand_all:hover   {color:#21759B; cursor:pointer; font-weight:bold}
+.form-admin-fruitful .content .settings-section .settings-form-row .box-options .slides-btn .expand_all:hover   {color:#21759B; cursor:pointer;}
 
 .form-admin-fruitful .content .settings-section .logo_img {width:160px; height:60px}
 .form-admin-fruitful .content .settings-section .settings-form-row .box-options  h4.full-width, 

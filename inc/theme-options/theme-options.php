@@ -34,16 +34,16 @@ function fruitful_theme_options_init() {
 	add_settings_section('footer', 				'',  '__return_false', 'theme_options' );
 	
 	add_settings_field( 'general_rs', 		__( 'Layout', 'fruitful' ),	    'fruitful_get_responsive_design',	'theme_options',  'general', array('info' => __( 'Theme supported 2 types of layout. Default static and responsive which adapt for mobile devices, if you will scale width of browser window, website will be collapsed. <a target="_blank" href="http://fruitfulcode.com/blog/responsive">Learn more</a> about Responsive. ', 'fruitful' )));
-	add_settings_field( 'general_cm',		__( 'Comments', 'fruitful' ), 'fruitful_get_general_comment',  	'theme_options',  'general', array('info' => __( 'If you want to display comments on your post page or page, please select options below.', 'fruitful' )));
+	add_settings_field( 'general_cm',		__( 'Comments', 'fruitful' ), 'fruitful_get_general_comment',  	'theme_options',  'general', array('info' => __( 'If you want to display comments on your post page or page, select options below.', 'fruitful' )));
 	add_settings_field( 'general_ds',		__( 'Default css', 'fruitful' ), 	'fruitful_get_style_theme',  			'theme_options',  'general', array('info' => __( 'Theme has styles by default, if you are using theme as based for development and dont what overwrite default css styles, you can disable our styles. ', 'fruitful' )));
 	
 	
 	add_settings_field( 'background_image', 	__( 'Background Image', 'fruitful' ), 'fruitful_get_background_img',  'theme_options',  'background', array('info' => __( 'Upload needed image for site background. (Supported files .png, .jpg, .gif)', 'fruitful' )));
-	add_settings_field( 'background_color', 	__( 'Background Color ', 'fruitful' ), 'fruitful_get_background_color', 'theme_options', 'background');
+	add_settings_field( 'background_color', 	__( 'Background Color ', 'fruitful' ), 'fruitful_get_background_color', 'theme_options', 'background', array('info' => __( 'Choose color for body background', 'fruitful' )));
 		
 	add_settings_field( 'logo_image', 			__( 'Logo Image', 'fruitful' ), 		'fruitful_get_logo_img',	'theme_options', 'logo', 	array('info' => __( 'Upload needed image for site logo. (Supported files .png, .jpg, .gif)', 'fruitful' )));
 	add_settings_field( 'logo_size', 				__( 'Logo Size', 'fruitful' ), 		'fruitful_get_logo_wh',		'theme_options', 'logo', 	array('info' => __( 'Specify resolution for your logo image. Our theme will crop (timthumb) your image for need size.', 'fruitful' )) );
-	add_settings_field( 'menu_style',				__( 'Menu Style ', 'fruitful' ),	 	'fruitful_menu_style',		'theme_options', 'menu',  array('info' => __( 'Please fill styles to display menu items.', 'fruitful' )) );
+	add_settings_field( 'menu_style',				__( 'Menu Style ', 'fruitful' ),	 	'fruitful_menu_style',		'theme_options', 'menu',  array('info' => __( 'Choose styles for main menu.', 'fruitful' )) );
 	add_settings_field( 'fonts_options', 			__( 'Fonts Options', 'fruitful' ), 	'fruitful_fonts_options',	'theme_options', 'fonts', array('info' => __( 'We collected web safe fonts and google web fonts in this option. You can select the desired font or upload own. <a target="_blank" href="http://fruitfulcode.com/fruitful/documentation">Learn more</a> about how to add own font to this option.', 'fruitful' )) );
 	
 	add_settings_field( 'fonts_headers', 			__( 'Headers', 'fruitful' ), 	'fruitful_fonts_headers',	'theme_options', 'fonts', array('info' => __( 'Choose font-family for all headlines.', 'fruitful' )) );
@@ -52,10 +52,10 @@ function fruitful_theme_options_init() {
 	
 	add_settings_field( 'fonts_size', 			__( 'Font size', 'fruitful' ), 	'fruitful_fonts_size',	'theme_options', 'fonts', array('info' => __( 'Choose font size for specific html elements. Set size as number, without px.', 'fruitful' )) );
 	
-	add_settings_field( 'slider_options',			__( 'Slider Options', 'fruitful' ), 	'fruitful_slider_options',	'theme_options', 'slider');
-	add_settings_field( 'slider_image',			__( 'Slider Images', 'fruitful' ), 	'fruitful_slider_images',	'theme_options', 'slider');
+	add_settings_field( 'slider_options',			__( 'Slider Options', 'fruitful' ), 	'fruitful_slider_options',	'theme_options', 'slider', array('info' => __( 'Choose needed options for slider. Width, height, animation type, sliding direction, speed of animations, etc', 'fruitful' )) );
+	add_settings_field( 'slider_image',			__( 'Slides', 'fruitful' ), 	'fruitful_slider_images',	'theme_options', 'slider', array('info' => __( 'Add images to slider (Supported files .png, .jpg, .gif). After upload it will be saved automatically. If you want to change slides order, just drag and drop it. If images have not property size, set image size in slider options. To display slider in needed place use shortcode [slider]. <a href="http://fruitfulcode.com/fruitful/documentation/shortcodes">Learn more</a> about shortcodes. ', 'fruitful' )) );
 	
-	add_settings_field( 'socials_links', 			__( 'Socials Links', 'fruitful' ), 	'fruitful_settings_field_socials_links', 'theme_options', 'links' );
+	add_settings_field( 'socials_links', 			__( 'Socials Links', 'fruitful' ), 	'fruitful_settings_field_socials_links', 'theme_options', 'links', array('info' => __( 'Add link to your social media profiles. Icons with link will be display in footer.', 'fruitful' )) );
 	add_settings_field( 'footer_text_copy',		__( 'Footer Options', 'fruitful' ), 'fruitful_settings_field_footer_text', 'theme_options', 'footer' );
 	
 	add_option( 'fruitful_theme_slides_options', '', '', 'yes' ); 
@@ -276,17 +276,17 @@ function fruitful_slider_options() {
 	?>
 	<input type="button" id="view_all_options" class="button-secondary" value="View Options" /> 
 	<div id="slider_main_options" class="slider-main-options">
-		<div class="option_block"><h4><?php _e( 'Width slider', 'fruitful' ); ?></h4><input type="text" id="width-slider" name="fruitful_theme_options[s_width]" value="<?php echo $options['s_width']; ?>"/></div>		
-		<div class="option_block"><h4><?php _e( 'Height slider', 'fruitful' ); ?></h4><input type="text" id="height-slider" name="fruitful_theme_options[s_height]" value="<?php echo $options['s_height']; ?>"/></div>		
-		<div class="option_block"><h4><?php _e( 'Select your animation type', 'fruitful' ); ?></h4><?php get_select_fields('s_animation',$options, fruitful_slide_anim_list()); ?></div>	
-		<div class="option_block"><h4><?php _e( 'Select the sliding direction, "horizontal" or "vertical"', 'fruitful' ); ?></h4><?php get_select_fields('s_direction',$options, fruitful_slide_direction_list()); ?></div>		
+		<div class="option_block"><h4><?php _e( 'Width', 'fruitful' ); ?></h4><input type="text" id="width-slider" name="fruitful_theme_options[s_width]" value="<?php echo $options['s_width']; ?>"/></div>		
+		<div class="option_block"><h4><?php _e( 'Height', 'fruitful' ); ?></h4><input type="text" id="height-slider" name="fruitful_theme_options[s_height]" value="<?php echo $options['s_height']; ?>"/></div>		
+		<div class="option_block"><h4><?php _e( 'Animation type', 'fruitful' ); ?></h4><?php get_select_fields('s_animation',$options, fruitful_slide_anim_list()); ?></div>	
+		<div class="option_block"><h4><?php _e( 'Sliding direction, "horizontal" or "vertical"', 'fruitful' ); ?></h4><?php get_select_fields('s_direction',$options, fruitful_slide_direction_list()); ?></div>		
 		<div class="option_block"><h4><?php _e( 'Reverse the animation direction', 'fruitful' ); ?></h4><?php get_select_fields('s_reverse',$options, fruitful_bool_list()); ?></div>		
 		<div class="option_block"><h4><?php _e( 'Animate slider automatically', 'fruitful' ); ?></h4><?php get_select_fields('s_slideshow',$options, fruitful_bool_list()); ?></div>		
 		<div class="option_block"><h4><?php _e( 'Set the speed of the slideshow cycling, in milliseconds', 'fruitful' ); ?></h4><input type="text" id="speed-slideshow" name="fruitful_theme_options[s_slideshowSpeed]" value="<?php echo $options['s_slideshowSpeed']; ?>"/></div>		
 		<div class="option_block"><h4><?php _e( 'Set the speed of animations, in milliseconds', 'fruitful' ); ?></h4><input type="text" id="speed-animation" name="fruitful_theme_options[s_animationSpeed]" value="<?php echo $options['s_animationSpeed']; ?>"/></div>	
 		<div class="option_block"><h4><?php _e( 'Set an initialization delay, in milliseconds', 'fruitful' ); ?></h4><input type="text" id="init-delay" name="fruitful_theme_options[s_initDelay]" value="<?php echo $options['s_initDelay']; ?>"/></div>	
 		<div class="option_block"><h4><?php _e( 'Randomize slide order', 'fruitful' ); ?></h4><?php get_select_fields('s_randomize',$options, fruitful_bool_list()); ?></div>	
-		<div class="option_block"><h4><?php _e( 'Maual control usage', 'fruitful' ); ?></h4><?php get_select_fields('s_controlnav',$options, fruitful_bool_list()); ?></div>	
+		<div class="option_block"><h4><?php _e( 'Manual control usage', 'fruitful' ); ?></h4><?php get_select_fields('s_controlnav',$options, fruitful_bool_list()); ?></div>	
 	</div>
 	<?php
 }
@@ -358,27 +358,27 @@ function fruitful_menu_style () {
 	$options = fruitful_get_theme_options();
 	?>
 		<div class="box-options">
-			<h4><?php _e( 'Menu Button Color ', 'fruitful' ); ?></h4>
+			<h4><?php _e( 'Button color ', 'fruitful' ); ?></h4>
 			<div id="menubntcolor"><div style="background-color: <?php echo $options['menu_btn_color']; ?>"></div></div>
 			<input type="text" id="menu_btn_color" name="fruitful_theme_options[menu_btn_color]" value="<?php echo $options['menu_btn_color']; ?>"/>
 		</div>
 		<div class="box-options">
-			<h4><?php _e( 'Menu Boxshadow Color ', 'fruitful' ); ?></h4>
+			<h4><?php _e( 'Box-shadow color ', 'fruitful' ); ?></h4>
 			<div id="menuboxshcolor"><div style="background-color: <?php echo $options['menu_boxsh_color']; ?>"></div></div>
 			<input type="text" id="menu_boxsh_color" name="fruitful_theme_options[menu_boxsh_color]" value="<?php echo $options['menu_boxsh_color']; ?>"/>
 		</div>	
 		<div class="box-options">
-			<h4><?php _e( 'Menu Font Color', 'fruitful' ); ?></h4>
+			<h4><?php _e( 'Font color', 'fruitful' ); ?></h4>
 			<div id="menufontcolor"><div style="background-color: <?php echo $options['menu_font_color']; ?>"></div></div>
 			<input type="text" id="menu_font_color" name="fruitful_theme_options[menu_font_color]" value="<?php echo $options['menu_font_color']; ?>"/>
 		</div>
 		<div class="box-options">
-			<h4><?php _e( 'Menu Font Color (Active, Hover)', 'fruitful' ); ?></h4>
+			<h4><?php _e( 'Font color (Active, Hover)', 'fruitful' ); ?></h4>
 			<div id="menufontcolorachvr"><div style="background-color: <?php echo $options['menu_hover_color']; ?>"></div></div>
 			<input type="text" id="menu_hover_color" name="fruitful_theme_options[menu_hover_color]" value="<?php echo $options['menu_hover_color']; ?>"/>
 		</div>
 		<div class="box-options">
-			<h4><?php _e( 'Menu Textshadow (Active, Hover)', 'fruitful' ); ?></h4>
+			<h4><?php _e( 'Text-shadow (Active, Hover)', 'fruitful' ); ?></h4>
 			<div id="menutxtshcolor"><div style="background-color: <?php echo $options['menu_txtsh_color']; ?>"></div></div>
 			<input type="text" id="menu_txtsh_color" name="fruitful_theme_options[menu_txtsh_color]" value="<?php echo $options['menu_txtsh_color']; ?>"/>
 		</div>	
