@@ -33,7 +33,7 @@ function fruitful_theme_options_init() {
 	add_settings_section('links', 				'',  '__return_false', 'theme_options' );
 	add_settings_section('footer', 				'',  '__return_false', 'theme_options' );
 	
-	add_settings_field( 'general_rs', 		__( 'Layout', 'fruitful' ),	    'fruitful_get_responsive_design',	'theme_options',  'general', array('info' => __( 'Theme supported 2 types of layout. Default static and responsive which adapt for mobile devices, if you will scale width of browser window, website will be collapsed. <a target="_blank" href="http://fruitfulcode.com/responsive-web-design/">Learn more</a> about Responsive. ', 'fruitful' )));
+	add_settings_field( 'general_rs', 		__( 'Layout', 'fruitful' ),	    'fruitful_get_responsive_design',	'theme_options',  'general', array('info' => __( 'Theme supported 2 types of layout. Default static and responsive which adapt for mobile devices, if you will scale width of browser window, website will be collapsed. <a target="_blank" href="http://fruitfulcode.com/blog/responsive-web-design/">Learn more</a> about Responsive. ', 'fruitful' )));
 	add_settings_field( 'general_cm',		__( 'Comments', 'fruitful' ), 'fruitful_get_general_comment',  	'theme_options',  'general', array('info' => __( 'If you want to display comments on your post page or page, select options below.', 'fruitful' )));
 	add_settings_field( 'general_ds',		__( 'Default css', 'fruitful' ), 	'fruitful_get_style_theme',  			'theme_options',  'general', array('info' => __( 'Theme has styles by default, if you are using theme as based for development and dont what overwrite default css styles, you can disable our styles. ', 'fruitful' )));
 	
