@@ -142,9 +142,9 @@ add_action( 'widgets_init', 'fruitful_widgets_init' );
 	wp_enqueue_style( 'fn-box-btn',		get_template_directory_uri() . '/js/fnBox/helpers/jquery.fancybox-buttons.css');
 	wp_enqueue_script('fn-box-btns',		get_template_directory_uri() . '/js/fnBox/helpers/jquery.fancybox-buttons.js', array( 'jquery' ), '20120206', false );
 
-	wp_enqueue_style( 'fn-box-thumb',	get_template_directory_uri() . '/js/fnBox/helpers/jquery.fancybox-thumbs.css');
+	wp_enqueue_style( 'fn-box-thumb',		get_template_directory_uri() . '/js/fnBox/helpers/jquery.fancybox-thumbs.css');
 	wp_enqueue_script('fn-box-thumbs',		get_template_directory_uri() . '/js/fnBox/helpers/jquery.fancybox-thumbs.js', array( 'jquery' ), '20120206', false );
-	wp_enqueue_script('fn-box-btns',		get_template_directory_uri() . '/js/fnBox/helpers/jquery.fancybox-media.js', array( 'jquery' ), '20120206', false );
+	wp_enqueue_script('fn-box-media',		get_template_directory_uri() . '/js/fnBox/helpers/jquery.fancybox-media.js', array( 'jquery' ), '20120206', false );
 	
 	
   //wp_enqueue_script('small-menu', get_template_directory_uri() . '/js/small-menu.js', array( 'jquery' ), '20120206', false );

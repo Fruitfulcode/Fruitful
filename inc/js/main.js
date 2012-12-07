@@ -3,17 +3,20 @@ jQuery(document).ready(function() {
   jQuery('select').selectbox();
   
   /*Font Family Preview*/
-  jQuery(".select-fonts").each(function() { 			   var vTextFontSample = $(this).prev().prev(); vTextFontSample.css({"font-family" : $(this).val()}); });
-  jQuery(".select-fonts").live("change", function(){ var vTextFontSample = $(this).prev().prev(); vTextFontSample.css({"font-family" : $(this).val()}); });
+  jQuery(".select-fonts").each(function() { 			   	var vTextFontSample = $(this).prev().prev(); vTextFontSample.css({"font-family" : $(this).val()}); });
+  jQuery(".select-fonts").live("change", function(){ 	var vTextFontSample = $(this).prev().prev(); vTextFontSample.css({"font-family" : $(this).val()}); });
 		
   
   jQuery('#settings-section-0').fadeIn("slow");
   jQuery('.form-admin-fruitful .content .menu-options ul li').click(function() {
-
+  
 	jQuery('.form-admin-fruitful .content .menu-options ul li').removeClass("current");
-	$(this).addClass("current");
-	$(this).prev().css({'border-bottom':'0'});
-	$(this).css({'border-top':'1px solid #E5E5E5'});
+		$(this).addClass("current");
+		$(this).css({'border-top':'1px solid #E5E5E5'});
+		$(this).css({'border-bottom':'1px solid #E5E5E5'});
+		$(this).prev().css({'border-bottom':'0'});
+		$(this).next().css({'border-top':'0'});
+	
 	
 	jQuery('.form-admin-fruitful .content .settings-section').hide();
 
