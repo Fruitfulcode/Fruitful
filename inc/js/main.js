@@ -43,6 +43,23 @@ jQuery(document).ready(function() {
 		}
 	});
 	
+	
+	$('#menubgcolor').ColorPicker({
+		color: $('#menu_bg_color').val(),
+		onShow: function (colpkr) {
+			$(colpkr).fadeIn(500);
+			return false;
+		},
+		onHide: function (colpkr) {
+		$(colpkr).fadeOut(500);
+		return false;
+		},
+		onChange: function (hsb, hex, rgb) {
+			$('#menubgcolor div').css('backgroundColor', '#' + hex);
+			$('#menu_bg_color').val('#' + hex);
+		}
+	});
+	
 	$('#menubntcolor').ColorPicker({
 		color: $('#menu_btn_color').val(),
 		onShow: function (colpkr) {

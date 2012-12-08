@@ -286,13 +286,15 @@ function get_all_style () {
 	
 	
 		$out .= '$(".main-navigation a").css({"color" : "'.$theme_options['menu_font_color']. '"});' . chr(13); 
-		if ($theme_options['menu_btn_color'] != "") 		{$out .= '$(".main-navigation ul li.current_page_item a, .main-navigation ul li.current-menu-item a, .main-navigation ul li.current-menu-parent a, .main-navigation ul li.current_page_parent a").css({"background-color" : "'.$theme_options['menu_btn_color'] . '"});' . chr(13); 	}
+		
+		if ($theme_options['menu_bg_color'] != "") 	{$out .= '$(".main-navigation").css({"background-color" : "'.$theme_options['menu_bg_color'] . '"});' . chr(13); 	}
+		if ($theme_options['menu_btn_color'] != "") 	{$out .= '$(".main-navigation ul li.current_page_item a, .main-navigation ul li.current-menu-item a, .main-navigation ul li.current-menu-parent a, .main-navigation ul li.current_page_parent a").css({"background-color" : "'.$theme_options['menu_btn_color'] . '"});' . chr(13); 	}
 		if ($theme_options['menu_hover_color'] !="") 	{$out .= '$(".main-navigation ul li.current_page_item a, .main-navigation ul li.current-menu-item a, .main-navigation ul li.current-menu-parent a, .main-navigation ul li.current_page_parent a").css({"color" : "'.$theme_options['menu_hover_color'] . '"});' . chr(13); 	}
 		if ($theme_options['menu_txtsh_color'] != "") 	{$out .= '$(".main-navigation ul li.current_page_item a, .main-navigation ul li.current-menu-item a, .main-navigation ul li.current-menu-parent a, .main-navigation ul li.current_page_parent a").css({"text-shadow" : " 0 1px 0 '.$theme_options['menu_txtsh_color'] . '"});' . chr(13); }
 		if ($theme_options['menu_boxsh_color'] != "") 	{$out .= '$(".main-navigation ul li.current_page_item a, .main-navigation ul li.current-menu-item a, .main-navigation ul li.current-menu-parent a, .main-navigation ul li.current_page_parent a").css({"box-shadow" : " 0 0 2px '.$theme_options['menu_boxsh_color'] . ' inset"});' . chr(13); }
 	
 		$out .= '$(".main-navigation ul#menu-mainmenu li:visible").hover( function() { ' .chr(13);
-			if ($theme_options['menu_btn_color'] != "") 		{$out .= '$(this).find("a").css({"background-color" : "'.$theme_options['menu_btn_color'] . '"});' . chr(13); }
+			if ($theme_options['menu_btn_color'] != "") 	{$out .= '$(this).find("a").css({"background-color" : "'.$theme_options['menu_btn_color'] . '"});' . chr(13); }
 			if ($theme_options['menu_hover_color'] !="") 	{$out .= '$(this).find("a").css({"color" : "'.$theme_options['menu_hover_color'] . '"});' . chr(13); }
 			if ($theme_options['menu_txtsh_color'] != "") 	{$out .= '$(this).find("a").css({"text-shadow" : " 0 1px 0 '.$theme_options['menu_txtsh_color'] . '"});' . chr(13); }
 			if ($theme_options['menu_boxsh_color'] !="") 	{$out .= '$(this).find("a").css({"box-shadow" : " 0 0 2px '.$theme_options['menu_boxsh_color'] . ' inset"});' . chr(13); }
@@ -300,7 +302,7 @@ function get_all_style () {
 	
 		$out .= '$(this).find("a").removeAttr("style"); ' . chr(13);  
 		$out .= '$(".main-navigation a").css({"color" : "'.$theme_options['menu_font_color']. '"});' . chr(13); 
-		if ($theme_options['menu_btn_color'] != "") 		{$out .= '$(".main-navigation ul li.current_page_item a, .main-navigation ul li.current-menu-item a, .main-navigation ul li.current-menu-parent a, .main-navigation ul li.current_page_parent a").css({"background-color" : "'.$theme_options['menu_btn_color'] . '"});' . chr(13); 	}
+		if ($theme_options['menu_btn_color'] != "") 	{$out .= '$(".main-navigation ul li.current_page_item a, .main-navigation ul li.current-menu-item a, .main-navigation ul li.current-menu-parent a, .main-navigation ul li.current_page_parent a").css({"background-color" : "'.$theme_options['menu_btn_color'] . '"});' . chr(13); 	}
 		if ($theme_options['menu_hover_color'] !="") 	{$out .= '$(".main-navigation ul li.current_page_item a, .main-navigation ul li.current-menu-item a, .main-navigation ul li.current-menu-parent a, .main-navigation ul li.current_page_parent a").css({"color" : "'.$theme_options['menu_hover_color'] . '"});' . chr(13); 	}
 		if ($theme_options['menu_txtsh_color'] != "") 	{$out .= '$(".main-navigation ul li.current_page_item a, .main-navigation ul li.current-menu-item a, .main-navigation ul li.current-menu-parent a, .main-navigation ul li.current_page_parent a").css({"text-shadow" : " 0 1px 0 '.$theme_options['menu_txtsh_color'] . '"});' . chr(13); 	}	
 		if ($theme_options['menu_boxsh_color'] != "") 	{$out .= '$(".main-navigation ul li.current_page_item a, .main-navigation ul li.current-menu-item a, .main-navigation ul li.current-menu-parent a, .main-navigation ul li.current_page_parent a").css({"box-shadow" : " 0 0 2px '.$theme_options['menu_boxsh_color'] . ' inset"});' . chr(13); }
@@ -323,15 +325,15 @@ function get_footer_socials_icon () {
 	$theme_options  = ret_options("fruitful_theme_options"); 
 	
 	if(!empty($theme_options['facebook_url'])) 		{ $out .= '<a class="facebook" href="'. esc_url($theme_options['facebook_url']) . '" target="_blank"></a>';	}
-	if(!empty($theme_options['twitter_url']))		 		{ $out .= '<a class="twitter" href="'. esc_url($theme_options['twitter_url']) . '" target="_blank"></a>'; }
-	if(!empty($theme_options['linkedin_url'])) 			{ $out .= '<a class="linkedin" href="'. esc_url($theme_options['linkedin_url']) . '" target="_blank"></a>'; }
+	if(!empty($theme_options['twitter_url']))		{ $out .= '<a class="twitter" href="'. esc_url($theme_options['twitter_url']) . '" target="_blank"></a>'; }
+	if(!empty($theme_options['linkedin_url'])) 		{ $out .= '<a class="linkedin" href="'. esc_url($theme_options['linkedin_url']) . '" target="_blank"></a>'; }
 	if(!empty($theme_options['myspace_url'])) 		{ $out .= '<a class="myspace" href="'. esc_url($theme_options['myspace_url']) . '" target="_blank"></a>'; }	
-	if(!empty($theme_options['googleplus_url'])) 		{ $out .= '<a class="googleplus" href="'. esc_url($theme_options['googleplus_url']) . '" target="_blank"></a>'; }		
-	if(!empty($theme_options['dribbble_url'])) 	 		{ $out .= '<a class="dribbble" href="'. esc_url($theme_options['dribbble_url']) . '" target="_blank"></a>'; }		
-	if(!empty($theme_options['skype_link'])) 			{ $out .= '<a class="skype" href="'. esc_url($theme_options['skype_link']) . '" target="_blank"></a>'; }		
-	if(!empty($theme_options['flickr_link'])) 			{ $out .= '<a class="flickr" href="'. esc_url($theme_options['flickr_link']) . '" target="_blank"></a>'; }		
-	if(!empty($theme_options['youtube_url'])) 			{ $out .= '<a class="youtube" href="'. esc_url($theme_options['youtube_url']) . '" target="_blank"></a>'; }		
-	if(!empty($theme_options['rss_link'])) 				{ $out .= '<a class="rss" href="'. esc_url($theme_options['rss_link']) . '" target="_blank"></a>'; }			
+	if(!empty($theme_options['googleplus_url'])) 	{ $out .= '<a class="googleplus" href="'. esc_url($theme_options['googleplus_url']) . '" target="_blank"></a>'; }		
+	if(!empty($theme_options['dribbble_url'])) 	 	{ $out .= '<a class="dribbble" href="'. esc_url($theme_options['dribbble_url']) . '" target="_blank"></a>'; }		
+	if(!empty($theme_options['skype_link'])) 		{ $out .= '<a class="skype" href="'. esc_url($theme_options['skype_link']) . '" target="_blank"></a>'; }		
+	if(!empty($theme_options['flickr_link'])) 		{ $out .= '<a class="flickr" href="'. esc_url($theme_options['flickr_link']) . '" target="_blank"></a>'; }		
+	if(!empty($theme_options['youtube_url'])) 		{ $out .= '<a class="youtube" href="'. esc_url($theme_options['youtube_url']) . '" target="_blank"></a>'; }		
+	if(!empty($theme_options['rss_link'])) 			{ $out .= '<a class="rss" href="'. esc_url($theme_options['rss_link']) . '" target="_blank"></a>'; }			
 	
 	return $out;
 }

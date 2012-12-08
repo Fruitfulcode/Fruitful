@@ -34,29 +34,29 @@ function fruitful_theme_options_init() {
 	add_settings_section('footer', 				'',  '__return_false', 'theme_options' );
 	
 	add_settings_field( 'general_rs', 		__( 'Layout', 'fruitful' ),	    'fruitful_get_responsive_design',	'theme_options',  'general', array('info' => __( 'Theme supported 2 types of layout. Default static and responsive which adapt for mobile devices, if you will scale width of browser window, website will be collapsed. <a target="_blank" href="http://fruitfulcode.com/blog/responsive-web-design/">Learn more</a> about Responsive. ', 'fruitful' )));
-	add_settings_field( 'general_cm',		__( 'Comments', 'fruitful' ), 'fruitful_get_general_comment',  	'theme_options',  'general', array('info' => __( 'If you want to display comments on your post page or page, select options below.', 'fruitful' )));
-	add_settings_field( 'general_ds',		__( 'Default css', 'fruitful' ), 	'fruitful_get_style_theme',  			'theme_options',  'general', array('info' => __( 'Theme has styles by default, if you are using theme as based for development and dont what overwrite default css styles, you can disable our styles. ', 'fruitful' )));
+	add_settings_field( 'general_cm',		__( 'Comments', 'fruitful' ), 	'fruitful_get_general_comment',  	'theme_options',  'general', array('info' => __( 'If you want to display comments on your post page or page, select options below.', 'fruitful' )));
+	add_settings_field( 'general_ds',		__( 'Default css', 'fruitful' ),'fruitful_get_style_theme',  		'theme_options',  'general', array('info' => __( 'Theme has styles by default, if you are using theme as based for development and dont what overwrite default css styles, you can disable our styles. ', 'fruitful' )));
+	add_settings_field( 'general_tc',		__( 'Google Analytics Tracking Code', 'fruitful' ),			'fruitful_get_tracking_code', 'theme_options',  'general', array('info' => __( 'Tracking Code. ', 'fruitful' )));
+	add_settings_field( 'general_rb',		__( 'Reset All options to default state', 'fruitful' ),		'fruitful_reset_btn', 		  'theme_options',  'general', array('info' => __( 'Reset Button. ', 'fruitful' )));
 	
 	
-	add_settings_field( 'background_image', 	__( 'Background Image', 'fruitful' ), 'fruitful_get_background_img',  'theme_options',  'background', array('info' => __( 'Upload needed image for site background. (Supported files .png, .jpg, .gif)', 'fruitful' )));
-	add_settings_field( 'background_color', 	__( 'Background Color ', 'fruitful' ), 'fruitful_get_background_color', 'theme_options', 'background', array('info' => __( 'Choose color for body background', 'fruitful' )));
+	
+	add_settings_field( 'background_image', __( 'Background Image', 'fruitful' ), 'fruitful_get_background_img',  'theme_options',  'background', array('info' => __( 'Upload needed image for site background. (Supported files .png, .jpg, .gif)', 'fruitful' )));
+	add_settings_field( 'background_color', __( 'Background Color ', 'fruitful' ), 'fruitful_get_background_color', 'theme_options', 'background', array('info' => __( 'Choose color for body background', 'fruitful' )));
 		
-	add_settings_field( 'logo_image', 			__( 'Logo Image', 'fruitful' ), 		'fruitful_get_logo_img',	'theme_options', 'logo', 	array('info' => __( 'Upload needed image for site logo. (Supported files .png, .jpg, .gif)', 'fruitful' )));
-	add_settings_field( 'logo_size', 				__( 'Logo Size', 'fruitful' ), 		'fruitful_get_logo_wh',		'theme_options', 'logo', 	array('info' => __( 'Specify resolution for your logo image. Our theme will crop (timthumb) your image for need size.', 'fruitful' )) );
-	add_settings_field( 'menu_style',				__( 'Menu Style ', 'fruitful' ),	 	'fruitful_menu_style',		'theme_options', 'menu',  array('info' => __( 'Choose styles for main menu.', 'fruitful' )) );
-	add_settings_field( 'fonts_options', 			__( 'Fonts Options', 'fruitful' ), 	'fruitful_fonts_options',	'theme_options', 'fonts', array('info' => __( 'We collected web safe fonts and google web fonts in this option. You can select the desired font or upload own. <a target="_blank" href="http://fruitfulcode.com/fruitful/documentation">Learn more</a> about how to add own font to this option.', 'fruitful' )) );
+	add_settings_field( 'logo_image', 		__( 'Logo Image', 'fruitful' ), 'fruitful_get_logo_img',	'theme_options', 'logo', 	array('info' => __( 'Upload needed image for site logo. (Supported files .png, .jpg, .gif)', 'fruitful' )));
+	add_settings_field( 'logo_size', 		__( 'Logo Size', 'fruitful' ), 	'fruitful_get_logo_wh',		'theme_options', 'logo', 	array('info' => __( 'Specify resolution for your logo image. Our theme will crop (timthumb) your image for need size.', 'fruitful' )) );
+	add_settings_field( 'menu_style',		__( 'Menu Style ', 'fruitful' ),	'fruitful_menu_style',		'theme_options', 'menu',  array('info' => __( 'Choose styles for main menu.', 'fruitful' )) );
+	add_settings_field( 'fonts_options', 	__( 'Fonts Options', 'fruitful' ), 	'fruitful_fonts_options',	'theme_options', 'fonts', array('info' => __( 'We collected web safe fonts and google web fonts in this option. You can select the desired font or upload own. <a target="_blank" href="http://fruitfulcode.com/fruitful/documentation">Learn more</a> about how to add own font to this option.', 'fruitful' )) );
 	
-	add_settings_field( 'fonts_headers', 			__( 'Headers', 'fruitful' ), 	'fruitful_fonts_headers',	'theme_options', 'fonts', array('info' => __( 'Choose font-family for all headlines.', 'fruitful' )) );
-		
-	add_settings_field( 'fonts_content', 			__( 'Content', 'fruitful' ), 	'fruitful_fonts_content',	'theme_options', 'fonts', array('info' => __( 'Choose font-family for text.', 'fruitful' )) );
+	add_settings_field( 'fonts_headers', 	__( 'Headers', 'fruitful' ),'fruitful_fonts_headers',	'theme_options', 'fonts', array('info' => __( 'Choose font-family for all headlines.', 'fruitful' )) );
+	add_settings_field( 'fonts_content', 	__( 'Content', 'fruitful' ),'fruitful_fonts_content',	'theme_options', 'fonts', array('info' => __( 'Choose font-family for text.', 'fruitful' )) );
 	
-	add_settings_field( 'fonts_size', 			__( 'Font size', 'fruitful' ), 	'fruitful_fonts_size',	'theme_options', 'fonts', array('info' => __( 'Choose font size for specific html elements. Set size as number, without px.', 'fruitful' )) );
-	
-	add_settings_field( 'slider_options',			__( 'Slider Options', 'fruitful' ), 	'fruitful_slider_options',	'theme_options', 'slider', array('info' => __( 'Choose needed options for slider. Width, height, animation type, sliding direction, speed of animations, etc', 'fruitful' )) );
-	add_settings_field( 'slider_image',			__( 'Slides', 'fruitful' ), 	'fruitful_slider_images',	'theme_options', 'slider', array('info' => __( 'Add images to slider (Supported files .png, .jpg, .gif). After upload it will be saved automatically. If you want to change slides order, just drag and drop it. If images have not property size, set image size in slider options. To display slider in needed place use shortcode [slider]. <a target="_blank" href="http://fruitfulcode.com/themes/documentation/shortcodes/">Learn more</a> about shortcodes. ', 'fruitful' )) );
-	
-	add_settings_field( 'socials_links', 			__( 'Socials Links', 'fruitful' ), 	'fruitful_settings_field_socials_links', 'theme_options', 'links', array('info' => __( 'Add link to your social media profiles. Icons with link will be display in footer.', 'fruitful' )) );
-	add_settings_field( 'footer_text_copy',		__( 'Footer Options', 'fruitful' ), 'fruitful_settings_field_footer_text', 'theme_options', 'footer' );
+	add_settings_field( 'fonts_size', 		__( 'Font size', 'fruitful' ), 			'fruitful_fonts_size',	'theme_options', 'fonts', array('info' => __( 'Choose font size for specific html elements. Set size as number, without px.', 'fruitful' )) );
+	add_settings_field( 'slider_options',	__( 'Slider Options', 'fruitful' ), 	'fruitful_slider_options',	'theme_options', 'slider', array('info' => __( 'Choose needed options for slider. Width, height, animation type, sliding direction, speed of animations, etc', 'fruitful' )) );
+	add_settings_field( 'slider_image',		__( 'Slides', 'fruitful' ), 			'fruitful_slider_images',	'theme_options', 'slider', array('info' => __( 'Add images to slider (Supported files .png, .jpg, .gif). After upload it will be saved automatically. If you want to change slides order, just drag and drop it. If images have not property size, set image size in slider options. To display slider in needed place use shortcode [slider]. <a target="_blank" href="http://fruitfulcode.com/themes/documentation/shortcodes/">Learn more</a> about shortcodes. ', 'fruitful' )) );
+	add_settings_field( 'socials_links', 	__( 'Socials Links', 'fruitful' ), 	'fruitful_settings_field_socials_links', 'theme_options', 'links', array('info' => __( 'Add link to your social media profiles. Icons with link will be display in footer.', 'fruitful' )) );
+	add_settings_field( 'footer_text_copy',	__( 'Footer Options', 'fruitful' ), 'fruitful_settings_field_footer_text', 'theme_options', 'footer' );
 	
 	add_option( 'fruitful_theme_slides_options', '', '', 'yes' ); 
 	add_option( 'fruitful_theme_slides_sort_options', '', '', 'yes' ); 
@@ -165,7 +165,24 @@ function fruitful_get_style_theme() {
 		</div>
 	<?php	
 }
-	
+
+function fruitful_get_tracking_code() {
+	$options = fruitful_get_theme_options();
+	?>
+	<div class="box-option">
+		<input id="tracking_code" name="fruitful_theme_options[tracking_code]" type="text" value="<?php echo $options['tracking_code']; ?>"/>
+	</div>
+	<?php	
+}
+
+function fruitful_reset_btn() { 
+	?>
+	<div class="box-option">
+		<input name="reset" type="reset" class="button-secondary reset-btn" value="<?php esc_attr_e('Reset Defaults', 'fruitful'); ?>" />		
+	</div>	
+	<?php	
+}
+
 
 function fruitful_settings_field_socials_links() {
 	$options = fruitful_get_theme_options();
@@ -189,7 +206,6 @@ function fruitful_settings_field_footer_text() {
 	$options = fruitful_get_theme_options();
 	?>
 	<h4><?php _e( 'Footer Text', 'fruitful' ); ?></h4><textarea class="large-text" type="text" name="fruitful_theme_options[footer_text]" id="footer-text" cols="50" rows="10" /><?php echo stripslashes($options['footer_text']); ?></textarea>
-	<h4><?php _e( 'Tracking Code', 'fruitful' ); ?></h4><input id="tracking_code" name="fruitful_theme_options[tracking_code]" type="text" value="<?php echo $options['tracking_code']; ?>"/>
 <?php
 }
 
@@ -358,6 +374,11 @@ function fruitful_menu_style () {
 	$options = fruitful_get_theme_options();
 	?>
 		<div class="box-options">
+			<h4><?php _e( 'Background color ', 'fruitful' ); ?></h4>
+			<div id="menubgcolor"><div style="background-color: <?php echo $options['menu_bg_color']; ?>"></div></div>
+			<input type="text" id="menu_bg_color" name="fruitful_theme_options[menu_bg_color]" value="<?php echo $options['menu_bg_color']; ?>"/>
+		</div>
+		<div class="box-options">
 			<h4><?php _e( 'Button color ', 'fruitful' ); ?></h4>
 			<div id="menubntcolor"><div style="background-color: <?php echo $options['menu_btn_color']; ?>"></div></div>
 			<input type="text" id="menu_btn_color" name="fruitful_theme_options[menu_btn_color]" value="<?php echo $options['menu_btn_color']; ?>"/>
@@ -413,12 +434,12 @@ function fruitful_theme_options_render_page() {
 				<div class="menu-options">
 					<ul>
 						<li class="current"><a  id="item_0" href="javascript:void(0)" 	title="General Settings"><span id="menu_img_0"></span><?php _e( 'General Settings', 'fruitful' ); ?></a></li>
-						<li><a  id="item_1" href="javascript:void(0)"	title="Background">	<span id="menu_img_1"></span><?php _e( 'Background', 'fruitful' ); ?></a></li>
+						<li><a  id="item_1" href="javascript:void(0)" title="Background">		<span id="menu_img_1"></span><?php _e( 'Background', 'fruitful' ); ?></a></li>
 						<li><a  id="item_2" href="javascript:void(0)" title="Logo">				<span id="menu_img_2"></span><?php _e( 'Logo',   'fruitful' ); ?></a></li>
 						<li><a  id="item_3" href="javascript:void(0)" title="Menu">				<span id="menu_img_3"></span><?php _e( 'Menu', 'fruitful' ); ?></a></li>
 						<li><a  id="item_4" href="javascript:void(0)" title="Fonts">			<span id="menu_img_4"></span><?php _e( 'Fonts', 'fruitful' ); ?></a></li>
 						<li><a  id="item_5" href="javascript:void(0)" title="Slider">			<span id="menu_img_5"></span><?php _e( 'Slider', 'fruitful' ); ?></a></li>
-						<li><a  id="item_6" href="javascript:void(0)" title="Social Links">	<span id="menu_img_6"></span><?php _e( 'Social Links', 'fruitful' ); ?></a></li>
+						<li><a  id="item_6" href="javascript:void(0)" title="Social Links">		<span id="menu_img_6"></span><?php _e( 'Social Links', 'fruitful' ); ?></a></li>
 						<li><a  id="item_7" href="javascript:void(0)" title="Footer">			<span id="menu_img_7"></span><?php _e( 'Footer', 'fruitful' ); ?></a></li>
 					</ul>
 				</div> 	
@@ -432,7 +453,6 @@ function fruitful_theme_options_render_page() {
 		
 		<div class="footer">
 			<?php submit_button();  ?>
-			<input name="reset" type="reset" class="button-secondary reset-btn" value="<?php esc_attr_e('Reset Defaults', 'fruitful'); ?>" />		
 			<div id="dialog-confirm" title="Reset all theme options?">
 				<p>
 					<span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>

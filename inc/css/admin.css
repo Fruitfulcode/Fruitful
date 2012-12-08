@@ -67,6 +67,7 @@
 
 .form-admin-fruitful .content .settings-section input#background_color, 
 .form-admin-fruitful .content .settings-section input#menu_font_color, 
+.form-admin-fruitful .content .settings-section input#menu_bg_color,
 .form-admin-fruitful .content .settings-section input#menu_btn_color,
 .form-admin-fruitful .content .settings-section input#menu_boxsh_color,
 .form-admin-fruitful .content .settings-section input#menu_hover_color, 
@@ -128,7 +129,7 @@
 .ui-widget-overlay 				{background:#000; position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity:0.4; filter: Alpha(Opacity=40);}
 .ui-dialog-buttonpane 		{float: left; width: 100%; margin: 0 0 24px 0; }
 
-.save-options {background: url(../images/bg_sucess.png) no-repeat 0 0 transparent; width: 300px; height: 162px; position: absolute; z-index: 10000; top:0; left: 0; display:none}
+.save-options {background: url(../images/bg_sucess.png) no-repeat 0 0 transparent; width: 300px; height: 162px; position: absolute; z-index: 9999999; top:0; left: 0; display:none}
 .save-options .icon-sc, 
 .save-options .icon-al  {margin: 46px 0 0 14px; width:64px; height:64px; float:left;}
 .save-options .icon-sc {background:url(../images/success.png) no-repeat 0 0 transparent; }
@@ -147,3 +148,5 @@
 .sidebar-promo a.button_help:hover {opacity:1}											
 .form-admin-fruitful .content .settings-section .settings-form-row .box-options #slider_main_options {display:none; float: left; margin: 0 0 20px 0;}
 #logo-w, #logo-h {width:105px}
+
+#tracking_code {width:150px}

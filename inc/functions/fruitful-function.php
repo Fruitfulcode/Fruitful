@@ -317,67 +317,68 @@ function remove_dir($dir)  {
 function get_default_array() {
 return array(
 				/*General Settings*/
-				'responsive'					=> 'off',
-				'postcomment'				=> 'off',
-				'pagecomment'				=> 'off',
-				'styletheme'					=> 'off',
+				'responsive'		=> 'off',
+				'postcomment'		=> 'off',
+				'pagecomment'		=> 'off',
+				'styletheme'		=> 'off',
 
 				/*Background Image*/
-				'backgroung_img'        	=> '',
-				'background_color'			=> '#ffffff', 
-				'bg_repeating'				=> 'off',
+				'backgroung_img'    => '',
+				'background_color'	=> '#ffffff', 
+				'bg_repeating'		=> 'off',
 			
 				/*logo*/
-				'logo_img'						=> '',
-				'logo_w'							=> '160',
-				'logo_h'							=> '60',
+				'logo_img'			=> '',
+				'logo_w'			=> '160',
+				'logo_h'			=> '60',
 				
 				/*menu*/
-				'menu_btn_color'			=> '#e1704b',
-				'menu_boxsh_color'		=> '#000000',
-				'menu_hover_color'			=> '#ffffff',
-				'menu_txtsh_color'			=> '#84442c',
-				'menu_font_color'			=> '#333333',		
+				'menu_bg_color'		=> '',
+				'menu_btn_color'	=> '#e1704b',
+				'menu_boxsh_color'	=> '#000000',
+				'menu_hover_color'	=> '#ffffff',
+				'menu_txtsh_color'	=> '#84442c',
+				'menu_font_color'	=> '#333333',		
 				
 				/*fonts*/
-				'h_font_family'				=> 'Open Sans, sans-serif',
-				'h1_size'						=> '26',
-				'h2_size'						=> '24',
-				'h3_size'						=> '18',
-				'h4_size'						=> '14',
-				'h5_size'						=> '12',
-				'h6_size'						=> '10',
-				'p_font_family'				=> 'Open Sans, sans-serif',
-				'p_size'							=> '12',
+				'h_font_family'		=> 'Open Sans, sans-serif',
+				'h1_size'			=> '26',
+				'h2_size'			=> '24',
+				'h3_size'			=> '18',
+				'h4_size'			=> '14',
+				'h5_size'			=> '12',
+				'h6_size'			=> '10',
+				'p_font_family'		=> 'Open Sans, sans-serif',
+				'p_size'			=> '12',
 				
 				/*slider*/
-				's_width'						=> '960',
-				's_height'						=> '500',
-				's_animation'					=> 'fade', 
-				's_direction'					=> 'horizontal',
-				's_reverse'						=> 'false',
-				's_slideshow'					=> 'true',
-				's_slideshowSpeed'		=> '7000',
-				's_animationSpeed'		=> '600',
-				's_initDelay'					=> '0',
-				's_randomize'				=> 'false',
-				's_controlnav'					=> 'true',
+				's_width'			=> '960',
+				's_height'			=> '500',
+				's_animation'		=> 'fade', 
+				's_direction'		=> 'horizontal',
+				's_reverse'			=> 'false',
+				's_slideshow'		=> 'true',
+				's_slideshowSpeed'	=> '7000',
+				's_animationSpeed'	=> '600',
+				's_initDelay'		=> '0',
+				's_randomize'		=> 'false',
+				's_controlnav'		=> 'true',
 				
 				/*footer*/
-				'footer_text'					=> stripslashes('Fruitful theme powered by Wordpress'),
-				'tracking_code'				=> '',
+				'footer_text'		=> stripslashes('Fruitful theme powered by Wordpress'),
+				'tracking_code'		=> '',
 				
 				/*socials*/
-				'facebook_url' 				=> '',
-				'twitter_url' 					=> '',
-				'linkedin_url'					=> '',
-				'myspace_url'				=> '',
-				'googleplus_url'				=> '',
-				'dribbble_url'					=> '',
-				'skype_link'					=> '',
-				'flickr_link'						=> '',
-				'youtube_url'					=> '',
-				'rss_link'						=> ''			
+				'facebook_url' 		=> '',
+				'twitter_url' 		=> '',
+				'linkedin_url'		=> '',
+				'myspace_url'		=> '',
+				'googleplus_url'	=> '',
+				'dribbble_url'		=> '',
+				'skype_link'		=> '',
+				'flickr_link'		=> '',
+				'youtube_url'		=> '',
+				'rss_link'			=> ''			
 		);
 }
 ?>

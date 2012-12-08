@@ -22,5 +22,5 @@
 .colorpicker_hex.colorpicker_focus{background-position:bottom;}
 .colorpicker_submit.colorpicker_focus{background-position:bottom;}
 .colorpicker_slider{background-position:bottom;}
-#colorSelector, #menufontcolor, #menubntcolor, #menuboxshcolor, #menufontcolorachvr, #menutxtshcolor {position:relative;width:36px;height:36px;background:url(images/select.png);float:left }
-#colorSelector div, #menufontcolor div, #menubntcolor div, #menuboxshcolor div, #menufontcolorachvr div, #menutxtshcolor div {position:absolute;top:3px;left:3px;width:30px;height:30px;background:url(images/select.png) center;}
+#colorSelector, #menubgcolor, #menufontcolor, #menubntcolor, #menuboxshcolor, #menufontcolorachvr, #menutxtshcolor {position:relative;width:36px;height:36px;background:url(images/select.png);float:left }
+#colorSelector div, #menufontcolor div, #menubgcolor div, #menubntcolor div, #menuboxshcolor div, #menufontcolorachvr div, #menutxtshcolor div {position:absolute;top:3px;left:3px;width:30px;height:30px;background:url(images/select.png) center;}
