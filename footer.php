@@ -14,6 +14,9 @@
 				<div class="site-info">
 					<?php echo get_footer_text(); ?>
 				</div><!-- .site-info -->
+				<div id="back-top">
+					<a href="#top" title="Back to top">&uarr;</a>
+				</div>
 				<div class="social-icon">
 					<?php echo get_footer_socials_icon(); ?>
 				</div>

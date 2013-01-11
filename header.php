@@ -103,7 +103,12 @@
 								}
 							}
 		});
-			
+		
+
+		jQuery('#back-top a').click(function () {
+			jQuery('body,html').animate({	scrollTop: 0}, 800)
+			return false;
+		});
 	});
 </script>
 

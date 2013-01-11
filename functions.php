@@ -86,6 +86,8 @@ add_action( 'after_setup_theme', 'fruitful_setup' );
  */
 function fruitful_widgets_init() {
 	register_widget( 'Fruitful_Widget_News_Archive' );
+	register_widget( 'Fruitful_Widget_Last_Tweets' );
+	
 	
 	register_sidebar( array(
 		'name' => __( 'Main Sidebar', 'fruitful' ),

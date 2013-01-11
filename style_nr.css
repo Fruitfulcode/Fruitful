@@ -555,6 +555,16 @@ float:left;
     width:420px;
     padding:8px 0;
 }
+#back-top {
+	float: right;
+	position: absolute;
+	right: -15px;
+}
+#back-top a {
+	text-decoration: none;
+	font-size: 18px;
+	color: #000;
+}
 #colophon .social-icon {
     float:right}
 #colophon .social-icon a {
