@@ -882,5 +882,20 @@ input#s {
     padding:4px 32px 4px 5px;
     width:235px;
 }
+
+
+#back-top {
+			float: right;
+			position: absolute;
+			right: -15px;
+   		  }
+
+#back-top a {
+			text-decoration: none;
+			font-size: 18px;
+			color: #000;
+		   }
+
+
 *:first-child+html #page .container .content .info_box_area {
     margin-bottom:25px}

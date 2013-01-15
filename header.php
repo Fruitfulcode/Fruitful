@@ -51,7 +51,7 @@
 	?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-<?php //echo get_favicon(); ?>
+<?php echo get_favicon(); ?>
 <?php echo get_responsive_style(); ?>
 
 <script type="text/javascript">
@@ -108,6 +108,12 @@
 								}
 							}
 		});
+		
+		$('#back-top a').click(function () {
+			$('body,html').animate({  scrollTop: 0}, 800)
+			return false;
+		});
+
 			
 	});
 </script>
