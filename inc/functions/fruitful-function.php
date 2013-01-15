@@ -1,4 +1,108 @@
 <?php
+
+function fruitful_slide_skins_select() {
+	$slide_anim_options = array(
+		'0' => array(
+			'value' =>	   'theme-default',
+			'label' => __( 'default', 'fruitful' )
+		),
+		'1' => array(
+			'value' =>	   'theme-dark',
+			'label' => __( 'dark', 'fruitful' )
+		),
+		'2' => array(
+			'value' =>	   'theme-bar',
+			'label' => __( 'bar', 'fruitful' )
+		),
+		'4' => array(
+			'value' =>	   'theme-light',
+			'label' => __( 'light', 'fruitful' )
+		)
+	);
+
+	return apply_filters( 'fruitful_slide_select', $slide_anim_options );
+}
+
+function fruitful_slide_select() {
+	$slide_anim_options = array(
+		'0' => array(
+			'value' =>	   '0',
+			'label' => __( 'None', 'fruitful' )
+		),
+		'1' => array(
+			'value' =>	   '1',
+			'label' => __( 'FlexSlider', 'fruitful' )
+		),
+		'2' => array(
+			'value' =>	   '2',
+			'label' => __( 'Nivo Slider', 'fruitful' )
+		)
+	);
+
+	return apply_filters( 'fruitful_slide_select', $slide_anim_options );
+}
+
+
+function fruitful_flex_effect() {
+	$slide_anim_options = array(
+		'0' => array(
+			'value' =>	   'random',
+			'label' => __( 'random', 'fruitful' )
+		),
+		'1' => array(
+			'value' =>	   'sliceDownRight',
+			'label' => __( 'sliceDownRight', 'fruitful' )
+		),
+		'2' => array(
+			'value' =>	   'sliceDownLeft',
+			'label' => __( 'sliceDownLeft', 'fruitful' )
+		),
+		'3' => array(
+			'value' =>	   'sliceUpRight',
+			'label' => __( 'sliceUpRight', 'fruitful' )
+		),
+		'4' => array(
+			'value' =>	   'sliceUpDown',
+			'label' => __( 'sliceUpDown', 'fruitful' )
+		),
+		'5' => array(
+			'value' =>	   'sliceUpDownLeft',
+			'label' => __( 'sliceUpDownLeft', 'fruitful' )
+		),
+		'6' => array(
+			'value' =>	   'fold',
+			'label' => __( 'fold', 'fruitful' )
+		),
+		'7' => array(
+			'value' =>	   'fade',
+			'label' => __( 'fade', 'fruitful' )
+		),
+		'8' => array(
+			'value' =>	   'boxRandom',
+			'label' => __( 'boxRandom', 'fruitful' )
+		),
+		'9' => array(
+			'value' =>	   'boxRain',
+			'label' => __( 'boxRain', 'fruitful' )
+		),
+		'10' => array(
+			'value' =>	   'boxRainReverse',
+			'label' => __( 'boxRainReverse', 'fruitful' )
+		),
+		'11' => array(
+			'value' =>	   'boxRainGrow',
+			'label' => __( 'boxRainGrow', 'fruitful' )
+		),
+		'12' => array(
+			'value' =>	   'boxRainGrowReverse',
+			'label' => __( 'boxRainGrowReverse', 'fruitful' )
+		)
+		
+	);
+
+	return apply_filters( 'fruitful_slide_select', $slide_anim_options );
+}
+
 function fruitful_slide_anim_list() {
 	$slide_anim_options = array(
 		'0' => array(
@@ -145,30 +249,30 @@ function custom_do_settings_fields($page, $section) {
 function add_admin_style() {
 	wp_enqueue_style('admin-style', 		ADMIN_STYLE . 'admin.css');
 	wp_enqueue_style('colorpicker-style',	ADMIN_JQS 	   . 'colorpicker/colorpicker.css');
-	wp_enqueue_style('ch-style',				ADMIN_JQS 	   . 'ch/ch.css');
-	wp_enqueue_style('sl-style',				ADMIN_JQS 	   . 'sl/sl.css');
+	wp_enqueue_style('ch-style',			ADMIN_JQS 	   . 'ch/ch.css');
+	wp_enqueue_style('sl-style',			ADMIN_JQS 	   . 'sl/sl.css');
 }
 
 function add_jquery_script() {
-	wp_deregister_script	("main-jquery");
-	wp_register_script		("main-jquery", "http://code.jquery.com/jquery-1.8.2.min.js", array('jquery'));
+	wp_deregister_script("main-jquery");
+	wp_register_script	("main-jquery", "http://code.jquery.com/jquery-1.8.2.min.js", array('jquery'));
 	wp_enqueue_script	("main-jquery");
 	
 	wp_enqueue_script('admin-jQuery-fruit',	ADMIN_JQS . "main.js", array('jquery'));
-	wp_enqueue_script('color-picker',			ADMIN_JQS . "colorpicker/colorpicker.js", array('jquery'));
-	wp_enqueue_script('ajaxupload',   			ADMIN_JQS . "ajaxupload.js", array('jquery'));
+	wp_enqueue_script('color-picker',		ADMIN_JQS . "colorpicker/colorpicker.js", array('jquery'));
+	wp_enqueue_script('ajaxupload',   		ADMIN_JQS . "ajaxupload.js", array('jquery'));
 	/*ui*/
-	wp_enqueue_script('core-js',   				ADMIN_JQS . "ui/jquery.ui.core.min.js", array('jquery'));
-	wp_enqueue_script('widget-js',				ADMIN_JQS . "ui/jquery.ui.widget.min.js", array('jquery'));
-	wp_enqueue_script('mouse-js',				ADMIN_JQS . "ui/jquery.ui.mouse.min.js", array('jquery'));
-	wp_enqueue_script('draggable-js',			ADMIN_JQS . "ui/jquery.ui.draggable.min.js", array('jquery'));
-	wp_enqueue_script('sortable-js',				ADMIN_JQS . "ui/jquery.ui.sortable.min.js", array('jquery'));
+	wp_enqueue_script('core-js',   			ADMIN_JQS . "ui/jquery.ui.core.min.js", array('jquery'));
+	wp_enqueue_script('widget-js',			ADMIN_JQS . "ui/jquery.ui.widget.min.js", array('jquery'));
+	wp_enqueue_script('mouse-js',			ADMIN_JQS . "ui/jquery.ui.mouse.min.js", array('jquery'));
+	wp_enqueue_script('draggable-js',		ADMIN_JQS . "ui/jquery.ui.draggable.min.js", array('jquery'));
+	wp_enqueue_script('sortable-js',		ADMIN_JQS . "ui/jquery.ui.sortable.min.js", array('jquery'));
 	
-	wp_enqueue_script('dialog',						ADMIN_JQS . "ui/jquery.ui.dialog.min.js", array('jquery'));
-	wp_enqueue_script('position',					ADMIN_JQS . "ui/jquery.ui.position.min.js", array('jquery'));
+	wp_enqueue_script('dialog',				ADMIN_JQS . "ui/jquery.ui.dialog.min.js", array('jquery'));
+	wp_enqueue_script('position',			ADMIN_JQS . "ui/jquery.ui.position.min.js", array('jquery'));
 	
-	wp_enqueue_script('chJq',						ADMIN_JQS . "ch/ch.js", array('jquery'));
-	wp_enqueue_script('slJq',						ADMIN_JQS . "sl/sl.js", array('jquery'));
+	wp_enqueue_script('chJq',				ADMIN_JQS . "ch/ch.js", array('jquery'));
+	wp_enqueue_script('slJq',				ADMIN_JQS . "sl/jquery.selectbox.min.js", array('jquery'));
 	}
 
 function file_upload($action, $dir_upload = '/fruitfulimg/', $name_options= 'fruitful_theme_options', $w=400, $h=400)
@@ -187,7 +291,7 @@ function file_upload($action, $dir_upload = '/fruitfulimg/', $name_options= 'fru
 					'tmp_name'  	=> $_FILES[$field_name]['tmp_name'],
 					'name' 			=> $_FILES[$field_name]['name'],
 					'size' 		 	=> $_FILES[$field_name]['size'],
-					'error' 		  	=> $_FILES[$field_name]['error']
+					'error' 		=> $_FILES[$field_name]['error']
 				 );
 				 
 			$file['name'] = preg_replace('/[^a-zA-Z0-9._\-]/', '', $file['name']); 
@@ -331,6 +435,7 @@ return array(
 				'logo_img'			=> '',
 				'logo_w'			=> '160',
 				'logo_h'			=> '60',
+				'fav_icon'			=> '',
 				
 				/*menu*/
 				'menu_bg_color'		=> '',
@@ -351,7 +456,9 @@ return array(
 				'p_font_family'		=> 'Open Sans, sans-serif',
 				'p_size'			=> '12',
 				
-				/*slider*/
+				'select_slider'     => '1',
+				
+				/*slider flex*/
 				's_width'			=> '960',
 				's_height'			=> '500',
 				's_animation'		=> 'fade', 
@@ -364,6 +471,24 @@ return array(
 				's_randomize'		=> 'false',
 				's_controlnav'		=> 'true',
 				
+				/*slider nivo*/
+				'nv_skins'		=> 'theme-bar',
+				'nv_animation' 	=> 'random',
+				'nv_slice' 		=> '15',
+				'nv_boxCols' 	=> '8',
+				'nv_boxRows' 	=> '4',
+				'nv_animSpeed' 	=> '500',
+				'nv_pauseTime' 	=> '3000',
+				'nv_startSlide'	=> '0',
+				'nv_directionNav' 	=> 'true',
+				'nv_controlNav' 	=> 'true',
+				'nv_controlNavThumbs' 	=> 'false',
+				'nv_pauseOnHover' 		=> 'true',
+				'nv_manualAdvance' 		=> 'false',
+				'nv_prevText' 		=> 'Prev',
+				'nv_nextText' 		=> 'Next',
+				'nv_randomStart' 	=> 'false',
+		
 				/*footer*/
 				'footer_text'		=> stripslashes('Fruitful theme powered by Wordpress'),
 				'tracking_code'		=> '',

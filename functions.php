@@ -26,7 +26,7 @@ if ( ! function_exists( 'fruitful_setup' ) ):
  */
  
 define('ADMIN_JQS',  	get_template_directory_uri() . '/inc/js/' );
-define('ADMIN_STYLE',  get_template_directory_uri() . '/inc/css/' );
+define('ADMIN_STYLE',  	get_template_directory_uri() . '/inc/css/' );
 define('GENERAL', 		TEMPLATEPATH . '/inc/');
 define('GENERAL_FUNCTIONS',	TEMPLATEPATH . '/inc/functions/');
 
@@ -86,8 +86,6 @@ add_action( 'after_setup_theme', 'fruitful_setup' );
  */
 function fruitful_widgets_init() {
 	register_widget( 'Fruitful_Widget_News_Archive' );
-	register_widget( 'Fruitful_Widget_Last_Tweets' );
-	
 	
 	register_sidebar( array(
 		'name' => __( 'Main Sidebar', 'fruitful' ),
@@ -124,24 +122,43 @@ add_action( 'widgets_init', 'fruitful_widgets_init' );
  * Enqueue scripts and styles
  */
  function fruitful_scripts() {
-		wp_deregister_script	("jquery");
-		wp_register_script		("jquery", "http://code.jquery.com/jquery-1.8.0.min.js", false, "1.8.0", true);
-		wp_enqueue_script	("jquery");
+	$theme_options = ret_options("fruitful_theme_options");
 	
-	wp_enqueue_style( 'slider', 	get_template_directory_uri() . '/js/slider/slider.css');
-	wp_enqueue_script('fitvid-j',				get_template_directory_uri() . '/js/slider/jquery.flexslider-min.js', array( 'jquery' ), '20120206', false );
-	wp_enqueue_script('froogaloop-j',		get_template_directory_uri() . '/js/slider/froogaloop.js', array( 'jquery' ), '20120206', false );
-	wp_enqueue_script('easing-j', 			get_template_directory_uri() . '/js/slider/jquery.easing.js', array( 'jquery' ), '20120206', false );
-	wp_enqueue_script('fitvid-j',				get_template_directory_uri() . '/js/slider/jquery.fitvid.js', array( 'jquery' ), '20120206', false);
-	wp_enqueue_script('mousewheel-j',	get_template_directory_uri() . '/js/slider/jquery.mousewheel.js', array( 'jquery' ), '20120206', false );
-	wp_enqueue_script('modernizr-j',		get_template_directory_uri() . '/js/slider/modernizr.js', array( 'jquery' ), '20120206', false );
-	wp_enqueue_script('shCore-j',			get_template_directory_uri() . '/js/slider/shCore.js', array( 'jquery' ), '20120206', false );
+	wp_deregister_script	("jquery");
+	wp_register_script		("jquery", "http://code.jquery.com/jquery-1.8.0.min.js", false, "1.8.0", true);
+	wp_enqueue_script		("jquery");
+	
+	
+	if ($theme_options['select_slider'] == "1") {
+		wp_enqueue_style( 'flex-slider', 			get_template_directory_uri() . '/js/flex_slider/slider.css');
+		wp_enqueue_script('flex-fitvid-j',			get_template_directory_uri() . '/js/flex_slider/jquery.flexslider-min.js', array( 'jquery' ), '20120206', false );
+		wp_enqueue_script('flex-froogaloop-j',		get_template_directory_uri() . '/js/flex_slider/froogaloop.js', 	array( 'jquery' ), '20120206', false );
+		wp_enqueue_script('flex-easing-j', 			get_template_directory_uri() . '/js/flex_slider/jquery.easing.js', 	array( 'jquery' ), '20120206', false );
+		wp_enqueue_script('flex-fitvid-j',			get_template_directory_uri() . '/js/flex_slider/jquery.fitvid.js', 	array( 'jquery' ), '20120206', false);
+		wp_enqueue_script('flex-mousewheel-j',		get_template_directory_uri() . '/js/flex_slider/jquery.mousewheel.js', array( 'jquery' ), '20120206', false );
+		wp_enqueue_script('flex-modernizr-j',		get_template_directory_uri() . '/js/flex_slider/modernizr.js', array( 'jquery' ), '20120206', false );
+	/*
+	wp_enqueue_script('flex-shCore-j',			get_template_directory_uri() . '/js/slider/shCore.js', array( 'jquery' ), '20120206', false );
+	*/
+	
+	} else if ($theme_options['select_slider'] == "2") {
+	
+		wp_enqueue_style( 'nivo-bar-skin', 		get_template_directory_uri() . '/js/nivo_slider/skins/bar/bar.css');
+		wp_enqueue_style( 'nivo-dark-skin', 	get_template_directory_uri() . '/js/nivo_slider/skins/dark/dark.css');
+		wp_enqueue_style( 'nivo-default-skin', 	get_template_directory_uri() . '/js/nivo_slider/skins/default/default.css');
+		wp_enqueue_style( 'nivo-light-skin', 	get_template_directory_uri() . '/js/nivo_slider/skins/light/light.css');
+		wp_enqueue_style( 'nivo-style', 		get_template_directory_uri() . '/js/nivo_slider/nivo-slider.css');
+		
+		wp_enqueue_script('nivo-slider',		get_template_directory_uri() . '/js/nivo_slider/jquery.nivo.slider.pack.js', array( 'jquery' ), '20120206', false );
+	
+	}
+	
 	
 	/*add fancybox*/
-	wp_enqueue_script('fn-box',			get_template_directory_uri() . '/js/fnBox/jquery.fancybox.pack.js', array( 'jquery' ), '20120206', false );
-	wp_enqueue_style( 'fn-box-style',	get_template_directory_uri() . '/js/fnBox/jquery.fancybox.css');
+	wp_enqueue_script('fn-box',				get_template_directory_uri() . '/js/fnBox/jquery.fancybox.pack.js', array( 'jquery' ), '20120206', false );
+	wp_enqueue_style( 'fn-box-style',		get_template_directory_uri() . '/js/fnBox/jquery.fancybox.css');
 	
-	wp_enqueue_style( 'fn-box-btn',		get_template_directory_uri() . '/js/fnBox/helpers/jquery.fancybox-buttons.css');
+	wp_enqueue_style( 'fn-box-btn',			get_template_directory_uri() . '/js/fnBox/helpers/jquery.fancybox-buttons.css');
 	wp_enqueue_script('fn-box-btns',		get_template_directory_uri() . '/js/fnBox/helpers/jquery.fancybox-buttons.js', array( 'jquery' ), '20120206', false );
 
 	wp_enqueue_style( 'fn-box-thumb',		get_template_directory_uri() . '/js/fnBox/helpers/jquery.fancybox-thumbs.css');
@@ -168,72 +185,125 @@ require( GENERAL . 'custom-header.php' );
 
 /*Slider*/
 
-function get_sliders_options() {
+function get_slider_options_flex() {
 	$out = "";
 	$theme_options = ret_options("fruitful_theme_options");
 	
-	$out .= '$(".flexslider").flexslider({' .chr(13);
-	$out .= 'animation: "'			. $theme_options['s_animation']				.'",' . chr(13);
-	$out .= 'direction: "'  			. $theme_options['s_direction']   				.'",' . chr(13);
-	$out .= 'reverse: '				. $theme_options['s_reverse'] 					. ',' . chr(13);
-	$out .= 'slideshow: ' 		  	. $theme_options['s_slideshow'] 				. ',' . chr(13);
-	$out .= 'slideshowSpeed: ' 	. $theme_options['s_slideshowSpeed'] 	. ',' . chr(13);
-	$out .= 'animationSpeed: ' 	. $theme_options['s_animationSpeed'] 	. ',' . chr(13);
-	$out .= 'controlNav: ' 			. $theme_options['s_controlnav'] 				. ',' . chr(13);
+	$out .= '$(".flexslider").flexslider({' . "\r\n";
+	$out .= 'animation: "'			. $theme_options['s_animation']			.'",' . "\r\n";
+	$out .= 'direction: "'  		. $theme_options['s_direction']   		.'",' . "\r\n";
+	$out .= 'reverse: '				. $theme_options['s_reverse'] 			. ',' . "\r\n";
+	$out .= 'slideshow: ' 		  	. $theme_options['s_slideshow'] 		. ',' . "\r\n";
+	$out .= 'slideshowSpeed: ' 		. $theme_options['s_slideshowSpeed'] 	. ',' . "\r\n";
+	$out .= 'animationSpeed: ' 		. $theme_options['s_animationSpeed'] 	. ',' . "\r\n";
+	$out .= 'controlNav: ' 			. $theme_options['s_controlnav'] 		. ',' . "\r\n";
 	
 	if ($theme_options['s_initDelay']  != "") {
-		$out .= 'initDelay: ' . $theme_options['s_initDelay'] .',' . chr(13);
+		$out .= 'initDelay: ' . $theme_options['s_initDelay'] .',' . "\r\n";
 	}
-	$out .= 'randomize: '	. $theme_options['s_randomize'] . chr(13);
-    $out .= '});' .chr(13);
+	$out .= 'randomize: '	. $theme_options['s_randomize'] . "\r\n";
+    $out .= '});' . "\r\n";
 	
 	return $out;
 }	  
 
+
+function get_slider_options_nivo() {
+	$out = "";
+	$theme_options = ret_options("fruitful_theme_options");
+	
+	$out .= '$(".nivoSlider").nivoSlider({' . "\r\n";
+	$out .= 'effect: "'				. $theme_options['nv_animation']		. '",' . "\r\n";
+    $out .= 'slices: '				. $theme_options['nv_slice']			.  ',' . "\r\n";
+    $out .= 'boxCols: '				. $theme_options['nv_boxCols']			.  ',' . "\r\n";
+    $out .= 'boxRows: '				. $theme_options['nv_boxRows']			.  ',' . "\r\n";
+    $out .= 'animSpeed: '			. $theme_options['nv_animSpeed']		.  ',' . "\r\n";
+    $out .= 'pauseTime: '			. $theme_options['nv_pauseTime']		.  ',' . "\r\n";
+	$out .= 'startSlide:' . (isset($theme_options['nv_startSlide']) ? $theme_options['nv_startSlide'] : 0) . ',' . "\r\n";
+    $out .= 'directionNav: '		. $theme_options['nv_directionNav']		.  ',' . "\r\n";
+    $out .= 'controlNav: '			. $theme_options['nv_controlNav']		.  ',' . "\r\n";
+    $out .= 'controlNavThumbs: '	. $theme_options['nv_controlNavThumbs']	.  ',' . "\r\n";
+    $out .= 'pauseOnHover: '		. $theme_options['nv_pauseOnHover']		.  ',' . "\r\n";
+    $out .= 'manualAdvance: '		. $theme_options['nv_manualAdvance']	.  ',' . "\r\n";
+    $out .= 'prevText: "'			. $theme_options['nv_prevText']			.  '",' . "\r\n";
+    $out .= 'nextText: "'			. $theme_options['nv_nextText']			.  '",' . "\r\n";
+    $out .= 'randomStart: '			. $theme_options['nv_randomStart'] . "\r\n";
+	$out .= '});' . "\r\n";
+	
+	return $out;
+}
+
+
 function fruitful_get_slider($atts) {
 	$slider_ = "";
+	extract(shortcode_atts(array( 'id' => 'slider_0'), $atts));
 	
-	 extract(shortcode_atts(array(
-		  'id'		=> 'slider_0'
-     ), $atts));
-	 
-	$theme_options  = ret_options("fruitful_theme_options");
+	$theme_options   = ret_options("fruitful_theme_options");
 	$slider_img		 = ret_options("fruitful_theme_slides_options");
-	$slider_order	   	 = ret_options("fruitful_theme_slides_sort_options");
-	
-	$vcount_slider_img = count($slider_img);
-	$vcount_order = count($slider_order);
+	$slider_order	 = ret_options("fruitful_theme_slides_sort_options");
 	
 	$w_slider	=  $theme_options['s_width'];
-	$h_slider  =  $theme_options['s_height']; 
+	$h_slider  	=  $theme_options['s_height']; 
+	
+	$vcount_slider_img 	= count($slider_img);
+	$vcount_order 		= count($slider_order);
+		
+	if ($theme_options['select_slider'] == "1") {
+	
 	if ($vcount_slider_img != 0) {
-		$slider_ .= '<div class="main-slider-container">' 	. chr(13);
-		$slider_ .= '<section class="slider">' 					. chr(13);
-		$slider_ .= '<div class= "flexslider" id="' . $id . '">' . chr(13);
-		$slider_ .= '<ul class="slides">' 							. chr(13);
+			$slider_ .= '<div class="main-slider-container">' . "\r\n";
+			$slider_ .= '<section class="slider">' 			  . "\r\n";
+			$slider_ .= '<div class= "flexslider" id="' . $id . '">' . "\r\n";
+			$slider_ .= '<ul class="slides">' 				  . "\r\n";
 
-		if (($vcount_order != 0) and ($vcount_order == $vcount_slider_img) ) {
-									foreach ($slider_order as $value) {
-										$index = str_replace("slide_image_", "", $value);
-										$val = $slider_img['slide_' . $index]; 
-											if ($val != '') {
-												$slider_ .= '<li>' . chr(13);
-													$slider_ .= '<img src="'. get_thumb_img ($val, $w_slider, $h_slider) .'" />' . chr(13);
-												$slider_ .= '</li>' . chr(13);
-											}
-									}
-									} else {
+			if (($vcount_order != 0) and ($vcount_order == $vcount_slider_img) ) {
+					foreach ($slider_order as $value) {
+							$index = str_replace("slide_image_", "", $value);
+							$val = $slider_img['slide_' . $index]; 
+								if ($val != '') {
+													$slider_ .= '<li>' . "\r\n";
+														$slider_ .= '<img src="'. get_thumb_img ($val, $w_slider, $h_slider) .'" />' . "\r\n";
+													$slider_ .= '</li>' . "\r\n";
+												}
+					}
+			} else {
 					
-									for ($i = 1; $i <= $vcount_slider_img; $i++) {
-										$val = $slider_img['slide_' . $i]; 
-										if ($val != '') {
-											$slider_ .= '<li>' . chr(13);
-												$slider_ .= '<img src="'. get_thumb_img ($val, $w_slider, $h_slider) .'" />' . chr(13);
-											$slider_ .= '</li>' . chr(13);
+					for ($i = 1; $i <= $vcount_slider_img; $i++) {
+							$val = $slider_img['slide_' . $i]; 
+							if ($val != '') {
+												$slider_ .= '<li>' . "\r\n";
+													$slider_ .= '<img src="'. get_thumb_img ($val, $w_slider, $h_slider) .'" />' . "\r\n";
+												$slider_ .= '</li>' . "\r\n";
+											}
 										}
-									}
-								}
-		$slider_ .= '</ul></div></section></div>';
+			}
+			$slider_ .= '</ul></div></section></div>';
+	}
+	} else if ($theme_options['select_slider'] == "2") {
+		if ($vcount_slider_img != 0) {	
+			$slider_ .= '<div class="slider-wrapper '. $theme_options['nv_skins'] .'">' . "\r\n";
+				$slider_ .= '<div id="nivo-slider-'. $id . '" class="nivoSlider">' . "\r\n";
+                
+				if (($vcount_order != 0) and ($vcount_order == $vcount_slider_img)) {
+						foreach ($slider_order as $value) {
+								$index 	= str_replace("slide_image_", "", $value);
+								$val 	= $slider_img['slide_' . $index]; 
+								if ($val != '') {
+													$slider_ .= '<img src="'. get_thumb_img ($val, $w_slider, $h_slider) .'" data-thumb="'. get_thumb_img ($val, $w_slider, $h_slider) .'" alt="" />' . "\r\n";
+												}
+					}
+				} else {
+						for ($i = 1; $i <= $vcount_slider_img; $i++) {
+								$val 	= $slider_img['slide_' . $i]; 
+								if ($val != '') {
+													$slider_ .= '<img src="'. get_thumb_img ($val, $w_slider, $h_slider) .'" data-thumb="'. get_thumb_img ($val, $w_slider, $h_slider) .'" alt="" />' . "\r\n";
+												}
+											}
+				}
+				
+				$slider_ .= '</div>';
+			$slider_ .= '</div>';
+		}	
 	}
 	
 	return $slider_;
@@ -247,7 +317,7 @@ function get_logo () {
 	$url_logo 		= $theme_options['logo_img'];
 	$logo_w  		= $theme_options['logo_w'];
 	$logo_h  		= $theme_options['logo_h'];
-	$description  = get_bloginfo('description');
+	$description  	= get_bloginfo('description');
 	
 	if ($url_logo != "") {
 		return  '<a href="' . home_url( '/' ) . '" title="' . $description .'" rel="home"><img class="logo" src="'. get_thumb_img ($url_logo, $logo_w, $logo_h)  .'" alt="' . $description . '"/></a>';
@@ -256,6 +326,22 @@ function get_logo () {
 	}	
 }
 
+
+/*Get Favicon*/
+function get_favicon () {
+	$theme_options  = ret_options("fruitful_theme_options");
+	$url_favicon	= $theme_options['fav_icon'];
+	
+	if ($url_logo != "") {
+		return  '<link rel="icon" type="image/png"  href="'. get_thumb_img ($url_favicon, 16, 16) .'">';	
+		return  '<link rel="apple-touch-icon-precomposed" sizes="16x16" href="'. get_thumb_img ($url_favicon, 16, 16) .'">';	
+	} else {
+		return  '<link rel="icon" type="image/png"  href="'. get_bloginfo("template_url") . '/images/default_favicon.png'.'">';	
+		return  '<link rel="apple-touch-icon-precomposed" sizes="16x16" href="'. get_bloginfo("template_url") . '/images/default_favicon.png'.'">';	
+	}	
+}
+
+
 /*Get all styles*/
 function get_all_style () {
 	unset($out);
@@ -263,15 +349,15 @@ function get_all_style () {
 	
 	if (isset($theme_options['styletheme'])) {
 
-		$out .= '$("H1").css({"font-size" : "'.$theme_options['h1_size'] .'px"});' . chr(13);
-		$out .= '$("H2").css({"font-size" : "'.$theme_options['h2_size'] .'px"});' . chr(13);
-		$out .= '$("H3").css({"font-size" : "'.$theme_options['h3_size'] .'px"});' . chr(13);
-		$out .= '$("H4").css({"font-size" : "'.$theme_options['h4_size'] .'px"});' . chr(13);
-		$out .= '$("H5").css({"font-size" : "'.$theme_options['h5_size'] .'px"});' . chr(13);
-		$out .= '$("H6").css({"font-size" : "'.$theme_options['h6_size'] .'px"});' . chr(13);
+		$out .= '$("H1").css({"font-size" : "'.$theme_options['h1_size'] .'px"});' . "\r\n";
+		$out .= '$("H2").css({"font-size" : "'.$theme_options['h2_size'] .'px"});' . "\r\n";
+		$out .= '$("H3").css({"font-size" : "'.$theme_options['h3_size'] .'px"});' . "\r\n";
+		$out .= '$("H4").css({"font-size" : "'.$theme_options['h4_size'] .'px"});' . "\r\n";
+		$out .= '$("H5").css({"font-size" : "'.$theme_options['h5_size'] .'px"});' . "\r\n";
+		$out .= '$("H6").css({"font-size" : "'.$theme_options['h6_size'] .'px"});' . "\r\n";
 	
-		$out .= '$("H1, H2, H3, H4, H5, H6").css({"font-family" : "'.$theme_options['h_font_family'] .'"});'. chr(13);
-		$out .= '$("p").css({"font-size" : "'. $theme_options['p_size'] .'px", "font-family" : "' .$theme_options['p_font_family'] . '"});'. chr(13);
+		$out .= '$("H1, H2, H3, H4, H5, H6").css({"font-family" : "'.$theme_options['h_font_family'] .'"});' . "\r\n";
+		$out .= '$("p").css({"font-size" : "'. $theme_options['p_size'] .'px", "font-family" : "' .$theme_options['p_font_family'] . '"});' . "\r\n";
 	
 	
 	
@@ -284,33 +370,33 @@ function get_all_style () {
 					}
 				}
 
-		$out .= '$("body").css({'. $back_sytle .'});' . chr(13); 
+		$out .= '$("body").css({'. $back_sytle .'});' . "\r\n";
 	
 	
-		$out .= '$(".main-navigation a").css({"color" : "'.$theme_options['menu_font_color']. '"});' . chr(13); 
+		$out .= '$(".main-navigation a").css({"color" : "'.$theme_options['menu_font_color']. '"});' . "\r\n";
 		
-		if ($theme_options['menu_bg_color'] != "") 	{$out .= '$(".main-navigation").css({"background-color" : "'.$theme_options['menu_bg_color'] . '"});' . chr(13); 	}
-		if ($theme_options['menu_btn_color'] != "") 	{$out .= '$(".main-navigation ul li.current_page_item a, .main-navigation ul li.current-menu-item a, .main-navigation ul li.current-menu-parent a, .main-navigation ul li.current_page_parent a").css({"background-color" : "'.$theme_options['menu_btn_color'] . '"});' . chr(13); 	}
-		if ($theme_options['menu_hover_color'] !="") 	{$out .= '$(".main-navigation ul li.current_page_item a, .main-navigation ul li.current-menu-item a, .main-navigation ul li.current-menu-parent a, .main-navigation ul li.current_page_parent a").css({"color" : "'.$theme_options['menu_hover_color'] . '"});' . chr(13); 	}
-		if ($theme_options['menu_txtsh_color'] != "") 	{$out .= '$(".main-navigation ul li.current_page_item a, .main-navigation ul li.current-menu-item a, .main-navigation ul li.current-menu-parent a, .main-navigation ul li.current_page_parent a").css({"text-shadow" : " 0 1px 0 '.$theme_options['menu_txtsh_color'] . '"});' . chr(13); }
-		if ($theme_options['menu_boxsh_color'] != "") 	{$out .= '$(".main-navigation ul li.current_page_item a, .main-navigation ul li.current-menu-item a, .main-navigation ul li.current-menu-parent a, .main-navigation ul li.current_page_parent a").css({"box-shadow" : " 0 0 2px '.$theme_options['menu_boxsh_color'] . ' inset"});' . chr(13); }
+		if ($theme_options['menu_bg_color'] != "") 		{$out .= '$(".main-navigation").css({"background-color" : "'.$theme_options['menu_bg_color'] . '"});' . "\r\n"; 	}
+		if ($theme_options['menu_btn_color'] != "") 	{$out .= '$(".main-navigation ul li.current_page_item a, .main-navigation ul li.current-menu-item a, .main-navigation ul li.current-menu-parent a, .main-navigation ul li.current_page_parent a").css({"background-color" : "'.$theme_options['menu_btn_color'] . '"});' . "\r\n"; 	}
+		if ($theme_options['menu_hover_color'] !="") 	{$out .= '$(".main-navigation ul li.current_page_item a, .main-navigation ul li.current-menu-item a, .main-navigation ul li.current-menu-parent a, .main-navigation ul li.current_page_parent a").css({"color" : "'.$theme_options['menu_hover_color'] . '"});' . "\r\n"; 	}
+		if ($theme_options['menu_txtsh_color'] != "") 	{$out .= '$(".main-navigation ul li.current_page_item a, .main-navigation ul li.current-menu-item a, .main-navigation ul li.current-menu-parent a, .main-navigation ul li.current_page_parent a").css({"text-shadow" : " 0 1px 0 '.$theme_options['menu_txtsh_color'] . '"});' . "\r\n"; }
+		if ($theme_options['menu_boxsh_color'] != "") 	{$out .= '$(".main-navigation ul li.current_page_item a, .main-navigation ul li.current-menu-item a, .main-navigation ul li.current-menu-parent a, .main-navigation ul li.current_page_parent a").css({"box-shadow" : " 0 0 2px '.$theme_options['menu_boxsh_color'] . ' inset"});' . "\r\n"; }
 	
-		$out .= '$(".main-navigation ul#menu-mainmenu li:visible").hover( function() { ' .chr(13);
-			if ($theme_options['menu_btn_color'] != "") 	{$out .= '$(this).find("a").css({"background-color" : "'.$theme_options['menu_btn_color'] . '"});' . chr(13); }
-			if ($theme_options['menu_hover_color'] !="") 	{$out .= '$(this).find("a").css({"color" : "'.$theme_options['menu_hover_color'] . '"});' . chr(13); }
-			if ($theme_options['menu_txtsh_color'] != "") 	{$out .= '$(this).find("a").css({"text-shadow" : " 0 1px 0 '.$theme_options['menu_txtsh_color'] . '"});' . chr(13); }
-			if ($theme_options['menu_boxsh_color'] !="") 	{$out .= '$(this).find("a").css({"box-shadow" : " 0 0 2px '.$theme_options['menu_boxsh_color'] . ' inset"});' . chr(13); }
-		$out .= '}, function() {' .chr(13);
+		$out .= '$(".main-navigation ul#menu-mainmenu li:visible").hover( function() { ' . "\r\n";
+			if ($theme_options['menu_btn_color'] != "") 	{$out .= '$(this).find("a").css({"background-color" : "'.$theme_options['menu_btn_color'] . '"});' . "\r\n"; }
+			if ($theme_options['menu_hover_color'] !="") 	{$out .= '$(this).find("a").css({"color" : "'.$theme_options['menu_hover_color'] . '"});' . "\r\n"; }
+			if ($theme_options['menu_txtsh_color'] != "") 	{$out .= '$(this).find("a").css({"text-shadow" : " 0 1px 0 '.$theme_options['menu_txtsh_color'] . '"});' . "\r\n"; }
+			if ($theme_options['menu_boxsh_color'] !="") 	{$out .= '$(this).find("a").css({"box-shadow" : " 0 0 2px '.$theme_options['menu_boxsh_color'] . ' inset"});' . "\r\n"; }
+		$out .= '}, function() {' . "\r\n";
 	
-		$out .= '$(this).find("a").removeAttr("style"); ' . chr(13);  
-		$out .= '$(".main-navigation a").css({"color" : "'.$theme_options['menu_font_color']. '"});' . chr(13); 
-		if ($theme_options['menu_btn_color'] != "") 	{$out .= '$(".main-navigation ul li.current_page_item a, .main-navigation ul li.current-menu-item a, .main-navigation ul li.current-menu-parent a, .main-navigation ul li.current_page_parent a").css({"background-color" : "'.$theme_options['menu_btn_color'] . '"});' . chr(13); 	}
-		if ($theme_options['menu_hover_color'] !="") 	{$out .= '$(".main-navigation ul li.current_page_item a, .main-navigation ul li.current-menu-item a, .main-navigation ul li.current-menu-parent a, .main-navigation ul li.current_page_parent a").css({"color" : "'.$theme_options['menu_hover_color'] . '"});' . chr(13); 	}
-		if ($theme_options['menu_txtsh_color'] != "") 	{$out .= '$(".main-navigation ul li.current_page_item a, .main-navigation ul li.current-menu-item a, .main-navigation ul li.current-menu-parent a, .main-navigation ul li.current_page_parent a").css({"text-shadow" : " 0 1px 0 '.$theme_options['menu_txtsh_color'] . '"});' . chr(13); 	}	
-		if ($theme_options['menu_boxsh_color'] != "") 	{$out .= '$(".main-navigation ul li.current_page_item a, .main-navigation ul li.current-menu-item a, .main-navigation ul li.current-menu-parent a, .main-navigation ul li.current_page_parent a").css({"box-shadow" : " 0 0 2px '.$theme_options['menu_boxsh_color'] . ' inset"});' . chr(13); }
+		$out .= '$(this).find("a").removeAttr("style"); ' . "\r\n";
+		$out .= '$(".main-navigation a").css({"color" : "'.$theme_options['menu_font_color']. '"});' . "\r\n";
+		if ($theme_options['menu_btn_color'] != "") 	{$out .= '$(".main-navigation ul li.current_page_item a, .main-navigation ul li.current-menu-item a, .main-navigation ul li.current-menu-parent a, .main-navigation ul li.current_page_parent a").css({"background-color" : "'.$theme_options['menu_btn_color'] . '"});' . "\r\n"; 	}
+		if ($theme_options['menu_hover_color'] !="") 	{$out .= '$(".main-navigation ul li.current_page_item a, .main-navigation ul li.current-menu-item a, .main-navigation ul li.current-menu-parent a, .main-navigation ul li.current_page_parent a").css({"color" : "'.$theme_options['menu_hover_color'] . '"});' . "\r\n"; 	}
+		if ($theme_options['menu_txtsh_color'] != "") 	{$out .= '$(".main-navigation ul li.current_page_item a, .main-navigation ul li.current-menu-item a, .main-navigation ul li.current-menu-parent a, .main-navigation ul li.current_page_parent a").css({"text-shadow" : " 0 1px 0 '.$theme_options['menu_txtsh_color'] . '"});' . "\r\n"; 	}	
+		if ($theme_options['menu_boxsh_color'] != "") 	{$out .= '$(".main-navigation ul li.current_page_item a, .main-navigation ul li.current-menu-item a, .main-navigation ul li.current-menu-parent a, .main-navigation ul li.current_page_parent a").css({"box-shadow" : " 0 0 2px '.$theme_options['menu_boxsh_color'] . ' inset"});' . "\r\n"; }
 	
 	
-		$out .= '});' .chr(13);
+		$out .= '});' . "\r\n";
 		}
 	return $out;
 }
@@ -349,8 +435,8 @@ function add_description_block ($atts, $content = null) {
 		  'style' 	=> 'font-size: 40px; text-transform : uppercase; text-align: center; font-weight: 300;'
      ), $atts));
    
-    $out .= '<div class="description" id="'. $id .'">' . chr(13);
-		$out .= '<span class="top_line"></span>' .chr(13);
+    $out .= '<div class="description" id="'. $id .'">' . "\r\n";
+		$out .= '<span class="top_line"></span>' . "\r\n";
 		
 			if (!empty($content)) {
 				$out .=	'<div class="text" style="'. $style .'">' . $content . '</div>';
@@ -358,8 +444,8 @@ function add_description_block ($atts, $content = null) {
 			else {
 				$out .= '<div class="text" style="'. $style .'">No text Description</div>';
 			}			
-		$out .= '<span class="btm_line"></span>' .chr(13);
-	$out .= '</div>' .chr(13);
+		$out .= '<span class="btm_line"></span>' . "\r\n";
+	$out .= '</div>' . "\r\n";
 	
     return $out;
 }
@@ -372,9 +458,9 @@ function add_info_box_area ($atts, $content = null) {
 		  'id'		=> 'info_box_area_0'
      ), $atts));
 	 
-	 $out .= '<div class="info_box_area row clearfix" id="'. $id .'">' .chr(13);
+	 $out .= '<div class="info_box_area row clearfix" id="'. $id .'">' . "\r\n";
 		$out .= do_shortcode($content);
-	 $out .= '</div>'.chr(13);
+	 $out .= '</div>' . "\r\n";
 	 return $out;
 	 
 }
@@ -391,10 +477,10 @@ $out = "";
 		  'style_text'	  	=> 'text-align:center; font-size:13px;',
 		  'style_title'		=> 'text-align:center; font-size: 20px; text-transform: uppercase; '
      ), $atts));
-	 $out .= '<div class="one-third column info_box '. $type_column .'" id="' . $id . '">' . chr(13);
-		$out .= '<img class="icon" src="'. $icon_url .'" title="' . $title . '" />' . chr(13); 
-		$out .= '<div class="infobox_title" style="' . $style_title .'">' . $title . '</div>' .chr(13);
-		$out .= '<div class="info_box_text" style="'. $style_text .'" >' . $content . '</div>' . chr(13);
+	 $out .= '<div class="one-third column info_box '. $type_column .'" id="' . $id . '">' . "\r\n";
+		$out .= '<img class="icon" src="'. $icon_url .'" title="' . $title . '" />' . "\r\n";
+		$out .= '<div class="infobox_title" style="' . $style_title .'">' . $title . '</div>' . "\r\n";
+		$out .= '<div class="info_box_text" style="'. $style_text .'" >' . $content . '</div>' . "\r\n";
 	 $out .= '</div>';
 return $out;	 
 } 
@@ -428,3 +514,11 @@ function get_responsive_style () {
 	}	
 }
 
+function get_sliders() {
+	$theme_options = ret_options("fruitful_theme_options");
+	if ($theme_options['select_slider'] == "1") {
+		echo get_slider_options_flex(); 
+	} else if ($theme_options['select_slider'] == "2") {
+		echo get_slider_options_nivo();
+	}	
+}

@@ -705,16 +705,6 @@ float:left;
     width:420px;
     padding:8px 0;
 }
-#back-top {
-	float: right;
-	position: absolute;
-	right: -15px;
-}
-#back-top a {
-	text-decoration: none;
-	font-size: 18px;
-	color: #000;
-}
 #colophon .social-icon {
     float:right}
 #colophon .social-icon a {
@@ -1053,9 +1043,6 @@ input#s {
 }
 .select-menu {
     display:block;
-}
-#back-top {
-	display: none;
 }
 }
 *:first-child+html #page .container .content .info_box_area {

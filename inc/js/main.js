@@ -3,8 +3,49 @@ jQuery(document).ready(function() {
   jQuery('select').selectbox();
   
   /*Font Family Preview*/
-  jQuery(".select-fonts").each(function() { 			   	var vTextFontSample = $(this).prev().prev(); vTextFontSample.css({"font-family" : $(this).val()}); });
-  jQuery(".select-fonts").live("change", function(){ 	var vTextFontSample = $(this).prev().prev(); vTextFontSample.css({"font-family" : $(this).val()}); });
+  jQuery(".select-fonts").each(function() 		   { 
+		var vTextFontSample = $(this).prev().prev(); 
+		vTextFontSample.css({"font-family" : $(this).val()}); 
+  });
+  
+  jQuery(".select-fonts").change(function(){ 
+		var vTextFontSample = $(this).prev().prev(); 
+		console.log($("option:selected",this).val());
+		vTextFontSample.css({"font-family" : $("option:selected",this).val()}); 
+		return false;
+  });
+  
+  
+  var vSelectSlider    = jQuery(".select-slider");
+  var vSelectSliderVal = vSelectSlider.val();
+  if (vSelectSliderVal == 0) {
+	  $('.no-slider-select').show();
+  } else if  (vSelectSliderVal == 1) {
+	  $('.flex-slider').show();
+  } else if  (vSelectSliderVal == 2) {
+	  $('.nivo-slider').show();
+  }
+			
+	
+			
+  jQuery(".select-slider").change(function(){ 
+	var vSliderId = $('.select-slider option:selected').val();
+	
+	if (vSliderId == 0) {
+		$('.no-slider-select').show();
+		$('.flex-slider').hide();
+		$('.nivo-slider').hide();
+	} else if  (vSliderId == 1) {
+		$('.flex-slider').show();
+		$('.no-slider-select').hide();
+		$('.nivo-slider').hide();
+	} else if  (vSliderId == 2) {
+		$('.nivo-slider').show();
+		$('.no-slider-select').hide();
+		$('.flex-slider').hide();
+	}
+	return false;
+  });
 		
   
   jQuery('#settings-section-0').fadeIn("slow");
@@ -21,7 +62,7 @@ jQuery(document).ready(function() {
 	jQuery('.form-admin-fruitful .content .settings-section').hide();
 
 	var index_a = $(this).find('a').attr("id");
-		 index_a = index_a.substr(index_a.indexOf('_') + 1);
+		index_a = index_a.substr(index_a.indexOf('_') + 1);
 		$('#settings-section-' + index_a).fadeIn("slow");
   });
 	
@@ -142,10 +183,10 @@ jQuery(document).ready(function() {
 	});
 	
 				  
-		btnUploadInit('.upload_btn', 'fruitful_theme_options_action');
-		btnUploadInit('.upload_slide_btn', 'fruitful_theme_options_slider');
-		btnResetInit('.reset_btn', 'fruitful_theme_options_action')
-		btnResetInit('.reset_slide_btn',  'fruitful_theme_options_slider')
+		btnUploadInit('.upload_btn', 		'fruitful_theme_options_action');
+		btnUploadInit('.upload_slide_btn', 	'fruitful_theme_options_slider');
+		btnResetInit('.reset_btn', 			'fruitful_theme_options_action')
+		btnResetInit('.reset_slide_btn',  	'fruitful_theme_options_slider')
 
 		/*Sortable slide*/
 		$("ul.slides").sortable({ 
@@ -211,7 +252,7 @@ jQuery(document).ready(function() {
 					  }
 				  
 				  btnUploadInit('.upload_slide_btn', 'fruitful_theme_options_slider');
-				  btnResetInit('.reset_slide_btn', 'fruitful_theme_options_slider');
+				  btnResetInit ('.reset_slide_btn', 'fruitful_theme_options_slider');
 	          });
 	          return false;
 		});
@@ -322,8 +363,7 @@ function fade_message() {
 				  },
 				  onComplete: function(file, response) {
 					var vfullname  = response.substring(0, response.indexOf('zc=0')+4);
-					var vorigname = response.substring(response.indexOf('src=')+4, response.indexOf('&amp'));				   
-					
+					var vorigname  = response.substring(response.indexOf('src=')+4, response.indexOf('&amp'));				   
 					window.clearInterval(interval);
 					clickedObject.text('Upload Image');	
 					this.enable(); // enable upload button
@@ -340,7 +380,7 @@ function fade_message() {
 						jQuery("#image_" + clickedID).remove();	
 						clickedObject.parent().after(buildReturn);
 						jQuery('img#image_'+clickedID).fadeIn();
-						clickedObject.next('span').fadeIn();
+						clickedObject.next('span').fadeIn().css("display", "inline-block");
 						clickedObject.parent().prev('input').val(vorigname);
 					}
 				  }
@@ -352,8 +392,8 @@ function fade_message() {
 			jQuery(btn_name).click(function(){
 			
 					var clickedObject = jQuery(this);
-					var clickedID 		  = jQuery(this).attr('id');
-					var theID 			  = jQuery(this).attr('title');	
+					var clickedID 	  = jQuery(this).attr('id');
+					var theID 		  = jQuery(this).attr('title');	
 
 					var data = {
 						action: action_name,
@@ -362,9 +402,9 @@ function fade_message() {
 					};
 					
 					jQuery.post(ajaxurl, data, function(response) {
-						var image_to_remove = jQuery('#image_' + theID);
-						var button_to_hide = jQuery('#reset_' + theID);
-						image_to_remove.fadeOut(500,function(){ jQuery(this).remove(); });
+						var image_to_remove 	= jQuery('#image_' + theID);
+						var button_to_hide 		= jQuery('#reset_' + theID);
+						image_to_remove.fadeOut(500, function(){ jQuery(this).remove(); });
 						button_to_hide.fadeOut();
 						clickedObject.parent().prev('input').val('');
 					});
@@ -374,7 +414,7 @@ function fade_message() {
 			
 
 $.fn.center = function () {
-    var heightRatio 	= ($('#form-admin-fruitful').height() != 0)  ? this.outerHeight() / $('#form-admin-fruitful').height() : 1;
+    var heightRatio = ($('#form-admin-fruitful').height() != 0)  ? this.outerHeight() / $('#form-admin-fruitful').height() : 1;
     var widthRatio 	= ($('#form-admin-fruitful').width() != 0)   ? this.outerWidth() / $('#form-admin-fruitful').width() : 1;
 
     this.css({

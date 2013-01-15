@@ -14,18 +14,18 @@
 <meta name="viewport" content="width=device-width" />
 
 <?php
-		$browser_ip 		= strpos($_SERVER['HTTP_USER_AGENT'],"iPhone");
-		$browser_an 		= strpos($_SERVER['HTTP_USER_AGENT'],"Android");
+		$browser_ip 	= strpos($_SERVER['HTTP_USER_AGENT'],"iPhone");
+		$browser_an 	= strpos($_SERVER['HTTP_USER_AGENT'],"Android");
 		$browser_ipad 	= strpos($_SERVER['HTTP_USER_AGENT'],"iPad");
 		
 	 if ($browser_ip  	== true) { $browser = 'iphone'; }
-	 if ($browser_an	 	== true) { $browser = 'android'; } 
+	 if ($browser_an	== true) { $browser = 'android'; } 
 	 if ($browser_ipad 	== true) { $browser = 'ipad'; }
 ?>
 
-<?php if($browser == 'iphone') { ?> 	<meta name="viewport" content="width=480"> <?php } ?> 
+<?php if($browser == 'iphone') 	{ ?> <meta name="viewport" content="width=480"> <?php } ?> 
 <?php if($browser == 'android') { ?> <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width" /> <?php } ?>
-<?php if($browser == 'ipad') { ?> 		<meta name="viewport" content="width=768px, minimum-scale=1.0, maximum-scale=1.0" /> <?php }?>  
+<?php if($browser == 'ipad') 	{ ?> <meta name="viewport" content="width=768px, minimum-scale=1.0, maximum-scale=1.0" /> <?php } ?>  
 
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <title><?php
@@ -51,6 +51,7 @@
 	?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+<?php //echo get_favicon(); ?>
 <?php echo get_responsive_style(); ?>
 
 <script type="text/javascript">
@@ -59,9 +60,9 @@
   _gaq.push(['_trackPageview']);
 
   (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    var ga 	= document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src 	= ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s 	= document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 </script>
 
@@ -73,29 +74,33 @@
 
 <script type="text/javascript">
 	jQuery(document).ready(function($) {
-		<?php echo get_sliders_options(); ?>
-		<?php echo get_all_style(); ?>
+		
+		<?php 
+				 get_sliders();
+			echo get_all_style();
+			
+		?>
 		
 		$('.menu').mobileMenu({
 			defaultText: 'Navigate to...',
-			className: 'select-menu',
+			className: 	 'select-menu',
 			subMenuDash: '&nbsp;&nbsp;&ndash;'
 		});
 		
 		/*Fancy Box*/
-		
+	
 		$(".fn_box_img").fancybox({
-				padding: 0,
-				openEffect : 'elastic',
-				openSpeed  : 150,
+				padding		: 0,
+				openEffect 	: 'elastic',
+				openSpeed  	: 150,
 				closeEffect : 'elastic',
 				closeSpeed  : 150,
-				width : 800,
-				height : 600,
-				maxWidth : 1024,
-				maxHeight : 768,
-				closeClick : true,
-				helpers : {
+				width 		: 800,
+				height 		: 600,
+				maxWidth 	: 1024,
+				maxHeight 	: 768,
+				closeClick 	: true,
+				helpers 	: {
 					overlay : {
 							css : {
 								'background' : 'rgba(0,0,0,0.25)'
@@ -103,12 +108,7 @@
 								}
 							}
 		});
-		
-
-		jQuery('#back-top a').click(function () {
-			jQuery('body,html').animate({	scrollTop: 0}, 800)
-			return false;
-		});
+			
 	});
 </script>
 
