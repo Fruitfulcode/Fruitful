@@ -1033,17 +1033,9 @@ input#s {
     width:235px;
 }
 
-#back-top {
-			float: right;
-			position: absolute;
-			right: -15px;
-   		  }
+#colophon #back-top 	  { float: right; position: absolute; right: -15px; }
+#colophon #back-top a  { text-decoration: none; font-size: 18px; color: #000;}
 
-#back-top a {
-			text-decoration: none;
-			font-size: 18px;
-			color: #000;
-		   }
 		   
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width:767px) {
