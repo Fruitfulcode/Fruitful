@@ -41,13 +41,14 @@ function fruitful_setup() {
 	/**
 	 * Custom functions that act independently of the theme templates
 	 */
-	require( GENERAL . 'tweaks.php' );
+	require( GENERAL 		   . 'tweaks.php' );
 	require( GENERAL_FUNCTIONS . 'fruitful-function.php' );
 	
 	/**
 	 * Custom Theme Options
 	 */
 	require( GENERAL . 'theme-options/theme-options.php' );
+	require( GENERAL . 'gallery/gallery-init.php' );
 
 	/**
 	 * Make theme available for translation
@@ -75,6 +76,7 @@ function fruitful_setup() {
 	 * Add support for the Aside Post Formats
 	 */
 	add_theme_support( 'post-formats', array( 'aside', ) );
+	
 }
 endif; // fruitful_setup
 add_action( 'after_setup_theme', 'fruitful_setup' );
@@ -523,3 +525,96 @@ function get_sliders() {
 		echo get_slider_options_nivo();
 	}	
 }
+
+
+function get_gallery_script () {
+
+}
+add_action('gallery', 'get_gallery_script');
+	
+
+function get_gallery($atts)  {
+	
+	$out_glr_txt = "";
+	extract(shortcode_atts(array(
+								 'id' => ''
+								), $atts));
+	
+	$special_grids 		= get_post_meta($id , 'fruitful-special-grids', 	'true' );
+	$animations_type 	= get_post_meta($id , 'fruitful-animations-type', 	'true' );
+	$animations_speed 	= get_post_meta($id , 'fruitful-animations-speed',	'true' );
+	$rotation_corner	= get_post_meta($id , 'fruitful-rotation',	'true' );
+	$padding_images_hor	= get_post_meta($id , 'fruitful-paddings-hor',	'true' );
+	$padding_images_ver	= get_post_meta($id , 'fruitful-paddings-ver',	'true' );
+	$scale				= get_post_meta($id , 'fruitful-glr-scale',	'true' );
+			
+	wp_enqueue_style	('megafolio-css',  	get_template_directory_uri() . '/inc/gallery/js/megafolio/css/settings.css');
+	wp_enqueue_script	('themepunch',  	get_template_directory_uri() . '/inc/gallery/js/megafolio/js/jquery.themepunch.plugins.min.js',  array( 'jquery' ), '20120206', false );
+	wp_enqueue_script	('megafolio',  		get_template_directory_uri() . '/inc/gallery/js/megafolio/js/jquery.themepunch.megafoliopro.js', array( 'jquery' ), '20120206', false );
+	wp_localize_script	('megafolio',  		'fruitful_megafolio_js', array(
+															'megaremix' 	   => $special_grids,
+															'animations_type'  => $animations_type,
+															'animations_speed' => $animations_speed,
+															'rotation_corner'  => $rotation_corner,
+															'padding_images_hor' => $padding_images_hor,
+														    'padding_images_ver' => $padding_images_ver,
+															'scale' => $scale				
+															
+												));
+	wp_enqueue_script('megafolio-init',  	get_template_directory_uri() . '/inc/gallery/js/gallery-activate.js', array( 'jquery' ), '20120206', false );
+		
+	$post_glr = get_post($id);		 
+	
+	$content_post = get_post($id);
+	$content 	  = $post_glr->post_content;
+	$content 	  = apply_filters('the_content', $content);
+	$content 	  = str_replace(']]>', ']]&gt;', $content);
+	
+	$out_glr_txt .= '<div class="glr-container-text">';
+		$out_glr_txt .= '<h1 class="glr-entry-title">';
+			$out_glr_txt .= $post_glr->post_title;
+		$out_glr_txt .= '</h1>';
+	
+		$out_glr_txt   .= $content;
+	$out_glr_txt .= '</div>';
+	
+	wp_reset_query();
+	
+	$out_glr_txt .= '<div class="clear"></div>';
+	
+	$out_glr_txt .= '<div class="glr-container-image">';
+	$out_glr_txt .= '<div id="gallery-'.$id.'" class="megafolio-container light-bg-entries">';
+	
+	$gallery_data 	= get_post_meta($id, 'fruitful-gallery', 'true' );
+	if($gallery_data && count($gallery_data['attachment_ids'])) {
+				$j = 0;
+				foreach($gallery_data['attachment_ids'] as $attachment_id) {
+					
+					$image_attributes 	= wp_get_attachment_image_src($attachment_id, 'full');
+					$image_alt 			= get_post_meta($attachment_id, '_wp_attachment_image_alt', true);
+					$img_post 			= get_post($attachment_id);
+
+					$content_img = $img_post->post_excerpt;
+					$content_img = apply_filters('the_content', $content_img);
+					$content_img = str_replace(']]>', ']]&gt;', $content_img);
+								
+					$gallery_items .= '<div class="mega-entry" data-src="'. $image_attributes[0] .'" data-width="577" data-height="500">';
+						$gallery_items .= '<div class="mega-hover alone">';
+							  //$gallery_items .= '<div class="mega-hovertitle">'.$img_post->post_title.'<div class="mega-hoversubtitle">'.$content_img.'</div></div>';
+							  //$gallery_items .= '<div class="mega-hoverlink"></div>';
+								$gallery_items .= '<a class="fn_box_img" rel="group" href="' .$image_attributes[0] .'"><div class="mega-hoverview"></div></a>';
+						$gallery_items .= '</div>';
+					$gallery_items .= '</div>';
+					
+					wp_reset_query();
+					$j++;
+				}
+			}
+	$out_glr_txt .= $gallery_items;	
+	$out_glr_txt .= '</div>';
+	$out_glr_txt .= '</div>';
+	
+	return $out_glr_txt;
+
+}
+add_shortcode ("gallery", "get_gallery");

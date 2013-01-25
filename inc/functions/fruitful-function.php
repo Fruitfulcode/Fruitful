@@ -347,7 +347,7 @@ function file_upload($action, $dir_upload = '/fruitfulimg/', $name_options= 'fru
 
 
 function get_thumb_img ($path, $w, $h)	 {
-			return get_bloginfo('template_url') . '/inc/functions/timthumb.php?src=' . $path . '&h=' . $h . '&w=' . $w . '&zc=0';
+			return get_bloginfo('template_url') . '/inc/functions/timthumb.php?src=' . $path . '&h=' . $h . '&w=' . $w . '&zc=1';
 }
 
 function get_code_upload_images($val, $field, $w, $h, $btn_class_upload = 'upload_btn', $btn_class_reset = 'reset_btn', $class_img = '', $no_name = false) {
