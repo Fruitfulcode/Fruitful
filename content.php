@@ -7,7 +7,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class('blog_post'); ?>>
 	<?php $day 			= get_the_date('d'); 
-			  $month_abr = get_the_date('M');
+		  $month_abr = get_the_date('M');
 	?>
 	<div class="date_of_post">
 		<span class="day_post"><?php print $day; ?></span>
