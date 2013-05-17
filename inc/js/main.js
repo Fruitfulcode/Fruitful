@@ -1,16 +1,15 @@
 jQuery(document).ready(function() {
   jQuery('input[type=checkbox]').ezMark();
-  jQuery('select').selectbox();
+  jQuery('select').styler();
   
   /*Font Family Preview*/
   jQuery(".select-fonts").each(function() 		   { 
-		var vTextFontSample = $(this).prev().prev(); 
+		var vTextFontSample = $(this).prev(); 
 		vTextFontSample.css({"font-family" : $(this).val()}); 
   });
   
   jQuery(".select-fonts").change(function(){ 
-		var vTextFontSample = $(this).prev().prev(); 
-		console.log($("option:selected",this).val());
+		var vTextFontSample = $(this).prev(); 
 		vTextFontSample.css({"font-family" : $("option:selected",this).val()}); 
 		return false;
   });
@@ -362,8 +361,11 @@ function fade_message() {
 						}, 200);
 				  },
 				  onComplete: function(file, response) {
-					var vfullname  = response.substring(0, response.indexOf('zc=0')+4);
+					var vfullname  = response.substring(0, response.indexOf('zc=1')+4);
 					var vorigname  = response.substring(response.indexOf('src=')+4, response.indexOf('&amp'));				   
+					
+					console.log(response);
+					console.log(vorigname);
 					window.clearInterval(interval);
 					clickedObject.text('Upload Image');	
 					this.enable(); // enable upload button

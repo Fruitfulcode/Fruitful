@@ -247,10 +247,10 @@ function custom_do_settings_fields($page, $section) {
 }
 
 function add_admin_style() {
-	wp_enqueue_style('admin-style', 		ADMIN_STYLE . 'admin.css');
+	wp_enqueue_style('admin-style', 		ADMIN_STYLE .  'admin.css');
 	wp_enqueue_style('colorpicker-style',	ADMIN_JQS 	   . 'colorpicker/colorpicker.css');
 	wp_enqueue_style('ch-style',			ADMIN_JQS 	   . 'ch/ch.css');
-	wp_enqueue_style('sl-style',			ADMIN_JQS 	   . 'sl/sl.css');
+	wp_enqueue_style('sl-style',			ADMIN_JQS 	   . 'sl/jquery.formstyler.css');
 }
 
 function add_jquery_script() {
@@ -272,7 +272,8 @@ function add_jquery_script() {
 	wp_enqueue_script('position',			ADMIN_JQS . "ui/jquery.ui.position.min.js", array('jquery'));
 	
 	wp_enqueue_script('chJq',				ADMIN_JQS . "ch/ch.js", array('jquery'));
-	wp_enqueue_script('slJq',				ADMIN_JQS . "sl/jquery.selectbox.min.js", array('jquery'));
+	//wp_enqueue_script('slJq',				ADMIN_JQS . "sl/jquery.selectbox.min.js", array('jquery'));
+	wp_enqueue_script('slJq',				ADMIN_JQS . "sl/jquery.formstyler.min.js", array('jquery'));
 	}
 
 function file_upload($action, $dir_upload = '/fruitfulimg/', $name_options= 'fruitful_theme_options', $w=400, $h=400)

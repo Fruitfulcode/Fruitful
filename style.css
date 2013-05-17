@@ -886,7 +886,7 @@ embed,iframe,object {
     margin:30px 0 0 0;
 }
 #page .container header.entry-header h1.entry-title {
-    font-size:20px !important;
+    font-size:20px;
     padding:0 0 20px 0}
 #page .container .content .info_box_area .info_box .infobox_title {
     margin:0 0 20px 0;
@@ -974,7 +974,7 @@ header.post-header, .blog_post {
     color:#ff5d2a;
 }
 header.post-header .post-title {
-    font-size:20px !important;
+    font-size:20px;
     float:left;
     width:100%;
     margin:14px 0;
@@ -997,7 +997,7 @@ header.post-header .post-title a:hover,#page .container #secondary .widget a:hov
 }
 #page .container #secondary .widget h1.widget-title {
     color:#45494c;
-    font-size:16px !important;
+    font-size:16px;
     border-bottom:2px solid #f15a23;
     padding:0 0 10px 0;
     margin:0 0 20px 0}
@@ -1007,7 +1007,7 @@ header.post-header .post-title a:hover,#page .container #secondary .widget a:hov
     list-style:none;
     margin:0 0 0 8px}
 #page .container #secondary .widget a {
-    font-size:13px !important;
+    font-size:13px;
     color:#45494c;
     text-decoration:none}
 #page .container #secondary .widget ul li {
@@ -1033,14 +1033,30 @@ input#s {
     width:235px;
 }
 
-#colophon #back-top 	  { float: right; position: absolute; right: -15px; }
-#colophon #back-top a  { text-decoration: none; font-size: 18px; color: #000;}
-.glr-container-image  {float:left; width:100%; display:block; margin:30px 0; position:relative}
+#colophon #back-top 	  { 
+	float: right; 
+	position: absolute; 
+	right: -15px; 
+}
+
+#colophon #back-top a  { 
+	text-decoration: none; 
+	font-size: 18px; 
+	color: #000;
+}
+
+.glr-container-image  {
+	float:left; 
+	width:100%; 
+	display:block; 
+	margin:30px 0; 
+	position:relative; 
+}
 		   
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width:767px) {
     /* nav menu ul & select */
-	#menu-mainmenu { display:none; }
+	.menu { display:none; }
 	.main-navigation { float:none; }
 	.select-menu { display:block; }
 	#back-top { display: none; }
@@ -1049,5 +1065,5 @@ input#s {
 }
 *:first-child+html #page .container .content .info_box_area {
     margin-bottom:25px}
-@media only screen and (max-device-width:1024px) and (orientation:portrait) {}
+@media only screen and (max-device-width:1024px) and (orientation:portrait)  {}
 @media only screen and (max-device-width:1024px) and (orientation:landscape) {}

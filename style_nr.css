@@ -504,7 +504,7 @@ a:hover,a:focus,a:active {
 .main-navigation ul ul li {
     /*background:url(images/ulul_li_hr.png) repeat-x 0 top transparent;
     */
-float:left;
+	float:left;
     width:100%;
     margin:0 !important}
 .main-navigation ul li:hover > a {
@@ -736,7 +736,7 @@ embed,iframe,object {
     margin:30px 0 0 0;
 }
 #page .container header.entry-header h1.entry-title {
-    font-size:20px !important;
+    font-size:20px;
     padding:0 0 20px 0}
 #page .container .content .info_box_area .info_box .infobox_title {
     margin:0 0 20px 0;
@@ -824,7 +824,7 @@ header.post-header, .blog_post {
     color:#ff5d2a;
 }
 header.post-header .post-title {
-    font-size:20px !important;
+    font-size:20px;
     float:left;
     width:100%;
     margin:14px 0;
@@ -847,7 +847,7 @@ header.post-header .post-title a:hover,#page .container #secondary .widget a:hov
 }
 #page .container #secondary .widget h1.widget-title {
     color:#45494c;
-    font-size:16px !important;
+    font-size:16px;
     border-bottom:2px solid #f15a23;
     padding:0 0 10px 0;
     margin:0 0 20px 0}
@@ -857,7 +857,7 @@ header.post-header .post-title a:hover,#page .container #secondary .widget a:hov
     list-style:none;
     margin:0 0 0 8px}
 #page .container #secondary .widget a {
-    font-size:13px !important;
+    font-size:13px;
     color:#45494c;
     text-decoration:none}
 #page .container #secondary .widget ul li {

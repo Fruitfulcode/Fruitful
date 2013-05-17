@@ -295,5 +295,4 @@ if( !class_exists( 'fruitful_gallery' ) )
 	}
 }		
 $gallery = new fruitful_gallery();
-$gallery->init();		
-?>		
+$gallery->init();
