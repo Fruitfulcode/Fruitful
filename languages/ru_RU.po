@@ -1,0 +1,1213 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Fruitful theme\n"
+"POT-Creation-Date: 2013-09-30 15:53+0200\n"
+"PO-Revision-Date: 2013-09-30 15:53+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: Russian\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;_e;__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: C:\\wamp\\www\\yakovlev\\fruitfultheme\\wp-content"
+"\\themes\\Fruitful\n"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/404.php:17
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Ой! Эта страница не может быть найдена."
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/404.php:21
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"По данному адресу ничего не найдено. Может быть попробовать одну из ссылок "
+"ниже, или воспользоваться поиском?"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/404.php:28
+msgid "Most Used Categories"
+msgstr "Часто используемые категории"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/404.php:36
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Попробуйте посмотреть в ежемесячных архивах. %1$s"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/archive.php:22
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/category.php:15
+#, php-format
+msgid "Category Archives: %s"
+msgstr "Катергории архива:  %s"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/archive.php:25
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/tag.php:15
+#, php-format
+msgid "Tag Archives: %s"
+msgstr "Тэги архива: %s"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/archive.php:32
+#, php-format
+msgid "Author Archives: %s"
+msgstr "Архивы автора: %s"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/archive.php:40
+#, php-format
+msgid "Daily Archives: %s"
+msgstr "Ежедневные архивы: %s"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/archive.php:43
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr "Ежемесячные aрхивы: %s"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/archive.php:46
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr "Ежегодные архивы: %s"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/archive.php:49
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/sidebar-blogright.php:19
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/sidebar-page.php:19
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/sidebar.php:19
+msgid "Archives"
+msgstr "Архивы:"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/author-bio.php:16
+#, php-format
+msgid "About %s"
+msgstr "О %s"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/author-bio.php:20
+#, php-format
+msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Просмотреть все записи по %s <span class=\"meta-nav\">&rarr;</span>"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/comments.php:40
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/comments.php:60
+msgid "Comment navigation"
+msgstr "Навигация по комментариям"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/comments.php:41
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/comments.php:61
+msgid "&larr; Older Comments"
+msgstr "&larr; Старые комментарии"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/comments.php:42
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/comments.php:62
+msgid "Newer Comments &rarr;"
+msgstr "Новые комментарии &rarr;"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/comments.php:72
+msgid "Comments are closed."
+msgstr "Комментарии закрыты."
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/content-aside.php:27
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/content-audio.php:28
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/content-gallery.php:27
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/content-image.php:28
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/content-link.php:24
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/content-quote.php:32
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/content-status.php:26
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/content-video.php:27
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Продолжить чтение <span class=\"meta-nav\"> &rarr; </ span>"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/content-aside.php:28
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/content-audio.php:29
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/content-chat.php:34
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/content-gallery.php:28
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/content-image.php:29
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/content-link.php:25
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/content-page.php:24
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/content-single.php:25
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/content-status.php:27
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/content-video.php:28
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/content.php:34
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/image.php:87
+msgid "Pages:"
+msgstr "Страницы:"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/content-aside.php:40
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/content-chat.php:38
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/content-link.php:19
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/content-page.php:25
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/content-quote.php:40
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/functions.php:718
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/image.php:35
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/image.php:101
+msgid "Edit"
+msgstr "Редактировать"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/content-chat.php:23
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/content-quote.php:23
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/content.php:19
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/functions.php:731
+#, php-format
+msgid "Permalink to %s"
+msgstr "Ссылка на %s"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/content-gallery.php:38
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/content-image.php:37
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/content-quote.php:37
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/content-video.php:36
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/content.php:40
+msgid "Leave a comment"
+msgstr "Оставить комментарий"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/content-gallery.php:38
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/content.php:40
+msgid "1 Comment"
+msgstr "1 Комментарий"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/content-gallery.php:38
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/content.php:40
+msgid "% Comments"
+msgstr "% Комментарии"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/content-image.php:37
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/content-quote.php:37
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/content-video.php:36
+msgid "One comment so far"
+msgstr "Один комментарий"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/content-image.php:37
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/content-quote.php:37
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/content-video.php:36
+#, php-format
+msgid "View all % comments"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/content.php:33
+msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Читать далее <span class=\"meta-nav\">&rarr;</span>"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/functions.php:114
+msgid "Primary Menu"
+msgstr "Главное Меню"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/functions.php:147
+msgid "Main Sidebar"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/functions.php:156
+msgid "Blog Right Sidebar"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/functions.php:165
+msgid "Single Page Right Sidebar"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/functions.php:701
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/functions.php:710
+msgid ", "
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/functions.php:704
+#, php-format
+msgid "Posted in %1$s"
+msgstr "Опубликовано в %1$s"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/functions.php:714
+#, php-format
+msgid "Tagged %1$s"
+msgstr "Тэги %1$s"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/image.php:25
+#, php-format
+msgid ""
+"Published <span class=\"entry-date\"><time class=\"entry-date\" datetime="
+"\"%1$s\" pubdate>%2$s</time></span> at <a href=\"%3$s\" title=\"Link to full-"
+"size image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s"
+"\" rel=\"gallery\">%7$s</a>"
+msgstr ""
+"Опубликовано <span class=\"entry-date\"><time class=\"entry-date\" datetime="
+"\"%1$s\" pubdate>%2$s</time></span> at <a href=\"%3$s\" title=\"Сыылка на "
+"изображение\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Вернутся на "
+"%7$s\" rel=\"gallery\">%7$s</a>"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/image.php:39
+msgid "&larr; Previous"
+msgstr "&larr;  Предыдущий"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/image.php:40
+msgid "Next &rarr;"
+msgstr "Следующий &rarr;"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/image.php:93
+#, php-format
+msgid ""
+"<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Post a "
+"comment</a> or leave a trackback: <a class=\"trackback-link\" href=\"%s\" "
+"title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+msgstr ""
+"<a class=\"comment-link\" href=\"#respond\" title=\"Комментарий к записи"
+"\">Комментарий к записи</a> или трекбек: <a class=\"trackback-link\" href="
+"\"%s\" title=\"Трекбек URL для вашей запси\" rel=\"trackback\">Обратный URL</"
+"a>."
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/image.php:95
+#, php-format
+msgid ""
+"Comments are closed, but you can leave a trackback: <a class=\"trackback-link"
+"\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback"
+"\">Trackback URL</a>."
+msgstr ""
+"Комментарии закрыты, но вы можете оставить трекбек: <a class=\"trackback-link"
+"\" href=\"%s\" title=\"Trackback URL для вашего поста\" rel=\"trackback\"> "
+"URL </ a>."
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/image.php:97
+msgid ""
+"Trackbacks are closed, but you can <a class=\"comment-link\" href=\"#respond"
+"\" title=\"Post a comment\">post a comment</a>."
+msgstr ""
+"Обратные ссылки закрыты, но вы можете <a class=\"comment-link\" href="
+"\"#respond\" title=\"написать комментарий\"> написать комментарий </a>."
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/image.php:99
+msgid "Both comments and trackbacks are currently closed."
+msgstr "Все комментарии и обратные ссылки в настоящее время закрыты."
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/no-results.php:15
+msgid "Nothing Found"
+msgstr "Ничего не найдено"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/no-results.php:21
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Готовы опубликовать вашу первую запись? <a href=\"%1$s\"> Начните здесь </a>."
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/no-results.php:25
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Извините, но ничего не найдено по вашему запросу.  Пожалуйста, попробуйте "
+"еще раз с другими ключевыми словами."
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/no-results.php:30
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Кажется, мы не можем найти то, что вы ищете. Возможно, поиск может Вам "
+"помочь."
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/search.php:15
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Результаты поиска  для: %s"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/searchform.php:11
+msgid "Search"
+msgstr "Поиск"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/sidebar-blogright.php:26
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/sidebar-page.php:26
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/sidebar.php:26
+msgid "Meta"
+msgstr "Цель"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/taxonomy-post_format.php:23
+#, php-format
+msgid "%s Archives"
+msgstr "%s Архивы"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/template-tags.php:27
+msgid "Post navigation"
+msgstr "Навигация по записям"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/template-tags.php:37
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Старые записи"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/template-tags.php:41
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Новые записи <span class=\"meta-nav\">&rarr;</span>"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/template-tags.php:66
+msgid "Pingback:"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/template-tags.php:66
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/template-tags.php:89
+msgid "(Edit)"
+msgstr "(Редактировать)"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/template-tags.php:76
+#, php-format
+msgid "%s <span class=\"says\">says:</span>"
+msgstr "%s <span class=\"says\">говорит:</span>"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/template-tags.php:79
+msgid "Your comment is awaiting moderation."
+msgstr "Ваш комментарий ожидает модерации."
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/template-tags.php:87
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s в %2$s"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/template-tags.php:114
+#, php-format
+msgid ""
+"Posted on <a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class="
+"\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</time></a><span class=\"byline"
+"\"> by <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" "
+"title=\"%6$s\" rel=\"author\">%7$s</a></span></span>"
+msgstr ""
+"Опубликовано <a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class="
+"\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</time></a><span class=\"byline"
+"\"> by <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" "
+"title=\"%6$s\" rel=\"author\">%7$s</a></span></span>"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/template-tags.php:120
+#, php-format
+msgid "View all posts by %s"
+msgstr "Просмотреть все записи по %s"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/widgets.php:16
+msgid "Use this widget to list your Link posts"
+msgstr "Используйте этот виджет, чтобы вывести свои сообщения"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/widgets.php:17
+msgid "Fruitful News Archiv"
+msgstr "Fruitful Архив новостей"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/widgets.php:49
+msgid "News-Archiv"
+msgstr "Архив новостей"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/widgets.php:60
+msgid "News-Archive"
+msgstr "Архив новостей"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/widgets.php:150
+msgid "Title:"
+msgstr "Название:"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/widgets.php:153
+msgid "Number of posts to show:"
+msgstr "Количество сообщений которые следует показать:"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/widgets.php:157
+msgid "Text Message:"
+msgstr "Текстовое сообщение:"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/func/fruitful-function.php:7
+msgid "default"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/func/fruitful-function.php:11
+msgid "dark"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/func/fruitful-function.php:15
+msgid "bar"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/func/fruitful-function.php:19
+msgid "light"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/func/fruitful-function.php:30
+msgid "None"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/func/fruitful-function.php:34
+msgid "FlexSlider"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/func/fruitful-function.php:38
+msgid "Nivo Slider"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/func/fruitful-function.php:50
+msgid "random"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/func/fruitful-function.php:54
+msgid "sliceDownRight"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/func/fruitful-function.php:58
+msgid "sliceDownLeft"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/func/fruitful-function.php:62
+msgid "sliceUpRight"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/func/fruitful-function.php:66
+msgid "sliceUpDown"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/func/fruitful-function.php:70
+msgid "sliceUpDownLeft"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/func/fruitful-function.php:74
+msgid "fold"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/func/fruitful-function.php:78
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/func/fruitful-function.php:110
+msgid "fade"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/func/fruitful-function.php:82
+msgid "boxRandom"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/func/fruitful-function.php:86
+msgid "boxRain"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/func/fruitful-function.php:90
+msgid "boxRainReverse"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/func/fruitful-function.php:94
+msgid "boxRainGrow"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/func/fruitful-function.php:98
+msgid "boxRainGrowReverse"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/func/fruitful-function.php:114
+msgid "slide"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/func/fruitful-function.php:125
+msgid "horizontal"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/func/fruitful-function.php:129
+msgid "vertical"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/func/fruitful-function.php:140
+msgid "true"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/func/fruitful-function.php:144
+msgid "false"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/func/fruitful-function.php:156
+msgid "Verdana, Geneva, sans-serif"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/func/fruitful-function.php:160
+msgid "Georgia, Times New Roman, Times, serif"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/func/fruitful-function.php:164
+msgid "Courier New, Courier, monospace"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/func/fruitful-function.php:168
+msgid "Arial, Helvetica, sans-serif"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/func/fruitful-function.php:172
+msgid "Tahoma, Geneva, sans-serif"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/func/fruitful-function.php:176
+msgid "Trebuchet MS, Arial, Helvetica, sans-serif"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/func/fruitful-function.php:180
+msgid "Arial Black, Gadget, sans-serif"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/func/fruitful-function.php:184
+msgid "Times New Roman, Times, serif"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/func/fruitful-function.php:188
+msgid "Comic Sans MS, cursive"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/func/fruitful-function.php:192
+msgid "Open Sans, sans-serif"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/gallery/gallery-init.php:23
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/gallery/gallery-init.php:24
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/gallery/gallery-init.php:163
+msgid "Gallery"
+msgstr "Галлерея"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/gallery/gallery-init.php:25
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/gallery/gallery-init.php:26
+msgid "Add New Gallery"
+msgstr "Добваить новую галлерею"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/gallery/gallery-init.php:27
+msgid "Edit Gallery"
+msgstr "Редактировать галлерею"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/gallery/gallery-init.php:28
+msgid "View Gallery"
+msgstr "Просмотреть галлерею"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/gallery/gallery-init.php:29
+msgid "New Gallery"
+msgstr "Новая Галлерея"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/gallery/gallery-init.php:30
+msgid "Search Gallery"
+msgstr "Посик галлереи"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/gallery/gallery-init.php:31
+msgid "Gallery not found"
+msgstr "Галлерея не найдена"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/gallery/gallery-init.php:32
+msgid "Gallery not found in trash"
+msgstr "Галерея в корзине не найдена"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/gallery/gallery-init.php:164
+msgid "Author"
+msgstr "Автор"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/gallery/gallery-init.php:165
+msgid "Shortcode"
+msgstr "Shortcode"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/gallery/gallery-init.php:166
+msgid "Date"
+msgstr "Дата"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/gallery/gallery-init.php:215
+msgid "Add Images"
+msgstr "Добавить изображение"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/gallery/gallery-init.php:234
+msgid "Special Grids"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/gallery/gallery-init.php:236
+msgid "Random Grids"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/gallery/gallery-init.php:237
+msgid "2 (special grid)"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/gallery/gallery-init.php:238
+msgid "3 (special grid)"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/gallery/gallery-init.php:239
+msgid "4 (special grid)"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/gallery/gallery-init.php:240
+msgid "5 (special grid)"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/gallery/gallery-init.php:241
+msgid "6 (special grid)"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/gallery/gallery-init.php:242
+msgid "7 (special grid)"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/gallery/gallery-init.php:243
+msgid "8 (special grid)"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/gallery/gallery-init.php:244
+msgid "9 (special grid)"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/gallery/gallery-init.php:245
+msgid "10 (basic grid)"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/gallery/gallery-init.php:246
+msgid "11 (basic grid)"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/gallery/gallery-init.php:247
+msgid "12 (basic grid)"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/gallery/gallery-init.php:248
+msgid "13 (basic grid)"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/gallery/gallery-init.php:249
+msgid "14 (different height grid)"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/gallery/gallery-init.php:250
+msgid "15 (different height grid)"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/gallery/gallery-init.php:251
+msgid "16 (different height grid)"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/gallery/gallery-init.php:252
+msgid "17 (different height grid)"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/gallery/gallery-init.php:258
+msgid "Animation Types"
+msgstr "Тип анимации"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/gallery/gallery-init.php:260
+msgid "1"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/gallery/gallery-init.php:261
+msgid "2"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/gallery/gallery-init.php:262
+msgid "3"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/gallery/gallery-init.php:263
+msgid "4"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/gallery/gallery-init.php:264
+msgid "5"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/gallery/gallery-init.php:265
+msgid "6"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/gallery/gallery-init.php:266
+msgid "7"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/gallery/gallery-init.php:271
+msgid "Animations Speed"
+msgstr "Скорость анимации"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/gallery/gallery-init.php:277
+msgid "Rotation (99=random)"
+msgstr "Вращение (99 = случайный)"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/gallery/gallery-init.php:283
+msgid "Paddings"
+msgstr "Отступы"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/gallery/gallery-init.php:293
+msgid "Scale (0-1)"
+msgstr "Масштаб (0-1)"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:37
+msgid "Layout"
+msgstr "Макет"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:37
+msgid ""
+"Theme supported 2 types of html layout. Default responsive  setting which "
+"adapt for mobile devices and static page with fixed width. Uncheck arrow "
+"below if you need static website display. "
+msgstr ""
+"В теме существует 2 типа макета, который вы можете выбрать. По умолчанию "
+"включен, адаптивный который корректно отображается на мобильных устройствах. "
+"Фиксированный макет с заданной шириной можно активировать, если снять "
+"галочку ниже."
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:38
+msgid "Comments"
+msgstr "Комментарии"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:38
+msgid ""
+"If you want to display comments on your post page or page, select options "
+"below."
+msgstr ""
+"Если вы хотите отобразить комментарии на странице записей или обычной "
+"странице, выберите один из вариантов."
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:39
+msgid "Header"
+msgstr "Заголовок"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:39
+msgid "Options relating to the website header"
+msgstr "Параметры, связанные с заголовком веб-сайта "
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:40
+msgid "Default css"
+msgstr "CSS по умолчанию"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:40
+msgid ""
+"Theme has styles by default, if you are using theme as based for development "
+"and dont what overwrite default css styles, you can disable our styles. "
+msgstr ""
+"Тема содержит стили по умолчанию, если вы используете тему для базовой "
+"разработки и не хотите переписывать стили по умолчанию, вы можете и "
+"отключить."
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:41
+msgid "Google Analytics Tracking Code"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:41
+msgid "Tracking Code. "
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:42
+msgid "Reset All options to default state"
+msgstr "Сбросить все настройки по-умолчанию"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:42
+msgid "Reset Button. "
+msgstr "Сбросить."
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:46
+msgid "Background Image"
+msgstr "Фоновое изображение."
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:46
+msgid ""
+"Upload your background image for site background. (Supported files .png, ."
+"jpg, .gif)"
+msgstr ""
+"Добавьте фоновое изображение для сайта. (Поддерживаемые файлы .png, .jpg, ."
+"gif)"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:47
+msgid "Background Color "
+msgstr "Цвет Фона"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:47
+msgid "Choose color for body background"
+msgstr "Выберите основной цвет"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:49
+msgid "Upload your logo Image"
+msgstr "Загрузить изображение логотипа"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:49
+msgid ""
+"Default theme logo is just a sample. Upload logo image for your website. "
+"(Supported files .png, .jpg, .gif)"
+msgstr ""
+"Логотип по умолчанию это пример. Загрузите изображение своего логотипа. "
+"(Поддерживаемые файлы .png, .jpg, .gif)"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:50
+msgid "Logo Size"
+msgstr "Размер логотипа"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:50
+msgid ""
+"Specify resolution for your logo image. Our theme will crop (timthumb) your "
+"image for need size."
+msgstr ""
+"Укажите разрешение для вашего логотипа. Наша тема будет обрезать (timthumb) "
+"ваше изображение до нужных размеров."
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:51
+msgid "Favicon"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:51
+msgid "Upload needed image for site favicon. (Supported files .png (16x16))"
+msgstr ""
+"Загрузить нужное изображение для favicon сайта. (Поддерживаемые файлы .png "
+"(16x16))"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:52
+msgid "Menu css styling"
+msgstr "CSS стили для меню."
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:52
+msgid "Choose styles for main menu."
+msgstr "Выберите стили для главного меню."
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:53
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:484
+msgid "Fonts"
+msgstr "Шрифты"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:53
+msgid "Popular web safe font collection, select and use for your needs."
+msgstr "Популярная коллекция шрифтов, выбирайте и исользуйте для ваших нужд."
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:55
+msgid "Headers"
+msgstr "Заголовки"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:55
+msgid "Choose font-family for all headlines."
+msgstr "Выберите название шрифта для всех заголовков."
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:56
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:322
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:483
+msgid "Menu"
+msgstr "Меню"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:56
+msgid "Choose font-family for primary menu."
+msgstr "Выберите название шрифта для главного меню."
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:57
+msgid "Content"
+msgstr "Контент."
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:57
+msgid "Choose font-family for text."
+msgstr "Выберите название шрифта для текста."
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:59
+msgid "Font size"
+msgstr "Размер шрифта"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:59
+msgid ""
+"Choose font size for specific html elements. Set size as number, without px."
+msgstr ""
+"Выберите размер шрифта для конкретных элементов HTML. Установить размер, "
+"число без px."
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:60
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:485
+msgid "Slider"
+msgstr "Слайдер"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:60
+msgid "Select a slider type that will be used by default."
+msgstr "Выберите слайдер, который будет использоваться по-умолчанию."
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:61
+msgid "Slider Options"
+msgstr "Настройки слайдера"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:61
+msgid ""
+"Choose needed options for slider. Width, height, animation type, sliding "
+"direction, speed of animations, etc"
+msgstr ""
+"Выберите нужные опции для слайдера. Ширина, высота, тип анимации, "
+"направления скольжения, скорость анимации, и т.д."
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:62
+msgid "Slides"
+msgstr "Слайды"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:62
+msgid ""
+"Add images to slider (Supported files .png, .jpg, .gif). After upload it "
+"will be saved automatically. If you want to change slides order, just drag "
+"and drop it. If images have not property size, set image size in slider "
+"options. To display slider in needed place use shortcode [slider]. Current "
+"theme version support only one slider per website. "
+msgstr ""
+"Добавьте изображение в слайдер (Поддерживаемые файлы. PNG,. JPG,. GIF). "
+"После загрузки изображения будет сохранено автоматически. Если вы хотите "
+"изменить порядок слайдов, просто перетащите его. Если изображения имеет "
+"некорректный вид, установите размер изображений в настройках. Чтобы вывести "
+"слайдер в необходимое место, используйте shortcode [slider]. Текущая версия "
+"темы поддерживает только один слайдер на сайте."
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:63
+msgid "Socials Links"
+msgstr "Социальные ссылки"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:63
+msgid ""
+"Add link to your social media profiles. Icons with link will be display in "
+"footer."
+msgstr ""
+"Добавить ссылки на ваши профили в социальных сетях. Иконка с ссылкой "
+"автоматичски отобразиться в нижнем колонтитуле."
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:64
+msgid "Footer options"
+msgstr "Опции футера"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:64
+msgid "Replace default theme copyright information and links."
+msgstr "Заменить информацию об авторских правах и ссылки."
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:66
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:488
+msgid "Custom CSS"
+msgstr "Custom CSS"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:66
+#, fuzzy
+msgid ""
+"Theme has two css files style.css and fixed-style.css which use default "
+"styles for front-end responsive and static layout. Do not edit theme default "
+"css files, use textarea editor below for overwriting all css styles."
+msgstr ""
+"Тема имеет два css файла style.css и style_nr.css  которые устанавливают "
+"стили по-умолчанию для responsive и статической версии. Не изменяйте файлы "
+"стилей которые заданы по-умолчанию, используйте для этого редактор стилей."
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:101
+msgid "Fruitful Theme Options"
+msgstr "Fruitful настройки темы"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:102
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:117
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:472
+msgid "Theme Options"
+msgstr "Настройки темы"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:140
+msgid "Responsive"
+msgstr "Отзывчивый"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:150
+msgid "Display comment on posts page"
+msgstr "Показать комментарий на посте"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:155
+msgid "Display comment on page"
+msgstr "Показать комментарий на странице"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:166
+msgid "Fixed Header"
+msgstr "Фиксированый хедер"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:177
+msgid "Enable default css"
+msgstr "Включить стили по умолчанию"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:222
+msgid "Copyright section"
+msgstr "Раздел копирайт"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:229
+msgid "Styles editor"
+msgstr "Редактор стилей"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:243
+msgid "Background  repeat"
+msgstr "Повторение фонового рисунка"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:269
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:340
+msgid "Width"
+msgstr "Ширина"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:271
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:341
+msgid "Height"
+msgstr "Высота"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:316
+msgid "H1"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:317
+msgid "H2"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:318
+msgid "H3"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:319
+msgid "H4"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:320
+msgid "H5"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:321
+msgid "H6"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:323
+msgid "P"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:344
+msgid "No Slider Select!"
+msgstr "Слайдер не выбран!"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:347
+msgid "Animation type"
+msgstr "Тип анимации"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:348
+msgid "Sliding direction, \"horizontal\" or \"vertical\""
+msgstr "Направления скольжения, \"Горизонталь \" или \"Вертикаль \""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:349
+msgid "Reverse the animation direction"
+msgstr "Обратная анимация"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:350
+msgid "Animate slider automatically"
+msgstr "Автоматическая анимация слайдов"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:351
+msgid "Set the speed of the slideshow cycling, in milliseconds"
+msgstr "Установить скорость слайд-шоу, в миллисекундах"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:352
+msgid "Set the speed of animations, in milliseconds"
+msgstr "Установить скорость анимации, в миллисекундах"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:353
+msgid "Set an initialization delay, in milliseconds"
+msgstr "Установить задержку при инициализации, в миллисекундах"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:354
+msgid "Randomize slide order"
+msgstr "Случайный порядок слайдов"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:355
+msgid "Manual control usage"
+msgstr "Ручной контроль"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:358
+msgid "Slider Skins"
+msgstr "Стили слайдера"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:359
+msgid "Effect"
+msgstr "Эффекты"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:360
+msgid "For slice animations"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:361
+msgid "For box animations (Cols)"
+msgstr "Для окна анимации (колонки)"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:362
+msgid "For box animations (Rows)"
+msgstr "Для окна анимации (строки)"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:363
+msgid "Slide transition speed"
+msgstr "Скорость смены слайдов"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:364
+msgid "How long each slide will show"
+msgstr "Временной промежуток между переключением слайдов"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:365
+msgid "Set starting Slide (0 index)"
+msgstr "Установить начальный слайд (0 index)"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:366
+msgid "Next & Prev navigation"
+msgstr "Следующая и Предыдущая навигации"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:367
+msgid "1,2,3... navigation"
+msgstr "1,2,3 … навигация"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:368
+msgid "Use thumbnails for Control Nav"
+msgstr "Использование миниатюр для \"Control Nav\""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:369
+msgid "Stop animation while hovering"
+msgstr "Остановить анимацию при наведении"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:370
+msgid "Force manual transitions"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:371
+msgid "Prev directionNav text"
+msgstr "Предыдущий  \"directionNav\" текст"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:372
+msgid "Next directionNav text"
+msgstr "Следующий \"directionNav\" текст"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:373
+msgid "Start on a random slide"
+msgstr "Случайный слайд"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:430
+msgid "Menu background-color"
+msgstr "Цвет фона меню"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:435
+msgid "Menu button background-color"
+msgstr "Цвет пункта меню"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:440
+msgid "Default font color"
+msgstr "Цвет шрифта по умолчанию"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:445
+msgid "Font color for active and :hover state"
+msgstr "Цвет шрифта для \"active\"  и \"hover\" состояния"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:480
+msgid "General Settings"
+msgstr "Общие настройки"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:481
+msgid "Background"
+msgstr "Фоновый рисунок"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:482
+msgid "Logo"
+msgstr "Логотип"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:486
+msgid "Social Links"
+msgstr "Социальные ссылки"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:487
+msgid "Footer"
+msgstr "Нижний колонтитул"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:503
+msgid "Theme settings will be reset to default."
+msgstr "Настройки темы будут сброшены по умолчанию."
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:512
+msgid "Contact support"
+msgstr ""
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:513
+#, fuzzy
+msgid ""
+"If you faced with any problems, have a question or suggestion you always can "
+"contact us with any request on our website fruitfulcode.com"
+msgstr ""
+"Если вы столкнулись с любыми проблемами или есть вопросы вы всегда можете "
+"связаться с нами."
+
+#~ msgid "HTML Text"
+#~ msgstr "HTML текст"
+
+#~ msgid ""
+#~ "Our team can propose live consultation, web development,  web design, "
+#~ "customization of our products."
+#~ msgstr ""
+#~ "Наша команда может предложить online консультации, разработку сайтов, веб-"
+#~ "дизайн, настройку нашей продукции."
+
+#~ msgid "Support"
+#~ msgstr "Поддержка"
+
+#~ msgid "Page %s"
+#~ msgstr "Страница %s"

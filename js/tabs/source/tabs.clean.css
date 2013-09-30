@@ -1,0 +1,258 @@
+﻿/**************************************************************************
+*	 Zozo Tabs: Clean
+*
+*    1 Clean Structure
+*    2. Vertical Positioning 
+*    3. Vertical Rounded Cornors
+*    4. Vertical Shadows
+*    5. Vertical Mobile
+*    
+*   Most of the time you shouldn't delete/edit section 1 (structure).
+*   You can delete/edit rounded, shadows and mobile section if you need.
+* 
+**************************************************************************/
+
+/*#region ==========================================================================
+    Clean structure
+========================================================================== */
+
+.z-tabs.clean.horizontal.top > ul.z-tabs-nav > li.z-active,
+.z-tabs.clean.horizontal.bottom > ul.z-tabs-nav > li.z-active
+{
+    background: #fff;
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    /*z-index: 7;*/
+}
+
+.z-tabs.clean.horizontal > ul.z-tabs-nav.z-tabs-desktop > li.z-active > a.z-link {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.z-tabs.clean.horizontal.top > ul.z-tabs-nav.z-tabs-desktop > li,
+.z-tabs.clean.horizontal.bottom > ul.z-tabs-nav.z-tabs-desktop > li
+{
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+}
+
+.z-tabs.clean > .z-container
+{
+    border-width: 0;
+    background: none;
+}
+
+.z-tabs.clean.horizontal > .z-container > .z-content > .z-content-inner
+{
+    padding: 2em 0;
+}
+
+
+/*#endregion*/
+
+
+
+
+/*#region ==========================================================================
+    Shadows
+========================================================================== */
+
+.z-tabs.clean.vertical.z-shadows > ul.z-tabs-nav,
+.z-tabs.clean.vertical.z-shadows > .z-container
+{
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+    .z-tabs.clean.horizontal.z-shadows > ul.z-tabs-nav > li.z-active,
+    .z-tabs.clean.vertical.z-shadows > ul.z-tabs-nav > li.z-active
+    {
+        -webkit-box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.13);
+        -moz-box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.13);
+        box-shadow: inset 0px 0px 12px 0px rgba(0, 0, 0, 0.13);
+        background: rgb(243, 243, 243);
+    }
+
+.z-tabs.clean.horizontal.z-shadows.large > ul.z-tabs-nav > li.z-active
+{
+    -webkit-box-shadow: inset 0px 0px 14px 0px rgba(0, 0, 0, 0.13);
+    -moz-box-shadow: inset 0px 0px 14px 0px rgba(0, 0, 0, 0.13);
+    box-shadow: inset 0px 0px 14px 0px rgba(0, 0, 0, 0.13);
+}
+
+.z-tabs.clean.horizontal.z-shadows.xlarge > ul.z-tabs-nav > li.z-active,
+.z-tabs.clean.horizontal.z-shadows.xxlarge > ul.z-tabs-nav > li.z-active
+{
+    -webkit-box-shadow: inset 0px 0px 16px 0px rgba(0, 0, 0, 0.13);
+    -moz-box-shadow: inset 0px 0px 16px 0px rgba(0, 0, 0, 0.13);
+    box-shadow: inset 0px 0px 16px 0px rgba(0, 0, 0, 0.13);
+}
+
+.z-tabs.clean.top.z-shadows > .z-container,
+.z-tabs.clean.bottom.z-shadows > .z-container
+{
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+
+
+/*#endregion*/
+
+
+
+
+/*#region ==========================================================================
+    Rounded
+========================================================================== */
+
+.z-tabs.clean.horizontal.z-rounded.top > ul.z-tabs-nav > li.z-first,
+.z-tabs.clean.horizontal.z-rounded.top > ul.z-tabs-nav > li.z-first > a.z-link
+{
+    -webkit-border-radius: 5px 0 0 5px;
+    -moz-border-radius: 5px 0 0 5px;
+    border-radius: 5px 0 0 5px;
+}
+
+.z-tabs.clean.horizontal.top.z-rounded > ul.z-tabs-nav > li.z-last,
+.z-tabs.clean.horizontal.top.z-rounded > ul.z-tabs-nav > li.z-last > a.z-link
+{
+    -webkit-border-radius: 0 5px 5px 0;
+    -moz-border-radius: 0 5px 5px 0;
+    border-radius: 0 5px 5px 0;
+}
+
+
+
+/*#endregion*/
+
+
+
+
+/*#region ==========================================================================
+    vertical
+========================================================================== */
+
+
+/*vertical*/
+.z-tabs.clean.vertical > ul.z-tabs-nav.z-tabs-desktop
+{
+    border-width: 1px 1px 1px 1px;
+}
+
+
+.z-tabs.clean.vertical > ul.z-tabs-nav > li.z-active
+{
+    z-index: 7;
+}
+
+.z-tabs.clean.vertical > .z-container > .z-content > .z-content-inner
+{
+    padding: 0 2em;
+}
+
+/*vertical rounded*/
+.z-tabs.clean.vertical.z-rounded > ul.z-tabs-nav.z-tabs-desktop
+{
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+
+.z-tabs.clean.vertical.mobile.z-rounded > ul.z-tabs-nav.z-tabs-desktop
+{
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.z-tabs.clean.vertical.z-rounded > ul.z-tabs-nav.z-tabs-desktop > li.z-first,
+.z-tabs.clean.vertical.z-rounded > ul.z-tabs-nav.z-tabs-desktop > li.z-first > a.z-link
+{
+    -webkit-border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+}
+
+.z-tabs.clean.vertical.z-rounded > ul.z-tabs-nav.z-tabs-desktop > li.z-last,
+.z-tabs.clean.vertical.z-rounded > ul.z-tabs-nav.z-tabs-desktop > li.z-last > a.z-link
+{
+    -webkit-border-radius: 0 0 5px 5px;
+    -moz-border-radius: 0 0 5px 5px;
+    border-radius: 0 0 5px 5px;
+}
+
+
+
+/*#endregion*/
+
+
+
+
+/*#region ==========================================================================
+    Responsive
+========================================================================== */
+
+.z-tabs.horizontal.clean.responsive.top > ul.z-tabs-nav > li
+{
+    border-bottom-width: 0;
+}
+
+.z-tabs.horizontal.clean.responsive.bottom > ul.z-tabs-nav > li
+{
+    border-top-width: 0;
+}
+
+.z-tabs.horizontal.clean.responsive.z-rounded.top > ul.z-tabs-nav > li.z-first,
+.z-tabs.horizontal.clean.responsive.z-rounded.top > ul.z-tabs-nav > li.z-first > a.z-link
+{
+    -webkit-border-bottom-left-radius: 0;
+    -moz-border-radius-bottomleft: 0;
+    border-bottom-left-radius: 0;
+}
+
+.z-tabs.clean.horizontal.responsive.z-rounded.top > ul.z-tabs-nav > li.z-last,
+.z-tabs.clean.horizontal.responsive.z-rounded.top > ul.z-tabs-nav > li.z-last > a.z-link
+{
+    -webkit-border-radius: 0 5px 5px 0;
+    -moz-border-radius: 0 5px 5px 0;
+    border-radius: 0 5px 5px 0;
+}
+
+
+.z-tabs.clean.top.responsive > .z-container
+{
+    border-top-width: 1px;
+}
+
+.z-tabs.clean.bottom.responsive > .z-container
+{
+    border-bottom-width: 1px;
+}
+
+
+/*#endregion*/
+
+
+
+
+/*#region ==========================================================================
+    mobile
+========================================================================== */
+
+.z-tabs.clean.horizontal.mobile.top > ul.z-tabs-nav.z-tabs-desktop > li,
+.z-tabs.clean.horizontal.mobile.bottom > ul.z-tabs-nav.z-tabs-desktop > li
+{
+    border-bottom-width: 0;
+}
+
+/*#endregion*/
+
+
+
+

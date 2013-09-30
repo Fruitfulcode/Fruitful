@@ -1,0 +1,14 @@
+@import "source/tabs.core.css";  
+@import "source/tabs.ajax.css";  
+@import "source/tabs.vertical.css";
+@import "source/tabs.horizontal.css";
+@import "source/tabs.themes.css";   
+@import "source/tabs.underlined.css";   
+@import "source/tabs.multiline.css";   
+@import "source/tabs.clean.css";  
+@import "source/tabs.grid.css"; 
+@import "source/tabs.responsive.css";   
+@import "source/tabs.mobile.css";   
+
+
+

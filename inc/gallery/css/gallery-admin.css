@@ -1,0 +1,6 @@
+#sortable 		{ float: left; margin-bottom: 20px;  width: 100%; }
+#sortable li  	{ float:left; position:relative; width:150px; height:150px; display:block; margin:5px 10px; padding:2px; cursor:pointer}
+#sortable li  a.delete_btn_glr {position:absolute; top: 8px; right: 8px; display:none; width:16px; height:16px; background: url("../../images/cross.png") no-repeat scroll 0 0 transparent; }
+#sortable .ui-SortPlaceHolder {border:2px dashed #c7c3c1; padding:0;}
+.soratble-inner  { display: block; float: left; width: 100%; }
+
