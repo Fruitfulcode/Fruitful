@@ -1,10 +1,11 @@
 <?php
 /** 
 * The Header for our theme. 
-** Displays all of the <head> section and everything up till <div id="main"> 
-** @package WordPress 
-*  @subpackage Fruitful theme 
-*  @since Fruitful theme 1.0 */
+* Displays all of the <head> section and everything up till <div id="main"> 
+* @package WordPress 
+* @subpackage Fruitful theme 
+* @since Fruitful theme 1.0 
+**/
 ?><!DOCTYPE html>
 <!--[if IE 7]><html class="ie ie7" <?php language_attributes(); ?>><![endif]-->
 <!--[if IE 8]><html class="ie ie8" <?php language_attributes(); ?>><![endif]-->
@@ -49,7 +50,8 @@ echo ' | ' . sprintf( __( 'Page %s', 'fruitful' ), max( $paged, $page ) );	?>
 	var _gaq = _gaq || [];  _gaq.push(['_setAccount', "<?php echo get_tracking_code(); ?>"]);  
 	_gaq.push(['_trackPageview']);  
 	(function() { var ga 	= document.createElement('script'); 
-					  ga.type = 'text/javascript'; ga.async = true;    
+					  ga.type = 'text/javascript'; 
+					  ga.async = true;    
 					  ga.src  = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';    
 					  var s   = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);  })();
 </script>
