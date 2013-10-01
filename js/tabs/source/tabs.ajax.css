@@ -1,37 +1,37 @@
-
-/*#region ==========================================================================
-    Zozo Tabs AJAX
-========================================================================== */
-
-
-.z-tabs .z-container
-{
-    position: relative;
-}
-
-.z-tabs span.z-spinner
-{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    z-index: 1000;
-    text-indent: -999em;
-    width: 55px;
-    height: 55px;
-    margin: -53px 0 0 -50px;
-    padding: 24px;
-    background: rgb(255, 255, 255) url("../img/loading-image.gif") no-repeat 50% 50%;
-}
-
-.z-tabs.z-rounded span.z-spinner
-{
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-}
-
-/*#endregion*/
-
-
-
-
+
+/*#region ==========================================================================
+    Zozo Tabs AJAX
+========================================================================== */
+
+
+.z-tabs .z-container
+{
+    position: relative;
+}
+
+.z-tabs span.z-spinner
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1000;
+    text-indent: -999em;
+    width: 55px;
+    height: 55px;
+    margin: -53px 0 0 -50px;
+    padding: 24px;
+    background: rgb(255, 255, 255) url("../img/loading-image.gif") no-repeat 50% 50%;
+}
+
+.z-tabs.z-rounded span.z-spinner
+{
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+/*#endregion*/
+
+
+
+

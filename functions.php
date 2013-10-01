@@ -179,12 +179,8 @@ add_action( 'widgets_init', 'fruitful_widgets_init' );
  */
  function fruitful_scripts() {
 	$theme_options = ret_options("fruitful_theme_options");
-	
-	wp_deregister_script	("jquery");
-	wp_register_script		("jquery", "http://code.jquery.com/jquery-1.8.0.min.js", false, "1.8.0", true);
-	wp_enqueue_script		("jquery");
-	
-	
+		
+		wp_enqueue_script('migrate',			get_template_directory_uri() . '/js/jquery-migrate-1.2.1.min.js', array( 'jquery' ), '20130930', false );
 	if ($theme_options['select_slider'] == "1") {
 		wp_enqueue_style( 'flex-slider', 			get_template_directory_uri() . '/js/flex_slider/slider.css');
 		wp_enqueue_script('flex-fitvid-j',			get_template_directory_uri() . '/js/flex_slider/jquery.flexslider-min.js', array( 'jquery' ), '20130930', false );
@@ -194,7 +190,7 @@ add_action( 'widgets_init', 'fruitful_widgets_init' );
 		wp_enqueue_script('flex-mousewheel-j',		get_template_directory_uri() . '/js/flex_slider/jquery.mousewheel.js', array( 'jquery' ), '20130930', false );
 		wp_enqueue_script('flex-modernizr-j',		get_template_directory_uri() . '/js/flex_slider/modernizr.js', array( 'jquery' ), '20130930', false );
 	/*
-	wp_enqueue_script('flex-shCore-j',			get_template_directory_uri() . '/js/slider/shCore.js', array( 'jquery' ), '20130930', false );
+		wp_enqueue_script('flex-shCore-j',			get_template_directory_uri() . '/js/slider/shCore.js', array( 'jquery' ), '20130930', false );
 	*/
 	
 	} else if ($theme_options['select_slider'] == "2") {
@@ -300,8 +296,9 @@ function fruitful_get_slider($atts) {
 	extract(shortcode_atts(array( 'id' => 'slider_0'), $atts));
 
 	$theme_options   = ret_options("fruitful_theme_options");
-	$w_slider	=  $theme_options['s_width'];
-	$h_slider  	=  $theme_options['s_height']; 
+	/*Full Backend Options*/
+	//$w_slider	=  $theme_options['s_width'];
+	//$h_slider =  $theme_options['s_height']; 
 	
 	if(count($theme_options['slides']) > 0) {
 	if ($theme_options['select_slider'] == "1") {
@@ -315,7 +312,7 @@ function fruitful_get_slider($atts) {
 							//$slide['text'];
 							$val = wp_get_attachment_image_src( $slide['attach_id'], 'full');
 							$slider_ .= '<li>' . "\n";
-								$slider_ .= '<img src="'. get_thumb_img ($val[0], $w_slider, $h_slider) .'" />' . "\n";
+								$slider_ .= '<img src="'.$val[0].'" />' . "\n";
 							$slider_ .= '</li>' . "\n";
 						}
 			$slider_ .= '</ul></div></section></div>';
@@ -326,15 +323,13 @@ function fruitful_get_slider($atts) {
 							//$slide_inndex = trim(substr($key, strrpos($key, '-'), 5));
 							//$slide['text'];
 							$val = wp_get_attachment_image_src( $slide['attach_id'], 'full');
-							$slider_ .= '<img src="'. get_thumb_img ($val[0], $w_slider, $h_slider) .'" data-thumb="'. get_thumb_img ($val[0], $w_slider, $h_slider) .'" alt="" />' . "\n";
+							$slider_ .= '<img src="'. $val[0] .'" data-thumb="'. $val[0] .'" alt="" />' . "\n";
 					}	
 				
 				$slider_ .= '</div>';
 			$slider_ .= '</div>';
 	}	
 	}
-	
-	
 	
 	return $slider_;
 }
@@ -349,13 +344,15 @@ function get_logo () {
 		$url_logo 	= '';
 	}
 	
-	$logo_w  		= $theme_options['logo_w'];
-	$logo_h  		= $theme_options['logo_h'];
+	/*Full Backend Options*/
+	//$logo_w  		= $theme_options['logo_w'];
+	//$logo_h  		= $theme_options['logo_h'];
+	
 	$description  	= get_bloginfo('description');
 	
 	if ($url_logo != "") {
 		$url_logo = wp_get_attachment_image_src($url_logo, 'full');
-		return  '<a href="' . home_url( '/' ) . '" title="' . $description .'" rel="home"><img class="logo" src="'. get_thumb_img ($url_logo[0], $logo_w, $logo_h)  .'" alt="' . $description . '"/></a>';
+		return  '<a href="' . home_url( '/' ) . '" title="' . $description .'" rel="home"><img class="logo" src="'. $url_logo[0]  .'" alt="' . $description . '"/></a>';
 	} else {
 		return  '<a href="' . home_url( '/' ) . '" title="' . $description .'" rel="home"><img class="logo" src="'. get_template_directory_uri()  . '/images/default_logo.png'  .'" alt="' . $description . '"/></a>';
 	}	
@@ -545,13 +542,21 @@ function get_tracking_code() {
 /*Enable Comment*/
 function state_post_comment () {
 	$theme_options  = ret_options("fruitful_theme_options"); 
-	return ($theme_options['postcomment'] == "on");
+	if (isset($theme_options['postcomment'])) {
+		return ($theme_options['postcomment'] == "on");
+	} else {
+		return false;
+	}	
 	
 }
 
 function state_page_comment () {
 	$theme_options  = ret_options("fruitful_theme_options"); 
-	return ($theme_options['pagecomment'] == "on");
+	if (isset($theme_options['pagecomment'])) {
+		return ($theme_options['pagecomment'] == "on");
+	} else {
+		return false;
+	}	
 }
 
 function get_responsive_style () {

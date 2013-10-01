@@ -1,5 +1,4 @@
 <?php
-
 function fruitful_slide_skins_select() {
 	$slide_anim_options = array(
 		'0' => array(
@@ -270,17 +269,12 @@ function add_jquery_script() {
 	wp_enqueue_script('admin-jQuery-fruit',	get_template_directory_uri() . "/inc/js/main.js", array('jquery'));
 }
 
-
-function get_thumb_img ($path, $w, $h)	 {
-		return get_template_directory_uri() . '/inc/func/timthumb.php?src=' . $path . '&amp;h=' . $h . '&amp;w=' . $w . '&amp;zc=0';
-}
-
-function get_box_upload_image($val, $field, $btnClassUP = 'upload_btn', $btnСlassR = 'reset_btn', $imgContClass = '') {
+function get_box_upload_image($val, $field, $btnclassup = 'upload_btn', $btnclassr = 'reset_btn', $imgcontclass = '') {
 		 $out  = '';
 		
 		 $out .= '<div class="box-image">';
 			if ($val != '') {
-				$out .= '<div class="img-container '.$imgContClass.'">';
+				$out .= '<div class="img-container '.$imgcontclass.'">';
 					$image_attributes = wp_get_attachment_image_src( $val, 'full');
 					$out .= '<img src="'.$image_attributes[0].'" alt="" />';
 				$out .= '</div>	';
@@ -288,13 +282,13 @@ function get_box_upload_image($val, $field, $btnClassUP = 'upload_btn', $btnСla
 			
 			$out .= '<input class="of-input" name="fruitful_theme_options['. $field .']"   id="'. $field .'_upload" type="hidden" value="'. $val .'" />';
 			$out .= '<div class="upload_button_div">';
-				$out .= '<span data-imagetype="'.$imgContClass.'" class="button '. $btnClassUP .'" id="'. $field .'">Upload Image</span>';
+				$out .= '<span data-imagetype="'.$imgcontclass.'" class="button '. $btnclassup .'" id="'. $field .'">'. __('Upload Image', 'fruitful') .'</span>';
 			if(!empty($val)) {
 				$none = '';
 			} else { 
 				$none = 'none';
 			}
-				$out .= '<span class="button ' . $btnСlassR . ' ' . $none .'" id="reset_'. $field .'" title="' . $field . '">Remove</span>';
+				$out .= '<span class="button ' . $btnclassr . ' ' . $none .'" id="reset_'. $field .'" title="' . $field . '">'.__('Remove', 'fruitful') .'</span>';
 			$out .= '</div>';
 		$out .= '</div>';
 	return $out;
@@ -304,8 +298,8 @@ function get_box_upload_image($val, $field, $btnClassUP = 'upload_btn', $btnСla
 function get_box_upload_slide($attach_id, 
 							  $image_text,	
 							  $ind,
-							  $btnClassUP 	= 'upload_btn', 
-							  $btnСlassR 	= 'reset_btn'
+							  $btnclassup 	= 'upload_btn', 
+							  $btnclassr 	= 'reset_btn'
 							  ) {
 		 $out  = ''; 
 
@@ -319,13 +313,14 @@ function get_box_upload_slide($attach_id,
 			}
 			
 			/*
-			$out .= '<label for="">'. __('HTML Text', 'fruitful') .'</label>';
-			$out .= '<textarea class="of-area" name="fruitful_theme_options[slides][slide-'.$ind.'][text]" id="attach-'.$ind.'" cols="30" rows="10">'.$image_text.'</textarea>';
+				* For New Slider Options
+				* $out .= '<label for="">'. __('HTML Text', 'fruitful') .'</label>';
+				* $out .= '<textarea class="of-area" name="fruitful_theme_options[slides][slide-'.$ind.'][text]" id="attach-'.$ind.'" cols="30" rows="10">'.$image_text.'</textarea>';
 			*/
 			
 			$out .= '<input class="of-input" name="fruitful_theme_options[slides][slide-'.$ind.'][attach_id]"   id="attach-'.$ind.'" type="hidden" value="'. $attach_id .'" />';
 			$out .= '<div class="upload_button_div">';
-				$out .= '<span data-imagetype="slide" class="button '. $btnClassUP .'" id="add-slide-btn-'. $ind .'">Upload Image</span>';
+				$out .= '<span data-imagetype="slide" class="button '. $btnclassup .'" id="add-slide-btn-'. $ind .'">Upload Image</span>';
 			$out .= '</div>';
 		$out .= '</div>';
 	return $out;
@@ -372,8 +367,8 @@ return array(
 			
 				/*logo*/
 				'logo_img'			=> '',
-				'logo_w'			=> '160',
-				'logo_h'			=> '60',
+				//'logo_w'			=> '160',
+				//'logo_h'			=> '60',
 				'fav_icon'			=> '',
 				
 				/*menu*/
@@ -394,12 +389,15 @@ return array(
 				'm_size'			=> '14',
 				'p_font_family'		=> 'Open Sans, sans-serif',
 				'p_size'			=> '12',
-				
 				'select_slider'     => '1',
 				
+				
+				/*Sliders*/
+				
+				//'s_width'			=> '960',
+				//'s_height'		=> '520',
+				
 				/*slider flex*/
-				's_width'			=> '960',
-				's_height'			=> '500',
 				's_animation'		=> 'fade', 
 				's_direction'		=> 'horizontal',
 				's_reverse'			=> 'false',
@@ -411,16 +409,16 @@ return array(
 				's_controlnav'		=> 'true',
 				
 				/*slider nivo*/
-				'nv_skins'		=> 'theme-bar',
-				'nv_animation' 	=> 'random',
-				'nv_slice' 		=> '15',
-				'nv_boxCols' 	=> '8',
-				'nv_boxRows' 	=> '4',
-				'nv_animSpeed' 	=> '500',
-				'nv_pauseTime' 	=> '3000',
-				'nv_startSlide'	=> '0',
-				'nv_directionNav' 	=> 'true',
-				'nv_controlNav' 	=> 'true',
+				'nv_skins'				=> 'theme-bar',
+				'nv_animation' 			=> 'random',
+				'nv_slice' 				=> '15',
+				'nv_boxCols' 			=> '8',
+				'nv_boxRows' 			=> '4',
+				'nv_animSpeed' 			=> '500',
+				'nv_pauseTime' 			=> '3000',
+				'nv_startSlide'			=> '0',
+				'nv_directionNav' 		=> 'true',
+				'nv_controlNav' 		=> 'true',
 				'nv_controlNavThumbs' 	=> 'false',
 				'nv_pauseOnHover' 		=> 'true',
 				'nv_manualAdvance' 		=> 'false',
@@ -428,6 +426,8 @@ return array(
 				'nv_nextText' 		=> 'Next',
 				'nv_randomStart' 	=> 'false',
 				'slides'			=> '',
+				
+				/*End Sliders*/
 				
 				/*footer*/
 				'footer_text'		=> stripslashes('Fruitful theme powered by Wordpress'),

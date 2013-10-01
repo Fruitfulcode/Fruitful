@@ -1,128 +1,128 @@
-
-/*#region ==========================================================================
-    Zozo Tabs Responsive
-========================================================================== */
-
-
-
-/*responsive normal style */
-
-.z-tabs > ul.z-tabs-nav.z-tabs-mobile
-{
-    display: none;
-}
-
-.z-tabs.horizontal > ul.z-tabs-nav.z-tabs-mobile,
-.z-tabs.horizontal > ul.z-tabs-nav.z-tabs-mobile > li
-{
-    width: 100%;
-    float: none;
-}
-
-.z-tabs.horizontal.responsive > ul.z-tabs-nav.z-tabs-desktop > li
-{
-    float: left;
-    margin: 0 -2px 0 0;
-}
-
-    .z-tabs.horizontal.responsive > ul.z-tabs-nav.z-tabs-desktop > li.z-last:nth-child(odd)
-    {
-        width: 100%;
-    }
-
-.ie7 .z-tabs.horizontal.responsive > ul.z-tabs-nav.z-tabs-desktop > li
-{
-    margin-right: -3px;
-}
-
-.z-tabs.horizontal.responsive > ul.z-tabs-nav
-{
-    width: 100%;
-}
-
-    .z-tabs.horizontal.responsive > ul.z-tabs-nav > li.z-active
-    {
-        margin-bottom: 0px;
-        padding-bottom: 0px;
-        z-index: initial;
-    }
-
-.z-tabs.horizontal.responsive.bottom-left > ul.z-tabs-nav > li.z-active
-{
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding: 0;
-    z-index: initial;
-}
-
-.z-tabs.horizontal.responsive > ul.z-tabs-nav.z-tabs-desktop
-{
-    display: block;
-    width: 100%;
-}
-
-
-
-/*responsive underlined style */
-.z-tabs.horizontal.responsive.underlined > ul.z-tabs-nav
-{
-    border-width: 0;
-}
-
-    .z-tabs.horizontal.responsive.underlined > ul.z-tabs-nav > li.z-active,
-    .z-tabs.horizontal.responsive.underlined > ul.z-tabs-nav > li:hover
-    {
-        border-top-width: 0;
-        border-bottom-width: 0;
-    }
-
-
-.z-tabs.underlined.horizontal > ul.z-tabs-nav.z-tabs-mobile > li
-{
-    margin-left: 0;
-}
-
-    .z-tabs.underlined.horizontal > ul.z-tabs-nav.z-tabs-mobile > li a.z-link
-    {
-        padding-left: 0;
-    }
-
-
-/*responsive rounded*/
-.z-tabs.responsive.top-left.z-rounded > ul.z-tabs-desktop > li.z-right,
-.z-tabs.responsive.top-left.z-rounded > ul.z-tabs-desktop > li.z-right > a.z-link
-{
-    -webkit-border-radius: 0 5px 0 0;
-    -moz-border-radius: 0 5px 0 0;
-    border-radius: 0 5px 0 0;
-}
-
-.z-tabs.responsive.z-rounded.bottom-left > ul.z-tabs-nav > li.z-first,
-.z-tabs.responsive.z-rounded.bottom-left > ul.z-tabs-nav > li.z-first > a.z-link
-{
-    -moz-border-radius: 0;
-    -webkit-border-radius: 0;
-    border-radius: 0;
-}
-
-.z-tabs.responsive.z-rounded.bottom-left > ul.z-tabs-nav > li.z-left,
-.z-tabs.responsive.z-rounded.bottom-left > ul.z-tabs-nav > li.z-left > a.z-link
-{
-    -webkit-border-radius: 0 0 0 5px;
-    -moz-border-radius: 0 0 0 5px;
-    border-radius: 0 0 0 5px;
-}
-
-.z-tabs.responsive.z-rounded.bottom-left > ul.z-tabs-nav > li.z-right,
-.z-tabs.responsive.z-rounded.bottom-left > ul.z-tabs-nav > li.z-right > a.z-link
-{
-    -webkit-border-radius: 0 0 5px 0;
-    -moz-border-radius: 0 0 5px 0;
-    border-radius: 0 0 5px 0;
-}
-
-
-/*#endregion*/
-
-
-
+
+/*#region ==========================================================================
+    Zozo Tabs Responsive
+========================================================================== */
+
+
+
+/*responsive normal style */
+
+.z-tabs > ul.z-tabs-nav.z-tabs-mobile
+{
+    display: none;
+}
+
+.z-tabs.horizontal > ul.z-tabs-nav.z-tabs-mobile,
+.z-tabs.horizontal > ul.z-tabs-nav.z-tabs-mobile > li
+{
+    width: 100%;
+    float: none;
+}
+
+.z-tabs.horizontal.responsive > ul.z-tabs-nav.z-tabs-desktop > li
+{
+    float: left;
+    margin: 0 -2px 0 0;
+}
+
+    .z-tabs.horizontal.responsive > ul.z-tabs-nav.z-tabs-desktop > li.z-last:nth-child(odd)
+    {
+        width: 100%;
+    }
+
+.ie7 .z-tabs.horizontal.responsive > ul.z-tabs-nav.z-tabs-desktop > li
+{
+    margin-right: -3px;
+}
+
+.z-tabs.horizontal.responsive > ul.z-tabs-nav
+{
+    width: 100%;
+}
+
+    .z-tabs.horizontal.responsive > ul.z-tabs-nav > li.z-active
+    {
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+        z-index: initial;
+    }
+
+.z-tabs.horizontal.responsive.bottom-left > ul.z-tabs-nav > li.z-active
+{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0;
+    z-index: initial;
+}
+
+.z-tabs.horizontal.responsive > ul.z-tabs-nav.z-tabs-desktop
+{
+    display: block;
+    width: 100%;
+}
+
+
+
+/*responsive underlined style */
+.z-tabs.horizontal.responsive.underlined > ul.z-tabs-nav
+{
+    border-width: 0;
+}
+
+    .z-tabs.horizontal.responsive.underlined > ul.z-tabs-nav > li.z-active,
+    .z-tabs.horizontal.responsive.underlined > ul.z-tabs-nav > li:hover
+    {
+        border-top-width: 0;
+        border-bottom-width: 0;
+    }
+
+
+.z-tabs.underlined.horizontal > ul.z-tabs-nav.z-tabs-mobile > li
+{
+    margin-left: 0;
+}
+
+    .z-tabs.underlined.horizontal > ul.z-tabs-nav.z-tabs-mobile > li a.z-link
+    {
+        padding-left: 0;
+    }
+
+
+/*responsive rounded*/
+.z-tabs.responsive.top-left.z-rounded > ul.z-tabs-desktop > li.z-right,
+.z-tabs.responsive.top-left.z-rounded > ul.z-tabs-desktop > li.z-right > a.z-link
+{
+    -webkit-border-radius: 0 5px 0 0;
+    -moz-border-radius: 0 5px 0 0;
+    border-radius: 0 5px 0 0;
+}
+
+.z-tabs.responsive.z-rounded.bottom-left > ul.z-tabs-nav > li.z-first,
+.z-tabs.responsive.z-rounded.bottom-left > ul.z-tabs-nav > li.z-first > a.z-link
+{
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+}
+
+.z-tabs.responsive.z-rounded.bottom-left > ul.z-tabs-nav > li.z-left,
+.z-tabs.responsive.z-rounded.bottom-left > ul.z-tabs-nav > li.z-left > a.z-link
+{
+    -webkit-border-radius: 0 0 0 5px;
+    -moz-border-radius: 0 0 0 5px;
+    border-radius: 0 0 0 5px;
+}
+
+.z-tabs.responsive.z-rounded.bottom-left > ul.z-tabs-nav > li.z-right,
+.z-tabs.responsive.z-rounded.bottom-left > ul.z-tabs-nav > li.z-right > a.z-link
+{
+    -webkit-border-radius: 0 0 5px 0;
+    -moz-border-radius: 0 0 5px 0;
+    border-radius: 0 0 5px 0;
+}
+
+
+/*#endregion*/
+
+
+

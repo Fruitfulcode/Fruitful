@@ -19,8 +19,8 @@
  */
 function fruitful_theme_options_init() {
 	register_setting(
-		'fruitful_options', 				// Options group, see settings_fields() call in fruitful_theme_options_render_page()
-		'fruitful_theme_options', 			// Database option, see fruitful_get_theme_options()
+		'fruitful_options', 		// Options group, see settings_fields() call in fruitful_theme_options_render_page()
+		'fruitful_theme_options', 	// Database option, see fruitful_get_theme_options()
 		'' // The sanitization callback, see fruitful_theme_options_validate()
 	);
 	// Register our settings field group
@@ -47,7 +47,7 @@ function fruitful_theme_options_init() {
 	add_settings_field( 'background_color', __( 'Background Color ', 'fruitful' ), 'fruitful_get_background_color', 'theme_options', 'background', array('info' => __( 'Choose color for body background', 'fruitful' )));
 		
 	add_settings_field( 'logo_image', 		__( 'Upload your logo Image', 'fruitful' ), 	'fruitful_get_logo_img', 	'theme_options', 'logo', 		array('info' => __( 'Default theme logo is just a sample. Upload logo image for your website. (Supported files .png, .jpg, .gif)', 'fruitful' )));
-	add_settings_field( 'logo_size', 		__( 'Logo Size', 'fruitful' ), 		'fruitful_get_logo_wh',	 	'theme_options', 'logo', 		array('info' => __( 'Specify resolution for your logo image. Our theme will crop (timthumb) your image for need size.', 'fruitful' )) );
+	//add_settings_field( 'logo_size', 		__( 'Logo Size', 'fruitful' ), 		'fruitful_get_logo_wh',	 	'theme_options', 'logo', 		array('info' => __( 'Specify resolution for your logo image. Our theme will crop (timthumb) your image for need size.', 'fruitful' )) );
 	add_settings_field( 'fav_icon', 		__( 'Favicon', 'fruitful' ), 		'fruitful_get_fav_icon', 	'theme_options', 'logo', 		array('info' => __( 'Upload needed image for site favicon. (Supported files .png (16x16))', 'fruitful' )));
 	add_settings_field( 'menu_style',		__( 'Menu css styling', 'fruitful' ),	'fruitful_menu_style',		'theme_options', 'menu',    	array('info' => __( 'Choose styles for main menu.', 'fruitful' )) );
 	add_settings_field( 'fonts_options', 	__( 'Fonts', 'fruitful' ), 	'fruitful_fonts_options',	'theme_options', 'fonts', 		array('info' => __( 'Popular web safe font collection, select and use for your needs.', 'fruitful' )) );
@@ -69,7 +69,7 @@ add_action( 'admin_init', 'fruitful_theme_options_init' );
 
 add_action( 'admin_enqueue_scripts', 'add_admin_options_and_styles' );
 function add_admin_options_and_styles($hook) {
-	if( 'toplevel_page_theme_options' != $hook ) return;
+	if( 'appearance_page_theme_options' != $hook ) return;
 	add_jquery_script();
 	add_admin_style();
 } 
@@ -97,7 +97,7 @@ add_filter( 'option_page_capability_fruitful_options', 'fruitful_option_page_cap
  */
 add_action( 'admin_menu', 'fruitful_theme_options_add_page' );
  function fruitful_theme_options_add_page() {
-	$theme_page = add_menu_page(
+	$theme_page = add_theme_page(
 		__( 'Fruitful Theme Options', 'fruitful' ),   	// Name of page
 		__( 'Theme Options', 'fruitful' ),   			// Label in menu
 			'edit_theme_options',          	 			// Capability required
@@ -337,8 +337,9 @@ function fruitful_slider_options() {
 	?>
 	<input type="button" id="view_all_options" class="button-secondary" value="View Options" /> 
 		<div id="slider_main_options" class="slider-main-options">
-			<div class="option_block"><h4><?php _e( 'Width', 'fruitful' ); ?></h4><input type="text" id="width-slider" name="fruitful_theme_options[s_width]" value="<?php echo $options['s_width']; ?>"/></div>		
-			<div class="option_block"><h4><?php _e( 'Height', 'fruitful' ); ?></h4><input type="text" id="height-slider" name="fruitful_theme_options[s_height]" value="<?php echo $options['s_height']; ?>"/></div>		
+			<!--Slider Width and Height -->
+			<!--<div class="option_block"><h4><?php //_e( 'Width', 'fruitful' ); ?></h4><input type="text" id="width-slider" name="fruitful_theme_options[s_width]" value="<?php //echo $options['s_width']; ?>"/></div>-->		
+			<!--<div class="option_block"><h4><?php //_e( 'Height', 'fruitful' ); ?></h4><input type="text" id="height-slider" name="fruitful_theme_options[s_height]" value="<?php //echo $options['s_height']; ?>"/></div>-->				
 				
 			<div class="no-slider-select">
 				<div class="option_block"><h4><?php _e( 'No Slider Select!', 'fruitful' ); ?></h4></div>
@@ -402,8 +403,8 @@ function fruitful_slider_images() {
 	
 	?>
 		<div class="slides-btn">
-			<span class="collapse_all">Collapse all</span>
-			<span class="expand_all">Expand all</span>
+			<span class="collapse_all"><?php _e('Collapse all', 'fruitful'); ?></span>
+			<span class="expand_all"><?php _e('Expand all', 'fruitful'); ?></span>
 		</div>
 		<ul class="slides">
 			<?php 
@@ -413,13 +414,20 @@ function fruitful_slider_images() {
 						echo fruitful_get_slide(1, -1); 
 					} else {
 						foreach ($slides['slides'] as $key=>$slide) {
+							$slide_inndex = -1;
+							$attach_id 	  = $slide['attach_id'];
+							$slide_text   = null;
+							
 							$slide_inndex = trim(substr($key, strrpos($key, '-')+1, 5));
-							echo fruitful_get_slide($slide_inndex, $slide['attach_id'], $slide['text']); 
+							if (isset($slide['text'])) {
+								$slide_text = $slide['text'];
+							}
+							echo fruitful_get_slide($slide_inndex, $attach_id, $slide_text); 
 						}
 					}
 			?>
 		</ul>
-		<input type="button" class="button-primary add_new_btn" value="Add New Slide" />
+		<input type="button" class="button-primary add_new_btn" value="<?php _e('Add New Slide', 'fruitful'); ?>" />
 <?php
 }
 

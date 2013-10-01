@@ -1,188 +1,188 @@
-/**************************************************************************
-*	 Zozo Tabs
-*
-*    1. Vertical Structure
-*    2. Vertical Positioning 
-*    3. Vertical Rounded Cornors
-     4. Vertical Shadows
-*    
-*   Most of the time you shouldn't section 1 (structure).
-*   You can delete/edit rounded and shadows section if you need.
-* 
-**************************************************************************/
-
-
-/*#region ==========================================================================
-     Vertical Structure 
-========================================================================== */
-
-.z-tabs.vertical > ul.z-tabs-nav
-{
-    float: left;
-    border-width: 1px 0 1px 1px;
-    min-width: 200px;
-    width: 25%;
-}
-
-    .z-tabs.vertical > ul.z-tabs-nav > li
-    {
-        border-width: 0 0 1px 0;
-        min-width: 100%;
-    }
-
-        .z-tabs.vertical > ul.z-tabs-nav > li > a.z-link
-        {
-            margin: 0 14px;
-            height: 46px;
-            line-height: 46px;
-            margin: 0 14px;
-            font-size: 12px;
-        }
-
-        .z-tabs.vertical > ul.z-tabs-nav > li.z-active
-        {
-            border-right-width: 0;
-            z-index: 10;
-        }
-
-        .z-tabs.vertical > ul.z-tabs-nav > li.z-first.z-active
-        {
-            border-bottom-width: 1px;
-        }
-
-        .z-tabs.vertical > ul.z-tabs-nav > li.z-last
-        {
-            border-bottom-width: 0;
-        }
-
-
-/*#endregion*/
-
-
-
-
-/*#region ==========================================================================
-     Vertical Positioning
-========================================================================== */
-
-/*top-left*/
-.z-tabs.vertical.top-left > ul.z-tabs-nav{  margin-left:0;  margin-right: -1px;}
-.z-tabs.vertical.top-right > ul.z-tabs-nav{ margin-right:0;   margin-left: -1px;}
-
-.ie7 body .z-tabs.vertical.top-left > ul.z-tabs-nav{    margin-right: 0;}
-.ie7 body .z-tabs.vertical.top-right > ul.z-tabs-nav{    margin-left: 0;}
-.ie7 body .z-tabs.vertical.top-left > ul > li, 
-.ie7 body .z-tabs.vertical.top-left > ul > li > .z-link,
-.ie7 body .z-tabs.vertical.top-left > ul { z-index: 10 !important; }
-.ie7 body .z-tabs.vertical.top-left > ul > li.z-active { border-right: 1px solid #fff !important; }
-.ie7 body .z-tabs.vertical.top-left > .z-container { /*left: 0;*/ }
-
-/*top-right*/
-.z-tabs.vertical.top-right > ul.z-tabs-nav{float: right;border-width: 1px 1px 1px 0;}
-
-.ie7 body .z-tabs.vertical.top-right > ul.z-tabs-nav > li.z-active { border-right-width: 0 !important; border-left: 1px solid #fff !important; left:-1px; }
-.ie7 body .z-tabs.vertical.top-right > ul.z-tabs-nav > li, 
-.ie7 body .z-tabs.vertical.top-right > ul { z-index: 10 !important; }
-.ie7 body .z-tabs.vertical.top-right > .z-container { }
-
-
-
-/*#endregion*/
-
-
-
-
-/*#region ==========================================================================
-     Vertical Rounded Cornors
-========================================================================== */
-
-    /*top-left*/
-    .z-tabs.vertical.z-rounded > .z-container
-    {
-        -webkit-border-radius: 0 6px 6px 0;
-        -moz-border-radius: 0 6px 6px 0;
-        border-radius: 0 6px 6px 0;
-    }
-
-    .z-tabs.vertical.z-rounded > ul.z-tabs-nav
-    {
-        -webkit-border-radius: 6px 0 0 6px;
-        -moz-border-radius: 6px 0 0 6px;
-        border-radius: 6px 0 0 6px;
-    }
-
-        .z-tabs.vertical.z-rounded > ul.z-tabs-nav > li.z-first,
-        .z-tabs.vertical.z-rounded > ul.z-tabs-nav > li.z-first > a.z-link
-        {
-            -webkit-border-radius: 5px 0 0 0;
-            -moz-border-radius: 5px 0 0 0;
-            border-radius: 5px 0 0 0;
-        }
-
-        .z-tabs.vertical.z-rounded > ul.z-tabs-nav > li.z-last,
-        .z-tabs.vertical.z-rounded > ul.z-tabs-nav > li.z-last > a.z-link
-        {
-            -webkit-border-radius: 0 0 0 5px;
-            -moz-border-radius: 0 0 0 5px;
-            border-radius: 0 0 0 5px;
-        }
-
-    /*top-right*/
-    .z-tabs.vertical.z-rounded.top-right > ul.z-tabs-nav
-    {
-        -webkit-border-radius: 0 6px 6px 0;
-        -moz-border-radius: 0 6px 6px 0;
-        border-radius: 0 6px 6px 0;
-    }
-
-        .z-tabs.vertical.z-rounded.top-right > ul.z-tabs-nav > li.z-first,
-        .z-tabs.vertical.z-rounded.top-right > ul.z-tabs-nav > li.z-first > a.z-link
-        {
-            -webkit-border-radius: 0 5px 0 0;
-            -moz-border-radius: 0 5px 0 0;
-            border-radius: 0 5px 0 0;
-        }
-
-        .z-tabs.vertical.z-rounded.top-right > ul.z-tabs-nav > li.z-last,
-        .z-tabs.vertical.z-rounded.top-right > ul.z-tabs-nav > li.z-last > a.z-link
-        {
-            -webkit-border-radius: 0 0 5px 0;
-            -moz-border-radius: 0 0 5px 0;
-            border-radius: 0 0 5px 0;
-        }
-
-    .z-tabs.vertical.z-rounded.top-right > .z-container
-    {
-        -webkit-border-radius: 6px 0 0 6px;
-        -moz-border-radius: 6px 0 0 6px;
-        border-radius: 6px 0 0 6px;
-    }
-
-/*#endregion*/
-
-
-
-
-/*#region ==========================================================================
-     Vertical Shadows
-========================================================================== */
-
-.z-tabs.vertical.z-shadows > ul.z-tabs-nav,
-.z-tabs.vertical.z-shadows > .z-container
-{ 
-    -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.125);
-    -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.125);
-    box-shadow:  0 1px 6px rgba(0, 0, 0, 0.125);
-} 
-.z-tabs.vertical.z-shadows > ul.z-tabs-nav > li
-{ 
-    -webkit-box-shadow: 0 1px 3px -3px rgba(0, 0, 0, 0.15);
-    -moz-box-shadow: 0 1px 3px -3px rgba(0, 0, 0, 0.15);
-    box-shadow: 0 1px 3px -3px rgba(0, 0, 0, 0.15); 
-}
-
-/*#endregion*/
-
-
-
-
+/**************************************************************************
+*	 Zozo Tabs
+*
+*    1. Vertical Structure
+*    2. Vertical Positioning 
+*    3. Vertical Rounded Cornors
+     4. Vertical Shadows
+*    
+*   Most of the time you shouldn't section 1 (structure).
+*   You can delete/edit rounded and shadows section if you need.
+* 
+**************************************************************************/
+
+
+/*#region ==========================================================================
+     Vertical Structure 
+========================================================================== */
+
+.z-tabs.vertical > ul.z-tabs-nav
+{
+    float: left;
+    border-width: 1px 0 1px 1px;
+    min-width: 200px;
+    width: 25%;
+}
+
+    .z-tabs.vertical > ul.z-tabs-nav > li
+    {
+        border-width: 0 0 1px 0;
+        min-width: 100%;
+    }
+
+        .z-tabs.vertical > ul.z-tabs-nav > li > a.z-link
+        {
+            margin: 0 14px;
+            height: 46px;
+            line-height: 46px;
+            margin: 0 14px;
+            font-size: 12px;
+        }
+
+        .z-tabs.vertical > ul.z-tabs-nav > li.z-active
+        {
+            border-right-width: 0;
+            z-index: 10;
+        }
+
+        .z-tabs.vertical > ul.z-tabs-nav > li.z-first.z-active
+        {
+            border-bottom-width: 1px;
+        }
+
+        .z-tabs.vertical > ul.z-tabs-nav > li.z-last
+        {
+            border-bottom-width: 0;
+        }
+
+
+/*#endregion*/
+
+
+
+
+/*#region ==========================================================================
+     Vertical Positioning
+========================================================================== */
+
+/*top-left*/
+.z-tabs.vertical.top-left > ul.z-tabs-nav{  margin-left:0;  margin-right: -1px;}
+.z-tabs.vertical.top-right > ul.z-tabs-nav{ margin-right:0;   margin-left: -1px;}
+
+.ie7 body .z-tabs.vertical.top-left > ul.z-tabs-nav{    margin-right: 0;}
+.ie7 body .z-tabs.vertical.top-right > ul.z-tabs-nav{    margin-left: 0;}
+.ie7 body .z-tabs.vertical.top-left > ul > li, 
+.ie7 body .z-tabs.vertical.top-left > ul > li > .z-link,
+.ie7 body .z-tabs.vertical.top-left > ul { z-index: 10 !important; }
+.ie7 body .z-tabs.vertical.top-left > ul > li.z-active { border-right: 1px solid #fff !important; }
+.ie7 body .z-tabs.vertical.top-left > .z-container { /*left: 0;*/ }
+
+/*top-right*/
+.z-tabs.vertical.top-right > ul.z-tabs-nav{float: right;border-width: 1px 1px 1px 0;}
+
+.ie7 body .z-tabs.vertical.top-right > ul.z-tabs-nav > li.z-active { border-right-width: 0 !important; border-left: 1px solid #fff !important; left:-1px; }
+.ie7 body .z-tabs.vertical.top-right > ul.z-tabs-nav > li, 
+.ie7 body .z-tabs.vertical.top-right > ul { z-index: 10 !important; }
+.ie7 body .z-tabs.vertical.top-right > .z-container { }
+
+
+
+/*#endregion*/
+
+
+
+
+/*#region ==========================================================================
+     Vertical Rounded Cornors
+========================================================================== */
+
+    /*top-left*/
+    .z-tabs.vertical.z-rounded > .z-container
+    {
+        -webkit-border-radius: 0 6px 6px 0;
+        -moz-border-radius: 0 6px 6px 0;
+        border-radius: 0 6px 6px 0;
+    }
+
+    .z-tabs.vertical.z-rounded > ul.z-tabs-nav
+    {
+        -webkit-border-radius: 6px 0 0 6px;
+        -moz-border-radius: 6px 0 0 6px;
+        border-radius: 6px 0 0 6px;
+    }
+
+        .z-tabs.vertical.z-rounded > ul.z-tabs-nav > li.z-first,
+        .z-tabs.vertical.z-rounded > ul.z-tabs-nav > li.z-first > a.z-link
+        {
+            -webkit-border-radius: 5px 0 0 0;
+            -moz-border-radius: 5px 0 0 0;
+            border-radius: 5px 0 0 0;
+        }
+
+        .z-tabs.vertical.z-rounded > ul.z-tabs-nav > li.z-last,
+        .z-tabs.vertical.z-rounded > ul.z-tabs-nav > li.z-last > a.z-link
+        {
+            -webkit-border-radius: 0 0 0 5px;
+            -moz-border-radius: 0 0 0 5px;
+            border-radius: 0 0 0 5px;
+        }
+
+    /*top-right*/
+    .z-tabs.vertical.z-rounded.top-right > ul.z-tabs-nav
+    {
+        -webkit-border-radius: 0 6px 6px 0;
+        -moz-border-radius: 0 6px 6px 0;
+        border-radius: 0 6px 6px 0;
+    }
+
+        .z-tabs.vertical.z-rounded.top-right > ul.z-tabs-nav > li.z-first,
+        .z-tabs.vertical.z-rounded.top-right > ul.z-tabs-nav > li.z-first > a.z-link
+        {
+            -webkit-border-radius: 0 5px 0 0;
+            -moz-border-radius: 0 5px 0 0;
+            border-radius: 0 5px 0 0;
+        }
+
+        .z-tabs.vertical.z-rounded.top-right > ul.z-tabs-nav > li.z-last,
+        .z-tabs.vertical.z-rounded.top-right > ul.z-tabs-nav > li.z-last > a.z-link
+        {
+            -webkit-border-radius: 0 0 5px 0;
+            -moz-border-radius: 0 0 5px 0;
+            border-radius: 0 0 5px 0;
+        }
+
+    .z-tabs.vertical.z-rounded.top-right > .z-container
+    {
+        -webkit-border-radius: 6px 0 0 6px;
+        -moz-border-radius: 6px 0 0 6px;
+        border-radius: 6px 0 0 6px;
+    }
+
+/*#endregion*/
+
+
+
+
+/*#region ==========================================================================
+     Vertical Shadows
+========================================================================== */
+
+.z-tabs.vertical.z-shadows > ul.z-tabs-nav,
+.z-tabs.vertical.z-shadows > .z-container
+{ 
+    -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.125);
+    -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.125);
+    box-shadow:  0 1px 6px rgba(0, 0, 0, 0.125);
+} 
+.z-tabs.vertical.z-shadows > ul.z-tabs-nav > li
+{ 
+    -webkit-box-shadow: 0 1px 3px -3px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0 1px 3px -3px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 1px 3px -3px rgba(0, 0, 0, 0.15); 
+}
+
+/*#endregion*/
+
+
+
+

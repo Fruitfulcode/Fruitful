@@ -3,9 +3,11 @@ Theme Name: Fruitful
 Theme URI: http://themes.fruitfulcode.com/fruitful
 Author: fruifrulcode
 Author URI: http://fruitfulcode.com
-Description: Wordpress responsive theme with theme custom options panel Version: 1.0License: GNU General Public License v2 or later
+Description: Fruitful - clean and simple designed wordpress theme with powerful custom theme options panel. Use it to modify styles to your needs. Easy replace logo, backgound image, menu, slider, fonts, social icons, footer, add custom css and much more.
 License URI: http://www.gnu.org/licenses/gpl-2.0.htmlTags: white, orange, theme-options, fixed-width, custom-header, custom-background, custom-menu, custom-colors, custom-background, translation-ready, featured-images, full-width-template,  one-column, right-sidebar, responsive, editor-style
-Text Domain: fruitfulThis theme, like WordPress, is licensed under the GPL.Use it to make something cool, have fun, and share what you've learned with others.*/
+Text Domain: fruitful
+This theme, like WordPress, is licensed under the GPL.Use it to make something cool, have fun, and share what you've learned with others.
+*/
 
 /*Style Font Family*/	
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300);
@@ -309,6 +311,7 @@ body,button,input,select,textarea {
 h1,h2,h3,h4,h5,h6 {    
 	clear:both;	
 	font-weight: bold;
+	line-height:24px;
 }
 
 hr {    

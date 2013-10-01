@@ -33,22 +33,23 @@ jQuery(document).ready(function($) {
 		});
 		
 		$("#tabbed-nav").zozoTabs({
-			position: "top-left",
-            theme: "gray",
-            rounded: true,
-            shadows: true,
-            size: "large",
-            orientation: "vertical",
-            responsive: true,
-            responsiveDelay: 0,
-            defaultTab: "tab1",
-            style: "underlined",
-				animation: {
-								easing: "easeInOutExpo",
-								duration: 500,
-								effects: "fade"
-							}
-            });
+					position: "top-left",
+					theme: "gray",
+					rounded: true,
+					shadows: true,
+					autoContentHeight: true,
+					size: "large",
+					orientation: "vertical",
+					responsive: true,
+					responsiveDelay: 0,
+					defaultTab: "tab1",
+					style: "underlined",
+					animation: {
+									easing: "easeInOutExpo",
+									duration: 500,
+									effects: "fade"
+								}
+		});
 		
 		/*if ($('.custom-tabs').length > 0) {
 			var cntTabs = 0;
