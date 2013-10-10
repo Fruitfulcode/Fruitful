@@ -165,3 +165,11 @@ and (max-device-width : 1024px) {
 	.form-admin-fruitful .header, .form-admin-fruitful .footer, .form-admin-fruitful .content {width:100%; }
 	.box-image .img-container.custom-slide {max-height: 220px;}
 }
+
+.ui-dialog-titlebar {
+	max-width:370px;
+}
+
+.ui-dialog-buttonpane {
+	max-width: 382px;
+}	

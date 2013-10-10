@@ -2,6 +2,7 @@
 Theme Name: Fruitful
 Theme URI: http://themes.fruitfulcode.com/fruitful
 Author: fruifrulcode
+Version: 1.0.1
 Author URI: http://fruitfulcode.com
 Description: Fruitful - clean and simple designed wordpress theme with powerful custom theme options panel. Use it to modify styles to your needs. Easy replace logo, backgound image, menu, slider, fonts, social icons, footer, add custom css and much more.
 License URI: http://www.gnu.org/licenses/gpl-2.0.htmlTags: white, orange, theme-options, fixed-width, custom-header, custom-background, custom-menu, custom-colors, custom-background, translation-ready, featured-images, full-width-template,  one-column, right-sidebar, responsive, editor-style
@@ -814,6 +815,24 @@ img[class*="wp-image-"] {
 	height:auto;
 }
 
+.entry-thumbnail {
+	display: block;
+    float: left;
+    max-width: 100%;
+	height:auto;
+}
+
+.entry-thumbnail .wp-post-image {
+    height: auto;
+    width: 100%;
+}
+
+.format-audio .wp-audio-shortcode {
+    height: 30px !important;
+    margin: 20px 0;
+    max-width: 450px !important;
+}
+
 .site-header img,
 .entry-content img,
 img.size-full {    
@@ -831,8 +850,7 @@ img.size-full {
 
 .wp-caption {    
 	border-bottom: 1px solid #CCCCCC;   
-	float: left;  
-	margin: 0 0 20px;  
+	margin-bottom: 20px;
 	max-width: 100%;
 }
 
@@ -919,7 +937,9 @@ embed,iframe,object {
 }
   
 #page .container header hgroup {    
-	float:left
+	float:left;
+	max-width: 30%;
+	width:100%;
 }
 
 #page .container .content p {    
@@ -1087,11 +1107,20 @@ header.post-header,
 	color:#ff5d2a;
 }
 
+.site-description {
+	float:left;
+	display:block;
+	word-wrap: break-word;
+	text-decoration:none;
+}
+
+
 header.post-header .post-title {    
 	font-size:20px; 
 	float:left;   
 	width:100%;  
 	margin:14px 0;
+	word-wrap: break-word;
 }
 
 header.post-header .post-title a {    
@@ -1120,7 +1149,7 @@ header.post-header .post-title a:hover,
 	width:98%;
 }
 
-#page .container #secondary .widget h1.widget-title {    
+#page .container #secondary .widget h3.widget-title {    
 	color:#45494c;    
 	font-size:16px;   
 	border-bottom:2px solid #f15a23;   

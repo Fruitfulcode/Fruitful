@@ -181,29 +181,26 @@ add_action( 'widgets_init', 'fruitful_widgets_init' );
 	$theme_options = ret_options("fruitful_theme_options");
 		
 		wp_enqueue_script('migrate',			get_template_directory_uri() . '/js/jquery-migrate-1.2.1.min.js', array( 'jquery' ), '20130930', false );
-	if ($theme_options['select_slider'] == "1") {
-		wp_enqueue_style( 'flex-slider', 			get_template_directory_uri() . '/js/flex_slider/slider.css');
-		wp_enqueue_script('flex-fitvid-j',			get_template_directory_uri() . '/js/flex_slider/jquery.flexslider-min.js', array( 'jquery' ), '20130930', false );
-		wp_enqueue_script('flex-froogaloop-j',		get_template_directory_uri() . '/js/flex_slider/froogaloop.js', 	array( 'jquery' ), '20130930', false );
-		wp_enqueue_script('flex-easing-j', 			get_template_directory_uri() . '/js/flex_slider/jquery.easing.js', 	array( 'jquery' ), '20130930', false );
-		wp_enqueue_script('flex-fitvid-j',			get_template_directory_uri() . '/js/flex_slider/jquery.fitvid.js', 	array( 'jquery' ), '20130930', false);
-		wp_enqueue_script('flex-mousewheel-j',		get_template_directory_uri() . '/js/flex_slider/jquery.mousewheel.js', array( 'jquery' ), '20130930', false );
-		wp_enqueue_script('flex-modernizr-j',		get_template_directory_uri() . '/js/flex_slider/modernizr.js', array( 'jquery' ), '20130930', false );
-	/*
-		wp_enqueue_script('flex-shCore-j',			get_template_directory_uri() . '/js/slider/shCore.js', array( 'jquery' ), '20130930', false );
-	*/
-	
-	} else if ($theme_options['select_slider'] == "2") {
-	
-		wp_enqueue_style( 'nivo-bar-skin', 		get_template_directory_uri() . '/js/nivo_slider/skins/bar/bar.css');
-		wp_enqueue_style( 'nivo-dark-skin', 	get_template_directory_uri() . '/js/nivo_slider/skins/dark/dark.css');
-		wp_enqueue_style( 'nivo-default-skin', 	get_template_directory_uri() . '/js/nivo_slider/skins/default/default.css');
-		wp_enqueue_style( 'nivo-light-skin', 	get_template_directory_uri() . '/js/nivo_slider/skins/light/light.css');
-		wp_enqueue_style( 'nivo-style', 		get_template_directory_uri() . '/js/nivo_slider/nivo-slider.css');
+	if (isset($theme_options['select_slider'])){
+		if ($theme_options['select_slider'] == "1") {
+			wp_enqueue_style( 'flex-slider', 			get_template_directory_uri() . '/js/flex_slider/slider.css');
+			wp_enqueue_script('flex-fitvid-j',			get_template_directory_uri() . '/js/flex_slider/jquery.flexslider-min.js', array( 'jquery' ), '20130930', false );
+			wp_enqueue_script('flex-froogaloop-j',		get_template_directory_uri() . '/js/flex_slider/froogaloop.js', 	array( 'jquery' ), '20130930', false );
+			wp_enqueue_script('flex-easing-j', 			get_template_directory_uri() . '/js/flex_slider/jquery.easing.js', 	array( 'jquery' ), '20130930', false );
+			wp_enqueue_script('flex-fitvid-j',			get_template_directory_uri() . '/js/flex_slider/jquery.fitvid.js', 	array( 'jquery' ), '20130930', false);
+			wp_enqueue_script('flex-mousewheel-j',		get_template_directory_uri() . '/js/flex_slider/jquery.mousewheel.js', array( 'jquery' ), '20130930', false );
+			wp_enqueue_script('flex-modernizr-j',		get_template_directory_uri() . '/js/flex_slider/modernizr.js', array( 'jquery' ), '20130930', false );
+		} else if ($theme_options['select_slider'] == "2") {
+			wp_enqueue_style( 'nivo-bar-skin', 		get_template_directory_uri() . '/js/nivo_slider/skins/bar/bar.css');
+			wp_enqueue_style( 'nivo-dark-skin', 	get_template_directory_uri() . '/js/nivo_slider/skins/dark/dark.css');
+			wp_enqueue_style( 'nivo-default-skin', 	get_template_directory_uri() . '/js/nivo_slider/skins/default/default.css');
+			wp_enqueue_style( 'nivo-light-skin', 	get_template_directory_uri() . '/js/nivo_slider/skins/light/light.css');
+			wp_enqueue_style( 'nivo-style', 		get_template_directory_uri() . '/js/nivo_slider/nivo-slider.css');
 		
-		wp_enqueue_script('nivo-slider',		get_template_directory_uri() . '/js/nivo_slider/jquery.nivo.slider.pack.js', array( 'jquery' ), '20130930', false );
+			wp_enqueue_script('nivo-slider',		get_template_directory_uri() . '/js/nivo_slider/jquery.nivo.slider.pack.js', array( 'jquery' ), '20130930', false );
 	
-	}
+		}
+	}	
 	
 	
 	/*add fancybox*/
@@ -224,8 +221,13 @@ add_action( 'widgets_init', 'fruitful_widgets_init' );
 	
 	wp_enqueue_script('init',				get_template_directory_uri() . '/js/init.js', array( 'jquery' ), '20130930', false );
 	
+	$is_fixed_header = false;
+	if (isset($theme_options['is_fixed_header'])) {
+		$is_fixed_header = true;
+	}
+	
 	wp_localize_script( 'init', 'ThGlobal', 	array( 'ajaxurl' 			=> admin_url( 'admin-ajax.php' ), 
-													   'is_fixed_header' 	=> $theme_options['is_fixed_header'] ) );  
+													   'is_fixed_header' 	=> $is_fixed_header ) );  
 	
   //wp_enqueue_script('small-menu', get_template_directory_uri() . '/js/small-menu.js', array( 'jquery' ), '20130930', false );
 	wp_enqueue_script('small-menu-select', get_template_directory_uri() . '/js/small-menu-select.js', array( 'jquery' ), '20130930', false );
@@ -239,6 +241,12 @@ add_action( 'widgets_init', 'fruitful_widgets_init' );
 }
 add_action( 'wp_enqueue_scripts', 'fruitful_scripts' );
 
+function fruitful_get_link_url() {
+	$content = get_the_content();
+	$has_url = get_url_in_content( $content );
+
+	return ( $has_url ) ? $has_url : apply_filters( 'the_permalink', get_permalink() );
+}
 
 /*Slider*/
 
@@ -347,14 +355,16 @@ function get_logo () {
 	/*Full Backend Options*/
 	//$logo_w  		= $theme_options['logo_w'];
 	//$logo_h  		= $theme_options['logo_h'];
+	$description = $name = '';
 	
 	$description  	= get_bloginfo('description');
+	$name  = get_bloginfo('name');
 	
 	if ($url_logo != "") {
 		$url_logo = wp_get_attachment_image_src($url_logo, 'full');
 		return  '<a href="' . home_url( '/' ) . '" title="' . $description .'" rel="home"><img class="logo" src="'. $url_logo[0]  .'" alt="' . $description . '"/></a>';
 	} else {
-		return  '<a href="' . home_url( '/' ) . '" title="' . $description .'" rel="home"><img class="logo" src="'. get_template_directory_uri()  . '/images/default_logo.png'  .'" alt="' . $description . '"/></a>';
+		return  '<a class="logo-description" href="' . home_url( '/' ) . '" title="' . $description .'" rel="home"><h1 class="site-title">'. $name .'</h1><h2 class="site-description">'. $description .'</h2></a>';
 	}	
 }
 
@@ -371,12 +381,11 @@ function get_favicon () {
 	
 	if ($url_favicon != "") {
 		wp_get_attachment_image_src($theme_options['fav_icon'], 'full');
-		
 		$out_fav_html .=  '<link rel="icon" type="image/png"  href="'. get_thumb_img ($url_favicon[0], 16, 16) .'">';	
 		$out_fav_html .=  '<link rel="apple-touch-icon-precomposed" sizes="16x16" href="'. get_thumb_img ($url_favicon[0], 16, 16) .'">';	
 	} else {
-		$out_fav_html .= '<link rel="icon" type="image/png"  href="'. get_template_directory_uri()  . '/images/default_favicon.png'.'">';	
-		$out_fav_html .= '<link rel="apple-touch-icon-precomposed" sizes="16x16" href="'. get_template_directory_uri()  . '/images/default_favicon.png'.'">';	
+		//$out_fav_html .= '<link rel="icon" type="image/png"  href="'. get_template_directory_uri()  . '/images/default_favicon.png'.'">';	
+		//$out_fav_html .= '<link rel="apple-touch-icon-precomposed" sizes="16x16" href="'. get_template_directory_uri()  . '/images/default_favicon.png'.'">';	
 	}	
 	return $out_fav_html;
 }
@@ -444,7 +453,9 @@ function get_all_style () {
 /*Get footer text*/
 function get_footer_text () {
 	$theme_options  = ret_options("fruitful_theme_options"); 
-	return stripslashes($theme_options['footer_text']);
+	if (isset($theme_options['footer_text'])) {
+		return stripslashes($theme_options['footer_text']);
+	}	
 }
 
 /*Get footer social icons*/
@@ -561,7 +572,7 @@ function state_page_comment () {
 
 function get_responsive_style () {
 	$theme_options  = ret_options("fruitful_theme_options"); 
-	if ($theme_options['responsive'] == 'on') {
+	if (isset($theme_options['responsive'])) {
 		return '<link rel="stylesheet" type="text/css" media="all" href="'. get_bloginfo( 'stylesheet_url' ) .'" />';
 	} else {
 		return '<link rel="stylesheet" type="text/css" media="all" href="'. get_template_directory_uri()  .'/fixed-style.css" />';
@@ -653,6 +664,7 @@ function get_gallery($atts)  {
 	$gallery_data 	= get_post_meta($id, 'fruitful-gallery', 'true' );
 	if($gallery_data && count($gallery_data['attachment_ids'])) {
 				$j = 0;
+				$gallery_items = '';
 				foreach($gallery_data['attachment_ids'] as $attachment_id) {
 					
 					$image_attributes 	= wp_get_attachment_image_src($attachment_id, 'full');

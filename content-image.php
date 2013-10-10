@@ -18,15 +18,20 @@
 	</div>
 	
 	<div class="post-content">	
-	
 		<header class="post-header">
-			<h1 class="post-title"><?php the_title(); ?></h1>
+			<?php if ( is_single() ) : ?>
+				<h1 class="post-title"><?php the_title(); ?></h1>
+			<?php else : ?>
+				<h1 class="post-title">
+					<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
+				</h1>
+			<?php endif; // is_single() ?>		
 		</header><!-- .entry-header -->
 
 
 	<div class="entry-content">
-		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentythirteen' ) ); ?>
-		<?php wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentythirteen' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>
+		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'fruitful' ) ); ?>
+		<?php wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'fruitful' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-meta">
@@ -34,7 +39,7 @@
 
 		<?php if ( comments_open() && ! is_single() ) : ?>
 		<span class="comments-link">
-			<?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a comment', 'twentythirteen' ) . '</span>', __( 'One comment so far', 'twentythirteen' ), __( 'View all % comments', 'twentythirteen' ) ); ?>
+			<?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a comment', 'fruitful' ) . '</span>', __( 'One comment so far', 'fruitful' ), __( 'View all % comments', 'fruitful' ) ); ?>
 		</span><!-- .comments-link -->
 		<?php endif; // comments_open() ?>
 

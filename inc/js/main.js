@@ -198,10 +198,10 @@
 	});				
 	
 	jQuery('input[name="reset"]').live("click", function(){		
-		jQuery( "#dialog:ui-dialog" ).dialog( "destroy" );				
-		jQuery( "#dialog-confirm" ).dialog({ 			
-			width:   364,			
-			resizable: false,			
+		jQuery( "#dialog:ui-dialog").dialog( "destroy" );				
+		jQuery( "#dialog-confirm").dialog({ 			
+			width:   400,			
+			resizable: true,			
 			modal: true,			
 			position: "center",			
 			buttons: {				

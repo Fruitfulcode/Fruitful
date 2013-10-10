@@ -250,6 +250,7 @@ function add_admin_style() {
 	wp_enqueue_style('colorpicker-style',	get_template_directory_uri() . '/inc/js/colorpicker/colorpicker.css');
 	wp_enqueue_style('ch-style',			get_template_directory_uri() . '/inc/js/ch/ch.css');
 	wp_enqueue_style('sl-style',			get_template_directory_uri() . '/inc/js/sl/jquery.formstyler.css');
+	wp_enqueue_style('dialog', 				'http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css');
 }
 
 function add_jquery_script() {
@@ -265,6 +266,7 @@ function add_jquery_script() {
 	wp_enqueue_script('color-picker',		get_template_directory_uri() . "/inc/js/colorpicker/colorpicker.js", array('jquery'));
 	wp_enqueue_script('chJq',				get_template_directory_uri() . "/inc/js/ch/ch.js", array('jquery'));
 	wp_enqueue_script('slJq',				get_template_directory_uri() . "/inc/js/sl/jquery.formstyler.min.js", array('jquery'));
+	wp_enqueue_script('dialog', 			'http://code.jquery.com/ui/1.10.3/jquery-ui.js',  array('jquery'));
 	wp_enqueue_script('uploads_',			get_template_directory_uri() . "/inc/js/uploads_.js", array('jquery'));
 	wp_enqueue_script('admin-jQuery-fruit',	get_template_directory_uri() . "/inc/js/main.js", array('jquery'));
 }
@@ -429,8 +431,8 @@ return array(
 				
 				/*End Sliders*/
 				
-				/*footer*/
-				'footer_text'		=> stripslashes('Fruitful theme powered by Wordpress'),
+				/*footer*/			 
+				'footer_text'		=> stripslashes('Copyright &copy; '. date('Y') .' <a href="http://themes.fruitfulcode.com/fruitful/">Fruitful</a> theme by <a href="http://fruitfulcode.com">fruitfulcode</a> Powered by: Wordpress'),
 				'tracking_code'		=> '',
 				
 				/*socials*/

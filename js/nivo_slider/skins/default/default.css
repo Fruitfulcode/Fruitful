@@ -11,10 +11,7 @@ Supports Thumbs: true
 .theme-default .nivoSlider {
 	position:relative;
 	background:#fff url(loading.gif) no-repeat 50% 50%;
-    margin-bottom:10px;
-    -webkit-box-shadow: 0px 1px 5px 0px #4a4a4a;
-    -moz-box-shadow: 0px 1px 5px 0px #4a4a4a;
-    box-shadow: 0px 1px 5px 0px #4a4a4a;
+    margin-bottom:10px; 
 }
 .theme-default .nivoSlider img {
 	position:absolute;
@@ -29,7 +26,7 @@ Supports Thumbs: true
 
 .theme-default .nivo-controlNav {
 	text-align: center;
-	padding: 20px 0;
+	padding: 10px 0 20px 0;
 }
 .theme-default .nivo-controlNav a {
 	display:inline-block;

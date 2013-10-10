@@ -18,14 +18,19 @@
 	</div>
 	
 	<div class="post-content">	
-	
 		<header class="post-header">
-			<h1 class="post-title"><?php the_title(); ?></h1>
+			<?php if ( is_single() ) : ?>
+				<h1 class="post-title"><?php the_title(); ?></h1>
+			<?php else : ?>
+				<h1 class="post-title">
+					<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
+				</h1>
+			<?php endif; // is_single() ?>		
 		</header><!-- .entry-header -->
 
 		<div class="entry-content">
-			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentythirteen' ) ); ?>
-			<?php wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentythirteen' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>
+			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'fruitful' ) ); ?>
+			<?php wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'fruitful' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>
 		</div><!-- .entry-content -->
 
 		<footer class="entry-meta">
@@ -37,7 +42,7 @@
 
 			<?php else : ?>
 				<?php fruitful_entry_date(); ?>
-				<?php edit_post_link( __( 'Edit', 'twentythirteen' ), '<span class="edit-link">', '</span>' ); ?>
+				<?php edit_post_link( __( 'Edit', 'fruitful' ), '<span class="edit-link">', '</span>' ); ?>
 			<?php endif; // is_single() ?>
 	</div>	
 	</footer><!-- .entry-meta -->

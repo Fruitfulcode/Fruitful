@@ -29,15 +29,15 @@
 		</header><!-- .entry-header -->
 	
 	
-		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentythirteen' ) ); ?>
+		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'fruitful' ) ); ?>
 	
 		<footer class="entry-meta">
 			<?php if ( comments_open() && ! is_single() ) : ?>
 				<span class="comments-link">
-					<?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a comment', 'twentythirteen' ) . '</span>', __( 'One comment so far', 'twentythirteen' ), __( 'View all % comments', 'twentythirteen' ) ); ?>
+					<?php comments_popup_link( '<span class="leave-reply">' . __( 'Leave a comment', 'fruitful' ) . '</span>', __( 'One comment so far', 'fruitful' ), __( 'View all % comments', 'fruitful' ) ); ?>
 				</span><!-- .comments-link -->
 			<?php endif; // comments_open() ?>
-			<?php edit_post_link( __( 'Edit', 'twentythirteen' ), '<span class="edit-link">', '</span>' ); ?>
+			<?php edit_post_link( __( 'Edit', 'fruitful' ), '<span class="edit-link">', '</span>' ); ?>
 		</footer><!-- .entry-meta -->
 	</div>
 </article><!-- #post -->

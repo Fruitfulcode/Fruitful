@@ -15,10 +15,9 @@
 		<span class="month_post"><?php print $month_abr; ?></span>
 	</div>
 	<div class="post-content">	
-	
-	<header class="post-header">
-		<h1 class="post-title"><?php the_title(); ?></h1>
-	</header><!-- .entry-header -->
+		<header class="post-header">
+			<h1 class="post-title"><?php the_title(); ?></h1>
+		</header><!-- .entry-header -->
 
 	<div class="entry-content">
 		<?php the_content(); ?>

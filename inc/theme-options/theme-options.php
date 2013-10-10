@@ -527,11 +527,7 @@ function fruitful_theme_options_render_page() {
 
 add_action('wp_ajax_fruitful_reset_btn', 'fruitful_reset_action');
 function fruitful_reset_action() {
-	$upload_dir = wp_upload_dir(); 
-	$dir = $upload_dir['basedir'] . "/fruitfulimg"; 
 	delete_option('fruitful_theme_options', '');
-	
-	remove_dir ($dir);
 	die();
 }
 
