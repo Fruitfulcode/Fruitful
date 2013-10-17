@@ -894,8 +894,10 @@ embed,iframe,object {
     float:left;
     width:100%;
 }
-#page .container .btm_header, #page .container .entry-header {
-    border-bottom:1px solid #d6d6d6}
+#page .container .btm_header, #page .container .entry-header, 
+#page .container .archive-header {
+    border-bottom:1px solid #d6d6d6
+}
 #page .container header hgroup {
     float:left;
 	max-width: 30%;
@@ -926,7 +928,8 @@ embed,iframe,object {
     float:left;
     margin:30px 0 0 0;
 }
-#page .container header.entry-header h1.entry-title {
+#page .container header.entry-header h1.entry-title, 
+#page .container header.archive-header h1.archive-title {
     font-size:20px;
     padding:0 0 20px 0}
 #page .container .content .info_box_area .info_box .infobox_title {

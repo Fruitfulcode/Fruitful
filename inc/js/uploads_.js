@@ -5,7 +5,6 @@ function uploads_multimedia_init (title, btnName, editing, multiple) {
 			file_frame.open();
 			return;
 		}
-		
 		file_frame = wp.media.editor.send.attachment  = wp.media({
 			 title: title,
 		     button: {
@@ -20,8 +19,8 @@ function uploads_multimedia_init (title, btnName, editing, multiple) {
 jQuery(document).ready(function() {
    jQuery('.upload_btn').live('click', function( event ) {
 			event.preventDefault();
-			var vLinkElem = jQuery(this);
-			var customData = vLinkElem.data('imagetype');
+			var vLinkElem   = jQuery(this);
+			var customData  = vLinkElem.data('imagetype');
 			var customClass = '';
 			
 			var file_frame = uploads_multimedia_init('Upload Image', 'Select Image', true, false);

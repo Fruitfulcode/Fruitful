@@ -978,7 +978,8 @@ embed,iframe,object {
 	margin:30px 0 0 0;
 }
 
-#page .container header.entry-header h1.entry-title {   
+#page .container header.entry-header h1.entry-title, 
+#page .container header.archive-header h1.archive-title {   
 	font-size:20px;    
 	padding:0 0 20px 0;
 }
