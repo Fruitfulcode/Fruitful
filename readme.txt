@@ -78,6 +78,11 @@ We are open for users translations, translation can be included in new theme ver
     Changelog
 -------------------------------------------------------
 
+= 1.0.2 = (24.10.2013)
+* add author template
+* Css fixes
+* General bug fix
+
 = 1.0.1 = (07.10.2013)
 * Replaced default logo with sitename and description
 * Excerpt --more-- fixed
