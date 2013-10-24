@@ -127,7 +127,7 @@ function fruitful_get_theme_options() {
 	$saved = (array) get_option( 'fruitful_theme_options' );
 	$defaults = get_default_array();
 	$defaults = apply_filters( 'fruitful_default_theme_options', $defaults );
-	$options = wp_parse_args( $saved, $defaults );
+	$options  = wp_parse_args( $saved, $defaults );
 	$options = array_intersect_key( $options, $defaults );
 	return $options;
 }
