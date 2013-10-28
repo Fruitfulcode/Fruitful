@@ -75,8 +75,36 @@ The themes is ready for translation and already translated in Russian.
 We are open for users translations, translation can be included in new theme versions.
 
 -------------------------------------------------------
+    Credits
+-------------------------------------------------------
+
+Jquery scripts
+
+* Nivo slider http://dev7studios.com/plugins/nivo-slider/
+* Flex slider http://www.woothemes.com/flexslider/
+* Fancybox http://fancybox.net/
+* Jquery easing http://gsgd.co.uk/sandbox/jquery/easing/
+
+Icons
+http://thenounproject.com/
+
+-------------------------------------------------------
     Changelog
 -------------------------------------------------------
+
+= 1.0.3 = (28.10.13)
+* Modified document <title> output, use wp_title filter.
+* wp_head replaced
+* Google analytics removed from theme options
+* Fix unescaped home_url() calls 
+* Comments appear for post by default
+* Gallery post type removed
+* Correct author-bio.php, tag.php and taxonomy-post_format.php
+* Back to top button, now inside footer
+* Responsive by default in theme options
+* Css fixes
+* Copyright changes.
+
 
 = 1.0.2 = (24.10.2013)
 * add author template
