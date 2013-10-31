@@ -8,7 +8,6 @@
  */
 
  get_header(); ?>
-				  
 		<?php if (get_option('page_on_front') != 0) { 
 					echo '<div class="content">';
 						while ( have_posts() ) : the_post(); 
@@ -16,16 +15,9 @@
 						endwhile; // end of the loop. 
 					echo '</div>';
 			  } else {	
-					echo '<header class="entry-header">';
-						echo '<h1 class="entry-title">';
-							wp_title();
-						echo '</h1>';
-					echo '</header><!-- .entry-header -->';
-		
 					echo '<div class="eleven columns alpha">';
 						echo '<div id="primary" class="content-area">';
 							echo '<div id="content" class="site-content" role="main">';
-				
 					if ( have_posts() ) : 
 						fruitful_content_nav( 'nav-above' ); 
 						/* Start the Loop */ 
