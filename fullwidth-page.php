@@ -19,10 +19,7 @@ get_header(); ?>
 				<div id="content" class="site-content" role="main">
 				<?php while ( have_posts() ) : the_post(); ?>
 						<?php get_template_part( 'content', 'page' ); ?>
-						<?php 	if (state_page_comment()) {
-										comments_template( '', true );
-									}
-									?>
+						<?php if (fruitful_state_page_comment()) { comments_template( '', true ); } ?>
 					<?php endwhile; // end of the loop. ?>
 				</div><!-- #content .site-content -->
 			</div><!-- #primary .content-area -->

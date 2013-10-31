@@ -48,8 +48,6 @@ require get_template_directory() . '/inc/func/fruitful-function.php';
  * Custom Theme Options
  */
 require get_template_directory() . '/inc/theme-options/theme-options.php';
-require get_template_directory() . '/inc/gallery/gallery-init.php';
-	
 
 function fruitful_fonts_url() {
 	$fonts_url = '';
@@ -136,6 +134,21 @@ function fruitful_setup() {
 endif; // fruitful_setup
 add_action( 'after_setup_theme', 'fruitful_setup' );
 
+
+function fruitful_wp_title( $title, $sep ) {
+	global $paged, $page;
+	if ( is_feed() ) return $title;
+
+	$title .= get_bloginfo( 'name' );
+	$site_description = get_bloginfo( 'description', 'display' );
+	if ( $site_description && ( is_home() || is_front_page() ) )
+ 		 $title = "$title $sep $site_description";
+	if ( $paged >= 2 || $page >= 2 )
+		$title = "$title $sep " . sprintf( __( 'Page %s', 'fruitful' ), max( $paged, $page ) );
+	return $title;
+}
+add_filter( 'wp_title', 'fruitful_wp_title', 10, 2 );
+
 /**
  * Register widgetized area and update sidebar with default widgets
  *
@@ -178,9 +191,9 @@ add_action( 'widgets_init', 'fruitful_widgets_init' );
  * Enqueue scripts and styles
  */
  function fruitful_scripts() {
-	$theme_options = ret_options("fruitful_theme_options");
-		
-		wp_enqueue_script('migrate',			get_template_directory_uri() . '/js/jquery-migrate-1.2.1.min.js', array( 'jquery' ), '20130930', false );
+	$theme_options = fruitful_ret_options("fruitful_theme_options");
+	wp_enqueue_script('migrate',			get_template_directory_uri() . '/js/jquery-migrate-1.2.1.min.js', array( 'jquery' ), '20130930', false );
+	
 	if (isset($theme_options['select_slider'])){
 		if ($theme_options['select_slider'] == "1") {
 			wp_enqueue_style( 'flex-slider', 			get_template_directory_uri() . '/js/flex_slider/slider.css');
@@ -250,9 +263,9 @@ function fruitful_get_link_url() {
 
 /*Slider*/
 
-function get_slider_options_flex() {
+function fruitful_get_slider_options_flex() {
 	$out = "";
-	$theme_options = ret_options("fruitful_theme_options");
+	$theme_options = fruitful_ret_options("fruitful_theme_options");
 	
 	$out .= '$(".flexslider").flexslider({' . "\n";
 	$out .= 'animation: "'			. $theme_options['s_animation']			.'",' . "\n";
@@ -273,9 +286,9 @@ function get_slider_options_flex() {
 }	  
 
 
-function get_slider_options_nivo() {
+function fruitful_get_slider_options_nivo() {
 	$out = "";
-	$theme_options = ret_options("fruitful_theme_options");
+	$theme_options = fruitful_ret_options("fruitful_theme_options");
 	
 	$out .= '$(".nivoSlider").nivoSlider({' . "\n";
 	$out .= 'effect: "'				. $theme_options['nv_animation']		. '",' . "\n";
@@ -303,7 +316,7 @@ function fruitful_get_slider($atts) {
 	$slider_ = "";
 	extract(shortcode_atts(array( 'id' => 'slider_0'), $atts));
 
-	$theme_options   = ret_options("fruitful_theme_options");
+	$theme_options   = fruitful_ret_options("fruitful_theme_options");
 	/*Full Backend Options*/
 	//$w_slider	=  $theme_options['s_width'];
 	//$h_slider =  $theme_options['s_height']; 
@@ -344,8 +357,8 @@ function fruitful_get_slider($atts) {
 add_shortcode('slider', 'fruitful_get_slider');
 
 /*Get logo img*/
-function get_logo () {
-	$theme_options  = ret_options("fruitful_theme_options");
+function fruitful_get_logo () {
+	$theme_options  = fruitful_ret_options("fruitful_theme_options");
 	if (isset($theme_options['logo_img'])) {
 		$url_logo 	= $theme_options['logo_img'];
 	} else {
@@ -362,17 +375,17 @@ function get_logo () {
 	
 	if ($url_logo != "") {
 		$url_logo = wp_get_attachment_image_src($url_logo, 'full');
-		return  '<a href="' . home_url( '/' ) . '" title="' . $description .'" rel="home"><img class="logo" src="'. $url_logo[0]  .'" alt="' . $description . '"/></a>';
+		echo  '<a href="' . home_url() . '" title="' . $description .'" rel="home"><img class="logo" src="'. $url_logo[0]  .'" alt="' . $description . '"/></a>';
 	} else {
-		return  '<a class="logo-description" href="' . home_url( '/' ) . '" title="' . $description .'" rel="home"><h1 class="site-title">'. $name .'</h1><h2 class="site-description">'. $description .'</h2></a>';
+		echo  '<a class="logo-description" href="' . home_url() . '" title="' . $description .'" rel="home"><h1 class="site-title">'. $name .'</h1><h2 class="site-description">'. $description .'</h2></a>';
 	}	
 }
 
 
 /*Get Favicon*/
-function get_favicon () {
+function fruitful_get_favicon () {
 	$out_fav_html = '';
-	$theme_options  = ret_options("fruitful_theme_options");
+	$theme_options  = fruitful_ret_options("fruitful_theme_options");
 	if (isset($theme_options['fav_icon'])) {
 		$url_favicon	= $theme_options['fav_icon'];
 	} else {
@@ -381,20 +394,20 @@ function get_favicon () {
 	
 	if ($url_favicon != "") {
 		wp_get_attachment_image_src($theme_options['fav_icon'], 'full');
-		$out_fav_html .=  '<link rel="icon" type="image/png"  href="'. get_thumb_img ($url_favicon[0], 16, 16) .'">';	
-		$out_fav_html .=  '<link rel="apple-touch-icon-precomposed" sizes="16x16" href="'. get_thumb_img ($url_favicon[0], 16, 16) .'">';	
+		$out_fav_html .=  '<link rel="icon" type="image/png"  href="'. $url_favicon[0] .'">';	
+		$out_fav_html .=  '<link rel="apple-touch-icon-precomposed" sizes="16x16" href="'. $url_favicon[0] .'">';	
 	} else {
 		//$out_fav_html .= '<link rel="icon" type="image/png"  href="'. get_template_directory_uri()  . '/images/default_favicon.png'.'">';	
 		//$out_fav_html .= '<link rel="apple-touch-icon-precomposed" sizes="16x16" href="'. get_template_directory_uri()  . '/images/default_favicon.png'.'">';	
 	}	
-	return $out_fav_html;
+	echo $out_fav_html;
 }
 
 
 /*Get all styles*/
-function get_all_style () {
+function fruitful_get_all_style () {
 	$out = $back_sytle = '';
-	$theme_options  = ret_options("fruitful_theme_options"); 
+	$theme_options  = fruitful_ret_options("fruitful_theme_options"); 
 	
 	if (isset($theme_options['styletheme'])) {
 
@@ -447,21 +460,21 @@ function get_all_style () {
 	
 		$out .= '});' . "\n";
 		}
-	return $out;
+	echo $out;
 }
 
 /*Get footer text*/
-function get_footer_text () {
-	$theme_options  = ret_options("fruitful_theme_options"); 
+function fruitful_get_footer_text () {
+	$theme_options  = fruitful_ret_options("fruitful_theme_options"); 
 	if (isset($theme_options['footer_text'])) {
-		return stripslashes($theme_options['footer_text']);
+		echo stripslashes($theme_options['footer_text']);
 	}	
 }
 
 /*Get footer social icons*/
-function get_footer_socials_icon () {
+function fruitful_get_footer_socials_icon () {
 	$out = '';
-	$theme_options  = ret_options("fruitful_theme_options"); 
+	$theme_options  = fruitful_ret_options("fruitful_theme_options"); 
 	
 	if(!empty($theme_options['facebook_url'])) 		{ $out .= '<a class="facebook" href="'. esc_url($theme_options['facebook_url']) . '" target="_blank"></a>';	}
 	if(!empty($theme_options['twitter_url']))		{ $out .= '<a class="twitter" href="'. esc_url($theme_options['twitter_url']) . '" target="_blank"></a>'; }
@@ -473,13 +486,12 @@ function get_footer_socials_icon () {
 	if(!empty($theme_options['flickr_link'])) 		{ $out .= '<a class="flickr" href="'. esc_url($theme_options['flickr_link']) . '" target="_blank"></a>'; }		
 	if(!empty($theme_options['youtube_url'])) 		{ $out .= '<a class="youtube" href="'. esc_url($theme_options['youtube_url']) . '" target="_blank"></a>'; }		
 	if(!empty($theme_options['rss_link'])) 			{ $out .= '<a class="rss" href="'. esc_url($theme_options['rss_link']) . '" target="_blank"></a>'; }			
-	
-	return $out;
+	echo $out;
 }
 
 
 /*Add description block into content block*/
-function add_description_block ($atts, $content = null) {
+function fruitful_add_description_block ($atts, $content = null) {
 	$out = "";
 	 extract(shortcode_atts(array(
 		  'id'		=> 'description_0',
@@ -500,13 +512,13 @@ function add_description_block ($atts, $content = null) {
 	
     return $out;
 }
-add_shortcode ("description", "add_description_block");
+add_shortcode ("description", "fruitful_add_description_block");
 
-function add_info_box_area ($atts, $content = null) {
+function fruitful_add_info_box_area ($atts, $content = null) {
 	 $out = ""; 
 	 
 	 extract(shortcode_atts(array(
-		  'id'		=> 'info_box_area_0'
+		  'id'	=> 'info_box_area_0'
      ), $atts));
 	 
 	 $out .= '<div class="info_box_area row clearfix" id="'. $id .'">' . "\n";
@@ -515,10 +527,10 @@ function add_info_box_area ($atts, $content = null) {
 	 return $out;
 	 
 }
-add_shortcode('info_box_area', 'add_info_box_area');
+add_shortcode('info_box_area', 'fruitful_add_info_box_area');
 
 /*Add information box into content block*/
-function add_info_box ($atts, $content = null) {
+function fruitful_add_info_box ($atts, $content = null) {
 $out = "";
 	 extract(shortcode_atts(array(
 		  'id'			=> 'info_box_0',
@@ -529,30 +541,19 @@ $out = "";
 		  'style_text'	  	=> 'text-align:center; font-size:13px; ',
 		  'style_title'		=> 'text-align:center; font-size: 20px; text-transform: uppercase; '
      ), $atts));
+	 
 	 $out .= '<div class="one-third column info_box '. $type_column .'" id="' . $id . '">' . "\n";
 		$out .= '<img class="icon" src="'. $icon_url .'" title="' . $title . '" alt="'.$alt.'"/>' . "\n";
 		$out .= '<div class="infobox_title" style="' . $style_title .'">' . $title . '</div>' . "\n";
-		$out .= '<div class="info_box_text" style="'. $style_text .'" >' . $content . '</div>' . "\n";
+		$out .= '<div class="info_box_text" style="' . $style_text .'" >' . $content . '</div>' . "\n";
 	 $out .= '</div>';
 return $out;	 
 } 
-add_shortcode ("info_box", "add_info_box");
-
-/*Tracking Site Activity*/
-function get_tracking_code() {
-	$theme_options  = ret_options("fruitful_theme_options"); 
-	if (isset($theme_options['tracking_code'])) {
-		return $theme_options['tracking_code'];
-	} else {
-		return '';
-	}
-	
-	
-}
+add_shortcode ("info_box", "fruitful_add_info_box");
 
 /*Enable Comment*/
-function state_post_comment () {
-	$theme_options  = ret_options("fruitful_theme_options"); 
+function fruitful_state_post_comment () {
+	$theme_options  = fruitful_ret_options("fruitful_theme_options"); 
 	if (isset($theme_options['postcomment'])) {
 		return ($theme_options['postcomment'] == "on");
 	} else {
@@ -561,8 +562,8 @@ function state_post_comment () {
 	
 }
 
-function state_page_comment () {
-	$theme_options  = ret_options("fruitful_theme_options"); 
+function fruitful_state_page_comment () {
+	$theme_options  = fruitful_ret_options("fruitful_theme_options"); 
 	if (isset($theme_options['pagecomment'])) {
 		return ($theme_options['pagecomment'] == "on");
 	} else {
@@ -570,143 +571,44 @@ function state_page_comment () {
 	}	
 }
 
-function get_responsive_style () {
-	$theme_options  = ret_options("fruitful_theme_options"); 
+function fruitful_get_responsive_style () {
+	$theme_options  = fruitful_ret_options("fruitful_theme_options"); 
 	if (isset($theme_options['responsive'])) {
-		return '<link rel="stylesheet" type="text/css" media="all" href="'. get_bloginfo( 'stylesheet_url' ) .'" />';
+		 wp_enqueue_style('main-style', get_bloginfo( 'stylesheet_url' ) );
 	} else {
-		return '<link rel="stylesheet" type="text/css" media="all" href="'. get_template_directory_uri()  .'/fixed-style.css" />';
+		 wp_enqueue_style('main-style', get_template_directory_uri()  .'/fixed-style.css');
 	}	
 }
+add_action('wp_enqueue_scripts', 'fruitful_get_responsive_style', 20);
 
-function get_sliders() {
-	$theme_options = ret_options("fruitful_theme_options");
+function fruitful_get_sliders() {
+	$theme_options = fruitful_ret_options("fruitful_theme_options");
 	if ($theme_options['select_slider'] == "1") {
-		echo get_slider_options_flex(); 
+		echo fruitful_get_slider_options_flex(); 
 	} else if ($theme_options['select_slider'] == "2") {
-		echo get_slider_options_nivo();
+		echo fruitful_get_slider_options_nivo();
 	}	
 }
 
-function get_gallery($atts)  {
-	
-	$out_glr_txt = "";
-	extract(shortcode_atts(array(
-								 'id' => ''
-								), $atts));
-	
-	$special_grids 		= get_post_meta($id , 'fruitful-special-grids', 	'true' );
-	$animations_type 	= get_post_meta($id , 'fruitful-animations-type', 	'true' );
-	$animations_speed 	= get_post_meta($id , 'fruitful-animations-speed',	'true' );
-	$rotation_corner	= get_post_meta($id , 'fruitful-rotation',		'true' );
-	$padding_images_hor	= get_post_meta($id , 'fruitful-paddings-hor',	'true' );
-	$padding_images_ver	= get_post_meta($id , 'fruitful-paddings-ver',	'true' );
-	$scale				= get_post_meta($id , 'fruitful-glr-scale',		'true' );
-			
-	wp_enqueue_style	('megafolio-css',  	get_template_directory_uri() . '/inc/gallery/js/megafolio/css/settings.css');
-	wp_enqueue_script	('themepunch',  	get_template_directory_uri() . '/inc/gallery/js/megafolio/js/jquery.themepunch.plugins.min.js',  array( 'jquery' ), '20130930', false );
-	wp_enqueue_script	('megafolio',  		get_template_directory_uri() . '/inc/gallery/js/megafolio/js/jquery.themepunch.megafoliopro.js', array( 'jquery' ), '20130930', false );
-	wp_localize_script	('megafolio',  		'fruitful_megafolio_js', array(
-															'id' 	   		   		=> $id,
-															'megaremix' 	   		=> $special_grids,
-															'animations_type'  		=> $animations_type,
-															'animations_speed' 		=> $animations_speed,
-															'rotation_corner'  		=> $rotation_corner,
-															'padding_images_hor' 	=> $padding_images_hor,
-														    'padding_images_ver' 	=> $padding_images_ver,
-															'scale' 			 	=> $scale				
-															
-												));
-												
-	/*Single ex. of Megafolio*/
-	/*wp_enqueue_script('megafolio-init',  	get_template_directory_uri() . '/inc/gallery/js/gallery-activate.js', array( 'jquery' ), '20130930', false );*/
-		
-	$post_glr 	  = get_post($id);		 
-	$content 	  = $post_glr->post_content;
-	$content 	  = apply_filters('the_content', $content);
-	$content 	  = str_replace(']]>', ']]&gt;', $content);
-	
-	$out_glr_txt .= '<div class="glr-container-text">';
-		$out_glr_txt .= '<h1 class="glr-entry-title">';
-			$out_glr_txt .= $post_glr->post_title;
-		$out_glr_txt .= '</h1>';
-	
-		$out_glr_txt   .= $content;
-	$out_glr_txt .= '</div>';
-	
-	
-	$out_glr_txt .= '<div class="clear"></div>';
-	
-	$out_glr_txt .= '<script type="text/javascript">';
-		$out_glr_txt .= 'jQuery(document).ready(function() {';
-		$out_glr_txt .= 'var api_'.$id.'=jQuery("#gallery-'. $id .'").megafoliopro({ ';
-					$out_glr_txt .= 'filterChangeAnimation: "fade", ';
-					$out_glr_txt .= 'filterChangeSpeed:  ' .$animations_speed .', ';					
-					$out_glr_txt .= 'filterChangeRotate: ' .$rotation_corner  .', ';					
-					$out_glr_txt .= 'filterChangeScale:  ' .$scale . ', ';	
-					$out_glr_txt .= 'delay:20, ';
-					$out_glr_txt .= 'defaultWidth:980, ';
-					$out_glr_txt .= 'paddingHorizontal: '.$padding_images_hor .', ';
-					$out_glr_txt .= 'paddingVertical  : '.$padding_images_ver .', ';
-					$out_glr_txt .= 'layoutarray:[0] ';	
-				$out_glr_txt .= '}); ';
-		
-	
-			if ($special_grids != 0) {
-				$out_glr_txt .= 'api_'.$id.'.megaremix(fruitful_megafolio_js.megaremix); ';
-			}
-			$out_glr_txt .= '}); ';
-	$out_glr_txt .= '</script>';
-	
-	$out_glr_txt .= '<div class="glr-container-image">';
-	$out_glr_txt .= '<div id="gallery-'.$id.'" class="megafolio-container light-bg-entries">';
-	
-	$gallery_data 	= get_post_meta($id, 'fruitful-gallery', 'true' );
-	if($gallery_data && count($gallery_data['attachment_ids'])) {
-				$j = 0;
-				$gallery_items = '';
-				foreach($gallery_data['attachment_ids'] as $attachment_id) {
-					
-					$image_attributes 	= wp_get_attachment_image_src($attachment_id, 'full');
-					$image_alt 			= get_post_meta($attachment_id, '_wp_attachment_image_alt', true);
-					$img_post 			= get_post($attachment_id);
-
-					$content_img = $img_post->post_excerpt;
-					$content_img = apply_filters('the_content', $content_img);
-					$content_img = str_replace(']]>', ']]&gt;', $content_img);
-								
-					$gallery_items .= '<div class="mega-entry" data-src="'. $image_attributes[0] .'" data-width="577" data-height="500">';
-						$gallery_items .= '<div class="mega-hover alone">';
-								$gallery_items .= '<a class="fn_box_img" rel="group" href="' .$image_attributes[0] .'"><div class="mega-hoverview"></div></a>';
-						$gallery_items .= '</div>';
-					$gallery_items .= '</div>';
-					
-					$j++;
-				}
-			}
-	$out_glr_txt .= $gallery_items;	
-	$out_glr_txt .= '</div>';
-	$out_glr_txt .= '</div>';
-	wp_reset_postdata();
-	
-	return $out_glr_txt;
-	
-}
-add_shortcode ("grid-gallery", "get_gallery");
-
-
-function get_custom_css() { 
-	$theme_options  = ret_options("fruitful_theme_options"); 
-	
+function fruitful_get_custom_css() { 
+	$theme_options  = fruitful_ret_options("fruitful_theme_options"); 
 	if (isset($theme_options['custom_css'])) {
 		echo '<style type="text/css">';
 			echo $theme_options['custom_css'];
 		echo '</style>';
 	}	
 }
+add_action('wp_head', 'fruitful_get_custom_css', 30);
 
-add_action('wp_head', 'get_custom_css');
-
+function fruitful_custom_css_and_slider_scripts() {
+	echo '<script type="text/javascript">';
+		echo 'jQuery(document).ready(function($) { ';
+				fruitful_get_all_style();	
+				fruitful_get_sliders();
+		echo '});';
+	echo '</script>';
+}
+add_action('wp_head', 'fruitful_custom_css_and_slider_scripts', 25);
 
 function fruitful_entry_meta() { 
 ?>
@@ -771,7 +673,7 @@ add_action( 'customize_preview_init', 'fruitful_customize_preview_js' );
 
 
 
-function tabs_main($atts, $content = null) {
+function fruitful_tabs_main($atts, $content = null) {
 	$output = '';
 	extract(shortcode_atts(array(
 		'tab' => array('')
@@ -805,9 +707,9 @@ function tabs_main($atts, $content = null) {
 	return $output;
 	unset($tab_counter_2);
 }
-add_shortcode('tabs', 'tabs_main');
+add_shortcode('tabs', 'fruitful_tabs_main');
 
-function tab_elements($atts, $content = null) {
+function fruitful_tab_elements($atts, $content = null) {
 	$output = '';
 	extract(shortcode_atts(array(
     ), $atts));
@@ -817,4 +719,19 @@ function tab_elements($atts, $content = null) {
 	$tab_counter_2++;
 	return $output;
 }
-add_shortcode('tab', 'tab_elements');
+add_shortcode('tab', 'fruitful_tab_elements');
+
+
+function fruitful_metadevice() {
+	$browser = '';				
+	$browser_ip	= strpos($_SERVER['HTTP_USER_AGENT'],"iPhone");		
+	$browser_an	= strpos($_SERVER['HTTP_USER_AGENT'],"Android");		
+	$browser_ipad = strpos($_SERVER['HTTP_USER_AGENT'],"iPad");			 
+	if ($browser_ip  	== true) { $browser = 'iphone';  }	 
+	if ($browser_an		== true) { $browser = 'android'; } 	 
+	if ($browser_ipad 	== true) { $browser = 'ipad'; }
+
+	if($browser == 'iphone') 	{	echo '<meta name="viewport" content="width=480">';  } 
+    if($browser == 'android') 	{	echo '<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width" />'; } 
+	if($browser == 'ipad') 		{  	echo '<meta name="viewport" content="width=768px, minimum-scale=1.0, maximum-scale=1.0" />'; } 
+}

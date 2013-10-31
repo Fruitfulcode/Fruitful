@@ -3,8 +3,8 @@ Theme Name: Fruitful
 Theme URI: http://themes.fruitfulcode.com/fruitful
 Author: fruifrulcode
 Author URI: http://fruitfulcode.com
-Description: Fruitful - clean and simple designed WordPress theme with powerful custom theme options panel. Use it to modify styles to your needs. Easy replace logo, backgound image, menu, slider, fonts, social icons, footer, add custom css and much more.
-Version: 1.0.2
+Description: Fruitful - clean and simple designed wordpress theme with powerful custom theme options panel. Use it to modify styles to your needs. Easy replace logo, backgound image, menu, slider, fonts, social icons, footer, add custom css and much more.
+Version: 1.0.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: white, orange, theme-options, fixed-width, custom-header, custom-background, custom-menu, custom-colors, custom-background, translation-ready, featured-images, full-width-template,  one-column, right-sidebar, editor-style
@@ -661,14 +661,12 @@ a:hover,a:focus,a:active {
     background:none;
 }
 .main-navigation ul ul li {
-    /*background:url(images/ulul_li_hr.png) repeat-x 0 top transparent;
-    */
-float:left;
+	float:left;
     width:100%;
-    margin:0 !important}
+    margin:0 !important
+}
 .main-navigation ul li:hover > a {
     background:none repeat scroll 0 0 #E1704B;
-    box-shadow:0 0 2px #000000 inset;
     color:#fff;
     padding:7px 10px;
 	-webkit-transition: all 0.2s ease-in-out; 
@@ -703,7 +701,6 @@ float:left;
 .main-navigation ul li.current_page_parent a,
 .main-navigation ul li.current-menu-ancestor a {
     background:none repeat scroll 0 0 #E1704B;
-    box-shadow:0 0 2px #000000 inset;
     color:#fff;
     padding:7px 10px;
 }
@@ -960,12 +957,17 @@ header.post-header, .blog_post {
     float:left;
     width:100%}
 .blog_post .date_of_post {
-    background:url(images/blog_date.png) no-repeat 0 0 transparent;
-    width:62px;
-    height:62px;
+    width:60px;
+    height:60px;
     color:#fff;
     float:left;
     margin:0 20px 0 0;
+	border:1px solid #8DAF3D;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	background: #F15A23; 
+	background: linear-gradient(to bottom, #FFAF79, #F15A23);
 }
 .blog_post .date_of_post .day_post {
     font-size:20px;
@@ -1106,9 +1108,9 @@ input#s {
 }
 
 #colophon #back-top 	  { 
-	float: right; 
-	position: absolute; 
-	right: -15px; 
+	display: block;
+	float: right;
+	margin: 0 0 0 10px;
 }
 
 #colophon #back-top a  { 

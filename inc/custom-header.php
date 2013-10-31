@@ -170,7 +170,7 @@ function fruitful_admin_header_image() { ?>
 		else
 			$style = ' style="color:#' . get_header_textcolor() . ';"';
 		?>
-		<h1><a id="name"<?php echo $style; ?> onclick="return false;" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
+		<h1><a id="name"<?php echo $style; ?> onclick="return false;" href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
 		<div id="desc"<?php echo $style; ?>><?php bloginfo( 'description' ); ?></div>
 		<?php $header_image = get_header_image();
 		if ( ! empty( $header_image ) ) : ?>

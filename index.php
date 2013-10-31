@@ -15,7 +15,10 @@
 
 get_header(); ?>
 		<header class="entry-header">
-			<h1 class="entry-title"><?php wp_title(''); ?></h1>
+			<h1 class="entry-title">
+			<?php $frontpost_id = get_option('page_for_posts');
+				  echo get_the_title($frontpost_id);?>
+			</h1>
 		</header><!-- .entry-header -->
 		
 		<div class="eleven columns alpha">

@@ -102,7 +102,7 @@ get_header();
 					</footer><!-- .entry-meta -->
 				</article><!-- #post-<?php the_ID(); ?> -->
 
-				<?php 	if (state_page_comment()) { comments_template();  } ?>
+				<?php 	if (fruitful_state_page_comment()) {  comments_template( '', true );  } ?>
 			<?php endwhile; // end of the loop. ?>
 
 			</div><!-- #content .site-content -->

@@ -29,7 +29,7 @@ function fruitful_content_nav( $nav_id ) {
 	<?php if ( is_single() ) : // navigation links for single posts ?>
 
 		<?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'fruitful' ) . '</span> %title' ); ?>
-		<?php next_post_link( '<div class="nav-next">%link</div>', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'fruitful' ) . '</span>' ); ?>
+		<?php next_post_link( 	  '<div class="nav-next">%link</div>', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'fruitful' ) . '</span>' ); ?>
 
 	<?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
 
@@ -156,8 +156,7 @@ function fruitful_categorized_blog() {
  * @since Fruitful theme 1.0
  */
 function fruitful_category_transient_flusher() {
-	// Like, beat it. Dig?
 	delete_transient( 'all_the_cool_cats' );
 }
 add_action( 'edit_category', 'fruitful_category_transient_flusher' );
-add_action( 'save_post', 'fruitful_category_transient_flusher' );
+add_action( 'save_post', 	 'fruitful_category_transient_flusher' );

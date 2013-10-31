@@ -195,7 +195,7 @@ function fruitful_fonts_list() {
 	return apply_filters( 'fruitful_fonts_list', $font_family_options );
 }
 
- function custom_do_settings_sections($page) {
+ function fruitful_custom_do_settings_sections($page) {
     global $wp_settings_sections, $wp_settings_fields;
 	$id_=0;
 	$optins = (array) get_option( 'fruitful_theme_options' );
@@ -214,14 +214,14 @@ function fruitful_fonts_list() {
         	 
 			$name_id = "settings-section-" . $id_;
 			 print '<div id="'. $name_id .'" class="settings-section">';
-					custom_do_settings_fields($page, $section['id']);
+					fruitful_custom_do_settings_fields($page, $section['id']);
 			 print '</div>';
 		$id_++;		 
     }
 }
 
 
-function custom_do_settings_fields($page, $section) {
+function fruitful_custom_do_settings_fields($page, $section) {
     global $wp_settings_fields;
 	$id_=0;
 
@@ -245,7 +245,7 @@ function custom_do_settings_fields($page, $section) {
     }
 }
 
-function add_admin_style() {
+function fruitful_add_admin_style() {
 	wp_enqueue_style('admin-style', 		get_template_directory_uri() . '/inc/css/admin.css');
 	wp_enqueue_style('colorpicker-style',	get_template_directory_uri() . '/inc/js/colorpicker/colorpicker.css');
 	wp_enqueue_style('ch-style',			get_template_directory_uri() . '/inc/js/ch/ch.css');
@@ -253,7 +253,7 @@ function add_admin_style() {
 	wp_enqueue_style('dialog', 				'http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css');
 }
 
-function add_jquery_script() {
+function fruitful_add_jquery_script() {
 	
 	if( function_exists( 'wp_enqueue_media' ) ){
 		wp_enqueue_media();
@@ -271,7 +271,7 @@ function add_jquery_script() {
 	wp_enqueue_script('admin-jQuery-fruit',	get_template_directory_uri() . "/inc/js/main.js", array('jquery'));
 }
 
-function get_box_upload_image($val, $field, $btnclassup = 'upload_btn', $btnclassr = 'reset_btn', $imgcontclass = '') {
+function fruitful_get_box_upload_image($val, $field, $btnclassup = 'upload_btn', $btnclassr = 'reset_btn', $imgcontclass = '') {
 		 $out  = '';
 		
 		 $out .= '<div class="box-image">';
@@ -297,7 +297,7 @@ function get_box_upload_image($val, $field, $btnclassup = 'upload_btn', $btnclas
 }
 
 
-function get_box_upload_slide($attach_id, 
+function fruitful_get_box_upload_slide($attach_id, 
 							  $image_text,	
 							  $ind,
 							  $btnclassup 	= 'upload_btn', 
@@ -329,7 +329,7 @@ function get_box_upload_slide($attach_id,
 }
 
 
-function get_select_fields($field_name, $options, $array_of_values, $class_name = "selected") {
+function fruitful_get_select_fields($field_name, $options, $array_of_values, $class_name = "selected") {
 		$out = '';
 		$out .= '<select class="'. $class_name .'" name="fruitful_theme_options['.$field_name.']" id="options-'.$field_name.'">' . chr(13);
 		$selected = $options[$field_name];
@@ -348,19 +348,19 @@ function get_select_fields($field_name, $options, $array_of_values, $class_name 
 	echo $out;
 }
 	
-function ret_options ($name_options) {
+function fruitful_ret_options ($name_options) {
    return $options = array_filter((array) get_option($name_options));
 }
 
 
-function get_default_array() {
+function fruitful_get_default_array() {
 return array(
 				/*General Settings*/
-				'responsive'		=> 'off',
-				'postcomment'		=> 'off',
+				'responsive'		=> 'on',
+				'postcomment'		=> 'on',
 				'pagecomment'		=> 'off',
-				'is_fixed_header'	=> 'off',
-				'styletheme'		=> 'off',
+				'is_fixed_header'	=> 'on',
+				'styletheme'		=> 'on',
 
 				/*Background Image*/
 				'backgroung_img'    => '',
@@ -424,16 +424,15 @@ return array(
 				'nv_controlNavThumbs' 	=> 'false',
 				'nv_pauseOnHover' 		=> 'true',
 				'nv_manualAdvance' 		=> 'false',
-				'nv_prevText' 		=> 'Prev',
-				'nv_nextText' 		=> 'Next',
-				'nv_randomStart' 	=> 'false',
-				'slides'			=> '',
+				'nv_prevText' 			=> 'Prev',
+				'nv_nextText' 			=> 'Next',
+				'nv_randomStart' 		=> 'false',
+				'slides'				=> '',
 				
 				/*End Sliders*/
 				
 				/*footer*/			 
-				'footer_text'		=> stripslashes('Copyright &copy; '. date('Y') .' <a href="http://themes.fruitfulcode.com/fruitful/">Fruitful</a> theme by <a href="http://fruitfulcode.com">fruitfulcode</a> Powered by: Wordpress'),
-				'tracking_code'		=> '',
+				'footer_text'		=> stripslashes(' Fruitful theme by <a href="http://fruitfulcode.com">fruitfulcode</a> Powered by: <a href="http://wordpress.org">WordPress</a>'),
 				
 				/*socials*/
 				'facebook_url' 		=> '',

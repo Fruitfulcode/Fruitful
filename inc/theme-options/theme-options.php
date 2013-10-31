@@ -38,7 +38,6 @@ function fruitful_theme_options_init() {
 	add_settings_field( 'general_cm',		__( 'Comments', 'fruitful' ), 	'fruitful_get_general_comment',  	'theme_options',  'general', array('info' => __( 'If you want to display comments on your post page or page, select options below.', 'fruitful' )));
 	add_settings_field( 'general_hd',		__( 'Header', 	'fruitful' ), 	'fruitful_get_general_header',  	'theme_options',  'general', array('info' => __( 'Options relating to the website header', 'fruitful' )));
 	add_settings_field( 'general_ds',		__( 'Default css', 'fruitful' ),'fruitful_get_style_theme',  		'theme_options',  'general', array('info' => __( 'Theme has styles by default, if you are using theme as based for development and dont what overwrite default css styles, you can disable our styles. ', 'fruitful' )));
-	add_settings_field( 'general_tc',		__( 'Google Analytics Tracking Code', 'fruitful' ),		'fruitful_get_tracking_code', 'theme_options',  'general', array('info' => __( 'Tracking Code. ', 'fruitful' )));
 	add_settings_field( 'general_rb',		__( 'Reset All options to default state', 'fruitful' ),	'fruitful_reset_btn', 		  'theme_options',  'general', array('info' => __( 'Reset Button. ', 'fruitful' )));
 	
 	
@@ -70,8 +69,8 @@ add_action( 'admin_init', 'fruitful_theme_options_init' );
 add_action( 'admin_enqueue_scripts', 'add_admin_options_and_styles' );
 function add_admin_options_and_styles($hook) {
 	if( 'appearance_page_theme_options' != $hook ) return;
-	add_jquery_script();
-	add_admin_style();
+	fruitful_add_jquery_script();
+	fruitful_add_admin_style();
 } 
 
 /**
@@ -107,8 +106,8 @@ add_action( 'admin_menu', 'fruitful_theme_options_add_page' );
 }
 
 
-add_action( 'admin_bar_menu', 'add_custom_link_options', 1000 );
-function add_custom_link_options() {
+add_action( 'admin_bar_menu', 'fruitful_add_custom_link_options', 1000 );
+function fruitful_add_custom_link_options() {
     global $wp_admin_bar, $wpdb;
 		if ( !is_super_admin() || !is_admin_bar_showing() )
 		return;
@@ -125,7 +124,7 @@ function add_custom_link_options() {
  */
 function fruitful_get_theme_options() {
 	$saved = (array) get_option( 'fruitful_theme_options' );
-	$defaults = get_default_array();
+	$defaults = fruitful_get_default_array();
 	$defaults = apply_filters( 'fruitful_default_theme_options', $defaults );
 	$options  = wp_parse_args( $saved, $defaults );
 	$options = array_intersect_key( $options, $defaults );
@@ -180,15 +179,6 @@ function fruitful_get_style_theme() {
 	<?php	
 }
 
-function fruitful_get_tracking_code() {
-	$options = fruitful_get_theme_options();
-	?>
-	<div class="box-option">
-		<input id="tracking_code" name="fruitful_theme_options[tracking_code]" type="text" value="<?php echo $options['tracking_code']; ?>"/>
-	</div>
-	<?php	
-}
-
 function fruitful_reset_btn() { 
 	?>
 	<div class="box-option">
@@ -234,7 +224,7 @@ function fruitful_get_background_img () {
 	$options = fruitful_get_theme_options();
 	$upload  = $options['backgroung_img'];
 	
-	echo get_box_upload_image($upload, 'backgroung_img'); 
+	echo fruitful_get_box_upload_image($upload, 'backgroung_img'); 
 	?>
 
 	<div class="box-option">
@@ -251,7 +241,7 @@ function fruitful_get_logo_img () {
 	$options = fruitful_get_theme_options();
 	$upload  = $options['logo_img'];
 
-	echo get_box_upload_image($upload, 'logo_img', 'upload_btn', 'reset_btn', 'logo');
+	echo fruitful_get_box_upload_image($upload, 'logo_img', 'upload_btn', 'reset_btn', 'logo');
 }
 
 
@@ -259,7 +249,7 @@ function fruitful_get_fav_icon () {
 	$options = fruitful_get_theme_options();
 	$upload  = $options['fav_icon'];
 
-	echo get_box_upload_image($upload, 'fav_icon', 'upload_btn', 'reset_btn', 'favicon');
+	echo fruitful_get_box_upload_image($upload, 'fav_icon', 'upload_btn', 'reset_btn', 'favicon');
 }
 
 function fruitful_get_logo_wh () {
@@ -284,7 +274,7 @@ function fruitful_fonts_headers () {
 	?>
     <div class="text_fonts">
 		<div id="header_sample_font" class="sample_text">Sample Font</div>
-		<?php get_select_fields('h_font_family',$options, fruitful_fonts_list(), 'select-fonts'); ?>
+		<?php fruitful_get_select_fields('h_font_family',$options, fruitful_fonts_list(), 'select-fonts'); ?>
 	</div>
 
 	<?php
@@ -295,7 +285,7 @@ function fruitful_fonts_menu () {
 	?>
     <div class="text_fonts">
 		<div id="menu_sample_font" class="sample_text">Sample Font</div>
-		<?php get_select_fields('m_font_family',$options, fruitful_fonts_list(), 'select-fonts'); ?>
+		<?php fruitful_get_select_fields('m_font_family',$options, fruitful_fonts_list(), 'select-fonts'); ?>
 	</div>
 	<?php
 }
@@ -305,7 +295,7 @@ function fruitful_fonts_content () {
 	?>
     <div class="text_fonts">
 		<div id="content_sample_font" class="sample_text">Sample Font</div>
-		<?php get_select_fields('p_font_family', $options, fruitful_fonts_list(), 'select-fonts'); ?>
+		<?php fruitful_get_select_fields('p_font_family', $options, fruitful_fonts_list(), 'select-fonts'); ?>
 	</div>		
 	<?php
 }
@@ -328,7 +318,7 @@ function fruitful_fonts_size () {
 
 function fruitful_slider_select() {
 	$options = fruitful_get_theme_options();
-	get_select_fields('select_slider',$options, fruitful_slide_select(), 'select-slider'); 
+	fruitful_get_select_fields('select_slider',$options, fruitful_slide_select(), 'select-slider'); 
  }
 
 
@@ -345,33 +335,33 @@ function fruitful_slider_options() {
 				<div class="option_block"><h4><?php _e( 'No Slider Select!', 'fruitful' ); ?></h4></div>
 			</div>	
 			<div class="flex-slider">
-				<div class="option_block"><h4><?php _e( 'Animation type', 'fruitful' ); ?></h4><?php get_select_fields('s_animation',$options, fruitful_slide_anim_list()); ?></div>	
-				<div class="option_block"><h4><?php _e( 'Sliding direction, "horizontal" or "vertical"', 'fruitful' ); ?></h4><?php get_select_fields('s_direction',$options, fruitful_slide_direction_list()); ?></div>		
-				<div class="option_block"><h4><?php _e( 'Reverse the animation direction', 'fruitful' ); ?></h4><?php get_select_fields('s_reverse',$options, fruitful_bool_list()); ?></div>		
-				<div class="option_block"><h4><?php _e( 'Animate slider automatically', 'fruitful' ); ?></h4><?php get_select_fields('s_slideshow',$options, fruitful_bool_list()); ?></div>		
+				<div class="option_block"><h4><?php _e( 'Animation type', 'fruitful' ); ?></h4><?php fruitful_get_select_fields('s_animation',$options, fruitful_slide_anim_list()); ?></div>	
+				<div class="option_block"><h4><?php _e( 'Sliding direction, "horizontal" or "vertical"', 'fruitful' ); ?></h4><?php fruitful_get_select_fields('s_direction',$options, fruitful_slide_direction_list()); ?></div>		
+				<div class="option_block"><h4><?php _e( 'Reverse the animation direction', 'fruitful' ); ?></h4><?php fruitful_get_select_fields('s_reverse',$options, fruitful_bool_list()); ?></div>		
+				<div class="option_block"><h4><?php _e( 'Animate slider automatically', 'fruitful' ); ?></h4><?php fruitful_get_select_fields('s_slideshow',$options, fruitful_bool_list()); ?></div>		
 				<div class="option_block"><h4><?php _e( 'Set the speed of the slideshow cycling, in milliseconds', 'fruitful' ); ?></h4><input type="text" id="speed-slideshow" name="fruitful_theme_options[s_slideshowSpeed]" value="<?php echo $options['s_slideshowSpeed']; ?>"/></div>		
 				<div class="option_block"><h4><?php _e( 'Set the speed of animations, in milliseconds', 'fruitful' ); ?></h4><input type="text" id="speed-animation" name="fruitful_theme_options[s_animationSpeed]" value="<?php echo $options['s_animationSpeed']; ?>"/></div>	
 				<div class="option_block"><h4><?php _e( 'Set an initialization delay, in milliseconds', 'fruitful' ); ?></h4><input type="text" id="init-delay" name="fruitful_theme_options[s_initDelay]" value="<?php echo $options['s_initDelay']; ?>"/></div>	
-				<div class="option_block"><h4><?php _e( 'Randomize slide order', 'fruitful' ); ?></h4><?php get_select_fields('s_randomize',$options, fruitful_bool_list()); ?></div>	
-				<div class="option_block"><h4><?php _e( 'Manual control usage', 'fruitful' ); ?></h4><?php get_select_fields('s_controlnav',$options, fruitful_bool_list()); ?></div>	
+				<div class="option_block"><h4><?php _e( 'Randomize slide order', 'fruitful' ); ?></h4><?php fruitful_get_select_fields('s_randomize',$options, fruitful_bool_list()); ?></div>	
+				<div class="option_block"><h4><?php _e( 'Manual control usage', 'fruitful' ); ?></h4><?php fruitful_get_select_fields('s_controlnav',$options, fruitful_bool_list()); ?></div>	
 			</div>
 			<div class="nivo-slider">
-				<div class="option_block"><h4><?php _e( 'Slider Skins', 'fruitful' ); ?></h4><?php get_select_fields('nv_skins',$options, fruitful_slide_skins_select()); ?></div>	
-				<div class="option_block"><h4><?php _e( 'Effect', 'fruitful' ); ?></h4><?php get_select_fields('nv_animation',$options, fruitful_flex_effect()); ?></div>	
+				<div class="option_block"><h4><?php _e( 'Slider Skins', 'fruitful' ); ?></h4><?php fruitful_get_select_fields('nv_skins',$options, fruitful_slide_skins_select()); ?></div>	
+				<div class="option_block"><h4><?php _e( 'Effect', 'fruitful' ); ?></h4><?php fruitful_get_select_fields('nv_animation',$options, fruitful_flex_effect()); ?></div>	
 				<div class="option_block"><h4><?php _e( 'For slice animations', 'fruitful' ); ?></h4><input type="text" id="nv-slice" name="fruitful_theme_options[nv_slice]" value="<?php echo $options['nv_slice']; ?>"/></div>						
 				<div class="option_block"><h4><?php _e( 'For box animations (Cols)', 'fruitful' ); ?></h4><input type="text" id="nv-boxCols" name="fruitful_theme_options[nv_boxCols]" value="<?php echo $options['nv_boxCols']; ?>"/></div>						
 				<div class="option_block"><h4><?php _e( 'For box animations (Rows)', 'fruitful' ); ?></h4><input type="text" id="nv-boxRows" name="fruitful_theme_options[nv_boxRows]" value="<?php echo $options['nv_boxRows']; ?>"/></div>						
 				<div class="option_block"><h4><?php _e( 'Slide transition speed', 'fruitful' ); ?></h4><input type="text" id="nv-animSpeed" name="fruitful_theme_options[nv_animSpeed]" value="<?php echo $options['nv_animSpeed']; ?>"/></div>										
 				<div class="option_block"><h4><?php _e( 'How long each slide will show', 'fruitful' ); ?></h4><input type="text" id="nv-pauseTime" name="fruitful_theme_options[nv_pauseTime]" value="<?php echo $options['nv_pauseTime']; ?>"/></div>										
 				<div class="option_block"><h4><?php _e( 'Set starting Slide (0 index)', 'fruitful' ); ?></h4><input type="text" id="nv-startSlide" name="fruitful_theme_options[nv_startSlide]" value="<?php echo $options['nv_startSlide']; ?>"/></div>										
-				<div class="option_block"><h4><?php _e( 'Next & Prev navigation', 'fruitful' ); ?></h4><?php get_select_fields('nv_directionNav',$options, fruitful_bool_list()); ?></div>										
-				<div class="option_block"><h4><?php _e( '1,2,3... navigation', 'fruitful' ); ?></h4><?php get_select_fields('nv_controlNav',$options, fruitful_bool_list()); ?></div>														
-				<div class="option_block"><h4><?php _e( 'Use thumbnails for Control Nav', 'fruitful' ); ?></h4><?php get_select_fields('nv_controlNavThumbs',$options, fruitful_bool_list()); ?></div>														
-				<div class="option_block"><h4><?php _e( 'Stop animation while hovering', 'fruitful' ); ?></h4><?php get_select_fields('nv_pauseOnHover',$options, fruitful_bool_list()); ?></div>														
-				<div class="option_block"><h4><?php _e( 'Force manual transitions', 'fruitful' ); ?></h4><?php get_select_fields('nv_manualAdvance',$options, fruitful_bool_list()); ?></div>														
+				<div class="option_block"><h4><?php _e( 'Next & Prev navigation', 'fruitful' ); ?></h4><?php fruitful_get_select_fields('nv_directionNav',$options, fruitful_bool_list()); ?></div>										
+				<div class="option_block"><h4><?php _e( '1,2,3... navigation', 'fruitful' ); ?></h4><?php fruitful_get_select_fields('nv_controlNav',$options, fruitful_bool_list()); ?></div>														
+				<div class="option_block"><h4><?php _e( 'Use thumbnails for Control Nav', 'fruitful' ); ?></h4><?php fruitful_get_select_fields('nv_controlNavThumbs',$options, fruitful_bool_list()); ?></div>														
+				<div class="option_block"><h4><?php _e( 'Stop animation while hovering', 'fruitful' ); ?></h4><?php fruitful_get_select_fields('nv_pauseOnHover',$options, fruitful_bool_list()); ?></div>														
+				<div class="option_block"><h4><?php _e( 'Force manual transitions', 'fruitful' ); ?></h4><?php fruitful_get_select_fields('nv_manualAdvance',$options, fruitful_bool_list()); ?></div>														
 				<div class="option_block"><h4><?php _e( 'Prev directionNav text',  'fruitful'); ?></h4><input type="text" id="nv-prevText" name="fruitful_theme_options[nv_prevText]" value="<?php echo $options['nv_prevText']; ?>"/></div>																		
 				<div class="option_block"><h4><?php _e( 'Next directionNav text',  'fruitful'); ?></h4><input type="text" id="nv-nextText" name="fruitful_theme_options[nv_nextText]" value="<?php echo $options['nv_nextText']; ?>"/></div>																		
-				<div class="option_block"><h4><?php _e( 'Start on a random slide', 'fruitful'); ?></h4><?php get_select_fields('nv_randomStart',$options, fruitful_bool_list()); ?></div>																		
+				<div class="option_block"><h4><?php _e( 'Start on a random slide', 'fruitful'); ?></h4><?php fruitful_get_select_fields('nv_randomStart',$options, fruitful_bool_list()); ?></div>																		
 			</div>
 	</div>
 	
@@ -387,7 +377,7 @@ function fruitful_get_slide($ind, $id, $image_text = null) {
 		$out .= '</h4>';
 		
 		$out .= '<div class="slide-content" id="slide-content-'. $ind .'">';
-			$out .= get_box_upload_slide($id, $image_text, $ind);
+			$out .= fruitful_get_box_upload_slide($id, $image_text, $ind);
 		$out .= '</div>';
 	$out .= '</li>';
 	return $out;
@@ -498,7 +488,7 @@ function fruitful_theme_options_render_page() {
 				</div> 	
 				<?php
 					settings_fields( 'fruitful_options' );
-					custom_do_settings_sections( 'theme_options');
+					fruitful_custom_do_settings_sections( 'theme_options');
 				?>
 		
 		</div>
