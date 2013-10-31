@@ -375,9 +375,9 @@ function fruitful_get_logo () {
 	
 	if ($url_logo != "") {
 		$url_logo = wp_get_attachment_image_src($url_logo, 'full');
-		echo  '<a href="' . home_url() . '" title="' . $description .'" rel="home"><img class="logo" src="'. $url_logo[0]  .'" alt="' . $description . '"/></a>';
+		echo  '<a href="' . esc_url( home_url( '/' ) ) . '" title="' . esc_attr($description) .'" rel="home"><img class="logo" src="'. $url_logo[0]  .'" alt="' . $description . '"/></a>';
 	} else {
-		echo  '<a class="logo-description" href="' . home_url() . '" title="' . $description .'" rel="home"><h1 class="site-title">'. $name .'</h1><h2 class="site-description">'. $description .'</h2></a>';
+		echo  '<a class="logo-description" href="' . esc_url( home_url( '/' ) ) . '" title="' . esc_attr($description) .'" rel="home"><h1 class="site-title">'. $name .'</h1><h2 class="site-description">'. $description .'</h2></a>';
 	}	
 }
 
@@ -583,10 +583,12 @@ add_action('wp_enqueue_scripts', 'fruitful_get_responsive_style', 20);
 
 function fruitful_get_sliders() {
 	$theme_options = fruitful_ret_options("fruitful_theme_options");
-	if ($theme_options['select_slider'] == "1") {
-		echo fruitful_get_slider_options_flex(); 
-	} else if ($theme_options['select_slider'] == "2") {
-		echo fruitful_get_slider_options_nivo();
+	if (isset($theme_options['select_slider'])) {
+		if ($theme_options['select_slider'] == "1") {
+			echo fruitful_get_slider_options_flex(); 
+		} else if ($theme_options['select_slider'] == "2") {
+			echo fruitful_get_slider_options_nivo();
+		}	
 	}	
 }
 
