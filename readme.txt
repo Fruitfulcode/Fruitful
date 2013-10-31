@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 -------------------------------------------------------
     Thank you for downloading Fruitful theme!
 -------------------------------------------------------
@@ -196,15 +195,15 @@ We are open for users translations, translation can be included in new theme ver
     Credits
 -------------------------------------------------------
 
-Jquery scripts
+* Open Sans font (available through Google web Fonts: http://www.google.com/webfonts/specimen/Open+Sans), licensed under Apache License Version 2 (http://www.apache.org/licenses/LICENSE-2.0.html)
+* FlexSlider by WooThemes under the GPLv2 license (http://www.gnu.org/licenses/gpl-2.0.html)
+* Nivo Slider jQuery script by dev7studios under the MIT license. http://dev7studios.com/plugins/nivo-slider/
+* Fabcybox jQuery script http://fancybox.net/ Licensed under both MIT and GPL licenses
+* Html5shiv jQuery script https://code.google.com/p/html5shiv/ under the MIT or GPL Version 2 licenses
+* Mousewheel jQuery script http://adomas.org/javascript-mouse-wheel/ Licensed under the MIT License.
+* SyntaxHighlighter jQuery script http://alexgorbatchev.com/SyntaxHighlighter/ Licensed under the MIT License.
+* colorpicker js http://www.eyecon.ro/
 
-* Nivo slider http://dev7studios.com/plugins/nivo-slider/
-* Flex slider http://www.woothemes.com/flexslider/
-* Fancybox http://fancybox.net/
-* Jquery easing http://gsgd.co.uk/sandbox/jquery/easing/
-
-Icons
-http://thenounproject.com/
 
 -------------------------------------------------------
     Changelog
@@ -237,4 +236,3 @@ http://thenounproject.com/
 
 = 1.0 = (01.10.2013)
 * Initial Release
->>>>>>> c3781c8be40c205afa497f3ba069ab589375756c
