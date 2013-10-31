@@ -234,9 +234,9 @@ add_action( 'widgets_init', 'fruitful_widgets_init' );
 	
 	wp_enqueue_script('init',				get_template_directory_uri() . '/js/init.js', array( 'jquery' ), '20130930', false );
 	
-	$is_fixed_header = false;
+	$is_fixed_header = -1;
 	if (isset($theme_options['is_fixed_header'])) {
-		$is_fixed_header = true;
+		$is_fixed_header = 1;
 	}
 	
 	wp_localize_script( 'init', 'ThGlobal', 	array( 'ajaxurl' 			=> admin_url( 'admin-ajax.php' ), 
