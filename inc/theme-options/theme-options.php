@@ -534,6 +534,14 @@ add_action('wp_ajax_fruitful_theme_options_action', 'fruitful_data_save');
 function fruitful_data_save() {
 	$data = $_POST['fruitful_theme_options'];
 	
+	if (!isset($data['responsive'])) 	  {$data['responsive'] 	= 'off'; }
+	if (!isset($data['postcomment'])) 	  {$data['postcomment'] = 'off'; }
+	if (!isset($data['pagecomment'])) 	  {$data['pagecomment'] = 'off'; }
+	if (!isset($data['is_fixed_header'])) {$data['is_fixed_header'] = 'off'; }
+	if (!isset($data['styletheme'])) 	  {$data['styletheme'] 		= 'off'; }
+	if (!isset($data['bg_repeating'])) 	  {$data['bg_repeating'] 	= 'off'; }
+	
+	
 	if(!empty($data)) {
 	   if(update_option('fruitful_theme_options', $data)) {
 	           die('1');

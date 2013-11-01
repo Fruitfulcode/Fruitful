@@ -156,6 +156,7 @@ add_filter( 'wp_title', 'fruitful_wp_title', 10, 2 );
  */
 function fruitful_widgets_init() {
 	register_widget( 'Fruitful_Widget_News_Archive' );
+	
 	register_sidebar( array(
 		'name' => __( 'Main Sidebar', 'fruitful' ),
 		'id' => 'sidebar-1',
@@ -236,7 +237,9 @@ add_action( 'widgets_init', 'fruitful_widgets_init' );
 	
 	$is_fixed_header = -1;
 	if (isset($theme_options['is_fixed_header'])) {
-		$is_fixed_header = 1;
+		if ($theme_options['is_fixed_header'] == 'on') {
+			$is_fixed_header = 1;
+		}
 	}
 	
 	wp_localize_script( 'init', 'ThGlobal', 	array( 'ajaxurl' 			=> admin_url( 'admin-ajax.php' ), 
@@ -410,26 +413,28 @@ function fruitful_get_all_style () {
 	$theme_options  = fruitful_ret_options("fruitful_theme_options"); 
 	
 	if (isset($theme_options['styletheme'])) {
-
-		$out .= '$("H1").css({"font-size" : "'.$theme_options['h1_size'] .'px"});' . "\n";
-		$out .= '$("H2").css({"font-size" : "'.$theme_options['h2_size'] .'px"});' . "\n";
-		$out .= '$("H3").css({"font-size" : "'.$theme_options['h3_size'] .'px"});' . "\n";
-		$out .= '$("H4").css({"font-size" : "'.$theme_options['h4_size'] .'px"});' . "\n";
-		$out .= '$("H5").css({"font-size" : "'.$theme_options['h5_size'] .'px"});' . "\n";
-		$out .= '$("H6").css({"font-size" : "'.$theme_options['h6_size'] .'px"});' . "\n";
-		$out .= '$(".main-navigation a").css({"font-size" : "'.$theme_options['m_size'] .'px"});' . "\n";
+		if ($theme_options['styletheme'] == 'on') {
+			$out .= '$("H1").css({"font-size" : "'.$theme_options['h1_size'] .'px"});' . "\n";
+			$out .= '$("H2").css({"font-size" : "'.$theme_options['h2_size'] .'px"});' . "\n";
+			$out .= '$("H3").css({"font-size" : "'.$theme_options['h3_size'] .'px"});' . "\n";
+			$out .= '$("H4").css({"font-size" : "'.$theme_options['h4_size'] .'px"});' . "\n";
+			$out .= '$("H5").css({"font-size" : "'.$theme_options['h5_size'] .'px"});' . "\n";
+			$out .= '$("H6").css({"font-size" : "'.$theme_options['h6_size'] .'px"});' . "\n";
+			$out .= '$(".main-navigation a").css({"font-size" : "'.$theme_options['m_size'] .'px"});' . "\n";
 	
-		$out .= '$("H1, H2, H3, H4, H5, H6").css({"font-family" : "'.$theme_options['h_font_family'] .'"});' . "\n";
-		$out .= '$(".main-navigation a").css({"font-family" : "'.$theme_options['m_font_family'] .'"});' . "\n";
-		$out .= '$("p").css({"font-size" : "'. $theme_options['p_size'] .'px", "font-family" : "' .$theme_options['p_font_family'] . '"});' . "\n";
+			$out .= '$("H1, H2, H3, H4, H5, H6").css({"font-family" : "'.$theme_options['h_font_family'] .'"});' . "\n";
+			$out .= '$(".main-navigation a").css({"font-family" : "'.$theme_options['m_font_family'] .'"});' . "\n";
+			$out .= '$("p").css({"font-size" : "'. $theme_options['p_size'] .'px", "font-family" : "' .$theme_options['p_font_family'] . '"});' . "\n";
 	
 		
-		if(!empty($theme_options['background_color'])) 	{ $back_sytle .= '"background-color"   :  "'.$theme_options['background_color'] .'", '; }
-		if(!empty($theme_options['backgroung_img'])) 	{ 
+			if(!empty($theme_options['background_color'])) 	{ $back_sytle .= '"background-color"   :  "'.$theme_options['background_color'] .'", '; }
+			if(!empty($theme_options['backgroung_img'])) 	{ 
 				$bg_url = array();
 				$bg_url = wp_get_attachment_image_src( $theme_options['backgroung_img'], 'full'); 
 				if(isset($theme_options['bg_repeating']))	{ 
-						$back_sytle .= '"background-image" : "url(' .$bg_url[0] .')", "background-repeat" : "repeat"'; 	
+						if ($theme_options['bg_repeating'] == 'on') {
+							$back_sytle .= '"background-image" : "url(' .$bg_url[0] .')", "background-repeat" : "repeat"'; 	
+						}
 					} else {
 						$back_sytle .= '"background-image" : "url(' .$bg_url[0] .')", "background-repeat" : "no-repeat"'; 	
 					}
@@ -460,6 +465,7 @@ function fruitful_get_all_style () {
 	
 		$out .= '});' . "\n";
 		}
+	}	
 	echo $out;
 }
 
@@ -574,9 +580,11 @@ function fruitful_state_page_comment () {
 function fruitful_get_responsive_style () {
 	$theme_options  = fruitful_ret_options("fruitful_theme_options"); 
 	if (isset($theme_options['responsive'])) {
-		 wp_enqueue_style('main-style', get_bloginfo( 'stylesheet_url' ) );
-	} else {
-		 wp_enqueue_style('main-style', get_template_directory_uri()  .'/fixed-style.css');
+		if ($theme_options['responsive'] == 'on') {
+			wp_enqueue_style('main-style', get_bloginfo( 'stylesheet_url' ) );
+		} else {
+			wp_enqueue_style('main-style', get_template_directory_uri()  .'/fixed-style.css');
+		}
 	}	
 }
 add_action('wp_enqueue_scripts', 'fruitful_get_responsive_style', 20);

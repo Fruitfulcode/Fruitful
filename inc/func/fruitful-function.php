@@ -359,7 +359,7 @@ return array(
 				'responsive'		=> 'on',
 				'postcomment'		=> 'on',
 				'pagecomment'		=> 'off',
-				'is_fixed_header'	=> 'on',
+				'is_fixed_header'	=> 'off',
 				'styletheme'		=> 'on',
 
 				/*Background Image*/
