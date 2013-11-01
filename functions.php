@@ -389,15 +389,16 @@ function fruitful_get_logo () {
 function fruitful_get_favicon () {
 	$out_fav_html = '';
 	$theme_options  = fruitful_ret_options("fruitful_theme_options");
+	
 	if (isset($theme_options['fav_icon'])) {
-		$url_favicon	= $theme_options['fav_icon'];
+		$url_favicon = $theme_options['fav_icon'];
+		$url_favicon = wp_get_attachment_image_src($url_favicon, 'full');
 	} else {
 		$url_favicon	= '';
 	}	
 	
 	if ($url_favicon != "") {
-		wp_get_attachment_image_src($theme_options['fav_icon'], 'full');
-		$out_fav_html .=  '<link rel="icon" type="image/png"  href="'. $url_favicon[0] .'">';	
+		$out_fav_html .=  '<link rel="shortcut icon" href="'. $url_favicon[0] .'">';	
 		$out_fav_html .=  '<link rel="apple-touch-icon-precomposed" sizes="16x16" href="'. $url_favicon[0] .'">';	
 	} else {
 		//$out_fav_html .= '<link rel="icon" type="image/png"  href="'. get_template_directory_uri()  . '/images/default_favicon.png'.'">';	
