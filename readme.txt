@@ -86,6 +86,10 @@ We are open for users translations, translation can be included in new theme ver
     Changelog
 -------------------------------------------------------
 
+= 1.0.5 = (01.11.13)
+* Default settings checkbox bug fix
+* Code optimization
+
 = 1.0.4 = (31.10.13)
 * Remove php notice and fix home url
 * Fixed header option, bug fix
