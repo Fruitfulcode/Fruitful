@@ -897,7 +897,7 @@ embed,iframe,object {
 }
 #page .container header hgroup {
     float:left;
-	max-width: 30%;
+    margin: 0 0 15px 0;
 }
 #page .container .content p {
     text-align:justify;
