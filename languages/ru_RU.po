@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Fruitful theme\n"
 "POT-Creation-Date: 2013-10-01 15:02+0200\n"
-"PO-Revision-Date: 2013-10-01 15:05+0200\n"
+"PO-Revision-Date: 2013-11-04 09:47+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Russian\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.5.7\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop;_e;__\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: C:\\wamp\\www\\yakovlev\\fruitfultheme\\wp-content"
@@ -735,7 +735,7 @@ msgid ""
 "below if you need static website display. "
 msgstr ""
 "В теме существует 2 типа макета, который вы можете выбрать. По умолчанию "
-"включен, адаптивный который корректно отображается на мобильных устройствах. "
+"включен, отзывчивый который корректно отображается на мобильных устройствах. "
 "Фиксированный макет с заданной шириной можно активировать, если снять "
 "галочку ниже."
 
@@ -827,7 +827,7 @@ msgstr ""
 #: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:51
 msgid "Upload needed image for site favicon. (Supported files .png (16x16))"
 msgstr ""
-"Загрузить нужное изображение для favicon сайта. (Поддерживаемые файлы .png "
+"Загрузить нужное изображение для favicon сайта. (Поддерживаемые файлы .ico "
 "(16x16))"
 
 #: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:52
@@ -975,7 +975,7 @@ msgstr "Отзывчивый"
 
 #: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:150
 msgid "Display comment on posts page"
-msgstr "Показать комментарий на посте"
+msgstr "Показать комментарий для записи"
 
 #: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:155
 msgid "Display comment on page"
@@ -1171,11 +1171,11 @@ msgstr "Цвет шрифта для \"active\"  и \"hover\" состояния
 
 #: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:488
 msgid "General Settings"
-msgstr "Общие настройки"
+msgstr "Общие"
 
 #: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:489
 msgid "Background"
-msgstr "Фоновый рисунок"
+msgstr "Фон"
 
 #: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:490
 msgid "Logo"
@@ -1183,11 +1183,11 @@ msgstr "Логотип"
 
 #: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:494
 msgid "Social Links"
-msgstr "Социальные ссылки"
+msgstr "Соц. сети"
 
 #: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:495
 msgid "Footer"
-msgstr "Нижний колонтитул"
+msgstr "Футер"
 
 #: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\Fruitful/inc/theme-options/theme-options.php:511
 msgid "Theme settings will be reset to default."

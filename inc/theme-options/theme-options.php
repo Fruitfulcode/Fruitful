@@ -47,7 +47,7 @@ function fruitful_theme_options_init() {
 		
 	add_settings_field( 'logo_image', 		__( 'Upload your logo Image', 'fruitful' ), 	'fruitful_get_logo_img', 	'theme_options', 'logo', 		array('info' => __( 'Default theme logo is just a sample. Upload logo image for your website. (Supported files .png, .jpg, .gif)', 'fruitful' )));
 	//add_settings_field( 'logo_size', 		__( 'Logo Size', 'fruitful' ), 		'fruitful_get_logo_wh',	 	'theme_options', 'logo', 		array('info' => __( 'Specify resolution for your logo image. Our theme will crop (timthumb) your image for need size.', 'fruitful' )) );
-	add_settings_field( 'fav_icon', 		__( 'Favicon', 'fruitful' ), 		'fruitful_get_fav_icon', 	'theme_options', 'logo', 		array('info' => __( 'Upload needed image for site favicon. (Supported files .png (16x16))', 'fruitful' )));
+	add_settings_field( 'fav_icon', 		__( 'Favicon', 'fruitful' ), 		'fruitful_get_fav_icon', 	'theme_options', 'logo', 		array('info' => __( 'Upload needed image for site favicon. (Supported files .ico (16x16))', 'fruitful' )));
 	add_settings_field( 'menu_style',		__( 'Menu css styling', 'fruitful' ),	'fruitful_menu_style',		'theme_options', 'menu',    	array('info' => __( 'Choose styles for main menu.', 'fruitful' )) );
 	add_settings_field( 'fonts_options', 	__( 'Fonts', 'fruitful' ), 	'fruitful_fonts_options',	'theme_options', 'fonts', 		array('info' => __( 'Popular web safe font collection, select and use for your needs.', 'fruitful' )) );
 	
@@ -513,7 +513,7 @@ function fruitful_theme_options_render_page() {
 		
 		<div id="sidebar-promo" class="sidebar-promo">
 			<h3><?php _e('Contact support', 'fruitful'); ?></h3>
-			<p><?php _e( 'If you faced with any problems, have a question or suggestion you always can contact us with any request on our website fruitfulcode.com', 'fruitful' ); ?></p>
+			<p><?php _e( 'If you faced with any problems, have a question or suggestion you always can contact us with any request on our website <a href="http://fruitfulcode.com">fruitfulcode.com</a>', 'fruitful' ); ?></p>
 		</div>
 	</div>
 	<?php

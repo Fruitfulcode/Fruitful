@@ -86,6 +86,12 @@ We are open for users translations, translation can be included in new theme ver
     Changelog
 -------------------------------------------------------
 
+= 1.0.6 = (04.11.13)
+* Checkbox Responsive bug fix after 1.0.5
+* Favicon bug fix
+* Update descriptions for theme options
+* Localization update
+
 = 1.0.5 = (01.11.13)
 * Default settings checkbox bug fix
 * Code optimization
