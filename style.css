@@ -1065,7 +1065,7 @@ margin: 25px 0 0 0;
     float:left;
     width:98%;
 }
-#page .container #secondary .widget h3.widget-title {
+#page .container #secondary .widget h3.widget-title, #page .container #secondary .widget h1.widget-title {
     color:#45494c;
     font-size:16px;
     border-bottom:2px solid #f15a23;
