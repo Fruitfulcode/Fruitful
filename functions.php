@@ -414,7 +414,7 @@ function fruitful_get_all_style () {
 	$theme_options  = fruitful_ret_options("fruitful_theme_options"); 
 	
 	if (isset($theme_options['styletheme'])) {
-		if ($theme_options['styletheme'] == 'on') {
+		if ($theme_options['styletheme'] == 'off') {
 			$out .= '$("H1").css({"font-size" : "'.$theme_options['h1_size'] .'px"});' . "\n";
 			$out .= '$("H2").css({"font-size" : "'.$theme_options['h2_size'] .'px"});' . "\n";
 			$out .= '$("H3").css({"font-size" : "'.$theme_options['h3_size'] .'px"});' . "\n";
@@ -425,7 +425,7 @@ function fruitful_get_all_style () {
 	
 			$out .= '$("H1, H2, H3, H4, H5, H6").css({"font-family" : "'.$theme_options['h_font_family'] .'"});' . "\n";
 			$out .= '$(".main-navigation a").css({"font-family" : "'.$theme_options['m_font_family'] .'"});' . "\n";
-			$out .= '$("p").css({"font-size" : "'. $theme_options['p_size'] .'px", "font-family" : "' .$theme_options['p_font_family'] . '"});' . "\n";
+			$out .= '$("body").css({"font-size" : "'. $theme_options['p_size'] .'px", "font-family" : "' .$theme_options['p_font_family'] . '"});' . "\n";
 	
 		
 			if(!empty($theme_options['background_color'])) 	{ $back_sytle .= '"background-color"   :  "'.$theme_options['background_color'] .'", '; }
@@ -582,7 +582,7 @@ function fruitful_get_responsive_style () {
 	$theme_options  = fruitful_ret_options("fruitful_theme_options"); 
 	if (isset($theme_options['responsive'])) {
 		if ($theme_options['responsive'] == 'on') {
-			wp_enqueue_style('main-style',  get_stylesheet_uri()  );
+			wp_enqueue_style('main-style',  get_stylesheet_uri());
 		} else {
 			wp_enqueue_style('main-style',  get_stylesheet_directory_uri()  .'/fixed-style.css');
 		}

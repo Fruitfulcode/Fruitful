@@ -360,7 +360,7 @@ return array(
 				'postcomment'		=> 'on',
 				'pagecomment'		=> 'on',
 				'is_fixed_header'	=> 'off',
-				'styletheme'		=> 'on',
+				'styletheme'		=> 'off',
 
 				/*Background Image*/
 				'backgroung_img'    => '',
