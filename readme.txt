@@ -89,6 +89,9 @@ We are open for users translations, translation can be included in new theme ver
 =1.0.7 = (05.11.13)
 * Comments on pages set by default in theme options
 * Optimization fruitful_get_responsive_style function.
+* Css changes
+* Update descriptions for theme options.
+* Fonts options changed from content to <body>
 
 
 = 1.0.6 = (04.11.13)
