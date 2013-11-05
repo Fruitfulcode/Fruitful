@@ -582,9 +582,9 @@ function fruitful_get_responsive_style () {
 	$theme_options  = fruitful_ret_options("fruitful_theme_options"); 
 	if (isset($theme_options['responsive'])) {
 		if ($theme_options['responsive'] == 'on') {
-			wp_enqueue_style('main-style', get_bloginfo( 'stylesheet_url' ) );
+			wp_enqueue_style('main-style',  get_stylesheet_uri()  );
 		} else {
-			wp_enqueue_style('main-style', get_template_directory_uri()  .'/fixed-style.css');
+			wp_enqueue_style('main-style',  get_stylesheet_directory_uri()  .'/fixed-style.css');
 		}
 	}	
 }

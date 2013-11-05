@@ -358,7 +358,7 @@ return array(
 				/*General Settings*/
 				'responsive'		=> 'on',
 				'postcomment'		=> 'on',
-				'pagecomment'		=> 'off',
+				'pagecomment'		=> 'on',
 				'is_fixed_header'	=> 'off',
 				'styletheme'		=> 'on',
 
