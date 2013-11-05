@@ -37,8 +37,8 @@ function fruitful_theme_options_init() {
 	add_settings_field( 'general_rs', 		__( 'Layout', 	'fruitful' ),	'fruitful_get_responsive_design',	'theme_options',  'general', array('info' => __( 'Theme supported 2 types of html layout. Default responsive  setting which adapt for mobile devices and static page with fixed width. Uncheck arrow below if you need static website display. ', 'fruitful' )));
 	add_settings_field( 'general_cm',		__( 'Comments', 'fruitful' ), 	'fruitful_get_general_comment',  	'theme_options',  'general', array('info' => __( 'If you want to display comments on your post page or page, select options below.', 'fruitful' )));
 	add_settings_field( 'general_hd',		__( 'Header', 	'fruitful' ), 	'fruitful_get_general_header',  	'theme_options',  'general', array('info' => __( 'Options relating to the website header', 'fruitful' )));
-	add_settings_field( 'general_ds',		__( 'Default css', 'fruitful' ),'fruitful_get_style_theme',  		'theme_options',  'general', array('info' => __( 'Theme has styles by default, if you are using theme as based for development and dont what overwrite default css styles, you can disable our styles. ', 'fruitful' )));
-	add_settings_field( 'general_rb',		__( 'Reset All options to default state', 'fruitful' ),	'fruitful_reset_btn', 		  'theme_options',  'general', array('info' => __( 'Reset Button. ', 'fruitful' )));
+	add_settings_field( 'general_ds',		__( 'Default theme style css', 'fruitful' ),'fruitful_get_style_theme',  		'theme_options',  'general', array('info' => __( 'Orange style by default, enable this option to see it. Theme option for styling is not working, if this option enable.', 'fruitful' )));
+	add_settings_field( 'general_rb',		__( 'Reset all options to default', 'fruitful' ),	'fruitful_reset_btn', 		  'theme_options',  'general', array('info' => __( 'Reset Button. ', 'fruitful' )));
 	
 	
 	
@@ -57,7 +57,7 @@ function fruitful_theme_options_init() {
 	
 	add_settings_field( 'fonts_size', 		__( 'Font size', 'fruitful' ), 		'fruitful_fonts_size',		'theme_options', 'fonts',  array('info' => __( 'Choose font size for specific html elements. Set size as number, without px.', 'fruitful' )) );
 	add_settings_field( 'slider_select',	__( 'Slider', 'fruitful' ),	'fruitful_slider_select',	'theme_options', 'slider', array('info' => __( 'Select a slider type that will be used by default.', 'fruitful' )) );
-	add_settings_field( 'slider_options',	__( 'Slider Options', 'fruitful' ),	'fruitful_slider_options',	'theme_options', 'slider', array('info' => __( 'Choose needed options for slider. Width, height, animation type, sliding direction, speed of animations, etc', 'fruitful' )) );
+	add_settings_field( 'slider_options',	__( 'Slider Options', 'fruitful' ),	'fruitful_slider_options',	'theme_options', 'slider', array('info' => __( 'Choose needed options for slider: animation type, sliding direction, speed of animations, etc', 'fruitful' )) );
 	add_settings_field( 'slider_image',		__( 'Slides', 'fruitful' ), 		'fruitful_slider_images',	'theme_options', 'slider', array('info' => __( 'Add images to slider (Supported files .png, .jpg, .gif). If you want to change order, just drag and drop it. Image size for slides is original from media gallery, please upload images in same size, to get best display on page. To display slider in needed place use shortcode [slider]. Current theme version support only one slider per website. ', 'fruitful' )) );
 	add_settings_field( 'socials_links', 	__( 'Socials Links', 'fruitful' ), 	'fruitful_settings_field_socials_links', 'theme_options', 'links', array('info' => __( 'Add link to your social media profiles. Icons with link will be display in footer.', 'fruitful' )) );
 	add_settings_field( 'footer_text_copy',	__( 'Footer options', 'fruitful' ), 'fruitful_settings_field_footer_text', 'theme_options',   'footer', array('info' => __( 'Replace default theme copyright information and links.', 'fruitful' )) );
