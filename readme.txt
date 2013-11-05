@@ -86,6 +86,11 @@ We are open for users translations, translation can be included in new theme ver
     Changelog
 -------------------------------------------------------
 
+=1.0.7 = (05.11.13)
+* Comments on pages set by default in theme options
+* Optimization fruitful_get_responsive_style function.
+
+
 = 1.0.6 = (04.11.13)
 * Checkbox Responsive bug fix after 1.0.5
 * Favicon bug fix

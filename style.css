@@ -4,7 +4,7 @@ Theme URI: http://themes.fruitfulcode.com/fruitful
 Author: fruifrulcode
 Author URI: http://fruitfulcode.com
 Description: Fruitful - WordPress theme with powerful theme options panel and simple clean front end design. Ability to modify styles and options to your needs. Easily edit logo, backgound image, menu, slider, fonts, social icons, footer, custom css and much more.
-Version: 1.0.6
+Version: 1.0.7
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: white, orange, theme-options, fixed-width, custom-header, custom-background, custom-menu, custom-colors, custom-background, translation-ready, featured-images, full-width-template,  one-column, right-sidebar, editor-style
@@ -553,7 +553,7 @@ button::-moz-focus-inner,input::-moz-focus-inner {
     border:0;
     padding:0;
 }
-input[type=text],input[type=email],textarea {
+input[type=text],input[type=email],input[type=url],textarea {
     border:1px solid #e5e5e5;
     border-radius:3px;
     color:#45494c;
@@ -561,9 +561,15 @@ input[type=text],input[type=email],textarea {
 input[type=text]:focus,input[type=email]:focus,textarea:focus {
     color:#111;
 }
-input[type=text],input[type=email] {
+input[type=text],input[type=email],input[type=url] {
     padding:3px;
 }
+
+#commentform label {
+width: 75px;
+float: left;
+}
+
 textarea {
     overflow:auto;
     padding-left:3px;
