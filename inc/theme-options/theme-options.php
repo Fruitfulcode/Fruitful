@@ -64,8 +64,8 @@ function fruitful_theme_options_init() {
 	
 	add_settings_field( 'csutom_css',		__( 'Custom CSS', 'fruitful' ), 'fruitful_settings_field_custom_css', 'theme_options', 'css' , array('info' => __( 'Theme has two css files style.css and fixed-style.css which use default styles for front-end responsive and static layout. Do not edit theme default css files, use textarea editor below for overwriting all css styles.', 'fruitful' )) );
 	
-	if( !get_option( 'fruitful_theme_options' ) ) {
-		 add_option( 'fruitful_theme_options', fruitful_get_theme_options());
+	if(empty(get_option( 'fruitful_theme_options' ))) {
+		add_option( 'fruitful_theme_options', fruitful_get_theme_options());
 	}
 }
 	
@@ -545,7 +545,6 @@ function fruitful_data_save() {
 	if (!isset($data['is_fixed_header'])) {$data['is_fixed_header'] = 'off'; }
 	if (!isset($data['styletheme'])) 	  {$data['styletheme'] 		= 'off'; }
 	if (!isset($data['bg_repeating'])) 	  {$data['bg_repeating'] 	= 'off'; }
-	
 	
 	if(!empty($data)) {
 	   if(update_option('fruitful_theme_options', $data)) {

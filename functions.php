@@ -236,10 +236,8 @@ add_action( 'widgets_init', 'fruitful_widgets_init' );
 	wp_enqueue_script('init',				get_template_directory_uri() . '/js/init.js', array( 'jquery' ), '20130930', false );
 	
 	$is_fixed_header = -1;
-	if (isset($theme_options['is_fixed_header'])) {
-		if ($theme_options['is_fixed_header'] == 'on') {
-			$is_fixed_header = 1;
-		}
+	if (isset($theme_options['is_fixed_header']) && ($theme_options['is_fixed_header'] == 'on')) {
+		$is_fixed_header = 1;
 	}
 	
 	wp_localize_script( 'init', 'ThGlobal', 	array( 'ajaxurl' 			=> admin_url( 'admin-ajax.php' ), 
@@ -394,7 +392,7 @@ function fruitful_get_favicon () {
 		$url_favicon = $theme_options['fav_icon'];
 		$url_favicon = wp_get_attachment_image_src($url_favicon, 'full');
 	} else {
-		$url_favicon	= '';
+		$url_favicon = '';
 	}	
 	
 	if ($url_favicon != "") {
@@ -432,14 +430,12 @@ function fruitful_get_all_style () {
 			if(!empty($theme_options['backgroung_img'])) 	{ 
 				$bg_url = array();
 				$bg_url = wp_get_attachment_image_src( $theme_options['backgroung_img'], 'full'); 
-				if(isset($theme_options['bg_repeating']))	{ 
-						if ($theme_options['bg_repeating'] == 'on') {
-							$back_sytle .= '"background-image" : "url(' .$bg_url[0] .')", "background-repeat" : "repeat"'; 	
-						}
-					} else {
-						$back_sytle .= '"background-image" : "url(' .$bg_url[0] .')", "background-repeat" : "no-repeat"'; 	
-					}
+				if(isset($theme_options['bg_repeating']) && ($theme_options['bg_repeating'] == 'on'))	{ 
+					$back_sytle .= '"background-image" : "url(' .$bg_url[0] .')", "background-repeat" : "repeat"'; 	
+				} else {
+					$back_sytle .= '"background-image" : "url(' .$bg_url[0] .')", "background-repeat" : "no-repeat"'; 	
 				}
+			}
 
 		$out .= '$("body").css({'. $back_sytle .'});' . "\n";
 	
@@ -580,12 +576,10 @@ function fruitful_state_page_comment () {
 
 function fruitful_get_responsive_style () {
 	$theme_options  = fruitful_ret_options("fruitful_theme_options"); 
-	if (isset($theme_options['responsive'])) {
-		if ($theme_options['responsive'] == 'on') {
-			wp_enqueue_style('main-style',  get_stylesheet_uri());
-		} else {
-			wp_enqueue_style('main-style',  get_stylesheet_directory_uri()  .'/fixed-style.css');
-		}
+	if (isset($theme_options['responsive']) && ($theme_options['responsive'] == 'on')) {
+		wp_enqueue_style('main-style',  get_stylesheet_uri());
+	} else {
+		wp_enqueue_style('main-style',  get_stylesheet_directory_uri()  .'/fixed-style.css');
 	}	
 }
 add_action('wp_enqueue_scripts', 'fruitful_get_responsive_style', 20);
@@ -623,7 +617,6 @@ add_action('wp_head', 'fruitful_custom_css_and_slider_scripts', 25);
 
 function fruitful_entry_meta() { 
 ?>
-
 	<span class="author-link"><a href="<?php print esc_url( get_author_posts_url( get_the_author_meta( 'ID' ))); ?>"><?php print get_the_author(); ?></a></span>
 	<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
 	<?php
@@ -663,9 +656,7 @@ function fruitful_entry_date( $echo = true ) {
 		esc_html( sprintf( $format_prefix, get_post_format_string( get_post_format() ), get_the_date() ) )
 	);
 
-	if ( $echo )
-		echo $date;
-
+	if ($echo ) echo $date;
 	return $date;
 }
 
