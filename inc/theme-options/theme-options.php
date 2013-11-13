@@ -392,7 +392,7 @@ function fruitful_slider_images() {
 	$slides = get_option( 'fruitful_theme_options' );
 	$vcount_slides = 0;
 	
-	if(isset($slides['slides'])) {
+	if(isset($slides['slides']) && ($slides['slides'] != '')) {
 		$vcount_slides  = count($slides['slides']); 
 	}
 	
@@ -404,7 +404,6 @@ function fruitful_slider_images() {
 		<ul class="slides">
 			<?php 
 					/*Init First Slide for noraml work script*/
-					
 					if ($vcount_slides == 0) {
 						echo fruitful_get_slide(1, -1); 
 					} else {
