@@ -7,7 +7,7 @@ jQuery(document).ready(function($) {
 		
 		/*Fancy Box*/
 	
-		$(".fn_box_img").fancybox({
+		$(".fancybox").fancybox({
 				padding		: 0,
 				openEffect 	: 'elastic',
 				openSpeed  	: 150,

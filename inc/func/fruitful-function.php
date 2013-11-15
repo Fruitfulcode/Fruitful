@@ -25,14 +25,10 @@ function fruitful_slide_skins_select() {
 function fruitful_slide_select() {
 	$slide_anim_options = array(
 		'0' => array(
-			'value' =>	   '0',
-			'label' => __( 'None', 'fruitful' )
-		),
-		'1' => array(
 			'value' =>	   '1',
 			'label' => __( 'FlexSlider', 'fruitful' )
 		),
-		'2' => array(
+		'1' => array(
 			'value' =>	   '2',
 			'label' => __( 'Nivo Slider', 'fruitful' )
 		)
@@ -204,7 +200,7 @@ function fruitful_fonts_list() {
     foreach( (array) $wp_settings_sections[$page] as $section ) {
 
 		if ($section['title'] != "") {
-		   print "<h3>{$section['title']}</h3>\n";
+		   print "<h3>{$section['title']}</h3>";
 		}
         call_user_func($section['callback'], $section);
         if ( !isset($wp_settings_fields) ||
@@ -298,43 +294,39 @@ function fruitful_get_box_upload_image($val, $field, $btnclassup = 'upload_btn',
 
 
 function fruitful_get_box_upload_slide($attach_id, 
-							  $image_text,	
-							  $ind,
-							  $btnclassup 	= 'upload_btn', 
-							  $btnclassr 	= 'reset_btn'
-							  ) {
-		 $out  = ''; 
-
-			$out .= '<div class="box-image">';
-			if ($attach_id != -1) {
-				$out .= '<div class="img-container custom-slide">';
-					$image_attributes = wp_get_attachment_image_src($attach_id, 'full');
-					$out .= '<img src="'.$image_attributes[0].'" alt="" />';
-				$out .= '</div>	';
+									   $link_url,	
+									   $ind,
+									   $btnclassup 	= 'upload_btn', 
+									   $btnclassr 	= 'reset_btn'
+									  ) {
+	$out  = ''; 
+	$out .= '<div class="box-image">';
+	if ($attach_id != -1) {
+		$out .= '<div class="img-container custom-slide">';
+			$image_attributes = wp_get_attachment_image_src($attach_id, 'full');
+			$out .= '<img src="'.$image_attributes[0].'" alt="" />';
+		$out .= '</div>	';
 				
-			}
-			
-			/*
-				* For New Slider Options
-				* $out .= '<label for="">'. __('HTML Text', 'fruitful') .'</label>';
-				* $out .= '<textarea class="of-area" name="fruitful_theme_options[slides][slide-'.$ind.'][text]" id="attach-'.$ind.'" cols="30" rows="10">'.$image_text.'</textarea>';
-			*/
-			
-			$out .= '<input class="of-input" name="fruitful_theme_options[slides][slide-'.$ind.'][attach_id]"   id="attach-'.$ind.'" type="hidden" value="'. $attach_id .'" />';
-			$out .= '<div class="upload_button_div">';
-				$out .= '<span data-imagetype="slide" class="button '. $btnclassup .'" id="add-slide-btn-'. $ind .'">Upload Image</span>';
-			$out .= '</div>';
+	}
+	
+		/*Link out for Slider*/
+		$out .= '<label for="">'. __('Link URL', 'fruitful') .'</label>';
+		$out .= '<input type="text" name="fruitful_theme_options[slides][slide-'.$ind.'][link]" id="slide-link-'.$ind.'" class=""slide-link-'.$ind.'"" value="'.esc_url($link_url).'"/>';
+	
+		$out .= '<input class="of-input" name="fruitful_theme_options[slides][slide-'.$ind.'][attach_id]"   id="attach-'.$ind.'" type="hidden" value="'. intval($attach_id) .'" />';
+		$out .= '<div class="upload_button_div">';
+			$out .= '<span data-imagetype="slide" class="button '. $btnclassup .'" id="add-slide-btn-'. $ind .'">Upload Image</span>';
 		$out .= '</div>';
+	$out .= '</div>';
 	return $out;
 }
 
 
 function fruitful_get_select_fields($field_name, $options, $array_of_values, $class_name = "selected") {
 		$out = '';
-		$out .= '<select class="'. $class_name .'" name="fruitful_theme_options['.$field_name.']" id="options-'.$field_name.'">' . chr(13);
+		$out .= '<select class="'. $class_name .'" name="fruitful_theme_options['.$field_name.']" id="options-'.$field_name.'">';
 		$selected = $options[$field_name];
 		$p = $r = '';
-
 			foreach ( $array_of_values as $option ) {
 				$label = $option['label'];
 				if ( $selected == $option['value'] ) // Make default first in list
@@ -343,8 +335,7 @@ function fruitful_get_select_fields($field_name, $options, $array_of_values, $cl
 					$r .= "\n\t<option style=\"padding-right: 10px;\" value='" . esc_attr( $option['value'] ) . "'>$label</option>";
 			}
 			$out .= $p . $r;
-		
-	$out .= '</select>' . chr(13);
+	$out .= '</select>';
 	echo $out;
 }
 	
@@ -432,7 +423,7 @@ return array(
 				/*End Sliders*/
 				
 				/*footer*/			 
-				'footer_text'		=> stripslashes(' Fruitful theme by <a href="http://fruitfulcode.com">fruitfulcode</a> Powered by: <a href="http://wordpress.org">WordPress</a>'),
+				'footer_text'		=> stripslashes('Fruitful theme by <a href="http://fruitfulcode.com">fruitfulcode</a> Powered by: <a href="http://wordpress.org">WordPress</a>'),
 				
 				/*socials*/
 				'facebook_url' 		=> '',

@@ -16,7 +16,7 @@
 					<?php fruitful_get_footer_text(); ?>
 				</div><!-- .site-info -->
 				<div id="back-top">
-					<a href="#top" title="Back to top">&uarr;</a>
+					<a rel="nofollow" href="#top" title="Back to top">&uarr;</a>
 				</div>
 				<div class="social-icon">
 					<?php fruitful_get_footer_socials_icon(); ?>

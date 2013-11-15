@@ -31,10 +31,10 @@ jQuery(document).ready(function() {
 						var image_url = attachment.url,
 							image_id  = attachment.id;
 							
-							if (customData  == 'slide') { customClass = 'custom-slide';} 
+							if 		(customData  == 'slide') { customClass = 'custom-slide';} 
 							else if (customData == 'logo') { customClass = 'logo'; } 
 							else if (customData == 'favicon') { customClass = 'favicon'; } 
-							else { customClass = ''; }
+							else 	{ customClass = ''; }
 							
 							
 							if (customClass == '') {
@@ -42,7 +42,7 @@ jQuery(document).ready(function() {
 							} else {
 								vLinkElem.parent().parent().prepend('<div class="img-container ' + customClass + '"><img src="' + image_url + '" alt="" /></div>');
 							}							
-							vLinkElem.parent().parent().find('input').val(image_id);
+							vLinkElem.parent().parent().find('input[type="hidden"]').val(image_id);
 					});
 
 			});

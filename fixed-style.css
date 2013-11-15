@@ -177,7 +177,7 @@ body.fancybox-lock {
 /* #Clearing================================================== */
 /* Self Clearing Goodness */
 .container:after {
-    content:" \\0020 ";
+    content:"";
     display:block;
     height:0;
     clear:both;
@@ -185,7 +185,7 @@ body.fancybox-lock {
 }
 /* Use clearfix class on parent to clear nested columns, or wrap each row of columns in a <div class="row"> */
 .clearfix:before,.clearfix:after,.row:before,.row:after {
-    content:' \\0020 ';
+    content:'';
     display:block;
     overflow:hidden;
     visibility:hidden;
@@ -233,7 +233,6 @@ a:hover, a:active {
 .site-content .entry-content p a img, .site-content .entry-content p img {
     padding:10px;
 	box-shadow: 0 3px 4px rgba(0, 0, 0, 0.5);
-
 }
 a img, img {
     border:0;
@@ -647,13 +646,13 @@ a:hover,a:focus,a:active {
 .blog .format-aside .entry-title,.archive .format-aside .entry-title {
     display:none;
 }
-.site-header img,.entry-content img,.comment-content img,.widget img {
+.site-header img,.comment-content img,.widget img {
     max-width:100%;
 }
 .site-header img,.entry-content img,img[class*="align"],img[class*="wp-image-"] {
     height:auto;
 }
-.site-header img,.entry-content img,img.size-full {
+.site-header img,img.size-full {
     width:auto;
 	max-width: 96%;
 }
@@ -756,40 +755,42 @@ embed,iframe,object {
 #page .container .content p {
     text-align:justify;
 }
-#page .container .content .description {
+#page  .description {
     float:left;
     width:100%;
     min-height:50px;
     margin:10px 0 20px 0}
-#page .container .content .description .top_line, #page .container .content .description .btm_line {
+#page  .description .top_line, #page .description .btm_line {
     float:left;
     width:100%;
     height:13px}
-#page .container .content .description .top_line {
+#page .description .top_line {
     background:url(images/top-descr-hr.png) no-repeat center 0 transparent;
 }
-#page .container .content .description .btm_line {
+#page .description .btm_line {
     background:url(images/btm-descr-hr.png) no-repeat center 0 transparent;
 }
-#page .container .content .description .text {
+#page .description .text {
     width:80%;
     margin:0 auto;
 }
-#page .container .content .info_box_area {
-    float:left;
-    margin:30px 0 0 0;
+#page  .info_box_area {
+    display: block;
+    float: left;
+    margin: 30px 0 25px;
+    width: 100%;
 }
 #page .container header.entry-header h1.entry-title, 
 #page .container header.archive-header h1.archive-title {
     font-size:20px;
     padding:0 0 20px 0}
-#page .container .content .info_box_area .info_box .infobox_title {
+#page  .info_box_area .info_box .infobox_title {
     margin:0 0 20px 0;
     font-weight:300}
-#page .container .content .info_box_area .info_box .info_box_text {
+#page  .info_box_area .info_box .info_box_text {
     padding:0 25px;
 }
-#page .container .content .info_box_area .info_box img.icon {
+#page  .info_box_area .info_box img.icon {
     display:block;
     min-height:52px;
     margin:0 auto 15px;
