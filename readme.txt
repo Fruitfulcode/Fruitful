@@ -94,7 +94,20 @@ We are open for users translations, translation can be included in new theme ver
     Changelog
 -------------------------------------------------------
 
-=1.0.7 = (05.11.13)
+= 1.0.9 = (15.11.13)
+* XSS vulnerabilities bug fix
+* Slider - added ability to add link to slider images
+* Shortcodes - source code optimization and new features.
+* Shorcode [slider] changed to [fruitful_slider]
+* Backlinks in footer added <nofollow> for all pages except home.
+* Fancybox now working with class="fancybox"
+* Skype icon added call on cliks
+* Added VK.com icon to social media tab
+
+= 1.0.8 = (11.11.13)
+* WordPress.org theme preview bug fix
+
+= 1.0.7 = (05.11.13)
 * Comments on pages set by default in theme options
 * Optimization fruitful_get_responsive_style function.
 * Css changes
