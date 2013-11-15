@@ -734,7 +734,8 @@ a:hover,a:focus,a:active {
     padding:8px 0;
 }
 #colophon .social-icon {
-    float:right}
+    float:right
+}
 #colophon .social-icon a {
     float:left;
     width:30px;
@@ -774,6 +775,9 @@ a:hover,a:focus,a:active {
 }
 #colophon .social-icon a.rss {
     background-position:-155px 0;
+}
+#colophon .social-icon a.vk {
+    background-position:-311px 0;
 }
 .sticky {
 }

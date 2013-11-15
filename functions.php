@@ -214,7 +214,6 @@ add_action( 'widgets_init', 'fruitful_widgets_init' );
 			}
 	}	
 	
-	
 	/*add fancybox*/
 	wp_enqueue_script('fn-box',				get_template_directory_uri() . '/js/fnBox/jquery.fancybox.pack.js', array( 'jquery' ), '20130930', false );
 	wp_enqueue_style( 'fn-box-style',		get_template_directory_uri() . '/js/fnBox/jquery.fancybox.css');
@@ -229,7 +228,6 @@ add_action( 'widgets_init', 'fruitful_widgets_init' );
 	wp_enqueue_style( 'fn-tabs',			get_template_directory_uri() . '/js/tabs/zozo.tabs.css');
 	wp_enqueue_script('fn-tabs',			get_template_directory_uri() . '/js/tabs/zozo.tabs.min.js', 	array( 'jquery' ), '20130930', false );
 	wp_enqueue_script('fn-easing',			get_template_directory_uri() . '/js/tabs/jquery.easing.min.js', array( 'jquery' ), '20130930', false );
-	
 	
 	wp_enqueue_script('init',				get_template_directory_uri() . '/js/init.js', array( 'jquery' ), '20130930', false );
 	
@@ -492,11 +490,12 @@ function fruitful_get_footer_socials_icon () {
 	if(!empty($theme_options['linkedin_url'])) 		{ $out .= '<a class="linkedin" href="'	. esc_url($theme_options['linkedin_url']) 	. '" target="_blank"></a>'; }
 	if(!empty($theme_options['myspace_url'])) 		{ $out .= '<a class="myspace" href="'	. esc_url($theme_options['myspace_url']) 	. '" target="_blank"></a>'; }	
 	if(!empty($theme_options['googleplus_url'])) 	{ $out .= '<a class="googleplus" href="'. esc_url($theme_options['googleplus_url']) . '" target="_blank"></a>'; }		
-	if(!empty($theme_options['dribbble_url'])) 	 	{ $out .= '<a class="dribbble" href="'	. esc_url($theme_options['dribbble_url']) 	. '" target="_blank"></a>'; }		
-	if(!empty($theme_options['skype_link'])) 		{ $out .= '<a class="skype" href="'		. esc_url($theme_options['skype_link']) 	. '" target="_blank"></a>'; }		
+	if(!empty($theme_options['dribbble_url'])) 	 	{ $out .= '<a class="dribbble" href="'		. esc_url($theme_options['dribbble_url']) 	. '" target="_blank"></a>'; }		
+	if(!empty($theme_options['skype_link'])) 		{ $out .= '<a class="skype" href="skype:' 	. esc_attr($theme_options['skype_link'])	. '?call"></a>'; }		
 	if(!empty($theme_options['flickr_link'])) 		{ $out .= '<a class="flickr" href="'	. esc_url($theme_options['flickr_link']) 	. '" target="_blank"></a>'; }		
 	if(!empty($theme_options['youtube_url'])) 		{ $out .= '<a class="youtube" href="'	. esc_url($theme_options['youtube_url']) 	. '" target="_blank"></a>'; }		
 	if(!empty($theme_options['rss_link'])) 			{ $out .= '<a class="rss" href="'		. esc_url($theme_options['rss_link']) 		. '" target="_blank"></a>'; }			
+	if(!empty($theme_options['vk_link'])) 			{ $out .= '<a class="vk" href="'		. esc_url($theme_options['vk_link']) 		. '" target="_blank"></a>'; }			
 	echo $out;
 }
 

@@ -436,6 +436,7 @@ return array(
 				'flickr_link'		=> '',
 				'youtube_url'		=> '',
 				'rss_link'			=> '',
+				'vk_link'			=> '',
 
 				'custom_css'        => stripslashes('')
 		);
