@@ -1,14 +1,12 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300);.form-admin-fruitful {font-family: 'Arial', sans-serif;} 
+.form-admin-fruitful {font-family: 'Arial', sans-serif;} 
 .form-admin-fruitful h4 {font-weight: normal}
 .form-admin-fruitful .header, 
 .form-admin-fruitful .footer, 
 .form-admin-fruitful .content {float:left;  width: 914px;}
 .form-admin-fruitful .header, 
 .form-admin-fruitful .footer  {padding: 10px 10px 10px 0; width: 892px;}
-.form-admin-fruitful .header  {}
 .form-admin-fruitful .footer p.submit {line-height:10px; padding:0}
 .form-admin-fruitful .content 	{position:relative; min-height:600px}
-.form-admin-fruitful .footer 	{-webkit-border-bottom-right-radius: 6px; -webkit-border-bottom-left-radius: 6px; -moz-border-radius-bottomright: 6px; -moz-border-radius-bottomleft: 6px; border-bottom-right-radius: 6px; border-bottom-left-radius: 6px;}
 .form-admin-fruitful .footer .button-primary, 
 .form-admin-fruitful .header .button-primary {float:right; width:150px; height:30px; }
 .form-admin-fruitful .header p.submit {padding:0;}
@@ -71,7 +69,8 @@ a:hover, a:active, a:focus {	outline: 0; }
 .form-admin-fruitful .content .settings-section input#menu_btn_color,
 .form-admin-fruitful .content .settings-section input#menu_boxsh_color,
 .form-admin-fruitful .content .settings-section input#menu_hover_color, 
-.form-admin-fruitful .content .settings-section input#menu_txtsh_color  {float: left; width: 75px; margin: 5px 20px;}
+.form-admin-fruitful .content .settings-section input#menu_txtsh_color, 
+.form-admin-fruitful .content .settings-section input#header_bg_color  {float: left; width: 75px; margin: 5px 20px;}
 .form-admin-fruitful .content .settings-section .form-table tbody tr td #upload_bg_preview {display:none}
 .form-admin-fruitful .content .settings-section .socials { float: left; margin: -12px 0 0; width: 100%;}
 .form-admin-fruitful .content .settings-section  h1, 
@@ -98,7 +97,7 @@ a:hover, a:active, a:focus {	outline: 0; }
 .form-admin-fruitful .content .settings-section .settings-form-row .box-options  h4.full-width { color: #3E3E3E; font-family: Arial; font-size: 13px; font-weight: normal; margin: 0 0 2px;} 
 .form-admin-fruitful .content .settings-section .settings-form-row .box-options .text_fonts .sample_text {  border: 1px solid #DDDDDD; float: left; margin: 0 250px 10px 0; padding: 10px; width: 275px;}
 .form-admin-fruitful .content .settings-section .settings-form-row .box-options .box-option {float:left; width:100%; margin:0px 0 10px 0;  }
-.form-admin-fruitful .content .settings-section .settings-form-row .box-options .upload_button_div {float:left; width:100%; margin-bottom:20px}
+.form-admin-fruitful .content .settings-section .settings-form-row .box-options .upload_button_div {float:left; width:100%; margin:20px 0;}
 .ui-dialog {background: url(../images/form-reset.png) no-repeat 0 0 transparent; float:left}
 .ui-dialog-titlebar 		 	{float: left; padding: 15px 0; text-align: center; width: 100%; font-size: 14px; color: #333; font-weight: bold;}
 .ui-dialog-titlebar-close	{display:none}.ui-dialog-buttonset 		{float: left; margin: 2px 0 0 35px;}
@@ -135,6 +134,7 @@ a:hover, a:active, a:focus {	outline: 0; }
 .box-image .img-container.favicon {max-width:16px; max-height:16px; height:16px;}
 .box-image .img-container.custom-slide {max-width:608px; max-height:300px; height:300px; border: 0; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px;}
 .box-image .of-area {float: left; height: 100px; margin: 0 0 10px; width: 100%; }
+#btn_idc {   float: left; height: 30px; padding: 7px; width: 100%; max-width:100px;}
 #css-text, #footer-text { background: none repeat scroll 0 0 #F9F9F9; font-family: Consolas,Monaco,monospace; font-size: 12px; outline: 0 none; }	
 #css-text:focus, #footer-text:focus {border-color:#aaa;}
 

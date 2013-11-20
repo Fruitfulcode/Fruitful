@@ -14,10 +14,13 @@
 		<span class="day_post"><?php print $day; ?></span>
 		<span class="month_post"><?php print $month_abr; ?></span>
 	</div>
+	
 	<div class="post-content">	
-		<header class="post-header">
-			<h1 class="post-title"><?php the_title(); ?></h1>
-		</header><!-- .entry-header -->
+		<?php if (get_the_title() != '') : ?>
+			<header class="post-header">
+				<h1 class="post-title"><?php the_title(); ?></h1>
+			</header><!-- .entry-header -->
+		<?php endif; ?>	
 
 	<div class="entry-content">
 		<?php the_content(); ?>

@@ -7,55 +7,42 @@ jQuery(document).ready(function($) {
 		
 		/*Fancy Box*/
 	
-		$(".fancybox").fancybox({
-				padding		: 0,
-				openEffect 	: 'elastic',
-				openSpeed  	: 150,
-				closeEffect : 'elastic',
-				closeSpeed  : 150,
-				width 		: 800,
-				height 		: 600,
-				maxWidth 	: 1024,
-				maxHeight 	: 768,
-				closeClick 	: true,
-				helpers 	: {
-					overlay : {
-							css : {
-								'background' : 'rgba(0,0,0,0.25)'
-									}
-								}
-							}
+		if ($(".fancybox").length > 0) {
+			$(".fancybox").fancybox({
+				'overlayShow'	 : true,
+				'transitionIn'	 : 'elastic',
+				'transitionOut'	 : 'elastic',
+				'padding'		 : 0,
+				'autoScale'		 : false,
+				'speedIn' 		 : 250,
+				'speedOut'  	 : 250,
+				'width' 		 : 800,
+				'height' 		 : 600,
+				'overlayOpacity' : 0.25,
+				'overlayColor'   : '#000',
+				'autoScale' : true,
+				'autoDimensions' : false,
+				'centerOnScroll' : true
 		});
+		}
 		
 		$('#back-top a').click(function () {
-			$('body,html').animate({  scrollTop: 0}, 800)
+			$('body,html').animate({  scrollTop: 0}, 850)
 			return false;
 		});
 		
-		$("#tabbed-nav").zozoTabs({
-					position: "top-left",
-					theme: "gray",
-					rounded: true,
-					shadows: true,
-					autoContentHeight: true,
-					size: "large",
-					orientation: "vertical",
-					responsive: true,
-					responsiveDelay: 0,
-					defaultTab: "tab1",
-					style: "underlined",
-					animation: {
-									easing: "easeInOutExpo",
-									duration: 500,
-									effects: "fade"
-								}
-		});
+		if ($(".tabbed-nav").length > 0 ) {
+			$(".tabbed-nav").easyResponsiveTabs({
+				type: 'vertical',
+				width: 'auto',
+				fit: true
+			});
+		}
 });
 
 jQuery(window).bind('scroll resize', function() {	
 	if (ThGlobal.is_fixed_header != -1) {
 		var outher_height = jQuery(".head-container").outerHeight()
-		
 		if (jQuery(window).scrollTop() > outher_height) {
 			if (jQuery('#wpadminbar').length > 0) {
 				jQuery(".head-container").addClass('fixed is_indent'); 

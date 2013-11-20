@@ -88,12 +88,12 @@ jQuery(document).ready(function() {
 					};	
 		 
 			jQuery.post(ajaxurl, data, function(response) {
-				  
-				  if (jQuery("ul.slides li.slide").length > 0) {
-					  jQuery("ul.slides li.slide").last().after(response);
-						} else {
-							jQuery("ul.slides").append(response);
-					  }
+				if (jQuery("ul.slides li.slide").length > 0) {
+					jQuery("ul.slides li.slide").last().after(response);
+				} else {
+					jQuery("ul.slides").append(response);
+				}
+				jQuery('input[type=checkbox]').ezMark();  
 	          });
 	          return false;
 		});

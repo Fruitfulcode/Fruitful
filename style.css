@@ -14,10 +14,6 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 
-/*Style Font Family*/
-	@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300);
-/*End Style Font Family*/
-
 html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, font, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td {
     border:0;
     font-family:inherit;
@@ -383,10 +379,13 @@ a:hover, a:active {
     outline:0;
 }
 .site-content .entry-content p a img, .site-content .entry-content p img {
-    padding:10px;
 	box-shadow: 0 3px 4px rgba(0, 0, 0, 0.5);
-
 }
+
+.entry-content img, .entry-summary img, .comment-content img, .widget img, .wp-caption {
+    max-width: 100%;
+}
+
 a img, img {
     border:0;
 }
@@ -811,7 +810,7 @@ a:hover,a:focus,a:active {
 }
 .site-header img, img.size-full {
     width:auto;
-	max-width: 96%;
+	max-width: 100%;
 }
 .entry-content img.wp-smiley,.comment-content img.wp-smiley {
     border:none;
@@ -833,7 +832,8 @@ a:hover,a:focus,a:active {
 }
 
 .entry-thumbnail .wp-post-image {
-    height: auto;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.5);
+	height: auto;
     width: 100%;
 }
 
@@ -848,7 +848,6 @@ a:hover,a:focus,a:active {
 }
 .wp-caption img {
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.5);
-    padding: 10px;
 }
 .wp-caption-text {
     text-align:center;
@@ -973,8 +972,7 @@ header.post-header, .blog_post {
     height:60px;
     color:#fff;
     float:left;
-    margin:0 20px 0 0;
-	border:1px solid #8DAF3D;
+    margin:0 22px 0 0;
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
 	border-radius: 50%;
@@ -1211,6 +1209,11 @@ table tfoot td ul {
 
 table tfoot  li { 
 	display: inline; 
+}
+
+.post-content .entry-content table tbody tr th a {
+	color:#F15A23;
+	text-decoration:none;
 }
 
 table tfoot li a { 

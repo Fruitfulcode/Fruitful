@@ -147,44 +147,110 @@ function fruitful_bool_list() {
 function fruitful_fonts_list() {
 	$font_family_options = array(
 		'0' => array(
-			'value' =>	   'Verdana, Geneva, sans-serif',
-			'label' => __( 'Verdana, Geneva, sans-serif', 'fruitful' )
-		),
-		'1' => array(
-			'value' =>	   'Georgia, Times New Roman, Times, serif',
-			'label' => __( 'Georgia, Times New Roman, Times, serif', 'fruitful' )
-		),
-		'2' => array(
-			'value' => 	   	'Courier New, Courier, monospace',
-			'label' => __( 	'Courier New, Courier, monospace', 'fruitful' )
-		),
-		'3' => array(
-			'value' => 	   'Arial, Helvetica, sans-serif',
+			'value' =>	   'Arial, Helvetica, sans-serif',
 			'label' => __( 'Arial, Helvetica, sans-serif', 'fruitful' )
 		),
+		'1' => array(
+			'value' =>	   'Arial Black, Gadget, sans-serif',
+			'label' => __( 'Arial Black, Gadget, sans-serif', 'fruitful' )
+		),
+		'2' => array(
+			'value' => 	   	'Comic Sans MS, Textile, cursive',
+			'label' => __( 	'Comic Sans MS, Textile, cursive', 'fruitful' )
+		),
+		'3' => array(
+			'value' => 	   'Courier New, Courier, monospace',
+			'label' => __( 'Courier New, Courier, monospace', 'fruitful' )
+		),
 		'4' => array(
+			'value' => 	   'Georgia, Times New Roman, Times, serif',
+			'label' => __( 'Georgia, Times New Roman, Times, serif', 'fruitful' )
+		),
+		'5' => array(
+			'value' => 	   'Impact, Charcoal, sans-serif',
+			'label' => __( 'Impact, Charcoal, sans-serif', 'fruitful' )
+		),
+		'6' => array(
+			'value' => 	   'Lucida Console, Monaco, monospace',
+			'label' => __( 'Lucida Console, Monaco, monospace', 'fruitful' )
+		),
+		'7' => array(
+			'value' => 	   'Lucida Sans Unicode, Lucida Grande, sans-serif',
+			'label' => __( 'Lucida Sans Unicode, Lucida Grande, sans-serif', 'fruitful' )
+		),
+		'8' => array(
+			'value' => 	   'Palatino Linotype, Book Antiqua, Palatino, serif',
+			'label' => __( 'Palatino Linotype, Book Antiqua, Palatino, serif', 'fruitful' )
+		),
+		'9' => array(
 			'value' => 	   'Tahoma, Geneva, sans-serif',
 			'label' => __( 'Tahoma, Geneva, sans-serif', 'fruitful' )
 		),
-		'5' => array(
-			'value' => 	   'Trebuchet MS, Arial, Helvetica, sans-serif',
-			'label' => __( 'Trebuchet MS, Arial, Helvetica, sans-serif', 'fruitful' )
-		),
-		'6' => array(
-			'value' => 	   'Arial Black, Gadget, sans-serif',
-			'label' => __( 'Arial Black, Gadget, sans-serif', 'fruitful' )
-		),
-		'7' => array(
+		'10' => array(
 			'value' => 	   'Times New Roman, Times, serif',
 			'label' => __( 'Times New Roman, Times, serif', 'fruitful' )
 		),
-		'8' => array(
-			'value' => 	   'Comic Sans MS, cursive',
-			'label' => __( 'Comic Sans MS, cursive', 'fruitful' )
+		'11' => array(
+			'value' => 	   'Trebuchet MS, Helvetica, sans-serif',
+			'label' => __( 'Trebuchet MS, Helvetica, sans-serif', 'fruitful' )
 		),
-		'9' => array(
+		'12' => array(
+			'value' => 	   'Verdana, Geneva, sans-serif',
+			'label' => __( 'Verdana, Geneva, sans-serif', 'fruitful' )
+		),
+		'13' => array(
+			'value' => 	   'MS Sans Serif, Geneva, sans-serif',
+			'label' => __( 'MS Sans Serif, Geneva, sans-serif', 'fruitful' )
+		),
+		'14' => array(
+			'value' => 	   'MS Serif, New York, serif',
+			'label' => __( 'MS Serif, New York, serif', 'fruitful' )
+		),
+		
+		/*Google fonts*/	
+		'15' => array(
 			'value' => 	   'Open Sans, sans-serif',
 			'label' => __( 'Open Sans, sans-serif', 'fruitful' )
+		),
+		'16' => array(
+			'value' => 	   'Lobster, cursive',
+			'label' => __( 'Lobster, cursive', 'fruitful' )
+		),
+		'17' => array(
+			'value' => 	   'Josefin Slab, serif',
+			'label' => __( 'Josefin Slab, serif', 'fruitful' )
+		),
+		'18' => array(
+			'value' => 	   'Arvo, serif',
+			'label' => __( 'Arvo, serif', 'fruitful' )
+		),
+		'19' => array(
+			'value' => 	   'Lato, sans-serif',
+			'label' => __( 'Lato, sans-serif', 'fruitful' )
+		),
+		'20' => array(
+			'value' => 	   'Vollkorn, serif',
+			'label' => __( 'Vollkorn, serif', 'fruitful' )
+		),
+		'21' => array(
+			'value' => 	   'Abril Fatface, cursive',
+			'label' => __( 'Abril Fatface, cursive', 'fruitful' )
+		),
+		'22' => array(
+			'value' => 	   'Ubuntu, sans-serif',
+			'label' => __( 'Ubuntu, sans-serif', 'fruitful' )
+		),
+		'23' => array(
+			'value' => 	   'PT Sans, sans-serif',
+			'label' => __( 'PT Sans, sans-serif', 'fruitful' )
+		),
+		'24' => array(
+			'value' => 	   'Old Standard TT, serif',
+			'label' => __( 'Old Standard TT, serif', 'fruitful' )
+		),
+		'25' => array(
+			'value' => 	   'Droid Sans, sans-serif',
+			'label' => __( 'Droid Sans, sans-serif', 'fruitful' )
 		)
 	);
 
@@ -229,11 +295,11 @@ function fruitful_custom_do_settings_fields($page, $section) {
     foreach ( (array) $wp_settings_fields[$page][$section] as $field ) {
         print '<div id="set_form_row_' . $id_ .'" class="settings-form-row">';
         if ( !empty($field['args']['label_for']) )
-            print '<h3 class="main-header-options">' . $field['title'];
+            print '<h3 class="main-header-options">' . esc_attr($field['title']);
         else
-            print '<h3 class="main-header-options">' . $field['title'];
+            print '<h3 class="main-header-options">' . esc_attr($field['title']);
 			print '</h3>';
-				print '<span class="add_element_info">'.$field['args']['info'].'</span>';
+				print '<span class="add_element_info">'. $field['args']['info'] .'</span>';
 				print '<div class="box-options">';
 				call_user_func($field['callback'], $field['args']);
 		print '</div></div>';
@@ -243,14 +309,14 @@ function fruitful_custom_do_settings_fields($page, $section) {
 
 function fruitful_add_admin_style() {
 	wp_enqueue_style('admin-style', 		get_template_directory_uri() . '/inc/css/admin.css');
+	wp_enqueue_style('fonts-style', 		get_template_directory_uri() . '/inc/css/fonts-style.css');
 	wp_enqueue_style('colorpicker-style',	get_template_directory_uri() . '/inc/js/colorpicker/colorpicker.css');
 	wp_enqueue_style('ch-style',			get_template_directory_uri() . '/inc/js/ch/ch.css');
 	wp_enqueue_style('sl-style',			get_template_directory_uri() . '/inc/js/sl/jquery.formstyler.css');
-	wp_enqueue_style('dialog', 				'http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css');
+	wp_enqueue_style('dialog', 				get_template_directory_uri() . '/inc/js/jquery-ui.min.css');
 }
 
 function fruitful_add_jquery_script() {
-	
 	if( function_exists( 'wp_enqueue_media' ) ){
 		wp_enqueue_media();
 	} else {
@@ -262,19 +328,18 @@ function fruitful_add_jquery_script() {
 	wp_enqueue_script('color-picker',		get_template_directory_uri() . "/inc/js/colorpicker/colorpicker.js", array('jquery'));
 	wp_enqueue_script('chJq',				get_template_directory_uri() . "/inc/js/ch/ch.js", array('jquery'));
 	wp_enqueue_script('slJq',				get_template_directory_uri() . "/inc/js/sl/jquery.formstyler.min.js", array('jquery'));
-	wp_enqueue_script('dialog', 			'http://code.jquery.com/ui/1.10.3/jquery-ui.js',  array('jquery'));
+	wp_enqueue_script('dialog', 			get_template_directory_uri() . "/inc/js/jquery-ui.min.js",  array('jquery'));
 	wp_enqueue_script('uploads_',			get_template_directory_uri() . "/inc/js/uploads_.js", array('jquery'));
 	wp_enqueue_script('admin-jQuery-fruit',	get_template_directory_uri() . "/inc/js/main.js", array('jquery'));
 }
 
 function fruitful_get_box_upload_image($val, $field, $btnclassup = 'upload_btn', $btnclassr = 'reset_btn', $imgcontclass = '') {
 		 $out  = '';
-		
 		 $out .= '<div class="box-image">';
 			if ($val != '') {
 				$out .= '<div class="img-container '.$imgcontclass.'">';
 					$image_attributes = wp_get_attachment_image_src( $val, 'full');
-					$out .= '<img src="'.$image_attributes[0].'" alt="" />';
+					$out .= '<img src="'.esc_url_raw($image_attributes[0]).'" alt="" />';
 				$out .= '</div>	';
 			}
 			
@@ -293,27 +358,26 @@ function fruitful_get_box_upload_image($val, $field, $btnclassup = 'upload_btn',
 }
 
 
-function fruitful_get_box_upload_slide($attach_id, 
-									   $link_url,	
-									   $ind,
-									   $btnclassup 	= 'upload_btn', 
-									   $btnclassr 	= 'reset_btn'
-									  ) {
+function fruitful_get_box_upload_slide($attach_id, $link_url, $is_blank, $ind, $btnclassup = 'upload_btn',  $btnclassr = 'reset_btn') {
 	$out  = ''; 
 	$out .= '<div class="box-image">';
 	if ($attach_id != -1) {
 		$out .= '<div class="img-container custom-slide">';
 			$image_attributes = wp_get_attachment_image_src($attach_id, 'full');
-			$out .= '<img src="'.$image_attributes[0].'" alt="" />';
+			$out .= '<img src="'.esc_url_raw($image_attributes[0]).'" alt="" />';
 		$out .= '</div>	';
 				
 	}
-	
 		/*Link out for Slider*/
-		$out .= '<label for="">'. __('Link URL', 'fruitful') .'</label>';
-		$out .= '<input type="text" name="fruitful_theme_options[slides][slide-'.$ind.'][link]" id="slide-link-'.$ind.'" class=""slide-link-'.$ind.'"" value="'.esc_url($link_url).'"/>';
+		$out .= '<label for="slide-link-'.$ind.'">'. __('Link URL', 'fruitful') .'</label>';
+		$out .= '<input type="text" name="fruitful_theme_options[slides][slide-'.$ind.'][link]" id="slide-link-'.$ind.'" class="slide-link-'.$ind.'" value="'.esc_url($link_url).'"/>';
+		$out .= '<div class="clear"></div>';
+
+		$out .= '<label for="link-blank-'.$ind.'">';
+		$out .= '<input type="checkbox" name="fruitful_theme_options[slides][slide-'.$ind.'][is_blank]" id="link-blank-'.$ind.'" class="link-target-'.$ind.'" '. checked( 'on', $is_blank, false) .'/>';
+		$out .= __('Target "_blank"', 'fruitful') .'</label>';
 	
-		$out .= '<input class="of-input" name="fruitful_theme_options[slides][slide-'.$ind.'][attach_id]"   id="attach-'.$ind.'" type="hidden" value="'. intval($attach_id) .'" />';
+		$out .= '<input class="of-input" name="fruitful_theme_options[slides][slide-'.$ind.'][attach_id]" id="attach-'.$ind.'" type="hidden" value="'. intval($attach_id) .'" />';
 		$out .= '<div class="upload_button_div">';
 			$out .= '<span data-imagetype="slide" class="button '. $btnclassup .'" id="add-slide-btn-'. $ind .'">Upload Image</span>';
 		$out .= '</div>';
@@ -360,8 +424,6 @@ return array(
 			
 				/*logo*/
 				'logo_img'			=> '',
-				//'logo_w'			=> '160',
-				//'logo_h'			=> '60',
 				'fav_icon'			=> '',
 				
 				/*menu*/
@@ -369,6 +431,7 @@ return array(
 				'menu_btn_color'	=> '#e1704b',
 				'menu_hover_color'	=> '#ffffff',
 				'menu_font_color'	=> '#333333',		
+				'header_bg_color'	=> '#ffffff',		
 				
 				/*fonts*/
 				'h_font_family'		=> 'Open Sans, sans-serif',

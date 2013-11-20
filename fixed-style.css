@@ -231,9 +231,13 @@ a:hover, a:active {
     outline:0;
 }
 .site-content .entry-content p a img, .site-content .entry-content p img {
-    padding:10px;
 	box-shadow: 0 3px 4px rgba(0, 0, 0, 0.5);
 }
+
+.entry-content img, .entry-summary img, .comment-content img, .widget img, .wp-caption {
+    max-width: 100%;
+}
+
 a img, img {
     border:0;
 }
@@ -657,7 +661,7 @@ a:hover,a:focus,a:active {
 }
 .site-header img,img.size-full {
     width:auto;
-	max-width: 96%;
+	max-width: 100%;
 }
 .entry-content img.wp-smiley,.comment-content img.wp-smiley {
     border:none;
@@ -679,7 +683,8 @@ a:hover,a:focus,a:active {
 }
 
 .entry-thumbnail .wp-post-image {
-    height: auto;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.5);
+	height: auto;
     width: 100%;
 }
 
@@ -694,7 +699,6 @@ a:hover,a:focus,a:active {
 }
 .wp-caption img {
     box-shadow: 0 3px 4px rgba(0, 0, 0, 0.5);
-    padding: 10px;
 }
 .wp-caption-text {
     text-align:center;
@@ -819,8 +823,7 @@ header.post-header, .blog_post {
     height:60px;
     color:#fff;
     float:left;
-    margin:0 20px 0 0;
-	border:1px solid #8DAF3D;
+    margin:0 22px 0 0;
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
 	border-radius: 50%;
@@ -1059,6 +1062,11 @@ table tfoot  li {
 	display: inline; 
 }
 
+.post-content .entry-content table tbody tr th a {
+	color:#F15A23;
+	text-decoration:none;
+}
+
 table tfoot li a { 
 	text-decoration: none; 
 	display: inline-block;  
@@ -1220,7 +1228,6 @@ address {
 	list-style-type: none;
     padding: 0;
 }
-
 
 #comments.comments-area ol.commentlist li {
 	border-bottom: thin dotted #F15A23;

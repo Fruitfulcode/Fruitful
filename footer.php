@@ -25,6 +25,7 @@
 		</div>
 		</div><!-- #main .site-main -->
 		</div><!-- #page .hfeed .site -->
+		<!--WordPress Development by Fruitful Code-->
 <?php wp_footer(); ?>
 </body>
 </html>

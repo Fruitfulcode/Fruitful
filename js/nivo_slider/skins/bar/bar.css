@@ -11,12 +11,49 @@ Supports Thumbs: false
 .theme-bar.slider-wrapper {
     position: relative;
     overflow: hidden;
-	margin:0 0 20px 0;
+	margin:0 0 25px 0;
 }
 .theme-bar .nivoSlider {
 	position:relative;
 	background:#fff url(loading.gif) no-repeat 50% 50%;
 }
+
+.theme-bar.slider-wrapper:after, .theme-bar.slider-wrapper:before { 
+	z-index: -1;
+	position: absolute;
+	content: "";
+	bottom: 15px;
+	left: 5px;
+	width: 50%;
+	top: 95%;
+	max-width:600px;
+	background: #333;
+	-webkit-box-shadow: 0 15px 10px #333;
+	-moz-box-shadow: 0 15px 10px #333;
+	box-shadow: 0 15px 10px #333;
+	-webkit-transform: rotate(-1deg);
+	-moz-transform: rotate(-1deg);
+	-o-transform: rotate(-1deg);
+	-ms-transform: rotate(-1deg);
+	transform: rotate(-1deg);
+	-moz-opacity: .1;
+	-khtml-opacity: .1;
+	opacity: .1;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha"(Opacity=10);
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=10);
+	filter:alpha(opacity=10);
+}	
+
+.theme-bar.slider-wrapper:after {
+	-webkit-transform: rotate(1deg);
+	-moz-transform: rotate(1deg);
+	-o-transform: rotate(1deg);
+	-ms-transform: rotate(1deg);
+	transform: rotate(1deg);
+	right: 5px;
+	left: auto;
+}
+
 .theme-bar .nivoSlider img {
 	position:absolute;
 	top:0px;
@@ -58,15 +95,16 @@ Supports Thumbs: false
 }
 .theme-bar .nivo-controlNav a {
 	display:inline-block;
-	width:22px;
-	height:22px;
+	width:13px;
+	height:13px;
 	background:url(bullets.png) no-repeat;
 	text-indent:-9999px;
 	border:0;
-	margin: 5px 2px 0 2px;
+	margin: 10px 8px 0 8px;
+	background-position:-13px 0;
 }
 .theme-bar .nivo-controlNav a.active {
-	background-position:0 -22px;
+	background-position:0 0;
 }
 
 .theme-bar .nivo-directionNav a {
@@ -78,7 +116,7 @@ Supports Thumbs: false
 	bottom: 10px;
 	z-index: 11;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 13px;
+	font-size: 14px;
 	line-height: 20px;
 	opacity: 0.5;
     -webkit-transition: all 200ms ease-in-out;

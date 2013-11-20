@@ -10,17 +10,28 @@
 	<?php $day 		 = get_the_date('d'); 
 		  $month_abr = get_the_date('M');
 	?>
+	<?php if (get_the_title() == '') : ?>
+		<a href="<?php the_permalink(); ?>" rel="bookmark">
+	<?php endif; ?>	
+	
 	<div class="date_of_post">
 		<span class="day_post"><?php print $day; ?></span>
 		<span class="month_post"><?php print $month_abr; ?></span>
 	</div>
+	<?php if (get_the_title() == '') : ?>
+		</a>
+	<?php endif; ?>
+	
 	<div class="post-content">	
 	<header class="post-header">
-		<h1 class="post-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'fruitful' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+		<?php if (get_the_title() != '') : ?>
+			<h1 class="post-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'fruitful' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+		<?php endif; ?>
+		
 		<?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
-		<div class="entry-thumbnail">
-			<?php the_post_thumbnail(); ?>
-		</div>
+			<div class="entry-thumbnail">
+				<?php the_post_thumbnail(); ?>
+			</div>
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 

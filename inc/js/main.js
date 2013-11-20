@@ -102,7 +102,8 @@
 			jQuery('#menubntcolor div').css('backgroundColor', '#' + hex);			
 			jQuery('#menu_btn_color').val('#' + hex);		
 		}	
-		});		
+	});		
+	
 	jQuery('#menuboxshcolor').ColorPicker({		
 			color: jQuery('#menu_boxsh_color').val(),		
 			onShow: function (colpkr) {			
@@ -165,8 +166,37 @@
 			jQuery('#menufontcolor div').css('backgroundColor', '#' + hex);			
 			jQuery('#menu_font_color').val('#' + hex);		
 		}	
-		});		 				
-		
+	});		 				
+	
+	jQuery('#headercolor').ColorPicker({		
+		color: jQuery('#header_color').val(),		
+		onShow: function (colpkr) {			
+			jQuery(colpkr).fadeIn(500);			
+			return false;		
+		},		
+		onHide: function (colpkr) {		
+			jQuery(colpkr).fadeOut(500);		
+			return false;		
+		},		
+		onChange: function (hsb, hex, rgb) {			
+			jQuery('#headercolor div').css('backgroundColor', '#' + hex);			
+			jQuery('#header_bg_color').val('#' + hex);		
+		}	
+	});		 					
+	
+	jQuery('#btn_idc').live('click', function() {	       
+		vCurrElem = jQuery('#btn_idc');
+		var data = { action: 'run_import_dummy_data', type: 'add', data: '' };			
+		jQuery.post(ajaxurl, data, function(is_import) { 
+			if (is_import) {
+				show_message_import();	               
+				t = setTimeout('fade_message()', 1000);	            
+				vCurrElem.prop('disabled', true);
+			}
+		});	
+	return false;	
+	});				
+	
 	jQuery('#form-admin-fruitful').submit(function() {	       
 		var data = jQuery(this).serialize();	       
 		jQuery.post(ajaxurl, data, function(response) {				
@@ -250,12 +280,17 @@ function show_message(n) {
 	}  else { 
 		jQuery('.save-options').html('<div class="icon-al"></div><div class="text">No data saved...</div>').show(); 
 	}	
-}	     
+}
 
 function fade_message() {	
 	jQuery('.save-options').fadeOut(1000);	
 	clearTimeout(t);
 }			
+
+function show_message_import() {	
+	jQuery('.save-options').html('<div class="icon-sc"></div><div class="text">Home page create...</div>').show(); 
+}
+
 
 jQuery.fn.center = function () {    
 		var heightRatio = (
