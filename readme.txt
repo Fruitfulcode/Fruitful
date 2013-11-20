@@ -61,7 +61,7 @@ For best results, try uploading a logo with the following maximum dimensions => 
 Configure colors of main menu in theme options
 
 === Fonts ===
-Choose web-safe fonts or upload own.
+Choose web-safe fonts and 20 popular Google fonts.
 
 === 2 Jquery slider included ===
 - Nivoslider
@@ -76,12 +76,13 @@ Easy add your links to your social profiles, which will be display in footer as 
 
 The themes is ready for translation and already translated in Russian.
 We are open for users translations, translation can be included in new theme versions.
+Files ru_Ru.po ru_Ru.mo icluded. Default language is english.
 
 -------------------------------------------------------
     Credits
 -------------------------------------------------------
-
-* Open Sans font (available through Google web Fonts: http://www.google.com/webfonts/specimen/Open+Sans), licensed under Apache License Version 2 (http://www.apache.org/licenses/LICENSE-2.0.html)
+ 
+* Underscores starter theme http://underscores.me/ Licensed under GPL licenses
 * FlexSlider by WooThemes under the GPLv2 license (http://www.gnu.org/licenses/gpl-2.0.html)
 * Nivo Slider jQuery script by dev7studios under the MIT license. http://dev7studios.com/plugins/nivo-slider/
 * Fabcybox jQuery script http://fancybox.net/ Licensed under both MIT and GPL licenses
@@ -89,10 +90,31 @@ We are open for users translations, translation can be included in new theme ver
 * Mousewheel jQuery script http://adomas.org/javascript-mouse-wheel/ Licensed under the MIT License.
 * SyntaxHighlighter jQuery script http://alexgorbatchev.com/SyntaxHighlighter/ Licensed under the MIT License.
 * colorpicker js http://www.eyecon.ro/ Licensed under both MIT and GPL licenses
+* Easy Responsive Tabs to Accordion https://github.com/samsono/Easy-Responsive-Tabs-to-Accordion MIT and GPL licenses
+* Fonts by Google fonts http://www.google.com/fonts licensed under Apache License Version 2 (http://www.apache.org/licenses/LICENSE-2.0.html)
 
 -------------------------------------------------------
     Changelog
 -------------------------------------------------------
+
+= 1.1 = (20.11.13)
+* Install home page (Import dummy data)
+* New design skins for Nivo slider and Flex slider
+* New popular google fonts added
+* New attribute columns_count="3" added to shortcode [info_box_area]
+* New default icon for columns shortcode 
+* New Easy Responsive Tabs to Accordion
+* New theme option, background color for header
+* Update slider: Target="_blank" option per slides.
+* Bug fix post with no title added link to circle with data
+* Bug fix 1200px image width in content section
+* New files fancybox 1.3.4 version 
+* Update for description in theme options 
+* Update for ru_RU translation. 
+* New files jquery-ui.css, jquery-ui.js
+* Source code optimization
+* Css changes
+
 
 = 1.0.9 = (15.11.13)
 * XSS vulnerabilities bug fix
@@ -103,6 +125,7 @@ We are open for users translations, translation can be included in new theme ver
 * Fancybox now working with class="fancybox"
 * Skype icon added call on cliks
 * Added VK.com icon to social media tab
+* Css changes
 
 = 1.0.8 = (11.11.13)
 * WordPress.org theme preview bug fix
