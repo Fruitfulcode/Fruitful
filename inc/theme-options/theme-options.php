@@ -27,6 +27,7 @@ function fruitful_theme_options_init() {
 	
 	// Register our settings field group
 	add_settings_section('general',			'',  '__return_false', 'theme_options' );
+	add_settings_section('header',			'',  '__return_false', 'theme_options' );
 	add_settings_section('background',		'',  '__return_false', 'theme_options' );
 	add_settings_section('logo', 			'',  '__return_false', 'theme_options' );
 	add_settings_section('menu', 			'',  '__return_false', 'theme_options' );
@@ -42,9 +43,12 @@ function fruitful_theme_options_init() {
 	
 	add_settings_field( 'general_rs', 		__( 'Layout', 	'fruitful' ),	'fruitful_get_responsive_design',	'theme_options',  'general', array('info' => __( 'Theme supported 2 types of html layout. Default responsive  setting which adapt for mobile devices and static page with fixed width. Uncheck arrow below if you need static website display. ', 'fruitful' )));
 	add_settings_field( 'general_cm',		__( 'Comments', 'fruitful' ), 	'fruitful_get_general_comment',  	'theme_options',  'general', array('info' => __( 'If you want to display comments on your post page or page, select options below.', 'fruitful' )));
-	add_settings_field( 'general_hd',		__( 'Header', 	'fruitful' ), 	'fruitful_get_general_header',  	'theme_options',  'general', array('info' => __( 'Options relating to the website header', 'fruitful' )));
 	add_settings_field( 'general_ds',		__( 'Default theme style css', 'fruitful' ),'fruitful_get_style_theme', 'theme_options',  'general', array('info' => __( 'Default theme styles. Theme option for styling is not working, if this option enable.', 'fruitful' )));
 	add_settings_field( 'general_rb',		__( 'Reset all options to default', 'fruitful' ),	'fruitful_reset_btn',  'theme_options',  'general', array('info' => __( 'Reset Button. ', 'fruitful' )));
+	
+	add_settings_field( 'header_hd',		__( 'Fixed Header', 		'fruitful' ), 	'fruitful_get_general_header', 	'theme_options',  'header', array('info' => __( 'Options relating to the website header', 'fruitful' )));
+	add_settings_field( 'header_hi',		__( 'Header Background', 	'fruitful' ), 	'fruitful_get_header_img', 		'theme_options',  'header', array('info' => __( 'Upload your background image for header background. (Supported files .png, .jpg, .gif)', 'fruitful' )));
+	
 	
 	add_settings_field( 'background_image', __( 'Background Image', 'fruitful' ),  'fruitful_get_background_img',   'theme_options',  'background', array('info' => __( 'Upload your background image for site background. (Supported files .png, .jpg, .gif)', 'fruitful' )));
 	add_settings_field( 'background_color', __( 'Background Color ', 'fruitful' ), 'fruitful_get_background_color', 'theme_options',  'background', array('info' => __( 'Choose color for body background', 'fruitful' )));
@@ -143,7 +147,7 @@ function fruitful_get_theme_options() {
 function fruitful_demo_content() {
 	?>	
 	<div class="box-option">
-		<input type="button" id="btn_idc" class="btn_idc button-primary" value="<?php _e('Dummy data', 'fruitful');?>"/>
+		<input type="button" id="btn_idc" class="btn_idc button button-primary" value="<?php _e('Dummy data', 'fruitful');?>"/>
 	</div>	
 <?php }
 
@@ -225,6 +229,7 @@ function fruitful_settings_field_socials_links() {
 		<h4>You Tube</h4>		<input id="youtube_url" 	name="fruitful_theme_options[youtube_url]"	type="text"   value="<?php echo esc_url( $options['youtube_url'] ); ?>"/>
 		<h4>RSS</h4>			<input id="rss_link" 		name="fruitful_theme_options[rss_link]" 	type="text"   value="<?php echo esc_url( $options['rss_link'] ); ?>"/>
 		<h4>Vk.com</h4>			<input id="vk_link" 		name="fruitful_theme_options[vk_link]" 		type="text"   value="<?php echo esc_url( $options['vk_link'] ); ?>"/>
+		<h4>E-mail</h4>			<input id="email_link" 		name="fruitful_theme_options[email_link]" 	type="text"   value="<?php echo sanitize_email( $options['email_link'] ); ?>"/>
 	</div>
 	<?php
 }	
@@ -260,11 +265,18 @@ function fruitful_get_background_img () {
 	<?php
 	}
 
+function fruitful_get_header_img () {
+	$options = fruitful_get_theme_options();
+	$upload  = intval($options['header_img']);
+
+	echo fruitful_get_box_upload_image($upload, 'header_img');
+}
+
 function fruitful_get_logo_img () {
 	$options = fruitful_get_theme_options();
 	$upload  = intval($options['logo_img']);
 
-	echo fruitful_get_box_upload_image($upload, 'logo_img', 'upload_btn', 'reset_btn', 'logo');
+	echo fruitful_get_box_upload_image($upload, 'logo_img', 'upload_btn', 'reset_btn', 'logo'); 
 }
 
 
@@ -488,19 +500,19 @@ function fruitful_theme_options_render_page() {
 			<?php submit_button(); ?>
 			<?php settings_errors(); ?>
 		</div>
-		
 			<div class="content">
 				<div class="menu-options">
 					<ul>
 						<li class="current"><a  id="item_0" href="javascript:void(0)" 	title="General Settings"><span id="menu_img_0"></span><?php _e( 'General Settings', 'fruitful' ); ?></a></li>
-						<li><a  id="item_1" href="javascript:void(0)" title="Background">	<span id="menu_img_1"></span><?php _e( 'Background', 'fruitful' ); ?></a></li>
-						<li><a  id="item_2" href="javascript:void(0)" title="Logo">			<span id="menu_img_2"></span><?php _e( 'Logo',   'fruitful' ); ?></a></li>
-						<li><a  id="item_3" href="javascript:void(0)" title="Menu">			<span id="menu_img_3"></span><?php _e( 'Menu', 'fruitful' ); ?></a></li>
-						<li><a  id="item_4" href="javascript:void(0)" title="Fonts">		<span id="menu_img_4"></span><?php _e( 'Fonts', 'fruitful' ); ?></a></li>
-						<li><a  id="item_5" href="javascript:void(0)" title="Slider">		<span id="menu_img_5"></span><?php _e( 'Slider', 'fruitful' ); ?></a></li>
-						<li><a  id="item_6" href="javascript:void(0)" title="Social Links">		<span id="menu_img_6"></span><?php _e( 'Social Links', 'fruitful' ); ?></a></li>
-						<li><a  id="item_7" href="javascript:void(0)" title="Footer">		<span id="menu_img_7"></span><?php _e( 'Footer', 'fruitful' ); ?></a></li>
-						<li><a  id="item_8" href="javascript:void(0)" title="CSS">			<span id="menu_img_8"></span><?php _e( 'Custom CSS', 'fruitful' ); ?></a></li>
+						<li><a  id="item_1" href="javascript:void(0)" title="Header">		<span id="menu_img_1"></span><?php _e( 'Header', 'fruitful' ); ?></a></li>
+						<li><a  id="item_2" href="javascript:void(0)" title="Background">	<span id="menu_img_2"></span><?php _e( 'Background', 'fruitful' ); ?></a></li>
+						<li><a  id="item_3" href="javascript:void(0)" title="Logo">			<span id="menu_img_3"></span><?php _e( 'Logo',   'fruitful' ); ?></a></li>
+						<li><a  id="item_4" href="javascript:void(0)" title="Menu">			<span id="menu_img_4"></span><?php _e( 'Menu', 	'fruitful' ); ?></a></li>
+						<li><a  id="item_5" href="javascript:void(0)" title="Fonts">		<span id="menu_img_5"></span><?php _e( 'Fonts', 	'fruitful' ); ?></a></li>
+						<li><a  id="item_6" href="javascript:void(0)" title="Slider">		<span id="menu_img_6"></span><?php _e( 'Slider', 	'fruitful' ); ?></a></li>
+						<li><a  id="item_7" href="javascript:void(0)" title="Social Links">		<span id="menu_img_7"></span><?php _e( 'Social Links', 'fruitful' ); ?></a></li>
+						<li><a  id="item_8" href="javascript:void(0)" title="Footer">		<span id="menu_img_8"></span><?php _e( 'Footer', 	 'fruitful' ); ?></a></li>
+						<li><a  id="item_9" href="javascript:void(0)" title="CSS">			<span id="menu_img_9"></span><?php _e( 'Custom CSS', 'fruitful' ); ?></a></li>
 					</ul>
 				</div> 	
 				<?php

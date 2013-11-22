@@ -98,8 +98,8 @@ function fruitful_create_home_page() {
 		}
 	}	
 	
-	$content  = '[fruitful_slider]' . "\r";
-	$content .= '[description]Lorem ipsum dolor sit amet, consectetur <span class="text_orange">adipiscing</span> elit. Nullam.[/description]'  . "\r";
+	$content  = '[fruitful_slider]' . "\r\r";
+	$content .= '[description]Lorem ipsum dolor sit amet, consectetur <span class="text_orange">adipiscing</span> elit. Nullam.[/description]'  . "\r\r";
 	
 	foreach ($arr_img_for_post as $img) {
 		$file_url 	 = get_template_directory() . '/inc/func/import_data/' . $img;
@@ -109,11 +109,11 @@ function fruitful_create_home_page() {
 	}
 	
 	if (!empty($i_arr)) {
-		$content .= '[info_box_area]';
-			$content .= sprintf('[info_box icon_url="%1$s" alt="title-1" id="inb_1" type_column="alpha" title="Title 1"]Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis cursus tortor. Cras feugiat urna at dui sollicitudin, ut lobortis libero auctor.[/info_box]', $i_arr[0])  . "\r";
-			$content .= sprintf('[info_box icon_url="%1$s" alt="title-2" id="inb_2" type_column="" title="Title 2"]Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis cursus tortor. Cras feugiat urna at dui sollicitudin, ut lobortis libero auctor.[/info_box]', $i_arr[1])  . "\r";
-			$content .= sprintf('[info_box icon_url="%1$s" alt="title-3" id="inb_3" type_column="omega" title="Title 3"]Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis cursus tortor. Cras feugiat urna at dui sollicitudin, ut lobortis libero auctor.[/info_box]', $i_arr[2])  . "\r";
-		$content .= '[/info_box_area]' . "\r";
+		$content .= '[info_box_area]'. "\r\r";
+			$content .= sprintf('[info_box icon_url="%1$s" alt="title-1" id="inb_1" type_column="alpha" title="Title 1"]Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis cursus tortor. Cras feugiat urna at dui sollicitudin, ut lobortis libero auctor.[/info_box]', $i_arr[0])  . "\r\r";
+			$content .= sprintf('[info_box icon_url="%1$s" alt="title-2" id="inb_2" type_column="" title="Title 2"]Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis cursus tortor. Cras feugiat urna at dui sollicitudin, ut lobortis libero auctor.[/info_box]', $i_arr[1])  . "\r\r";
+			$content .= sprintf('[info_box icon_url="%1$s" alt="title-3" id="inb_3" type_column="omega" title="Title 3"]Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis cursus tortor. Cras feugiat urna at dui sollicitudin, ut lobortis libero auctor.[/info_box]', $i_arr[2])  . "\r\r";
+		$content .= '[/info_box_area]' . "\r\r";
 	}
 	
 	$content .= 'Cras nibh erat, tempor non sagittis ac, vulputate ac lectus. Praesent sed fermentum eros. Mauris sodales suscipit diam, a congue dui commodo ac. Sed convallis rutrum ligula, vitae sollicitudin nisl porttitor nec. Mauris tempor fringilla imperdiet. Pellentesque interdum, tellus nec venenatis venenatis, nisi nulla ultricies leo, tincidunt venenatis risus nisl ac dolor. Donec ante leo, elementum et faucibus tincidunt, dignissim lacinia libero. Suspendisse pharetra in augue in sodales. Etiam luctus dui blandit nisi dictum pretium.' . "\r"; 

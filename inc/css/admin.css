@@ -30,34 +30,42 @@ a:hover, a:active, a:focus {	outline: 0; }
 .form-admin-fruitful .content .menu-options ul li a #menu_img_5,
 .form-admin-fruitful .content .menu-options ul li a #menu_img_6,
 .form-admin-fruitful .content .menu-options ul li a #menu_img_7,
-.form-admin-fruitful .content .menu-options ul li a #menu_img_8  {background-image:url(../images/admin_menu_icon.png); background-repeat:no-repeat; display:block; width:29px; height:25px; float:left; margin: 0 15px 0 0;}
+.form-admin-fruitful .content .menu-options ul li a #menu_img_8,
+.form-admin-fruitful .content .menu-options ul li a #menu_img_9  {background-image:url(../images/admin_menu_icon.png); background-repeat:no-repeat; display:block; width:29px; height:25px; float:left; margin: 0 15px 0 0;}
+
 .form-admin-fruitful .content .menu-options ul li a #menu_img_0 {background-position:-648px 0;}
-.form-admin-fruitful .content .menu-options ul li a #menu_img_1 {background-position:0 0;}
-.form-admin-fruitful .content .menu-options ul li a #menu_img_2 {background-position: -93px 0;}
-.form-admin-fruitful .content .menu-options ul li a #menu_img_3 {background-position:-185px 0;}
-.form-admin-fruitful .content .menu-options ul li a #menu_img_4 {background-position:-275px 0;}
-.form-admin-fruitful .content .menu-options ul li a #menu_img_5 {background-position:-369px 0;}
-.form-admin-fruitful .content .menu-options ul li a #menu_img_6 {background-position:-463px 0;}
-.form-admin-fruitful .content .menu-options ul li a #menu_img_7 {background-position:-555px 0;}
-.form-admin-fruitful .content .menu-options ul li a #menu_img_8 {background-position:-738px 0;}
+.form-admin-fruitful .content .menu-options ul li a #menu_img_1 {background-position:-891px 0;}
+.form-admin-fruitful .content .menu-options ul li a #menu_img_2 {background-position:0 0;}
+.form-admin-fruitful .content .menu-options ul li a #menu_img_3 {background-position: -93px 0;}
+.form-admin-fruitful .content .menu-options ul li a #menu_img_4 {background-position:-185px 0;}
+.form-admin-fruitful .content .menu-options ul li a #menu_img_5 {background-position:-275px 0;}
+.form-admin-fruitful .content .menu-options ul li a #menu_img_6 {background-position:-369px 0;}
+.form-admin-fruitful .content .menu-options ul li a #menu_img_7 {background-position:-463px 0;}
+.form-admin-fruitful .content .menu-options ul li a #menu_img_8 {background-position:-555px 0;}
+.form-admin-fruitful .content .menu-options ul li a #menu_img_9 {background-position:-738px 0;}
+
 .form-admin-fruitful .content .menu-options ul li.current a #menu_img_0 {background-position:-677px 0;}
-.form-admin-fruitful .content .menu-options ul li.current a #menu_img_1 {background-position:-31px 0;}
-.form-admin-fruitful .content .menu-options ul li.current a #menu_img_2 {background-position:-124px 0;}
-.form-admin-fruitful .content .menu-options ul li.current a #menu_img_3 {background-position:-214px 0;}
-.form-admin-fruitful .content .menu-options ul li.current a #menu_img_4 {background-position:-307px 0;}
-.form-admin-fruitful .content .menu-options ul li.current a #menu_img_5 {background-position:-400px 0;}
-.form-admin-fruitful .content .menu-options ul li.current a #menu_img_6 {background-position:-494px 0;}
-.form-admin-fruitful .content .menu-options ul li.current a #menu_img_7 {background-position:-586px 0;}
-.form-admin-fruitful .content .menu-options ul li.current a #menu_img_8 {background-position:-768px 0;}
+.form-admin-fruitful .content .menu-options ul li.current a #menu_img_1 {background-position:-860px 0;}
+.form-admin-fruitful .content .menu-options ul li.current a #menu_img_2 {background-position:-31px 0;}
+.form-admin-fruitful .content .menu-options ul li.current a #menu_img_3 {background-position:-124px 0;}
+.form-admin-fruitful .content .menu-options ul li.current a #menu_img_4 {background-position:-214px 0;}
+.form-admin-fruitful .content .menu-options ul li.current a #menu_img_5 {background-position:-307px 0;}
+.form-admin-fruitful .content .menu-options ul li.current a #menu_img_6 {background-position:-400px 0;}
+.form-admin-fruitful .content .menu-options ul li.current a #menu_img_7 {background-position:-494px 0;}
+.form-admin-fruitful .content .menu-options ul li.current a #menu_img_8 {background-position:-586px 0;}
+.form-admin-fruitful .content .menu-options ul li.current a #menu_img_9 {background-position:-768px 0;}
+
 .form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_0 {background-position:-706px 0;}
-.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_1 {background-position:-62px 0;}
-.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_2 {background-position:-155px 0;}
-.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_3 {background-position:-245px 0;}
-.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_4 {background-position:-337px 0;}
-.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_5 {background-position:-431px 0;}
-.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_6 {background-position:-525px 0;}
-.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_7 {background-position:-617px 0;}
-.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_8 {background-position:-798px 0;}
+.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_1 {background-position:-829px 0;}
+.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_2 {background-position:-62px 0;}
+.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_3 {background-position:-155px 0;}
+.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_4 {background-position:-245px 0;}
+.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_5 {background-position:-337px 0;}
+.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_6 {background-position:-431px 0;}
+.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_7 {background-position:-525px 0;}
+.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_8 {background-position:-617px 0;}
+.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_9 {background-position:-798px 0;}
+
 .form-admin-fruitful .content .settings-section { background: #FFFFFF;  float: right; padding: 15px 34px 15px 0; width: 710px; display:none; min-height:600px}
 .form-admin-fruitful .content .settings-section input[type="text"] { float:left; width:100%; margin:0 0 10px 0; padding-left: 5px; height: 30px;} 
 .form-admin-fruitful .content .settings-section input[type="file"]  { display:none}
@@ -77,10 +85,10 @@ a:hover, a:active, a:focus {	outline: 0; }
 .form-admin-fruitful .content .settings-section  h2, .form-admin-fruitful .content .settings-section  h3, .form-admin-fruitful .content .settings-section  h4, 
 .form-admin-fruitful .content .settings-section  h5, .form-admin-fruitful .content .settings-section  h6 { text-shadow: 0 1px 0 #FFFFFF;}
 .form-admin-fruitful .content .settings-section .none  {display:none}
-.form-admin-fruitful .content #settings-section-4 input[type="text"] {float: left; width: 50px;}
-.form-admin-fruitful .content #settings-section-4 #set_form_row_4 h4 {margin: 5px 0px; float: left; padding-right: 10px; text-align: right;}
-.form-admin-fruitful .content #settings-section-4 #set_form_row_4 .box-options {width: 92px;}
-.form-admin-fruitful .content #settings-section-3 h4 {font-weight: normal}
+.form-admin-fruitful .content #settings-section-5 input[type="text"] {float: left; width: 50px;}
+.form-admin-fruitful .content #settings-section-5 #set_form_row_4 h4 {margin: 5px 0px; float: left; padding-right: 10px; text-align: right;}
+.form-admin-fruitful .content #settings-section-5 #set_form_row_4 .box-options {width: 92px;}
+.form-admin-fruitful .content #settings-section-4 h4 {font-weight: normal}
 .form-admin-fruitful .content .settings-section .upload-image {float:left; margin:10px 0; border: 1px solid #DFDFDF;}
 .form-admin-fruitful .content .settings-section hr {margin:20px 0; float:left; width:100%; background-color:#DFDFDF; color:#DFDFDF; border:0; height:1px}
 .form-admin-fruitful .content .settings-section .slides, .form-admin-fruitful .content .settings-section .slides .slide 	 {float:left; width:100%; }
@@ -134,7 +142,7 @@ a:hover, a:active, a:focus {	outline: 0; }
 .box-image .img-container.favicon {max-width:16px; max-height:16px; height:16px;}
 .box-image .img-container.custom-slide {max-width:608px; max-height:300px; height:300px; border: 0; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px;}
 .box-image .of-area {float: left; height: 100px; margin: 0 0 10px; width: 100%; }
-#btn_idc {   float: left; height: 30px; padding: 7px; width: 100%; max-width:100px;}
+#btn_idc { float: left; height: 30px; width: 100%; max-width:150px; text-align: center; cursor:pointer;}
 #css-text, #footer-text { background: none repeat scroll 0 0 #F9F9F9; font-family: Consolas,Monaco,monospace; font-size: 12px; outline: 0 none; }	
 #css-text:focus, #footer-text:focus {border-color:#aaa;}
 

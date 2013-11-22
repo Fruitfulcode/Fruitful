@@ -102,7 +102,7 @@
                 //keep closed if option = 'closed' or option is 'accordion' and the element is in accordion mode
                 if(options.closed !== true && !(options.closed === 'accordion' && !$respTabsList.is(':visible')) && !(options.closed === 'tabs' && $respTabsList.is(':visible'))) {                  
                     $($respTabs.find('.resp-accordion')[tabNum]).addClass('resp-tab-active');
-                    $($respTabs.find('.resp-tab-content')[tabNum]).addClass('resp-tab-content-active');
+                    $($respTabs.find('.resp-tab-content')[tabNum]).addClass('resp-tab-content-active').attr('style', 'display:block');
                 }
                 //assign proper classes for when tabs mode is activated before making a selection in accordion mode
                 else {
@@ -131,9 +131,9 @@
                             $respTabs.find('.resp-tab-content[aria-labelledby = ' + $tabAria + ']').slideDown().addClass('resp-tab-content-active');
                         } else {
                             $respTabs.find('.resp-tab-active').removeClass('resp-tab-active');
-                            $respTabs.find('.resp-tab-content-active').removeClass('resp-tab-content-active').removeClass('resp-accordion-closed');
+                            $respTabs.find('.resp-tab-content-active').removeAttr('style').removeClass('resp-tab-content-active').removeClass('resp-accordion-closed');
                             $respTabs.find("[aria-controls=" + $tabAria + "]").addClass('resp-tab-active');
-                            $respTabs.find('.resp-tab-content[aria-labelledby = ' + $tabAria + ']').addClass('resp-tab-content-active');
+                            $respTabs.find('.resp-tab-content[aria-labelledby = ' + $tabAria + ']').addClass('resp-tab-content-active').attr('style', 'display:block');
                         }
                         //Trigger tab activation event
                         $currentTab.trigger('tabactivate', $currentTab);

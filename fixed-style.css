@@ -44,6 +44,7 @@ body {
     font-family:"Open Sans", sans-serif;
     background-size:cover;
 	background-attachment: fixed;
+	overflow:hidden;
 }
 /*Fix fancybox 2*/
 body.fancybox-lock {
@@ -494,7 +495,12 @@ a:hover,a:focus,a:active {
     position:absolute;
     top:35px;
     z-index:99999;
-	transition: all .2s ease-in-out; 
+	-webkit-transition: all 0.2s ease-in-out; 
+	-moz-transition: all 0.2s ease-in-out; 
+	-khtml-transition: all 0.2s ease-in-out; 
+	-o-transition: all 0.2s ease-in-out; 
+	-ms-transition: all 0.2s ease-in-out; 
+	transition: all 0.2s ease-in-out; 
 	opacity:0;
 	margin:20px 0 0 0;
 	_margin: 0; /*IE6 only*/
@@ -527,11 +533,11 @@ a:hover,a:focus,a:active {
     color:#fff;
     padding:7px 10px;
 	-webkit-transition: all 0.2s ease-in-out; 
-	-moz-transition: all 0.3s ease-in-out; 
-	-khtml-transition: all 0.3s ease-in-out; 
-	-o-transition: all 0.3s ease-in-out; 
-	-ms-transition: all 0.3s ease-in-out; 
-	transition: all 0.3s ease-in-out; 
+	-moz-transition: all 0.2s ease-in-out; 
+	-khtml-transition: all 0.2s ease-in-out; 
+	-o-transition: all 0.2s ease-in-out; 
+	-ms-transition: all 0.2s ease-in-out; 
+	transition: all 0.2s ease-in-out; 
 	font-size:14px;
 	font-family:"Open Sans", sans-serif;
 }
@@ -595,8 +601,9 @@ a:hover,a:focus,a:active {
     background-repeat:no-repeat;
 }
 #colophon .social-icon a:hover, #colophon .social-icon a:active {
-    opacity:0.9}
- #colophon .social-icon a.facebook {
+    opacity:0.9
+}
+#colophon .social-icon a.facebook {
     background-position:-249px 0;
 }
 #colophon .social-icon a.twitter {
@@ -629,6 +636,10 @@ a:hover,a:focus,a:active {
 #colophon .social-icon a.vk {
     background-position:-311px 0;
 }
+#colophon .social-icon a.email {
+	background-position:-342px 0;
+}
+
 .sticky {
 }
 .hentry {
@@ -1335,7 +1346,8 @@ address {
     padding: 2px 8px;
     position: absolute;
     text-align: left;
-    transition: opacity 400ms ease 0s;
+    -webkit-transition: opacity 400ms ease;
+	transition:         opacity 400ms ease;
     width: 100%;
 	font-style: italic;
     font-weight: 300;

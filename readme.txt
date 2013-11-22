@@ -2,13 +2,13 @@
     Thank you for downloading Fruitful theme!
 -------------------------------------------------------
 
-We have created a theme based on our necessities and experience, we will be glad if you like our work. 
-Our code is hand-made, so if you find a bug or have a wish to modify something, feel free to send us your feedback. 
-We want to make our product even better and better and we need users support and feedbacks. 
+We have created a theme based on our necessities and experience, we will be glad if you like our work.
+Our code is hand-made, so if you find a bug or have a wish to modify something, feel free to send us your feedback.
+We want to make our product even better and better and we need users support and feedbacks.
 
 Don't forget to visit our website http://fruitfulcode.com
 
-Thank you. 
+Thank you.
 
 -------------------------------------------------------
     Copyright
@@ -22,16 +22,16 @@ Fruitful is distributed under the GPLv2 license (http://www.gnu.org/licenses/gpl
     Demo
 -------------------------------------------------------
 
-http://themes.fruitfulcode.com/fruitful/ 
-Demo website configured via features and theme options. Used html, css and short codes for display content. 
+http://themes.fruitfulcode.com/fruitful/
+Demo website configured via features and theme options. Used html, css and short codes for display content.
  
 
 -------------------------------------------------------
     Installation
 -------------------------------------------------------
 
-1. Upload the "Fruitful" folder to the "/wp-content/themes/" directory 
-or find in Appearance > Themes > Install theme, type “Fruitful” in search field. 
+1. Upload the "Fruitful" folder to the "/wp-content/themes/" directory
+or find in Appearance > Themes > Install theme, type “Fruitful” in search field.
 2. Activate the Theme through the 'Themes' menu in WordPress
 3. Go to "Appearance" > Theme options
 4. Config theme as you need.
@@ -47,7 +47,7 @@ As this theme uses the WordPress customizer feature for most options, it require
 Please make sure your WP version is at least 3.4.
 
 === Page layouts ===
-Theme supported 2 types of html layout. Default responsive setting which adapt for mobile devices and static page with fixed width. 
+Theme supported 2 types of html layout. Default responsive setting which adapt for mobile devices and static page with fixed width.
 Uncheck arrow below if you need static website display.
 
 === Theme options ===
@@ -102,15 +102,15 @@ Files ru_Ru.po ru_Ru.mo icluded. Default language is english.
 * New design skins for Nivo slider and Flex slider
 * New popular google fonts added
 * New attribute columns_count="3" added to shortcode [info_box_area]
-* New default icon for columns shortcode 
+* New default icon for columns shortcode
 * New Easy Responsive Tabs to Accordion
 * New theme option, background color for header
 * Update slider: Target="_blank" option per slides.
 * Bug fix post with no title added link to circle with data
 * Bug fix 1200px image width in content section
-* New files fancybox 1.3.4 version 
-* Update for description in theme options 
-* Update for ru_RU translation. 
+* New files fancybox 1.3.4 version
+* Update for description in theme options
+* Update for ru_RU translation.
 * New files jquery-ui.css, jquery-ui.js
 * Source code optimization
 * Css changes
@@ -159,7 +159,7 @@ Files ru_Ru.po ru_Ru.mo icluded. Default language is english.
 * Modified document <title> output, use wp_title filter.
 * wp_head replaced
 * Google analytics removed from theme options
-* Fix unescaped home_url() calls 
+* Fix unescaped home_url() calls
 * Comments appear for post by default
 * Gallery post type removed
 * Correct author-bio.php, tag.php and taxonomy-post_format.php
@@ -181,5 +181,3 @@ Files ru_Ru.po ru_Ru.mo icluded. Default language is english.
 
 = 1.0 = (01.10.2013)
 * Initial Release
-
-

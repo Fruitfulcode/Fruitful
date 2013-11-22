@@ -417,6 +417,9 @@ return array(
 				'is_fixed_header'	=> 'off',
 				'styletheme'		=> 'off',
 
+				/*Header image*/
+				'header_img' => '',
+				
 				/*Background Image*/
 				'backgroung_img'    => '',
 				'background_color'	=> '#ffffff', 
@@ -500,6 +503,7 @@ return array(
 				'youtube_url'		=> '',
 				'rss_link'			=> '',
 				'vk_link'			=> '',
+				'email_link'		=> '', 
 
 				'custom_css'        => stripslashes('')
 		);
