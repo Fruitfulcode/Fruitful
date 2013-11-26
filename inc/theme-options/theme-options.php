@@ -43,12 +43,13 @@ function fruitful_theme_options_init() {
 	
 	add_settings_field( 'general_rs', 		__( 'Layout', 	'fruitful' ),	'fruitful_get_responsive_design',	'theme_options',  'general', array('info' => __( 'Theme supported 2 types of html layout. Default responsive  setting which adapt for mobile devices and static page with fixed width. Uncheck arrow below if you need static website display. ', 'fruitful' )));
 	add_settings_field( 'general_cm',		__( 'Comments', 'fruitful' ), 	'fruitful_get_general_comment',  	'theme_options',  'general', array('info' => __( 'If you want to display comments on your post page or page, select options below.', 'fruitful' )));
-	add_settings_field( 'general_ds',		__( 'Default theme style css', 'fruitful' ),'fruitful_get_style_theme', 'theme_options',  'general', array('info' => __( 'Default theme styles. Theme option for styling is not working, if this option enable.', 'fruitful' )));
-	add_settings_field( 'general_rb',		__( 'Reset all options to default', 'fruitful' ),	'fruitful_reset_btn',  'theme_options',  'general', array('info' => __( 'Reset Button. ', 'fruitful' )));
+	add_settings_field( 'general_ds',		__( 'Default theme style css',  'fruitful' ),'fruitful_get_style_theme', 'theme_options',  'general', array('info' => __( 'Default theme styles. Theme option for styling is not working, if this option enable.', 'fruitful' )));
+	add_settings_field( 'general_rb',		__( 'Reset all options to default', 'fruitful' ), 'fruitful_reset_btn',  'theme_options',  'general', array('info' => __( 'Reset Button. ', 'fruitful' )));
 	
-	add_settings_field( 'header_hd',		__( 'Fixed Header', 		'fruitful' ), 	'fruitful_get_general_header', 	'theme_options',  'header', array('info' => __( 'Options relating to the website header', 'fruitful' )));
-	add_settings_field( 'header_hi',		__( 'Header Background', 	'fruitful' ), 	'fruitful_get_header_img', 		'theme_options',  'header', array('info' => __( 'Upload your background image for header background. (Supported files .png, .jpg, .gif)', 'fruitful' )));
-	
+	add_settings_field( 'header_hd',		__( 'Sticky  header', 	 'fruitful' ), 	'fruitful_get_general_header', 	'theme_options',  'header', array('info' => __( 'Options relating to the website header', 'fruitful' )));
+	add_settings_field( 'header_hi',		__( 'Header background', 'fruitful' ), 	'fruitful_get_header_img', 		'theme_options',  'header', array('info' => __( 'Upload your background image for header background. (Supported files .png, .jpg, .gif)', 'fruitful' )));
+	add_settings_field( 'header_hh',		__( 'Header min. height', 	 'fruitful' ), 	'fruitful_get_header_height', 	'theme_options',  'header', array('info' => __( 'Set header min-height parametrs.', 'fruitful' )));
+		
 	
 	add_settings_field( 'background_image', __( 'Background Image', 'fruitful' ),  'fruitful_get_background_img',   'theme_options',  'background', array('info' => __( 'Upload your background image for site background. (Supported files .png, .jpg, .gif)', 'fruitful' )));
 	add_settings_field( 'background_color', __( 'Background Color ', 'fruitful' ), 'fruitful_get_background_color', 'theme_options',  'background', array('info' => __( 'Choose color for body background', 'fruitful' )));
@@ -182,7 +183,7 @@ function fruitful_get_general_header() {
 	?>
 		<div class="box-option">
 			<label for="is_fixed_header_ch"><input type="checkbox" name="fruitful_theme_options[is_fixed_header]" id="is_fixed_header_ch" <?php checked( 'on', $options['is_fixed_header']); ?> />
-			<?php _e( 'Fixed Header', 'fruitful' ); ?>
+			<?php _e( 'Enabled', 'fruitful' ); ?>
 			</label>
 		</div>
 		
@@ -269,7 +270,16 @@ function fruitful_get_header_img () {
 	$options = fruitful_get_theme_options();
 	$upload  = intval($options['header_img']);
 
-	echo fruitful_get_box_upload_image($upload, 'header_img');
+	echo fruitful_get_box_upload_image($upload, 'header_img', 'upload_btn', 'reset_btn', 'headerbackground', 'headerimgbackground');
+}
+
+function fruitful_get_header_height() {
+	$options = fruitful_get_theme_options();
+	?>
+	<div class="box-option">
+		<input type="text" name="fruitful_theme_options[header_height]" id="header_height" class="header_height small_input" value="<?php echo intval($options['header_height']); ?>"/>
+	</div>	
+<?php	
 }
 
 function fruitful_get_logo_img () {

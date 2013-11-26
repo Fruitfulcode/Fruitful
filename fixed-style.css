@@ -13,11 +13,6 @@ Text Domain: fruitful
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
-
-/*Style Font Family*/
-	@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300);
-/*End Style Font Family*/
-
 html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, font, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td {
     border:0;
     font-family:inherit;
@@ -429,10 +424,10 @@ textarea {
     width:98%;
 }
 a {
-    color:#8E7B6D;
+    color:#E1704B;
 }
 a:visited {
-    color:#8E7B6D;
+    color:#E1704B;
 }
 a:hover,a:focus,a:active {
     color:#ff5d2a;
@@ -1210,8 +1205,10 @@ address {
 	left:0;
 	width:100%;
 	display:block;
-	background-color:#fff;
 	z-index:99999;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position:center center;
 }
 
 .head-container.fixed {
@@ -1221,6 +1218,9 @@ address {
 	-webkit-box-shadow: 0px 2px 2px rgba(50, 50, 50, 0.3);
 	-moz-box-shadow:    0px 2px 2px rgba(50, 50, 50, 0.3);
 	box-shadow:         0px 2px 2px rgba(50, 50, 50, 0.3);
+	min-height: 0 !important;
+	background-attachment:scroll !important;
+	background-image:none !important;
 }
 
 .head-container.is_indent {

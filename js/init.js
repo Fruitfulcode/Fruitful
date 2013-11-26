@@ -38,12 +38,26 @@ jQuery(document).ready(function($) {
 				fit: true
 			});
 		}
+		
+		jQuery('a').on('click toucstart', function(e) {
+			var el = $(this);
+			el.hover();
+			return false;
+		});
+		
+		jQuery('a').on('click touchend', function(e) {
+			var el = $(this);
+			var link = el.attr('href');
+			window.location = link;
+			return false;
+		});
 });
 
-jQuery(window).bind('scroll resize', function() {	
+
+jQuery(window).bind('scroll', function() {	
 	if (ThGlobal.is_fixed_header != -1) {
 		var outher_height = jQuery(".head-container").outerHeight()
-		if (jQuery(window).scrollTop() > outher_height) {
+		if (jQuery(window).scrollTop() >= (outher_height + 50)) {
 			if (jQuery('#wpadminbar').length > 0) {
 				jQuery(".head-container").addClass('fixed is_indent'); 
 			} else {

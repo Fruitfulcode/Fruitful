@@ -314,6 +314,8 @@ function fruitful_add_admin_style() {
 	wp_enqueue_style('ch-style',			get_template_directory_uri() . '/inc/js/ch/ch.css');
 	wp_enqueue_style('sl-style',			get_template_directory_uri() . '/inc/js/sl/jquery.formstyler.css');
 	wp_enqueue_style('dialog', 				get_template_directory_uri() . '/inc/js/jquery-ui.min.css');
+	//wp_enqueue_style('imgareaselect',		get_template_directory_uri() . '/inc/js/imgareaselect/imgareaselect-animated.css');
+	
 }
 
 function fruitful_add_jquery_script() {
@@ -329,17 +331,23 @@ function fruitful_add_jquery_script() {
 	wp_enqueue_script('chJq',				get_template_directory_uri() . "/inc/js/ch/ch.js", array('jquery'));
 	wp_enqueue_script('slJq',				get_template_directory_uri() . "/inc/js/sl/jquery.formstyler.min.js", array('jquery'));
 	wp_enqueue_script('dialog', 			get_template_directory_uri() . "/inc/js/jquery-ui.min.js",  array('jquery'));
+	//wp_enqueue_script('imgareaselect', 		get_template_directory_uri() . "/inc/js/jquery.imgareaselect.pack.js",  array('jquery'));	
 	wp_enqueue_script('uploads_',			get_template_directory_uri() . "/inc/js/uploads_.js", array('jquery'));
 	wp_enqueue_script('admin-jQuery-fruit',	get_template_directory_uri() . "/inc/js/main.js", array('jquery'));
+	
 }
 
-function fruitful_get_box_upload_image($val, $field, $btnclassup = 'upload_btn', $btnclassr = 'reset_btn', $imgcontclass = '') {
+function fruitful_get_box_upload_image($val, $field, $btnclassup = 'upload_btn', $btnclassr = 'reset_btn', $imgcontclass = '', $imgid = '') {
 		 $out  = '';
 		 $out .= '<div class="box-image">';
 			if ($val != '') {
 				$out .= '<div class="img-container '.$imgcontclass.'">';
 					$image_attributes = wp_get_attachment_image_src( $val, 'full');
-					$out .= '<img src="'.esc_url_raw($image_attributes[0]).'" alt="" />';
+					if ($imgid != '') {
+						$out .= '<img id="'.$imgid.'" src="'.esc_url_raw($image_attributes[0]).'" alt="" />';
+					} else {
+						$out .= '<img src="'.esc_url_raw($image_attributes[0]).'" alt="" />';
+					}					
 				$out .= '</div>	';
 			}
 			
@@ -418,7 +426,8 @@ return array(
 				'styletheme'		=> 'off',
 
 				/*Header image*/
-				'header_img' => '',
+				'header_img' 	=> '',
+				'header_height' => '84',
 				
 				/*Background Image*/
 				'backgroung_img'    => '',
