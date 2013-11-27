@@ -92,26 +92,29 @@ Files ru_Ru.po ru_Ru.mo icluded. Default language is english.
 * colorpicker js http://www.eyecon.ro/ Licensed under both MIT and GPL licenses
 * Easy Responsive Tabs to Accordion https://github.com/samsono/Easy-Responsive-Tabs-to-Accordion MIT and GPL licenses
 * Fonts by Google fonts http://www.google.com/fonts licensed under Apache License Version 2 (http://www.apache.org/licenses/LICENSE-2.0.html)
+* Dialogbox by Trent Richardson, http://trentrichardson.com/Impromptu/ Licensed under the MIT License.
 
 -------------------------------------------------------
     Changelog
 -------------------------------------------------------
 
-= 1.1 = (20.11.13)
+= 1.1 = (27.11.13)
 * Install home page (Import dummy data)
+* New header section in theme option
 * New design skins for Nivo slider and Flex slider
 * New popular google fonts added
 * New attribute columns_count="3" added to shortcode [info_box_area]
 * New default icon for columns shortcode
 * New Easy Responsive Tabs to Accordion
-* New theme option, background color for header
+* New back to top arrow
+* New files jquery-ui.css, jquery-ui.js
 * Update slider: Target="_blank" option per slides.
-* Bug fix post with no title added link to circle with data
-* Bug fix 1200px image width in content section
 * New files fancybox 1.3.4 version
 * Update for description in theme options
 * Update for ru_RU translation.
-* New files jquery-ui.css, jquery-ui.js
+* Update dialog window and new design saving popup.
+* Bug fix post with no title added link to circle with data
+* Bug fix 1200px image width in content section
 * Source code optimization
 * Css changes
 
