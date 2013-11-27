@@ -214,6 +214,7 @@ add_action( 'widgets_init', 'fruitful_widgets_init' );
 			}
 	}	
 	
+	
 	/*add fancybox*/
 	wp_enqueue_script('fn-box',				get_template_directory_uri() . '/js/fnBox/jquery.fancybox-1.3.4.pack.js',   array( 'jquery' ), '20130930', false );
 	wp_enqueue_script('fn-box-wheel',		get_template_directory_uri() . '/js/fnBox/jquery.mousewheel-3.0.4.pack.js', array( 'jquery' ), '20130930', false );
@@ -639,7 +640,8 @@ function fruitful_state_page_comment () {
 function fruitful_get_responsive_style () {
 	$theme_options  = fruitful_ret_options("fruitful_theme_options"); 
 	wp_enqueue_style('fonts-style', get_template_directory_uri()    . '/inc/css/fonts-style.css');
-	if (!empty($theme_options['responsive'])) {
+	
+	if (!empty($theme_options['responsive']) && ($theme_options['responsive'] = 'on')) {
 		wp_enqueue_style('main-style',  get_stylesheet_uri());
 	} else {
 		wp_enqueue_style('main-style',  get_stylesheet_directory_uri()  .'/fixed-style.css');

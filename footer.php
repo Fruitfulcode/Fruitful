@@ -11,19 +11,19 @@
 ?>
 		</div>
 			<div class="sixteen columns">
-			<footer id="colophon" class="site-footer" role="contentinfo">
-				<div class="site-info">
-					<?php fruitful_get_footer_text(); ?>
-				</div><!-- .site-info -->
-				<div id="back-top">
-					<a rel="nofollow" href="#top" title="Back to top">&uarr;</a>
-				</div>
-				<div class="social-icon">
-					<?php fruitful_get_footer_socials_icon(); ?>
-				</div>
-			</footer><!-- #colophon .site-footer -->
-		</div>
-		</div><!-- #main .site-main -->
+				<footer id="colophon" class="site-footer" role="contentinfo">
+					<div class="site-info">
+						<?php fruitful_get_footer_text(); ?>
+					</div><!-- .site-info -->
+					<div class="social-icon">
+						<?php fruitful_get_footer_socials_icon(); ?>
+					</div>
+				</footer><!-- #colophon .site-footer -->
+			</div>
+			</div><!-- #main .site-main -->
+			<div id="back-top">
+				<a rel="nofollow" href="#top" title="Back to top">&uarr;</a>
+			</div>
 		</div><!-- #page .hfeed .site -->
 		<!--WordPress Development by Fruitful Code-->
 <?php wp_footer(); ?>

@@ -531,15 +531,8 @@ function fruitful_theme_options_render_page() {
 				?>
 		
 		</div>
-		
 		<div class="footer">
 			<?php submit_button();  ?>
-			<div id="dialog-confirm" title="Reset all theme options?">
-				<p>
-					<span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>
-					<?php _e( 'Theme settings will be reset to default.', 'fruitful' ); ?>
-				</p>
-			</div>
 		</div>
 		  <input type="hidden" name="action"    value="fruitful_theme_options_action" />
 		  <input type="hidden" name="security" value="<?php echo wp_create_nonce('fruitful_theme_data'); ?>" />
@@ -582,9 +575,9 @@ add_action('wp_ajax_fruitful_theme_options_action', 'fruitful_data_save');
 function fruitful_data_save() {
 	$data = $_POST['fruitful_theme_options'];
 	
-	if (!isset($data['responsive'])) 	  {$data['responsive'] 	= 'off'; }
-	if (!isset($data['postcomment'])) 	  {$data['postcomment'] = 'off'; }
-	if (!isset($data['pagecomment'])) 	  {$data['pagecomment'] = 'off'; }
+	if (!isset($data['responsive'])) 	  {$data['responsive'] 		= 'off'; }
+	if (!isset($data['postcomment'])) 	  {$data['postcomment'] 	= 'off'; }
+	if (!isset($data['pagecomment'])) 	  {$data['pagecomment'] 	= 'off'; }
 	if (!isset($data['is_fixed_header'])) {$data['is_fixed_header'] = 'off'; }
 	if (!isset($data['styletheme'])) 	  {$data['styletheme'] 		= 'off'; }
 	if (!isset($data['bg_repeating'])) 	  {$data['bg_repeating'] 	= 'off'; }

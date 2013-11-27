@@ -756,7 +756,11 @@ embed,iframe,object {
     overflow:hidden;
     float:left;
     width:100%;
+	position:relative;
+	z-index:1;
 }
+
+#page {position:relative;}
 #page .container .btm_header, #page .container .entry-header, 
 #page .container .archive-header {
     border-bottom:1px solid #d6d6d6
@@ -970,13 +974,14 @@ input#s {
     width:235px;
 }
 
-#colophon #back-top 	  { 
-	display: block;
-	float: right;
-	margin: 0 0 0 10px;
+#back-top  { 
+	bottom: 55px;
+    display: none;
+    position: absolute;
+    right: 2%;
 }
 
-#colophon #back-top a  { 
+#back-top a  { 
 	text-decoration: none; 
 	font-size: 18px; 
 	color: #000;

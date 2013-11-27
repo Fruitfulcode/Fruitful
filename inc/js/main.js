@@ -228,32 +228,31 @@
 	});				
 	
 	jQuery('input[name="reset"]').live("click", function(){		
-		jQuery( "#dialog:ui-dialog").dialog( "destroy" );				
-		jQuery( "#dialog-confirm").dialog({ 			
-			width:   400,			
-			resizable: true,			
-			modal: true,			
-			position: "center",			
-			buttons: {				
-				"Reset all saved data?": function() {				
+		
+		jQuery.prompt("All theme options will be reset to default. <br /> This changes can’t be returned. Be careful.", {
+			title: "Reset options",
+			buttons: { "Reset": true, "Cancel": false },
+			focus: -1,
+			opacity: 0.2,
+			submit: function(e,v,m,f){
+				if (v) {
 					var data = {										
 						action: 	'fruitful_reset_btn',										
 						type:   	'reset',										
 						data: 		''									
 						};														
-					jQuery.post(ajaxurl, data, function(response) { });					
-					jQuery( this ).dialog( "close" );					  
-					setTimeout(function(){	
-						location.reload(true);						
-					}, 1000);  				
-			},				
-			Cancel: function() {					
-				jQuery( this ).dialog( "close" );				
-			}			
-		    }			
-		});		
+						
+						jQuery.post(ajaxurl, data, function(response) { });					
+						jQuery.prompt.close();
+						setTimeout(function(){	
+							location.reload(true);						
+						}, 1000);
+				}
+			}
+		});
+		
 	});							
-	/*end soratble slide*/		
+	
 	
 	if (jQuery("ul.slides li").size() >2) { 
 		jQuery("ul.slides li .slide-content").hide("slow"); 
@@ -275,11 +274,8 @@
 });
 
 function show_message(n) {	
-	if(n == 1) { 
-		jQuery('.save-options').html('<div class="icon-sc"></div><div class="text">Success data save...</div>').show(); 
-	}  else { 
-		jQuery('.save-options').html('<div class="icon-al"></div><div class="text">No data saved...</div>').show(); 
-	}	
+	if(n == 1) { jQuery('.save-options').html('<div class="icon-sc"></div><div class="message-text">options saved</div>').show();  }  
+	else 	   { jQuery('.save-options').html('<div class="icon-al"></div><div class="message-text">options not saved, <br /> without changes</div>').show();  }	
 }
 
 function fade_message() {	
@@ -288,7 +284,7 @@ function fade_message() {
 }			
 
 function show_message_import() {	
-	jQuery('.save-options').html('<div class="icon-sc"></div><div class="text">Home page create...</div>').show(); 
+	jQuery('.save-options').html('<div class="icon-sc"></div><div class="message-text">homepage installed <br /> visit your home page</div>').show(); 
 }
 
 

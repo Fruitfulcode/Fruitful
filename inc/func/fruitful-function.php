@@ -313,9 +313,7 @@ function fruitful_add_admin_style() {
 	wp_enqueue_style('colorpicker-style',	get_template_directory_uri() . '/inc/js/colorpicker/colorpicker.css');
 	wp_enqueue_style('ch-style',			get_template_directory_uri() . '/inc/js/ch/ch.css');
 	wp_enqueue_style('sl-style',			get_template_directory_uri() . '/inc/js/sl/jquery.formstyler.css');
-	wp_enqueue_style('dialog', 				get_template_directory_uri() . '/inc/js/jquery-ui.min.css');
-	//wp_enqueue_style('imgareaselect',		get_template_directory_uri() . '/inc/js/imgareaselect/imgareaselect-animated.css');
-	
+	wp_enqueue_style('dialog', 				get_template_directory_uri() . '/inc/js/dialogBox/jquery-impromptu.css');
 }
 
 function fruitful_add_jquery_script() {
@@ -330,8 +328,7 @@ function fruitful_add_jquery_script() {
 	wp_enqueue_script('color-picker',		get_template_directory_uri() . "/inc/js/colorpicker/colorpicker.js", array('jquery'));
 	wp_enqueue_script('chJq',				get_template_directory_uri() . "/inc/js/ch/ch.js", array('jquery'));
 	wp_enqueue_script('slJq',				get_template_directory_uri() . "/inc/js/sl/jquery.formstyler.min.js", array('jquery'));
-	wp_enqueue_script('dialog', 			get_template_directory_uri() . "/inc/js/jquery-ui.min.js",  array('jquery'));
-	//wp_enqueue_script('imgareaselect', 		get_template_directory_uri() . "/inc/js/jquery.imgareaselect.pack.js",  array('jquery'));	
+	wp_enqueue_script('dialog', 			get_template_directory_uri() . "/inc/js/dialogBox/jquery-impromptu.min.js",  array('jquery'));
 	wp_enqueue_script('uploads_',			get_template_directory_uri() . "/inc/js/uploads_.js", array('jquery'));
 	wp_enqueue_script('admin-jQuery-fruit',	get_template_directory_uri() . "/inc/js/main.js", array('jquery'));
 	
@@ -447,16 +444,16 @@ return array(
 				
 				/*fonts*/
 				'h_font_family'		=> 'Open Sans, sans-serif',
-				'h1_size'			=> '26',
-				'h2_size'			=> '24',
-				'h3_size'			=> '18',
-				'h4_size'			=> '14',
-				'h5_size'			=> '12',
-				'h6_size'			=> '10',
+				'h1_size'			=> '27',
+				'h2_size'			=> '23',
+				'h3_size'			=> '20',
+				'h4_size'			=> '17',
+				'h5_size'			=> '14',
+				'h6_size'			=> '12',
 				'm_font_family'		=> 'Open Sans, sans-serif',
 				'm_size'			=> '14',
 				'p_font_family'		=> 'Open Sans, sans-serif',
-				'p_size'			=> '12',
+				'p_size'			=> '14',
 				'select_slider'     => '1',
 				
 				

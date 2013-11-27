@@ -8,15 +8,10 @@
  */
 
 get_header(); ?>
-		<header class="entry-header">
-			<h1 class="entry-title"><?php the_title(); ?></h1>
-		</header><!-- .entry-header -->
-		
 		<div class="eleven columns alpha">
 			<div id="primary" class="content-area">
 				<div id="content" class="site-content" role="main">
 				<?php while ( have_posts() ) : the_post(); ?>
-				<?php fruitful_content_nav( 'nav-above' ); ?>
 				<?php get_template_part( 'content', 'single' ); ?>
 				<?php fruitful_content_nav( 'nav-below' ); ?>
 				<?php
