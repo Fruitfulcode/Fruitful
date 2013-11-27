@@ -43,21 +43,21 @@ function fruitful_theme_options_init() {
 	
 	add_settings_field( 'general_rs', 		__( 'Layout', 	'fruitful' ),	'fruitful_get_responsive_design',	'theme_options',  'general', array('info' => __( 'Theme supported 2 types of html layout. Default responsive  setting which adapt for mobile devices and static page with fixed width. Uncheck arrow below if you need static website display. ', 'fruitful' )));
 	add_settings_field( 'general_cm',		__( 'Comments', 'fruitful' ), 	'fruitful_get_general_comment',  	'theme_options',  'general', array('info' => __( 'If you want to display comments on your post page or page, select options below.', 'fruitful' )));
-	add_settings_field( 'general_ds',		__( 'Default theme style css',  'fruitful' ),'fruitful_get_style_theme', 'theme_options',  'general', array('info' => __( 'Default theme styles. Theme option for styling is not working, if this option enable.', 'fruitful' )));
-	add_settings_field( 'general_rb',		__( 'Reset all options to default', 'fruitful' ), 'fruitful_reset_btn',  'theme_options',  'general', array('info' => __( 'Reset Button. ', 'fruitful' )));
+	add_settings_field( 'general_ds',		__( 'Default theme styles',  'fruitful' ),'fruitful_get_style_theme', 'theme_options',  'general', array('info' => __( 'Default CSS. Theme option for styling is not working, if this option enable.', 'fruitful' )));
+	add_settings_field( 'general_rb',		__( 'Reset options', 'fruitful' ), 'fruitful_reset_btn',  'theme_options',  'general', array('info' => __( 'All theme options will be reset to default. ', 'fruitful' )));
 	
 	add_settings_field( 'header_hd',		__( 'Sticky  header', 	 'fruitful' ), 	'fruitful_get_general_header', 	'theme_options',  'header', array('info' => __( 'Options relating to the website header', 'fruitful' )));
-	add_settings_field( 'header_hi',		__( 'Header background', 'fruitful' ), 	'fruitful_get_header_img', 		'theme_options',  'header', array('info' => __( 'Upload your background image for header background. (Supported files .png, .jpg, .gif)', 'fruitful' )));
-	add_settings_field( 'header_hh',		__( 'Header min. height', 	 'fruitful' ), 	'fruitful_get_header_height', 	'theme_options',  'header', array('info' => __( 'Set header min-height parametrs.', 'fruitful' )));
+	add_settings_field( 'header_hi',		__( 'Background for header', 'fruitful' ), 	'fruitful_get_header_img', 		'theme_options',  'header', array('info' => __( 'Upload image for background in header area. (Supported files .png, .jpg, .gif)  ', 'fruitful' )));
+	add_settings_field( 'header_hh',		__( 'Height for header area', 	 'fruitful' ), 	'fruitful_get_header_height', 	'theme_options',  'header', array('info' => __( 'Minimum height in pixels', 'fruitful' )));
 		
 	
 	add_settings_field( 'background_image', __( 'Background Image', 'fruitful' ),  'fruitful_get_background_img',   'theme_options',  'background', array('info' => __( 'Upload your background image for site background. (Supported files .png, .jpg, .gif)', 'fruitful' )));
 	add_settings_field( 'background_color', __( 'Background Color ', 'fruitful' ), 'fruitful_get_background_color', 'theme_options',  'background', array('info' => __( 'Choose color for body background', 'fruitful' )));
 		
-	add_settings_field( 'logo_image', 		__( 'Upload your logo Image', 'fruitful' ), 	'fruitful_get_logo_img', 	'theme_options', 'logo', 		array('info' => __( 'Default theme logo is just a sample. Upload logo image for your website. (Supported files .png, .jpg, .gif)', 'fruitful' )));
+	add_settings_field( 'logo_image', 		__( 'Logo image', 'fruitful' ), 	'fruitful_get_logo_img', 	'theme_options', 'logo', 		array('info' => __( 'Upload logo image for your website. Size is original (Supported files .png, .jpg, .gif)', 'fruitful' )));
 	//add_settings_field( 'logo_size', 		__( 'Logo Size', 'fruitful' ), 		'fruitful_get_logo_wh',	 	'theme_options', 'logo', 		array('info' => __( 'Specify resolution for your logo image. Our theme will crop (timthumb) your image for need size.', 'fruitful' )) );
 	add_settings_field( 'fav_icon', 		__( 'Favicon', 'fruitful' ), 		'fruitful_get_fav_icon', 	'theme_options', 'logo', 		array('info' => __( 'Upload needed image for site favicon. (Supported files .ico (16x16))', 'fruitful' )));
-	add_settings_field( 'menu_style',		__( 'Menu css styling', 'fruitful' ),	'fruitful_menu_style',		'theme_options', 'menu',    	array('info' => __( 'Choose styles for main menu.', 'fruitful' )) );
+	add_settings_field( 'menu_style',		__( 'Menu styling', 'fruitful' ),	'fruitful_menu_style',		'theme_options', 'menu',    	array('info' => __( 'Choose styles for main menu. Add additional styles in custom css if needed', 'fruitful' )) );
 	add_settings_field( 'fonts_options', 	__( 'Fonts', 'fruitful' ), 	'fruitful_fonts_options',	'theme_options', 'fonts', 		array('info' => __( 'Popular web safe font collection, select and use for your needs.', 'fruitful' )) );
 	
 	add_settings_field( 'fonts_headers', 	__( 'Headers', 'fruitful' ),'fruitful_fonts_headers',	'theme_options', 'fonts', array('info' => __( 'Choose font-family for all headlines.', 'fruitful' )) );
@@ -200,7 +200,7 @@ function fruitful_get_style_theme() {
 	?>
 		<div class="box-option">
 			<label for="style_theme"><input type="checkbox" name="fruitful_theme_options[styletheme]" id="style_theme" <?php checked( 'on', $options['styletheme']); ?> />
-			<?php _e( 'Enable default css', 'fruitful' ); ?>
+			<?php _e( 'Enable', 'fruitful' ); ?>
 			</label>
 		</div>
 	<?php	
@@ -469,7 +469,7 @@ function fruitful_menu_style () {
 			<input type="text" id="menu_bg_color" name="fruitful_theme_options[menu_bg_color]" value="<?php echo esc_attr($options['menu_bg_color']); ?>"/>
 		</div>
 		<div class="box-options">
-			<h4><?php _e( 'Menu button background-color', 'fruitful' ); ?></h4>
+			<h4><?php _e( 'Button background-color', 'fruitful' ); ?></h4>
 			<div id="menubntcolor"><div style="background-color: <?php echo esc_attr($options['menu_btn_color']); ?>"></div></div>
 			<input type="text" id="menu_btn_color" name="fruitful_theme_options[menu_btn_color]" value="<?php echo esc_attr($options['menu_btn_color']); ?>"/>
 		</div>
@@ -479,7 +479,7 @@ function fruitful_menu_style () {
 			<input type="text" id="menu_font_color" name="fruitful_theme_options[menu_font_color]" value="<?php echo esc_attr($options['menu_font_color']); ?>"/>
 		</div>
 		<div class="box-options">
-			<h4><?php _e( 'Font color for active and :hover state', 'fruitful' ); ?></h4>
+			<h4><?php _e( 'Font color for :active and :hover', 'fruitful' ); ?></h4>
 			<div id="menufontcolorachvr"><div style="background-color: <?php echo esc_attr($options['menu_hover_color']); ?>"></div></div>
 			<input type="text" id="menu_hover_color" name="fruitful_theme_options[menu_hover_color]" value="<?php echo esc_attr($options['menu_hover_color']); ?>"/>
 		</div>
@@ -539,8 +539,8 @@ function fruitful_theme_options_render_page() {
 		</form>
 		
 		<div id="sidebar-promo" class="sidebar-promo">
-			<h3><?php _e('Contact support', 'fruitful'); ?></h3>
-			<p><?php _e( 'If you faced with any problems, have a question or suggestion you always can contact us with any request on our website <a href="http://fruitfulcode.com">fruitfulcode.com</a>', 'fruitful' ); ?></p>
+			<h3><?php _e('Support developers', 'fruitful'); ?></h3>
+			<p><?php _e( 'If you like our theme please rate it and <a target="_blank" href="http://wordpress.org/support/view/theme-reviews/fruitful">leave us review</a>. On <a target="_blank" href="http://wordpress.org/support/theme/fruitful">Support forum</a> you may find answers on your questions. With customization requests and suggestion you always can <a target="_blank" href="mailto:mail@fruitfulcode.com?subject=Question regarding Fruitful theme">contact us</a> by email. Please visit our website to know about our services <a target="_blank" href="http://fruitfulcode.com">fruitfulcode.com</a> ', 'fruitful' ); ?></p>
 		</div>
 	</div>
 	<?php
