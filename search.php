@@ -11,8 +11,8 @@ get_header(); ?>
 			<section id="primary" class="content-area">
 				<div id="content" class="site-content" role="main">
 				<?php if ( have_posts() ) : ?>
-					<header class="page-header">
-						<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'fruitful' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+					<header class="entry-header">
+						<h1 class="entry-title"><?php printf( __( 'Search Results for: %s', 'fruitful' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 					</header><!-- .page-header -->
 					<?php fruitful_content_nav( 'nav-above' ); ?>
 					<?php /* Start the Loop */ ?>

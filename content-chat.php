@@ -34,6 +34,7 @@
 		</div><!-- .entry-content -->
 
 		<footer class="entry-meta">
+			<?php fruitful_entry_meta(); ?>
 			<?php edit_post_link( __( 'Edit', 'fruitful' ), '<span class="edit-link">', '</span>' ); ?>
 		</footer><!-- .entry-meta -->
 	</div>

@@ -19,6 +19,12 @@
 		<?php if (get_the_title() != '') : ?>
 			<header class="post-header">
 				<h1 class="post-title"><?php the_title(); ?></h1>
+				
+				<?php if ( has_post_thumbnail() ) : ?>
+				<div class="entry-thumbnail">
+					<?php the_post_thumbnail(); ?>
+				</div>
+				<?php endif; ?>
 			</header><!-- .entry-header -->
 		<?php endif; ?>	
 
