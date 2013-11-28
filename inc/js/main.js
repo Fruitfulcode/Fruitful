@@ -274,8 +274,8 @@
 });
 
 function show_message(n) {	
-	if(n == 1) { jQuery('.save-options').html('<div class="icon-sc"></div><div class="message-text">options saved</div>').show();  }  
-	else 	   { jQuery('.save-options').html('<div class="icon-al"></div><div class="message-text">options not saved, <br /> without changes</div>').show();  }	
+	if(n == 1) { jQuery('.save-options').html('<div class="icon-sc"></div><div class="message-text">Options saved</div>').show();  }  
+	else 	   { jQuery('.save-options').html('<div class="icon-al"></div><div class="message-text">Nothing new to save</div>').show();  }	
 }
 
 function fade_message() {	

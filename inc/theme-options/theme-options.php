@@ -540,7 +540,7 @@ function fruitful_theme_options_render_page() {
 		
 		<div id="sidebar-promo" class="sidebar-promo">
 			<h3><?php _e('Support developers', 'fruitful'); ?></h3>
-			<p><?php _e( 'If you like our theme please rate it and <a target="_blank" href="http://wordpress.org/support/view/theme-reviews/fruitful">leave us review</a>. On <a target="_blank" href="http://wordpress.org/support/theme/fruitful">Support forum</a> you may find answers on your questions. With customization requests and suggestion you always can <a target="_blank" href="mailto:mail@fruitfulcode.com?subject=Question regarding Fruitful theme">contact us</a> by email. Please visit our website to know about our services <a target="_blank" href="http://fruitfulcode.com">fruitfulcode.com</a> ', 'fruitful' ); ?></p>
+			<p><?php _e( 'If you like our theme please rate it and <a target="_blank" href="http://wordpress.org/support/view/theme-reviews/fruitful">leave us review</a>. On <a target="_blank" href="http://wordpress.org/support/theme/fruitful">Support forum</a> you may find answers on your questions. With customization requests and suggestion you always can <a target="_blank" href="mailto:mail@fruitfulcode.com?subject=Question regarding Fruitful theme">contact us</a> by email. Please visit our website to know about us and our services <a target="_blank" href="http://fruitfulcode.com">fruitfulcode.com</a> ', 'fruitful' ); ?></p>
 		</div>
 	</div>
 	<?php
