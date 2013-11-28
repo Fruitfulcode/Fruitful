@@ -478,7 +478,6 @@ function fruitful_get_all_style () {
 			if (!empty($theme_options['menu_hover_color'])) 	{$out .= '$(".main-navigation ul li.current_page_item a, .main-navigation ul li.current-menu-ancestor a, .main-navigation ul li.current-menu-item a, .main-navigation ul li.current-menu-parent a, .main-navigation ul li.current_page_parent a").css({"color" : "'.esc_js($theme_options['menu_hover_color']) . '"});' . "\n"; 	}
 			$out .= '$(".main-navigation a").css({"font-size" : "'.esc_js($theme_options['m_size']) .'px"});' . "\n";
 			$out .= '$(".main-navigation a").css({"font-family" : "'.esc_js($theme_options['m_font_family']) .'"});' . "\n";
-			$out .= '$(".main-navigation a").css({"color" : "'.esc_js($theme_options['menu_font_color']). '"});' . "\n";
 		$out .= '});' . "\n";
 		}
 	}	
