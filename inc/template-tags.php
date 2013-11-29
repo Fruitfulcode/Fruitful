@@ -69,11 +69,11 @@ function fruitful_comment( $comment, $args, $depth ) {
 		default :
 	?>
 	<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
-		<article id="comment-<?php comment_ID(); ?>" class="comment">
+		<article id="comment-<?php comment_ID(); ?>" class="comment-body">
 			<footer>
 				<div class="comment-author vcard">
 					<?php echo get_avatar( $comment, 80 ); ?>
-					<?php printf( __( '%s <span class="says">says:</span>', 'fruitful' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
+					<?php printf( __( '%s', 'fruitful' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
 				</div><!-- .comment-author .vcard -->
 				<?php if ( $comment->comment_approved == '0' ) : ?>
 					<em><?php _e( 'Your comment is awaiting moderation.', 'fruitful' ); ?></em>

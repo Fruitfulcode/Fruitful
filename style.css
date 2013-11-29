@@ -404,8 +404,14 @@ h1,h2,h3,h4,h5,h6 {
 .post-content h3,
 .post-content h4,
 .post-content h5,
-.post-content h6 {
-    margin-bottom:14px;
+.post-content h6,
+.comment-content h1,
+.comment-content h2,
+.comment-content h3,
+.comment-content h4,
+.comment-content h5,
+.comment-content h6{
+    margin:10px 0;
 	line-height:28px
 }
 hr {
@@ -927,6 +933,7 @@ embed,iframe,object {
 #page .container header hgroup {
     float:left;
     margin: 0 0 15px 0;
+	max-width: 30%;
 }
 #page .container .content p {
     text-align:justify;
@@ -1462,40 +1469,52 @@ address {
 
 #comments.comments-area ol.commentlist {
 	margin:0 0 20px 0;
-	list-style-type: none;
-    padding: 0;
+	padding: 0;
 }
 
+.commentlist,
+.commentlist .children {
+	list-style-type: none;
+	padding: 0;
+}
+.commentlist > li:after,
+.commentlist .children > li:before {
+	border-bottom:1px solid #D6D6D6;
+	content: "";
+	display: block;
+	height: 1px;
+	width: 100%;
+}
+.commentlist > li:last-child:after {
+	display: none;
+}
+
+.comment-body {
+    padding: 20px 0;
+    position: relative;
+}
+ 
+.comment-form-author:before, .comment-form-author:after, .comment-form-email:before, .comment-form-email:after, .comment-form-url:before, .comment-form-url:after, .comment-body:before, .comment-body:after {
+    content: "";
+    display: table;
+}
+.comment-form-author:before, .comment-form-author:after, .comment-form-email:before, .comment-form-email:after, .comment-form-url:before, .comment-form-url:after, .comment-body:before, .comment-body:after {
+    content: "";
+    display: table;
+} 
+.comment-body:after {
+    clear: both;
+}
 
 #comments.comments-area ol.commentlist li {
-	border-bottom: thin dotted #F15A23;
-    display: block;
-    float: left;
-    margin: 10px 0;
-    max-width: 600px;
-    padding: 0 0 20px;
-    width: 100%;
+	width: 100%;
 }
-
+ 
 #comments.comments-area ol.commentlist li.comment .comment-author {
 	float:left;
 	display:block;
 	max-width:80px;
 	margin:0 20px 0 0;
-}
-
-#comments.comments-area ol.comment-list li.comment article.comment-body {
-	padding:20px 0;
-}
-
-#comments.comments-area ol.commentlist li.comment .comment-content {
-	display:block;
-	max-width:80%;
-}
-
-#comments.comments-area ol.commentlist li.comment .reply {
-	display:block;
-	width:100%;
 }
 
 #comments.comments-area ol.commentlist li.comment .comment-author {
@@ -1508,17 +1527,16 @@ address {
     float: left;
     width: 100%;
     word-wrap: break-word;
+	text-align:center;
 }
 
 #comments.comments-area ol.commentlist li.comment .comment-author span.says {
 	float:left;
 }
-
-#comments.comments-area ol.commentlist li.comment .comment-meta {
-	float:left;
-	display:block;
-	width:80%;
-	margin:0 0 10px 0;
+.comment-meta, .comment-awaiting-moderation, .comment-content, .commentlist .reply {
+    float: right;
+    width: calc(100% - 100px);
+    word-wrap: break-word;
 }
 
 #comments.comments-area ol.commentlist li.comment .comment-meta a {
@@ -1532,10 +1550,9 @@ address {
 }
 
 .comment-respond {
-	float:left;
 	width:100%;
 	display:block;
-	margin:20px 0 0 0;
+	margin:20px 0;
 }
 
 #comments.comments-area #respond.comment-respond form#commentform.comment-form p.comment-form-comment label {
