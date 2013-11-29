@@ -399,12 +399,12 @@ h1,h2,h3,h4,h5,h6 {
     clear:both;
 	line-height:24px;
 }
-.post-content h1,
-.post-content h2,
-.post-content h3,
-.post-content h4,
-.post-content h5,
-.post-content h6,
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6,
 .comment-content h1,
 .comment-content h2,
 .comment-content h3,
@@ -1083,22 +1083,22 @@ header.post-header, .blog_post {
 /* =Custom posts= */
 article.post-password-required header.post-header .post-title{
 	width:85.61%;
-	padding: 0 10% 11px 4.4%;
+	padding: 0 10% 13px 4.4%;
 	background:url(images/post-password.png) no-repeat 97% 0 transparent;
 }
 article.format-link header.post-header .post-title{
 	width:85.61%;
-	padding: 0 10% 11px 4.4%;
+	padding: 0 10% 13px 4.4%;
 	background:url(images/post-link.png) no-repeat 97% 0 transparent;
 }
 article[class*=tag-twitter] header.post-header .post-title{
 	width:85.61%;
-	padding: 0 10% 11px 4.4%;
+	padding: 0 10% 13px 4.4%;
 	background:url(images/post-twitter.png) no-repeat 97% 0 transparent;
 }
 article.format-quote header.post-header .post-title{
 	width:85.61%;
-	padding: 0 10% 11px 4.4%;
+	padding: 0 10% 13px 4.4%;
 	background:url(images/post-quote.png) no-repeat 97% 0 transparent;
 }
 cite{font-weight:bold}
@@ -1150,8 +1150,8 @@ header.post-header .post-title {
     font-size:20px;
     float:left;
     width:91.21%;
-    margin:12px 0 0;
-    padding: 0 4.4% 11px ;
+    margin:14px 0 0;
+    padding: 0 4.4% 13px ;
 	word-wrap: break-word;
 	border-bottom:2px solid #f15a23;
 }
