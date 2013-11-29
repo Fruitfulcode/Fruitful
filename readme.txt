@@ -119,6 +119,7 @@ Files ru_Ru.po ru_Ru.mo icluded. Default language is english.
 * Update for ru_RU translation.
 * Bug fix post with no title added link to circle with data
 * Bug fix 1200px image width in content section
+* Bug fix leave comments
 * Source code optimization
 * Css changes
 
