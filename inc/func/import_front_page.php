@@ -1,6 +1,7 @@
 <?php 
 /*Import dummy data for Fruitful Theme */
 include_once(ABSPATH . 'wp-admin/includes/image.php');
+
 global $arr_img_for_post, 
 	   $arr_img_for_slider;
 $arr_img_for_post   = array ('1column.png', '2column.png', '3column.png', '4column.png');
@@ -41,37 +42,30 @@ function get_exists_attach($name_value) {
 function add_attachment_image($image_url, $title = null, $alt = null, $post_content = null) {
 	$attach_id = 0;
 	$upload_dir = wp_upload_dir();
+	$image_data = @file_get_contents( $image_url);
 	
-	if (@fopen($image_url, "r")) {
-		$image_data = file_get_contents($image_url);
-		if ($image_data) {
-			$filename   = basename($image_url);
-			if(wp_mkdir_p($upload_dir['path']))
-				$file = $upload_dir['path'] . '/' . $filename;
-			else
-				$file = $upload_dir['basedir'] . '/' . $filename;
-					
-			file_put_contents($file, $image_data);
-			$wp_filetype = wp_check_filetype($filename, null );
-			if ($title == '') { $title = $filename; }
-				$attachment = array(
+	if ($image_data) {
+		$filename   = basename($image_url);
+		$upload 	= wp_upload_bits( $filename, null, $image_data);
+		
+		if ($title == '') { $title = $filename; }
+			$wp_filetype = wp_check_filetype(basename($upload['file']), null );
+			$attachment = array(
+					'guid' 			 => $upload['url'], 
 					'post_mime_type' => $wp_filetype['type'],
-					'post_title' 	 => sanitize_file_name($title),
-					'post_content'   => $post_content,
-					'post_status'    => 'inherit'
-				);
+					'post_title' 	 => $title,
+					'post_content' 	 => mysql_real_escape_string($post_content),
+					'post_status' 	 => 'inherit'
+			);
 			
-			$attach_id   = wp_insert_attachment( $attachment, $file, 0 );
-			$attach_data = wp_generate_attachment_metadata( $attach_id, $file );
-			wp_update_attachment_metadata( $attach_id, $attach_data );
+			$attach_id   = wp_insert_attachment($attachment, $upload['file']);
+			$attach_data = wp_generate_attachment_metadata($attach_id, $upload['file']);
+			wp_update_attachment_metadata($attach_id, $attach_data);
 			
 			return $attach_id;
 		} else {
 			return -1;
 		}
-	} else {
-			return -1;
-	}			
 }	
  		
 function fruitful_create_home_page() {
