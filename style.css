@@ -1738,13 +1738,13 @@ address {
 		   
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (min-width:768px) {
-	.search header.post-header .post-title { width:94.01%; padding: 0 3% 11px ;}
+	.search header.post-header .post-title { width:94.01%; padding: 0 3% 13px ;}
 	.blog_post .post-content .entry-summary{padding:20px 3% 10px;margin-top:0}
 	.search .blog_post .post-content footer.entry-meta{	padding:0 3%}
-	.search article.post-password-required header.post-header .post-title{width:90.51%;padding: 0 6.5% 11px 3%;}
-	.search article.format-link header.post-header .post-title{width:90.51%;padding: 0 6.5% 11px 3%;}
-	.search article[class*=tag-twitter] header.post-header .post-title{width:90.51%;padding: 0 6.5% 11px 3%;}
-	.search article.format-quote header.post-header .post-title{width:90.51%;padding: 0 6.5% 11px 3%;}
+	.search article.post-password-required header.post-header .post-title{width:90.51%;padding: 0 6.5% 13px 3%;}
+	.search article.format-link header.post-header .post-title{width:90.51%;padding: 0 6.5% 13px 3%;}
+	.search article[class*=tag-twitter] header.post-header .post-title{width:90.51%;padding: 0 6.5% 13px 3%;}
+	.search article.format-quote header.post-header .post-title{width:90.51%;padding: 0 6.5% 13px 3%;}
 }
 @media only screen and (min-width:768px) and (max-width:959px) {
 	.blog_post .post-content {	width: 452px;}
