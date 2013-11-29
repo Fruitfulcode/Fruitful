@@ -23,7 +23,7 @@ Fruitful is distributed under the GPLv2 license (http://www.gnu.org/licenses/gpl
 -------------------------------------------------------
 
 http://themes.fruitfulcode.com/fruitful/
-Demo website configured via features and theme options. Used html, css and short codes for display content.
+Demo website configured via features and theme options. Used html, css and shortcodes for display content.
  
 
 -------------------------------------------------------
@@ -83,36 +83,40 @@ Files ru_Ru.po ru_Ru.mo icluded. Default language is english.
 -------------------------------------------------------
  
 * Underscores starter theme http://underscores.me/ Licensed under GPL licenses
+* Skeleton responsive grid http://www.getskeleton.com/ Licensed under MIT
 * FlexSlider by WooThemes under the GPLv2 license (http://www.gnu.org/licenses/gpl-2.0.html)
 * Nivo Slider jQuery script by dev7studios under the MIT license. http://dev7studios.com/plugins/nivo-slider/
-* Fabcybox jQuery script http://fancybox.net/ Licensed under both MIT and GPL licenses
+* Fancybox jQuery script http://fancybox.net/ Licensed under both MIT and GPL licenses
 * Html5shiv jQuery script https://code.google.com/p/html5shiv/ under the MIT or GPL Version 2 licenses
 * Mousewheel jQuery script http://adomas.org/javascript-mouse-wheel/ Licensed under the MIT License.
-* SyntaxHighlighter jQuery script http://alexgorbatchev.com/SyntaxHighlighter/ Licensed under the MIT License.
-* colorpicker js http://www.eyecon.ro/ Licensed under both MIT and GPL licenses
+* SyntaxHighlighter jQuery script http://alexgorbatchev.com/SyntaxHighlighter/ Licensed under the MIT License
+* Colorpicker js http://www.eyecon.ro/ Licensed under both MIT and GPL licenses
 * Easy Responsive Tabs to Accordion https://github.com/samsono/Easy-Responsive-Tabs-to-Accordion MIT and GPL licenses
 * Fonts by Google fonts http://www.google.com/fonts licensed under Apache License Version 2 (http://www.apache.org/licenses/LICENSE-2.0.html)
-* Dialogbox by Trent Richardson, http://trentrichardson.com/Impromptu/ Licensed under the MIT License.
+* Dialogbox by Trent Richardson, http://trentrichardson.com/Impromptu/ Licensed under the MIT License
 
 -------------------------------------------------------
     Changelog
 -------------------------------------------------------
 
-= 1.1 = (27.11.13)
+= 1.1 = (29.11.13)
 * Install home page (Import dummy data)
 * New header section in theme option
+* New styles for WordPress 3.6 post formats
+* New blog additional styles
 * New design skins for Nivo slider and Flex slider
 * New popular google fonts added
 * New attribute columns_count="3" added to shortcode [info_box_area]
 * New default icon for columns shortcode
 * New Easy Responsive Tabs to Accordion
 * New back to top arrow
+* New dialog window
+* New design saving popup
 * New files jquery-ui.css, jquery-ui.js
-* Update slider: Target="_blank" option per slides.
 * New files fancybox 1.3.4 version
-* Update for description in theme options
+* Update slider: Target="_blank" option per slides
+* Update descriptions in theme options
 * Update for ru_RU translation.
-* Update dialog window and new design saving popup.
 * Bug fix post with no title added link to circle with data
 * Bug fix 1200px image width in content section
 * Source code optimization
@@ -122,9 +126,9 @@ Files ru_Ru.po ru_Ru.mo icluded. Default language is english.
 = 1.0.9 = (15.11.13)
 * XSS vulnerabilities bug fix
 * Slider - added ability to add link to slider images
-* Shortcodes - source code optimization and new features.
+* Shortcodes - source code optimization and new features
 * Shorcode [slider] changed to [fruitful_slider]
-* Backlinks in footer added <nofollow> for all pages except home.
+* Backlinks in footer added <nofollow> for all pages except home
 * Fancybox now working with class="fancybox"
 * Skype icon added call on cliks
 * Added VK.com icon to social media tab
@@ -135,7 +139,7 @@ Files ru_Ru.po ru_Ru.mo icluded. Default language is english.
 
 = 1.0.7 = (05.11.13)
 * Comments on pages set by default in theme options
-* Optimization fruitful_get_responsive_style function.
+* Optimization fruitful_get_responsive_style function
 * Css changes
 * Update descriptions for theme options.
 * Fonts options changed from content to <body>
@@ -159,7 +163,7 @@ Files ru_Ru.po ru_Ru.mo icluded. Default language is english.
 * Update readme.txt file
 
 = 1.0.3 = (28.10.13)
-* Modified document <title> output, use wp_title filter.
+* Modified document <title> output, use wp_title filter
 * wp_head replaced
 * Google analytics removed from theme options
 * Fix unescaped home_url() calls
@@ -169,7 +173,7 @@ Files ru_Ru.po ru_Ru.mo icluded. Default language is english.
 * Back to top button, now inside footer
 * Responsive by default in theme options
 * Css fixes
-* Copyright changes.
+* Copyright changes
 
 = 1.0.2 = (24.10.2013)
 * add author template
