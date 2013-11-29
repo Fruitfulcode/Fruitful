@@ -999,6 +999,7 @@ header.post-header, .blog_post {
 .category .blog_post,
 .tag .blog_post,
 .author .blog_post,
+.archive .blog_post,
 .search .blog_post{
 	margin:0 0 55px}
 .blog .blog_post:last-of-type,
