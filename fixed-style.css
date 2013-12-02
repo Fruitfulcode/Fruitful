@@ -781,9 +781,11 @@ embed,iframe,object {
 #page .container .btm_header, #page .container .entry-header, 
 #page .container .archive-header {
     border-bottom:1px solid #d6d6d6;
-	margin:0 0 10px 0;
+	margin:0 0 10px;
 }
-.search .entry-header{margin:0 0 10px}
+.search #page .container  .entry-header{
+	border:0;
+}
 
 .page-header {
 	margin: 0 0 20px;

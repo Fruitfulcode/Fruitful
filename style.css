@@ -936,7 +936,11 @@ embed,iframe,object {
     border-bottom:1px solid #d6d6d6;
 	margin: 0 0 10px;
 }
-.search .entry-header{margin:0 0 10px}
+
+.search #page .container  .entry-header {
+	border:0;
+}
+
 #page .container header hgroup {
     float:left;
     margin: 0 15px 15px 0;
