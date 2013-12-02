@@ -6,7 +6,6 @@ jQuery(document).ready(function($) {
 		});
 		
 		/*Fancy Box*/
-	
 		if ($(".fancybox").length > 0) {
 			$(".fancybox").fancybox({
 				'overlayShow'	 : true,
@@ -38,26 +37,39 @@ jQuery(document).ready(function($) {
 				fit: true
 			});
 		}
+		
+		jQuery(window).resize();
 });
 
+jQuery(window).bind('resize', function() { 
+	var vAllH 	= jQuery('.site-header').outerWidth(),
+		vHgroup = jQuery('hgroup').outerWidth(),
+		vMenu   = jQuery('.site-navigation').outerWidth();
+	
+	if (vAllH < (vHgroup + vMenu)) {
+		jQuery('.site-navigation').css({'float':'left'});
+	}	
+		
+});
 
 jQuery(window).bind('scroll', function() { 
- if (ThGlobal.is_fixed_header != -1) {
-  var outher_height = jQuery(".head-container").outerHeight()
-  if (jQuery(this).scrollTop() > outher_height) {
-   if (jQuery('#wpadminbar').length > 0) {
-    jQuery(".head-container").addClass('fixed is_indent'); 
-   } else {
-    jQuery(".head-container").addClass('fixed'); 
-   }  
-  } else { 
-    jQuery(".head-container").removeClass('fixed is_indent');
-  }
- }
+	if (ThGlobal.is_fixed_header != -1) {
+		var outher_height = jQuery(".head-container").outerHeight();
+		
+		if (jQuery(this).scrollTop() > outher_height) {
+			if (jQuery('#wpadminbar').length > 0) {
+				jQuery(".head-container").addClass('fixed is_indent'); 
+			} else {
+				jQuery(".head-container").addClass('fixed'); 
+			}  
+		} else { 
+			jQuery(".head-container").removeClass('fixed is_indent');
+		}
+	}
   
-  if(jQuery(window).scrollTop() + jQuery(window).height() == jQuery(document).height()) {
-   jQuery('#back-top').fadeIn('slow'); 
-  } else {
-   jQuery('#back-top').fadeOut('slow');
-  }
+	if( jQuery(window).scrollTop() + jQuery(window).height() == jQuery(document).height()) {
+		jQuery('#back-top').fadeIn('slow'); 
+	} else {
+		jQuery('#back-top').fadeOut('slow');
+	}
 });

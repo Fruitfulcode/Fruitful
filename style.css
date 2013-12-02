@@ -620,9 +620,15 @@ a:hover,a:focus,a:active {
     margin:0;
     padding-left:0;
 }
+
+.main-navigation li:first-child {
+	margin:0;
+}
+
 .main-navigation li {
     margin:0 0 0 10px;
 }
+
  .main-navigation li {
     float:left;
     position:relative;
@@ -927,13 +933,19 @@ embed,iframe,object {
 #page {position:relative;}
 #page .container .btm_header, #page .container .entry-header, 
 #page .container .archive-header {
-    border-bottom:1px solid #d6d6d6
+    border-bottom:1px solid #d6d6d6;
+	margin: 0 0 10px;
 }
 .search .entry-header{margin:0 0 10px}
 #page .container header hgroup {
     float:left;
-    margin: 0 0 15px 0;
+    margin: 0 15px 15px 0;
 }
+
+.page-header {
+	 margin: 0 0 20px;
+}
+
 #page .container .content p {
     text-align:justify;
 }
@@ -1161,9 +1173,6 @@ header.post-header .post-title a {
 }
 header.post-header .post-title a:hover,#page .container #secondary .widget a:hover,#page .container #secondary .widget ul li.current-cat a {
     color:#ff5d2a}
-#page div.container .sixteen .five #secondary.widget-area {
-margin: 28px 0 0 0;
-}
 #page .container #secondary {
     float:left;
     width:100%;
@@ -1747,14 +1756,15 @@ address {
 	.search article.format-quote header.post-header .post-title{width:90.51%;padding: 0 6.5% 13px 3%;}
 }
 @media only screen and (min-width:768px) and (max-width:959px) {
-	.blog_post .post-content {	width: 452px;}
-	.search .blog_post .post-content {    width:692px;	}
-	input#s {    width:177px;}
+	.blog_post .post-content { width: 452px;}
+	.search .blog_post .post-content { width:692px; }
+	input#s { width:177px;}
 }
 @media only screen and (max-width:767px) {
     /* nav menu ul & select */
 	.menu { display:none; }
-	.main-navigation { float:none; }
+	.main-navigation { float:none !important; }
+	#page .container header hgroup { margin: 0 0 15px; }
 	.select-menu { display:block; }
 	#back-top { display: none; }
 	.blog_post .post-content,
@@ -1765,7 +1775,7 @@ address {
 	.mejs-controls div.mejs-time-rail{width:149px !important}
 }
 @media only screen and (max-width:479px) {
-	.blog_post .date_of_post {	width: 50px;	height: 50px; float:none; left:0; top:1px}
+	.blog_post .date_of_post {	width: 50px; height: 50px; float:none; left:0; top:1px}
 	.blog_post .date_of_post .day_post {font-size: 18px;}
 	.blog_post .post-content,
 	.search .blog_post .post-content{width: 298px;}

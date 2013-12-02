@@ -14,24 +14,18 @@
  */
 
 get_header(); ?>
-		<header class="entry-header">
-			<h1 class="entry-title">
-			<?php $frontpost_id = get_option('page_for_posts');
-				  echo get_the_title($frontpost_id);?>
-			</h1>
-		</header><!-- .entry-header -->
-		
 		<div class="eleven columns alpha">
 		<div id="primary" class="content-area">
 			<div id="content" class="site-content" role="main">
 		<?php if ( have_posts() ) : ?>
-			<?php fruitful_content_nav( 'nav-below' ); ?>
+			
+			<?php //fruitful_content_nav( 'nav-above' ); ?>
 			<?php /* The loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php get_template_part( 'content', get_post_format() ); ?>
 			<?php endwhile; ?>
-
-			<?php fruitful_content_nav( 'nav-above' ); ?>
+			<?php fruitful_content_nav( 'nav-below' ); ?>
+			
 
 		<?php else : ?>
 			<?php get_template_part( 'no-results', 'index' ); ?>

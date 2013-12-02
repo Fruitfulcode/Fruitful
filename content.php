@@ -24,9 +24,16 @@
 	
 	<div class="post-content">	
 	<header class="post-header">
-		<?php if (get_the_title() != '') : ?>
-			<h1 class="post-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'fruitful' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-		<?php endif; ?>
+		<?php if ( is_single() ) : ?>
+				<h1 class="post-title"><?php the_title(); ?></h1>
+		<?php else : ?>
+			<?php if (get_the_title() != '') : ?>
+			<h1 class="post-title">
+				<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'fruitful' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
+			</h1>
+			<?php endif; ?>
+		<?php endif; // is_single() ?>		
+		
 		
 		<?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
 			<div class="entry-thumbnail">

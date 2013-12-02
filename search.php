@@ -14,7 +14,7 @@ get_header(); ?>
 					<header class="entry-header">
 						<h1 class="entry-title"><?php printf( __( 'Search Results for: %s', 'fruitful' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 					</header><!-- .page-header -->
-					<?php fruitful_content_nav( 'nav-above' ); ?>
+					<?php //fruitful_content_nav( 'nav-above' ); ?>
 					<?php /* Start the Loop */ ?>
 					<?php while ( have_posts() ) : the_post(); ?>
 						<?php get_template_part( 'content', 'search' ); ?>

@@ -12,7 +12,7 @@ get_header(); ?>
 			<div id="primary" class="content-area">
 				<div id="content" class="site-content" role="main">
 				<?php while ( have_posts() ) : the_post(); ?>
-				<?php fruitful_content_nav( 'nav-above' ); ?>
+				<?php //fruitful_content_nav( 'nav-above' ); ?>
 				<?php get_template_part( 'content', get_post_format() ); ?>
 				<?php fruitful_content_nav( 'nav-below' ); ?>
 				<?php

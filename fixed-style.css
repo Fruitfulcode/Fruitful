@@ -465,6 +465,10 @@ a:hover,a:focus,a:active {
     margin:0;
     padding-left:0;
 }
+.main-navigation li:first-child {
+	margin:0;
+}
+
 .main-navigation li {
     margin:0 0 0 10px;
 }
@@ -756,8 +760,8 @@ embed,iframe,object {
 .site-content .nav-next a:hover{
 	color:#72665d
 }
-.bypostauthor {
-}
+.bypostauthor {}
+
 .widget {
     margin:0 0 1.5em;
 }
@@ -776,12 +780,18 @@ embed,iframe,object {
 #page {position:relative;}
 #page .container .btm_header, #page .container .entry-header, 
 #page .container .archive-header {
-    border-bottom:1px solid #d6d6d6
+    border-bottom:1px solid #d6d6d6;
+	margin:0 0 10px 0;
 }
 .search .entry-header{margin:0 0 10px}
+
+.page-header {
+	margin: 0 0 20px;
+}
+
 #page .container header hgroup {
     float:left;
-	margin: 0 0 15px 0;
+	margin: 0 15px 15px 0;
 }
 #page .container .content p {
     text-align:justify;
@@ -1026,9 +1036,6 @@ header.post-header .post-title a {
 }
 header.post-header .post-title a:hover,#page .container #secondary .widget a:hover,#page .container #secondary .widget ul li.current-cat a {
     color:#ff5d2a}
-#page div.container .sixteen .five #secondary.widget-area {
-margin: 28px 0 0 0;
-}
 #page .container #secondary {
     float:left;
     width:100%;

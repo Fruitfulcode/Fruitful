@@ -1,6 +1,5 @@
 <?php 
 /*Import dummy data for Fruitful Theme */
-include_once(ABSPATH . 'wp-admin/includes/image.php');
 
 global $arr_img_for_post, 
 	   $arr_img_for_slider;
@@ -29,55 +28,47 @@ function fruitful_create_custom_page($args = null) {
 	
 	return $id_;
 }
- 
- 
-function get_exists_attach($name_value) {
-	global $wpdb;
-	$attach_count = 0;
-	$attach_count = $wpdb->get_var( "SELECT COUNT(*) FROM $wpdb->posts where post_type='attachment' and post_title like '%".$name_value."%'" );
-	return  ($attach_count > 0);
-	
-}
 
-function add_attachment_image($image_url, $title = null, $alt = null, $post_content = null) {
-	$attach_id = 0;
-	$upload_dir = wp_upload_dir();
-	$image_data = @file_get_contents( $image_url);
-	
-	if ($image_data) {
-		$filename   = basename($image_url);
-		$upload 	= wp_upload_bits( $filename, null, $image_data);
-		
-		if ($title == '') { $title = $filename; }
-			$wp_filetype = wp_check_filetype(basename($upload['file']), null );
-			$attachment = array(
-					'guid' 			 => $upload['url'], 
-					'post_mime_type' => $wp_filetype['type'],
-					'post_title' 	 => $title,
-					'post_content' 	 => mysql_real_escape_string($post_content),
-					'post_status' 	 => 'inherit'
-			);
-			
-			$attach_id   = wp_insert_attachment($attachment, $upload['file']);
-			$attach_data = wp_generate_attachment_metadata($attach_id, $upload['file']);
-			wp_update_attachment_metadata($attach_id, $attach_data);
-			
-			return $attach_id;
-		} else {
-			return -1;
+function fruitful_custom_media_upload_image($file, $post_id, $desc = null) {
+	$id = '';
+	if ( ! empty($file) ) {
+		$tmp = download_url( $file );
+		preg_match( '/[^\?]+\.(jpe?g|jpe|gif|png)\b/i', $file, $matches );
+		$file_array['name'] = basename($matches[0]);
+		$file_array['tmp_name'] = $tmp;
+
+		// If error storing temporarily, unlink
+		if ( is_wp_error( $tmp ) ) {
+			@unlink($file_array['tmp_name']);
+			$file_array['tmp_name'] = '';
 		}
-}	
+
+		// do the validation and storage stuff
+		$id = media_handle_sideload( $file_array, $post_id, $desc );
+		// If error storing permanently, unlink
+		if ( is_wp_error($id) ) {
+			@unlink($file_array['tmp_name']);
+			return $id;
+		}
+	}
+	if ( ! empty($id) ) {
+		return $id;
+	}
+}
  		
 function fruitful_create_home_page() {
 	global $arr_img_for_post, $arr_img_for_slider;
+	
 	
 	$i_attach_id = $content  = $file_url = '';
 	$i_arr   =  $s_attach_id = $slides_array = array();
 	$i_count = 1;
 	
 	foreach ($arr_img_for_slider as $img) {
-		$file_url = get_template_directory() . '/inc/func/import_data/' . $img;
-		$s_attach_id[] = add_attachment_image($file_url, basename($file_url));
+		$id = '';
+		$file_url = get_template_directory_uri() . '/inc/func/import_data/' . $img;
+		$id = fruitful_custom_media_upload_image($file_url, -1);
+		$s_attach_id[] = $id;
 	}
 	
 	if (!empty($s_attach_id)) {
@@ -96,10 +87,10 @@ function fruitful_create_home_page() {
 	$content .= '[description]Lorem ipsum dolor sit amet, consectetur <span class="text_orange">adipiscing</span> elit. Nullam.[/description]'  . "\r\r";
 	
 	foreach ($arr_img_for_post as $img) {
-		$file_url 	 = get_template_directory() . '/inc/func/import_data/' . $img;
-		$i_attach_id = add_attachment_image($file_url, basename($file_url));
-		$i_attach_id = wp_get_attachment_image_src( $i_attach_id, 'full');
-		$i_arr[]  = esc_url($i_attach_id[0]);
+		$id = '';
+		$file_url 	= get_template_directory_uri() . '/inc/func/import_data/' . $img;
+		$id 		= fruitful_custom_media_upload_image($file_url, -1);
+		$i_arr[]  	= esc_url(wp_get_attachment_url($id));
 	}
 	
 	if (!empty($i_arr)) {
