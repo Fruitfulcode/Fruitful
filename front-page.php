@@ -19,7 +19,7 @@
 						echo '<div id="primary" class="content-area">';
 							echo '<div id="content" class="site-content" role="main">';
 					if ( have_posts() ) : 
-						fruitful_content_nav( 'nav-above' ); 
+						//fruitful_content_nav( 'nav-above' ); 
 						/* Start the Loop */ 
 						while ( have_posts() ) : the_post(); 
 							/* Include the Post-Format-specific template for the content.
