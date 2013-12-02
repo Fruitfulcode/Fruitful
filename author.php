@@ -23,7 +23,7 @@ get_header(); ?>
 			<div id="content" class="site-content" role="main">
 
 				<?php if ( have_posts() ) : ?>
-					<?php fruitful_content_nav('nav-below'); ?>
+					<?php //fruitful_content_nav('nav-above'); ?>
 					<?php the_post(); ?>
 					<?php rewind_posts(); ?>
 					<?php if ( get_the_author_meta( 'description' ) ) : ?>
@@ -34,9 +34,7 @@ get_header(); ?>
 					<?php while ( have_posts() ) : the_post(); ?>
 						<?php get_template_part( 'content', get_post_format() ); ?>
 					<?php endwhile; ?>
-
-					<?php fruitful_content_nav('nav-above'); ?>
-		
+					<?php fruitful_content_nav('nav-below'); ?>
 				<?php else : ?>
 					<?php get_template_part( 'content', 'none' ); ?>
 				<?php endif; ?>

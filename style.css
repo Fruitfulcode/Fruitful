@@ -931,8 +931,7 @@ embed,iframe,object {
 }
 
 #page {position:relative;}
-#page .container .btm_header, #page .container .entry-header, 
-#page .container .archive-header {
+#page .container .btm_header, #page .container .entry-header {
     border-bottom:1px solid #d6d6d6;
 	margin: 0 0 10px;
 }
