@@ -48,7 +48,9 @@ jQuery(window).bind('resize', function() {
 	
 	if (vAllH < (vHgroup + vMenu)) {
 		jQuery('.site-navigation').css({'float':'left'});
-	}	
+	} else {
+		jQuery('.site-navigation').css({'float':'right'});
+	}		
 		
 });
 

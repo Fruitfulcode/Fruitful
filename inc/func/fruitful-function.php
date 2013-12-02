@@ -437,7 +437,7 @@ return array(
 				
 				/*menu*/
 				'menu_bg_color'		=> '#ffffff',
-				'menu_btn_color'	=> '#e1704b',
+				'menu_btn_color'	=> '#F15A23',
 				'menu_hover_color'	=> '#ffffff',
 				'menu_font_color'	=> '#333333',		
 				'header_bg_color'	=> '#ffffff',		
