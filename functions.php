@@ -464,20 +464,15 @@ function fruitful_get_all_style () {
 
 		if (!empty($theme_options['menu_btn_color'])) 		{$out .= '$(".main-navigation ul li.current_page_item a, .main-navigation ul li.current-menu-ancestor a, .main-navigation ul li.current-menu-item a, .main-navigation ul li.current-menu-parent a, .main-navigation ul li.current_page_parent a").css({"background-color" : "'.esc_js($theme_options['menu_btn_color']) . '"});' . "\n"; 	}
 		if (!empty($theme_options['menu_hover_color'])) 	{$out .= '$(".main-navigation ul li.current_page_item a, .main-navigation ul li.current-menu-ancestor a, .main-navigation ul li.current-menu-item a, .main-navigation ul li.current-menu-parent a, .main-navigation ul li.current_page_parent a").css({"color" : "'.esc_js($theme_options['menu_hover_color']) . '"});' . "\n"; 	}
-	
-		$out .= '$(".main-navigation ul li:visible").live("mouseenter", function() { ' . "\n";
 		
+		$out .= '$(".main-navigation ul:not(\".sub-menu\") > li").live("mouseenter", function() { ' . "\n";
 			if (!empty($theme_options['menu_btn_color'])) 		{$out .= '$(this).find("a").css({"background-color" : "'. esc_js($theme_options['menu_btn_color']) . '"});' . "\n"; }
 			if (!empty($theme_options['menu_hover_color'])) 	{$out .= '$(this).find("a").css({"color" : "'.esc_js($theme_options['menu_hover_color']) . '"});' . "\n"; }
-			$out .= '$(".main-navigation a").css({"font-size" : "'.esc_js($theme_options['m_size']) .'px"});' . "\n";
-			$out .= '$(".main-navigation a").css({"font-family" : "'.esc_js($theme_options['m_font_family']) .'"});' . "\n";
 		$out .= '}).live("mouseleave", function() {' . "\n";
-		
-			$out .= '$(this).find("a").removeAttr("style"); ' . "\n";
+			$out .= '$(this).find("a").removeAttr("style"); '  . "\n";
 			if (!empty($theme_options['menu_btn_color'])) 		{$out .= '$(".main-navigation ul li.current_page_item a, .main-navigation ul li.current-menu-ancestor a, .main-navigation ul li.current-menu-item a, .main-navigation ul li.current-menu-parent a, .main-navigation ul li.current_page_parent a").css({"background-color" : "'.esc_js($theme_options['menu_btn_color']) . '"});' . "\n"; 	}
 			if (!empty($theme_options['menu_hover_color'])) 	{$out .= '$(".main-navigation ul li.current_page_item a, .main-navigation ul li.current-menu-ancestor a, .main-navigation ul li.current-menu-item a, .main-navigation ul li.current-menu-parent a, .main-navigation ul li.current_page_parent a").css({"color" : "'.esc_js($theme_options['menu_hover_color']) . '"});' . "\n"; 	}
-			$out .= '$(".main-navigation a").css({"font-size" : "'.esc_js($theme_options['m_size']) .'px"});' . "\n";
-			$out .= '$(".main-navigation a").css({"font-family" : "'.esc_js($theme_options['m_font_family']) .'"});' . "\n";
+			$out .= '$(".main-navigation a").css({"color" : "' .esc_js($theme_options['menu_font_color']). '"});' . "\n";
 		$out .= '});' . "\n";
 		}
 	}	
