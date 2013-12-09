@@ -470,9 +470,9 @@ function fruitful_get_all_style () {
 			if (!empty($theme_options['menu_hover_color'])) 	{$out .= '$(this).find("a").css({"color" : "'.esc_js($theme_options['menu_hover_color']) . '"});' . "\n"; }
 		$out .= '}).live("mouseleave", function() {' . "\n";
 			$out .= '$(this).find("a").removeAttr("style"); '  . "\n";
+			$out .= '$(".main-navigation a").css({"color" : "' .esc_js($theme_options['menu_font_color']). '"});' . "\n";
 			if (!empty($theme_options['menu_btn_color'])) 		{$out .= '$(".main-navigation ul li.current_page_item a, .main-navigation ul li.current-menu-ancestor a, .main-navigation ul li.current-menu-item a, .main-navigation ul li.current-menu-parent a, .main-navigation ul li.current_page_parent a").css({"background-color" : "'.esc_js($theme_options['menu_btn_color']) . '"});' . "\n"; 	}
 			if (!empty($theme_options['menu_hover_color'])) 	{$out .= '$(".main-navigation ul li.current_page_item a, .main-navigation ul li.current-menu-ancestor a, .main-navigation ul li.current-menu-item a, .main-navigation ul li.current-menu-parent a, .main-navigation ul li.current_page_parent a").css({"color" : "'.esc_js($theme_options['menu_hover_color']) . '"});' . "\n"; 	}
-			$out .= '$(".main-navigation a").css({"color" : "' .esc_js($theme_options['menu_font_color']). '"});' . "\n";
 		$out .= '});' . "\n";
 		}
 	}	
