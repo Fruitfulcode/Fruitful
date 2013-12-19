@@ -1766,6 +1766,7 @@ address {
 @media only screen and (max-width:767px) {
     /* nav menu ul & select */
 	.menu { display:none; }
+	.widget_nav_menu .menu {display:block;}
 	.main-navigation { float:none !important; }
 	#page .container header hgroup { margin: 0 0 15px; }
 	.select-menu { display:block; }
