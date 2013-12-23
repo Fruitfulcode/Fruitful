@@ -927,7 +927,6 @@ embed,iframe,object {
     float:left;
     width:100%;
 	position: relative;
-	z-index: -1;
 }
 
 #page {position:relative;}
@@ -1469,7 +1468,7 @@ address {
 }
 
 .head-container.is_indent {
-	top:28px;
+	top:32px;
 }
 
 #comments.comments-area h2.comments-title, 
@@ -1572,6 +1571,30 @@ address {
 	float:left;
 	display:block;
 	width:100%;
+}
+
+.commentsErrorBox {
+    color: #F15A23;
+    line-height: 1em;
+    margin-bottom: 27px;
+    padding: 14px 26px 14px 46px;
+	overflow:hidden;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border: 1px solid #FF5C2C;
+	background:url(images/error.png) no-repeat 12px center transparent;
+	display:inline-block;
+	width:88%;
+}	
+
+.commentsErrorBox ul {
+	margin:0;
+	padding:0;
+	list-style:none;
+	list-style:none;
+	margin:5px 0;
+	padding:0;
 }
 
 .gallery {

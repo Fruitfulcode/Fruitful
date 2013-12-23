@@ -44,6 +44,7 @@ require get_template_directory() . '/inc/widgets.php';
 require get_template_directory() . '/inc/tweaks.php';
 require get_template_directory() . '/inc/func/fruitful-function.php';
 require get_template_directory() . '/inc/func/import_front_page.php';
+require get_template_directory() . '/inc/func/comment-inline-error.php';
 	
 /**
  * Custom Theme Options
