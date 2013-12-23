@@ -133,8 +133,9 @@ function fruitful_setup() {
 	add_filter( 'use_default_gallery_style', '__return_false' );
 	
 }
-endif; // fruitful_setup
+endif; 
 add_action( 'after_setup_theme', 'fruitful_setup' );
+// fruitful_setup
 
 
 function fruitful_wp_title( $title, $sep ) {
@@ -150,6 +151,14 @@ function fruitful_wp_title( $title, $sep ) {
 	return $title;
 }
 add_filter( 'wp_title', 'fruitful_wp_title', 10, 2 );
+
+
+/*Remove Customize from menu*/
+add_action('admin_init', 'remove_theme_submenus');
+function remove_theme_submenus() {
+    global $submenu; 
+    unset($submenu['themes.php'][6]);
+}
 
 /**
  * Register widgetized area and update sidebar with default widgets
