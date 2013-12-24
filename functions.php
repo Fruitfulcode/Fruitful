@@ -29,7 +29,8 @@ if ( ! function_exists( 'fruitful_setup' ) ):
  /**
  * Implement the Custom Header feature
  */
-require get_template_directory() . '/inc/custom-header.php';
+ 
+ /*require get_template_directory() . '/inc/custom-header.php';*/
 
  /**
  * Custom template tags for this theme.
@@ -128,7 +129,7 @@ function fruitful_setup() {
 		'admin-head-callback'    => '',
 		'admin-preview-callback' => ''
 		);
-	add_theme_support( 'custom-background', $defaults );
+	/*add_theme_support( 'custom-background', $defaults );*/
 	
 	add_filter( 'use_default_gallery_style', '__return_false' );
 	
