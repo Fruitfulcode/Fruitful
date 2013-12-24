@@ -153,13 +153,6 @@ function fruitful_wp_title( $title, $sep ) {
 add_filter( 'wp_title', 'fruitful_wp_title', 10, 2 );
 
 
-/*Remove Customize from menu*/
-add_action('admin_init', 'remove_theme_submenus');
-function remove_theme_submenus() {
-    global $submenu; 
-    unset($submenu['themes.php'][6]);
-}
-
 /**
  * Register widgetized area and update sidebar with default widgets
  *
@@ -728,10 +721,50 @@ function fruitful_entry_date( $echo = true ) {
 	return $date;
 }
 
+
+
 function fruitful_customize_register( $wp_customize ) {
+
+	class Fruitful_Theme_Options_Button_Control extends WP_Customize_Control {
+		public $type = 'button_link_control';
+ 
+		public function render_content() {
+			?>
+				<label>
+					<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
+					<input class="button button-primary save link_to_options" type="button" value="Theme Options" onclick="javascript:location.href='<?php echo esc_url(admin_url('admin.php?page=theme_options')); ?>'"/>
+				</label>
+			<?php
+		}
+	}
+	
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+	
+	
+	$wp_customize->remove_section( 'colors');
+	$wp_customize->remove_section( 'header_image');
+	$wp_customize->remove_section( 'background_image');
+	
+	$wp_customize->add_section('fruitful_themeoptions_link', array(
+							   'title' => __('Fruitful Theme Options', 'fruitful'),
+							   'priority' => 10,
+							));
+	
+	$wp_customize->add_setting( 'themeoptions_button_control' );
+ 
+	$wp_customize->add_control(
+		new Fruitful_Theme_Options_Button_Control (
+        $wp_customize,
+        'button_link_control',
+        array(
+            'label' 	=> 'Advanced theme settings',
+			'section' 	=> 'fruitful_themeoptions_link',
+            'settings' 	=> 'themeoptions_button_control'
+        )
+    )
+);
 }
 add_action( 'customize_register', 'fruitful_customize_register' );
 
