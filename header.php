@@ -32,8 +32,8 @@
 							<hgroup>
 								<?php echo fruitful_get_logo(); ?>
 							</hgroup>					
-							
-							<nav role="navigation" class="site-navigation main-navigation">						
+							<?php languages_list_header(); ?>
+							<nav role="navigation" class="site-navigation main-navigation">
 								<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>					
 							</nav><!-- .site-navigation .main-navigation -->				
 						</header><!-- #masthead .site-header -->			

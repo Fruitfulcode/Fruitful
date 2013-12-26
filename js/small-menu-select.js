@@ -14,7 +14,7 @@
             // ad class to submenu list
             if ($(this).parents('aside').length > 0) return;
             i++;
-            el.find('ul').addClass(settings.subMenuClass);
+            el.find('ul.children').addClass(settings.subMenuClass);
             $(this).attr('id', 'main-menu-' + i);
             // Create base menu
             $('<select />', {

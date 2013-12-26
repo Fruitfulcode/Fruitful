@@ -37,7 +37,6 @@ function fruitful_slide_select() {
 	return apply_filters( 'fruitful_slide_select', $slide_anim_options );
 }
 
-
 function fruitful_flex_effect() {
 	$slide_anim_options = array(
 		'0' => array(
@@ -421,6 +420,7 @@ return array(
 				'pagecomment'		=> 'on',
 				'is_fixed_header'	=> 'off',
 				'styletheme'		=> 'off',
+				'is_wpml_ready'		=> 'on',
 
 				/*Header image*/
 				'header_img' 	=> '',

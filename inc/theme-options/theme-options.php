@@ -45,6 +45,7 @@ function fruitful_theme_options_init() {
 	add_settings_field( 'general_cm',		__( 'Comments', 'fruitful' ), 	'fruitful_get_general_comment',  	'theme_options',  'general', array('info' => __( 'If you want to display comments on your post page or page, select options below.', 'fruitful' )));
 	add_settings_field( 'general_ds',		__( 'Default theme styles',  'fruitful' ),'fruitful_get_style_theme', 'theme_options',  'general', array('info' => __( 'Default CSS. Theme option for styling is not working, if this option enable.', 'fruitful' )));
 	add_settings_field( 'general_rb',		__( 'Reset options', 'fruitful' ), 'fruitful_reset_btn',  'theme_options',  'general', array('info' => __( 'All theme options will be reset to default. ', 'fruitful' )));
+	add_settings_field( 'general_wpml',		__( 'Multilingual Switch in Header (WPML Required)', 'fruitful' ), 'fruitful_wpml_ready',  'theme_options',  'general', array('info' => __( 'If you wish to show Language Switch in header, select option below. ', 'fruitful' )));
 	
 	add_settings_field( 'header_hd',		__( 'Sticky  header', 	 'fruitful' ), 	'fruitful_get_general_header', 	'theme_options',  'header', array('info' => __( 'Options relating to the website header', 'fruitful' )));
 	add_settings_field( 'header_hi',		__( 'Background for header', 'fruitful' ), 	'fruitful_get_header_img', 		'theme_options',  'header', array('info' => __( 'Upload image for background in header area. (Supported files .png, .jpg, .gif)  ', 'fruitful' )));
@@ -214,6 +215,16 @@ function fruitful_reset_btn() {
 	<?php	
 }
 
+function fruitful_wpml_ready() {
+	$options = fruitful_get_theme_options();
+	?>
+		<div class="box-option">
+			<label for="is_wpml_ready_ch"><input type="checkbox" name="fruitful_theme_options[is_wpml_ready]" id="is_wpml_ready_ch" <?php checked( 'on', $options['is_wpml_ready']); ?> />
+			<?php _e( 'Enable', 'fruitful' ); ?>
+			</label>
+		</div>
+		<?php 
+}
 
 function fruitful_settings_field_socials_links() {
 	$options = fruitful_get_theme_options();

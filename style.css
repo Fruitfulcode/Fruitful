@@ -608,6 +608,67 @@ a:hover,a:focus,a:active {
     clip:rect(1px, 1px, 1px, 1px);
     position:absolute !important;
 }
+#header_language_select{
+	float:right;
+	height:26px;
+	margin: 10px 0 0;
+	padding:0 10px;
+	z-index:99999999;
+}
+#header_language_select ul{
+	margin:0;
+	list-style:none;
+}
+#header_language_select ul li.current{
+	position: relative;
+}
+#lang-select-block a{
+    display:block;
+    text-decoration:none;
+    text-transform:uppercase;
+    padding:7px 10px;
+	font-size:14px;
+	font-family:"Open Sans", sans-serif;
+}
+#lang-select-block .current a{
+	-webkit-transition: all 0.3s ease-in-out; 
+	-moz-transition: all 0.3s ease-in-out; 
+	-khtml-transition: all 0.3s ease-in-out; 
+	-o-transition: all 0.3s ease-in-out; 
+	-ms-transition: all 0.3s ease-in-out; 
+	transition: all 0.3s ease-in-out; 
+}
+ul#lang-select-popup{
+    box-shadow:0 3px 3px rgba(0,0,0,0.2);
+	background:#fff;
+    display:block;
+    float:left;
+    left:-26px;
+    moz-box-shadow:0 3px 3px rgba(0,0,0,0.2);
+    webkit-box-shadow:0 3px 3px rgba(0,0,0,0.2);
+    position:absolute;
+    top:35px;
+    -webkit-transition: all 0.2s ease-in-out; 
+	-moz-transition: all 0.2s ease-in-out; 
+	-khtml-transition: all 0.2s ease-in-out; 
+	-o-transition: all 0.2s ease-in-out; 
+	-ms-transition: all 0.2s ease-in-out; 
+	transition: all 0.2s ease-in-out; 
+	opacity:0;
+	margin:20px 0 0 0;
+	_margin: 0; /*IE6 only*/
+	visibility:hidden;
+	z-index:999999;
+}
+#header_language_select ul li:hover > ul {
+    margin: 0;
+    opacity: 1;
+    visibility: visible;
+}
+#lang-select-popup a {
+    padding: 12px 15px;
+    text-transform: none;
+}
 .main-navigation {
     display:block;
     float:right;
@@ -1789,6 +1850,7 @@ address {
 @media only screen and (max-width:767px) {
     /* nav menu ul & select */
 	.menu { display:none; }
+	#header_language_select{display:none;}
 	.widget_nav_menu .menu {display:block;}
 	.main-navigation { float:none !important; }
 	#page .container header hgroup { margin: 0 0 15px; }

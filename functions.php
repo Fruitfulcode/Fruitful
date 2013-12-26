@@ -478,6 +478,17 @@ function fruitful_get_all_style () {
 			if (!empty($theme_options['menu_btn_color'])) 		{$out .= '$(".main-navigation ul li.current_page_item a, .main-navigation ul li.current-menu-ancestor a, .main-navigation ul li.current-menu-item a, .main-navigation ul li.current-menu-parent a, .main-navigation ul li.current_page_parent a").css({"background-color" : "'.esc_js($theme_options['menu_btn_color']) . '"});' . "\n"; 	}
 			if (!empty($theme_options['menu_hover_color'])) 	{$out .= '$(".main-navigation ul li.current_page_item a, .main-navigation ul li.current-menu-ancestor a, .main-navigation ul li.current-menu-item a, .main-navigation ul li.current-menu-parent a, .main-navigation ul li.current_page_parent a").css({"color" : "'.esc_js($theme_options['menu_hover_color']) . '"});' . "\n"; 	}
 		$out .= '});' . "\n";
+		
+		$out .= '$("#header_language_select a").css({"color" : "'.esc_js($theme_options['menu_font_color']). '"});' . "\n";
+		if (!empty($theme_options['menu_bg_color'])) 		{$out .= '$("#header_language_select").css({"background-color" : "'.esc_js($theme_options['menu_bg_color']) . '"});' . "\n"; 	}
+		$out .= '$("#header_language_select ul:not(\"#lang-select-popup\") > li").live("mouseenter", function() { ' . "\n";
+			if (!empty($theme_options['menu_btn_color'])) 		{$out .= '$(this).children("a").css({"background-color" : "'. esc_js($theme_options['menu_btn_color']) . '"});' . "\n"; }
+			if (!empty($theme_options['menu_hover_color'])) 	{$out .= '$(this).children("a").css({"color" : "'.esc_js($theme_options['menu_hover_color']) . '"});' . "\n"; }
+		$out .= '}).live("mouseleave", function() {' . "\n";
+			$out .= '$(this).find("a").removeAttr("style"); '  . "\n";
+			$out .= '$("#header_language_select a").css({"color" : "' .esc_js($theme_options['menu_font_color']). '"});' . "\n";
+		$out .= '});' . "\n";
+		
 		}
 	}	
 	echo $out;
@@ -845,4 +856,38 @@ function fruitful_esc_content_pbr($content = null) {
 function fruitful_kses_data($text = null) {
 	$allowed_tags = wp_kses_allowed_html( 'post' );
 	return wp_kses($text, $allowed_tags);
+}
+
+function languages_list_header(){
+    $theme_options = fruitful_ret_options("fruitful_theme_options");
+	if( function_exists('icl_get_languages') && $theme_options['is_wpml_ready'] == 'on' ){ 
+		$languages = icl_get_languages('skip_missing=0');
+		if(!empty($languages)){
+			echo '<div id="header_language_select"><ul id="lang-select-block">';
+			foreach($languages as $l){
+				if($l['active']) {
+					echo '<li class="current">';
+						echo '<a class="'.$l['language_code'].'" href="'.$l['url'].'" onclick="return false">';
+							echo $l['language_code'];
+						echo '</a>';
+					echo '<ul id="lang-select-popup">';					
+					
+						echo '<li class="active">';
+							echo '<a class="'.$l['language_code'].'" href="'.$l['url'].'" onclick="return false">';
+								echo $l['native_name'];
+							echo '</a>';
+						echo '</li>';
+				} else {
+						echo '<li class="unactive">';
+						echo '<a class="'.$l['language_code'].'" href="'.$l['url'].'">';
+							echo $l['native_name'];
+						echo '</a></li>';
+				}
+					
+			}
+					echo '</ul>';
+				echo '</li>';					
+			echo '</ul></div>';
+		}
+	}
 }
