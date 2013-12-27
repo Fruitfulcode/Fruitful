@@ -38,6 +38,8 @@ jQuery(document).ready(function($) {
 			});
 		}
 		
+		$('.menu li:has(ul)').mobileMenuDropdown();
+		
 		jQuery(window).resize();
 });
 
