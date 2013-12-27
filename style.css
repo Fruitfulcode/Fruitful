@@ -399,6 +399,29 @@ h1,h2,h3,h4,h5,h6 {
     clear:both;
 	line-height:24px;
 }
+h1 {
+	font-size: 27px;
+}
+
+h2 {
+	font-size: 23px;
+}
+
+h3 {
+	font-size: 20px;
+}
+
+h4 {
+	font-size: 17px;
+}
+
+h5 {
+	font-size: 14px;
+}
+
+h6 {
+	font-size: 12px;
+}
 .entry-content h1,
 .entry-content h2,
 .entry-content h3,
@@ -497,6 +520,17 @@ big {
 }
 figure {
     margin:0;
+}
+fieldset {
+	border: 1px solid #c0c0c0;
+	margin: 0 2px;
+	padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+	border: 0;
+	padding: 0;
+	white-space: normal;
 }
 table {
     margin:0 0 1.5em;
@@ -624,6 +658,7 @@ a:hover,a:focus,a:active {
 }
 #lang-select-block a{
     display:block;
+	color:#333333;
     text-decoration:none;
     text-transform:uppercase;
     padding:7px 10px;
@@ -637,6 +672,10 @@ a:hover,a:focus,a:active {
 	-o-transition: all 0.3s ease-in-out; 
 	-ms-transition: all 0.3s ease-in-out; 
 	transition: all 0.3s ease-in-out; 
+}
+#lang-select-block li.current:hover>a{
+	background:#F15A23;
+	color:#ffffff;
 }
 ul#lang-select-popup{
     box-shadow:0 3px 3px rgba(0,0,0,0.2);
@@ -748,7 +787,7 @@ ul#lang-select-popup{
     margin:0 !important
 }
 .main-navigation ul li:hover > a {
-    background:none repeat scroll 0 0 #E1704B;
+    background:none repeat scroll 0 0 #F15A23;
     color:#fff;
     padding:7px 10px;
 	-webkit-transition: all 0.2s ease-in-out; 
@@ -782,7 +821,7 @@ ul#lang-select-popup{
 .main-navigation ul li.current-menu-parent a,
 .main-navigation ul li.current_page_parent a,
 .main-navigation ul li.current-menu-ancestor a {
-    background:none repeat scroll 0 0 #E1704B;
+    background:none repeat scroll 0 0 #F15A23;
     color:#fff;
     padding:7px 10px;
 }
@@ -1227,7 +1266,6 @@ article.format-image .wp-caption a:hover:after{
 }
 
 header.post-header .post-title {
-    font-size:20px;
     float:left;
     width:91.21%;
     margin:14px 0 0;
@@ -1251,7 +1289,7 @@ header.post-header .post-title a:hover,#page .container #secondary .widget a:hov
 }
 #page .container #secondary .widget h3.widget-title, #page .container #secondary .widget h1.widget-title {
     color:#45494c;
-    font-size:16px;
+    font-size:17px;
     border-bottom:2px solid #f15a23;
     padding:0 0 10px 0;
     margin:0 0 20px 0}
