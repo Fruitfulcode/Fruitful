@@ -674,7 +674,6 @@ ul#lang-select-popup{
     float:right;
     margin:10px 0 0 0;
 	position:relative;
-	z-index:99999;
 }
 .main-navigation ul {
     list-style:none;
@@ -1510,7 +1509,6 @@ address {
 	left:0;
 	width:100%;
 	display:block;
-	z-index:99999;
 	background-size: cover;
 	background-attachment: fixed;
 	background-position:center center;
