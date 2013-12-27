@@ -856,6 +856,12 @@ ul#lang-select-popup{
 #colophon .social-icon a.vk {
     background-position:-311px 0;
 }
+#colophon .social-icon a.pinterest {
+    background-position:-373px 0;
+}
+#colophon .social-icon a.instagram {
+    background-position:-404px 0;
+}
 #colophon .social-icon a.email {
     background-position:-342px 0;
 }
