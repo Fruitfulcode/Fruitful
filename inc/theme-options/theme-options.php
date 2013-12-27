@@ -210,7 +210,7 @@ function fruitful_get_style_theme() {
 function fruitful_reset_btn() { 
 	?>
 	<div class="box-option">
-		<input name="reset" type="reset" class="button-secondary reset-btn" value="<?php esc_attr_e('Reset Defaults', 'fruitful'); ?>" />		
+		<input name="reset" class="button-primary reset-btn" value="<?php esc_attr_e('Reset Defaults', 'fruitful'); ?>" />		
 	</div>	
 	<?php	
 }
