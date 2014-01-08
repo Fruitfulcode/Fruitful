@@ -31,8 +31,20 @@
 						<header id="masthead" class="site-header" role="banner">					
 							<hgroup>
 								<?php echo fruitful_get_logo(); ?>
-							</hgroup>					
+							</hgroup>	
+							
 							<?php languages_list_header(); ?>
+							
+							<?php if (class_exists('Woocommerce')) { ?>
+								<div class="cart-button">
+									<a href="<?php echo get_permalink( woocommerce_get_page_id( 'cart' ) ); ?>" class="cart-contents">
+										<div class="cart_image"></div> 
+										<span class="num_of_product_cart"><?php global $woocommerce;
+										echo $woocommerce->cart->cart_contents_count; ?> </span>
+									</a>
+								</div>							
+							<?php } ?>
+							
 							<nav role="navigation" class="site-navigation main-navigation">
 								<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>					
 							</nav><!-- .site-navigation .main-navigation -->				

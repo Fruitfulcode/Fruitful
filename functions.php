@@ -218,6 +218,9 @@ add_action( 'widgets_init', 'fruitful_widgets_init' );
 			}
 	}	
 	
+	/*add woocommerce styles*/
+	wp_enqueue_style( 'ie-style',		get_template_directory_uri() . '/woocommerce/ie.css');
+	wp_enqueue_style( 'woo-style',		get_template_directory_uri() . '/woocommerce/woo.css');
 	
 	/*add fancybox*/
 	wp_enqueue_script('fn-box',				get_template_directory_uri() . '/js/fnBox/jquery.fancybox-1.3.4.pack.js',   array( 'jquery' ), '20130930', false );
@@ -894,4 +897,173 @@ function languages_list_header(){
 			echo '</ul></div>';
 		}
 	}
+}
+
+/*woocommerce theme support*/
+add_theme_support( 'woocommerce' );
+
+/*remove sidebar from all woocommerce pages except shop page*/
+add_action( 'wp', 'init' );
+function init() {
+	if ( !is_shop() && !is_product_category()) {
+		remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10);
+	}
+}
+
+/*rewrite pagenavi for woocommerce*/
+function pagenavi( $p = 2 ) {
+	echo '<div class="nav-links shop aligncenter">';
+		  if ( is_singular() ) return; 
+		  global $wp_query, $paged;
+		  $max_page = $wp_query->max_num_pages;
+		  if ( $max_page == 1 ) return; 
+		  if ( empty( $paged ) ) $paged = 1;
+		  if ( $paged > $p + 1 ) p_link( 1, 'First' );
+		  if ( $paged > $p + 2 ) echo '... ';
+				echo '<div class="nav-previous ">'; next_posts_link( 'previous' ); echo '</div>';
+				echo '<div class="pages-links">';
+					for( $i = $paged - $p; $i <= $paged + $p; $i++ ) { // Middle pages
+						if ( $i > 0 && $i <= $max_page ) $i == $paged ? print "<span class='page-numbers current'>{$i}</span> " : p_link( $i );
+					 }
+				echo '</div>';
+		  if ( $paged < $max_page - $p - 1 ) echo '... ';
+		  if ( $paged < $max_page - $p ) p_link( $max_page, 'Last' );
+				echo '<div class="nav-next">'; previous_posts_link( 'next' ); echo '</div>';
+	echo '</div>';
+}
+
+function p_link( $i, $title = '' ) {
+  if ( $title == '' ) $title = "Page {$i}";
+  echo "<a class='page-numbers' href='", esc_html( get_pagenum_link( $i ) ), "' title='{$title}'>{$i}</a> ";
+}
+
+function wp_corenavi() {  
+	 global $wp_query, 
+		 $wp_rewrite;  
+	 
+	 $pages = '';  
+	 $max = $wp_query->max_num_pages;  
+	 if (!$current = get_query_var('paged')) {
+		$current = 1;  
+	 } 
+	 
+	 $a['base']    = str_replace(999999999, '%#%', get_pagenum_link(999999999));  
+	 $a['total']   = $max;  
+	 $a['current'] = $current;  
+	  
+	 $total = 0;   			//1 - display the text "Page N of N", 0 - not display  
+	 $a['mid_size'] = 2;  	//how many links to show on the left and right of the current  
+	 $a['end_size'] = 1;  	//how many links to show in the beginning and end  
+	 $a['prev_text'] = '';  //text of the "Previous page" link  
+	 $a['next_text'] = '';  //text of the "Next page" link  
+	  
+	 if  ($max > 1) {
+		echo '<div class="pagination nav-links shop aligncenter">';  
+	 } 
+	 if  ($total == 1 && $max > 1) {
+		$pages = '<span class="pages">Page ' . $current . ' of ' . $max . '</span>'."\r\n";  
+	 } 
+	 echo '<div class="nav-previous ">'; previous_posts_link( ); echo '</div>';
+		echo '<div class="pages-links">';
+			echo $pages . paginate_links($a);  
+		echo '</div>';
+	 echo '<div class="nav-next">';  next_posts_link( ); echo '</div>';
+	 if ($max > 1) {
+		echo '</div>';  
+	 } 
+}
+
+remove_action('woocommerce_pagination', 'woocommerce_pagination', 10);
+ function woocommerce_pagination() { 
+	wp_corenavi();
+}
+add_action( 'woocommerce_pagination', 'woocommerce_pagination', 10);
+
+
+/*rewrite get_product_search_form() function*/
+function fruitful_get_product_search_form(){
+	?>
+	<form role="search" method="get" id="searchform" action="<?php echo esc_url( home_url( '/'  ) ); ?>">
+			<div>
+				<input type="text" value="<?php echo get_search_query(); ?>" name="s" id="s" placeholder="<?php _e( 'Search for products', 'woocommerce' ); ?>" />
+				<input type="submit" id="searchsubmit" value="<?php echo esc_attr__( 'Search' ); ?>" />
+				<input type="hidden" name="post_type" value="product" />
+			</div>
+		</form>
+	<?php
+}
+
+
+/*change title in tabs on single product page*/
+add_filter('woocommerce_product_description_heading','fruitful_product_description_heading');
+function fruitful_product_description_heading() {
+   return '';
+}
+
+
+/*4 cross products for cart*/
+remove_action( 'woocommerce_cart_collaterals', 'woocommerce_cross_sell_display' );
+add_action( 'woocommerce_cart_collaterals', 'fruitful_woocommerce_cross_sell_display' );
+function fruitful_woocommerce_cross_sell_display(){
+	
+	if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+	global $woocommerce_loop, $woocommerce, $product;
+	$crosssells = $woocommerce->cart->get_cross_sells();
+	if ( sizeof( $crosssells ) == 0 ) return;
+	$meta_query = $woocommerce->query->get_meta_query();
+	$args = array(
+		'post_type'           => 'product',
+		'ignore_sticky_posts' => 1,
+		'posts_per_page'      => apply_filters( 'woocommerce_cross_sells_total', 4 ),
+		'no_found_rows'       => 1,
+		'orderby'             => 'rand',
+		'post__in'            => $crosssells,
+		'meta_query'          => $meta_query
+	);
+	$products = new WP_Query( $args );
+	$woocommerce_loop['columns'] 	= apply_filters( 'woocommerce_cross_sells_columns', 4 );
+	if ( $products->have_posts() ) : ?>
+		<div class="cross-sells">
+			<h2><?php _e( 'You may be interested in&hellip;', 'woocommerce' ) ?></h2>
+			<?php woocommerce_product_loop_start(); ?>
+				<?php while ( $products->have_posts() ) : $products->the_post(); ?>
+					<?php woocommerce_get_template_part( 'content', 'product' ); ?>
+				<?php endwhile; // end of the loop. ?>
+			<?php woocommerce_product_loop_end(); ?>
+		</div>
+	<?php endif;
+	wp_reset_query();
+	
+}
+
+/*4 related products for single-product*/
+function fruitful_woocommerce_related_products_limit() {
+	global $product;
+	$args = array(
+		'post_type'        		=> 'product',
+		'no_found_rows'    		=> 1,
+		'posts_per_page'   		=> 4,
+		'ignore_sticky_posts' 	=> 1,
+		'orderby'             	=> $orderby,
+		'post__in'            	=> $related,
+		'post__not_in'        	=> array($product->id)
+	);
+	return $args;
+}
+add_filter( 'woocommerce_related_products_args', 'fruitful_woocommerce_related_products_limit' ); 
+
+// Update cart contents update when products are added to the cart via AJAX 
+add_filter('add_to_cart_fragments', 'fruitful_woocommerce_header_add_to_cart_fragment');
+function fruitful_woocommerce_header_add_to_cart_fragment( $fragments ) {
+	global $woocommerce;
+	ob_start();
+	?>
+	<a href="<?php echo get_permalink( woocommerce_get_page_id( 'cart' ) ); ?>" class="cart-contents">
+		<div class="cart_image"></div>
+		<span class="num_of_product_cart"><?php global $woocommerce;
+		 echo sprintf(_n('%d ', '%d ', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count); ?> </span>
+	</a>
+	<?php
+	$fragments['a.cart-contents'] = ob_get_clean();
+	return $fragments;
 }
