@@ -903,21 +903,25 @@ function languages_list_header(){
 add_theme_support( 'woocommerce' );
 
 /*remove sidebar from all woocommerce pages except shop page*/
-add_action( 'wp', 'init' );
-function init() {
-	if ( !is_shop() && !is_product_category()) {
-		remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10);
+if (class_exists('Woocommerce')) { 
+	add_action( 'wp', 'init' );
+	function init() {
+		if ( !is_shop() && !is_product_category()) {
+			remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10);
+		}
 	}
 }
 
+
 /*rewrite pagenavi for woocommerce*/
-function pagenavi( $p = 2 ) {
+function pagenavi( $p = 2 ) { // pages will be show before and after current page
 	echo '<div class="nav-links shop aligncenter">';
-		  if ( is_singular() ) return; 
+		  if ( is_singular() ) return; // don't show in single page
 		  global $wp_query, $paged;
 		  $max_page = $wp_query->max_num_pages;
-		  if ( $max_page == 1 ) return; 
+		  if ( $max_page == 1 ) return; // don't show when only one page
 		  if ( empty( $paged ) ) $paged = 1;
+		  // echo '<span class="pages">Page: ' . $paged . ' of ' . $max_page . ' </span> '; // pages
 		  if ( $paged > $p + 1 ) p_link( 1, 'First' );
 		  if ( $paged > $p + 2 ) echo '... ';
 				echo '<div class="nav-previous ">'; next_posts_link( 'previous' ); echo '</div>';
@@ -931,7 +935,6 @@ function pagenavi( $p = 2 ) {
 				echo '<div class="nav-next">'; previous_posts_link( 'next' ); echo '</div>';
 	echo '</div>';
 }
-
 function p_link( $i, $title = '' ) {
   if ( $title == '' ) $title = "Page {$i}";
   echo "<a class='page-numbers' href='", esc_html( get_pagenum_link( $i ) ), "' title='{$title}'>{$i}</a> ";
@@ -951,9 +954,9 @@ function wp_corenavi() {
 	 $a['total']   = $max;  
 	 $a['current'] = $current;  
 	  
-	 $total = 0;   			//1 - display the text "Page N of N", 0 - not display  
-	 $a['mid_size'] = 2;  	//how many links to show on the left and right of the current  
-	 $a['end_size'] = 1;  	//how many links to show in the beginning and end  
+	 $total = 0;    //1 - display the text "Page N of N", 0 - not display  
+	 $a['mid_size'] = 2;  //how many links to show on the left and right of the current  
+	 $a['end_size'] = 1;  //how many links to show in the beginning and end  
 	 $a['prev_text'] = '';  //text of the "Previous page" link  
 	 $a['next_text'] = '';  //text of the "Next page" link  
 	  
@@ -973,12 +976,13 @@ function wp_corenavi() {
 	 } 
 }
 
-remove_action('woocommerce_pagination', 'woocommerce_pagination', 10);
- function woocommerce_pagination() { 
+if (class_exists('Woocommerce')) { 
+	remove_action('woocommerce_pagination', 'woocommerce_pagination', 10);
+	add_action( 'woocommerce_pagination', 'woocommerce_pagination', 10);
+}
+function woocommerce_pagination() { 
 	wp_corenavi();
 }
-add_action( 'woocommerce_pagination', 'woocommerce_pagination', 10);
-
 
 /*rewrite get_product_search_form() function*/
 function fruitful_get_product_search_form(){
@@ -993,17 +997,20 @@ function fruitful_get_product_search_form(){
 	<?php
 }
 
-
 /*change title in tabs on single product page*/
-add_filter('woocommerce_product_description_heading','fruitful_product_description_heading');
+if (class_exists('Woocommerce')) { 
+	add_filter('woocommerce_product_description_heading','fruitful_product_description_heading');
+}
 function fruitful_product_description_heading() {
    return '';
 }
 
-
 /*4 cross products for cart*/
-remove_action( 'woocommerce_cart_collaterals', 'woocommerce_cross_sell_display' );
-add_action( 'woocommerce_cart_collaterals', 'fruitful_woocommerce_cross_sell_display' );
+if (class_exists('Woocommerce')) { 
+	remove_action( 'woocommerce_cart_collaterals', 'woocommerce_cross_sell_display' );
+	add_action( 'woocommerce_cart_collaterals', 'fruitful_woocommerce_cross_sell_display' );
+}
+
 function fruitful_woocommerce_cross_sell_display(){
 	
 	if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
@@ -1038,22 +1045,27 @@ function fruitful_woocommerce_cross_sell_display(){
 
 /*4 related products for single-product*/
 function fruitful_woocommerce_related_products_limit() {
-	global $product;
-	$args = array(
-		'post_type'        		=> 'product',
-		'no_found_rows'    		=> 1,
-		'posts_per_page'   		=> 4,
-		'ignore_sticky_posts' 	=> 1,
-		'orderby'             	=> $orderby,
-		'post__in'            	=> $related,
-		'post__not_in'        	=> array($product->id)
-	);
-	return $args;
+		global $product;
+		$args = array(
+			'post_type'        		=> 'product',
+			'no_found_rows'    		=> 1,
+			'posts_per_page'   		=> 4,
+			'ignore_sticky_posts' 	=> 1,
+			'orderby'             	=> $orderby,
+			'post__in'            	=> $related,
+			'post__not_in'        	=> array($product->id)
+		);
+		return $args;
+	}
+
+if (class_exists('Woocommerce')) { 
+	add_filter( 'woocommerce_related_products_args', 'fruitful_woocommerce_related_products_limit' ); 
 }
-add_filter( 'woocommerce_related_products_args', 'fruitful_woocommerce_related_products_limit' ); 
 
 // Update cart contents update when products are added to the cart via AJAX 
-add_filter('add_to_cart_fragments', 'fruitful_woocommerce_header_add_to_cart_fragment');
+if (class_exists('Woocommerce')) { 
+	add_filter('add_to_cart_fragments', 'fruitful_woocommerce_header_add_to_cart_fragment');
+}
 function fruitful_woocommerce_header_add_to_cart_fragment( $fragments ) {
 	global $woocommerce;
 	ob_start();
