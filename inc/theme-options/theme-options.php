@@ -45,8 +45,9 @@ function fruitful_theme_options_init() {
 	add_settings_field( 'general_cm',		__( 'Comments', 'fruitful' ), 	'fruitful_get_general_comment',  	'theme_options',  'general', array('info' => __( 'If you want to display comments on your post page or page, select options below.', 'fruitful' )));
 	add_settings_field( 'general_ds',		__( 'Default theme styles',  'fruitful' ),'fruitful_get_style_theme', 'theme_options',  'general', array('info' => __( 'Default CSS. Theme option for styling is not working, if this option enable.', 'fruitful' )));
 	add_settings_field( 'general_rb',		__( 'Reset options', 'fruitful' ), 'fruitful_reset_btn',  'theme_options',  'general', array('info' => __( 'All theme options will be reset to default. ', 'fruitful' )));
-	add_settings_field( 'general_wpml',		__( 'Multilingual Switch in Header (WPML Required)', 'fruitful' ), 'fruitful_wpml_ready',  'theme_options',  'general', array('info' => __( 'If you wish to show Language Switch in header, select option below. ', 'fruitful' )));
-	
+	if(function_exists('icl_get_languages')){ // if WPML is activated
+		add_settings_field( 'general_wpml',		__( 'Multilingual Switch in Header (WPML)', 'fruitful' ), 'fruitful_wpml_ready',  'theme_options',  'general', array('info' => __( 'If you wish to show Language Switch in header, select option below. ', 'fruitful' )));
+	}
 	add_settings_field( 'header_hd',		__( 'Sticky  header', 	 'fruitful' ), 	'fruitful_get_general_header', 	'theme_options',  'header', array('info' => __( 'Options relating to the website header', 'fruitful' )));
 	add_settings_field( 'header_hi',		__( 'Background for header', 'fruitful' ), 	'fruitful_get_header_img', 		'theme_options',  'header', array('info' => __( 'Upload image for background in header area. (Supported files .png, .jpg, .gif)  ', 'fruitful' )));
 	add_settings_field( 'header_hh',		__( 'Height for header area', 	 'fruitful' ), 	'fruitful_get_header_height', 	'theme_options',  'header', array('info' => __( 'Minimum height in pixels', 'fruitful' )));
@@ -593,6 +594,7 @@ function fruitful_data_save() {
 	if (!isset($data['pagecomment'])) 	  {$data['pagecomment'] 	= 'off'; }
 	if (!isset($data['is_fixed_header'])) {$data['is_fixed_header'] = 'off'; }
 	if (!isset($data['styletheme'])) 	  {$data['styletheme'] 		= 'off'; }
+	if (!isset($data['is_wpml_ready']))   {$data['is_wpml_ready']	= 'off'; }
 	if (!isset($data['bg_repeating'])) 	  {$data['bg_repeating'] 	= 'off'; }
 	
 	if(!empty($data)) {
