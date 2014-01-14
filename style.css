@@ -1185,6 +1185,12 @@ header.post-header, .blog_post {
     width:auto;
     padding:0 0 0 26px;
     margin:0 5px 0 0}
+.blog_post .post-content footer.entry-meta .tag-links {
+    background:url(images/tag.png) no-repeat 0 3px transparent;
+    height:22px;
+    width:auto;
+    padding:0 0 0 26px;
+    margin:0 5px 0 0}
 .blog_post .post-content footer.entry-meta .comments-link:hover,.blog_post .post-content footer.entry-meta .author-link:hover,.blog_post .post-content footer.entry-meta .cat-links:hover {
     opacity:0.9}
 .blog_post .post-content footer.entry-meta .comments-link a,.blog_post .post-content footer.entry-meta .author-link a,.blog_post .post-content footer.entry-meta .cat-links a,.blog_post .post-content footer.entry-meta .edit-link a {
