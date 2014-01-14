@@ -430,7 +430,9 @@ return array(
 				'backgroung_img'    => '',
 				'background_color'	=> '#ffffff', 
 				'bg_repeating'		=> 'off',
-			
+				'container_bg_color' => '#ffffff', 
+				'container_opacity'	=> '1.0',
+				
 				/*logo*/
 				'logo_img'			=> '',
 				'fav_icon'			=> '',

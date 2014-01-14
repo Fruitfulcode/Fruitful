@@ -439,6 +439,7 @@ function fruitful_get_all_style () {
 	
 			$out .= '$("H1, H2, H3, H4, H5, H6").css({"font-family" : "'.esc_js($theme_options['h_font_family']) .'"});' . "\n";
 			$out .= '$(".main-navigation a").css({"font-family" : "'.	 esc_js($theme_options['m_font_family']) .'"});' . "\n";
+			$out .= '$("#header_language_select a").css({"font-family" : "'.	 esc_js($theme_options['m_font_family']) .'"});' . "\n";
 			$out .= '$("body").css({"font-size" : "'. esc_js($theme_options['p_size']) .'px", "font-family" : "' . esc_js($theme_options['p_font_family']) . '"});' . "\n";
 	
 		
@@ -456,6 +457,10 @@ function fruitful_get_all_style () {
 
 		$out .= '$("body").css({'. $back_sytle .'});' . "\n";
 	
+		if(!empty($theme_options['container_bg_color'])) 	{
+			$color = hex2rgba(esc_js($theme_options['container_bg_color']),esc_js($theme_options['container_opacity']));
+			$out .= '$(".container.page-container").css({"background-color" : "'. $color . '"});' . "\n";
+		}
 	
 		$out .= '$(".main-navigation a").css({"color" : "'.esc_js($theme_options['menu_font_color']). '"});' . "\n";
 
@@ -478,8 +483,8 @@ function fruitful_get_all_style () {
 			if (!empty($theme_options['menu_btn_color'])) 		{$out .= '$(this).find("a").css({"background-color" : "'. esc_js($theme_options['menu_btn_color']) . '"});' . "\n"; }
 			if (!empty($theme_options['menu_hover_color'])) 	{$out .= '$(this).find("a").css({"color" : "'.esc_js($theme_options['menu_hover_color']) . '"});' . "\n"; }
 		$out .= '}).live("mouseleave", function() {' . "\n";
-			$out .= '$(this).find("a").removeAttr("style"); '  . "\n";
-			$out .= '$(".main-navigation a").css({"color" : "' .esc_js($theme_options['menu_font_color']). '"});' . "\n";
+			$out .= '$(this).find("a").css({"background-color" : ""});' . "\n";
+			$out .= '$(this).find("a").css({"color" : "' .esc_js($theme_options['menu_font_color']). '"});' . "\n";
 			if (!empty($theme_options['menu_btn_color'])) 		{$out .= '$(".main-navigation ul li.current_page_item a, .main-navigation ul li.current-menu-ancestor a, .main-navigation ul li.current-menu-item a, .main-navigation ul li.current-menu-parent a, .main-navigation ul li.current_page_parent a").css({"background-color" : "'.esc_js($theme_options['menu_btn_color']) . '"});' . "\n"; 	}
 			if (!empty($theme_options['menu_hover_color'])) 	{$out .= '$(".main-navigation ul li.current_page_item a, .main-navigation ul li.current-menu-ancestor a, .main-navigation ul li.current-menu-item a, .main-navigation ul li.current-menu-parent a, .main-navigation ul li.current_page_parent a").css({"color" : "'.esc_js($theme_options['menu_hover_color']) . '"});' . "\n"; 	}
 		$out .= '});' . "\n";
@@ -490,8 +495,8 @@ function fruitful_get_all_style () {
 			if (!empty($theme_options['menu_btn_color'])) 		{$out .= '$(this).children("a").css({"background-color" : "'. esc_js($theme_options['menu_btn_color']) . '"});' . "\n"; }
 			if (!empty($theme_options['menu_hover_color'])) 	{$out .= '$(this).children("a").css({"color" : "'.esc_js($theme_options['menu_hover_color']) . '"});' . "\n"; }
 		$out .= '}).live("mouseleave", function() {' . "\n";
-			$out .= '$(this).find("a").removeAttr("style"); '  . "\n";
-			$out .= '$("#header_language_select a").css({"color" : "' .esc_js($theme_options['menu_font_color']). '"});' . "\n";
+			$out .= '$(this).children("a").css({"background-color" : ""});' . "\n";
+			$out .= '$(this).children("a").css({"color" : "' .esc_js($theme_options['menu_font_color']). '"});' . "\n";
 		$out .= '});' . "\n";
 		
 		}
@@ -1078,4 +1083,43 @@ function fruitful_woocommerce_header_add_to_cart_fragment( $fragments ) {
 	<?php
 	$fragments['a.cart-contents'] = ob_get_clean();
 	return $fragments;
+}
+
+// Color converter
+function hex2rgba($color, $opacity = false) {
+
+	$default = 'rgb(0,0,0)';
+
+	//Return default if no color provided
+	if(empty($color))
+		  return $default; 
+
+	//Sanitize $color if "#" is provided 
+		if ($color[0] == '#' ) {
+		 $color = substr( $color, 1 );
+		}
+
+		//Check if color has 6 or 3 characters and get values
+		if (strlen($color) == 6) {
+				$hex = array( $color[0] . $color[1], $color[2] . $color[3], $color[4] . $color[5] );
+		} elseif ( strlen( $color ) == 3 ) {
+				$hex = array( $color[0] . $color[0], $color[1] . $color[1], $color[2] . $color[2] );
+		} else {
+				return $default;
+		}
+
+		//Convert hexadec to rgb
+		$rgb =  array_map('hexdec', $hex);
+
+		//Check if opacity is set(rgba or rgb)
+		if($opacity){
+		 if(abs($opacity) > 1)
+		  $opacity = 1.0;
+		 $output = 'rgba('.implode(",",$rgb).','.$opacity.')';
+		} else {
+		 $output = 'rgb('.implode(",",$rgb).')';
+		}
+
+		//Return rgb(a) color string
+		return $output;
 }

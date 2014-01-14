@@ -72,7 +72,24 @@
 			jQuery('#colorSelector div').css('backgroundColor', '#' + hex);			
 			jQuery('#background_color').val('#' + hex);		
 		}	
-		});			
+	});	
+	
+	jQuery('#bgColorContainer').ColorPicker({		
+		color: jQuery('#container_bg_color').val(),		
+		onShow: function (colpkr) {			
+			jQuery(colpkr).fadeIn(500);			
+			return false;		
+		},		
+		onHide: function (colpkr) {		
+			jQuery(colpkr).fadeOut(500);		
+			return false;		
+		},		
+		onChange: function (hsb, hex, rgb) {			
+			jQuery('#bgColorContainer div').css('backgroundColor', '#' + hex);			
+			jQuery('#container_bg_color').val('#' + hex);		
+		}	
+	});	
+		
 	
 	jQuery('#menubgcolor').ColorPicker({		
 		color: jQuery('#menu_bg_color').val(),		

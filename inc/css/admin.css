@@ -72,6 +72,7 @@ a:hover, a:active, a:focus {	outline: 0; }
 .form-admin-fruitful .content .settings-section .save-options {float:left; width:100%; min-height:20px; display:none }
 .form-admin-fruitful .content .settings-section input.of-input {width: 430px;}
 .form-admin-fruitful .content .settings-section input#background_color, 
+.form-admin-fruitful .content .settings-section input#container_bg_color, 
 .form-admin-fruitful .content .settings-section input#menu_font_color, 
 .form-admin-fruitful .content .settings-section input#menu_bg_color,
 .form-admin-fruitful .content .settings-section input#menu_btn_color,
@@ -85,6 +86,8 @@ a:hover, a:active, a:focus {	outline: 0; }
 .form-admin-fruitful .content .settings-section  h2, .form-admin-fruitful .content .settings-section  h3, .form-admin-fruitful .content .settings-section  h4, 
 .form-admin-fruitful .content .settings-section  h5, .form-admin-fruitful .content .settings-section  h6 { text-shadow: 0 1px 0 #FFFFFF;}
 .form-admin-fruitful .content .settings-section .none  {display:none}
+.form-admin-fruitful .content #settings-section-2 #set_form_row_2 h4 {margin: 15px 0px 5px; float: left; padding-right: 10px; text-align: right;}
+.form-admin-fruitful .content #settings-section-2 #set_form_row_2 input#container_opacity {float: left; width: 50px; margin-top:10px;}
 .form-admin-fruitful .content #settings-section-5 input[type="text"] {float: left; width: 50px;}
 .form-admin-fruitful .content #settings-section-5 #set_form_row_4 h4 {margin: 5px 0px; float: left; padding-right: 10px; text-align: right;}
 .form-admin-fruitful .content #settings-section-5 #set_form_row_4 .box-options {width: 100px;}

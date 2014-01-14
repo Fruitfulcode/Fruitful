@@ -55,6 +55,7 @@ function fruitful_theme_options_init() {
 	
 	add_settings_field( 'background_image', __( 'Background Image', 'fruitful' ),  'fruitful_get_background_img',   'theme_options',  'background', array('info' => __( 'Upload your background image for site background. (Supported files .png, .jpg, .gif)', 'fruitful' )));
 	add_settings_field( 'background_color', __( 'Background Color ', 'fruitful' ), 'fruitful_get_background_color', 'theme_options',  'background', array('info' => __( 'Choose color for body background', 'fruitful' )));
+	add_settings_field( 'content_background_color', __( 'Content Area Background Color ', 'fruitful' ), 'fruitful_get_container_background_color', 'theme_options',  'background', array('info' => __( 'Choose color for Content Area background', 'fruitful' )));
 		
 	add_settings_field( 'logo_image', 		__( 'Logo image', 'fruitful' ), 	'fruitful_get_logo_img', 	'theme_options', 'logo', 		array('info' => __( 'Upload logo image for your website. Size is original (Supported files .png, .jpg, .gif)', 'fruitful' )));
 	//add_settings_field( 'logo_size', 		__( 'Logo Size', 'fruitful' ), 		'fruitful_get_logo_wh',	 	'theme_options', 'logo', 		array('info' => __( 'Specify resolution for your logo image. Our theme will crop (timthumb) your image for need size.', 'fruitful' )) );
@@ -505,6 +506,16 @@ function fruitful_get_background_color () {
 	?>
 		<div id="colorSelector"><div style="background-color: <?php echo esc_attr($options['background_color']); ?>"></div></div>
 		<input type="text" id="background_color" name="fruitful_theme_options[background_color]" value="<?php echo esc_attr($options['background_color']); ?>"/>
+	<?php
+}
+
+function fruitful_get_container_background_color () {
+	$options = fruitful_get_theme_options();
+	?>
+		<div id="bgColorContainer"><div style="background-color: <?php echo esc_attr($options['container_bg_color']); ?>"></div></div>
+		<input type="text" id="container_bg_color" name="fruitful_theme_options[container_bg_color]" value="<?php echo esc_attr($options['container_bg_color']); ?>"/>
+		<div class="clear"></div>
+		<h4><?php _e( 'Opacity (0.1 - 1.0)',   'fruitful' ); ?></h4><input type="text" name="fruitful_theme_options[container_opacity]" id="container_opacity" value ="<?php echo esc_attr($options['container_opacity']); ?>"/>
 	<?php
 }
 

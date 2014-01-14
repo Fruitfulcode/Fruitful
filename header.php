@@ -52,6 +52,6 @@
 					</div>		
 				</div>	
 			</div>		
-			<div class="container">		
+			<div class="container page-container">		
 				<?php do_action( 'before' ); ?>		
 				<div class="sixteen columns">
