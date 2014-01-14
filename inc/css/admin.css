@@ -5,11 +5,13 @@
 .form-admin-fruitful .content {float:left;  width: 914px;}
 .form-admin-fruitful .header, 
 .form-admin-fruitful .footer  {padding: 10px 10px 10px 0; width: 892px;}
+.form-admin-fruitful .header div.error {float:left;}
 .form-admin-fruitful .footer p.submit {line-height:10px; padding:0}
-.form-admin-fruitful .content 	{position:relative; min-height:600px;min-width: 520px;}
+.form-admin-fruitful .content 	{position:relative; min-height:600px;min-width: 520px;margin-top:8px;}
 .form-admin-fruitful .footer .button-primary, 
-.form-admin-fruitful .header .button-primary {float:right; width:90px;}
+.form-admin-fruitful .header .button-primary {width:90px;}
 .form-admin-fruitful .header p.submit {padding:0;}
+.form-admin-fruitful p.submit {width:90px;float:right;margin-top:15px;}
 .form-admin-fruitful {float:left; width:914px; display:block; background: #fff; padding: 0px 0px 20px 20px;}
 .form-admin-fruitful #icon-theme_options { background: url("../images/icons32.png") no-repeat scroll -492px -5px transparent;}
 .form-admin-fruitful .title_theme {font-family:Arial; font-size:22px; font-weight:bold; display:block; float:left;}
@@ -86,8 +88,6 @@ a:hover, a:active, a:focus {	outline: 0; }
 .form-admin-fruitful .content .settings-section  h2, .form-admin-fruitful .content .settings-section  h3, .form-admin-fruitful .content .settings-section  h4, 
 .form-admin-fruitful .content .settings-section  h5, .form-admin-fruitful .content .settings-section  h6 { text-shadow: 0 1px 0 #FFFFFF;}
 .form-admin-fruitful .content .settings-section .none  {display:none}
-.form-admin-fruitful .content #settings-section-2 #set_form_row_2 h4 {margin: 15px 0px 5px; float: left; padding-right: 10px; text-align: right;}
-.form-admin-fruitful .content #settings-section-2 #set_form_row_2 input#container_opacity {float: left; width: 50px; margin-top:10px;}
 .form-admin-fruitful .content #settings-section-5 input[type="text"] {float: left; width: 50px;}
 .form-admin-fruitful .content #settings-section-5 #set_form_row_4 h4 {margin: 5px 0px; float: left; padding-right: 10px; text-align: right;}
 .form-admin-fruitful .content #settings-section-5 #set_form_row_4 .box-options {width: 100px;}
@@ -153,7 +153,7 @@ a:hover, a:active, a:focus {	outline: 0; }
 	.form-admin-fruitful .content .menu-options ul li {padding: 0 0 0 5px;width:50px;}
 	.form-admin-fruitful .content .menu-options ul li a {min-width: initial;padding: 14px 5px;width: 40px;}
 	.form-admin-fruitful .content .menu-options ul li a span.menu-img{margin:0 !important;}
-	.form-admin-fruitful .footer .button-primary, .form-admin-fruitful .header .button-primary {margin-right:10px;}
+	.form-admin-fruitful .footer p.submit, .form-admin-fruitful .header p.submit {margin-right:10px;}
 }
 
 @media only screen 
@@ -179,5 +179,5 @@ and (max-device-width : 1024px) {
 	.form-admin-fruitful .content .settings-section {width:70%;}
 	.form-admin-fruitful .header, .form-admin-fruitful .footer, .form-admin-fruitful .content {width:100%; }
 	.box-image .img-container.custom-slide {max-height: 220px;}
-	.form-admin-fruitful .footer .button-primary, .form-admin-fruitful .header .button-primary {margin-right:10px;}
+	.form-admin-fruitful .footer p.submit, .form-admin-fruitful .header p.submit {margin-right:10px;}
 }

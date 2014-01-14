@@ -458,7 +458,7 @@ function fruitful_get_all_style () {
 		$out .= '$("body").css({'. $back_sytle .'});' . "\n";
 	
 		if(!empty($theme_options['container_bg_color'])) 	{
-			$color = hex2rgba(esc_js($theme_options['container_bg_color']),esc_js($theme_options['container_opacity']));
+			$color = esc_js($theme_options['container_bg_color']);
 			$out .= '$(".container.page-container").css({"background-color" : "'. $color . '"});' . "\n";
 		}
 	
@@ -1083,43 +1083,4 @@ function fruitful_woocommerce_header_add_to_cart_fragment( $fragments ) {
 	<?php
 	$fragments['a.cart-contents'] = ob_get_clean();
 	return $fragments;
-}
-
-// Color converter
-function hex2rgba($color, $opacity = false) {
-
-	$default = 'rgb(0,0,0)';
-
-	//Return default if no color provided
-	if(empty($color))
-		  return $default; 
-
-	//Sanitize $color if "#" is provided 
-		if ($color[0] == '#' ) {
-		 $color = substr( $color, 1 );
-		}
-
-		//Check if color has 6 or 3 characters and get values
-		if (strlen($color) == 6) {
-				$hex = array( $color[0] . $color[1], $color[2] . $color[3], $color[4] . $color[5] );
-		} elseif ( strlen( $color ) == 3 ) {
-				$hex = array( $color[0] . $color[0], $color[1] . $color[1], $color[2] . $color[2] );
-		} else {
-				return $default;
-		}
-
-		//Convert hexadec to rgb
-		$rgb =  array_map('hexdec', $hex);
-
-		//Check if opacity is set(rgba or rgb)
-		if($opacity){
-		 if(abs($opacity) > 1)
-		  $opacity = 1.0;
-		 $output = 'rgba('.implode(",",$rgb).','.$opacity.')';
-		} else {
-		 $output = 'rgb('.implode(",",$rgb).')';
-		}
-
-		//Return rgb(a) color string
-		return $output;
 }

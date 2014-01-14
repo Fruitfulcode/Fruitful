@@ -514,8 +514,6 @@ function fruitful_get_container_background_color () {
 	?>
 		<div id="bgColorContainer"><div style="background-color: <?php echo esc_attr($options['container_bg_color']); ?>"></div></div>
 		<input type="text" id="container_bg_color" name="fruitful_theme_options[container_bg_color]" value="<?php echo esc_attr($options['container_bg_color']); ?>"/>
-		<div class="clear"></div>
-		<h4><?php _e( 'Opacity (0.1 - 1.0)',   'fruitful' ); ?></h4><input type="text" name="fruitful_theme_options[container_opacity]" id="container_opacity" value ="<?php echo esc_attr($options['container_opacity']); ?>"/>
 	<?php
 }
 
