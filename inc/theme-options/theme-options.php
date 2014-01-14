@@ -521,22 +521,22 @@ function fruitful_theme_options_render_page() {
 		<div class="header">
 			<?php screen_icon(); ?>
 			<h2 class="title_theme"><?php _e( 'Theme Options', 'fruitful' ); ?></h2> 
-			<?php submit_button(); ?>
+			<?php submit_button("Save"); ?>
 			<?php settings_errors(); ?>
 		</div>
 			<div class="content">
 				<div class="menu-options">
 					<ul>
-						<li class="current"><a  id="item_0" href="javascript:void(0)" 	title="General Settings"><span id="menu_img_0"></span><?php _e( 'General Settings', 'fruitful' ); ?></a></li>
-						<li><a  id="item_1" href="javascript:void(0)" title="Header">		<span id="menu_img_1"></span><?php _e( 'Header', 'fruitful' ); ?></a></li>
-						<li><a  id="item_2" href="javascript:void(0)" title="Background">	<span id="menu_img_2"></span><?php _e( 'Background', 'fruitful' ); ?></a></li>
-						<li><a  id="item_3" href="javascript:void(0)" title="Logo">			<span id="menu_img_3"></span><?php _e( 'Logo',   'fruitful' ); ?></a></li>
-						<li><a  id="item_4" href="javascript:void(0)" title="Menu">			<span id="menu_img_4"></span><?php _e( 'Menu', 	'fruitful' ); ?></a></li>
-						<li><a  id="item_5" href="javascript:void(0)" title="Fonts">		<span id="menu_img_5"></span><?php _e( 'Fonts', 	'fruitful' ); ?></a></li>
-						<li><a  id="item_6" href="javascript:void(0)" title="Slider">		<span id="menu_img_6"></span><?php _e( 'Slider', 	'fruitful' ); ?></a></li>
-						<li><a  id="item_7" href="javascript:void(0)" title="Social Links">		<span id="menu_img_7"></span><?php _e( 'Social Links', 'fruitful' ); ?></a></li>
-						<li><a  id="item_8" href="javascript:void(0)" title="Footer">		<span id="menu_img_8"></span><?php _e( 'Footer', 	 'fruitful' ); ?></a></li>
-						<li><a  id="item_9" href="javascript:void(0)" title="CSS">			<span id="menu_img_9"></span><?php _e( 'Custom CSS', 'fruitful' ); ?></a></li>
+						<li class="current"><a  id="item_0" href="javascript:void(0)" 	title="General Settings"><span class="menu-img" id="menu_img_0"></span><span class="menu-text"><?php _e( 'General Settings', 'fruitful' ); ?></span></a></li>
+						<li><a  id="item_1" href="javascript:void(0)" title="Header">		<span class="menu-img" id="menu_img_1"></span><span class="menu-text"><?php _e( 'Header', 'fruitful' ); ?></span></a></li>
+						<li><a  id="item_2" href="javascript:void(0)" title="Background">	<span class="menu-img" id="menu_img_2"></span><span class="menu-text"><?php _e( 'Background', 'fruitful' ); ?></span></a></li>
+						<li><a  id="item_3" href="javascript:void(0)" title="Logo">			<span class="menu-img" id="menu_img_3"></span><span class="menu-text"><?php _e( 'Logo',   'fruitful' ); ?></span></a></li>
+						<li><a  id="item_4" href="javascript:void(0)" title="Menu">			<span class="menu-img" id="menu_img_4"></span><span class="menu-text"><?php _e( 'Menu', 	'fruitful' ); ?></span></a></li>
+						<li><a  id="item_5" href="javascript:void(0)" title="Fonts">		<span class="menu-img" id="menu_img_5"></span><span class="menu-text"><?php _e( 'Fonts', 	'fruitful' ); ?></span></a></li>
+						<li><a  id="item_6" href="javascript:void(0)" title="Slider">		<span class="menu-img" id="menu_img_6"></span><span class="menu-text"><?php _e( 'Slider', 	'fruitful' ); ?></span></a></li>
+						<li><a  id="item_7" href="javascript:void(0)" title="Social Links">		<span class="menu-img" id="menu_img_7"></span><span class="menu-text"><?php _e( 'Social Links', 'fruitful' ); ?></span></a></li>
+						<li><a  id="item_8" href="javascript:void(0)" title="Footer">		<span class="menu-img" id="menu_img_8"></span><span class="menu-text"><?php _e( 'Footer', 	 'fruitful' ); ?></span></a></li>
+						<li><a  id="item_9" href="javascript:void(0)" title="CSS">			<span class="menu-img"  id="menu_img_9"></span><span class="menu-text"><?php _e( 'Custom CSS', 'fruitful' ); ?></span></a></li>
 					</ul>
 				</div> 	
 				<?php
@@ -546,7 +546,7 @@ function fruitful_theme_options_render_page() {
 		
 		</div>
 		<div class="footer">
-			<?php submit_button();  ?>
+			<?php submit_button("Save");  ?>
 		</div>
 		  <input type="hidden" name="action"    value="fruitful_theme_options_action" />
 		  <input type="hidden" name="security" value="<?php echo wp_create_nonce('fruitful_theme_data'); ?>" />

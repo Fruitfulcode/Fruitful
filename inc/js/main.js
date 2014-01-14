@@ -1,6 +1,8 @@
 ﻿jQuery(document).ready(function() {  
 	jQuery('input[type=checkbox]').ezMark();  
-	jQuery('select').styler();    
+	if (document.body.clientWidth > 580){
+		jQuery('select').styler();    
+	}
 	
 	/*Font Family Preview*/  
 	jQuery(".select-fonts").each(function() { 
