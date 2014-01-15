@@ -57,17 +57,6 @@ a:hover, a:active, a:focus {	outline: 0; }
 .form-admin-fruitful .content .menu-options ul li.current a #menu_img_8 {background-position:-586px 0;}
 .form-admin-fruitful .content .menu-options ul li.current a #menu_img_9 {background-position:-768px 0;}
 
-.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_0 {background-position:-706px 0;}
-.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_1 {background-position:-829px 0;}
-.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_2 {background-position:-62px 0;}
-.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_3 {background-position:-155px 0;}
-.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_4 {background-position:-245px 0;}
-.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_5 {background-position:-337px 0;}
-.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_6 {background-position:-431px 0;}
-.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_7 {background-position:-525px 0;}
-.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_8 {background-position:-617px 0;}
-.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_9 {background-position:-798px 0;}
-
 .form-admin-fruitful .content .settings-section { background: #FFFFFF;  float: right; padding: 15px 34px 15px 0; width: 710px; display:none; min-height:600px}
 .form-admin-fruitful .content .settings-section input[type="text"] { float:left; width:100%; margin:0 0 10px 0; padding-left: 5px; height: 30px;} 
 .form-admin-fruitful .content .settings-section input[type="file"]  { display:none}
@@ -170,6 +159,59 @@ and (max-device-width : 568px) {
 	.colorpicker { left: 0 !important;}
 }
 
+/* Not iPhone */
+@media only screen and (min-device-width : 641px) { 
+	.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_0 {background-position:-706px 0;}
+	.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_1 {background-position:-829px 0;}
+	.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_2 {background-position:-62px 0;}
+	.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_3 {background-position:-155px 0;}
+	.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_4 {background-position:-245px 0;}
+	.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_5 {background-position:-337px 0;}
+	.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_6 {background-position:-431px 0;}
+	.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_7 {background-position:-525px 0;}
+	.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_8 {background-position:-617px 0;}
+	.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_9 {background-position:-798px 0;}
+}
+
+/* Retina displays */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-resolution: 240dpi) {
+	.form-admin-fruitful .content .menu-options ul li a #menu_img_0,
+	.form-admin-fruitful .content .menu-options ul li a #menu_img_1, 
+	.form-admin-fruitful .content .menu-options ul li a #menu_img_2,
+	.form-admin-fruitful .content .menu-options ul li a #menu_img_3,
+	.form-admin-fruitful .content .menu-options ul li a #menu_img_4,
+	.form-admin-fruitful .content .menu-options ul li a #menu_img_5,
+	.form-admin-fruitful .content .menu-options ul li a #menu_img_6,
+	.form-admin-fruitful .content .menu-options ul li a #menu_img_7,
+	.form-admin-fruitful .content .menu-options ul li a #menu_img_8,
+	.form-admin-fruitful .content .menu-options ul li a #menu_img_9  {
+		background: url('../images/admin_menu_icon@2x.png') 0 0 no-repeat transparent;
+		background-size: 918px;
+	}
+	.form-admin-fruitful .content .menu-options ul li a #menu_img_0 {background-position:-648px 0;}
+	.form-admin-fruitful .content .menu-options ul li a #menu_img_1 {background-position:-829px 0;}
+	.form-admin-fruitful .content .menu-options ul li a #menu_img_2 {background-position:0 0;}
+	.form-admin-fruitful .content .menu-options ul li a #menu_img_3 {background-position: -93px 0;}
+	.form-admin-fruitful .content .menu-options ul li a #menu_img_4 {background-position:-185px 0;}
+	.form-admin-fruitful .content .menu-options ul li a #menu_img_5 {background-position:-275px 0;}
+	.form-admin-fruitful .content .menu-options ul li a #menu_img_6 {background-position:-369px 0;}
+	.form-admin-fruitful .content .menu-options ul li a #menu_img_7 {background-position:-463px 0;}
+	.form-admin-fruitful .content .menu-options ul li a #menu_img_8 {background-position:-555px 0;}
+	.form-admin-fruitful .content .menu-options ul li a #menu_img_9 {background-position:-738px 0;}
+	
+	.form-admin-fruitful .content .menu-options ul li.current a #menu_img_0 {background-position:-677px 0;}
+	.form-admin-fruitful .content .menu-options ul li.current a #menu_img_1 {background-position:-860px 0;}
+	.form-admin-fruitful .content .menu-options ul li.current a #menu_img_2 {background-position:-31px 0;}
+	.form-admin-fruitful .content .menu-options ul li.current a #menu_img_3 {background-position:-124px 0;}
+	.form-admin-fruitful .content .menu-options ul li.current a #menu_img_4 {background-position:-214px 0;}
+	.form-admin-fruitful .content .menu-options ul li.current a #menu_img_5 {background-position:-307px 0;}
+	.form-admin-fruitful .content .menu-options ul li.current a #menu_img_6 {background-position:-400px 0;}
+	.form-admin-fruitful .content .menu-options ul li.current a #menu_img_7 {background-position:-494px 0;}
+	.form-admin-fruitful .content .menu-options ul li.current a #menu_img_8 {background-position:-586px 0;}
+	.form-admin-fruitful .content .menu-options ul li.current a #menu_img_9 {background-position:-768px 0;}
+}
 
 @media only screen 
 and (min-device-width : 768px) 
