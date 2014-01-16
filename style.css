@@ -565,7 +565,13 @@ button,html input[type="button"],input[type="reset"],input[type="submit"] {
 	-khtml-transition: background 0.2s ease-in-out; 
 	-o-transition: background 0.2s ease-in-out; 
 	-ms-transition: background 0.2s ease-in-out; 
-	transition: background 0.2s ease-in-out; 
+	transition: background 0.2s ease-in-out;
+}
+#page #comments #commentform input[type="submit"] {
+	max-height:none;
+}
+.single-post #comments #respond input[type="submit"]{
+	line-height:12px;
 }
 button:hover,html input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover {
     background:#fe4502;
@@ -1010,12 +1016,12 @@ embed,iframe,object {
 }
 .site-content .nav-previous {
     float:left;
-    width:50%;
+    width:46%;
 }
 .site-content .nav-next {
     float:right;
     text-align:right;
-    width:50%;
+    width:46%;
 }
 .bypostauthor {
 }
@@ -1579,6 +1585,17 @@ address {
 	top:32px;
 }
 
+.single-post #comments ol.commentlist li img.avatar,
+.page #comments ol.commentlist li img.avatar  {
+	padding: 3px;
+	width: 32px;
+	height: auto;
+	background: #f7f6f7;
+	border: 1px solid #f0eef0;
+	line-height: 1;
+}
+
+
 #comments.comments-area h2.comments-title, 
 #comments.comments-area #respond.comment-respond h3.comment-reply-title {
 	margin:20px 0;
@@ -1596,18 +1613,6 @@ address {
 	list-style-type: none;
 	padding: 0;
 }
-.commentlist > li:after,
-.commentlist .children > li:before {
-	border-bottom:1px solid #D6D6D6;
-	content: "";
-	display: block;
-	height: 1px;
-	width: 100%;
-}
-.commentlist > li:last-child:after {
-	display: none;
-}
-
 .comment-body {
     padding: 20px 0;
     position: relative;
@@ -1632,8 +1637,7 @@ address {
 #comments.comments-area ol.commentlist li.comment .comment-author {
 	float:left;
 	display:block;
-	max-width:80px;
-	margin:0 20px 0 0;
+	max-width:40px;
 }
 
 #comments.comments-area ol.commentlist li.comment .comment-author {
@@ -1648,22 +1652,50 @@ address {
     word-wrap: break-word;
 	text-align:center;
 }
-
+.comment-meta{
+	width:90%;
+}
+#comments .comment-meta cite.fn,
+#comments .comment-meta cite.fn a {
+	color:#777777;
+	font-style:normal;
+}
+.comment-content em{
+	position:relative; 
+	top:3px;
+}
 #comments.comments-area ol.commentlist li.comment .comment-author span.says {
 	float:left;
 }
-.comment-meta, .comment-awaiting-moderation, .comment-content, .commentlist .reply {
-    float: right;
-    width: calc(100% - 100px);
+.comment-content{
+    position:relative;
+	float: right;
+	width: calc(100% - 78px);
+	width: -moz-calc(100% - 78px); 
+	width: -o-calc(100% - 78px); 
+	width: -webkit-calc(100% - 78px); 
     word-wrap: break-word;
+	border: 1px solid #F0EEF0;
+    border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+    padding: 14px 14px 0;
 }
 
-#comments.comments-area ol.commentlist li.comment .comment-meta a {
+#comments.comments-area ol.commentlist li.comment .comment-meta a.meta-date {
 	color: #A2A2A2;
     font-size: 13px;
 	text-decoration:none;
+}
+#comments.comments-area ol.commentlist li.comment .comment-meta a.comment-edit-link {
+	font-size: 13px;
+	text-decoration:none;
 }	
-
+.commentlist .reply {
+	position:absolute;
+	top:14px;
+	right:14px;
+}
 #comments.comments-area ol.commentlist li.comment .reply a.comment-reply-link {
 	text-decoration:none;
 }
@@ -1906,6 +1938,7 @@ address {
 	.blog_post .post-content,
 	.search .blog_post .post-content {width: 364px;}
 	input#s {    width:373px;}	
+	.comment-meta{	width:80%;}
 }
 @media only screen and (min-width:480px) and (max-width:767px) {
 	.mejs-controls div.mejs-time-rail{width:149px !important}

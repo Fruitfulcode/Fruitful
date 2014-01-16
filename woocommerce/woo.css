@@ -24,13 +24,6 @@ body div.pp_pic_holder{z-index:100000}
 textarea{max-width:100%}
 body div.pp_overlay{background-color:#333333}
 .screen-reader-text {float:left;padding:8px 15px 8px 0}
-#page .commentlist > li:after, #page .commentlist .children > li:before {
-border-bottom:none;
-content: "";
-display: block;
-height: 1px;
-width: 100%;
-}
 button,html input[type="button"],input[type="reset"],input[type="submit"] {line-height:14px}
 
 /*header*/
@@ -339,7 +332,8 @@ body.woocommerce-page ul.products li.product h3{padding:8px 15px}
 .nav-links.shop .pages-links{margin:0;display:inline-block;}
 .nav-links.shop .pages-links a,
 .nav-links.shop .pages-links span{padding: 0 4px;display:inline-block}
-.nav-next, .nav-previous{display:inline-block; margin: 0 10px}
+.woocommerce .nav-next,
+.woocommerce .nav-previous{display:inline-block; margin: 0 10px}
 .nav-links.shop .nav-next a,
 .nav-links.shop .nav-previous a,
 .nav-links.shop .pages-links a,
