@@ -9,12 +9,12 @@
 .form-admin-fruitful .footer p.submit {line-height:10px; padding:0}
 .form-admin-fruitful .content 	{position:relative; min-height:600px;min-width: 520px;margin-top:8px;}
 .form-admin-fruitful .footer .button-primary, 
-.form-admin-fruitful .header .button-primary {width:90px;}
+.form-admin-fruitful .header .button-primary {width: 80px;text-transform: uppercase;}
 .form-admin-fruitful .header p.submit {padding:0;}
 .form-admin-fruitful p.submit {width:90px;float:right;margin-top:15px;}
 .form-admin-fruitful {float:left; width:914px; display:block; background: #fff; padding: 0px 0px 20px 20px;}
 .form-admin-fruitful #icon-theme_options { background: url("../images/icons32.png") no-repeat scroll -492px -5px transparent;}
-.form-admin-fruitful .title_theme {font-family:Arial; font-size:22px; font-weight:bold; display:block; float:left;}
+.form-admin-fruitful .title_theme {font-family:Arial; font-size:22px; font-weight:bold; display:block; float:left; line-height: 40px;}
 .form-admin-fruitful .content .menu-options {  bottom: 0; height: 100%; position: absolute; top: 0; width: 168px; }
 .form-admin-fruitful .content .menu-options ul 			  { float: left; margin: 0; width: 100%;}
 .form-admin-fruitful .content .menu-options ul li  			  { float: left; margin: 0; width: 156px; min-height: 25px; border-bottom: 1px solid #e5e5e5; border-right: 1px solid #e5e5e5; padding: 0 0 0 5px; background-image: url(../images/menu_shadow.png); background-repeat: no-repeat; background-position: right 0;   border-left: 1px solid #FFFFFF; border-left: 1px solid #FFFFFF;}
@@ -33,7 +33,7 @@ a:hover, a:active, a:focus {	outline: 0; }
 .form-admin-fruitful .content .menu-options ul li a #menu_img_6,
 .form-admin-fruitful .content .menu-options ul li a #menu_img_7,
 .form-admin-fruitful .content .menu-options ul li a #menu_img_8,
-.form-admin-fruitful .content .menu-options ul li a #menu_img_9  {background-image:url(../images/admin_menu_icon.png); background-repeat:no-repeat; display:block; width:29px; height:25px; float:left; margin: 0 15px 0 0;}
+.form-admin-fruitful .content .menu-options ul li a #menu_img_9  {background-image:url(../images/admin_menu_icon.png); background-repeat:no-repeat; display:block; width:29px; height:25px; float:left; margin: 0 10px 0 0;}
 
 .form-admin-fruitful .content .menu-options ul li a #menu_img_0 {background-position:-648px 0;}
 .form-admin-fruitful .content .menu-options ul li a #menu_img_1 {background-position:-891px 0;}
@@ -134,7 +134,7 @@ a:hover, a:active, a:focus {	outline: 0; }
 @media only screen and (max-width: 641px) {
 	.form-admin-fruitful { padding:0 0 20px 1%; width:99%; }
 	.form-admin-fruitful .header, .form-admin-fruitful .footer { padding: 10px 0 10px 0; width: 100%; }
-	.form-admin-fruitful .content .settings-section {width:65%;}
+	.form-admin-fruitful .content .settings-section {width: 80%; background: none;}
 	.form-admin-fruitful .header, .form-admin-fruitful .footer, .form-admin-fruitful .content {width:100%; }
 	.box-image .img-container.custom-slide {max-height: 220px;}
 	.menu-options span.menu-text{display:none}
