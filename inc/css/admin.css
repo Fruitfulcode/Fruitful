@@ -33,7 +33,7 @@ a:hover, a:active, a:focus {	outline: 0; }
 .form-admin-fruitful .content .menu-options ul li a #menu_img_6,
 .form-admin-fruitful .content .menu-options ul li a #menu_img_7,
 .form-admin-fruitful .content .menu-options ul li a #menu_img_8,
-.form-admin-fruitful .content .menu-options ul li a #menu_img_9  {background-image:url(../images/admin_menu_icon.png); background-repeat:no-repeat; display:block; width:29px; height:25px; float:left; margin: 0 10px 0 0;}
+.form-admin-fruitful .content .menu-options ul li a #menu_img_9  {background-image:url(../images/admin_menu_icon.png); background-repeat:no-repeat; display:block; width:30px; height:25px; float:left; margin: 0 10px 0 0;}
 
 .form-admin-fruitful .content .menu-options ul li a #menu_img_0 {background-position:-648px 0;}
 .form-admin-fruitful .content .menu-options ul li a #menu_img_1 {background-position:-891px 0;}
@@ -161,16 +161,16 @@ and (max-device-width : 568px) {
 
 /* Not iPhone */
 @media only screen and (min-device-width : 641px) { 
-	.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_0 {background-position:-706px 0;}
-	.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_1 {background-position:-829px 0;}
-	.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_2 {background-position:-62px 0;}
-	.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_3 {background-position:-155px 0;}
-	.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_4 {background-position:-245px 0;}
-	.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_5 {background-position:-337px 0;}
-	.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_6 {background-position:-431px 0;}
-	.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_7 {background-position:-525px 0;}
-	.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_8 {background-position:-617px 0;}
-	.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_9 {background-position:-798px 0;}
+	.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_0 {background-position:-706px 0}
+	.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_1 {background-position:-829px 0}
+	.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_2 {background-position:-62px 0}
+	.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_3 {background-position:-155px 0}
+	.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_4 {background-position:-245px 0}
+	.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_5 {background-position:-337px 0}
+	.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_6 {background-position:-431px 0}
+	.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_7 {background-position:-525px 0}
+	.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_8 {background-position:-617px 0}
+	.form-admin-fruitful .content .menu-options ul li:hover > a #menu_img_9 {background-position:-799px 0}
 }
 
 /* Retina displays */
@@ -192,11 +192,11 @@ only screen and (min-resolution: 240dpi) {
 	}
 	.form-admin-fruitful .content .menu-options ul li a #menu_img_0 {background-position:-648px 0;}
 	.form-admin-fruitful .content .menu-options ul li a #menu_img_1 {background-position:-829px 0;}
-	.form-admin-fruitful .content .menu-options ul li a #menu_img_2 {background-position:0 0;}
+	.form-admin-fruitful .content .menu-options ul li a #menu_img_2 {background-position:-1px 0;}
 	.form-admin-fruitful .content .menu-options ul li a #menu_img_3 {background-position: -93px 0;}
 	.form-admin-fruitful .content .menu-options ul li a #menu_img_4 {background-position:-185px 0;}
 	.form-admin-fruitful .content .menu-options ul li a #menu_img_5 {background-position:-275px 0;}
-	.form-admin-fruitful .content .menu-options ul li a #menu_img_6 {background-position:-369px 0;}
+	.form-admin-fruitful .content .menu-options ul li a #menu_img_6 {background-position:-368px 0;}
 	.form-admin-fruitful .content .menu-options ul li a #menu_img_7 {background-position:-463px 0;}
 	.form-admin-fruitful .content .menu-options ul li a #menu_img_8 {background-position:-555px 0;}
 	.form-admin-fruitful .content .menu-options ul li a #menu_img_9 {background-position:-738px 0;}
