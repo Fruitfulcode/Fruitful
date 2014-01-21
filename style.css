@@ -1567,6 +1567,7 @@ address {
 	background-size: cover;
 	background-attachment: fixed;
 	background-position:center center;
+	z-index:2;
 }
 
 .head-container.fixed {
@@ -1924,6 +1925,12 @@ address {
 	.blog_post .post-content { width: 452px;}
 	.search .blog_post .post-content { width:692px; }
 	input#s { width:177px;}
+}
+@media screen and ( max-width: 782px ) {
+	.head-container.is_indent {top: 46px;}
+}
+@media screen and (max-width: 600px) {
+	.head-container.is_indent {top: 0;}
 }
 @media only screen and (max-width:767px) {
     /* nav menu ul & select */
