@@ -99,6 +99,26 @@ Files ru_Ru.po ru_Ru.mo icluded. Default language is english.
     Changelog
 -------------------------------------------------------
 
+= 1.2 = (23.01.13)
+
+* New WordPress 3.8 ready
+* New WooCommerce ready
+* New WPML ready
+* New Social media added: instagram, pinterest
+* New Design for comments
+* New Validation for comments
+* New Retina ready icons for theme options
+* New Options, background color for content.
+* New Icon for tags
+* New Localization .pot file included
+* Bug fix Theme options responsive
+* Bug fix Responsive menu duplications
+* Bug fix Drop down menu on touch devices
+* Bug fix WordPress Customize  
+* Bug fix FlexSlider z-index problem
+* Bug fix Wordpress error message display in theme options
+* Bug fix Social media icons, email url 
+
 = 1.1 = (29.11.13)
 * Install home page (Import dummy data)
 * New header section in theme option
