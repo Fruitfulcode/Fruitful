@@ -1098,9 +1098,9 @@ embed,iframe,object {
 }
 #page .info_box_area .info_box img.icon {
     display:block;
-    min-height:52px;
+    min-height:51px;
     margin:0 auto 15px;
-    min-width:52px;
+    min-width:51px;
 }
 span.text_orange {
     color:#ff5d2a}

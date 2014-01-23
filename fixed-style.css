@@ -929,9 +929,9 @@ embed,iframe,object {
 }
 #page  .info_box_area .info_box img.icon {
     display:block;
-    min-height:52px;
+    min-height:51px;
     margin:0 auto 15px;
-    min-width:52px;
+    min-width:51px;
 }
 span.text_orange {
     color:#ff5d2a}
@@ -1019,8 +1019,9 @@ header.post-header, .blog_post {
 .blog_post .post-content footer.entry-meta .cat-links {
     background:url(images/category.png) no-repeat 0 3px transparent;
     height:22px;
-    width:auto;
-    padding:0 0 0 26px;
+    min-height:51px;
+    margin:0 auto 15px;
+    min-width:51px;    padding:0 0 0 26px;
     margin:0 5px 0 0}
 .blog_post .post-content footer.entry-meta .tag-links {
     background:url(images/tag.png) no-repeat 0 3px transparent;
