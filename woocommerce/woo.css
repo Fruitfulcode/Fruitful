@@ -1097,7 +1097,7 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
  
 @media only screen and (min-width: 768px) and (max-width: 1023px){
 	/*header*/
-	.cart-button{clear: both}
+	
 	/*shop*/
 	body.archive.post-type-archive-product #page.site .container #secondary.widget-area {max-width:219px}
 	.archive.post-type-archive-product #container {float:right; width:calc(100% - 250px); padding:0;}	

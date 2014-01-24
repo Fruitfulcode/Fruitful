@@ -13,7 +13,7 @@
 .bx-next:hover, .bx-prev:hover { opacity:1 }
 
 .widget_news_archive {float:left; width:100%}
-.widget_news_archive .news_archive_wrapper 						{float: left; display: block; padding:0; position: relative; z-index: 1000; margin: 0; }
+.widget_news_archive .news_archive_wrapper 						{float: left; display: block; padding:0; position: relative; z-index: 1000; margin: 0; width:100% }
 .widget_news_archive .news_archive_message 					{float:left; color:#999; text-align:left; width:100%; margin: 0 0 30px 0;}
 .widget_news_archive .news_archiv_list 							 	{list-style:none; float:left; display:block; margin:0; padding:0; width:100%;}
 .widget_news_archive .news_archiv_list .news_archiv_item 	{float:left; width:100%; margin:0 0 14px 0; background:url(hr.png) repeat-x 0 bottom transparent; }

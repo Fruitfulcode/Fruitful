@@ -13,8 +13,10 @@ class Fruitful_Widget_News_Archive extends WP_Widget {
 	 * @return void
 	 **/
 	function Fruitful_Widget_News_Archive () {
+		$theme_name = wp_get_theme();
+		$widget_name = $theme_name.' '.__( 'News Archiv', 'fruitful' );
 		$widget_ops = array( 'classname' => 'widget_news_archive', 'description' => __( 'Use this widget to list your Link posts', 'fruitful' ) );
-		$this->WP_Widget( 'widget_news_archive', __( 'Fruitful News Archiv', 'fruitful' ), $widget_ops );
+		$this->WP_Widget( 'widget_news_archive', $widget_name, $widget_ops );
 		$this->alt_option_name = 'widget_news_archive';
 
 		add_action( 'save_post', array(&$this, 'flush_widget_cache' ));
