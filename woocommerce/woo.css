@@ -760,16 +760,21 @@ body.woocommerce-page #content div.product .woocommerce-tabs ul.tabs li:before{d
 .single.woocommerce span.onsale, .single.woocommerce-page span.onsale,
 .archive.woocommerce span.onsale,.archive.woocommerce-page span.onsale,
 .woocommerce ul.products li.product .onsale, body.woocommerce-page ul.products li.product .onsale
-{	width:63px ;
+{	-webkit-transform: rotate(15deg);
+	-moz-transform: rotate(15deg);
+	-o-transform: rotate(15deg);
+	writing-mode: lr-tb;
+	font-family:Arial;
+	text-transform:uppercase;
+	width:63px ;
 	height:63px ;
 	margin:6px ;
 	padding:0px ;
 	line-height:63px ;
-	text-indent:-1000px ; 
 	text-shadow:none ;
 	box-shadow:none ;
 	border-radius:0 ;
-	background: url(images/action.png) no-repeat transparent ; 
+	background: url(images/action_bg.png) no-repeat transparent ; 
 }
 
 /* .single.woocommerce span.onsale, .single.woocommerce-page span.onsale	{top:38px;	left:278px;} */
