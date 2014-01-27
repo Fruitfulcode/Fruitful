@@ -1567,7 +1567,7 @@ address {
 	background-size: cover;
 	background-attachment: fixed;
 	background-position:center center;
-	z-index:2;
+	z-index:9;
 }
 
 .head-container.fixed {
