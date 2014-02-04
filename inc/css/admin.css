@@ -9,9 +9,9 @@
 .form-admin-fruitful .footer p.submit {line-height:10px; padding:0}
 .form-admin-fruitful .content 	{position:relative; min-height:600px;min-width: 520px;margin-top:8px;}
 .form-admin-fruitful .footer .button-primary, 
-.form-admin-fruitful .header .button-primary {width: 80px;text-transform: uppercase;}
+.form-admin-fruitful .header .button-primary {width: 120px;text-transform: uppercase;}
 .form-admin-fruitful .header p.submit {padding:0;}
-.form-admin-fruitful p.submit {width:90px;float:right;margin-top:15px;}
+.form-admin-fruitful p.submit {width:130px;float:right;margin-top:15px;}
 .form-admin-fruitful {float:left; width:914px; display:block; background: #fff; padding: 0px 0px 20px 20px;}
 .form-admin-fruitful #icon-theme_options { background: url("../images/icons32.png") no-repeat scroll -492px -5px transparent;}
 .form-admin-fruitful .title_theme {font-family:Arial; font-size:22px; font-weight:bold; display:block; float:left; line-height: 40px;}

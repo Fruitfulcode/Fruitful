@@ -132,7 +132,7 @@ function fruitful_add_custom_link_options() {
 		return;
 
 	/* Add the main siteadmin menu item */
-    $wp_admin_bar->add_menu( array( 'id' => 'fruitfultheme_options', 'title' => __( 'Theme Options', 'textdomain' ), 'href' => admin_url('admin.php?page=theme_options')));	
+    $wp_admin_bar->add_menu( array( 'id' => 'fruitfultheme_options', 'title' => __( 'Theme Options', 'fruitful' ), 'href' => admin_url('admin.php?page=theme_options')));	
 }
 
 
@@ -397,7 +397,7 @@ function fruitful_slider_select() {
 function fruitful_slider_options() {
 	$options = fruitful_get_theme_options();
 	?>
-	<input type="button" id="view_all_options" class="button-secondary" value="View Options" /> 
+	<input type="button" id="view_all_options" class="button-secondary" value="<?php _e( 'View Options', 'fruitful' ); ?>" /> 
 		<div id="slider_main_options" class="slider-main-options">
 			<div class="no-slider-select">
 				<div class="option_block"><h4><?php _e( 'No Slider Select!', 'fruitful' ); ?></h4></div>
@@ -541,7 +541,7 @@ function fruitful_theme_options_render_page() {
 		<div class="header">
 			<?php screen_icon(); ?>
 			<h2 class="title_theme"><?php _e( 'Theme Options', 'fruitful' ); ?></h2> 
-			<?php submit_button("Save"); ?>
+			<?php submit_button(__( 'Save', 'fruitful' )); ?>
 			<?php settings_errors(); ?>
 		</div>
 			<div class="content">
@@ -566,7 +566,7 @@ function fruitful_theme_options_render_page() {
 		
 		</div>
 		<div class="footer">
-			<?php submit_button("Save");  ?>
+			<?php submit_button(__( 'Save', 'fruitful' )); ?>
 		</div>
 		  <input type="hidden" name="action"    value="fruitful_theme_options_action" />
 		  <input type="hidden" name="security" value="<?php echo wp_create_nonce('fruitful_theme_data'); ?>" />

@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Fruitful theme\n"
 "POT-Creation-Date: 2013-11-26 11:49+0200\n"
-"PO-Revision-Date: 2013-11-26 11:50+0200\n"
+"PO-Revision-Date: 2014-02-04 18:46+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Russian\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.5.3\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop;_e;__\n"
 "X-Poedit-Basepath: .\n"
 
@@ -172,7 +172,7 @@ msgstr "Один комментарий"
 #: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\fruitful/content-video.php:41
 #, php-format
 msgid "View all % comments"
-msgstr ""
+msgstr "Посмотреть  все %  комментариев"
 
 #: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\fruitful/content.php:44
 msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
@@ -613,7 +613,7 @@ msgstr "Ссылка"
 
 #: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\fruitful/inc/func/fruitful-function.php:386
 msgid "Target \"_blank\""
-msgstr ""
+msgstr "Открыть в новой вкладке"
 
 #: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\fruitful/inc/theme-options/theme-options.php:41
 msgid "Install Home Page"
@@ -621,7 +621,7 @@ msgstr "Установить главную страницу"
 
 #: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\fruitful/inc/theme-options/theme-options.php:41
 msgid "Setup home page with dummy data, like on demo. Option can be used once."
-msgstr "Устатовка главной страници. Опция доступна единожды."
+msgstr "Установка главной страници. Опция доступна единожды."
 
 #: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\fruitful/inc/theme-options/theme-options.php:44
 msgid "Layout"
@@ -634,7 +634,7 @@ msgid ""
 "below if you need static website display. "
 msgstr ""
 "В теме существует 2 типа макета, который вы можете выбрать. По умолчанию "
-"включен, отзывчивый который корректно отображается на мобильных устройствах. "
+"включен, респонсив, который корректно отображается на мобильных устройствах. "
 "Фиксированный макет с заданной шириной можно активировать, если снять "
 "галочку ниже."
 
@@ -670,7 +670,7 @@ msgstr "Сбросить."
 
 #: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\fruitful/inc/theme-options/theme-options.php:49
 msgid "Sticky  header"
-msgstr ""
+msgstr "Фиксированный заголовок"
 
 #: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\fruitful/inc/theme-options/theme-options.php:49
 msgid "Options relating to the website header"
@@ -687,7 +687,7 @@ msgid ""
 "jpg, .gif)"
 msgstr ""
 "Добавьте фоновое изображение для верхнего колонтитула сайта. (Поддерживаемые "
-"файлы .png, .jpg, .gif)"
+"файлы: .png, .jpg, .gif)"
 
 #: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\fruitful/inc/theme-options/theme-options.php:51
 #, fuzzy
@@ -696,7 +696,7 @@ msgstr "Минимальная высота верхнего колонтиту�
 
 #: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\fruitful/inc/theme-options/theme-options.php:51
 msgid "Set header min-height parametrs."
-msgstr ""
+msgstr "Установить минимальное значение высоты заголовка страницы."
 
 #: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\fruitful/inc/theme-options/theme-options.php:54
 msgid "Background Image"
@@ -707,7 +707,7 @@ msgid ""
 "Upload your background image for site background. (Supported files .png, ."
 "jpg, .gif)"
 msgstr ""
-"Добавьте фоновое изображение для сайта. (Поддерживаемые файлы .png, .jpg, ."
+"Добавьте фоновое изображение для сайта. (Поддерживаемые файлы: .png, .jpg, ."
 "gif)"
 
 #: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\fruitful/inc/theme-options/theme-options.php:55
@@ -732,7 +732,7 @@ msgstr ""
 
 #: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\fruitful/inc/theme-options/theme-options.php:59
 msgid "Favicon"
-msgstr ""
+msgstr "Миниатюра"
 
 #: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\fruitful/inc/theme-options/theme-options.php:59
 msgid "Upload needed image for site favicon. (Supported files .ico (16x16))"
@@ -777,7 +777,7 @@ msgstr "Выберите название шрифта для главного �
 
 #: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\fruitful/inc/theme-options/theme-options.php:65
 msgid "Body"
-msgstr ""
+msgstr "Содержимое страницы"
 
 #: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\fruitful/inc/theme-options/theme-options.php:65
 msgid "Choose font-family for <body>."
@@ -858,7 +858,7 @@ msgstr "Заменить информацию об авторских права
 #: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\fruitful/inc/theme-options/theme-options.php:74
 #: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\fruitful/inc/theme-options/theme-options.php:525
 msgid "Custom CSS"
-msgstr "Custom CSS"
+msgstr "Стили CSS"
 
 #: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\fruitful/inc/theme-options/theme-options.php:74
 msgid ""
@@ -882,11 +882,11 @@ msgstr "Настройки темы"
 
 #: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\fruitful/inc/theme-options/theme-options.php:151
 msgid "Dummy data"
-msgstr ""
+msgstr "Установить"
 
 #: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\fruitful/inc/theme-options/theme-options.php:160
 msgid "Responsive"
-msgstr "Отзывчивый"
+msgstr "Респонсив"
 
 #: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\fruitful/inc/theme-options/theme-options.php:170
 msgid "Display comment on posts page"
@@ -898,7 +898,7 @@ msgstr "Показать комментарий на странице"
 
 #: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\fruitful/inc/theme-options/theme-options.php:186
 msgid "Enabled"
-msgstr ""
+msgstr "Закрепить"
 
 #: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\fruitful/inc/theme-options/theme-options.php:191
 msgid "Header background-color"
@@ -1141,97 +1141,176 @@ msgstr ""
 "всегда можете обратиться к нам с любым запросом на нашем сайте fruitfulcode."
 "com"
 
-#~ msgid "Fixed Header"
-#~ msgstr "Фиксированый хедер"
+msgid "Fixed Header"
+msgstr "Фиксированый хедер"
 
-#~ msgid "Gallery"
-#~ msgstr "Галлерея"
+msgid "Gallery"
+msgstr "Галлерея"
 
-#~ msgid "Add New Gallery"
-#~ msgstr "Добваить новую галлерею"
+msgid "Add New Gallery"
+msgstr "Добваить новую галлерею"
 
-#~ msgid "Edit Gallery"
-#~ msgstr "Редактировать галлерею"
+msgid "Edit Gallery"
+msgstr "Редактировать галлерею"
 
-#~ msgid "View Gallery"
-#~ msgstr "Просмотреть галлерею"
+msgid "View Gallery"
+msgstr "Просмотреть галлерею"
 
-#~ msgid "New Gallery"
-#~ msgstr "Новая Галлерея"
+msgid "New Gallery"
+msgstr "Новая Галлерея"
 
-#~ msgid "Search Gallery"
-#~ msgstr "Посик галлереи"
+msgid "Search Gallery"
+msgstr "Посик галлереи"
 
-#~ msgid "Gallery not found"
-#~ msgstr "Галлерея не найдена"
+msgid "Gallery not found"
+msgstr "Галлерея не найдена"
 
-#~ msgid "Gallery not found in trash"
-#~ msgstr "Галерея в корзине не найдена"
+msgid "Gallery not found in trash"
+msgstr "Галерея в корзине не найдена"
 
-#~ msgid "Author"
-#~ msgstr "Автор"
+msgid "Author"
+msgstr "Автор"
 
-#~ msgid "Shortcode"
-#~ msgstr "Shortcode"
+msgid "Shortcode"
+msgstr "Shortcode"
 
-#~ msgid "Date"
-#~ msgstr "Дата"
+msgid "Date"
+msgstr "Дата"
 
-#~ msgid "Add Images"
-#~ msgstr "Добавить изображение"
+msgid "Add Images"
+msgstr "Добавить изображение"
 
-#~ msgid "Animation Types"
-#~ msgstr "Тип анимации"
+msgid "Animation Types"
+msgstr "Тип анимации"
 
-#~ msgid "Animations Speed"
-#~ msgstr "Скорость анимации"
+msgid "Animations Speed"
+msgstr "Скорость анимации"
 
-#~ msgid "Rotation (99=random)"
-#~ msgstr "Вращение (99 = случайный)"
+msgid "Rotation (99=random)"
+msgstr "Вращение (99 = случайный)"
 
-#~ msgid "Paddings"
-#~ msgstr "Отступы"
+msgid "Paddings"
+msgstr "Отступы"
 
-#~ msgid "Scale (0-1)"
-#~ msgstr "Масштаб (0-1)"
+msgid "Scale (0-1)"
+msgstr "Масштаб (0-1)"
 
-#~ msgid "Content"
-#~ msgstr "Контент."
+msgid "Content"
+msgstr "Контент."
 
-#~ msgid ""
-#~ "Theme has styles by default, if you are using theme as based for "
-#~ "development and dont what overwrite default css styles, you can disable "
-#~ "our styles. "
-#~ msgstr ""
-#~ "Тема содержит стили по умолчанию, если вы используете тему для базовой "
-#~ "разработки и не хотите переписывать стили по умолчанию, вы можете и "
-#~ "отключить."
+msgid ""
+"Theme has styles by default, if you are using theme as based for development "
+"and dont what overwrite default css styles, you can disable our styles. "
+msgstr ""
+"Тема содержит стили по умолчанию, если вы используете тему для базовой "
+"разработки и не хотите переписывать стили по умолчанию, вы можете и "
+"отключить."
 
-#~ msgid "Most Used Categories"
-#~ msgstr "Часто используемые категории"
+msgid "Most Used Categories"
+msgstr "Часто используемые категории"
 
-#~ msgid "Try looking in the monthly archives. %1$s"
-#~ msgstr "Попробуйте посмотреть в ежемесячных архивах. %1$s"
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Попробуйте посмотреть в ежемесячных архивах. %1$s"
 
-#~ msgid "Logo Size"
-#~ msgstr "Размер логотипа"
+msgid "Logo Size"
+msgstr "Размер логотипа"
 
-#~ msgid ""
-#~ "Specify resolution for your logo image. Our theme will crop (timthumb) "
-#~ "your image for need size."
-#~ msgstr ""
-#~ "Укажите разрешение для вашего логотипа. Наша тема будет обрезать "
-#~ "(timthumb) ваше изображение до нужных размеров."
+msgid ""
+"Specify resolution for your logo image. Our theme will crop (timthumb) your "
+"image for need size."
+msgstr ""
+"Укажите разрешение для вашего логотипа. Наша тема будет обрезать (timthumb) "
+"ваше изображение до нужных размеров."
 
-#~ msgid "HTML Text"
-#~ msgstr "HTML текст"
+msgid "HTML Text"
+msgstr "HTML текст"
 
-#~ msgid ""
-#~ "Our team can propose live consultation, web development,  web design, "
-#~ "customization of our products."
-#~ msgstr ""
-#~ "Наша команда может предложить online консультации, разработку сайтов, веб-"
-#~ "дизайн, настройку нашей продукции."
+msgid ""
+"Our team can propose live consultation, web development,  web design, "
+"customization of our products."
+msgstr ""
+"Наша команда может предложить online консультации, разработку сайтов, веб-"
+"дизайн, настройку нашей продукции."
 
-#~ msgid "Support"
-#~ msgstr "Поддержка"
+msgid "Support"
+msgstr "Поддержка"
+
+msgid "Save"
+msgstr "Сохранить"
+
+msgid "Enable"
+msgstr "Включить"
+
+msgid "Default theme styles"
+msgstr "Значения стилей темы по умолчанию"
+
+msgid ""
+"Default CSS. Theme option for styling is not working, if this option enable."
+msgstr ""
+"CSS стили по умолчанию. Настройки темы (стилизация) недоступны, когда опция "
+"включена."
+
+msgid "Reset options"
+msgstr "Восстановление значений по умолчанию"
+
+msgid "Reset Defaults"
+msgstr "Восстановить"
+
+msgid "All theme options will be reset to default. "
+msgstr "Все настройки темы будут возвращены к настройкам по умолчанию. "
+
+msgid "Background for header"
+msgstr "Фон для заголовка"
+
+msgid ""
+"Upload image with full width for background in header area. (Supported "
+"files .png, .jpg, .gif)  "
+msgstr ""
+"Загрузите изображение для фона в области заголовка. (Поддерживаемые файлы : ."
+"png, .jpg, .gif)"
+
+msgid "Height for header area"
+msgstr "Высота области заголовка"
+
+msgid "Minimum height in pixels"
+msgstr "Минимальная высота в пикселях"
+
+msgid "Background color for content  "
+msgstr "Цвет фона для контента страницы"
+
+msgid "Choose color for main content area"
+msgstr "Выберите цвет фона для основного блока контента"
+
+msgid "Logo image"
+msgstr "Изображение логотипа сайта"
+
+msgid ""
+"Upload logo image for your website. Size is original (Supported files .png, ."
+"jpg, .gif)"
+msgstr ""
+"Загрузите логотип для Вашего сайта. Размер оригинальный (Поддерживаемые "
+"файлы : .png, .jpg, .gif)"
+
+msgid "Menu styling"
+msgstr "Стилизация меню"
+
+msgid ""
+"Choose styles for main menu. Add additional styles in custom css if needed"
+msgstr ""
+"Выберите стили для главного меню. При не обходимости добавьте дополнительные "
+"стили в разделе 'Дополнительные стили'. "
+
+msgid "Button background-color"
+msgstr "Цвет фона кнопок"
+
+msgid "Font color for :active and :hover"
+msgstr "Цвет ссылок при нажатии и наведении курсора"
+
+msgid "Socials Links Position"
+msgstr "Положение социальных ссылок на странице"
+
+msgid "Choose place where social links will be displayed."
+msgstr "Выберите место где будут располагаться социальные ссылки"
+
+msgid "View Options"
+msgstr "Посмотреть опции"
