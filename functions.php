@@ -188,6 +188,15 @@ function fruitful_widgets_init() {
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 	) );
+	
+	register_sidebar( array(
+		'name' => __( 'Shop Page Sidebar', 'fruitful' ),
+		'id' => 'sidebar-4',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget' => '</aside>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
 }
 
 
@@ -218,9 +227,8 @@ add_action( 'widgets_init', 'fruitful_widgets_init' );
 			}
 	}	
 	
-	/*add woocommerce styles*/
+	/*add woocommerce styles for ie*/
 	wp_enqueue_style( 'ie-style',		get_template_directory_uri() . '/woocommerce/ie.css');
-	wp_enqueue_style( 'woo-style',		get_template_directory_uri() . '/woocommerce/woo.css');
 	
 	/*add fancybox*/
 	wp_enqueue_script('fn-box',				get_template_directory_uri() . '/js/fnBox/jquery.fancybox-1.3.4.pack.js',   array( 'jquery' ), '20130930', false );
@@ -521,6 +529,16 @@ function fruitful_get_footer_text () {
 	}	
 }
 
+/*Get position for social icons*/
+function fruitful_get_footer_socials_icon_position () {
+	$out = '';
+	$theme_options  = fruitful_ret_options("fruitful_theme_options"); 
+	
+	if(!empty($theme_options['social_links_position']))	{ $out =  esc_attr($theme_options['social_links_position']);	}
+	
+	return $out;
+}
+
 /*Get footer social icons*/
 function fruitful_get_footer_socials_icon () {
 	$out = '';
@@ -664,8 +682,10 @@ function fruitful_get_responsive_style () {
 	
 	if (isset($theme_options['responsive']) && ($theme_options['responsive'] == 'on')) {
 		wp_enqueue_style('main-style',  get_stylesheet_uri());
+		wp_enqueue_style( 'woo-style',		get_template_directory_uri() . '/woocommerce/woo.css');
 	} else {
 		wp_enqueue_style('main-style',  get_stylesheet_directory_uri()  .'/fixed-style.css');
+		wp_enqueue_style( 'woo-style',		get_template_directory_uri() . '/woocommerce/woo-fixed.css');
 	}	
 }
 add_action('wp_enqueue_scripts', 'fruitful_get_responsive_style', 20);

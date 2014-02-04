@@ -854,8 +854,21 @@ ul#lang-select-popup{
     width:420px;
     padding:8px 0;
 }
+#masthead .social-icon{
+    float:right;
+	width: 100%;
+	margin-bottom: 15px;
+}
 #colophon .social-icon {
     float:right
+}
+#masthead .social-icon a{
+	float:right;
+    width:30px;
+    height:30px;
+    opacity:1;
+    background-image:url(images/social.png);
+    background-repeat:no-repeat;
 }
 #colophon .social-icon a {
     float:left;
@@ -865,47 +878,63 @@ ul#lang-select-popup{
     background-image:url(images/social.png);
     background-repeat:no-repeat;
 }
+#masthead .social-icon a:hover, #masthead .social-icon a:active,
 #colophon .social-icon a:hover, #colophon .social-icon a:active {
-    opacity:0.9}
+    opacity:0.9
+}
+ #masthead .social-icon a.facebook,
  #colophon .social-icon a.facebook {
     background-position:-249px 0;
 }
+#masthead .social-icon a.twitter,
 #colophon .social-icon a.twitter {
     background-position:-280px 0;
 }
+#masthead .social-icon a.linkedin,
 #colophon .social-icon a.linkedin {
     background-position:-93px 0;
 }
+#masthead .social-icon a.myspace,
 #colophon .social-icon a.myspace {
     background-position:-31px 0;
 }
+#masthead .social-icon a.googleplus,
 #colophon .social-icon a.googleplus {
     background-position:-62px 0;
 }
+#masthead .social-icon a.dribbble,
 #colophon .social-icon a.dribbble {
     background-position:0 0;
 }
+#masthead .social-icon a.skype,
 #colophon .social-icon a.skype {
     background-position:-125px 0;
 }
+#masthead .social-icon a.flickr,
 #colophon .social-icon a.flickr {
     background-position:-187px 0;
 }
+#masthead .social-icon a.youtube,
 #colophon .social-icon a.youtube {
     background-position:-218px 0;
 }
+#masthead .social-icon a.rss,
 #colophon .social-icon a.rss {
     background-position:-155px 0;
 }
+#masthead .social-icon a.vk,
 #colophon .social-icon a.vk {
     background-position:-311px 0;
 }
+#masthead .social-icon a.pinterest,
 #colophon .social-icon a.pinterest {
     background-position:-373px 0;
 }
+#masthead .social-icon a.instagram,
 #colophon .social-icon a.instagram {
     background-position:-404px 0;
 }
+#masthead .social-icon a.email,
 #colophon .social-icon a.email {
     background-position:-342px 0;
 }
@@ -1910,7 +1939,7 @@ address {
     width: 100%;
 }
 */
-		   
+   
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (min-width:768px) {
 	.search header.post-header .post-title { width:94.01%; padding: 0 3% 13px ;}
@@ -1950,6 +1979,7 @@ address {
 	.mejs-controls div.mejs-time-rail{width:149px !important}
 }
 @media only screen and (max-width:479px) {
+	#masthead .social-icon{float: left;clear: both;margin:20px 0;}
 	.blog_post .date_of_post {	width: 50px; height: 50px; float:none; left:0; top:1px}
 	.blog_post .date_of_post .day_post {font-size: 18px;}
 	.blog_post .post-content,

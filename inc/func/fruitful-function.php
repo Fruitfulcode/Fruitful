@@ -256,6 +256,21 @@ function fruitful_fonts_list() {
 	return apply_filters( 'fruitful_fonts_list', $font_family_options );
 }
 
+function fruitful_social_links_positions_list() {
+	$links_position_options = array(
+		'0' => array(
+			'value' =>	   'header',
+			'label' => __( 'Header', 'fruitful' )
+		),
+		'1' => array(
+			'value' =>	   'footer',
+			'label' => __( 'Footer', 'fruitful' )
+		)
+	);
+
+	return apply_filters( 'fruitful_social_links_positions_list', $links_position_options );
+}
+
  function fruitful_custom_do_settings_sections($page) {
     global $wp_settings_sections, $wp_settings_fields;
 	$id_=0;
@@ -499,6 +514,7 @@ return array(
 				'footer_text'		=> stripslashes('Fruitful theme by <a href="http://fruitfulcode.com">fruitfulcode</a> Powered by: <a href="http://wordpress.org">WordPress</a>'),
 				
 				/*socials*/
+				'social_links_position'	=> 'footer',
 				'facebook_url' 		=> '',
 				'twitter_url' 		=> '',
 				'linkedin_url'		=> '',

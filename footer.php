@@ -16,7 +16,7 @@
 						<?php fruitful_get_footer_text(); ?>
 					</div><!-- .site-info -->
 					<div class="social-icon">
-						<?php fruitful_get_footer_socials_icon(); ?>
+						<?php if (fruitful_get_footer_socials_icon_position() == 'footer') { 	fruitful_get_footer_socials_icon(); } ?>
 					</div>
 				</footer><!-- #colophon .site-footer -->
 			</div>

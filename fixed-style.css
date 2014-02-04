@@ -40,6 +40,7 @@ body {
     background-size:cover;
 	background-attachment: fixed;
 	overflow:hidden;
+	min-width:1024px;
 }
 /*Fix fancybox 2*/
 body.fancybox-lock {
@@ -682,8 +683,15 @@ ul#lang-select-popup{
     width:420px;
     padding:8px 0;
 }
+#masthead .social-icon{
+    float:right;
+	width: 100%;
+	margin-bottom: 15px;
+}
 #colophon .social-icon {
-    float:right}
+    float:right
+}
+#masthead .social-icon a,
 #colophon .social-icon a {
     float:left;
     width:30px;
@@ -692,50 +700,65 @@ ul#lang-select-popup{
     background-image:url(images/social.png);
     background-repeat:no-repeat;
 }
+#masthead .social-icon a:hover, #masthead .social-icon a:active,
 #colophon .social-icon a:hover, #colophon .social-icon a:active {
     opacity:0.9
 }
-#colophon .social-icon a.facebook {
+ #masthead .social-icon a.facebook,
+ #colophon .social-icon a.facebook {
     background-position:-249px 0;
 }
+#masthead .social-icon a.twitter,
 #colophon .social-icon a.twitter {
     background-position:-280px 0;
 }
+#masthead .social-icon a.linkedin,
 #colophon .social-icon a.linkedin {
     background-position:-93px 0;
 }
+#masthead .social-icon a.myspace,
 #colophon .social-icon a.myspace {
     background-position:-31px 0;
 }
+#masthead .social-icon a.googleplus,
 #colophon .social-icon a.googleplus {
     background-position:-62px 0;
 }
+#masthead .social-icon a.dribbble,
 #colophon .social-icon a.dribbble {
     background-position:0 0;
 }
+#masthead .social-icon a.skype,
 #colophon .social-icon a.skype {
     background-position:-125px 0;
 }
+#masthead .social-icon a.flickr,
 #colophon .social-icon a.flickr {
     background-position:-187px 0;
 }
+#masthead .social-icon a.youtube,
 #colophon .social-icon a.youtube {
     background-position:-218px 0;
 }
+#masthead .social-icon a.rss,
 #colophon .social-icon a.rss {
     background-position:-155px 0;
 }
+#masthead .social-icon a.vk,
 #colophon .social-icon a.vk {
     background-position:-311px 0;
 }
+#masthead .social-icon a.pinterest,
 #colophon .social-icon a.pinterest {
     background-position:-373px 0;
 }
+#masthead .social-icon a.instagram,
 #colophon .social-icon a.instagram {
     background-position:-404px 0;
 }
+#masthead .social-icon a.email,
 #colophon .social-icon a.email {
-	background-position:-342px 0;
+    background-position:-342px 0;
 }
 
 .sticky {
