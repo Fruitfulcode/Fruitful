@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Fruitful theme\n"
 "POT-Creation-Date: 2013-11-26 11:49+0200\n"
-"PO-Revision-Date: 2014-02-04 18:46+0200\n"
+"PO-Revision-Date: 2014-02-05 11:22+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Russian\n"
@@ -29,7 +29,7 @@ msgstr ""
 #: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\fruitful/category.php:11
 #, php-format
 msgid "Category Archives: %s"
-msgstr "Катергории архива:  %s"
+msgstr "Категории архива:  %s"
 
 #: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\fruitful/archive.php:25
 #: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\fruitful/tag.php:11
