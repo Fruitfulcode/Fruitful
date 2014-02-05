@@ -574,7 +574,14 @@ function fruitful_theme_options_render_page() {
 		
 		<div id="sidebar-promo" class="sidebar-promo">
 			<h3><?php _e('Support developers', 'fruitful'); ?></h3>
-			<p><?php _e( 'If you like our theme please rate it and <a target="_blank" href="http://wordpress.org/support/view/theme-reviews/fruitful">leave us review</a>. On <a target="_blank" href="http://wordpress.org/support/theme/fruitful">Support forum</a> you may find answers on your questions. With customization requests and suggestion you always can <a target="_blank" href="mailto:mail@fruitfulcode.com?subject=Question regarding Fruitful theme">contact us</a> by email. Please visit our website to know about us and our services <a target="_blank" href="http://fruitfulcode.com">fruitfulcode.com</a> ', 'fruitful' ); ?></p>
+			<p><?php 
+					_e('If you like our theme please rate it and ','fruitful'); 
+					echo '<a target="_blank" href="http://wordpress.org/support/view/theme-reviews/fruitful">'; _e('leave us review','fruitful'); echo '</a>. ';
+					_e('On','fruitful'); echo ' <a target="_blank" href="http://wordpress.org/support/theme/fruitful">'; _e('Support forum','fruitful'); echo '</a> ';
+					_e('you may find answers on your questions. With customization requests and suggestion you always can ','fruitful'); 
+					echo '<a target="_blank" href="mailto:mail@fruitfulcode.com?subject=Question regarding Fruitful theme">'; _e('contact us','fruitful'); echo '</a> ';
+					_e('by email. Please visit our website ','fruitful'); echo ' <a target="_blank" href="http://fruitfulcode.com">fruitfulcode.com</a> '; _e('to know about us and our services.','fruitful');   
+			?></p>
 		</div>
 	</div>
 	<?php

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Fruitful theme\n"
 "POT-Creation-Date: 2013-11-26 11:49+0200\n"
-"PO-Revision-Date: 2014-02-05 12:28+0200\n"
+"PO-Revision-Date: 2014-02-05 13:38+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Russian\n"
@@ -1317,3 +1317,34 @@ msgstr "Посмотреть опции"
 
 msgid "Type Here to Search"
 msgstr "Поиск по сайту"
+
+msgid "Support developers"
+msgstr "Техподдержка"
+
+msgid "If you like our theme please rate it and "
+msgstr "Если вам понравился наш шаблон, пожалуйста, оцените его и "
+
+msgid "leave us review"
+msgstr "оставьте отзыв"
+
+msgid "On"
+msgstr "На"
+
+msgid "Support forum"
+msgstr "Форуме поддержки"
+
+msgid ""
+"you may find answers on your questions. With customization requests and "
+"suggestion you always can "
+msgstr ""
+"Вы можете найти ответы на свои вопросы. С запросами дополнительной настройки "
+"и кастомизации вы всегда можете "
+
+msgid "contact us"
+msgstr "связаться с нами"
+
+msgid "by email. Please visit our website "
+msgstr "по электронной почте. Пожалуйста, посетите наш сайт "
+
+msgid "to know about us and our services."
+msgstr "чтобы узнать больше о нас и наших услугах."
