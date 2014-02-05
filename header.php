@@ -24,7 +24,16 @@
 <?php wp_head(); ?> 
 </head>
 <body <?php body_class(); ?>>
-		<div id="page" class="hfeed site">	
+		<div id="page" class="hfeed site <?php 
+			if (class_exists('Woocommerce')) {
+				if (is_woocommerce()) {
+					echo ' woo-styles ';
+				}; 
+				if (is_shop()) {
+					echo ' shop-page ';
+				}
+			} 
+			?>">
 			<div class="head-container">		
 				<div class="container">			
 					<div class="sixteen columns">				
