@@ -691,7 +691,14 @@ ul#lang-select-popup{
 #colophon .social-icon {
     float:right
 }
-#masthead .social-icon a,
+#masthead .social-icon a{
+	float:right;
+    width:30px;
+    height:30px;
+    opacity:1;
+    background-image:url(images/social.png);
+    background-repeat:no-repeat;
+}
 #colophon .social-icon a {
     float:left;
     width:30px;
@@ -1704,3 +1711,7 @@ address {
 }
 
 *:first-child+html #page .container .content .info_box_area { margin-bottom:25px }
+
+@media only screen and (min-width:480px) and (max-width:640px) and (max-device-width:640px){
+	body{min-height:1200px;} 
+}
