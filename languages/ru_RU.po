@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Fruitful theme\n"
 "POT-Creation-Date: 2013-11-26 11:49+0200\n"
-"PO-Revision-Date: 2014-02-05 11:22+0200\n"
+"PO-Revision-Date: 2014-02-05 12:28+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Russian\n"
@@ -1314,3 +1314,6 @@ msgstr "Выберите место где будут располагаться
 
 msgid "View Options"
 msgstr "Посмотреть опции"
+
+msgid "Type Here to Search"
+msgstr "Поиск по сайту"
