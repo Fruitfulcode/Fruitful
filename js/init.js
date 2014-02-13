@@ -6,6 +6,10 @@ jQuery(document).ready(function($) {
 		});
 		
 		/*Fancy Box*/
+		$('article.format-image .entry-content a img').each(function (i) {
+			$(this).parent('a').addClass('fancybox');
+		});
+		
 		if ($(".fancybox").length > 0) {
 			$(".fancybox").fancybox({
 				'overlayShow'	 : true,
@@ -41,8 +45,6 @@ jQuery(document).ready(function($) {
 		$('.menu li:has(ul)').mobileMenuDropdown();
 		
 		jQuery(window).resize();
-		
-		$('article.format-image .entry-content>div>a').fancybox();
 		
 });
 
