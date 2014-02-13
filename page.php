@@ -24,6 +24,6 @@ get_header(); ?>
 			</div><!-- #primary .content-area -->
 		</div>
 		<div class="five columns omega">
-			<?php get_sidebar('Main Sidebar'); ?>
+			<?php get_sidebar('page'); ?>
 		</div>	
 <?php get_footer(); ?>

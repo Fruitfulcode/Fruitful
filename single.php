@@ -27,6 +27,6 @@ get_header(); ?>
 			</div><!-- #primary .content-area -->
 		</div>
 		<div class="five columns omega">
-			<?php get_sidebar('blogright'); ?>
+			<?php get_sidebar('single-post'); ?>
 		</div>
 <?php get_footer(); ?>

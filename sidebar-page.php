@@ -1,6 +1,6 @@
 <?php
 /**
- * The Page Sidebar containing the main widget areas.
+ * The Page Sidebar widget areas.
  *
  * @package WordPress
  * @subpackage Fruitful theme
