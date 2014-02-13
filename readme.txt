@@ -99,7 +99,27 @@ Files ru_Ru.po ru_Ru.mo icluded. Default language is english.
     Changelog
 -------------------------------------------------------
 
-= 1.2 = (23.01.13)
+= 1.2.1 = (13.02.14)
+
+* New option, social media icons position (header or footer)
+* New sidebar for blog page
+* New sidebar for post page
+* New sideabar for shop page (WooCommerce)
+* New screenshot
+* Bug fix, device width for fixed styles
+* Bug fix background repeat options
+* Bug fix fancybox for linked images
+* Bug fix featured image
+* Bug fix post format: image
+* Bug fix with sticky header
+* Bug fix sale label (WooCommerce)
+* Bug fix sidebar styles for shop page (WooCommerce)
+* Russian translations update 
+* Css bug fixes
+* Code optimizations
+
+
+= 1.2 = (23.01.14)
 
 * New WordPress 3.8 ready
 * New WooCommerce ready
