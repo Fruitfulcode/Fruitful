@@ -41,6 +41,9 @@ jQuery(document).ready(function($) {
 		$('.menu li:has(ul)').mobileMenuDropdown();
 		
 		jQuery(window).resize();
+		
+		$('article.format-image .entry-content>div>a').fancybox();
+		
 });
 
 jQuery(window).bind('resize', function() { 
