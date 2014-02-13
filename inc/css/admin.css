@@ -143,6 +143,10 @@ a:hover, a:active, a:focus {	outline: 0; }
 	.form-admin-fruitful .content .menu-options ul li a {min-width: initial;padding: 14px 5px;width: 40px;}
 	.form-admin-fruitful .content .menu-options ul li a span.menu-img{margin:0 !important;}
 	.form-admin-fruitful .footer p.submit, .form-admin-fruitful .header p.submit {margin-right:10px;}
+	#wpcontent .form-admin-fruitful .box-image .img-container img{height: auto;}
+	.form-admin-fruitful .content .settings-section .slides .slide h4 {margin: 0 0 10px 0; line-height: 36px;}
+	.form-admin-fruitful .content .settings-section .settings-form-row .box-options .slides .slide h4 span.content-close-slide {background: url("../images/arrows.png") no-repeat scroll 15px 17px transparent;	margin: -5px 0 0; padding: 10px;}
+	.form-admin-fruitful .content .settings-section .settings-form-row .box-options .slides .slide h4 span.remove-slide {background: url("../images/cross.png") no-repeat scroll 7px 10px transparent; padding: 10px 5px;}
 }
 
 @media only screen 
