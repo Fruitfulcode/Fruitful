@@ -35,11 +35,13 @@
 		<?php endif; // is_single() ?>		
 		
 		
-		<?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
-			<div class="entry-thumbnail">
-				<?php the_post_thumbnail(); ?>
-			</div>
-		<?php endif; ?>
+		<?php if ( !is_single() ) : ?>
+			<?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
+				<div class="entry-thumbnail">
+					<?php the_post_thumbnail(); ?>
+				</div>
+			<?php endif; ?>
+		<?php endif; // is_single() ?>
 	</header><!-- .entry-header -->
 
 	<?php if ( (is_search())) : // Only display Excerpts for Search ?>

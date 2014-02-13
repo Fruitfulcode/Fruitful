@@ -1266,6 +1266,11 @@ article.format-image .wp-caption a{
 	position:relative;
 	display:block;
 }
+.single-post article.format-image img{
+	width: auto;
+	max-width: 100%;
+	box-shadow: 0 3px 4px rgba(0, 0, 0, 0.5);
+}
 article.format-image .wp-caption a:after{
 	position:absolute;
 	display:block;
