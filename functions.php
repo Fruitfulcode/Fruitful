@@ -436,12 +436,14 @@ function fruitful_get_footer_text () {
 	$theme_options   = fruitful_ret_options("fruitful_theme_options"); 
 	if (!empty($theme_options['footer_text'])) {
 		$footer_text = fruitful_kses_data(stripslashes($theme_options['footer_text']));
-		if (!is_home()) {
+		
+		if (is_home() || is_front_page()) {
+			$out_footer_text .= $footer_text;
+		} else {
 			$out_footer_text .= '<nofollow>';
 				$out_footer_text .= $footer_text;
 			$out_footer_text .= '</nofollow>';
-		} else {
-			$out_footer_text .= $footer_text;
+			
 		}		
 	echo $out_footer_text;
 	}	
