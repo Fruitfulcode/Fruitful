@@ -389,7 +389,7 @@ function fruitful_get_box_upload_slide($attach_id, $link_url, $is_blank, $ind, $
 	}
 		/*Link out for Slider*/
 		$out .= '<label for="slide-link-'.$ind.'">'. __('Link URL', 'fruitful') .'</label>';
-		$out .= '<input type="text" name="fruitful_theme_options[slides][slide-'.$ind.'][link]" id="slide-link-'.$ind.'" class="slide-link-'.$ind.'" value="'.esc_url($link_url).'"/>';
+		$out .= '<input type="text" name="fruitful_theme_options[slides][slide-'.$ind.'][link]" id="slide-link-'.$ind.'" class="slide-link-'.$ind.' text-input" value="'.esc_url($link_url).'"/>';
 		$out .= '<div class="clear"></div>';
 
 		$out .= '<label for="link-blank-'.$ind.'">';

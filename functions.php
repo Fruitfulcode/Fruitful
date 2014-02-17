@@ -597,7 +597,7 @@ function fruitful_state_page_comment () {
 }
 
 function fruitful_get_responsive_style () {
-	$style_ = '';
+	$style_ = $back_style = '';
 	$theme_options  = fruitful_ret_options("fruitful_theme_options"); 
  
 	wp_enqueue_style('fonts-style', get_template_directory_uri()    . '/inc/css/fonts-style.css');
@@ -620,8 +620,9 @@ function fruitful_get_responsive_style () {
  
 			$style_ .= 'H1, H2, H3, H4, H5, H6 {font-family : '. esc_js($theme_options['h_font_family']) .'; } ' . "\n";
 			$style_ .= '.main-navigation a     {font-family : '. esc_js($theme_options['m_font_family']) .'; } ' . "\n";
-			$style_ .= '.main-navigation a     {font-size : '.esc_js($theme_options['m_size']) .'px;    } ' . "\n";
+			$style_ .= '.main-navigation ul:not(.sub-menu) > li > a     {font-size : '.esc_js($theme_options['m_size']) .'px;    } ' . "\n";
 			$style_ .= '.main-navigation a     {color : '.esc_js($theme_options['menu_font_color']). ';   } ' . "\n";
+			$style_ .= '.main-navigation ul:not(.sub-menu) > li:hover > a {font-size : '.esc_js($theme_options['m_size']) .'px;    } ' . "\n";
 			
 			if (!empty($theme_options['menu_bg_color']))   { $style_ .= '.main-navigation {background-color : ' .esc_js($theme_options['menu_bg_color']) . '; }' . "\n";  }
    
@@ -629,20 +630,20 @@ function fruitful_get_responsive_style () {
 			$style_ .= 'body {font-size : '. esc_js($theme_options['p_size']) .'px; font-family : ' . esc_js($theme_options['p_font_family']) . '; }' . "\n";
  
   
-			if(!empty($theme_options['background_color']))  { $back_sytle .= ' background-color : '. esc_js($theme_options['background_color']) .'; '; }
+			if(!empty($theme_options['background_color']))  { $back_style .= ' background-color : '. esc_js($theme_options['background_color']) .'; '; }
 			if(!empty($theme_options['backgroung_img']))  { 
 				$bg_url = array();
 				$bg_url = wp_get_attachment_image_src(intval($theme_options['backgroung_img']), 'full'); 
 				$bg_url = esc_url_raw($bg_url[0]);
 				
 				if(isset($theme_options['bg_repeating']) && ($theme_options['bg_repeating'] == 'on')) { 
-					$back_sytle .= 'background-image : url(' .$bg_url .'); background-repeat : repeat; ';  
+					$back_style .= 'background-image : url(' .$bg_url .'); background-repeat : repeat; ';  
 				} else {
-					$back_sytle .= 'background-image : url(' .$bg_url .'); background-repeat : no-repeat; ';  
+					$back_style .= 'background-image : url(' .$bg_url .'); background-repeat : no-repeat; ';  
 				}
 			}
 
-			$style_ .= 'body {'. $back_sytle .'}' . "\n";
+			$style_ .= 'body {'. $back_style .'}' . "\n";
  
 			if(!empty($theme_options['container_bg_color']))  {
 				$style_ .= '.container.page-container {background-color : '. esc_js($theme_options['container_bg_color']) . '; } ' . "\n";
@@ -677,8 +678,8 @@ function fruitful_get_responsive_style () {
 			$style_ .= '} ' . "\n";
 			
 			/*Add Custom Colors to theme*/
-			if (!empty($theme_options['p_font_color']))   {	$style_ .= 'body {color : '. esc_js($theme_options['p_font_color']) .'; } ' . "\n";	}
-			if (!empty($theme_options['a_font_color']))   { $style_ .= 'a  {color : '. esc_js($theme_options['a_font_color']) .'; } ' . "\n"; }
+			if (!empty($theme_options['p_font_color']))  	    { $style_ .= 'body {color : '. esc_js($theme_options['p_font_color']) .'; } ' . "\n"; }
+			if (!empty($theme_options['a_font_color']))   		{ $style_ .= 'a    {color : '. esc_js($theme_options['a_font_color']) .'; } ' . "\n"; }
 			if (!empty($theme_options['a_hover_font_color']))   { $style_ .= 'a:hover  {color : '. esc_js($theme_options['a_hover_font_color']) .'; } '  . "\n"; }
 			if (!empty($theme_options['a_focus_font_color']))   { $style_ .= 'a:focus  {color : '. esc_js($theme_options['a_focus_font_color']) .'; } '  . "\n"; }
 			if (!empty($theme_options['a_active_font_color']))  { $style_ .= 'a:active {color : '. esc_js($theme_options['a_active_font_color']) .'; } ' . "\n"; }
