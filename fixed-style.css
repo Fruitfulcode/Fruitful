@@ -1723,4 +1723,5 @@ aside #lang_sel {
 
 @media only screen and (min-width:480px) and (max-width:640px) and (max-device-width:640px){
 	body{min-height:1200px;} 
+	.head-container.is_indent {top: 0px;}
 }
