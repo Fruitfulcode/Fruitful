@@ -58,150 +58,18 @@
 		jQuery("#background_img").click(); 
 	});		
 	
-	jQuery('#colorSelector').ColorPicker({		
-		color: jQuery('#background_color').val(),		
-		onShow: function (colpkr) {			
-			jQuery(colpkr).fadeIn(500);			
-			return false;		
-		},		
-		onHide: function (colpkr) {		
-			jQuery(colpkr).fadeOut(500);		
-			return false;		
-		},		
-		onChange: function (hsb, hex, rgb) {			
-			jQuery('#colorSelector div').css('backgroundColor', '#' + hex);			
-			jQuery('#background_color').val('#' + hex);		
-		}	
-	});	
+	/*Color init*/
+	initColorPicker(jQuery('#colorSelector'), 		jQuery('#background_color'));
+	initColorPicker(jQuery('#bgColorContainer'), 	jQuery('#container_bg_color'));
+	initColorPicker(jQuery('#menubgcolor'), 		jQuery('#menu_bg_color'));
+	initColorPicker(jQuery('#menubntcolor'), 		jQuery('#menu_btn_color'));
+	initColorPicker(jQuery('#menuboxshcolor'), 		jQuery('#menu_boxsh_color'));
+	initColorPicker(jQuery('#menufontcolorachvr'), 	jQuery('#menu_hover_color'));
+	initColorPicker(jQuery('#menutxtshcolor'), 		jQuery('#menu_txtsh_color'));
+	initColorPicker(jQuery('#menufontcolor'), 		jQuery('#menu_font_color'));
+	initColorPicker(jQuery('#headercolor'), 		jQuery('#header_bg_color'));
+	/*End Color init*/
 	
-	jQuery('#bgColorContainer').ColorPicker({		
-		color: jQuery('#container_bg_color').val(),		
-		onShow: function (colpkr) {			
-			jQuery(colpkr).fadeIn(500);			
-			return false;		
-		},		
-		onHide: function (colpkr) {		
-			jQuery(colpkr).fadeOut(500);		
-			return false;		
-		},		
-		onChange: function (hsb, hex, rgb) {			
-			jQuery('#bgColorContainer div').css('backgroundColor', '#' + hex);			
-			jQuery('#container_bg_color').val('#' + hex);		
-		}	
-	});	
-		
-	
-	jQuery('#menubgcolor').ColorPicker({		
-		color: jQuery('#menu_bg_color').val(),		
-		onShow: function (colpkr) {			
-			jQuery(colpkr).fadeIn(500);			
-			return false;		
-		},		
-		onHide: function (colpkr) {		
-			jQuery(colpkr).fadeOut(500);		
-			return false;		
-		},		
-		onChange: function (hsb, hex, rgb) {			
-			jQuery('#menubgcolor div').css('backgroundColor', '#' + hex);			
-			jQuery('#menu_bg_color').val('#' + hex);		
-			}
-	});		
-	
-	jQuery('#menubntcolor').ColorPicker({		
-		color: jQuery('#menu_btn_color').val(),		
-		onShow: function (colpkr) {			
-			jQuery(colpkr).fadeIn(500);			
-			return false;		
-		},		
-		onHide: function (colpkr) {		
-			jQuery(colpkr).fadeOut(500);		
-			return false;		
-		},		
-		onChange: function (hsb, hex, rgb) {			
-			jQuery('#menubntcolor div').css('backgroundColor', '#' + hex);			
-			jQuery('#menu_btn_color').val('#' + hex);		
-		}	
-	});		
-	
-	jQuery('#menuboxshcolor').ColorPicker({		
-			color: jQuery('#menu_boxsh_color').val(),		
-			onShow: function (colpkr) {			
-				jQuery(colpkr).fadeIn(500);			
-				return false;		
-			},		
-			onHide: function (colpkr) {		
-				jQuery(colpkr).fadeOut(500);		
-				return false;		
-			},		
-			onChange: function (hsb, hex, rgb) {			
-				jQuery('#menuboxshcolor div').css('backgroundColor', '#' + hex);			
-				jQuery('#menu_boxsh_color').val('#' + hex);		
-			}	
-		});			
-		
-	jQuery('#menufontcolorachvr').ColorPicker({		
-		color: jQuery('#menu_hover_color').val(),		
-		onShow: function (colpkr) {			
-			jQuery(colpkr).fadeIn(500);			
-			return false;		
-		},		
-		onHide: function (colpkr) {		
-			jQuery(colpkr).fadeOut(500);		
-			return false;		
-		},		
-		onChange: function (hsb, hex, rgb) {			
-			jQuery('#menufontcolorachvr div').css('backgroundColor', '#' + hex);			
-			jQuery('#menu_hover_color').val('#' + hex);		
-		}	
-	});		
-	
-	jQuery('#menutxtshcolor').ColorPicker({		
-		color: jQuery('#menu_txtsh_color').val(),		
-		onShow: function (colpkr) {			
-			jQuery(colpkr).fadeIn(500);			
-			return false;		
-		},		
-		onHide: function (colpkr) {		
-			jQuery(colpkr).fadeOut(500);		
-			return false;		
-		},		
-		onChange: function (hsb, hex, rgb) {			
-			jQuery('#menutxtshcolor div').css('backgroundColor', '#' + hex);			
-			jQuery('#menu_txtsh_color').val('#' + hex);		
-		}	
-	});		
-	
-	jQuery('#menufontcolor').ColorPicker({		
-		color: jQuery('#menu_font_color').val(),		
-		onShow: function (colpkr) {			
-			jQuery(colpkr).fadeIn(500);			
-			return false;		
-		},		
-		onHide: function (colpkr) {		
-			jQuery(colpkr).fadeOut(500);		
-			return false;		
-		},		
-		onChange: function (hsb, hex, rgb) {			
-			jQuery('#menufontcolor div').css('backgroundColor', '#' + hex);			
-			jQuery('#menu_font_color').val('#' + hex);		
-		}	
-	});		 				
-	
-	jQuery('#headercolor').ColorPicker({		
-		color: jQuery('#header_color').val(),		
-		onShow: function (colpkr) {			
-			jQuery(colpkr).fadeIn(500);			
-			return false;		
-		},		
-		onHide: function (colpkr) {		
-			jQuery(colpkr).fadeOut(500);		
-			return false;		
-		},		
-		onChange: function (hsb, hex, rgb) {			
-			jQuery('#headercolor div').css('backgroundColor', '#' + hex);			
-			jQuery('#header_bg_color').val('#' + hex);		
-		}	
-	});		 					
 	
 	jQuery('#btn_idc').live('click', function() {	       
 		vCurrElem = jQuery('#btn_idc');
@@ -307,6 +175,24 @@ function show_message_import() {
 }
 
 
+function initColorPicker(eMelem, eColor) {
+	eMelem.ColorPicker({		
+		color: eColor.val(),		
+		onShow: function (colpkr) {			
+			jQuery(colpkr).fadeIn(500);			
+			return false;		
+		},		
+		onHide: function (colpkr) {		
+			jQuery(colpkr).fadeOut(500);		
+			return false;		
+		},		
+		onChange: function (hsb, hex, rgb) {			
+			eMelem.find('div').css('backgroundColor', '#' + hex);			
+			eColor.val('#' + hex);		
+		}	
+	});	
+}
+	
 jQuery.fn.center = function () {    
 		var heightRatio = (
 			jQuery('#form-admin-fruitful').height() != 0)  ? this.outerHeight() / jQuery('#form-admin-fruitful').height() : 1;    

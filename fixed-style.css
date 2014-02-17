@@ -483,7 +483,7 @@ a:hover,a:focus,a:active {
 }
 #header_language_select{
 	float:right;
-	height:26px;
+	height:100%;
 	margin: 10px 0 0;
 	padding:0 10px;
 	z-index:99999999;
@@ -1713,6 +1713,10 @@ address {
     line-height: 2.2;
     margin: 20px 0;
     text-transform: uppercase;
+}
+
+aside #lang_sel {
+    z-index: 5;
 }
 
 *:first-child+html #page .container .content .info_box_area { margin-bottom:25px }

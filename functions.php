@@ -430,89 +430,6 @@ function fruitful_get_favicon () {
 	echo $out_fav_html;
 }
 
-
-/*Get all styles*/
-function fruitful_get_all_style () {
-	$out = $back_sytle = '';
-	$theme_options  = fruitful_ret_options("fruitful_theme_options"); 
-	
-	if (!empty($theme_options['styletheme'])) {
-		if ($theme_options['styletheme'] == 'off') {
-			$out .= '$("H1").css({"font-size" : "'.esc_js($theme_options['h1_size']) .'px"});' . "\n";
-			$out .= '$("H2").css({"font-size" : "'.esc_js($theme_options['h2_size']) .'px"});' . "\n";
-			$out .= '$("H3").css({"font-size" : "'.esc_js($theme_options['h3_size']) .'px"});' . "\n";
-			$out .= '$("H4").css({"font-size" : "'.esc_js($theme_options['h4_size']) .'px"});' . "\n";
-			$out .= '$("H5").css({"font-size" : "'.esc_js($theme_options['h5_size']) .'px"});' . "\n";
-			$out .= '$("H6").css({"font-size" : "'.esc_js($theme_options['h6_size']) .'px"});' . "\n";
-			$out .= '$(".main-navigation a").css({"font-size" : "'.esc_js($theme_options['m_size']) .'px"});' . "\n";
-	
-			$out .= '$("H1, H2, H3, H4, H5, H6").css({"font-family" : "'.esc_js($theme_options['h_font_family']) .'"});' . "\n";
-			$out .= '$(".main-navigation a").css({"font-family" : "'.	 esc_js($theme_options['m_font_family']) .'"});' . "\n";
-			$out .= '$("#header_language_select a").css({"font-family" : "'.	 esc_js($theme_options['m_font_family']) .'"});' . "\n";
-			$out .= '$("body").css({"font-size" : "'. esc_js($theme_options['p_size']) .'px", "font-family" : "' . esc_js($theme_options['p_font_family']) . '"});' . "\n";
-	
-		
-			if(!empty($theme_options['background_color'])) 	{ $back_sytle .= '"background-color"   :  "'. esc_js($theme_options['background_color']) .'", '; }
-			if(!empty($theme_options['backgroung_img'])) 	{ 
-				$bg_url = array();
-				$bg_url = wp_get_attachment_image_src(intval($theme_options['backgroung_img']), 'full'); 
-				$bg_url = esc_url_raw($bg_url[0]);
-				if(isset($theme_options['bg_repeating']) && ($theme_options['bg_repeating'] == 'on'))	{ 
-					$back_sytle .= '"background-image" : "url(' .$bg_url .')", "background-repeat" : "repeat"'; 	
-				} else {
-					$back_sytle .= '"background-image" : "url(' .$bg_url .')", "background-repeat" : "no-repeat"'; 	
-				}
-			}
-
-		$out .= '$("body").css({'. $back_sytle .'});' . "\n";
-	
-		if(!empty($theme_options['container_bg_color'])) 	{
-			$color = esc_js($theme_options['container_bg_color']);
-			$out .= '$(".container.page-container").css({"background-color" : "'. $color . '"});' . "\n";
-		}
-	
-		$out .= '$(".main-navigation a").css({"color" : "'.esc_js($theme_options['menu_font_color']). '"});' . "\n";
-
-		if (!empty($theme_options['menu_bg_color'])) 		{$out .= '$(".main-navigation").css({"background-color" : "'.esc_js($theme_options['menu_bg_color']) . '"});' . "\n"; 	}
-		if (!empty($theme_options['header_bg_color'])) 		{$out .= '$(".head-container").css({"background-color" : "' .esc_js($theme_options['header_bg_color']) . '"});' . "\n"; 	}
-		if (!empty($theme_options['header_img'])) 			{
-			$header_url = wp_get_attachment_image_src(intval($theme_options['header_img']), 'full'); 
-			$header_url = esc_url_raw($header_url[0]);
-			$out .= '$(".head-container").css({"background-image" : "url(' .esc_js($header_url) . ')"});' . "\n"; 	
-		}
-		
-		if (!empty($theme_options['header_height'])) {
-			$out .= '$(".head-container").css({"min-height" : "'.esc_js($theme_options['header_height']).'px"});' . "\n"; 	
-		}
-
-		if (!empty($theme_options['menu_btn_color'])) 		{$out .= '$(".main-navigation ul li.current_page_item a, .main-navigation ul li.current-menu-ancestor a, .main-navigation ul li.current-menu-item a, .main-navigation ul li.current-menu-parent a, .main-navigation ul li.current_page_parent a").css({"background-color" : "'.esc_js($theme_options['menu_btn_color']) . '"});' . "\n"; 	}
-		if (!empty($theme_options['menu_hover_color'])) 	{$out .= '$(".main-navigation ul li.current_page_item a, .main-navigation ul li.current-menu-ancestor a, .main-navigation ul li.current-menu-item a, .main-navigation ul li.current-menu-parent a, .main-navigation ul li.current_page_parent a").css({"color" : "'.esc_js($theme_options['menu_hover_color']) . '"});' . "\n"; 	}
-		
-		$out .= '$(".main-navigation ul:not(\".sub-menu\") > li").live("mouseenter", function() { ' . "\n";
-			if (!empty($theme_options['menu_btn_color'])) 		{$out .= '$(this).find("a").css({"background-color" : "'. esc_js($theme_options['menu_btn_color']) . '"});' . "\n"; }
-			if (!empty($theme_options['menu_hover_color'])) 	{$out .= '$(this).find("a").css({"color" : "'.esc_js($theme_options['menu_hover_color']) . '"});' . "\n"; }
-		$out .= '}).live("mouseleave", function() {' . "\n";
-			$out .= '$(this).find("a").css({"background-color" : ""});' . "\n";
-			$out .= '$(this).find("a").css({"color" : "' .esc_js($theme_options['menu_font_color']). '"});' . "\n";
-			if (!empty($theme_options['menu_btn_color'])) 		{$out .= '$(".main-navigation ul li.current_page_item a, .main-navigation ul li.current-menu-ancestor a, .main-navigation ul li.current-menu-item a, .main-navigation ul li.current-menu-parent a, .main-navigation ul li.current_page_parent a").css({"background-color" : "'.esc_js($theme_options['menu_btn_color']) . '"});' . "\n"; 	}
-			if (!empty($theme_options['menu_hover_color'])) 	{$out .= '$(".main-navigation ul li.current_page_item a, .main-navigation ul li.current-menu-ancestor a, .main-navigation ul li.current-menu-item a, .main-navigation ul li.current-menu-parent a, .main-navigation ul li.current_page_parent a").css({"color" : "'.esc_js($theme_options['menu_hover_color']) . '"});' . "\n"; 	}
-		$out .= '});' . "\n";
-		
-		$out .= '$("#header_language_select a").css({"color" : "'.esc_js($theme_options['menu_font_color']). '"});' . "\n";
-		if (!empty($theme_options['menu_bg_color'])) 		{$out .= '$("#header_language_select").css({"background-color" : "'.esc_js($theme_options['menu_bg_color']) . '"});' . "\n"; 	}
-		$out .= '$("#header_language_select ul:not(\"#lang-select-popup\") > li").live("mouseenter", function() { ' . "\n";
-			if (!empty($theme_options['menu_btn_color'])) 		{$out .= '$(this).children("a").css({"background-color" : "'. esc_js($theme_options['menu_btn_color']) . '"});' . "\n"; }
-			if (!empty($theme_options['menu_hover_color'])) 	{$out .= '$(this).children("a").css({"color" : "'.esc_js($theme_options['menu_hover_color']) . '"});' . "\n"; }
-		$out .= '}).live("mouseleave", function() {' . "\n";
-			$out .= '$(this).children("a").css({"background-color" : ""});' . "\n";
-			$out .= '$(this).children("a").css({"color" : "' .esc_js($theme_options['menu_font_color']). '"});' . "\n";
-		$out .= '});' . "\n";
-		
-		}
-	}	
-	echo $out;
-}
-
 /*Get footer text*/
 function fruitful_get_footer_text () {
 	$out_footer_text = $footer_text = '';
@@ -678,18 +595,89 @@ function fruitful_state_page_comment () {
 }
 
 function fruitful_get_responsive_style () {
+	$sytle_ = '';
 	$theme_options  = fruitful_ret_options("fruitful_theme_options"); 
+ 
 	wp_enqueue_style('fonts-style', get_template_directory_uri()    . '/inc/css/fonts-style.css');
-	
 	if (isset($theme_options['responsive']) && ($theme_options['responsive'] == 'on')) {
 		wp_enqueue_style('main-style',  get_stylesheet_uri());
-		wp_enqueue_style( 'woo-style',		get_template_directory_uri() . '/woocommerce/woo.css');
+		wp_enqueue_style( 'woo-style', get_template_directory_uri() . '/woocommerce/woo.css');
 	} else {
 		wp_enqueue_style('main-style',  get_stylesheet_directory_uri()  .'/fixed-style.css');
-		wp_enqueue_style( 'woo-style',		get_template_directory_uri() . '/woocommerce/woo-fixed.css');
-	}	
+		wp_enqueue_style( 'woo-style', get_template_directory_uri() . '/woocommerce/woo-fixed.css');
+	} 
+ 
+	if (!empty($theme_options['styletheme'])) {
+		if ($theme_options['styletheme'] == 'off') {
+			$sytle_ .= 'H1 {font-size : '.esc_js($theme_options['h1_size']) .'px; }' . "\n";
+			$sytle_ .= 'H2 {font-size : '.esc_js($theme_options['h2_size']) .'px; }' . "\n";
+			$sytle_ .= 'H3 {font-size : '.esc_js($theme_options['h3_size']) .'px; }' . "\n";
+			$sytle_ .= 'H4 {font-size : '.esc_js($theme_options['h4_size']) .'px; }' . "\n";
+			$sytle_ .= 'H5 {font-size : '.esc_js($theme_options['h5_size']) .'px; }' . "\n";
+			$sytle_ .= 'H6 {font-size : '.esc_js($theme_options['h6_size']) .'px; }' . "\n";
+ 
+			$sytle_ .= 'H1, H2, H3, H4, H5, H6 {font-family : '. esc_js($theme_options['h_font_family']) .'; } ' . "\n";
+			$sytle_ .= '.main-navigation a     {font-family : '. esc_js($theme_options['m_font_family']) .'; } ' . "\n";
+			$sytle_ .= '.main-navigation a     {font-size : '.esc_js($theme_options['m_size']) .'px;    } ' . "\n";
+			$sytle_ .= '.main-navigation a     {color : '.esc_js($theme_options['menu_font_color']). ';   } ' . "\n";
+			
+			if (!empty($theme_options['menu_bg_color']))   { $sytle_ .= '.main-navigation {background-color : ' .esc_js($theme_options['menu_bg_color']) . '; }' . "\n";  }
+   
+			$sytle_ .= '#header_language_select a {font-family : '.  esc_js($theme_options['m_font_family']) .';} ' . "\n";
+			$sytle_ .= 'body {font-size : '. esc_js($theme_options['p_size']) .'px; font-family : ' . esc_js($theme_options['p_font_family']) . '; }' . "\n";
+ 
+  
+			if(!empty($theme_options['background_color']))  { $back_sytle .= ' background-color : '. esc_js($theme_options['background_color']) .'; '; }
+			if(!empty($theme_options['backgroung_img']))  { 
+				$bg_url = array();
+				$bg_url = wp_get_attachment_image_src(intval($theme_options['backgroung_img']), 'full'); 
+				$bg_url = esc_url_raw($bg_url[0]);
+				
+				if(isset($theme_options['bg_repeating']) && ($theme_options['bg_repeating'] == 'on')) { 
+					$back_sytle .= 'background-image : url(' .$bg_url .'); background-repeat : repeat; ';  
+				} else {
+					$back_sytle .= 'background-image : url(' .$bg_url .'); background-repeat : no-repeat; ';  
+				}
+			}
+
+			$sytle_ .= 'body {'. $back_sytle .'}' . "\n";
+ 
+			if(!empty($theme_options['container_bg_color']))  {
+				$sytle_ .= '.container.page-container {background-color : '. esc_js($theme_options['container_bg_color']) . '; } ' . "\n";
+			}
+ 
+  
+			if (!empty($theme_options['header_bg_color']))   { $sytle_ .= '.head-container  {background-color : ' .esc_js($theme_options['header_bg_color']) . '; }' . "\n";  }
+			if (!empty($theme_options['header_img']))    {
+				$header_url = wp_get_attachment_image_src(intval($theme_options['header_img']), 'full'); 
+				$header_url = esc_url_raw($header_url[0]);
+				$sytle_ .= '.head-container {background-image : url(' .esc_js($header_url) . '); } ' . "\n";  
+			}
+  
+			if (!empty($theme_options['header_height'])) {
+				$sytle_ .= '.head-container {min-height : '.esc_js($theme_options['header_height']).'px; }' . "\n";  
+			}
+
+			if (!empty($theme_options['menu_btn_color']))   { $sytle_ .= '.main-navigation ul li.current_page_item a, .main-navigation ul li.current-menu-ancestor a, .main-navigation ul li.current-menu-item a, .main-navigation ul li.current-menu-parent a, .main-navigation ul li.current_page_parent a {background-color : '.esc_js($theme_options['menu_btn_color']) . '; }' . "\n";  }
+			if (!empty($theme_options['menu_hover_color']))  { $sytle_ .= '.main-navigation ul li.current_page_item a, .main-navigation ul li.current-menu-ancestor a, .main-navigation ul li.current-menu-item a, .main-navigation ul li.current-menu-parent a, .main-navigation ul li.current_page_parent a {color : '.esc_js($theme_options['menu_hover_color']) . '; } ' . "\n";  }
+  
+			$sytle_ .= '.main-navigation ul > li:hover a {' . "\n";
+				if (!empty($theme_options['menu_btn_color']))   { $sytle_ .= 'background-color : '. esc_js($theme_options['menu_btn_color']) . '; ' . "\n"; }
+				if (!empty($theme_options['menu_hover_color']))  { $sytle_ .= 'color : '.esc_js($theme_options['menu_hover_color']) . ';  ' . "\n"; }
+			$sytle_ .= ' } ' . "\n"; }
+  
+			$sytle_ .= '#header_language_select ul li.current > a { color : '.esc_js($theme_options['menu_font_color']). '; } ' . "\n";
+			if (!empty($theme_options['menu_bg_color'])) { $sytle_ .= '#header_language_select { background-color : '.esc_js($theme_options['menu_bg_color']) . '; } ' . "\n";  }
+  
+			$sytle_ .= '#header_language_select ul li.current:hover > a { ' . "\n";
+				if (!empty($theme_options['menu_btn_color']))   { $sytle_ .= 'background-color : '. esc_js($theme_options['menu_btn_color']) . ';' . "\n"; }
+				if (!empty($theme_options['menu_hover_color']))  { $sytle_ .= 'color : '.esc_js($theme_options['menu_hover_color']) . ';' . "\n"; }
+			$sytle_ .= '} ' . "\n";
+		} 
+ 
+	wp_add_inline_style( 'main-style', $sytle_ ); 
 }
-add_action('wp_enqueue_scripts', 'fruitful_get_responsive_style', 20);
+add_action('wp_enqueue_scripts', 'fruitful_get_responsive_style', 99);
 
 function fruitful_get_sliders() {
 	$theme_options = fruitful_ret_options("fruitful_theme_options");
@@ -715,7 +703,6 @@ add_action('wp_head', 'fruitful_get_custom_css', 30);
 function fruitful_custom_css_and_slider_scripts() {
 	echo '<script type="text/javascript">';
 		echo 'jQuery(document).ready(function($) { ';
-				fruitful_get_all_style();	
 				fruitful_get_sliders();
 		echo '});';
 	echo '</script>';
@@ -765,7 +752,6 @@ function fruitful_entry_date( $echo = true ) {
 	if ($echo ) echo $date;
 	return $date;
 }
-
 
 
 function fruitful_customize_register( $wp_customize ) {

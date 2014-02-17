@@ -382,7 +382,7 @@ function fruitful_fonts_size () {
 	<h4><?php _e( 'H5',   'fruitful' ); ?></h4><input type="text" name="fruitful_theme_options[h5_size]" id="h5-size" value ="<?php echo intval($options['h5_size']); ?>"/>
 	<h4><?php _e( 'H6',   'fruitful' ); ?></h4><input type="text" name="fruitful_theme_options[h6_size]" id="h6-size" value ="<?php echo intval($options['h6_size']); ?>"/>	
 	<h4><?php _e( 'Menu', 'fruitful' ); ?></h4><input type="text" name="fruitful_theme_options[m_size]"  id="m-size"  value ="<?php echo intval($options['m_size']); ?>"/>	
-	<h4><?php _e( 'P', 'fruitful' ); ?></h4><input type="text"    name="fruitful_theme_options[p_size]"  id="p-size"  value ="<?php echo intval($options['p_size']); ?>"/>
+	<h4><?php _e( 'P', 	  'fruitful' ); ?></h4><input type="text" name="fruitful_theme_options[p_size]"  id="p-size"  value ="<?php echo intval($options['p_size']); ?>"/>
 	<?php
 }
 
@@ -554,7 +554,7 @@ function fruitful_theme_options_render_page() {
 						<li><a  id="item_4" href="javascript:void(0)" title="Menu">			<span class="menu-img" id="menu_img_4"></span><span class="menu-text"><?php _e( 'Menu', 	'fruitful' ); ?></span></a></li>
 						<li><a  id="item_5" href="javascript:void(0)" title="Fonts">		<span class="menu-img" id="menu_img_5"></span><span class="menu-text"><?php _e( 'Fonts', 	'fruitful' ); ?></span></a></li>
 						<li><a  id="item_6" href="javascript:void(0)" title="Slider">		<span class="menu-img" id="menu_img_6"></span><span class="menu-text"><?php _e( 'Slider', 	'fruitful' ); ?></span></a></li>
-						<li><a  id="item_7" href="javascript:void(0)" title="Social Links">		<span class="menu-img" id="menu_img_7"></span><span class="menu-text"><?php _e( 'Social Links', 'fruitful' ); ?></span></a></li>
+						<li><a  id="item_7" href="javascript:void(0)" title="Social Links">	<span class="menu-img" id="menu_img_7"></span><span class="menu-text"><?php _e( 'Social Links', 'fruitful' ); ?></span></a></li>
 						<li><a  id="item_8" href="javascript:void(0)" title="Footer">		<span class="menu-img" id="menu_img_8"></span><span class="menu-text"><?php _e( 'Footer', 	 'fruitful' ); ?></span></a></li>
 						<li><a  id="item_9" href="javascript:void(0)" title="CSS">			<span class="menu-img"  id="menu_img_9"></span><span class="menu-text"><?php _e( 'Custom CSS', 'fruitful' ); ?></span></a></li>
 					</ul>
