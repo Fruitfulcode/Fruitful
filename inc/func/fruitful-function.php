@@ -324,13 +324,15 @@ function fruitful_custom_do_settings_fields($page, $section) {
 function fruitful_add_admin_style() {
 	wp_enqueue_style('admin-style', 		get_template_directory_uri() . '/inc/css/admin.css');
 	wp_enqueue_style('fonts-style', 		get_template_directory_uri() . '/inc/css/fonts-style.css');
-	wp_enqueue_style('colorpicker-style',	get_template_directory_uri() . '/inc/js/colorpicker/colorpicker.css');
 	wp_enqueue_style('ch-style',			get_template_directory_uri() . '/inc/js/ch/ch.css');
 	wp_enqueue_style('sl-style',			get_template_directory_uri() . '/inc/js/sl/jquery.formstyler.css');
 	wp_enqueue_style('dialog', 				get_template_directory_uri() . '/inc/js/dialogBox/jquery-impromptu.css');
+	wp_enqueue_style( 'wp-color-picker' );
 }
 
 function fruitful_add_jquery_script() {
+	wp_enqueue_script('wp-color-picker');
+	
 	if( function_exists( 'wp_enqueue_media' ) ){
 		wp_enqueue_media();
 	} else {
@@ -338,14 +340,12 @@ function fruitful_add_jquery_script() {
 		wp_enqueue_script('media-upload');
 		wp_enqueue_script('thickbox');
 	}
-						
-	wp_enqueue_script('color-picker',		get_template_directory_uri() . "/inc/js/colorpicker/colorpicker.js", array('jquery'));
+	
 	wp_enqueue_script('chJq',				get_template_directory_uri() . "/inc/js/ch/ch.js", array('jquery'));
 	wp_enqueue_script('slJq',				get_template_directory_uri() . "/inc/js/sl/jquery.formstyler.min.js", array('jquery'));
 	wp_enqueue_script('dialog', 			get_template_directory_uri() . "/inc/js/dialogBox/jquery-impromptu.min.js",  array('jquery'));
 	wp_enqueue_script('uploads_',			get_template_directory_uri() . "/inc/js/uploads_.js", array('jquery'));
 	wp_enqueue_script('admin-jQuery-fruit',	get_template_directory_uri() . "/inc/js/main.js", array('jquery'));
-	
 }
 
 function fruitful_get_box_upload_image($val, $field, $btnclassup = 'upload_btn', $btnclassr = 'reset_btn', $imgcontclass = '', $imgid = '') {
@@ -451,12 +451,22 @@ return array(
 				'logo_img'			=> '',
 				'fav_icon'			=> '',
 				
-				/*menu*/
+				/*Color*/
 				'menu_bg_color'		=> '#ffffff',
 				'menu_btn_color'	=> '#F15A23',
 				'menu_hover_color'	=> '#ffffff',
 				'menu_font_color'	=> '#333333',		
-				'header_bg_color'	=> '#ffffff',		
+				'header_bg_color'	=> '#ffffff',	
+
+				'p_font_color'			=> '#333333',
+				'a_font_color'			=> '#E1704B',
+				'a_hover_font_color'	=> '#FF5D2A',
+				'a_focus_font_color'	=> '#FF5D2A',
+				'a_active_font_color'	=> '#FF5D2A',	
+				'widgets_sep_color'		=> '#F15A23',	
+				'date_of_post_b_color' 	=> '#F15A23',
+				'date_of_post_f_color'	=> '#ffffff',
+				
 				
 				/*fonts*/
 				'h_font_family'		=> 'Open Sans, sans-serif',

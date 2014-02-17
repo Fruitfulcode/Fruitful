@@ -30,7 +30,7 @@ function fruitful_theme_options_init() {
 	add_settings_section('header',			'',  '__return_false', 'theme_options' );
 	add_settings_section('background',		'',  '__return_false', 'theme_options' );
 	add_settings_section('logo', 			'',  '__return_false', 'theme_options' );
-	add_settings_section('menu', 			'',  '__return_false', 'theme_options' );
+	add_settings_section('colors', 			'',  '__return_false', 'theme_options' );
 	add_settings_section('fonts', 			'',  '__return_false', 'theme_options' );
 	add_settings_section('slider', 			'',  '__return_false', 'theme_options' );
 	add_settings_section('links', 			'',  '__return_false', 'theme_options' );
@@ -60,7 +60,13 @@ function fruitful_theme_options_init() {
 	add_settings_field( 'logo_image', 		__( 'Logo image', 'fruitful' ), 	'fruitful_get_logo_img', 	'theme_options', 'logo', 		array('info' => __( 'Upload logo image for your website. Size is original (Supported files .png, .jpg, .gif)', 'fruitful' )));
 	//add_settings_field( 'logo_size', 		__( 'Logo Size', 'fruitful' ), 		'fruitful_get_logo_wh',	 	'theme_options', 'logo', 		array('info' => __( 'Specify resolution for your logo image. Our theme will crop (timthumb) your image for need size.', 'fruitful' )) );
 	add_settings_field( 'fav_icon', 		__( 'Favicon', 'fruitful' ), 		'fruitful_get_fav_icon', 	'theme_options', 'logo', 		array('info' => __( 'Upload needed image for site favicon. (Supported files .ico (16x16))', 'fruitful' )));
-	add_settings_field( 'menu_style',		__( 'Menu styling', 'fruitful' ),	'fruitful_menu_style',		'theme_options', 'menu',    	array('info' => __( 'Choose styles for main menu. Add additional styles in custom css if needed', 'fruitful' )) );
+	
+
+	add_settings_field( 'menu_style',		__( 'Menu styling', 'fruitful' ),	'fruitful_menu_style_color',		'theme_options', 'colors',    	array('info' => __( 'Choose styles for main menu. Add additional styles in custom css if needed', 'fruitful' )) );
+	add_settings_field( 'font_style',		__( 'Font styling', 'fruitful' ),	'fruitful_font_style_color',		'theme_options', 'colors',    	array('info' => __( '', 'fruitful' )) );
+	add_settings_field( 'separator_style',	__( 'Color for separators', 'fruitful' ),	'fruitful_sep_style_color',		'theme_options', 'colors',    	array('info' => __( '', 'fruitful' )) );
+	
+	
 	add_settings_field( 'fonts_options', 	__( 'Fonts', 'fruitful' ), 	'fruitful_fonts_options',	'theme_options', 'fonts', 		array('info' => __( 'Popular web safe font collection, select and use for your needs.', 'fruitful' )) );
 	
 	add_settings_field( 'fonts_headers', 	__( 'Headers', 'fruitful' ),'fruitful_fonts_headers',	'theme_options', 'fonts', array('info' => __( 'Choose font-family for all headlines.', 'fruitful' )) );
@@ -194,8 +200,7 @@ function fruitful_get_general_header() {
 		
 		<div class="box-option">
 			<h4><?php _e( 'Header background-color', 'fruitful' ); ?></h4>
-			<div id="headercolor"><div style="background-color: <?php echo esc_attr($options['header_bg_color']); ?>"></div></div>
-			<input type="text" id="header_bg_color" name="fruitful_theme_options[header_bg_color]" value="<?php echo esc_attr($options['header_bg_color']); ?>"/>
+			<input type="text" id="header_bg_color" class="colorPicker" name="fruitful_theme_options[header_bg_color]" value="<?php echo esc_attr($options['header_bg_color']); ?>" data-default-color="#ffffff"/>
 		</div>
 	<?php
 }
@@ -243,20 +248,20 @@ function fruitful_settings_field_socials_links() {
 	$options = fruitful_get_theme_options();
 	?>
 	<div class="socials">
-		<h4>Facebook</h4>		<input id="facebook_url" 	name="fruitful_theme_options[facebook_url]" type="text"   value="<?php echo esc_url( $options['facebook_url'] ); ?>"/>
-		<h4>Twitter</h4>		<input id="twitter_url" 	name="fruitful_theme_options[twitter_url]" 	type="text"   value="<?php echo esc_url( $options['twitter_url'] ); ?>"/>
-		<h4>LinkedIn</h4>		<input id="linkedin_url" 	name="fruitful_theme_options[linkedin_url]" type="text"   value="<?php echo esc_url( $options['linkedin_url'] ); ?>"/>
-		<h4>MySpace</h4>		<input id="myspace_url" 	name="fruitful_theme_options[myspace_url]" 	type="text"   value="<?php echo esc_url( $options['myspace_url'] ); ?>"/>
-		<h4>Google Plus+</h4>	<input id="googleplus_url" 	name="fruitful_theme_options[googleplus_url]" type="text" value="<?php echo esc_url( $options['googleplus_url'] ); ?>"/>
-		<h4>Dribbble</h4>		<input id="dribbble_url" 	name="fruitful_theme_options[dribbble_url]" type="text"   value="<?php echo esc_url( $options['dribbble_url'] ); ?>"/>
-		<h4>Skype</h4>			<input id="skype_link" 		name="fruitful_theme_options[skype_link]" 	type="text"   value="<?php echo esc_attr( $options['skype_link'] ); ?>"/>
-		<h4>Flickr</h4>			<input id="flickr_link" 	name="fruitful_theme_options[flickr_link]" 	type="text"   value="<?php echo esc_url( $options['flickr_link'] ); ?>"/>
-		<h4>You Tube</h4>		<input id="youtube_url" 	name="fruitful_theme_options[youtube_url]"	type="text"   value="<?php echo esc_url( $options['youtube_url'] ); ?>"/>
-		<h4>RSS</h4>			<input id="rss_link" 		name="fruitful_theme_options[rss_link]" 	type="text"   value="<?php echo esc_url( $options['rss_link'] ); ?>"/>
-		<h4>Vk.com</h4>			<input id="vk_link" 		name="fruitful_theme_options[vk_link]" 		type="text"   value="<?php echo esc_url( $options['vk_link'] ); ?>"/>
-		<h4>Instagram</h4>		<input id="instagram_url"	name="fruitful_theme_options[instagram_url]"	type="text"   value="<?php echo esc_url( $options['instagram_url'] ); ?>"/>
-		<h4>Pinterest</h4>		<input id="pinterest_url"	name="fruitful_theme_options[pinterest_url]"	type="text"   value="<?php echo esc_url( $options['pinterest_url'] ); ?>"/>
-		<h4>E-mail</h4>			<input id="email_link" 		name="fruitful_theme_options[email_link]" 	type="text"   value="<?php echo sanitize_email( $options['email_link'] ); ?>"/>
+		<h4>Facebook</h4>		<input id="facebook_url" 	class="text-input" name="fruitful_theme_options[facebook_url]" 	type="text"   value="<?php echo esc_url( $options['facebook_url'] ); ?>"/>
+		<h4>Twitter</h4>		<input id="twitter_url" 	class="text-input" name="fruitful_theme_options[twitter_url]" 	type="text"   value="<?php echo esc_url( $options['twitter_url'] ); ?>"/>
+		<h4>LinkedIn</h4>		<input id="linkedin_url" 	class="text-input" name="fruitful_theme_options[linkedin_url]" 	type="text"   value="<?php echo esc_url( $options['linkedin_url'] ); ?>"/>
+		<h4>MySpace</h4>		<input id="myspace_url" 	class="text-input" name="fruitful_theme_options[myspace_url]" 	type="text"   value="<?php echo esc_url( $options['myspace_url'] ); ?>"/>
+		<h4>Google Plus+</h4>	<input id="googleplus_url" 	class="text-input" name="fruitful_theme_options[googleplus_url]" type="text" value="<?php echo esc_url( $options['googleplus_url'] ); ?>"/>
+		<h4>Dribbble</h4>		<input id="dribbble_url" 	class="text-input" name="fruitful_theme_options[dribbble_url]" 	type="text"   value="<?php echo esc_url( $options['dribbble_url'] ); ?>"/>
+		<h4>Skype</h4>			<input id="skype_link" 		class="text-input" name="fruitful_theme_options[skype_link]" 	type="text"   value="<?php echo esc_attr( $options['skype_link'] ); ?>"/>
+		<h4>Flickr</h4>			<input id="flickr_link" 	class="text-input" name="fruitful_theme_options[flickr_link]" 	type="text"   value="<?php echo esc_url( $options['flickr_link'] ); ?>"/>
+		<h4>You Tube</h4>		<input id="youtube_url" 	class="text-input" name="fruitful_theme_options[youtube_url]"	type="text"   value="<?php echo esc_url( $options['youtube_url'] ); ?>"/>
+		<h4>RSS</h4>			<input id="rss_link" 		class="text-input" name="fruitful_theme_options[rss_link]" 		type="text"   value="<?php echo esc_url( $options['rss_link'] ); ?>"/>
+		<h4>Vk.com</h4>			<input id="vk_link" 		class="text-input" name="fruitful_theme_options[vk_link]" 		type="text"   value="<?php echo esc_url( $options['vk_link'] ); ?>"/>
+		<h4>Instagram</h4>		<input id="instagram_url"	class="text-input" name="fruitful_theme_options[instagram_url]"	type="text"   value="<?php echo esc_url( $options['instagram_url'] ); ?>"/>
+		<h4>Pinterest</h4>		<input id="pinterest_url"	class="text-input" name="fruitful_theme_options[pinterest_url]"	type="text"   value="<?php echo esc_url( $options['pinterest_url'] ); ?>"/>
+		<h4>E-mail</h4>			<input id="email_link" 		class="text-input" name="fruitful_theme_options[email_link]" 	type="text"   value="<?php echo sanitize_email( $options['email_link'] ); ?>"/>
 	</div>
 	<?php
 }	
@@ -264,14 +269,14 @@ function fruitful_settings_field_socials_links() {
 function fruitful_settings_field_footer_text() {
 	$options = fruitful_get_theme_options();
 	?>
-	<h4><?php _e( 'Copyright section', 'fruitful' ); ?></h4><textarea class="large-text" type="text" name="fruitful_theme_options[footer_text]" id="footer-text" cols="50" rows="20" /><?php echo stripslashes($options['footer_text']); ?></textarea>
+	<h4><?php _e( 'Copyright section', 'fruitful' ); ?></h4><textarea class="large-text" name="fruitful_theme_options[footer_text]" id="footer-text" cols="50" rows="20" /><?php echo stripslashes($options['footer_text']); ?></textarea>
 <?php
 }
 
 function fruitful_settings_field_custom_css() {
 	$options = fruitful_get_theme_options();
 	?>
-	<h4><?php _e( 'Styles editor', 'fruitful' ); ?></h4><textarea class="large-text" type="text" name="fruitful_theme_options[custom_css]" id="css-text" cols="50" rows="30" /><?php echo stripslashes($options['custom_css']); ?></textarea>
+	<h4><?php _e( 'Styles editor', 'fruitful' ); ?></h4><textarea class="large-text" name="fruitful_theme_options[custom_css]" id="css-text" cols="50" rows="30" /><?php echo stripslashes($options['custom_css']); ?></textarea>
 <?php
 }
 
@@ -303,7 +308,7 @@ function fruitful_get_header_height() {
 	$options = fruitful_get_theme_options();
 	?>
 	<div class="box-option">
-		<input type="text" name="fruitful_theme_options[header_height]" id="header_height" class="header_height small_input" value="<?php echo intval($options['header_height']); ?>"/>
+		<input type="text" name="fruitful_theme_options[header_height]" id="header_height" class="header_height small_input text-input" value="<?php echo intval($options['header_height']); ?>"/>
 	</div>	
 <?php	
 }
@@ -328,8 +333,8 @@ function fruitful_get_logo_wh () {
 	$upload  = intval($options['logo_img']);
 	?>
 	<h4 class="full-width"><?php _e( 'Width', 'fruitful' ); ?></h4>
-	<input type="text" name="fruitful_theme_options[logo_w]"  id="logo-w" value ="<?php echo intval($options['logo_w']); ?>"/>
-	<h4 class="full-width"><?php _e( 'Height', 'fruitful' ); ?></h4><input type="text" name="fruitful_theme_options[logo_h]" id="logo-h"  value ="<?php echo intval($options['logo_h']); ?>"/>
+	<input type="text" name="fruitful_theme_options[logo_w]"  id="logo-w" class="text-input" value ="<?php echo intval($options['logo_w']); ?>"/>
+	<h4 class="full-width"><?php _e( 'Height', 'fruitful' ); ?></h4><input type="text" name="fruitful_theme_options[logo_h]" id="logo-h"  class="text-input" value ="<?php echo intval($options['logo_h']); ?>"/>
 
 	<?php }
 	
@@ -375,14 +380,14 @@ function fruitful_fonts_content () {
 function fruitful_fonts_size () {
 	$options = fruitful_get_theme_options();
 	?>
-    <h4><?php _e( 'H1',   'fruitful' ); ?></h4><input type="text" name="fruitful_theme_options[h1_size]" id="h1-size" value ="<?php echo intval($options['h1_size']); ?>"/>
-	<h4><?php _e( 'H2',   'fruitful' ); ?></h4><input type="text" name="fruitful_theme_options[h2_size]" id="h2-size" value ="<?php echo intval($options['h2_size']); ?>"/>
-	<h4><?php _e( 'H3',   'fruitful' ); ?></h4><input type="text" name="fruitful_theme_options[h3_size]" id="h4-size" value ="<?php echo intval($options['h3_size']); ?>"/>
-	<h4><?php _e( 'H4',   'fruitful' ); ?></h4><input type="text" name="fruitful_theme_options[h4_size]" id="h4-size" value ="<?php echo intval($options['h4_size']); ?>"/>
-	<h4><?php _e( 'H5',   'fruitful' ); ?></h4><input type="text" name="fruitful_theme_options[h5_size]" id="h5-size" value ="<?php echo intval($options['h5_size']); ?>"/>
-	<h4><?php _e( 'H6',   'fruitful' ); ?></h4><input type="text" name="fruitful_theme_options[h6_size]" id="h6-size" value ="<?php echo intval($options['h6_size']); ?>"/>	
-	<h4><?php _e( 'Menu', 'fruitful' ); ?></h4><input type="text" name="fruitful_theme_options[m_size]"  id="m-size"  value ="<?php echo intval($options['m_size']); ?>"/>	
-	<h4><?php _e( 'P', 	  'fruitful' ); ?></h4><input type="text" name="fruitful_theme_options[p_size]"  id="p-size"  value ="<?php echo intval($options['p_size']); ?>"/>
+    <h4><?php _e( 'H1',   'fruitful' ); ?></h4><input type="text" name="fruitful_theme_options[h1_size]" id="h1-size" class="text-input" value ="<?php echo intval($options['h1_size']); ?>"/>
+	<h4><?php _e( 'H2',   'fruitful' ); ?></h4><input type="text" name="fruitful_theme_options[h2_size]" id="h2-size" class="text-input" value ="<?php echo intval($options['h2_size']); ?>"/>
+	<h4><?php _e( 'H3',   'fruitful' ); ?></h4><input type="text" name="fruitful_theme_options[h3_size]" id="h4-size" class="text-input" value ="<?php echo intval($options['h3_size']); ?>"/>
+	<h4><?php _e( 'H4',   'fruitful' ); ?></h4><input type="text" name="fruitful_theme_options[h4_size]" id="h4-size" class="text-input" value ="<?php echo intval($options['h4_size']); ?>"/>
+	<h4><?php _e( 'H5',   'fruitful' ); ?></h4><input type="text" name="fruitful_theme_options[h5_size]" id="h5-size" class="text-input" value ="<?php echo intval($options['h5_size']); ?>"/>
+	<h4><?php _e( 'H6',   'fruitful' ); ?></h4><input type="text" name="fruitful_theme_options[h6_size]" id="h6-size" class="text-input" value ="<?php echo intval($options['h6_size']); ?>"/>	
+	<h4><?php _e( 'Menu', 'fruitful' ); ?></h4><input type="text" name="fruitful_theme_options[m_size]"  id="m-size"  class="text-input" value ="<?php echo intval($options['m_size']); ?>"/>	
+	<h4><?php _e( 'P', 	  'fruitful' ); ?></h4><input type="text" name="fruitful_theme_options[p_size]"  id="p-size"  class="text-input" value ="<?php echo intval($options['p_size']); ?>"/>
 	<?php
 }
 
@@ -407,28 +412,28 @@ function fruitful_slider_options() {
 				<div class="option_block"><h4><?php _e( 'Sliding direction, "horizontal" or "vertical"', 'fruitful' ); ?></h4><?php fruitful_get_select_fields('s_direction',$options, fruitful_slide_direction_list()); ?></div>		
 				<div class="option_block"><h4><?php _e( 'Reverse the animation direction', 'fruitful' ); ?></h4><?php fruitful_get_select_fields('s_reverse',$options, fruitful_bool_list()); ?></div>		
 				<div class="option_block"><h4><?php _e( 'Animate slider automatically', 'fruitful' ); ?></h4><?php fruitful_get_select_fields('s_slideshow',$options, fruitful_bool_list()); ?></div>		
-				<div class="option_block"><h4><?php _e( 'Set the speed of the slideshow cycling, in milliseconds', 'fruitful' ); ?></h4><input type="text" id="speed-slideshow" name="fruitful_theme_options[s_slideshowSpeed]" value="<?php echo esc_attr($options['s_slideshowSpeed']); ?>"/></div>		
-				<div class="option_block"><h4><?php _e( 'Set the speed of animations, in milliseconds', 'fruitful' ); ?></h4><input type="text" id="speed-animation" name="fruitful_theme_options[s_animationSpeed]" value="<?php echo esc_attr($options['s_animationSpeed']); ?>"/></div>	
-				<div class="option_block"><h4><?php _e( 'Set an initialization delay, in milliseconds', 'fruitful' ); ?></h4><input type="text" id="init-delay" name="fruitful_theme_options[s_initDelay]" value="<?php echo esc_attr($options['s_initDelay']); ?>"/></div>	
+				<div class="option_block"><h4><?php _e( 'Set the speed of the slideshow cycling, in milliseconds', 'fruitful' ); ?></h4><input type="text" id="speed-slideshow" class="text-input" name="fruitful_theme_options[s_slideshowSpeed]" value="<?php echo esc_attr($options['s_slideshowSpeed']); ?>"/></div>		
+				<div class="option_block"><h4><?php _e( 'Set the speed of animations, in milliseconds', 'fruitful' ); ?></h4><input type="text" id="speed-animation" class="text-input" name="fruitful_theme_options[s_animationSpeed]" value="<?php echo esc_attr($options['s_animationSpeed']); ?>"/></div>	
+				<div class="option_block"><h4><?php _e( 'Set an initialization delay, in milliseconds', 'fruitful' ); ?></h4><input type="text" id="init-delay" class="text-input" name="fruitful_theme_options[s_initDelay]" value="<?php echo esc_attr($options['s_initDelay']); ?>"/></div>	
 				<div class="option_block"><h4><?php _e( 'Randomize slide order', 'fruitful' ); ?></h4><?php fruitful_get_select_fields('s_randomize',$options, fruitful_bool_list()); ?></div>	
 				<div class="option_block"><h4><?php _e( 'Manual control usage', 'fruitful' ); ?></h4><?php fruitful_get_select_fields('s_controlnav',$options, fruitful_bool_list()); ?></div>	
 			</div>
 			<div class="nivo-slider">
 				<div class="option_block"><h4><?php _e( 'Slider Skins', 'fruitful' ); ?></h4><?php fruitful_get_select_fields('nv_skins',$options, fruitful_slide_skins_select()); ?></div>	
 				<div class="option_block"><h4><?php _e( 'Effect', 'fruitful' ); ?></h4><?php fruitful_get_select_fields('nv_animation',$options, fruitful_flex_effect()); ?></div>	
-				<div class="option_block"><h4><?php _e( 'For slice animations', 'fruitful' ); ?></h4><input type="text" id="nv-slice" name="fruitful_theme_options[nv_slice]" value="<?php echo esc_attr($options['nv_slice']); ?>"/></div>						
-				<div class="option_block"><h4><?php _e( 'For box animations (Cols)', 'fruitful' ); ?></h4><input type="text" id="nv-boxCols" name="fruitful_theme_options[nv_boxCols]" value="<?php echo esc_attr($options['nv_boxCols']); ?>"/></div>						
-				<div class="option_block"><h4><?php _e( 'For box animations (Rows)', 'fruitful' ); ?></h4><input type="text" id="nv-boxRows" name="fruitful_theme_options[nv_boxRows]" value="<?php echo esc_attr($options['nv_boxRows']); ?>"/></div>						
-				<div class="option_block"><h4><?php _e( 'Slide transition speed', 'fruitful' ); ?></h4><input type="text" id="nv-animSpeed" name="fruitful_theme_options[nv_animSpeed]" value="<?php echo esc_attr($options['nv_animSpeed']); ?>"/></div>										
-				<div class="option_block"><h4><?php _e( 'How long each slide will show', 'fruitful' ); ?></h4><input type="text" id="nv-pauseTime" name="fruitful_theme_options[nv_pauseTime]" value="<?php  echo esc_attr($options['nv_pauseTime']); ?>"/></div>										
-				<div class="option_block"><h4><?php _e( 'Set starting Slide (0 index)', 'fruitful' ); ?></h4><input type="text" id="nv-startSlide" name="fruitful_theme_options[nv_startSlide]" value="<?php echo esc_attr($options['nv_startSlide']); ?>"/></div>										
+				<div class="option_block"><h4><?php _e( 'For slice animations', 'fruitful' ); ?></h4><input type="text" id="nv-slice" class="text-input" name="fruitful_theme_options[nv_slice]" value="<?php echo esc_attr($options['nv_slice']); ?>"/></div>						
+				<div class="option_block"><h4><?php _e( 'For box animations (Cols)', 'fruitful' ); ?></h4><input type="text" id="nv-boxCols" class="text-input" name="fruitful_theme_options[nv_boxCols]" value="<?php echo esc_attr($options['nv_boxCols']); ?>"/></div>						
+				<div class="option_block"><h4><?php _e( 'For box animations (Rows)', 'fruitful' ); ?></h4><input type="text" id="nv-boxRows" class="text-input" name="fruitful_theme_options[nv_boxRows]" value="<?php echo esc_attr($options['nv_boxRows']); ?>"/></div>						
+				<div class="option_block"><h4><?php _e( 'Slide transition speed', 'fruitful' ); ?></h4><input type="text" id="nv-animSpeed" class="text-input" name="fruitful_theme_options[nv_animSpeed]" value="<?php echo esc_attr($options['nv_animSpeed']); ?>"/></div>										
+				<div class="option_block"><h4><?php _e( 'How long each slide will show', 'fruitful' ); ?></h4><input type="text" id="nv-pauseTime" class="text-input" name="fruitful_theme_options[nv_pauseTime]" value="<?php  echo esc_attr($options['nv_pauseTime']); ?>"/></div>										
+				<div class="option_block"><h4><?php _e( 'Set starting Slide (0 index)', 'fruitful' ); ?></h4><input type="text" id="nv-startSlide" class="text-input" name="fruitful_theme_options[nv_startSlide]" value="<?php echo esc_attr($options['nv_startSlide']); ?>"/></div>										
 				<div class="option_block"><h4><?php _e( 'Next & Prev navigation', 'fruitful' ); ?></h4><?php fruitful_get_select_fields('nv_directionNav',$options, fruitful_bool_list()); ?></div>										
 				<div class="option_block"><h4><?php _e( '1,2,3... navigation', 'fruitful' ); ?></h4><?php fruitful_get_select_fields('nv_controlNav',$options, fruitful_bool_list()); ?></div>														
 				<div class="option_block"><h4><?php _e( 'Use thumbnails for Control Nav', 'fruitful' ); ?></h4><?php fruitful_get_select_fields('nv_controlNavThumbs',$options, fruitful_bool_list()); ?></div>														
 				<div class="option_block"><h4><?php _e( 'Stop animation while hovering', 'fruitful' ); ?></h4><?php fruitful_get_select_fields('nv_pauseOnHover',$options, fruitful_bool_list()); ?></div>														
 				<div class="option_block"><h4><?php _e( 'Force manual transitions', 'fruitful' ); ?></h4><?php fruitful_get_select_fields('nv_manualAdvance',$options, fruitful_bool_list()); ?></div>														
-				<div class="option_block"><h4><?php _e( 'Prev directionNav text',  'fruitful'); ?></h4><input type="text" id="nv-prevText" name="fruitful_theme_options[nv_prevText]" value="<?php echo esc_html($options['nv_prevText']); ?>"/></div>																		
-				<div class="option_block"><h4><?php _e( 'Next directionNav text',  'fruitful'); ?></h4><input type="text" id="nv-nextText" name="fruitful_theme_options[nv_nextText]" value="<?php echo esc_html($options['nv_nextText']); ?>"/></div>																		
+				<div class="option_block"><h4><?php _e( 'Prev directionNav text',  'fruitful'); ?></h4><input type="text" id="nv-prevText" class="text-input" name="fruitful_theme_options[nv_prevText]" value="<?php echo esc_html($options['nv_prevText']); ?>"/></div>																		
+				<div class="option_block"><h4><?php _e( 'Next directionNav text',  'fruitful'); ?></h4><input type="text" id="nv-nextText" class="text-input" name="fruitful_theme_options[nv_nextText]" value="<?php echo esc_html($options['nv_nextText']); ?>"/></div>																		
 				<div class="option_block"><h4><?php _e( 'Start on a random slide', 'fruitful'); ?></h4><?php fruitful_get_select_fields('nv_randomStart',$options, fruitful_bool_list()); ?></div>																		
 			</div>
 	</div>
@@ -486,45 +491,120 @@ function fruitful_slider_images() {
 <?php
 }
 
-function fruitful_menu_style () {
+function fruitful_menu_style_color () {
 	$options = fruitful_get_theme_options();
 	?>
 		<div class="box-options">
 			<h4><?php _e( 'Menu background-color', 'fruitful' ); ?></h4>
-			<div id="menubgcolor"><div style="background-color: <?php echo esc_attr($options['menu_bg_color']); ?>"></div></div>
-			<input type="text" id="menu_bg_color" name="fruitful_theme_options[menu_bg_color]" value="<?php echo esc_attr($options['menu_bg_color']); ?>"/>
+			<fieldset>
+				<input type="text" id="menu_bg_color" class="colorPicker" name="fruitful_theme_options[menu_bg_color]" value="<?php echo esc_attr($options['menu_bg_color']); ?>" data-default-color="#ffffff" />
+			</fieldset>
 		</div>
 		<div class="box-options">
 			<h4><?php _e( 'Button background-color', 'fruitful' ); ?></h4>
-			<div id="menubntcolor"><div style="background-color: <?php echo esc_attr($options['menu_btn_color']); ?>"></div></div>
-			<input type="text" id="menu_btn_color" name="fruitful_theme_options[menu_btn_color]" value="<?php echo esc_attr($options['menu_btn_color']); ?>"/>
+			<fieldset>
+				<input type="text" id="menu_btn_color" class="colorPicker" name="fruitful_theme_options[menu_btn_color]" value="<?php echo esc_attr($options['menu_btn_color']); ?>" data-default-color="#F15A23" />
+			</fieldset>	
 		</div>
 		<div class="box-options">
 			<h4><?php _e( 'Default font color', 'fruitful' ); ?></h4>
-			<div id="menufontcolor"><div style="background-color: <?php echo esc_attr($options['menu_font_color']); ?>"></div></div>
-			<input type="text" id="menu_font_color" name="fruitful_theme_options[menu_font_color]" value="<?php echo esc_attr($options['menu_font_color']); ?>"/>
+			<fieldset>
+				<input type="text" id="menu_font_color" class="colorPicker" name="fruitful_theme_options[menu_font_color]" value="<?php echo esc_attr($options['menu_font_color']); ?>" data-default-color="#333333" />
+			</fieldset>		
 		</div>
 		<div class="box-options">
 			<h4><?php _e( 'Font color for :active and :hover', 'fruitful' ); ?></h4>
-			<div id="menufontcolorachvr"><div style="background-color: <?php echo esc_attr($options['menu_hover_color']); ?>"></div></div>
-			<input type="text" id="menu_hover_color" name="fruitful_theme_options[menu_hover_color]" value="<?php echo esc_attr($options['menu_hover_color']); ?>"/>
+			<fieldset>
+				<input type="text" id="menu_hover_color" class="colorPicker" name="fruitful_theme_options[menu_hover_color]" value="<?php echo esc_attr($options['menu_hover_color']); ?>" data-default-color="#ffffff" />
+			</fieldset>	
 		</div>
 	<?php
 }
+
+
+function fruitful_font_style_color () {
+	$options = fruitful_get_theme_options();
+	?>
+		<div class="box-options">
+			<h4><?php _e( 'Font color', 'fruitful' ); ?></h4>
+			<fieldset>
+				<input type="text" id="p_font_color" class="colorPicker" name="fruitful_theme_options[p_font_color]" value="<?php echo esc_attr($options['p_font_color']); ?>" data-default-color="#333333" />
+			</fieldset>
+		</div>
+		
+		<?php /*Link Color*/ ?>
+		
+		<div class="box-options">
+			<h4><?php _e( 'Link color', 'fruitful' ); ?></h4>
+			<fieldset>
+				<input type="text" id="a_font_color" class="colorPicker" name="fruitful_theme_options[a_font_color]" value="<?php echo esc_attr($options['a_font_color']); ?>" data-default-color="#E1704B" />
+			</fieldset>	
+		</div>
+		<div class="box-options">
+			<h4><?php _e( 'Link color (hover)', 'fruitful' ); ?></h4>
+			<fieldset>
+				<input type="text" id="a_hover_font_color" class="colorPicker" name="fruitful_theme_options[a_hover_font_color]" value="<?php echo esc_attr($options['a_hover_font_color']); ?>" data-default-color="#FF5D2A" />
+			</fieldset>		
+		</div>
+		<div class="box-options">
+			<h4><?php _e( 'Link color (focus)', 'fruitful' ); ?></h4>
+			<fieldset>
+				<input type="text" id="a_focus_font_color" class="colorPicker" name="fruitful_theme_options[a_focus_font_color]" value="<?php echo esc_attr($options['a_focus_font_color']); ?>" data-default-color="#FF5D2A" />
+			</fieldset>		
+		</div>
+		<div class="box-options">
+			<h4><?php _e( 'Link color (active)', 'fruitful' ); ?></h4>
+			<fieldset>
+				<input type="text" id="a_active_font_color" class="colorPicker" name="fruitful_theme_options[a_active_font_color]" value="<?php echo esc_attr($options['a_active_font_color']); ?>" data-default-color="#FF5D2A" />
+			</fieldset>		
+		</div>
+	<?php
+}
+
+
+function fruitful_sep_style_color() {
+	$options = fruitful_get_theme_options();
+	?>
+		<div class="box-options">
+			<h4><?php _e( 'Widgets underline color', 'fruitful' ); ?></h4>
+			<fieldset>
+				<input type="text" id="widgets_sep_color" class="colorPicker" name="fruitful_theme_options[widgets_sep_color]" value="<?php echo esc_attr($options['widgets_sep_color']); ?>" data-default-color="#F15A23" />
+			</fieldset>
+		</div>
+		
+		<div class="box-options">
+			<h4><?php _e( 'Date of Post box color', 'fruitful' ); ?></h4>
+			<fieldset>
+				<input type="text" id="date_of_post_b_color" class="colorPicker" name="fruitful_theme_options[date_of_post_b_color]" value="<?php echo esc_attr($options['date_of_post_b_color']); ?>" data-default-color="#F15A23" />
+			</fieldset>
+		</div>
+		
+		<div class="box-options">
+			<h4><?php _e( 'Date of Post font color', 'fruitful' ); ?></h4>
+			<fieldset>
+				<input type="text" id="date_of_post_f_color" class="colorPicker" name="fruitful_theme_options[date_of_post_f_color]" value="<?php echo esc_attr($options['date_of_post_f_color']); ?>" data-default-color="#ffffff" />
+			</fieldset>
+		</div>
+	<?php 
+
+}	
+
 	
 function fruitful_get_background_color () {
 	$options = fruitful_get_theme_options();
 	?>
-		<div id="colorSelector"><div style="background-color: <?php echo esc_attr($options['background_color']); ?>"></div></div>
-		<input type="text" id="background_color" name="fruitful_theme_options[background_color]" value="<?php echo esc_attr($options['background_color']); ?>"/>
+		<fieldset>
+			<input type="text" id="background_color" class="colorPicker" name="fruitful_theme_options[background_color]" value="<?php echo esc_attr($options['background_color']); ?>"  data-default-color="#ffffff" />
+		</fieldset>
 	<?php
 }
 
 function fruitful_get_container_background_color () {
 	$options = fruitful_get_theme_options();
 	?>
-		<div id="bgColorContainer"><div style="background-color: <?php echo esc_attr($options['container_bg_color']); ?>"></div></div>
-		<input type="text" id="container_bg_color" name="fruitful_theme_options[container_bg_color]" value="<?php echo esc_attr($options['container_bg_color']); ?>"/>
+		<fieldset>
+			<input type="text" id="container_bg_color" class="colorPicker" name="fruitful_theme_options[container_bg_color]" value="<?php echo esc_attr($options['container_bg_color']); ?>" data-default-color="#ffffff" />
+		</fieldset>	
 	<?php
 }
 
@@ -550,13 +630,13 @@ function fruitful_theme_options_render_page() {
 						<li class="current"><a  id="item_0" href="javascript:void(0)" 	title="General Settings"><span class="menu-img" id="menu_img_0"></span><span class="menu-text"><?php _e( 'General Settings', 'fruitful' ); ?></span></a></li>
 						<li><a  id="item_1" href="javascript:void(0)" title="Header">		<span class="menu-img" id="menu_img_1"></span><span class="menu-text"><?php _e( 'Header', 'fruitful' ); ?></span></a></li>
 						<li><a  id="item_2" href="javascript:void(0)" title="Background">	<span class="menu-img" id="menu_img_2"></span><span class="menu-text"><?php _e( 'Background', 'fruitful' ); ?></span></a></li>
-						<li><a  id="item_3" href="javascript:void(0)" title="Logo">			<span class="menu-img" id="menu_img_3"></span><span class="menu-text"><?php _e( 'Logo',   'fruitful' ); ?></span></a></li>
-						<li><a  id="item_4" href="javascript:void(0)" title="Menu">			<span class="menu-img" id="menu_img_4"></span><span class="menu-text"><?php _e( 'Menu', 	'fruitful' ); ?></span></a></li>
+						<li><a  id="item_3" href="javascript:void(0)" title="Logo">			<span class="menu-img" id="menu_img_3"></span><span class="menu-text"><?php _e( 'Logo',		'fruitful' ); ?></span></a></li>
+						<li><a  id="item_4" href="javascript:void(0)" title="Menu">			<span class="menu-img" id="menu_img_4"></span><span class="menu-text"><?php _e( 'Colors',	'fruitful' ); ?></span></a></li>
 						<li><a  id="item_5" href="javascript:void(0)" title="Fonts">		<span class="menu-img" id="menu_img_5"></span><span class="menu-text"><?php _e( 'Fonts', 	'fruitful' ); ?></span></a></li>
 						<li><a  id="item_6" href="javascript:void(0)" title="Slider">		<span class="menu-img" id="menu_img_6"></span><span class="menu-text"><?php _e( 'Slider', 	'fruitful' ); ?></span></a></li>
 						<li><a  id="item_7" href="javascript:void(0)" title="Social Links">	<span class="menu-img" id="menu_img_7"></span><span class="menu-text"><?php _e( 'Social Links', 'fruitful' ); ?></span></a></li>
-						<li><a  id="item_8" href="javascript:void(0)" title="Footer">		<span class="menu-img" id="menu_img_8"></span><span class="menu-text"><?php _e( 'Footer', 	 'fruitful' ); ?></span></a></li>
-						<li><a  id="item_9" href="javascript:void(0)" title="CSS">			<span class="menu-img"  id="menu_img_9"></span><span class="menu-text"><?php _e( 'Custom CSS', 'fruitful' ); ?></span></a></li>
+						<li><a  id="item_8" href="javascript:void(0)" title="Footer">		<span class="menu-img" id="menu_img_8"></span><span class="menu-text"><?php _e( 'Footer', 	 	'fruitful' ); ?></span></a></li>
+						<li><a  id="item_9" href="javascript:void(0)" title="CSS">			<span class="menu-img"  id="menu_img_9"></span><span class="menu-text"><?php _e( 'Custom CSS', 	'fruitful' ); ?></span></a></li>
 					</ul>
 				</div> 	
 				<?php

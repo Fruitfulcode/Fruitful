@@ -58,16 +58,16 @@
 		jQuery("#background_img").click(); 
 	});		
 	
+	
 	/*Color init*/
-	initColorPicker(jQuery('#colorSelector'), 		jQuery('#background_color'));
-	initColorPicker(jQuery('#bgColorContainer'), 	jQuery('#container_bg_color'));
-	initColorPicker(jQuery('#menubgcolor'), 		jQuery('#menu_bg_color'));
-	initColorPicker(jQuery('#menubntcolor'), 		jQuery('#menu_btn_color'));
-	initColorPicker(jQuery('#menuboxshcolor'), 		jQuery('#menu_boxsh_color'));
-	initColorPicker(jQuery('#menufontcolorachvr'), 	jQuery('#menu_hover_color'));
-	initColorPicker(jQuery('#menutxtshcolor'), 		jQuery('#menu_txtsh_color'));
-	initColorPicker(jQuery('#menufontcolor'), 		jQuery('#menu_font_color'));
-	initColorPicker(jQuery('#headercolor'), 		jQuery('#header_bg_color'));
+	var vColorPickerOptions = {
+    	defaultColor: false,
+    	change:		  function(event, ui){},
+    	clear: 		  function() {},
+		hide: 		  true,
+		palettes: 	  true
+	};
+	jQuery('.colorPicker').wpColorPicker(vColorPickerOptions);
 	/*End Color init*/
 	
 	
@@ -172,25 +172,6 @@ function fade_message() {
 
 function show_message_import() {	
 	jQuery('.save-options').html('<div class="icon-sc"></div><div class="message-text">homepage installed <br /> visit your home page</div>').show(); 
-}
-
-
-function initColorPicker(eMelem, eColor) {
-	eMelem.ColorPicker({		
-		color: eColor.val(),		
-		onShow: function (colpkr) {			
-			jQuery(colpkr).fadeIn(500);			
-			return false;		
-		},		
-		onHide: function (colpkr) {		
-			jQuery(colpkr).fadeOut(500);		
-			return false;		
-		},		
-		onChange: function (hsb, hex, rgb) {			
-			eMelem.find('div').css('backgroundColor', '#' + hex);			
-			eColor.val('#' + hex);		
-		}	
-	});	
 }
 	
 jQuery.fn.center = function () {    
