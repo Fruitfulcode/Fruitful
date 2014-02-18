@@ -418,6 +418,15 @@ body.woocommerce-page #content nav.woocommerce-pagination ul li a.next:hover{tex
 .woocommerce-page .woocommerce-info,
 .woocommerce .woocommerce-message{float:left; width:90%; width:calc(100% - 66px);max-width:928px; display:block;padding:16px 16px 16px 50px;}
 
+@-moz-document url-prefix() {
+.single .woocommerce-message+form,
+.single .woocommerce-error+form,
+.single .woocommerce-info+form,
+.woocommerce .woocommerce-info+form,
+.woocommerce-page .woocommerce-info+form,
+.woocommerce .woocommerce-message+form{clear:both}
+}
+
 ul.woocommerce-error{
 	float:left; 
 	width:calc(100% - 66px);
