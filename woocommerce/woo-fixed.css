@@ -413,6 +413,11 @@ body.woocommerce-page #content nav.woocommerce-pagination ul li a.next:hover{tex
 .woocommerce .woocommerce-message+form{clear:both}
 }
 
+.single-product #commentform label{width:120px;float:left}
+.single-product #commentform .stars{float:left}
+.single-product.woocommerce #review_form #respond .comment-form-comment,
+.single-product.woocommerce-page #review_form #respond .comment-form-comment{width: 100%;float: left;margin: 20px 0;}
+
 ul.woocommerce-error{
 	float:left; 
 	width:calc(100% - 66px);
