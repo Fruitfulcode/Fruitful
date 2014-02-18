@@ -50,12 +50,6 @@ body.post-type-archive input#s{padding-left: 12px;max-width:168px}
  
  
 /*---ALL WOOCOMMERCE PAGES---*/
-#page.woo-styles #container,
-.woocommerce-checkout .eleven.columns,
-.woocommerce-cart .eleven.columns {float:right; width:100%; padding:0;max-width:684px; margin-left:0; margin-right:0;}
-#page.woo-styles #secondary,
-.woocommerce-checkout .five.columns,
-.woocommerce-cart .five.columns {float:left; width:100%; padding:0;max-width:215px; margin-left:0; margin-right:0;}
 
 
 /*---SHOP PAGE---*/
