@@ -1083,14 +1083,15 @@ embed,iframe,object {
 }
 
 #page .container header hgroup.center-pos {
-	float:left;
+	float: none;
 	width:100%;
 	display:block;
 }
 
-#page .container header hgroup.center-pos a{
+#page .container header hgroup.center-pos a {
 	text-align:center;
 	display:block;
+	float:none;
 }
 
 #page .container header hgroup.right-pos  {

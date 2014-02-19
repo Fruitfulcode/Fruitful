@@ -28,11 +28,10 @@
 		if (class_exists('Woocommerce')) {
 			if (is_shop()) { $additional_body_classes .= 'shop-page '; }
 		} 
-		
+		$theme_options = fruitful_ret_options("fruitful_theme_options");
 		if (isset($theme_options['responsive']) && ($theme_options['responsive'] == 'on')) {
 			$additional_body_classes .= 'responsive ';
 		}
-		
 		body_class(trim($additional_body_classes)); 
 	  ?>>
 	<div id="page" class="hfeed site">

@@ -43,29 +43,47 @@ jQuery(document).ready(function($) {
 		}
 		
 		$('.menu li:has(ul)').mobileMenuDropdown();
-		
-		jQuery(window).resize();
-		
+		$(window).resize();
 });
 
 jQuery(window).bind('resize', function() { 
-	var vAllH 	= jQuery('.site-header').outerWidth(),
-		vHgroup = jQuery('hgroup').outerWidth(),
-		vMenu   = jQuery('.site-navigation').outerWidth();
+	vhGroupClass   = jQuery('.responsive #page .container header hgroup').data('originalstyle');
+	vmWrapperClass = jQuery('.responsive #page .container header .menu-wrapper').data('originalstyle');
 	
-	if (vAllH < (vHgroup + vMenu)) {
-		jQuery('.site-navigation').css({'float':'left'});
+	if (jQuery(window).width() <= 767)	 {
+		if (jQuery('.responsive .cart-button').length > 0) {
+			jQuery('.responsive .select-menu').css({'max-width':'80%', 'margin' : '6px 0 25px 0'});		
+		} 
+		jQuery('.responsive #page .container header hgroup').removeClass(vhGroupClass).addClass('center-pos');
+		jQuery('.responsive #page .container header .menu-wrapper').removeClass(vmWrapperClass).addClass('center-pos');
 	} else {
-		jQuery('.site-navigation').css({'float':'right'});
-	}		
-		
+			jQuery('.select-menu').css({'max-width':'0', 'margin' : '0 0 25px 0'});		
+			
+			jQuery('.responsive #page .container header hgroup').removeClass('center-pos').addClass(vhGroupClass);
+			jQuery('.responsive #page .container header .menu-wrapper').removeClass('center-pos').addClass(vmWrapperClass);
+	}
+	
+	autoWidthMenu();
 });
+
+function autoWidthMenu () {
+	if (jQuery('.menu-wrapper').hasClass('center-pos')) {
+		if (jQuery('.cart-button').length > 0) {
+			vElemsWidth = jQuery('.cart-button').outerWidth() + jQuery('.site-navigation').outerWidth();
+		} else {
+			vElemsWidth = jQuery('.site-navigation').outerWidth();
+		}		
+		vElemsWidth = vElemsWidth + 50;
+		jQuery('.menu-wrapper').css({'max-width': vElemsWidth + 'px'})
+	} else {
+		jQuery('.menu-wrapper').css({'max-width': 'none'})
+	}
+}
 
 jQuery(window).bind('scroll', function() { 
 	if (ThGlobal.is_fixed_header != -1) {
 		var outher_height = jQuery(".head-container").outerHeight();
-		
-		if (jQuery(this).scrollTop() > outher_height) {
+		if ((jQuery(this).scrollTop() + 50) > outher_height) {
 			if (jQuery('#wpadminbar').length > 0) {
 				jQuery(".head-container").addClass('fixed is_indent'); 
 			} else {
