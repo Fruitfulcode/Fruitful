@@ -1079,7 +1079,7 @@ embed,iframe,object {
 
 #page .container header hgroup.left-pos {
     float:left;
-    margin: 0 15px 15px 0;
+    margin: 0 15px 0 0;
 }
 
 #page .container header hgroup.center-pos {
@@ -1096,7 +1096,7 @@ embed,iframe,object {
 
 #page .container header hgroup.right-pos  {
     float:right;
-    margin: 0 0 15px 15px;
+    margin: 0 0 0 15px;
 }
 
 
