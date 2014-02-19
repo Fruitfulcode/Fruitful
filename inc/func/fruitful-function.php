@@ -1,6 +1,6 @@
 <?php
 function fruitful_slide_skins_select() {
-	$slide_anim_options = array(
+	$slide_skins = array(
 		'0' => array(
 			'value' =>	   'theme-default',
 			'label' => __( 'default', 'fruitful' )
@@ -19,7 +19,7 @@ function fruitful_slide_skins_select() {
 		)
 	);
 
-	return apply_filters( 'fruitful_slide_select', $slide_anim_options );
+	return apply_filters( 'fruitful_slide_skins_select', $slide_skins );
 }
 
 function fruitful_slide_select() {
@@ -37,8 +37,29 @@ function fruitful_slide_select() {
 	return apply_filters( 'fruitful_slide_select', $slide_anim_options );
 }
 
+
+function fruitful_elem_position() {
+	$elem_pos = array(
+		'0' => array(
+			'value' =>	   '0',
+			'label' => __( 'Left', 'fruitful' )
+		),
+		'1' => array(
+			'value' =>	   '1',
+			'label' => __( 'Center', 'fruitful' )
+		),
+		'2' => array(
+			'value' =>	   '2',
+			'label' => __( 'Right', 'fruitful' )
+		)
+	);
+
+	return apply_filters( 'fruitful_elem_position', $elem_pos );
+}
+
+
 function fruitful_flex_effect() {
-	$slide_anim_options = array(
+	$flex_effects = array(
 		'0' => array(
 			'value' =>	   'random',
 			'label' => __( 'random', 'fruitful' )
@@ -94,7 +115,7 @@ function fruitful_flex_effect() {
 		
 	);
 
-	return apply_filters( 'fruitful_slide_select', $slide_anim_options );
+	return apply_filters( 'fruitful_flex_effect', $flex_effects );
 }
 
 function fruitful_slide_anim_list() {
@@ -259,11 +280,11 @@ function fruitful_fonts_list() {
 function fruitful_social_links_positions_list() {
 	$links_position_options = array(
 		'0' => array(
-			'value' =>	   'header',
+			'value' =>	   '1',
 			'label' => __( 'Header', 'fruitful' )
 		),
 		'1' => array(
-			'value' =>	   'footer',
+			'value' =>	   '0',
 			'label' => __( 'Footer', 'fruitful' )
 		)
 	);
@@ -451,6 +472,9 @@ return array(
 				'logo_img'			=> '',
 				'fav_icon'			=> '',
 				
+				'logo_position'		=> '0',
+				'menu_position'		=> '2',
+				
 				/*Color*/
 				'menu_bg_color'		=> '#ffffff',
 				'menu_btn_color'	=> '#F15A23',
@@ -459,10 +483,10 @@ return array(
 				'header_bg_color'	=> '#ffffff',	
 
 				'p_font_color'			=> '#333333',
-				'a_font_color'			=> '#E1704B',
+				'a_font_color'			=> '#333333',
 				'a_hover_font_color'	=> '#FF5D2A',
 				'a_focus_font_color'	=> '#FF5D2A',
-				'a_active_font_color'	=> '#FF5D2A',	
+				'a_active_font_color'	=> '#FF5D2A',
 				'widgets_sep_color'		=> '#F15A23',	
 				'date_of_post_b_color' 	=> '#F15A23',
 				'date_of_post_f_color'	=> '#ffffff',
@@ -524,7 +548,7 @@ return array(
 				'footer_text'		=> stripslashes('Fruitful theme by <a href="http://fruitfulcode.com">fruitfulcode</a> Powered by: <a href="http://wordpress.org">WordPress</a>'),
 				
 				/*socials*/
-				'social_links_position'	=> 'footer',
+				'sl_position'		=> '0',
 				'facebook_url' 		=> '',
 				'twitter_url' 		=> '',
 				'linkedin_url'		=> '',

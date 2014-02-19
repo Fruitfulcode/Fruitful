@@ -23,53 +23,63 @@
 <!--[if lt IE 9]><script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script><![endif]-->
 <?php wp_head(); ?> 
 </head>
-<body <?php body_class(); ?>>
-		<div id="page" class="hfeed site <?php 
-			if (class_exists('Woocommerce')) {
-				if (is_woocommerce()) {
-					echo ' woo-styles ';
-				}; 
-				if (is_shop()) {
-					echo ' shop-page ';
-				}
-			} 
-			?>">
-			<div class="head-container">		
-				<div class="container">			
-					<div class="sixteen columns">				
-						<header id="masthead" class="site-header" role="banner">
-							<?php $header_soc_icon_pos = fruitful_get_footer_socials_icon_position(); ?>
-							<?php 
-								if ($header_soc_icon_pos == 'header') { 
-									echo '<div class="social-icon">';
-										fruitful_get_footer_socials_icon(); 
-									echo '</div>';
-								} 
-							?>
-							<hgroup <?php if ($header_soc_icon_pos == 'header') { echo 'style="margin-bottom:0;"';} ?>>
-								<?php echo fruitful_get_logo(); ?>
-							</hgroup>	
-							<div class="inside_menu_wrapper">
-								<?php languages_list_header(); ?>
+<body <?php 
+		$additional_body_classes = '';
+		if (class_exists('Woocommerce')) {
+			if (is_shop()) { $additional_body_classes .= 'shop-page '; }
+		} 
+		
+		if (isset($theme_options['responsive']) && ($theme_options['responsive'] == 'on')) {
+			$additional_body_classes .= 'responsive ';
+		}
+		
+		body_class(trim($additional_body_classes)); 
+	  ?>>
+	<div id="page" class="hfeed site">
+		<div class="head-container">		
+			<div class="container">			
+				<div class="sixteen columns">				
+					<header id="masthead" class="site-header" role="banner">
+						<?php	
+							if (fruitful_is_social_header()) { 
+								fruitful_get_socials_icon(); 
+							} 
+									
+							$logo_pos_class = $menu_pos_class = '';
+							$options = fruitful_get_theme_options();
+							$logo_position = $options['logo_position'];
+							$menu_position = $options['menu_position'];
+							
+							$logo_pos_class = fruitful_get_class_pos($logo_position);
+							$menu_pos_class = fruitful_get_class_pos($menu_position);
+						?>
+						
+						<hgroup data-originalstyle="<?php echo $logo_pos_class; ?>" class="<?php echo $logo_pos_class; ?>">  
+							<?php echo fruitful_get_logo(); ?>
+						</hgroup>	
+							
+						<div data-originalstyle="<?php echo $menu_pos_class; ?>" class="menu-wrapper <?php echo $menu_pos_class; ?>">
+							<?php fruitful_get_languages_list(); ?>
 								
-								<?php if (class_exists('Woocommerce')) { ?>
-									<div class="cart-button" <?php if ($header_soc_icon_pos == 'header') { echo 'style="margin-top:10px;"';} ?>>
-										<a href="<?php echo get_permalink( woocommerce_get_page_id( 'cart' ) ); ?>" class="cart-contents">
-											<div class="cart_image"></div> 
-											<span class="num_of_product_cart"><?php global $woocommerce;
-											echo $woocommerce->cart->cart_contents_count; ?> </span>
-										</a>
-									</div>							
-								<?php } ?>
+							<?php if (class_exists('Woocommerce')) { ?>
+								<div class="cart-button">
+									<a href="<?php echo get_permalink( woocommerce_get_page_id( 'cart' ) ); ?>" class="cart-contents">
+										<div class="cart_image"></div> 
+										<span class="num_of_product_cart"><?php global $woocommerce;
+										echo $woocommerce->cart->cart_contents_count; ?> </span>
+									</a>
+								</div>							
+							<?php } ?>
 								
-								<nav role="navigation" class="site-navigation main-navigation" <?php if ($header_soc_icon_pos == 'header') { echo 'style="margin-top:0;"';} ?>>
-									<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>					
-								</nav><!-- .site-navigation .main-navigation -->	
-							</div>
-						</header><!-- #masthead .site-header -->			
-					</div>		
-				</div>	
-			</div>		
-			<div class="container page-container">		
-				<?php do_action( 'before' ); ?>		
+							<nav role="navigation" class="site-navigation main-navigation">
+								<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>					
+							</nav><!-- .site-navigation .main-navigation -->	
+						</div>
+					</header><!-- #masthead .site-header -->			
+				</div>		
+			</div>	
+		</div>		
+		
+		<div class="container page-container">		
+			<?php do_action( 'before' ); ?>		
 				<div class="sixteen columns">
