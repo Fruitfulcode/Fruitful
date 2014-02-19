@@ -590,6 +590,7 @@ body.woocommerce-page #content div.product form.cart .variations select{
 }
 
 .single-product .reset_variations{padding-top: 6px;margin-left: 16px;display: block;float: left;}
+.woocommerce #review_form #respond p.form-submit, .woocommerce-page #review_form #respond p.form-submit{float:left}
 
 body.woocommerce-page .woocommerce-breadcrumb{position:relative;/* z-index:99 */}
 body.woocommerce-page .woocommerce-breadcrumb a:hover{color:#ea3c00}
