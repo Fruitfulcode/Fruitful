@@ -24,7 +24,7 @@ get_header(); ?>
 			</div><!-- #primary .content-area -->
 		</div>
 		<div class="five columns omega">
-			<?php if (!(is_cart() || is_checkout())) {
+			<?php if (!(is_cart() || is_checkout() || is_account_page())) {
 					get_sidebar('page'); 
 				} ?>
 		</div>	
