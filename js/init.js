@@ -57,7 +57,7 @@ jQuery(window).bind('resize', function() {
 		jQuery('.responsive #page .container header hgroup').removeClass(vhGroupClass).addClass('center-pos');
 		jQuery('.responsive #page .container header .menu-wrapper').removeClass(vmWrapperClass).addClass('center-pos');
 	} else {
-			jQuery('.select-menu').css({'max-width':'0', 'margin' : '0 0 25px 0'});		
+			jQuery('.select-menu').css({'max-width':'none', 'margin' : '0 0 25px 0'});		
 			
 			jQuery('.responsive #page .container header hgroup').removeClass('center-pos').addClass(vhGroupClass);
 			jQuery('.responsive #page .container header .menu-wrapper').removeClass('center-pos').addClass(vmWrapperClass);
