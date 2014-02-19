@@ -1183,7 +1183,6 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 	body.woocommerce form.woocommerce-ordering, body.woocommerce-page form.woocommerce-ordering{margin-bottom:40px}
 	body.woocommerce .woocommerce-ordering select, body.woocommerce-page .woocommerce-ordering select{width:100%}
 	body.woocommerce ul.products li.product h3, body.woocommerce-page ul.products li.product h3 {text-align:left;}
-	body.woocommerce #masthead  select.select-menu, body.woocommerce-page #masthead  select.select-menu{height: 35px;width: 100%;padding: 0 0 0 12px;-webkit-appearance: none;-moz-appearance: none;appearance: none;text-indent: 0,01px;text-overflow: '';border: 1px solid #e5e5e5;color: #999999;background: url(images/shop_select_bg.png) center right no-repeat transparent;outline: none;vertical-align: top;}
 	/*cart*/
 	.woocommerce-cart.woocommerce-page #content table thead th{font-size:12px}
 	#body .woocommerce table.shop_table td.product-quantity,body.woocommerce-page table.shop_table td.product-quantity {padding: 0}
@@ -1261,7 +1260,6 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 	.woocommerce .products ul, .woocommerce-page .products ul, .woocommerce ul.products, .woocommerce-page ul.products{text-align:center}
 	.woocommerce .woocommerce-ordering, .woocommerce-page .woocommerce-ordering{width:100%;}
 	body.woocommerce .woocommerce-ordering select, body.woocommerce-page .woocommerce-ordering select{width:100%}
-	body.woocommerce #masthead  select.select-menu, body.woocommerce-page #masthead  select.select-menu{height: 35px;width: 100%;padding: 0 0 0 12px;-webkit-appearance: none;-moz-appearance: none;appearance: none;text-indent: 0,01px;text-overflow: '';border: 1px solid #e5e5e5;color: #999999;background: url(images/shop_select_bg.png) center right no-repeat transparent;outline: none;vertical-align: top;}
 	body.woocommerce form.woocommerce-ordering, body.woocommerce-page form.woocommerce-ordering {margin-bottom: 40px;}
 	body.woocommerce .container ul.products li.product, body.woocommerce-page .container ul.products li.product {width: 100%;margin-right: 0;}
 	body.woocommerce ul.products li.product h3, body.woocommerce-page ul.products li.product h3 {text-align:left;}
