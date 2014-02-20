@@ -242,6 +242,7 @@ body.woocommerce-page .woocommerce-ordering select,
 	border:1px solid #e5e5e5;
 	color:#999999;
 	background: url(images/shop_select_bg.png) center right no-repeat transparent;
+	background-image:none\0;/*Only works in IE9*/
 	outline:none;
 }
 
