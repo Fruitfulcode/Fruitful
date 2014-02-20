@@ -1295,6 +1295,10 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 	.single-product .woocommerce .upsells.products ul li.product,
 	.single-product.woocommerce-page .upsells.products ul li.product {float:left;width:205px !important;margin:5px 2px 30px}
 	.woocommerce #review_form #respond textarea, .woocommerce-page #review_form #respond textarea{width:100% !important}
+	.single-product.woocommerce div.product,
+	.single-product.woocommerce-page div.product,
+	.single-product.woocommerce #content div.product,
+	.single-product.woocommerce-page #content div.product{width:100%}
 } 
  
 @media only screen and (max-width: 479px){
