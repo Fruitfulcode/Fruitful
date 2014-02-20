@@ -882,6 +882,7 @@ body.woocommerce-account table tbody tr:nth-child(even) td{color:initial}
 .woocommerce-account table tfoot th{text-align:left}
 .woocommerce-account table thead th, .woocommerce-account table th{padding:17px 0 }
 .woocommerce-account table tbody tr *, .woocommerce-account table tbody tr *{color:#333333}
+.woocommerce td.product-name dl.variation dd, .woocommerce-page td.product-name dl.variation dd,.woocommerce td.product-name dl.variation dd p, .woocommerce-page td.product-name dl.variation dd p{padding:0; margin:0}
 .woocommerce-account table tbody tr td.product-total, .woocommerce-account table tbody tr td.product-total{text-align:center}
 .woocommerce-account table tbody tr a:hover, .woocommerce-account table tbody tr a:hover{color:#ff5d2a}
 .woocommerce-account table.my_account_orders tbody tr td:first-child , .woocommerce-account table.my_account_order tbody tr td:first-child {text-align:center}
