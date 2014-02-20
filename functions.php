@@ -986,39 +986,47 @@ function p_link( $i, $title = '' ) {
 }
 
 function wp_corenavi() {  
-	 global $wp_query, 
-		 $wp_rewrite;  
-	 
-	 $pages = '';  
-	 $max = $wp_query->max_num_pages;  
-	 if (!$current = get_query_var('paged')) {
+	global $wp_query, 
+			$wp_rewrite;  
+	$next_label = $prev_label = '';
+	if (wp_is_mobile()) {
+		$next_label = ' « ';
+		$prev_label = ' » ';
+	} else {
+		$next_label = '« Previous Page';
+		$prev_label = 'Next Page »';
+	}
+	
+	$pages = '';  
+	$max = $wp_query->max_num_pages;  
+	if (!$current = get_query_var('paged')) {
 		$current = 1;  
-	 } 
+	} 
 	 
-	 $a['base']    = str_replace(999999999, '%#%', get_pagenum_link(999999999));  
-	 $a['total']   = $max;  
-	 $a['current'] = $current;  
+	$a['base']    = str_replace(999999999, '%#%', get_pagenum_link(999999999));  
+	$a['total']   = $max;  
+	$a['current'] = $current;  
 	  
-	 $total = 0;    //1 - display the text "Page N of N", 0 - not display  
-	 $a['mid_size'] = 2;  //how many links to show on the left and right of the current  
-	 $a['end_size'] = 1;  //how many links to show in the beginning and end  
-	 $a['prev_text'] = '';  //text of the "Previous page" link  
-	 $a['next_text'] = '';  //text of the "Next page" link  
+	$total = 0;    //1 - display the text "Page N of N", 0 - not display  
+	$a['mid_size'] = 2;  //how many links to show on the left and right of the current  
+	$a['end_size'] = 1;  //how many links to show in the beginning and end  
+	$a['prev_text'] = '';  //text of the "Previous page" link  
+	$a['next_text'] = '';  //text of the "Next page" link  
 	  
-	 if  ($max > 1) {
+	if  ($max > 1) {
 		echo '<div class="pagination nav-links shop aligncenter">';  
-	 } 
-	 if  ($total == 1 && $max > 1) {
+	} 
+	if  ($total == 1 && $max > 1) {
 		$pages = '<span class="pages">Page ' . $current . ' of ' . $max . '</span>'."\r\n";  
-	 } 
-	 echo '<div class="nav-previous ">'; previous_posts_link( ); echo '</div>';
+	} 
+	echo '<div class="nav-previous ">'; previous_posts_link($next_label); echo '</div>';
 		echo '<div class="pages-links">';
 			echo $pages . paginate_links($a);  
 		echo '</div>';
-	 echo '<div class="nav-next">';  next_posts_link( ); echo '</div>';
-	 if ($max > 1) {
+	echo '<div class="nav-next">';  next_posts_link($prev_label); echo '</div>';
+	if ($max > 1) {
 		echo '</div>';  
-	 } 
+	} 
 }
 
 if (class_exists('Woocommerce')) { 

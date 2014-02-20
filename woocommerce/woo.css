@@ -1215,12 +1215,13 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 	/*shop*/
 	.archive.post-type-archive-product #container {float:right; width:100%; padding:0;}	
 	.woocommerce .products ul, .woocommerce-page .products ul, .woocommerce ul.products, .woocommerce-page ul.products{text-align:center}
-	.woocommerce .container ul.products li.product, body.woocommerce-page .container ul.products li.product{width:202px;margin-left:3px;margin-right:3px;}
+	.woocommerce .container ul.products li.product, body.woocommerce-page .container ul.products li.product{width:202px;margin-left:3px;margin-right:3px;min-height: 315px;}
 	.woocommerce .woocommerce-ordering, .woocommerce-page .woocommerce-ordering{width:100%;}
 	body.woocommerce form.woocommerce-ordering, body.woocommerce-page form.woocommerce-ordering{margin-bottom:40px}
 	body.woocommerce .woocommerce-ordering select, body.woocommerce-page .woocommerce-ordering select{width:100%}
 	body.woocommerce ul.products li.product h3, body.woocommerce-page ul.products li.product h3 {text-align:left;}
 	.nav-links.shop .pages-links .page-numbers,.nav-links.shop .nav-next a,.nav-links.shop .nav-previous a{padding: 5px 12px;}
+	.woocommerce ul.products li.product a.add_to_cart_button.product_type_simple{display:block; visibility:visible}
 	/*cart*/
 	.woocommerce-cart.woocommerce-page #content table thead th{font-size:12px}
 	#body .woocommerce table.shop_table td.product-quantity,body.woocommerce-page table.shop_table td.product-quantity {padding: 0}
@@ -1302,6 +1303,7 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 	body.woocommerce .container ul.products li.product, body.woocommerce-page .container ul.products li.product {width: 100%;margin-right: 0;}
 	body.woocommerce ul.products li.product h3, body.woocommerce-page ul.products li.product h3 {text-align:left;}
 	.nav-links.shop .pages-links .page-numbers,.nav-links.shop .nav-next a,.nav-links.shop .nav-previous a{padding: 5px 12px;}
+	.woocommerce ul.products li.product a.add_to_cart_button.product_type_simple{display:block; visibility:visible}
 	/*cart*/
 	.woocommerce table.cart td.actions .coupon, .woocommerce-page table.cart td.actions .coupon,
 	.woocommerce #content table.cart td.actions .coupon, .woocommerce-page #content table.cart td.actions .coupon{width:100%}
