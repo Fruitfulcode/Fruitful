@@ -608,7 +608,7 @@ function fruitful_get_responsive_style () {
 	} 
  
 	if (!empty($theme_options['styletheme'])) {
-		if ($theme_options['styletheme'] == 'off') {
+		   if ($theme_options['styletheme'] == 'off') {
 			$style_ .= 'H1 {font-size : '.esc_js($theme_options['h1_size']) .'px; }' . "\n";
 			$style_ .= 'H2 {font-size : '.esc_js($theme_options['h2_size']) .'px; }' . "\n";
 			$style_ .= 'H3 {font-size : '.esc_js($theme_options['h3_size']) .'px; }' . "\n";
@@ -665,7 +665,7 @@ function fruitful_get_responsive_style () {
 			$style_ .= '.main-navigation ul > li:hover a {' . "\n";
 				if (!empty($theme_options['menu_btn_color']))   { $style_ .= 'background-color : '. esc_js($theme_options['menu_btn_color']) . '; ' . "\n"; }
 				if (!empty($theme_options['menu_hover_color']))  { $style_ .= 'color : '.esc_js($theme_options['menu_hover_color']) . ';  ' . "\n"; }
-			$style_ .= ' } ' . "\n"; }
+			$style_ .= ' } ' . "\n"; 
   
 			$style_ .= '#header_language_select ul li.current > a { color : '.esc_js($theme_options['menu_font_color']). '; } ' . "\n";
 			if (!empty($theme_options['menu_bg_color'])) { $style_ .= '#header_language_select { background-color : '.esc_js($theme_options['menu_bg_color']) . '; } ' . "\n";  }
@@ -692,14 +692,22 @@ function fruitful_get_responsive_style () {
 			if (!empty($theme_options['date_of_post_f_color']))  { 
 				$style_ .= '.blog_post .date_of_post  {color : '. esc_js($theme_options['date_of_post_f_color']) .'; } ' . "\n";
 			}
-
+			
+			$woo_style_ .= '.num_of_product_cart {border-color: '. esc_js($theme_options['menu_btn_color']) . '; }  ' . "\n"; 	
+			}
+			
 		} 
 		
 		if (!empty($theme_options['custom_css'])) {
 			$style_ .= "\n" . esc_html($theme_options['custom_css']) . "\n";
 		}	
 	
-	wp_add_inline_style( 'main-style', $style_ ); 
+		wp_add_inline_style( 'main-style', $style_ ); 
+			echo $woo_style_;
+		if ($woo_style_ != '') {
+			wp_add_inline_style( 'woo-style', $woo_style_ ); 
+		}	
+		
 }
 add_action('wp_enqueue_scripts', 'fruitful_get_responsive_style', 99);
 
