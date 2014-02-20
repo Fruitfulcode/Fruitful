@@ -1062,7 +1062,7 @@ header.post-header, .blog_post {
 .blog_post .date_of_post .day_post {
     font-size:20px;
     text-align:center;
-    filter:dropshadow(color=#719327, offX=0px, offY=1px);
+    filter:none;
     float:left;
     width:100%;
     font-weight:bold;
@@ -1210,7 +1210,7 @@ header.post-header .post-title a {
     /*color:#333333;*/
     text-decoration:none;
 }
-header.post-header .post-title a:hover,#page .container #secondary .widget a:hover,#page .container #secondary .widget ul li.current-cat a {
+header.post-header .post-title a:hover,#page .container #secondary .widget a:hover,#page .container #secondary .widget ul li.current-cat>a {
     color:#ff5d2a}
 #page .container #secondary {
     float:left;
@@ -1755,6 +1755,21 @@ address {
     text-transform: uppercase;
 }
 
+body.page .entry-thumbnail {
+    display: block;
+    float: left;
+    height: auto;
+    margin: 0 0 20px;
+    max-width: 91.2%;
+    padding: 0 4.4%;
+}
+body.page .entry-thumbnail .wp-post-image {
+    box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+    height: auto;
+    width: 100%;
+}
 
 aside #lang_sel {
     z-index: 5;
