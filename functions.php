@@ -489,7 +489,12 @@ function fruitful_add_description_block ($atts, $content = null) {
      ), $atts, 'description');
 	
 	$id = 'desc_0';
-	$style = ' font-size: 40px; text-transform : uppercase; text-align: center; font-weight: 300; ';
+	
+	if (wp_is_mobile()) {
+		$style = ' font-size: 20px; text-transform : uppercase; text-align: center; font-weight: 300; ';
+	} else {
+		$style = ' font-size: 40px; text-transform : uppercase; text-align: center; font-weight: 300; ';
+	}
 	
 	if (!empty($atts['id']))    { $id 	 = sanitize_html_class($atts['id']); }
 	if (!empty($atts['style'])) { $style = esc_html($atts['style']); }
