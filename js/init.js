@@ -44,7 +44,6 @@ jQuery(document).ready(function($) {
 		
 		$('.menu li:has(ul)').mobileMenuDropdown();
 		$(window).resize();
-		$(window).scroll();
 });
 
 jQuery(window).bind('resize', function() { 
@@ -85,15 +84,18 @@ function autoWidthMenu () {
 jQuery(window).bind('scroll', function() { 
 	var is_sufficient_height = false;
 	var vContentHeight 	 = jQuery('#page').outerHeight();
-	var vWinHeight  	 = jQuery(window).outerHeight();
+	var vWinHeight  	 = jQuery(window).height();
 	var vHeaderContainer = jQuery('.head-container').outerHeight();
+	console.log(vContentHeight);
+	console.log(vWinHeight);
+	console.log(vHeaderContainer);
 	
 	if ((vContentHeight - vWinHeight) > 0) {
-		if ((vContentHeight - vWinHeight) > vHeaderContainer) {
+		if (((vContentHeight - vWinHeight) - vHeaderContainer) > vHeaderContainer) {
 			is_sufficient_height = true;
 		}
 	}
-	
+	console.log(is_sufficient_height);
 	if ((ThGlobal.is_fixed_header != -1) && (is_sufficient_height)) {
 		if ((jQuery(this).scrollTop() + 50) > vHeaderContainer) {
 			if (jQuery('#wpadminbar').length > 0) {
