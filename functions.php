@@ -703,7 +703,6 @@ function fruitful_get_responsive_style () {
 		}	
 	
 		wp_add_inline_style( 'main-style', $style_ ); 
-			echo $woo_style_;
 		if ($woo_style_ != '') {
 			wp_add_inline_style( 'woo-style', $woo_style_ ); 
 		}	
