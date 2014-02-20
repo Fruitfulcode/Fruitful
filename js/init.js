@@ -44,6 +44,7 @@ jQuery(document).ready(function($) {
 		
 		$('.menu li:has(ul)').mobileMenuDropdown();
 		$(window).resize();
+		$(window).scroll();
 });
 
 jQuery(window).bind('resize', function() { 
@@ -57,13 +58,14 @@ jQuery(window).bind('resize', function() {
 		jQuery('.responsive #page .container header hgroup').removeClass(vhGroupClass).addClass('center-pos');
 		jQuery('.responsive #page .container header .menu-wrapper').removeClass(vmWrapperClass).addClass('center-pos');
 	} else {
-			jQuery('.select-menu').css({'max-width':'none', 'margin' : '0 0 25px 0'});		
+		jQuery('.select-menu').css({'max-width':'none', 'margin' : '0 0 25px 0'});		
 			
-			jQuery('.responsive #page .container header hgroup').removeClass('center-pos').addClass(vhGroupClass);
-			jQuery('.responsive #page .container header .menu-wrapper').removeClass('center-pos').addClass(vmWrapperClass);
+		jQuery('.responsive #page .container header hgroup').removeClass('center-pos').addClass(vhGroupClass);
+		jQuery('.responsive #page .container header .menu-wrapper').removeClass('center-pos').addClass(vmWrapperClass);
 	}
 	
 	autoWidthMenu();
+	jQuery(window).scroll();
 });
 
 function autoWidthMenu () {
@@ -81,9 +83,19 @@ function autoWidthMenu () {
 }
 
 jQuery(window).bind('scroll', function() { 
-	if (ThGlobal.is_fixed_header != -1) {
-		var outher_height = jQuery(".head-container").outerHeight();
-		if ((jQuery(this).scrollTop() + 50) > outher_height) {
+	var is_sufficient_height = false;
+	var vContentHeight 	 = jQuery('#page').outerHeight();
+	var vWinHeight  	 = jQuery(window).outerHeight();
+	var vHeaderContainer = jQuery('.head-container').outerHeight();
+	
+	if ((vContentHeight - vWinHeight) > 0) {
+		if ((vContentHeight - vWinHeight) > vHeaderContainer) {
+			is_sufficient_height = true;
+		}
+	}
+	
+	if ((ThGlobal.is_fixed_header != -1) && (is_sufficient_height)) {
+		if ((jQuery(this).scrollTop() + 50) > vHeaderContainer) {
 			if (jQuery('#wpadminbar').length > 0) {
 				jQuery(".head-container").addClass('fixed is_indent'); 
 			} else {
@@ -92,9 +104,11 @@ jQuery(window).bind('scroll', function() {
 		} else { 
 			jQuery(".head-container").removeClass('fixed is_indent');
 		}
+	} else {
+			jQuery(".head-container").removeClass('fixed is_indent');
 	}
   
-	if( jQuery(window).scrollTop() + jQuery(window).height() == jQuery(document).height()) {
+	if(jQuery(window).scrollTop() + jQuery(window).height() == jQuery(document).height()) {
 		jQuery('#back-top').fadeIn('slow'); 
 	} else {
 		jQuery('#back-top').fadeOut('slow');
