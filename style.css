@@ -2035,6 +2035,7 @@ aside #lang_sel {
 @media only screen and (min-width:480px) and (max-width:767px) {
 	.mejs-controls div.mejs-time-rail{width:149px !important}
 	.info_box_area .info_box {margin: 0 0 35px 0;float: left;display: block;width: 100%;}
+	.responsive .select-menu{margin: 16px 0 25px 0 !important}
 }
 @media only screen and (max-width:479px) {
 	#masthead .social-icon{float: left;clear: both;margin:20px 0;}
@@ -2045,6 +2046,7 @@ aside #lang_sel {
 	input#s {   width:255px;}
 	#page .container #secondary .widget>ul>li.cat-item{overflow-x:hidden}
 	.info_box_area .info_box {margin: 0 0 35px 0;float: left;display: block;width: 100%;}
+	.responsive .select-menu{margin: 16px 0 25px 0 !important}
 }
 *:first-child+html #page .container .content .info_box_area {
     margin-bottom:25px}
