@@ -2029,6 +2029,7 @@ aside #lang_sel {
 	.search .blog_post .post-content {width: 364px;}
 	input#s {    width:373px;}	
 	.comment-meta{	width:80%;}
+	#page .container #secondary .widget>ul>li.cat-item{overflow-x:hidden}
 }
 
 @media only screen and (min-width:480px) and (max-width:767px) {
@@ -2041,6 +2042,7 @@ aside #lang_sel {
 	.blog_post .post-content,
 	.search .blog_post .post-content{width: 298px;}
 	input#s {   width:255px;}
+	#page .container #secondary .widget>ul>li.cat-item{overflow-x:hidden}
 }
 *:first-child+html #page .container .content .info_box_area {
     margin-bottom:25px}
