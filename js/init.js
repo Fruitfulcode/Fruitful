@@ -91,7 +91,7 @@ jQuery(window).bind('scroll', function() {
 	console.log(vHeaderContainer);
 	
 	if ((vContentHeight - vWinHeight) > 0) {
-		if (((vContentHeight - vWinHeight) - vHeaderContainer) > vHeaderContainer) {
+		if (((vContentHeight - vWinHeight) - (vHeaderContainer+100)) > vHeaderContainer) {
 			is_sufficient_height = true;
 		}
 	}
