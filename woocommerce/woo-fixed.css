@@ -772,7 +772,8 @@ body.single-product .product_meta{display:none}
 .single-product .upsells.products{float:left;width:100%}
 
 body.single-product .upsells.products h2{float:left;width:100%;margin: 25px 0;}
-body.single-product .related.products h2{float:left;width:100%;margin:25px 0;}
+body.single-product .related.products h2{float:left;width:100%;margin:25px 0;border-bottom: 2px solid #F15A23;padding: 0 0 10px 0;font-size:17px}
+.woocommerce .container .related.products ul.products li.product, body.woocommerce-page .container .related.products ul.products li.product{margin-right: 16px;}
 .woocommerce .related ul.products li.product, 
 .woocommerce-page .related ul.products li.product, 
 .woocommerce .upsells.products ul.products li.product, 
@@ -1210,6 +1211,7 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 /*shop*/
 body.woocommerce #page .container #secondary.widget-area {max-width:215px}
 .nav-links.shop .pages-links .page-numbers,.nav-links.shop .nav-next a,.nav-links.shop .nav-previous a{padding: 10px 18px;}
+.woocommerce a.added_to_cart, body.woocommerce-page a.added_to_cart{width:145px; clear:both}
 /*cart*/
 .woocommerce-cart .woocommerce .cart-collaterals .cart_totals, body.woocommerce-cart.woocommerce-page .cart-collaterals .cart_totals{max-width:450px}
 .woocommerce-cart .woocommerce .cart-collaterals .shipping_calculator section, body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator section{max-width:450px}
