@@ -90,7 +90,6 @@ Files ru_Ru.po ru_Ru.mo icluded. Default language is english.
 * Html5shiv jQuery script https://code.google.com/p/html5shiv/ under the MIT or GPL Version 2 licenses
 * Mousewheel jQuery script http://adomas.org/javascript-mouse-wheel/ Licensed under the MIT License.
 * SyntaxHighlighter jQuery script http://alexgorbatchev.com/SyntaxHighlighter/ Licensed under the MIT License
-* Colorpicker js http://www.eyecon.ro/ Licensed under both MIT and GPL licenses
 * Easy Responsive Tabs to Accordion https://github.com/samsono/Easy-Responsive-Tabs-to-Accordion MIT and GPL licenses
 * Fonts by Google fonts http://www.google.com/fonts licensed under Apache License Version 2 (http://www.apache.org/licenses/LICENSE-2.0.html)
 * Dialogbox by Trent Richardson, http://trentrichardson.com/Impromptu/ Licensed under the MIT License
@@ -99,7 +98,31 @@ Files ru_Ru.po ru_Ru.mo icluded. Default language is english.
     Changelog
 -------------------------------------------------------
 
-= 1.2.1 = (13.02.14)
+= 1.3 =
+21.02.14
+
+* New wp_add_inline_styles
+* New theme options - colors
+* New theme option - logo position
+* New theme option - menu position
+* New color picker
+* New images for demo slider
+* Bug fix menu styles
+* Bug fix nofollow footer for home page
+* Bug fix WooCommerce message on cart page (Firefox 27)
+* Bug fix category page (WooCommerce)
+* Bug fix position of sticky header
+* Bug fix Flex slider (slide effect, Chrome)
+* Bug fix position of social media in header
+* Bug fix custom css option, text with double quotes
+* Removed sidebar from cart, checkout, account (WooCommerce)
+* Responsive version improved for WooCommerce
+* Css changes and improvements
+* Code optimizations
+* Translation updates
+
+= 1.2.1 =
+13.02.14
 
 * New option, social media icons position (header or footer)
 * New sidebar for blog page
@@ -118,8 +141,8 @@ Files ru_Ru.po ru_Ru.mo icluded. Default language is english.
 * Css bug fixes
 * Code optimizations
 
-
-= 1.2 = (23.01.14)
+= 1.2 =
+23.01.14
 
 * New WordPress 3.8 ready
 * New WooCommerce ready
@@ -139,7 +162,9 @@ Files ru_Ru.po ru_Ru.mo icluded. Default language is english.
 * Bug fix Wordpress error message display in theme options
 * Bug fix Social media icons, email url 
 
-= 1.1 = (29.11.13)
+= 1.1 =
+29.11.13
+
 * Install home page (Import dummy data)
 * New header section in theme option
 * New styles for WordPress 3.6 post formats
@@ -164,7 +189,9 @@ Files ru_Ru.po ru_Ru.mo icluded. Default language is english.
 * Css changes
 
 
-= 1.0.9 = (15.11.13)
+= 1.0.9 =
+15.11.13
+
 * XSS vulnerabilities bug fix
 * Slider - added ability to add link to slider images
 * Shortcodes - source code optimization and new features
@@ -175,10 +202,14 @@ Files ru_Ru.po ru_Ru.mo icluded. Default language is english.
 * Added VK.com icon to social media tab
 * Css changes
 
-= 1.0.8 = (11.11.13)
+= 1.0.8 =
+11.11.13
+
 * WordPress.org theme preview bug fix
 
-= 1.0.7 = (05.11.13)
+= 1.0.7 =
+05.11.13
+
 * Comments on pages set by default in theme options
 * Optimization fruitful_get_responsive_style function
 * Css changes
@@ -186,24 +217,32 @@ Files ru_Ru.po ru_Ru.mo icluded. Default language is english.
 * Fonts options changed from content to <body>
 
 
-= 1.0.6 = (04.11.13)
+= 1.0.6 =
+04.11.13
+
 * Checkbox Responsive bug fix after 1.0.5
 * Favicon bug fix
 * Update descriptions for theme options
 * Localization update
 
-= 1.0.5 = (01.11.13)
+= 1.0.5 =
+01.11.13
+
 * Default settings checkbox bug fix
 * Code optimization
 
-= 1.0.4 = (31.10.13)
+= 1.0.4 =
+31.10.13
+
 * Remove php notice and fix home url
 * Fixed header option, bug fix
 * Front page title, bug fix
 * Css changes
 * Update readme.txt file
 
-= 1.0.3 = (28.10.13)
+= 1.0.3 =
+28.10.13
+
 * Modified document <title> output, use wp_title filter
 * wp_head replaced
 * Google analytics removed from theme options
@@ -216,16 +255,22 @@ Files ru_Ru.po ru_Ru.mo icluded. Default language is english.
 * Css fixes
 * Copyright changes
 
-= 1.0.2 = (24.10.2013)
+= 1.0.2 =
+24.10.2013
+
 * add author template
 * Css fixes
 * General bug fix
 
-= 1.0.1 = (07.10.2013)
+= 1.0.1 =
+07.10.2013
+
 * Replaced default logo with sitename and description
 * Excerpt --more-- fixed
 * Removed favicon option
 * Pagenavi bug fix
 
-= 1.0 = (01.10.2013)
+= 1.0 =
+01.10.2013
+
 * Initial Release
