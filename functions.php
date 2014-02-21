@@ -700,13 +700,12 @@ function fruitful_get_responsive_style () {
 			
 			$woo_style_ .= '.num_of_product_cart {border-color: '. esc_js($theme_options['menu_btn_color']) . '; }  ' . "\n"; 	
 			}
-			
 		} 
 		
 		if (!empty($theme_options['custom_css'])) {
-			$style_ .= "\n" . esc_html($theme_options['custom_css']) . "\n";
+			$style_ .= wp_kses_stripslashes($theme_options['custom_css']) . "\n";
 		}	
-	
+		
 		wp_add_inline_style( 'main-style', $style_ ); 
 		if ($woo_style_ != '') {
 			wp_add_inline_style( 'woo-style', $woo_style_ ); 
