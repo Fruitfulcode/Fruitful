@@ -64,9 +64,9 @@ function fruitful_theme_options_init() {
 	add_settings_field( 'logo_position', 	__( 'Logo Position', 'fruitful' ), 	'fruitful_set_logo_position', 	'theme_options', 'logo', 		array('info' => __( 'Set Logo Position', 'fruitful' )));
 	
 
-	add_settings_field( 'menu_style',		__( 'Menu styling', 'fruitful' ),	'fruitful_menu_style_color',		'theme_options', 'colors',    	array('info' => __( 'Choose styles for main menu. Add additional styles in custom css if needed', 'fruitful' )) );
-	add_settings_field( 'font_style',		__( 'Font styling', 'fruitful' ),	'fruitful_font_style_color',		'theme_options', 'colors',    	array('info' => __( '', 'fruitful' )) );
-	add_settings_field( 'separator_style',	__( 'Color for separators', 'fruitful' ),	'fruitful_sep_style_color',		'theme_options', 'colors',    	array('info' => __( '', 'fruitful' )) );
+	add_settings_field( 'menu_style',		__( 'Main menu color', 'fruitful' ),	'fruitful_menu_style_color',		'theme_options', 'colors',    	array('info' => __( 'Choose your colors for main menu in header', 'fruitful' )) );
+	add_settings_field( 'font_style',		__( 'General font color', 'fruitful' ),	'fruitful_font_style_color',		'theme_options', 'colors',    	array('info' => __( 'Choose your colors for text and links', 'fruitful' )) );
+	add_settings_field( 'separator_style',	__( 'Color for lines', 'fruitful' ),	'fruitful_sep_style_color',		'theme_options', 'colors',    	array('info' => __( 'Choose you colors for lines and separators', 'fruitful' )) );
 	
 	
 	add_settings_field( 'fonts_options', 	__( 'Fonts', 'fruitful' ), 	'fruitful_fonts_options',	'theme_options', 'fonts', 		array('info' => __( 'Popular web safe font collection, select and use for your needs.', 'fruitful' )) );
@@ -521,25 +521,25 @@ function fruitful_menu_style_color () {
 	$options = fruitful_get_theme_options();
 	?>
 		<div class="box-options">
-			<h4><?php _e( 'Menu background-color', 'fruitful' ); ?></h4>
+			<h4><?php _e( 'Background color', 'fruitful' ); ?></h4>
 			<fieldset>
 				<input type="text" id="menu_bg_color" class="colorPicker" name="fruitful_theme_options[menu_bg_color]" value="<?php echo esc_attr($options['menu_bg_color']); ?>" data-default-color="#ffffff" />
 			</fieldset>
 		</div>
 		<div class="box-options">
-			<h4><?php _e( 'Button background-color', 'fruitful' ); ?></h4>
+			<h4><?php _e( 'Menu button color', 'fruitful' ); ?></h4>
 			<fieldset>
 				<input type="text" id="menu_btn_color" class="colorPicker" name="fruitful_theme_options[menu_btn_color]" value="<?php echo esc_attr($options['menu_btn_color']); ?>" data-default-color="#F15A23" />
 			</fieldset>	
 		</div>
 		<div class="box-options">
-			<h4><?php _e( 'Default font color', 'fruitful' ); ?></h4>
+			<h4><?php _e( 'Font color', 'fruitful' ); ?></h4>
 			<fieldset>
 				<input type="text" id="menu_font_color" class="colorPicker" name="fruitful_theme_options[menu_font_color]" value="<?php echo esc_attr($options['menu_font_color']); ?>" data-default-color="#333333" />
 			</fieldset>		
 		</div>
 		<div class="box-options">
-			<h4><?php _e( 'Font color for :active and :hover', 'fruitful' ); ?></h4>
+			<h4><?php _e( 'Font color (active and hover)', 'fruitful' ); ?></h4>
 			<fieldset>
 				<input type="text" id="menu_hover_color" class="colorPicker" name="fruitful_theme_options[menu_hover_color]" value="<?php echo esc_attr($options['menu_hover_color']); ?>" data-default-color="#ffffff" />
 			</fieldset>	
@@ -592,21 +592,21 @@ function fruitful_sep_style_color() {
 	$options = fruitful_get_theme_options();
 	?>
 		<div class="box-options">
-			<h4><?php _e( 'Widgets underline color', 'fruitful' ); ?></h4>
+			<h4><?php _e( 'Widget separator color', 'fruitful' ); ?></h4>
 			<fieldset>
 				<input type="text" id="widgets_sep_color" class="colorPicker" name="fruitful_theme_options[widgets_sep_color]" value="<?php echo esc_attr($options['widgets_sep_color']); ?>" data-default-color="#F15A23" />
 			</fieldset>
 		</div>
 		
 		<div class="box-options">
-			<h4><?php _e( 'Date of Post box color', 'fruitful' ); ?></h4>
+			<h4><?php _e( 'Blog post date color', 'fruitful' ); ?></h4>
 			<fieldset>
 				<input type="text" id="date_of_post_b_color" class="colorPicker" name="fruitful_theme_options[date_of_post_b_color]" value="<?php echo esc_attr($options['date_of_post_b_color']); ?>" data-default-color="#F15A23" />
 			</fieldset>
 		</div>
 		
 		<div class="box-options">
-			<h4><?php _e( 'Date of Post font color', 'fruitful' ); ?></h4>
+			<h4><?php _e( 'Date font color', 'fruitful' ); ?></h4>
 			<fieldset>
 				<input type="text" id="date_of_post_f_color" class="colorPicker" name="fruitful_theme_options[date_of_post_f_color]" value="<?php echo esc_attr($options['date_of_post_f_color']); ?>" data-default-color="#ffffff" />
 			</fieldset>
