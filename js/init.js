@@ -86,16 +86,13 @@ jQuery(window).bind('scroll', function() {
 	var vContentHeight 	 = jQuery('#page').outerHeight();
 	var vWinHeight  	 = jQuery(window).height();
 	var vHeaderContainer = jQuery('.head-container').outerHeight();
-	console.log(vContentHeight);
-	console.log(vWinHeight);
-	console.log(vHeaderContainer);
 	
 	if ((vContentHeight - vWinHeight) > 0) {
-		if (((vContentHeight - vWinHeight) - (vHeaderContainer+100)) > vHeaderContainer) {
+		if (((vContentHeight - vWinHeight) - (vHeaderContainer+125)) > vHeaderContainer) {
 			is_sufficient_height = true;
 		}
 	}
-	console.log(is_sufficient_height);
+	
 	if ((ThGlobal.is_fixed_header != -1) && (is_sufficient_height)) {
 		if ((jQuery(this).scrollTop() + 50) > vHeaderContainer) {
 			if (jQuery('#wpadminbar').length > 0) {

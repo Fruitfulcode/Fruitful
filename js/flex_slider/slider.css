@@ -60,7 +60,7 @@ html[xmlns] .slides {display: block;}
 /* Control Nav */
 .flex-control-nav {width: 100%; position: absolute; bottom: -40px; text-align: center;}
 .flex-control-nav li {margin: 0 6px; display: inline-block; zoom: 1; *display: inline;}
-.flex-control-paging li a {width: 13px; height: 13px; display: block; background-image: url(images/paging.png); background-repeat:no-repeat; background-position: 100% 0; cursor: pointer; text-indent: -9999px; }
+.flex-control-paging li a {width: 14px; height: 14px; display: block; background-image: url(images/paging.png); background-repeat:no-repeat; background-position: 100% 0; cursor: pointer; text-indent: -9999px; }
 .flex-control-paging li a:hover { background-position:0 0; }
 .flex-control-paging li a.flex-active {  background-position:0 0; cursor: default; }
 
