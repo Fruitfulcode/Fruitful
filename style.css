@@ -1242,43 +1242,39 @@ header.post-header, .blog_post {
 .blog_post .post-content footer.entry-meta{
 	margin:0;
 	padding:0 4.4%}
-.blog_post .post-content footer.entry-meta .comments-link {
-    background:url(images/comment.png) no-repeat 0 0 transparent;
-    height:22px;
+.blog_post .post-content footer.entry-meta .comments-link,
+.blog_post .post-content footer.entry-meta .author-link,
+.blog_post .post-content footer.entry-meta .cat-links,
+.blog_post .post-content footer.entry-meta .tag-links {
+	height:22px;
     width:auto;
     padding:0 0 2px 26px;
-    margin:0 5px 0 0}
+    margin:0 15px 0 0}
+.blog_post .post-content footer.entry-meta .edit-link{
+	width:auto;
+    padding:0 0 2px 5px;
+    margin:0 15px 0 0
+}
+.blog_post .post-content footer.entry-meta .comments-link {
+    background:url(images/comment.png) no-repeat 0 0 transparent;
+}
 .blog_post .post-content footer.entry-meta .author-link {
     background:url(images/user.png) no-repeat 0 0 transparent;
-    height:22px;
-    width:auto;
-    padding:0 0 0 26px;
-    margin:0 5px 0 0}
+}
 .blog_post .post-content footer.entry-meta .cat-links {
     background:url(images/category.png) no-repeat 0 3px transparent;
-    height:22px;
-    width:auto;
-    padding:0 0 0 26px;
-    margin:0 5px 0 0}
+}
 .blog_post .post-content footer.entry-meta .tag-links {
     background:url(images/tag.png) no-repeat 0 3px transparent;
-    height:22px;
-    width:auto;
-    padding:0 0 0 26px;
-    margin:0 5px 0 0}
+}
 .blog_post .post-content footer.entry-meta .comments-link:hover,.blog_post .post-content footer.entry-meta .author-link:hover,.blog_post .post-content footer.entry-meta .cat-links:hover {
     opacity:0.9}
-.blog_post .post-content footer.entry-meta .comments-link a,.blog_post .post-content footer.entry-meta .author-link a,.blog_post .post-content footer.entry-meta .cat-links a,.blog_post .post-content footer.entry-meta .edit-link a {
-    /*color:#8e7b6d;*/
+.blog_post .post-content footer.entry-meta .comments-link a,.blog_post .post-content footer.entry-meta .tag-links a,.blog_post .post-content footer.entry-meta .author-link a,.blog_post .post-content footer.entry-meta .cat-links a,.blog_post .post-content footer.entry-meta .edit-link a {
     text-decoration:none;
 }
 .more-link {
     text-decoration:none;
-    color:#ff5d2a;
     font-size:13px}
-.more-link:hover,.blog_post .post-content footer.entry-meta .comments-link a:hover,.blog_post .post-content footer.entry-meta .author-link a:hover,.blog_post .post-content footer.entry-meta .cat-links a:hover,.blog_post .post-content footer.entry-meta .edit-link a:hover {
-    color:#ff5d2a;
-}
 /* =Custom posts= */
 article.post-password-required header.post-header .post-title{
 	width:85.61%;
@@ -1359,25 +1355,23 @@ header.post-header .post-title {
 	border-bottom:2px solid #f15a23;
 }
 header.post-header .post-title a {
-    /*color:#333333;*/
     text-decoration:none;
 }
-header.post-header .post-title a:hover,#page .container #secondary .widget a:hover,#page .container #secondary .widget ul li.current-cat>a {
-    color:#ff5d2a}
 #page .container #secondary {
     float:left;
     width:100%;
-    margin:10px 0 0 0}
+    margin:10px 0 0 0
+}
 #page .container #secondary .widget {
     float:left;
     width:98%;
 }
 #page .container #secondary .widget h3.widget-title, #page .container #secondary .widget h1.widget-title {
-    /*color:#45494c;*/
     font-size:17px;
     border-bottom:2px solid #f15a23;
     padding:0 0 10px 0;
-    margin:0 0 20px 0}
+    margin:0 0 20px 0
+}
 #page .container #secondary .widget ul {
     float:left;
     width:100%;
@@ -1386,7 +1380,6 @@ header.post-header .post-title a:hover,#page .container #secondary .widget a:hov
 }
 #page .container #secondary .widget a {
     font-size:13px;
-    /*color:#45494c;*/
     text-decoration:none
 }
 #page .container #secondary .widget ul li {
@@ -1396,12 +1389,14 @@ header.post-header .post-title a:hover,#page .container #secondary .widget a:hov
     background:url(images/arrow_cat.png) no-repeat 0 8px transparent;
     float:left;
     width:95%;
-    padding:0 0 0 15px }
+    padding:0 0 0 15px;
+}
 #page .container #secondary .widget ul li.current-cat,#page .container #secondary .widget ul li.cat-item:hover {
-    background:url(images/arrow_cat_curr.png) no-repeat 0 8px transparent;
+    background:url(images/arrow_cat_curr.png) no-repeat 0 9px transparent;
     float:left;
     width:95%;
-    padding:0 0 0 15px }
+    padding:0 0 0 15px;
+}
 input#s {
     background:url("images/search_icon.png") no-repeat scroll 97% 5px transparent;
     border-radius:2px 2px 2px 2px;

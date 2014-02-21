@@ -753,7 +753,8 @@ function fruitful_entry_meta() {
 		if ( $tags_list ) :
 	?>
 		<span class="tag-links">
-			<?php printf( __( 'Tagged %1$s', 'fruitful' ), $tags_list ); ?>
+			<?php // printf( __( 'Tagged %1$s', 'fruitful' ), $tags_list ); ?>
+			<?php echo $tags_list; ?>
 		</span> 
 		<?php endif; // End if $tags_list ?>
 	<?php endif; // End if 'post' == get_post_type() ?>

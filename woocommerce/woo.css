@@ -186,8 +186,6 @@ body.woocommerce-page .container ul.products li.product {width: 219px; display: 
 .shop-page #page.site .container #secondary .widget ul li.cat-item:hover *,
 .archive.tax-product_cat #page.site .container #secondary .widget ul li.cat-item *,
 .archive.tax-product_cat #page.site .container #secondary .widget ul li.cat-item:hover *{line-height:30px}
-.shop-page #page.site .container #secondary .widget ul li.cat-item a:hover,
-.archive.tax-product_cat #page.site .container #secondary .widget ul li.cat-item a:hover{color:#ff5d2a}
 
 body.woocommerce.shop-page #page aside.widget_price_filter .price_slider_wrapper .ui-widget-content, 
 body.woocommerce-page.shop-page #page aside.widget_price_filter .price_slider_wrapper .ui-widget-content,
