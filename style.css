@@ -2046,6 +2046,7 @@ aside #lang_sel {
 	body.post-type-archive #searchform input#s{max-width:100%}
 	.comment-meta{	width:80%;}
 	#page .container #secondary .widget>ul>li.cat-item{overflow-x:hidden}
+	.flex-control-nav{display:none}
 }
 
 @media only screen and (min-width:480px) and (max-width:767px) {
