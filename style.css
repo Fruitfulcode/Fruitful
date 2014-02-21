@@ -2037,11 +2037,13 @@ aside #lang_sel {
 	.widget_nav_menu .menu {display:block;}
 	.main-navigation { float:none !important; }
 	#page .container header hgroup { margin: 0 0 15px; }
+	#page .container #secondary{margin-top:40px}
 	.select-menu { display:block; }
 	#back-top { display: none; }
 	.blog_post .post-content,
 	.search .blog_post .post-content {width: 364px;}
-	input#s {    width:373px;}	
+	input#s { width:373px; }	
+	body.post-type-archive #searchform input#s{max-width:100%}
 	.comment-meta{	width:80%;}
 	#page .container #secondary .widget>ul>li.cat-item{overflow-x:hidden}
 }
