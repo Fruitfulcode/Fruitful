@@ -1178,6 +1178,31 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 /*BLOG PAGE*/
 #comments{width:100%;float:left}
 
+/*PRELOADER*/
+.woocommerce #content input.button.loading:before,
+.woocommerce #respond input#submit.loading:before,
+.woocommerce a.button.loading:before,
+.woocommerce button.button.loading:before,
+.woocommerce input.button.loading:before,
+.woocommerce-page #content input.button.loading:before,
+.woocommerce-page #respond input#submit.loading:before,
+.woocommerce-page a.button.loading:before,
+.woocommerce-page button.button.loading:before,
+.woocommerce-page input.button.loading:before{background:url(images/loading.gif) center no-repeat #333333; background-size:14px 14px}
+
+@media (-webkit-min-device-pixel-ratio:2),(min-resolution:192dpi){
+	.woocommerce #content input.button.loading:before,
+	.woocommerce #respond input#submit.loading:before,
+	.woocommerce a.button.loading:before,
+	.woocommerce button.button.loading:before,
+	.woocommerce input.button.loading:before,
+	.woocommerce-page #content input.button.loading:before,
+	.woocommerce-page #respond input#submit.loading:before,
+	.woocommerce-page a.button.loading:before,
+	.woocommerce-page button.button.loading:before,
+	.woocommerce-page input.button.loading:before{background-image:url(images/loading.gif); background-size:14px 14px}
+}
+
 /* styles from 		"@media only screen and (min-width:1024px)"		*/
 /*secondary*/
 .woocommerce-page #secondary input#s{	width: 168px;}
