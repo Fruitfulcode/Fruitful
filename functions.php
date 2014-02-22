@@ -600,7 +600,7 @@ function fruitful_state_page_comment () {
 }
 
 function fruitful_get_responsive_style () {
-	$style_ = $back_style = '';
+	$style_ = $back_style = $woo_style_ = '';
 	$theme_options  = fruitful_ret_options("fruitful_theme_options"); 
  
 	wp_enqueue_style('fonts-style', get_template_directory_uri()    . '/inc/css/fonts-style.css');
