@@ -1449,12 +1449,11 @@ table#wp-calendar th:last-child,table#wp-calendar th:nth-child(6){
 	font-size:12px;
 	line-height:14px;
 	float:left;
-	border-width:1px;
-	border-style:solid;
-	border-color:initial;
+	border:0px;
 	color:#d6d6d6;
 }
 table#wp-calendar td.cal_has_posts{
+	width:18px;
 	border:1px solid #d6d6d6;
 	border-radius:16px;
 	color:#d6d6d6;
