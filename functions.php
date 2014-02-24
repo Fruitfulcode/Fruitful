@@ -758,7 +758,6 @@ function fruitful_entry_meta() {
 		</span> 
 		<?php endif; // End if $tags_list ?>
 	<?php endif; // End if 'post' == get_post_type() ?>
-	<?php edit_post_link( __( 'Edit', 'fruitful' ), '<span class="edit-link">', '</span>' ); ?>
 <?php 
 }
 

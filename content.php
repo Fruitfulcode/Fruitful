@@ -61,6 +61,7 @@
 		<?php } ?>
 		
 		<?php fruitful_entry_meta(); ?>
+		<?php edit_post_link( __( 'Edit', 'fruitful' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-meta -->
 	</div>
 </article><!-- #post-<?php the_ID(); ?> -->
