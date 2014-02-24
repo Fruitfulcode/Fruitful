@@ -688,6 +688,7 @@ function fruitful_get_responsive_style () {
 			if (!empty($theme_options['a_active_font_color']))  { $style_ .= 'a:active  {color : '. esc_js($theme_options['a_active_font_color']) .'; } ' . "\n"; }
 			if (!empty($theme_options['widgets_sep_color']))  { 
 				$style_ .= '#page .container #secondary .widget h3.widget-title, #page .container #secondary .widget h1.widget-title, header.post-header .post-title  {border-color : '. esc_js($theme_options['widgets_sep_color']) .'; } ' . "\n";
+				$style_ .= 'body.single-product #page .related.products h2  {border-bottom-color : '. esc_js($theme_options['widgets_sep_color']) .'; } ' . "\n";
 			}
 			
 			if (!empty($theme_options['date_of_post_b_color']))  { 
