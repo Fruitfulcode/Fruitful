@@ -5,6 +5,8 @@ jQuery(document).ready(function($) {
 			subMenuDash: '&nbsp;&nbsp;&ndash;'
 		});
 		
+		$('#wp-calendar td:not(#next, #prev):has(a)').addClass('cal_has_posts');
+		
 		/*Fancy Box*/
 		$('article.format-image .entry-content a img').each(function (i) {
 			$(this).parent('a').addClass('fancybox');

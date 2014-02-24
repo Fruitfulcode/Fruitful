@@ -114,6 +114,9 @@ body.archive.tax-product_cat #page .container #secondary.widget-area {float:left
 .woocommerce #page aside.widget_price_filter .ui-slider .ui-slider-range,
 .woocommerce #page aside.widget_price_filter .ui-slider .ui-slider-range {background:#333333; }
 
+.shop-page #calendar_wrap{width:212px;border:1px solid #d9d9d9;padding:15px 0;}
+.shop-page #wp-calendar caption {padding: 0 0 15px 15px;}
+
 .archive.post-type-archive-product.shop-page #page .woocommerce .widget_layered_nav_filters ul li a,
 .archive.post-type-archive-product.woocommerce-page.shop-page #page .widget_layered_nav_filters ul li a,
 .archive.tax-product_cat #page .woocommerce .widget_layered_nav_filters ul li a,
