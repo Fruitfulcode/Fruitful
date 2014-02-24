@@ -1098,9 +1098,10 @@ header.post-header, .blog_post {
     padding:0 0 2px 26px;
     margin:0 10px 0 0}
 .blog_post .post-content footer.entry-meta .edit-link{
+	float:right;
 	width:auto;
-    padding:0 0 2px 5px;
-    margin:0 15px 0 0
+    padding:0;
+    margin:0;
 }
 .blog_post .post-content footer.entry-meta .comments-link {
     background:url(images/comment.png) no-repeat 0 0 transparent;
