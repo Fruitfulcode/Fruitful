@@ -23,9 +23,14 @@ get_header(); ?>
 				</div><!-- #content .site-content -->
 			</div><!-- #primary .content-area -->
 		</div>
+		<?php 
+			$is_sidebar = true;
+			$is_sidebar = fruitful_is_woo_sidebar();
+			if ($is_sidebar) {
+		?>
 		<div class="five columns omega">
-			<?php if (!(is_cart() || is_checkout() || is_account_page())) {
-					get_sidebar('page'); 
-				} ?>
+			<?php get_sidebar('page'); ?>
 		</div>	
+		<?php } ?>
+		
 <?php get_footer(); ?>

@@ -1137,3 +1137,14 @@ function fruitful_woocommerce_header_add_to_cart_fragment( $fragments ) {
 	$fragments['a.cart-contents'] = ob_get_clean();
 	return $fragments;
 }
+
+
+function fruitful_is_woo_sidebar() {
+	$is_sidebar = true;
+	if (class_exists('Woocommerce')) { 
+		if (is_cart() || is_checkout() || is_account_page()) {
+ 			 $is_sidebar = false;
+		}
+	}	
+	return $is_sidebar;
+}
