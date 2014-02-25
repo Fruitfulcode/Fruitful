@@ -57,8 +57,8 @@ Fruitful has custom theme options panel, for easy setup and config theme setting
 Go to the customizer screen in the logo and favicon section and upload your images.
 For best results, try uploading a logo with the following maximum dimensions => max-height :100px, max-width ; 250px
 
-=== Menu customization ===
-Configure colors of main menu in theme options
+=== Color customization ===
+Configure colors as you need.
 
 === Fonts ===
 Choose web-safe fonts and 20 popular Google fonts.
@@ -68,7 +68,7 @@ Choose web-safe fonts and 20 popular Google fonts.
 - Flex slide
 
 === Social links ===
-Easy add your links to your social profiles, which will be display in footer as icons.
+Easy add your links to your social profiles, which will be display in footer or header as icons.
 
 -------------------------------------------------------
     Translation
@@ -76,7 +76,7 @@ Easy add your links to your social profiles, which will be display in footer as 
 
 The themes is ready for translation and already translated in Russian.
 We are open for users translations, translation can be included in new theme versions.
-Files ru_Ru.po ru_Ru.mo icluded. Default language is english.
+Files: .pot, ru_Ru.po, ru_Ru.mo icluded. Default language is english.
 
 -------------------------------------------------------
     Credits
@@ -97,6 +97,14 @@ Files ru_Ru.po ru_Ru.mo icluded. Default language is english.
 -------------------------------------------------------
     Changelog
 -------------------------------------------------------
+
+= 1.3.1 = 
+25.02.14
+
+* New calendar widget styles
+* Edit link placement
+* Bug fix main sidebar
+
 
 = 1.3 =
 21.02.14
