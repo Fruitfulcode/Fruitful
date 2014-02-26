@@ -37,7 +37,6 @@ body {
     line-height:14px;
     text-rendering:optimizelegibility;
     color:#333333;
-    font-family:"Open Sans", sans-serif;
     background-size:cover;
 	background-attachment: fixed;
 	overflow:hidden;
@@ -668,7 +667,6 @@ a:hover,a:focus,a:active {
     text-transform:uppercase;
     padding:7px 10px;
 	font-size:14px;
-	font-family:"Open Sans", sans-serif;
 }
 #lang-select-block .current a{
 	-webkit-transition: all 0.3s ease-in-out; 
@@ -801,7 +799,6 @@ ul#lang-select-popup{
 	-ms-transition: all 0.3s ease-in-out; 
 	transition: all 0.3s ease-in-out; 
 	font-size:14px;
-	font-family:"Open Sans", sans-serif;
 }
 .main-navigation ul ul:hover > a {
     color:#000 !important;
