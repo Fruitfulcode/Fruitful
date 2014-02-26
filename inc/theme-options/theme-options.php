@@ -634,14 +634,14 @@ function fruitful_but_style_color() {
 		<div class="box-options">
 			<h4><?php _e( 'Button background color', 'fruitful' ); ?></h4>
 			<fieldset>
-				<input type="text" id="buttons_color" class="colorPicker" name="fruitful_theme_options[buttons_color]" value="<?php echo esc_attr($options['buttons_color']); ?>" data-default-color="#333333" />
+				<input type="text" id="btn_color" class="colorPicker" name="fruitful_theme_options[btn_color]" value="<?php echo esc_attr($options['btn_color']); ?>" data-default-color="#333333" />
 			</fieldset>
 		</div>
 		
 		<div class="box-options">
 			<h4><?php _e( 'Button background color (hover, active, focus, current page - pagenavi)', 'fruitful' ); ?></h4>
 			<fieldset>
-				<input type="text" id="buttons_active_color" class="colorPicker" name="fruitful_theme_options[buttons_active_color]" value="<?php echo esc_attr($options['buttons_active_color']); ?>" data-default-color="#F15A23" />
+				<input type="text" id="btn_active_color" class="colorPicker" name="fruitful_theme_options[btn_active_color]" value="<?php echo esc_attr($options['btn_active_color']); ?>" data-default-color="#F15A23" />
 			</fieldset>
 		</div>
 	<?php 

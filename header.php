@@ -61,13 +61,17 @@
 							<?php fruitful_get_languages_list(); ?>
 								
 							<?php if (class_exists('Woocommerce')) { ?>
-								<div class="cart-button">
-									<a href="<?php echo get_permalink( woocommerce_get_page_id( 'cart' ) ); ?>" class="cart-contents">
-										<div class="cart_image"></div> 
-										<span class="num_of_product_cart"><?php global $woocommerce;
-										echo $woocommerce->cart->cart_contents_count; ?> </span>
-									</a>
-								</div>							
+								<?php if (!empty($theme_options['showcart'])) {
+										if (($theme_options['showcart']) == 'on'){?>
+											<div class="cart-button">
+												<a href="<?php echo get_permalink( woocommerce_get_page_id( 'cart' ) ); ?>" class="cart-contents">
+													<div class="cart_image"></div> 
+													<span class="num_of_product_cart"><?php global $woocommerce;
+													echo $woocommerce->cart->cart_contents_count; ?> </span>
+												</a>
+											</div>							
+									<?php } ?>
+								<?php } ?>
 							<?php } ?>
 								
 							<nav role="navigation" class="site-navigation main-navigation">

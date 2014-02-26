@@ -489,8 +489,8 @@ return array(
 				'a_focus_font_color'	=> '#FF5D2A',
 				'a_active_font_color'	=> '#FF5D2A',
 				'widgets_sep_color'		=> '#F15A23',	
-				'buttons_color'			=> '#333333',	
-				'buttons_active_color'	=> '#F15A23',	
+				'btn_color'				=> '#333333',	
+				'btn_active_color'		=> '#F15A23',	
 				'date_of_post_b_color' 	=> '#F15A23',
 				'date_of_post_f_color'	=> '#ffffff',
 				
