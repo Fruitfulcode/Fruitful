@@ -44,6 +44,7 @@ function fruitful_theme_options_init() {
 	add_settings_field( 'general_rs', 		__( 'Layout', 	'fruitful' ),	'fruitful_get_responsive_design',	'theme_options',  'general', array('info' => __( 'Theme supported 2 types of html layout. Default responsive  setting which adapt for mobile devices and static page with fixed width. Uncheck arrow below if you need static website display. ', 'fruitful' )));
 	add_settings_field( 'general_cm',		__( 'Comments', 'fruitful' ), 	'fruitful_get_general_comment',  	'theme_options',  'general', array('info' => __( 'If you want to display comments on your post page or page, select options below.', 'fruitful' )));
 	add_settings_field( 'general_ds',		__( 'Default theme styles',  'fruitful' ),'fruitful_get_style_theme', 'theme_options',  'general', array('info' => __( 'Default CSS. Theme option for styling is not working, if this option enable.', 'fruitful' )));
+	add_settings_field( 'general_sc',		__( 'Show cart link in header',  'fruitful' ),'fruitful_show_cart_theme', 'theme_options',  'general', array('info' => __( 'If you want to display cart link in header select options below.', 'fruitful' )));
 	add_settings_field( 'general_rb',		__( 'Reset options', 'fruitful' ), 'fruitful_reset_btn',  'theme_options',  'general', array('info' => __( 'All theme options will be reset to default. ', 'fruitful' )));
 	if(function_exists('icl_get_languages')){ // if WPML is activated
 		add_settings_field( 'general_wpml',		__( 'Multilingual Switch in Header (WPML)', 'fruitful' ), 'fruitful_wpml_ready',  'theme_options',  'general', array('info' => __( 'If you wish to show Language Switch in header, select option below. ', 'fruitful' )));
@@ -212,6 +213,17 @@ function fruitful_get_style_theme() {
 	?>
 		<div class="box-option">
 			<label for="style_theme"><input type="checkbox" name="fruitful_theme_options[styletheme]" id="style_theme" <?php checked( 'on', $options['styletheme']); ?> />
+			<?php _e( 'Enable', 'fruitful' ); ?>
+			</label>
+		</div>
+	<?php	
+}
+
+function fruitful_show_cart_theme() {
+	$options = fruitful_get_theme_options();
+	?>
+		<div class="box-option">
+			<label for="show_cart"><input type="checkbox" name="fruitful_theme_options[showcart]" id="show_cart" <?php checked( 'on', $options['showcart']); ?> />
 			<?php _e( 'Enable', 'fruitful' ); ?>
 			</label>
 		</div>
@@ -727,6 +739,7 @@ function fruitful_data_save() {
 	if (!isset($data['pagecomment'])) 	  {$data['pagecomment'] 	= 'off'; }
 	if (!isset($data['is_fixed_header'])) {$data['is_fixed_header'] = 'off'; }
 	if (!isset($data['styletheme'])) 	  {$data['styletheme'] 		= 'off'; }
+	if (!isset($data['showcart'])) 	 	  {$data['showcart'] 		= 'off'; }
 	if (!isset($data['is_wpml_ready']))   {$data['is_wpml_ready']	= 'off'; }
 	if (!isset($data['bg_repeating'])) 	  {$data['bg_repeating'] 	= 'off'; }
 	

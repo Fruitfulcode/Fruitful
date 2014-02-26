@@ -703,6 +703,12 @@ function fruitful_get_responsive_style () {
 			}
 		} 
 		
+		if (!empty($theme_options['showcart'])) {
+			if (($theme_options['showcart']) == 'off'){
+				$style_ .='body .cart-button  {display : none; } ' . "\n";
+			}
+		}	
+		
 		if (!empty($theme_options['custom_css'])) {
 			$style_ .= wp_kses_stripslashes($theme_options['custom_css']) . "\n";
 		}	

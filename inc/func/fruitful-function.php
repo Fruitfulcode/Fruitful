@@ -456,6 +456,7 @@ return array(
 				'pagecomment'		=> 'on',
 				'is_fixed_header'	=> 'off',
 				'styletheme'		=> 'off',
+				'showcart'  		=> 'on',
 				'is_wpml_ready'		=> 'on',
 
 				/*Header image*/
