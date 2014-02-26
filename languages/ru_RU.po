@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Fruitful theme\n"
 "POT-Creation-Date: 2013-11-26 11:49+0200\n"
-"PO-Revision-Date: 2014-02-21 16:29+0200\n"
+"PO-Revision-Date: 2014-02-26 15:42+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Russian\n"
@@ -1186,6 +1186,9 @@ msgstr "Цвет ссылок (при нажатии)"
 msgid "Color for lines"
 msgstr "Цвета для линий"
 
+msgid "Color for buttons"
+msgstr "Цвета для кнопок"
+
 msgid "Choose you colors for lines and separators"
 msgstr "Выберите Ваши цвета для линий и разделителей"
 
@@ -1197,6 +1200,17 @@ msgstr "Цвет даты поста блога"
 
 msgid "Date font color"
 msgstr "Цвет шрифта даты"
+
+msgid "Choose you colors for buttons"
+msgstr "Выберите Ваши цвета для кнопок"
+
+msgid "Button background color"
+msgstr "Цвет кнопок"
+
+msgid "Button background color (hover, active, focus, current page - pagenavi)"
+msgstr ""
+"Цвет кнопок (при наведении, нажатии, фокусе, цвет текущей страницы - "
+"навигация)"
 
 #: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\fruitful/inc/theme-options/theme-options.php:540
 msgid "Theme settings will be reset to default."
@@ -1324,6 +1338,12 @@ msgid ""
 msgstr ""
 "CSS стили по умолчанию. Настройки темы (стилизация) недоступны, когда опция "
 "включена."
+
+msgid "If you want to display cart link in header select options below."
+msgstr "Если Вы хотите отобразить корзину в заголовке выберите опцию ниже."
+
+msgid "Show cart in header"
+msgstr "Показать корзину в заголовке"
 
 msgid "Reset options"
 msgstr "Восстановление значений по умолчанию"
