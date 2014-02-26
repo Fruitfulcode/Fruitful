@@ -709,6 +709,21 @@ function fruitful_get_responsive_style () {
 			}
 		}	
 		
+		if (!empty($theme_options['buttons_color'])) {
+			$style_ .='body button, input[type="button"], input[type="submit"], input[type="reset"]{background-color : '.esc_js($theme_options['buttons_color']).' !important; } ' . "\n";
+			$style_ .='.woocommerce table.my_account_orders .order-actions .button, body.woocommerce-page table.my_account_orders .order-actions .button{background-color : '.esc_js($theme_options['buttons_color']).' !important; } ' . "\n";
+			$style_ .='.nav-links.shop .pages-links .page-numbers, .nav-links.shop .nav-next a, .nav-links.shop .nav-previous a{background-color : '.esc_js($theme_options['buttons_color']).' !important; } ' . "\n";
+		}	
+		
+		if (!empty($theme_options['buttons_active_color'])) {
+			$style_ .='body button:hover, body button:active, body button:focus{background-color : '.esc_js($theme_options['buttons_active_color']).' !important; } ' . "\n";
+			$style_ .='body input[type="button"]:hover, body input[type="button"]:active, body input[type="button"]:focus{background-color : '.esc_js($theme_options['buttons_active_color']).' !important; } ' . "\n";
+			$style_ .='body input[type="submit"]:hover, body input[type="submit"]:active, body input[type="submit"]:focus{background-color : '.esc_js($theme_options['buttons_active_color']).' !important; } ' . "\n";
+			$style_ .='body input[type="reset"]:hover, body  input[type="reset"]:active, body  input[type="reset"]:focus{background-color : '.esc_js($theme_options['buttons_active_color']).' !important; } ' . "\n";
+			$style_ .='.woocommerce table.my_account_orders .order-actions .button:hover, body.woocommerce-page table.my_account_orders .order-actions .button:hover{background-color : '.esc_js($theme_options['buttons_active_color']).' !important; } ' . "\n";
+			$style_ .='.nav-links.shop .pages-links .page-numbers:hover, .nav-links.shop .nav-next a:hover, .nav-links.shop .nav-previous a:hover, .nav-links.shop .pages-links .page-numbers.current{background-color : '.esc_js($theme_options['buttons_active_color']).' !important; } ' . "\n";
+		}	
+		
 		if (!empty($theme_options['custom_css'])) {
 			$style_ .= wp_kses_stripslashes($theme_options['custom_css']) . "\n";
 		}	
