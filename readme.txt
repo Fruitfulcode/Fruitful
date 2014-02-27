@@ -98,6 +98,15 @@ Files: .pot, ru_Ru.po, ru_Ru.mo icluded. Default language is english.
     Changelog
 -------------------------------------------------------
 
+= 1.3.2 =
+27.02.14
+
+* New option buttons color
+* New option cart - on/off (WooCommerce)
+* Translation updates
+* Bug fix: menu default font
+
+
 = 1.3.1 = 
 25.02.14
 
