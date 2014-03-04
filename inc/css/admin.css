@@ -1,5 +1,5 @@
 .form-admin-fruitful {font-family: 'Arial', sans-serif;} 
-.form-admin-fruitful h4 {font-weight: normal}
+.form-admin-fruitful h4 {font-weight: normal; margin: 5px 0;}
 .form-admin-fruitful .header, 
 .form-admin-fruitful .footer, 
 .form-admin-fruitful .content {float:left;  width: 914px;}
@@ -124,6 +124,8 @@ a:hover, a:active, a:focus {	outline: 0; }
 #css-text, #footer-text { background: none repeat scroll 0 0 #F9F9F9; font-family: Consolas,Monaco,monospace; font-size: 12px; outline: 0 none; }	
 #css-text:focus, #footer-text:focus {border-color:#aaa;}
 .small_input {float: left !important; width: 50px !important;}
+
+div.updated, div.error { margin: 15px 0 15px; }
 
 @media only screen and (max-width: 641px) {
 	.form-admin-fruitful { padding:0 0 20px 1%; width:99%; }

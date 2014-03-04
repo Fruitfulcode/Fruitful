@@ -563,8 +563,9 @@ return array(
 				'youtube_url'		=> '',
 				'rss_link'			=> '',
 				'vk_link'			=> '',
-				'instagram_url'			=> '',
-				'pinterest_url'			=> '',
+				'instagram_url'		=> '',
+				'pinterest_url'		=> '',
+				'yelp_url'			=> '',
 				'email_link'		=> '', 
 
 				'custom_css'        => stripslashes('')

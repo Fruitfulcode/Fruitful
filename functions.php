@@ -474,6 +474,7 @@ function fruitful_get_socials_icon () {
 	if(!empty($theme_options['vk_link'])) 			{ $out .= '<a class="vk" 		href="'		. esc_url($theme_options['vk_link']) 		. '" target="_blank"></a>'; }			
 	if(!empty($theme_options['instagram_url']))		{ $out .= '<a class="instagram"	href="'		. esc_url($theme_options['instagram_url'])	. '" target="_blank"></a>'; }			
 	if(!empty($theme_options['pinterest_url']))		{ $out .= '<a class="pinterest"	href="'		. esc_url($theme_options['pinterest_url'])	. '" target="_blank"></a>'; }			
+	if(!empty($theme_options['yelp_url']))			{ $out .= '<a class="yelp"		href="'		. esc_url($theme_options['yelp_url'])		. '" target="_blank"></a>'; }			
 	if(!empty($theme_options['email_link'])) 		{ $out .= '<a class="email" 	href="mailto:'		. sanitize_email($theme_options['email_link']) . '"></a>'; }			
 	
 	echo '<div class="social-icon">' . $out . '</div>';
@@ -625,6 +626,7 @@ function fruitful_get_responsive_style () {
 			$style_ .= '.main-navigation a     {font-family : '. esc_js($theme_options['m_font_family']) .'; color : '.esc_js($theme_options['menu_font_color']). '; } ' . "\n";
 			$style_ .= '.main-navigation ul:not(.sub-menu) > li > a, .main-navigation ul:not(.sub-menu) > li:hover > a   { font-size : '.esc_js($theme_options['m_size']) .'px;    } ' . "\n";
 			
+			
 			if (!empty($theme_options['menu_bg_color']))   { $style_ .= '.main-navigation {background-color : ' .esc_js($theme_options['menu_bg_color']) . '; }' . "\n";  }
    
 			$style_ .= '#header_language_select a {font-family : '.  esc_js($theme_options['m_font_family']) .';} ' . "\n";
@@ -640,7 +642,7 @@ function fruitful_get_responsive_style () {
 				if(isset($theme_options['bg_repeating']) && ($theme_options['bg_repeating'] == 'on')) { 
 					$back_style .= 'background-image : url(' .$bg_url .'); background-repeat : repeat; ';  
 				} else {
-					$back_style .= 'background-image : url(' .$bg_url .'); background-repeat : no-repeat; ';  
+					$back_style .= 'background-image : url(' .$bg_url .'); background-repeat : no-repeat; background-size:cover; background-attachment:fixed; ';  
 				}
 			}
 

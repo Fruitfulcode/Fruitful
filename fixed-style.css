@@ -36,8 +36,6 @@ body {
     line-height:14px;
     text-rendering:optimizelegibility;
     color:#333333;
-    background-size:cover;
-	background-attachment: fixed;
 	overflow:hidden;
 	min-width:1024px;
 }
