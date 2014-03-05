@@ -718,7 +718,21 @@ body.woocommerce-page #content .quantity .minus,
 	-moz-border-radius: 0;
 	border-radius: 0;
 	box-shadow:none;
+	text-shadow:none;
+	color: #FFF !important;
 }
+body.woocommerce.single-product .quantity .minus,
+body.woocommerce-page.single-product .quantity .minus,
+body.woocommerce.single-product #content .quantity .minus,
+body.woocommerce-page.single-product #content .quantity .minus,
+body.woocommerce.single-product .quantity .plus,
+body.woocommerce-page.single-product .quantity .plus,
+body.woocommerce.single-product #content .quantity .plus,
+body.woocommerce-page.single-product #content .quantity .plus  {width:33px;height:33px;}
+body.woocommerce.single-product .quantity input.qty, 
+body.woocommerce-page.single-product .quantity input.qty, 
+body.woocommerce.single-product #content .quantity input.qty, 
+body.woocommerce-page.single-product #content .quantity input.qty{height:33px;}
 body.woocommerce .quantity input.qty, 
 body.woocommerce-page .quantity input.qty, 
 body.woocommerce #content .quantity input.qty, 
@@ -753,6 +767,8 @@ body.woocommerce-page #content .quantity .plus,
 	-moz-border-radius: 0;
 	border-radius: 0;
 	box-shadow:none;
+	text-shadow:none;
+	color: #FFF !important;
 }
 
 body.woocommerce .quantity .minus:hover, 
@@ -1320,7 +1336,7 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 	body.woocommerce-page div.product form.cart div.quantity,
 	body.woocommerce #content div.product form.cart div.quantity,
 	body.woocommerce-page #content div.product form.cart div.quantity,
-	.woocommerce-page.woocommerce-cart #content .product-quantity div.quantity{width:82px;}
+	.woocommerce-page.woocommerce-cart #content .product-quantity div.quantity{width:80px;}
 	body.woocommerce .quantity .minus, body.woocommerce-page .quantity .minus,
 	body.woocommerce #content .quantity .minus,
 	body.woocommerce-page #content .quantity .minus,
@@ -1336,6 +1352,10 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 	.woocommerce-cart .woocommerce-page .quantity .plus,
 	.woocommerce-cart .woocommerce #content .quantity .plus,
 	.woocommerce-cart .woocommerce-page #content .quantity .plus{width:15px}
+	body.woocommerce.single-product div.product form.cart div.quantity,
+	body.woocommerce-page.single-product div.product form.cart div.quantity,
+	body.woocommerce.single-product #content div.product form.cart div.quantity, 
+	body.woocommerce-page.single-product #content div.product form.cart div.quantity{width:120px;}
 	body.woocommerce .quantity input.qty,
 	body.woocommerce-page .quantity input.qty,
 	body.woocommerce #content .quantity input.qty,
@@ -1344,6 +1364,10 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 	.woocommerce-cart .woocommerce-page .quantity input.qty,
 	.woocommerce-cart .woocommerce #content .quantity input.qty,
 	.woocommerce-cart .woocommerce-page #content .quantity input.qty{left:15px;}
+	body.woocommerce.single-product .quantity input.qty, 
+	body.woocommerce-page.single-product .quantity input.qty, 
+	body.woocommerce.single-product #content .quantity input.qty, 
+	body.woocommerce-page.single-product #content .quantity input.qty{left:35px}
 	.woocommerce #content table.cart td.actions .button,
 	.woocommerce #content table.cart td.actions .input-text,
 	.woocommerce #content table.cart td.actions input,
@@ -1399,7 +1423,12 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 	body.woocommerce-page div.product form.cart div.quantity,
 	body.woocommerce #content div.product form.cart div.quantity,
 	body.woocommerce-page #content div.product form.cart div.quantity,
-	.woocommerce-page.woocommerce-cart #content .product-quantity div.quantity{width:82px;}
+	.woocommerce-page.woocommerce-cart #content .product-quantity div.quantity{width:80px;}
+	body.woocommerce.single-product div.product form.cart div.quantity,
+	body.woocommerce-page.single-product div.product form.cart div.quantity,
+	body.woocommerce.single-product #content div.product form.cart div.quantity,
+	body.woocommerce-page.single-product #content div.product form.cart div.quantity,
+	.woocommerce-page.single-product #content .product-quantity div.quantity{width:120px;}
 	body.woocommerce .quantity .minus, body.woocommerce-page .quantity .minus,
 	body.woocommerce #content .quantity .minus,
 	body.woocommerce-page #content .quantity .minus,
@@ -1423,6 +1452,10 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 	.woocommerce-cart .woocommerce-page .quantity input.qty,
 	.woocommerce-cart .woocommerce #content .quantity input.qty,
 	.woocommerce-cart .woocommerce-page #content .quantity input.qty{left:15px;}
+	body.woocommerce.single-product .quantity input.qty, 
+	body.woocommerce-page.single-product .quantity input.qty, 
+	body.woocommerce.single-product #content .quantity input.qty, 
+	body.woocommerce-page.single-product #content .quantity input.qty{left:35px}
 	body.woocommerce-page .woocommerce .cart-collaterals button.button{width:100%}
 	.woocommerce #content table.cart td.actions .button,
 	.woocommerce #content table.cart td.actions .input-text,

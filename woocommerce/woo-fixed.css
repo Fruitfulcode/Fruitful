@@ -718,7 +718,21 @@ body.woocommerce-page #content .quantity .minus,
 	-moz-border-radius: 0;
 	border-radius: 0;
 	box-shadow:none;
+	text-shadow:none;
+	color: #FFF !important;
 }
+body.woocommerce.single-product .quantity .minus,
+body.woocommerce-page.single-product .quantity .minus,
+body.woocommerce.single-product #content .quantity .minus,
+body.woocommerce-page.single-product #content .quantity .minus,
+body.woocommerce.single-product .quantity .plus,
+body.woocommerce-page.single-product .quantity .plus,
+body.woocommerce.single-product #content .quantity .plus,
+body.woocommerce-page.single-product #content .quantity .plus  {width:33px;height:33px;}
+body.woocommerce.single-product .quantity input.qty, 
+body.woocommerce-page.single-product .quantity input.qty, 
+body.woocommerce.single-product #content .quantity input.qty, 
+body.woocommerce-page.single-product #content .quantity input.qty{height:33px;}
 body.woocommerce .quantity input.qty, 
 body.woocommerce-page .quantity input.qty, 
 body.woocommerce #content .quantity input.qty, 
@@ -753,6 +767,8 @@ body.woocommerce-page #content .quantity .plus,
 	-moz-border-radius: 0;
 	border-radius: 0;
 	box-shadow:none;
+	text-shadow:none;
+	color: #FFF !important;
 }
 
 body.woocommerce .quantity .minus:hover, 
