@@ -98,6 +98,16 @@ Files: .pot, ru_Ru.po, ru_Ru.mo icluded. Default language is english.
     Changelog
 -------------------------------------------------------
 
+= 1.3.3 =
+05.03.14
+
+* New icon yelp
+* Bug fix theme options, notification.
+* Bug fix background repeat options
+* Theme options additional styles
+* Buttons bug fix
+* WooCoommerce additional styles 2.1.4
+
 = 1.3.2 =
 27.02.14
 
