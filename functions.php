@@ -950,13 +950,16 @@ function fruitful_get_languages_list(){
 								echo $l['native_name'];
 							echo '</a>';
 						echo '</li>';
-				} else {
+				} 
+					
+			}
+			foreach($languages as $l){
+				if(!($l['active'])) {
 						echo '<li class="unactive">';
 						echo '<a class="'.$l['language_code'].'" href="'.$l['url'].'">';
 							echo $l['native_name'];
 						echo '</a></li>';
 				}
-					
 			}
 					echo '</ul>';
 				echo '</li>';					
