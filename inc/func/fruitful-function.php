@@ -548,7 +548,7 @@ return array(
 				/*End Sliders*/
 				
 				/*footer*/			 
-				'footer_text'		=> stripslashes('Fruitful theme by <a href="http://fruitfulcode.com">fruitfulcode</a> Powered by: <a href="http://wordpress.org">WordPress</a>'),
+				'footer_text'	 => esc_attr__( 'Fruitful theme by', 'fruitful' ) . ' <a href="' . esc_url(__('http://fruitfulcode.com','fruitful')) . '">' . esc_attr__( 'fruitfulcode', 'fruitful' ) . '</a> ' . esc_attr__( 'Powered by:', 'fruitful' ) . ' <a href=' . esc_url(__('"http://wordpress.org','fruitful')) . '">' . esc_attr__( 'WordPress', 'fruitful' ) . '</a>', 
 				
 				/*socials*/
 				'sl_position'		=> '0',
