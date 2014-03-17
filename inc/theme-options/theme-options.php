@@ -54,7 +54,7 @@ function fruitful_theme_options_init() {
 	add_settings_field( 'header_hd',		__( 'Sticky  header', 	 		 'fruitful' ), 	'fruitful_get_general_header', 	'theme_options',  'header', array('info' => __( 'Options relating to the website header', 'fruitful' )));
 	add_settings_field( 'header_hi',		__( 'Background for header', 	 'fruitful' ), 	'fruitful_get_header_img', 		'theme_options',  'header', array('info' => __( 'Upload image with full width for background in header area. (Supported files .png, .jpg, .gif)  ', 'fruitful' )));
 	add_settings_field( 'header_hh',		__( 'Height for header area', 	 'fruitful' ), 	'fruitful_get_header_height', 	'theme_options',  'header', array('info' => __( 'Minimum height in pixels', 'fruitful' )));
-	add_settings_field( 'header_mp',		__( 'Menu Posistion', 			 'fruitful' ), 	'fruitful_set_menu_position', 	'theme_options',  'header', array('info' => __( 'Set menu position.', 'fruitful' )));
+	add_settings_field( 'header_mp',		__( 'Menu Position', 			 'fruitful' ), 	'fruitful_set_menu_position', 	'theme_options',  'header', array('info' => __( 'Set menu position.', 'fruitful' )));
 		
 	
 	add_settings_field( 'background_image', __( 'Background Image', 'fruitful' ),  'fruitful_get_background_img',   'theme_options',  'background', array('info' => __( 'Upload your background image for site background. (Supported files .png, .jpg, .gif)', 'fruitful' )));
