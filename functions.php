@@ -1014,11 +1014,11 @@ function wp_corenavi() {
 			$wp_rewrite;  
 	$next_label = $prev_label = '';
 	if (wp_is_mobile()) {
-		$next_label = ' « ';
-		$prev_label = ' » ';
+		$next_label = ' &laquo; '; 
+		$prev_label = ' &raquo; ';
 	} else {
-		$next_label = '« Previous Page';
-		$prev_label = 'Next Page »';
+		$next_label = '&laquo Previous Page';
+		$prev_label = 'Next Page &raquo;'; 
 	}
 	
 	$pages = '';  
