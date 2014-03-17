@@ -1067,6 +1067,9 @@ embed,iframe,object {
     width:100%;
 	position: relative;
 }
+.flex-direction-nav a {
+	z-index:999
+}
 
 #page {position:relative;}
 #page .container .btm_header, #page .container .entry-header {
