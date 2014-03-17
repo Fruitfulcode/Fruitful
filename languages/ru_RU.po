@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Fruitful theme\n"
 "POT-Creation-Date: 2013-11-26 11:49+0200\n"
-"PO-Revision-Date: 2014-03-17 16:06+0200\n"
+"PO-Revision-Date: 2014-03-17 18:05+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Russian\n"
@@ -12,6 +12,8 @@ msgstr ""
 "X-Generator: Poedit 1.5.3\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop;_e;__\n"
 "X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=3; plural=((((n%10)==1)&&((n%100)!=11))?(0):(((((n%10)"
+">=2)&&((n%10)<=4))&&(((n%100)<10)||((n%100)>=20)))?(1):2));\\n;\n"
 
 #: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\fruitful/404.php:17
 msgid "Oops! That page can&rsquo;t be found."
@@ -70,7 +72,6 @@ msgid "About %s"
 msgstr "О %s"
 
 #: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\fruitful/author-bio.php:20
-#, php-format
 msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Просмотреть все записи по %s <span class=\"meta-nav\">&rarr;</span>"
 
@@ -78,6 +79,13 @@ msgstr "Просмотреть все записи по %s <span class=\"meta-na
 #, php-format
 msgid "All posts by %s"
 msgstr "Просмотреть все записи по %s"
+
+#: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\fruitful/comments.php:34
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "%1$s комментарий к посту &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s комментария к посту &ldquo;%2$s&rdquo;"
+msgstr[2] "%1$s комментариев к посту &ldquo;%2$s&rdquo;"
 
 #: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\fruitful/comments.php:40
 #: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\fruitful/comments.php:60
@@ -170,7 +178,6 @@ msgstr "Один комментарий"
 #: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\fruitful/content-image.php:42
 #: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\fruitful/content-quote.php:37
 #: C:\wamp\www\yakovlev\fruitfultheme\wp-content\themes\fruitful/content-video.php:41
-#, php-format
 msgid "View all % comments"
 msgstr "Посмотреть  все %  комментариев"
 
