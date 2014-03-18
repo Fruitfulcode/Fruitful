@@ -642,7 +642,7 @@ function fruitful_get_responsive_style () {
 				if(isset($theme_options['bg_repeating']) && ($theme_options['bg_repeating'] == 'on')) { 
 					$back_style .= 'background-image : url(' .$bg_url .'); background-repeat : repeat; ';  
 				} else {
-					$back_style .= 'background-image : url(' .$bg_url .'); background-repeat : no-repeat; background-size:cover; background-attachment:fixed; ';  
+					$back_style .= 'background-image : url(' .$bg_url .'); background-repeat : no-repeat; background-size:100%; background-size:cover; background-attachment:fixed; ';  
 				}
 			}
 

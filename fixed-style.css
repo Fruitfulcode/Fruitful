@@ -1939,3 +1939,14 @@ aside #lang_sel {
 */
 
 *:first-child+html #page .container .content .info_box_area { margin-bottom:25px }
+
+@media screen and ( max-width: 640px ) {
+	.page-container{margin-bottom:40px;}
+	.head-container.fixed {top: 0;}
+}
+@media only screen and (max-width:640px) and (orientation:portrait)  {
+	body{min-height:1500px;}
+}
+@media only screen and (max-device-width:640px) and (orientation:landscape)  {
+	body{min-height:640px;}
+}
