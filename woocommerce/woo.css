@@ -21,7 +21,7 @@ body div.pp_pic_holder{z-index:100000}
 textarea{max-width:100%}
 body div.pp_overlay{background-color:#333333}
 .screen-reader-text {float:left;padding:8px 15px 8px 0}
-button,html input[type="button"],input[type="reset"],input[type="submit"]{line-height:100%}
+button,html input[type="button"],input[type="reset"],input[type="submit"]{line-height:100%;  -webkit-appearance: none;}
 
 /*header*/
 .cart-button{display:block;float: right;margin:20px 10px 0 30px;padding:0;position:relative;margin:15px 10px;}
@@ -972,7 +972,7 @@ body.woocommerce-account table tbody tr:nth-child(even) td{color:initial}
 
 .woocommerce-cart.woocommerce-page #content table.shop_table.cart tbody tr:last-child td{padding:5px;}
 .woocommerce-cart.woocommerce-page #content table td.actions input.button,
-.woocommerce-cart.woocommerce-page #content table td.actions input.button:hover{float:right;margin:5px 10px 5px 5px}
+.woocommerce-cart.woocommerce-page #content table td.actions input.button:hover{float:right;margin:5px 10px 5px 5px;}
 
 .woocommerce-cart.woocommerce-page #content table td{text-align:center;border-top:0px}
 .woocommerce-cart.woocommerce-page #content table td.product-name{text-align:left;}
@@ -1320,6 +1320,7 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 	.woocommerce a.added_to_cart, body.woocommerce-page a.added_to_cart{width:60%; clear:both}
 	body.archive.post-type-archive-product.shop-page #page .container #secondary.widget-area, body.archive.tax-product_cat #page .container #secondary.widget-area{width: 94%; padding: 0 3%;}
 	body.archive.post-type-archive-product.shop-page #page .container #content,	body.archive.tax-product_cat #page .container #content{width: 98%; padding: 0 1%;}
+	.shop-page #calendar_wrap{padding:30px}
 	/*cart*/
 	.woocommerce-cart.woocommerce-page #content table thead th{font-size:12px}
 	#body .woocommerce table.shop_table td.product-quantity,body.woocommerce-page table.shop_table td.product-quantity {padding: 0}
@@ -1329,7 +1330,7 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 	.woocommerce-cart.woocommerce-page #content table td.actions input.button[name="apply_coupon"]:hover{float:right}
 	.woocommerce-cart.woocommerce-page #content table td.actions input.button[name="proceed"],
 	.woocommerce-cart.woocommerce-page #content table td.actions input.button[name="proceed"]:hover{float:left;margin:5px 10px 5px 5px}
-	.woocommerce form .form-row select#calc_shipping_country, .woocommerce-page form .form-row select#calc_shipping_country{width:415px}
+	.woocommerce form .form-row select#calc_shipping_country, .woocommerce-page form .form-row select#calc_shipping_country{width:390px}
 	body.woocommerce table.shop_table td,
 	body.woocommerce-page table.shop_table td{padding:6px 2px}
 	body.woocommerce div.product form.cart div.quantity,
@@ -1380,6 +1381,8 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 	.woocommerce-page table.cart td.actions .button,
 	.woocommerce-page table.cart td.actions .input-text,
 	.woocommerce-page table.cart td.actions input{width:45% !important}
+	body.woocommerce-page #content table.cart td.actions .coupon label{display:none}
+	body.woocommerce-page #content table.cart td.actions .coupon #coupon_code{margin-left:5px;}
 	/*checkout*/
 	body.woocommerce .order_details>li,body.woocommerce-page .order_details>li {border: 1px solid #d6d6d6 !important;border-width:1px 1px 0 1px !important;margin: 0 !important;width: 400px;padding:5px 10px}
 	body.woocommerce .order_details>li:last-child,body.woocommerce-page .order_details>li:last-child {border-width:1px 1px 1px 1px !important;}
@@ -1412,6 +1415,7 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 	.woocommerce a.added_to_cart, body.woocommerce-page a.added_to_cart{width:40%; clear:both}
 	body.archive.post-type-archive-product.shop-page #page .container #secondary.widget-area, body.archive.tax-product_cat #page .container #secondary.widget-area{width: 94%; padding: 0 3%;}
 	body.archive.post-type-archive-product.shop-page #page .container #content,	body.archive.tax-product_cat #page .container #content{width: 94%; padding: 0 3%;}
+	.shop-page #calendar_wrap{padding:30px}
 	/*cart*/
 	.woocommerce table.cart td.actions .coupon, .woocommerce-page table.cart td.actions .coupon,
 	.woocommerce #content table.cart td.actions .coupon, .woocommerce-page #content table.cart td.actions .coupon{width:100%}
@@ -1473,6 +1477,11 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 	.woocommerce-page table.cart td.actions .button,
 	.woocommerce-page table.cart td.actions .input-text,
 	.woocommerce-page table.cart td.actions input{width:60% !important;right:20%}
+	body.woocommerce-page #content table.cart td.actions .coupon label{display:none !important}
+	.woocommerce table.cart td.actions .coupon, .woocommerce-page table.cart td.actions .coupon, .woocommerce #content table.cart td.actions .coupon, .woocommerce-page #content table.cart td.actions .coupon{text-align:center}
+	.woocommerce-cart.woocommerce-page #content table td.actions{text-align:center}
+	.woocommerce-cart.woocommerce-page #content table td.actions input{margin:5px 0 !important;padding:10px 0 !important; float:none !important; right:auto !important; left:auto !important; min-width:75%}
+	.woocommerce #content table.cart td.actions .coupon, .woocommerce table.cart td.actions .coupon, .woocommerce-page #content table.cart td.actions .coupon, .woocommerce-page table.cart td.actions .coupon{padding-bottom:0 !important}
 	/*product*/
 	body.woocommerce div.product div.images, 
 	body.woocommerce-page div.product div.images, 
