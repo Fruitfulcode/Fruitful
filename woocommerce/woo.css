@@ -1306,8 +1306,9 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 @media only screen and (min-width: 480px) and (max-width: 767px){
 	/*shop*/
 	.archive.post-type-archive-product #container {float:right; width:100%; padding:0;}	
+	.archive.tax-product_cat #page #container{width:100%}
 	.woocommerce .products ul, .woocommerce-page .products ul, .woocommerce ul.products, .woocommerce-page ul.products{text-align:center}
-	.woocommerce .container ul.products li.product, body.woocommerce-page .container ul.products li.product{width:202px !important;margin-left:3px;margin-right:3px;min-height: 315px;}
+	.woocommerce .container ul.products li.product, body.woocommerce-page .container ul.products li.product{width:195px !important;margin-left:3px;margin-right:3px;min-height: 315px;}
 	.woocommerce.single-product .container .related.products ul.products li.product, body.woocommerce-page.single-product .container .related.products ul.products li.product{min-height: 330px;margin-right:3px}
 	.woocommerce .woocommerce-ordering, .woocommerce-page .woocommerce-ordering{width:100%;}
 	body.woocommerce form.woocommerce-ordering, body.woocommerce-page form.woocommerce-ordering{margin-bottom:40px}
@@ -1317,6 +1318,8 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 	.woocommerce ul.products li.product a.add_to_cart_button.product_type_simple,
 	.woocommerce ul.products li.product a.button.product_type_variable{display:block; visibility:visible}
 	.woocommerce a.added_to_cart, body.woocommerce-page a.added_to_cart{width:60%; clear:both}
+	body.archive.post-type-archive-product.shop-page #page .container #secondary.widget-area, body.archive.tax-product_cat #page .container #secondary.widget-area{width: 94%; padding: 0 3%;}
+	body.archive.post-type-archive-product.shop-page #page .container #content,	body.archive.tax-product_cat #page .container #content{width: 98%; padding: 0 1%;}
 	/*cart*/
 	.woocommerce-cart.woocommerce-page #content table thead th{font-size:12px}
 	#body .woocommerce table.shop_table td.product-quantity,body.woocommerce-page table.shop_table td.product-quantity {padding: 0}
@@ -1391,7 +1394,9 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 	.single-product.woocommerce-page div.product,
 	.single-product.woocommerce #content div.product,
 	.single-product.woocommerce-page #content div.product{width:100%}
-} 
+	body.single-product #page .container #content,	body.single-product #page .container #content{width: 94%; padding: 0 3%;}
+	.single-product.woocommerce .container ul.products li.product, body.single-product.woocommerce-page .container ul.products li.product {width: 189px !important;} 
+}
  
 @media only screen and (max-width: 479px){
 	/*shop*/
@@ -1405,6 +1410,8 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 	.woocommerce ul.products li.product a.add_to_cart_button.product_type_simple,
 	.woocommerce ul.products li.product a.button.product_type_variable{display:block; visibility:visible}
 	.woocommerce a.added_to_cart, body.woocommerce-page a.added_to_cart{width:40%; clear:both}
+	body.archive.post-type-archive-product.shop-page #page .container #secondary.widget-area, body.archive.tax-product_cat #page .container #secondary.widget-area{width: 94%; padding: 0 3%;}
+	body.archive.post-type-archive-product.shop-page #page .container #content,	body.archive.tax-product_cat #page .container #content{width: 94%; padding: 0 3%;}
 	/*cart*/
 	.woocommerce table.cart td.actions .coupon, .woocommerce-page table.cart td.actions .coupon,
 	.woocommerce #content table.cart td.actions .coupon, .woocommerce-page #content table.cart td.actions .coupon{width:100%}
@@ -1481,6 +1488,7 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 	.woocommerce .upsells.products ul li.product,
 	.woocommerce-page .upsells.products ul li.product {width: 100% !important;}
 	.single-product.woocommerce div.product, .single-product.woocommerce-page div.product, .single-product.woocommerce #content div.product, .single-product.woocommerce-page #content div.product{width:100%}
+	body.single-product #page .container #content,	body.single-product #page .container #content{width: 94%; padding: 0 3%;}
 	/*checkoout*/
 	body.woocommerce-page #content input.button[name="apply_coupon"]{padding: 10px 8px !important;}
 	body.woocommerce .order_details>li,body.woocommerce-page .order_details>li {border: 1px solid #d6d6d6 !important;border-width:1px 1px 0 1px !important;margin: 0 !important;width: 90%;padding:5px 5%}
