@@ -564,6 +564,10 @@ button,html input[type="button"],input[type="reset"],input[type="submit"] {
 	-ms-transition: background 0.2s ease-in-out; 
 	transition: background 0.2s ease-in-out;
 }
+#comments{
+	width:100%;
+	float:left
+}
 #page #comments #commentform input[type="submit"] {
 	max-height:none;
 }
@@ -1070,6 +1074,7 @@ embed,iframe,object {
 .flex-direction-nav a {
 	z-index:999
 }
+
 
 #page {position:relative;}
 #page .container .btm_header, #page .container .entry-header {
@@ -2114,6 +2119,7 @@ aside #lang_sel {
 @media only screen and (min-width:768px) and (max-width:959px) {
 	.blog_post .post-content { width: 452px;}
 	.search .blog_post .post-content { width:692px; }
+	#calendar_wrap{padding:10px 3px}
 	input#s { width:177px;}
 }
 @media screen and ( max-width: 782px ) {
@@ -2123,22 +2129,28 @@ aside #lang_sel {
 	.head-container.is_indent {top: 0;}
 }
 @media only screen and (max-width:767px) {
+	.page-container{margin-bottom:40px;}
     /* nav menu ul & select */
 	.menu { display:none; }
 	#header_language_select{display:none;}
 	.widget_nav_menu .menu {display:block;}
 	.main-navigation { float:none !important; }
 	#page .container header hgroup { margin: 0 0 15px; }
-	#page .container #secondary{margin-top:40px}
 	.select-menu { display:block; }
 	#back-top { display: none; }
 	.blog_post .post-content,
-	.search .blog_post .post-content {width: 364px;}
-	input#s { width:373px; }	
+	.search .blog_post .post-content {width: 338px;}
+	input#s { width:343px; }	
 	body.post-type-archive #searchform input#s{max-width:100%}
 	.comment-meta{	width:80%;}
 	#page .container #secondary .widget>ul>li.cat-item{overflow-x:hidden}
 	.flex-control-nav{display:none}
+	.page-header{width: 94%;padding: 10px 3%;margin:0}
+	#comments	{width: 94%;padding: 10px 3%;margin:0}
+	article		{width: 94%;padding: 10px 3%;margin:0}
+	#colophon	{width: 94%;padding: 10px 3%;margin:0}
+	#page .container #secondary	{width: 94%;padding: 10px 3%;margin:40px 0 0 0}
+	#colophon .site-info{width:100%}
 }
 
 @media only screen and (min-width:480px) and (max-width:767px) {
@@ -2151,8 +2163,8 @@ aside #lang_sel {
 	.blog_post .date_of_post {	width: 50px; height: 50px; float:none; left:0; top:1px}
 	.blog_post .date_of_post .day_post {font-size: 18px;}
 	.blog_post .post-content,
-	.search .blog_post .post-content{width: 298px;}
-	input#s {   width:255px;}
+	.search .blog_post .post-content{width: 281px;}
+	input#s {   width:235px;}
 	#page .container #secondary .widget>ul>li.cat-item{overflow-x:hidden}
 	.info_box_area .info_box {margin: 0 0 35px 0;float: left;display: block;width: 100%;}
 	.responsive .select-menu{margin: 16px 0 25px 0 !important}

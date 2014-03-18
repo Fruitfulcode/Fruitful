@@ -412,6 +412,10 @@ button,html input[type="button"],input[type="reset"],input[type="submit"] {
 	-ms-transition: background 0.2s ease-in-out; 
 	transition: background 0.2s ease-in-out;
 }
+#comments{
+	width:100%;
+	float:left;
+}
 #page #comments #commentform input[type="submit"] {
 	max-height:none;
 }

@@ -1193,9 +1193,6 @@ body.woocommerce-checkout.woocommerce-page form .form-row textarea{color:#333333
 body.woocommerce-cart .woocommerce .cart-collaterals .shipping_calculator h2 a,
 body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2 a{text-decoration:none;color:#333333;} 
 
-/*BLOG PAGE*/
-#comments{width:100%;float:left}
-
 /*PRELOADER*/
 .woocommerce #content input.button.loading:before,
 .woocommerce #respond input#submit.loading:before,
