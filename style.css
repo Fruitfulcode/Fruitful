@@ -311,14 +311,15 @@ body.fancybox-lock {
 /* Note:Design for a width of 480px */
 @media only screen and (min-width:480px) and (max-width:767px) {
     .container {
-    width:420px;
-}
-.container .columns,.container .column {
-    margin:0;
-}
-.container .one.column,.container .one.columns,.container .two.columns,.container .three.columns,.container .four.columns,.container .five.columns,.container .six.columns,.container .seven.columns,.container .eight.columns,.container .nine.columns,.container .ten.columns,.container .eleven.columns,.container .twelve.columns,.container .thirteen.columns,.container .fourteen.columns,.container .fifteen.columns,.container .sixteen.columns,.container .one-third.column,.container .two-thirds.column {
-    width:420px;
-}
+		width:420px;
+	}
+	.container .columns,.container .column {
+		margin:0;
+	}
+	.container .one.column,.container .one.columns,.container .two.columns,.container .three.columns,.container .four.columns,.container .five.columns,.container .six.columns,.container .seven.columns,.container .eight.columns,.container .nine.columns,.container .ten.columns,.container .eleven.columns,.container .twelve.columns,.container .thirteen.columns,.container .fourteen.columns,.container .fifteen.columns,.container .sixteen.columns,.container .one-third.column,.container .two-thirds.column {
+		width:100%;
+		max-width:420px;
+	}
 }
 /* #Clearing================================================== */
 /* Self Clearing Goodness */
