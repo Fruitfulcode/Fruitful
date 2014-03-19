@@ -39,6 +39,13 @@ if ( ! function_exists( 'fruitful_setup' ) ):
 require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/widgets.php';
 
+
+ /**
+ * Adding recommended plugins for Fruitful Theme.
+ */
+require_once('inc/plugins/plugins-included.php');
+
+
 /**
  * Custom functions that act independently of the theme templates
  */
