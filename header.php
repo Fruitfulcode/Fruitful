@@ -53,9 +53,9 @@
 							$menu_pos_class = fruitful_get_class_pos($menu_position);
 						?>
 						
-						<hgroup data-originalstyle="<?php echo $logo_pos_class; ?>" class="<?php echo $logo_pos_class; ?>">  
+						<div data-originalstyle="<?php echo $logo_pos_class; ?>" class="<?php echo $logo_pos_class; ?>">  
 							<?php echo fruitful_get_logo(); ?>
-						</hgroup>	
+						</div>	
 							
 						<div data-originalstyle="<?php echo $menu_pos_class; ?>" class="menu-wrapper <?php echo $menu_pos_class; ?>">
 							<?php fruitful_get_languages_list(); ?>
