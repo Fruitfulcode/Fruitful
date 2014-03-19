@@ -780,7 +780,6 @@ body.woocommerce-page .quantity .plus:hover,
 body.woocommerce #content .quantity .plus:hover, 
 body.woocommerce-page #content .quantity .plus:hover{background:#333333; color:white}
 
-body.single-product .product_meta{display:none}
 .single-product.woocommerce #reviews #comments h2,
 .single-product.woocommerce-page #reviews #comments h2{display:none}
 
