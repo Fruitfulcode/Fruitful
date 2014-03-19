@@ -2,13 +2,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fruitful\n"
 "POT-Creation-Date: 2013-12-11 11:19+0200\n"
-"PO-Revision-Date: 2014-03-12 21:17+0100\n"
+"PO-Revision-Date: 2014-03-19 13:03+0200\n"
 "Last-Translator: Eloy Ferrer <eloy.ferrer@asserio.es>\n"
 "Language-Team: fruitfulcode.com\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.4\n"
+"X-Generator: Poedit 1.5.7\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop;_e;__;_x\n"
 "X-Poedit-Basepath: .\n"
 "Language: es_ES\n"
@@ -276,6 +276,10 @@ msgstr "Resultados de búsqueda de: %s"
 #: searchform.php:11
 msgid "Search"
 msgstr "Buscar"
+
+#: searchform.php:12
+msgid "Type Here to Search"
+msgstr "Escriba aquí para buscar"
 
 #: sidebar-blogright.php:26 sidebar-page.php:26 sidebar.php:26
 msgid "Meta"
@@ -1133,4 +1137,3 @@ msgstr ""
 "a>. Visite nuestro sitio web para más información sobre nosotros y nuestros "
 "servicios <a target=\"_blank\" href=\"http://fruitfulcode.com\">fruitfulcode."
 "com</a> "
-
