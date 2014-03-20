@@ -43,7 +43,7 @@ require get_template_directory() . '/inc/widgets.php';
  /**
  * Adding recommended plugins for Fruitful Theme.
  */
-require_once('inc/plugins/plugins-included.php');
+require_once('inc/func/plugins-included.php');
 
 
 /**
