@@ -2,9 +2,6 @@
 
 require_once ('plugin-activation.php');
 
-// define('CloudServer', 'http://s3.amazonaws.com/DSMarketer');
-// define('PluginFolder', CloudServer . '/plugins/');
-
 add_action( 'tgmpa_register', 'fruitful_register_required_plugins' );
 /**
  * Register the required plugins for Fruitful theme.
