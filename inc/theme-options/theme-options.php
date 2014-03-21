@@ -68,6 +68,7 @@ function fruitful_theme_options_init() {
 	
 
 	add_settings_field( 'menu_style',		__( 'Main menu color', 'fruitful' ),	'fruitful_menu_style_color',		'theme_options', 'colors',    	array('info' => __( 'Choose your colors for main menu in header', 'fruitful' )) );
+	add_settings_field( 'dropdown_menu_style',		__( 'Dropdown menu color', 'fruitful' ),'fruitful_dropdown_menu_style_color', 'theme_options', 'colors',    array('info' => __( 'Choose your colors for dropdown menu in header', 'fruitful' )) );
 	add_settings_field( 'font_style',		__( 'General font color', 'fruitful' ),	'fruitful_font_style_color',		'theme_options', 'colors',    	array('info' => __( 'Choose your colors for text and links', 'fruitful' )) );
 	add_settings_field( 'separator_style',	__( 'Color for lines', 'fruitful' ),	'fruitful_sep_style_color',		'theme_options', 'colors',    	array('info' => __( 'Choose you colors for lines and separators', 'fruitful' )) );
 	add_settings_field( 'button_style',		__( 'Color for buttons', 'fruitful' ),	'fruitful_but_style_color',		'theme_options', 'colors',    	array('info' => __( 'Choose you colors for buttons', 'fruitful' )) );
@@ -558,6 +559,36 @@ function fruitful_menu_style_color () {
 			<h4><?php _e( 'Font color (active and hover)', 'fruitful' ); ?></h4>
 			<fieldset>
 				<input type="text" id="menu_hover_color" class="colorPicker" name="fruitful_theme_options[menu_hover_color]" value="<?php echo esc_attr($options['menu_hover_color']); ?>" data-default-color="#ffffff" />
+			</fieldset>	
+		</div>
+	<?php
+}
+
+function fruitful_dropdown_menu_style_color () {
+	$options = fruitful_get_theme_options();
+	?>
+		<div class="box-options">
+			<h4><?php _e( 'Background color', 'fruitful' ); ?></h4>
+			<fieldset>
+				<input type="text" id="dd_menu_bg_color" class="colorPicker" name="fruitful_theme_options[dd_menu_bg_color]" value="<?php echo esc_attr($options['dd_menu_bg_color']); ?>" data-default-color="#ffffff" />
+			</fieldset>
+		</div>
+		<div class="box-options">
+			<h4><?php _e( 'Menu button color', 'fruitful' ); ?></h4>
+			<fieldset>
+				<input type="text" id="dd_menu_btn_color" class="colorPicker" name="fruitful_theme_options[dd_menu_btn_color]" value="<?php echo esc_attr($options['dd_menu_btn_color']); ?>" data-default-color="#F15A23" />
+			</fieldset>	
+		</div>
+		<div class="box-options">
+			<h4><?php _e( 'Font color', 'fruitful' ); ?></h4>
+			<fieldset>
+				<input type="text" id="dd_menu_font_color" class="colorPicker" name="fruitful_theme_options[dd_menu_font_color]" value="<?php echo esc_attr($options['dd_menu_font_color']); ?>" data-default-color="#333333" />
+			</fieldset>		
+		</div>
+		<div class="box-options">
+			<h4><?php _e( 'Font color (active and hover)', 'fruitful' ); ?></h4>
+			<fieldset>
+				<input type="text" id="dd_menu_hover_color" class="colorPicker" name="fruitful_theme_options[dd_menu_hover_color]" value="<?php echo esc_attr($options['dd_menu_hover_color']); ?>" data-default-color="#333333" />
 			</fieldset>	
 		</div>
 	<?php

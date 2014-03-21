@@ -674,10 +674,32 @@ function fruitful_get_responsive_style () {
 			if (!empty($theme_options['menu_btn_color']))    { $style_ .= '.main-navigation ul li.current_page_item a, .main-navigation ul li.current-menu-ancestor a, .main-navigation ul li.current-menu-item a, .main-navigation ul li.current-menu-parent a, .main-navigation ul li.current_page_parent a {background-color : '.esc_js($theme_options['menu_btn_color']) . '; }' . "\n";  }
 			if (!empty($theme_options['menu_hover_color']))  { $style_ .= '.main-navigation ul li.current_page_item a, .main-navigation ul li.current-menu-ancestor a, .main-navigation ul li.current-menu-item a, .main-navigation ul li.current-menu-parent a, .main-navigation ul li.current_page_parent a {color : '.esc_js($theme_options['menu_hover_color']) . '; } ' . "\n";  }
   
-			$style_ .= '.main-navigation ul > li:hover a {' . "\n";
+			$style_ .= '.main-navigation ul > li:hover>a {' . "\n";
 				if (!empty($theme_options['menu_btn_color']))    { $style_ .= 'background-color : '. esc_js($theme_options['menu_btn_color']) . '; ' . "\n"; }
 				if (!empty($theme_options['menu_hover_color']))  { $style_ .= 'color : '.esc_js($theme_options['menu_hover_color']) . ';  ' . "\n"; }
 			$style_ .= ' } ' . "\n"; 
+  
+			/*styles for dropdown menu*/
+			$style_ .= '#masthead .main-navigation ul > li > ul > li > a {' . "\n";
+				if (!empty($theme_options['dd_menu_bg_color']))    { $style_ .= 'background-color : '. esc_js($theme_options['dd_menu_bg_color']) . '; ' . "\n"; }
+				if (!empty($theme_options['dd_menu_font_color']))  { $style_ .= 'color : '.esc_js($theme_options['dd_menu_font_color']) . ';  ' . "\n"; }
+			$style_ .= ' } ' . "\n"; 
+
+			$style_ .= '#masthead .main-navigation ul > li > ul > li:hover > a {' . "\n";
+				if (!empty($theme_options['dd_menu_btn_color']))    { $style_ .= 'background-color : '. esc_js($theme_options['dd_menu_btn_color']) . '; ' . "\n"; }
+				if (!empty($theme_options['dd_menu_hover_color']))  { $style_ .= 'color : '.esc_js($theme_options['dd_menu_hover_color']) . ';  ' . "\n"; }
+			$style_ .= ' } ' . "\n"; 
+			
+			$style_ .= '#masthead div .main-navigation ul > li > ul > li > ul a {' . "\n";
+				if (!empty($theme_options['dd_menu_bg_color']))    { $style_ .= 'background-color : '. esc_js($theme_options['dd_menu_bg_color']) . '; ' . "\n"; }
+				if (!empty($theme_options['dd_menu_font_color']))  { $style_ .= 'color : '.esc_js($theme_options['dd_menu_font_color']) . ';  ' . "\n"; }
+			$style_ .= ' } ' . "\n"; 
+
+			$style_ .= '#masthead div .main-navigation ul > li > ul > li > ul li:hover a {' . "\n";
+				if (!empty($theme_options['dd_menu_btn_color']))    { $style_ .= 'background-color : '. esc_js($theme_options['dd_menu_btn_color']) . '; ' . "\n"; }
+				if (!empty($theme_options['dd_menu_hover_color']))  { $style_ .= 'color : '.esc_js($theme_options['dd_menu_hover_color']) . ';  ' . "\n"; }
+			$style_ .= ' } ' . "\n"; 
+			/*end of styles for dropdown menu*/
   
 			$style_ .= '#header_language_select ul li.current > a { color : '.esc_js($theme_options['menu_font_color']). '; } ' . "\n";
 			if (!empty($theme_options['menu_bg_color'])) { $style_ .= '#header_language_select { background-color : '.esc_js($theme_options['menu_bg_color']) . '; } ' . "\n";  }
