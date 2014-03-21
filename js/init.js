@@ -49,19 +49,19 @@ jQuery(document).ready(function($) {
 });
 
 jQuery(window).bind('resize', function() { 
-	vhGroupClass   = jQuery('.responsive #page .container header div').data('originalstyle');
+	vhGroupClass   = jQuery('.responsive #page .container header .header-hgroup').data('originalstyle');
 	vmWrapperClass = jQuery('.responsive #page .container header .menu-wrapper').data('originalstyle');
 	
 	if (jQuery(window).width() <= 767)	 {
 		if (jQuery('.responsive .cart-button').length > 0) {
 			jQuery('.responsive .select-menu').css({'max-width':'80%', 'margin' : '6px 0 25px 0'});		
 		} 
-		jQuery('.responsive #page .container header div').removeClass(vhGroupClass).addClass('center-pos');
+		jQuery('.responsive #page .container header .header-hgroup').removeClass(vhGroupClass).addClass('center-pos');
 		jQuery('.responsive #page .container header .menu-wrapper').removeClass(vmWrapperClass).addClass('center-pos');
 	} else {
 		jQuery('.select-menu').css({'max-width':'none', 'margin' : '0 0 25px 0'});		
 			
-		jQuery('.responsive #page .container header div').removeClass('center-pos').addClass(vhGroupClass);
+		jQuery('.responsive #page .container header .header-hgroup').removeClass('center-pos').addClass(vhGroupClass);
 		jQuery('.responsive #page .container header .menu-wrapper').removeClass('center-pos').addClass(vmWrapperClass);
 	}
 	

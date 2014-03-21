@@ -776,12 +776,13 @@ ul#lang-select-popup{
 }
 .main-navigation ul ul a {
     min-width:155px;
-    background:none !important;
+    background:none ;
     padding:12px 15px !important;
-    color:#333333 !important;
+    color:#333333;
     text-transform:none;
     font-size:14px;
     box-shadow:none !important;
+	transition:background 0 linear !important;
 }
 .main-navigation ul ul li:first-child {
     background:none;
@@ -804,7 +805,7 @@ ul#lang-select-popup{
 	font-size:14px;
 }
 .main-navigation ul ul:hover > a {
-    color:#000 !important;
+    color:#333 !important;
     text-shadow:none !important;
 }
 .main-navigation ul ul a:hover,
@@ -812,7 +813,7 @@ ul#lang-select-popup{
 .main-navigation ul ul li.current-menu-item a,
 .main-navigation ul ul li.current-menu-parent a, 
 .main-navigation ul ul li.current-menu-ancestor a {
-    color:#000 !important;
+    color:#333;
     text-shadow:none !important;
 }
 .main-navigation ul li:hover > ul {
@@ -1087,24 +1088,24 @@ embed,iframe,object {
 	border:0;
 }
 
-#page .container header div.left-pos {
+#page .container header .header-hgroup.left-pos {
     float:left;
     margin: 0 15px 0 0;
 }
 
-#page .container header div.center-pos {
+#page .container header .header-hgroup.center-pos {
 	float: none;
 	width:100%;
 	display:block;
 }
 
-#page .container header div.center-pos a {
+#page .container header .header-hgroup.center-pos a {
 	text-align:center;
 	display:block;
 	float:none;
 }
 
-#page .container header div.right-pos  {
+#page .container header .header-hgroup.right-pos  {
     float:right;
     margin: 0 0 0 15px;
 }
@@ -1127,7 +1128,7 @@ embed,iframe,object {
 }
 
 
-#page .container header div.center-pos {
+#page .container header .header-hgroup.center-pos {
     float:right;
     margin: 0 15px 0 15px;
 }
@@ -2136,7 +2137,7 @@ aside #lang_sel {
 	#header_language_select{display:none;}
 	.widget_nav_menu .menu {display:block;}
 	.main-navigation { float:none !important; }
-	#page .container header div { margin: 0 0 15px; }
+	#page .container header .header-hgroup { margin: 0 0 15px; }
 	.select-menu { display:block; }
 	#back-top { display: none; }
 	.blog_post .post-content,

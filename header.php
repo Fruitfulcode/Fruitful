@@ -53,7 +53,7 @@
 							$menu_pos_class = fruitful_get_class_pos($menu_position);
 						?>
 						
-						<div data-originalstyle="<?php echo $logo_pos_class; ?>" class="<?php echo $logo_pos_class; ?>">  
+						<div data-originalstyle="<?php echo $logo_pos_class; ?>" class="header-hgroup <?php echo $logo_pos_class; ?>">  
 							<?php echo fruitful_get_logo(); ?>
 						</div>	
 							
