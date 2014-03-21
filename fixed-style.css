@@ -201,7 +201,7 @@ body.fancybox-lock {
     width:0;
     height:0;
 }
-article,aside,details,figcaption,figure,footer,header,hgroup,nav,section {
+article,aside,details,figcaption,figure,footer,header,nav,section {
     display:block;
 }
 ol, ul {
@@ -927,24 +927,24 @@ embed,iframe,object {
 	border:0;
 }
 
-#page .container header hgroup.left-pos {
+#page .container header div.left-pos {
     float:left;
     margin: 0 15px 0 0;
 }
 
-#page .container header hgroup.center-pos {
+#page .container header div.center-pos {
 	float:left;
 	width:100%;
 	display:block;
 }
 
-#page .container header hgroup.center-pos a {
+#page .container header div.center-pos a {
 	text-align:center;
 	display:block;
 	float:none;
 }
 
-#page .container header hgroup.right-pos  {
+#page .container header div.right-pos  {
     float:right;
     margin: 0 0 0 15px;
 }
@@ -967,7 +967,7 @@ embed,iframe,object {
 }
 
 
-#page .container header hgroup.center-pos {
+#page .container header div.center-pos {
     float:right;
     margin: 0 15px 0 15px;
 }
