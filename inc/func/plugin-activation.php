@@ -712,8 +712,12 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 			}
 
 			/** Admin options pages already output settings_errors, so this is to avoid duplication */
-			if ( 'options-general' !== $current_screen->parent_base )
-				settings_errors( 'tgmpa' );
+			if ( 'options-general' !== $current_screen->parent_base ){ 
+					$screen = get_current_screen();
+					if ($screen->id !== 'appearance_page_theme_options'){
+						settings_errors( 'tgmpa' );
+					}
+			} 
 
 		}
 
