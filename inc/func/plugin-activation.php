@@ -682,12 +682,12 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 						$last_plugin = array_pop( $plugin_groups ); // Pop off last name to prep for readability
 						$imploded    = empty( $plugin_groups ) ? '<em>' . $last_plugin . '</em>' : '<em>' . ( implode( ', ', $plugin_groups ) . '</em> and <em>' . $last_plugin . '</em>' );
 
-						$rendered .= '<p>' . sprintf( translate_nooped_plural( $this->strings[$type], $count, 'tgmpa' ), $imploded, $count ) . '</p>'; // All messages now stored
+						$rendered .= '<p>' . sprintf( __( $this->strings[$type], $count, 'tgmpa' ), $imploded, $count ) . '</p>'; // All messages now stored
 					}
 
 					/** Setup variables to determine if action links are needed */
-					$show_install_link  = $install_link ? '<a href="' . add_query_arg( 'page', $this->menu, admin_url( $this->parent_url_slug ) ) . '">' . translate_nooped_plural( $this->strings['install_link'], $install_link_count, 'tgmpa' ) . '</a>' : '';
-					$show_activate_link = $activate_link ? '<a href="' . admin_url( 'plugins.php' ) . '">' . translate_nooped_plural( $this->strings['activate_link'], $activate_link_count, 'tgmpa' ) . '</a>'  : '';
+					$show_install_link  = $install_link ? '<a href="' . add_query_arg( 'page', $this->menu, admin_url( $this->parent_url_slug ) ) . '">' . __( $this->strings['install_link'], $install_link_count, 'tgmpa' ) . '</a>' : '';
+					$show_activate_link = $activate_link ? '<a href="' . admin_url( 'plugins.php' ) . '">' . __( $this->strings['activate_link'], $activate_link_count, 'tgmpa' ) . '</a>'  : '';
 
 					/** Define all of the action links */
 					$action_links = apply_filters(
