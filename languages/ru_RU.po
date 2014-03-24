@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Fruitful theme\n"
-"POT-Creation-Date: 2014-03-20 12:50+0200\n"
-"PO-Revision-Date: 2014-03-20 14:57+0200\n"
+"POT-Creation-Date: 2014-03-24 11:47+0200\n"
+"PO-Revision-Date: 2014-03-24 12:38+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Russian\n"
@@ -85,10 +85,12 @@ msgstr "Просмотреть все записи по %s <span class=\"meta-na
 msgid "All posts by %s"
 msgstr "Просмотреть все записи по %s"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/comments.php:33
-#, fuzzy, php-format
+#: C:\wamp\www\fruitful-woocommerce-ru\wp-content\themes\fruitful/comments.php:34
 msgid "One thought on &ldquo;%2$s&rdquo;"
-msgstr "%1$s комментарий к посту &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "%1$s комментарий к посту &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s комментария к посту &ldquo;%2$s&rdquo;"
+msgstr[2] "%1$s комментариев к посту &ldquo;%2$s&rdquo;"
 
 #: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/comments.php:40
 #: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/comments.php:60
@@ -156,7 +158,7 @@ msgstr "Редактировать"
 #: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/content-chat.php:22
 #: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/content-quote.php:23
 #: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/content.php:32
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/functions.php:796
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/functions.php:818
 #, php-format
 msgid "Permalink to %s"
 msgstr "Ссылка на %s"
@@ -188,9 +190,8 @@ msgstr "Один комментарий"
 #: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/content-image.php:42
 #: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/content-quote.php:40
 #: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/content-video.php:41
-#, fuzzy, php-format
 msgid "View all % comments"
-msgstr "Посмотреть  все %  комментариев"
+msgstr "Посмотреть  все % комментариев"
 
 #: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/content.php:53
 msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
@@ -221,30 +222,30 @@ msgstr ""
 msgid "Shop Page Sidebar"
 msgstr ""
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/functions.php:767
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/functions.php:776
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/functions.php:789
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/functions.php:798
 msgid ", "
 msgstr ""
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/functions.php:770
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/functions.php:792
 #, php-format
 msgid "Posted in %1$s"
 msgstr "Опубликовано в %1$s"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/functions.php:831
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:131
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/functions.php:853
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:132
 msgid "Fruitful Theme Options"
 msgstr "Fruitful настройки темы"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/functions.php:1076
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/functions.php:1098
 msgid "Search for products"
 msgstr ""
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/functions.php:1118
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/functions.php:1140
 msgid "You may be interested in&hellip;"
 msgstr ""
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/functions.php:1160
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/functions.php:1182
 #, php-format
 msgid "%d "
 msgstr ""
@@ -407,7 +408,6 @@ msgid "View all posts by %s"
 msgstr "Просмотреть все записи по %s"
 
 #: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/widgets.php:17
-#, fuzzy
 msgid "News Archiv"
 msgstr "Архив новостей"
 
@@ -649,12 +649,12 @@ msgid "Droid Sans, sans-serif"
 msgstr ""
 
 #: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/fruitful-function.php:284
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:694
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:725
 msgid "Header"
 msgstr "Заголовок"
 
 #: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/fruitful-function.php:288
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:701
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:732
 msgid "Footer"
 msgstr "Футер"
 
@@ -674,45 +674,47 @@ msgstr "Ссылка"
 msgid "Target \"_blank\""
 msgstr "Открыть в новой вкладке"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/fruitful-function.php:551
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/fruitful-function.php:561
 msgid "http://fruitfulcode.com"
 msgstr ""
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/fruitful-function.php:551
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/fruitful-function.php:561
 msgid "\"http://wordpress.org"
 msgstr ""
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:161
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:155
 msgid "Install Required Plugins"
 msgstr "Установить Необходимые Плагины"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:162
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:156
 #, fuzzy
 msgid "Install Plugins"
 msgstr "Установить главную страницу"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:163
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugins-included.php:52
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:157
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugins-included.php:49
 #, php-format
 msgid "Installing Plugin: %s"
 msgstr "Установка плагина: %s"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:164
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:158
 msgid "Something went wrong."
 msgstr "Что-то пошло не так."
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:165
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:159
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugins-included.php:51
 #, php-format
-msgid "This theme requires the following plugin: %1$s."
+msgid "Fruitful theme requires the following plugin: %1$s."
 msgstr "Fruitful Тема требует установки следующих плагинов: %1$s."
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:166
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:160
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugins-included.php:52
 #, php-format
-msgid "This theme recommends the following plugin: %1$s."
+msgid "Fruitful theme recommends the following plugin: %1$s."
 msgstr "Fruitful Тема рекоммендует установить следующие плагины: %1$s."
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:167
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugins-included.php:56
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:161
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugins-included.php:53
 #, php-format
 msgid ""
 "Sorry, but you do not have the correct permissions to install the %s plugin. "
@@ -722,20 +724,20 @@ msgstr ""
 "К сожалению, Вы не имеете достаточных прав для установки  плагина - %s. "
 "Свяжитесь с Администратором сайта для помощи в установке плагина."
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:168
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugins-included.php:57
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:162
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugins-included.php:54
 #, php-format
 msgid "The following required plugin is currently inactive: %1$s."
 msgstr "Требуемый плагин установлен, но не активирован: %1$s."
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:169
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugins-included.php:58
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:163
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugins-included.php:55
 #, php-format
 msgid "The following recommended plugin is currently inactive: %1$s."
 msgstr "Рекомендуемый планиг установлен, но не активирован: %1$s."
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:170
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugins-included.php:59
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:164
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugins-included.php:56
 #, php-format
 msgid ""
 "Sorry, but you do not have the correct permissions to activate the %s "
@@ -745,17 +747,18 @@ msgstr ""
 "К сожалению, Вы не имеете достаточных прав для активации плагина -  %s. "
 "Свяжитесь с Администратором сайта для помощи в активации плагина."
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:171
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:165
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugins-included.php:57
 #, php-format
 msgid ""
 "The following plugin needs to be updated to its latest version to ensure "
-"maximum compatibility with this theme: %1$s."
+"maximum compatibility with Fruitful theme: %1$s."
 msgstr ""
 "Следующие плагины рекомендуется обновить до последней версии для "
 "максимальной совместимости с Fruitful темой: %1$s."
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:172
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugins-included.php:61
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:166
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugins-included.php:58
 #, php-format
 msgid ""
 "Sorry, but you do not have the correct permissions to update the %s plugin. "
@@ -765,91 +768,77 @@ msgstr ""
 "К сожалению, Вы не имеете достаточных прав для обновления плагина -  %s. "
 "Свяжитесь с Администратором сайта для помощи в обновлении плагина."
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:173
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugins-included.php:62
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:167
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugins-included.php:59
 msgid "Begin installing plugin"
 msgstr "Начало установки плагина"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:174
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:168
 msgid "Begin activating plugin"
 msgstr "Начало активации плагина"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:175
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugins-included.php:64
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:169
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugins-included.php:61
 msgid "Return to Required Plugins Installer"
 msgstr "Вернуться к Установщику Требуемых Плагинов"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:176
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:170
 msgid "Return to the dashboard"
 msgstr "Вернуться к консоли"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:177
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:1945
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugins-included.php:65
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:171
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:1840
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugins-included.php:62
 msgid "Plugin activated successfully."
 msgstr "Плагин активирован успешно."
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:178
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:1636
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:172
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:1538
 msgid "The following plugin was activated successfully:"
-msgid_plural "The following plugins was activated successfully:"
-msgstr[0] "Плагин был активирован успешно:"
-msgstr[1] "Плагины были активированы успешно:"
-msgstr[2] "Плагины были активированы успешно:"
+msgstr "Плагин был активирован успешно:"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:179
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:173
 #, php-format
 msgid "All plugins installed and activated successfully. %1$s"
 msgstr "Все плагины установлены и активированы успешно.  %1$s"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:180
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:174
 msgid "Dismiss this notice"
 msgstr "Скрыть это сообщение"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:534
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:2162
-msgid "Return to the Dashboard"
-msgstr "Вернуться к Консоли"
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:1085
+msgid "External Link"
+msgstr ""
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:1169
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:1090
 msgid "Private Repository"
 msgstr "Частный Репозиторий"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:1172
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:1093
 msgid "Pre-Packaged"
 msgstr "Предварительно Упакованные"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:1177
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:1097
 msgid "WordPress Repository"
 msgstr "Wordpress Репозиторий"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:1180
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:1100
 msgid "Required"
 msgstr "Требуется"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:1180
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:1100
 msgid "Recommended"
 msgstr "Рекомендуется"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:1183
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:1103
 msgid "Not Installed"
 msgstr "Не установлен"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:1185
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:1105
 msgid "Installed But Not Activated"
 msgstr "Установлен, но не активирован"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:1290
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:1398
-msgid "Install"
-msgstr "Установить"
-
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:1312
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:1399
-msgid "Activate"
-msgstr "Активировать"
-
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:1361
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:1275
 #, php-format
 msgid ""
 "No plugins to install or activate. <a href=\"%1$s\" title=\"Return to the "
@@ -858,53 +847,61 @@ msgstr ""
 "Нет плагинов для установки или активации. <a href=\"%1$s\" title=\"Вернуться "
 "к Консоли\">Вернуться к Консоли</a>"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:1377
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:1291
 msgid "Plugin"
 msgstr "Плагин"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:1378
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:1292
 msgid "Source"
 msgstr "Источник"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:1379
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:1293
 msgid "Type"
 msgstr "Тип"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:1380
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:1294
 msgid "Status"
 msgstr "Статус"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:1928
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:1312
+msgid "Install"
+msgstr "Установить"
+
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:1313
+msgid "Activate"
+msgstr "Активировать"
+
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:1823
 msgid "Install package not available."
 msgstr "Установка пакета недоступна."
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:1929
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:1824
 #, php-format
 msgid "Downloading install package from <span class=\"code\">%s</span>&#8230;"
 msgstr ""
 "Скачивание установочного пакета из <span class=\"code\">%s</span>&#8230;"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:1930
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:1825
 msgid "Unpacking the package&#8230;"
 msgstr "Распаковка пакета&#8230;"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:1931
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:1826
 msgid "Installing the plugin&#8230;"
 msgstr "Установка плагина&#8230;"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:1932
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:1827
 msgid "Plugin install failed."
 msgstr "Установка плагина не удалась."
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:1933
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:1828
 msgid "Plugin installed successfully."
 msgstr "Плагин установлен успешно."
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:1944
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:1839
 msgid "Plugin activation failed."
 msgstr "Активация плагина не удалась."
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:2058
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:1949
 msgid ""
 "The installation and activation process is starting. This process may take a "
 "while on some hosts, so please be patient."
@@ -912,31 +909,31 @@ msgstr ""
 "Процесс установки и активации был начат. Этот процесс может занять некоторое "
 "время, поэтому будьте терпеливы."
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:2059
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:1950
 #, php-format
 msgid "%1$s installed and activated successfully."
 msgstr "%1$s установлен и активирован успешно."
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:2059
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:2068
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:1950
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:1959
 msgid "Show Details"
 msgstr "Показать Детали"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:2059
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:2068
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:1950
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:1959
 msgid "Hide Details"
 msgstr "Скрыть Детали"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:2060
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:1951
 msgid "All installations and activations have been completed."
 msgstr "Все установки и активации завершены."
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:2061
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:1952
 #, php-format
 msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
 msgstr "Установка и Активация Плагина %1$s (%2$d/%3$d)"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:2065
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:1956
 msgid ""
 "The installation process is starting. This process may take a while on some "
 "hosts, so please be patient."
@@ -944,66 +941,51 @@ msgstr ""
 "Процесс установки был начат. Этот процесс может занять некоторое время, "
 "поэтому будьте терпеливы."
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:2066
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:1957
 #, php-format
 msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
 msgstr "Произошла ошибка при установке %1$s: <strong>%2$s</strong>."
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:2067
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:1958
 #, php-format
 msgid "The installation of %1$s failed."
 msgstr "Установка %1$s не удалась."
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:2068
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:1959
 #, php-format
 msgid "%1$s installed successfully."
 msgstr "%1$s установлен успешно."
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:2069
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:1960
 msgid "All installations have been completed."
 msgstr "Все установки завершены."
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugin-activation.php:2070
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:1961
 #, php-format
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr "Установка Плагина %1$s (%2$d/%3$d)"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugins-included.php:50
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugin-activation.php:2052
+msgid "Return to the Dashboard"
+msgstr "Вернуться к Консоли"
+
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugins-included.php:47
 msgid "Fruitful Plugin Integration"
 msgstr "Fruitful Интеграция Плагинов"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugins-included.php:51
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugins-included.php:48
 msgid "Plugin Integration"
 msgstr "Интеграция Плагинов"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugins-included.php:53
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugins-included.php:50
 msgid "Something went wrong with the plugin API."
 msgstr "Что-то пошло не так с API плагина."
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugins-included.php:54
-#, php-format
-msgid "Fruitful theme requires the following plugin: %1$s."
-msgstr "Fruitful Тема требует установки следующих плагинов: %1$s."
-
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugins-included.php:55
-#, php-format
-msgid "Fruitful theme recommends the following plugin: %1$s."
-msgstr "Fruitful Тема рекоммендует установить следующие плагины: %1$s."
-
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugins-included.php:60
-#, php-format
-msgid ""
-"The following plugin needs to be updated to its latest version to ensure "
-"maximum compatibility with Fruitful theme: %1$s."
-msgstr ""
-"Следующие плагины рекомендуется обновить до последней версии для "
-"максимальной совместимости с Fruitful темой: %1$s."
-
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugins-included.php:63
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugins-included.php:60
 msgid "Activate installed plugin"
 msgstr "Активировать установленные плагины"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/plugins/plugins-included.php:66
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/func/plugins-included.php:63
 #, php-format
 msgid "All plugins installed and activated successfully. %s"
 msgstr "Все плагины установлены и активированы успешно. %s"
@@ -1075,7 +1057,6 @@ msgid "Multilingual Switch in Header (WPML)"
 msgstr ""
 
 #: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:52
-#, fuzzy
 msgid "If you wish to show Language Switch in header, select option below. "
 msgstr "Если Вы хотите отобразить корзину в заголовке выберите опцию ниже."
 
@@ -1182,88 +1163,96 @@ msgid "Choose your colors for main menu in header"
 msgstr "Выберите Ваши цвета для меню в заголовке"
 
 #: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:71
+msgid "Dropdown menu color"
+msgstr "Цвет главного меню"
+
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:71
+msgid "Choose your colors for dropdown menu in header"
+msgstr "Выберите Ваши цвета для меню в заголовке"
+
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:72
 msgid "General font color"
 msgstr "Настройки цветов шрифта"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:71
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:72
 msgid "Choose your colors for text and links"
 msgstr "Выберите Ваши цвета для текста и ссылок"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:72
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:73
 msgid "Color for lines"
 msgstr "Цвета для линий"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:72
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:73
 msgid "Choose you colors for lines and separators"
 msgstr "Выберите Ваши цвета для линий и разделителей"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:73
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:74
 msgid "Color for buttons"
 msgstr "Цвета для кнопок"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:73
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:74
 msgid "Choose you colors for buttons"
 msgstr "Выберите Ваши цвета для кнопок"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:76
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:698
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:77
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:729
 msgid "Fonts"
 msgstr "Шрифты"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:76
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:77
 msgid "Popular web safe font collection, select and use for your needs."
 msgstr "Популярная коллекция шрифтов, выбирайте и используйте для Ваших нужд."
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:78
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:79
 msgid "Headers"
 msgstr "Заголовки"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:78
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:79
 msgid "Choose font-family for all headlines."
 msgstr "Выберите название шрифта для всех заголовков."
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:79
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:431
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:80
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:432
 msgid "Menu"
 msgstr "Меню"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:79
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:80
 msgid "Choose font-family for primary menu."
 msgstr "Выберите название шрифта для главного меню."
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:80
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:81
 msgid "Body"
 msgstr "Содержимое страницы"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:80
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:81
 msgid "Choose font-family for content."
 msgstr "Выберите название шрифта для контента."
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:82
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:83
 msgid "Font size"
 msgstr "Размер шрифта"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:82
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:83
 msgid ""
 "Choose font size for specific html elements. Set size as number, without px."
 msgstr ""
 "Выберите размер шрифта для конкретных элементов HTML. Установить размер, "
 "число без px."
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:83
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:699
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:84
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:730
 msgid "Slider"
 msgstr "Слайдер"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:83
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:84
 msgid "Select a slider type that will be used by default."
 msgstr "Выберите слайдер, который будет использоваться по-умолчанию."
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:84
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:85
 msgid "Slider Options"
 msgstr "Настройки слайдера"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:84
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:85
 msgid ""
 "Choose needed options for slider: animation type, sliding direction, speed "
 "of animations, etc"
@@ -1271,11 +1260,11 @@ msgstr ""
 "Выберите нужные опции для слайдера. Тип анимации, направления скольжения, "
 "скорость анимации, и т.д."
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:85
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:86
 msgid "Slides"
 msgstr "Слайды"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:85
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:86
 msgid ""
 "Add images to slider (Supported files .png, .jpg, .gif). If you want to "
 "change order, just drag and drop it. Image size for slides is original from "
@@ -1291,19 +1280,19 @@ msgstr ""
 "[fruitful_slider]. Текущая версия темы поддерживает только один слайдер на "
 "сайте."
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:87
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:88
 msgid "Socials Links Position"
 msgstr "Положение социальных ссылок на странице"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:87
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:88
 msgid "Choose place where social links will be displayed."
 msgstr "Выберите место где будут располагаться социальные ссылки"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:88
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:89
 msgid "Socials Links"
 msgstr "Социальные ссылки"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:88
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:89
 msgid ""
 "Add link to your social media profiles. Icons with link will be display in "
 "header or footer."
@@ -1311,20 +1300,20 @@ msgstr ""
 "Добавить ссылки на ваши профили в социальных сетях. Иконка с ссылкой "
 "автоматичски отобразиться в верхнем или нижнем колонтитуле."
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:89
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:90
 msgid "Footer options"
 msgstr "Опции футера"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:89
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:90
 msgid "Replace default theme copyright information and links"
 msgstr "Заменить информацию об авторских правах и ссылки"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:91
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:702
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:92
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:733
 msgid "Custom CSS"
 msgstr "Стили CSS"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:91
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:92
 msgid ""
 "Theme has two css files style.css and fixed-style.css which use default "
 "styles for front-end responsive and static layout. Do not edit theme default "
@@ -1334,322 +1323,326 @@ msgstr ""
 "стили по-умолчанию для респонсив и статической версии. Не изменяйте файлы "
 "стилей которые заданы по-умолчанию, используйте для этого редактор стилей."
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:132
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:147
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:686
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:133
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:148
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:717
 msgid "Theme Options"
 msgstr "Настройки темы"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:168
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:169
 msgid "Dummy data"
 msgstr "Установить"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:177
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:178
 msgid "Responsive"
 msgstr "Респонсив"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:187
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:188
 msgid "Display comment on posts page"
 msgstr "Показать комментарий для записи"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:192
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:193
 msgid "Display comment on page"
 msgstr "Показать комментарий на странице"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:203
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:204
 msgid "Enabled"
 msgstr "Закрепить"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:208
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:209
 msgid "Header background-color"
 msgstr "Цвет фона верхнего колонтитула"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:219
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:230
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:249
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:220
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:231
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:250
 msgid "Enable"
 msgstr "Включить"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:290
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:291
 msgid "Copyright section"
 msgstr "Раздел копирайт"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:297
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:298
 msgid "Styles editor"
 msgstr "Редактор стилей"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:311
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:312
 msgid "Background  repeat"
 msgstr "Повторение фонового рисунка"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:377
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:378
 msgid "Width"
 msgstr "Ширина"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:379
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:380
 msgid "Height"
 msgstr "Высота"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:395
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:406
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:416
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:396
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:407
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:417
 msgid "Sample Font"
 msgstr ""
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:425
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:426
 msgid "H1"
 msgstr ""
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:426
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:427
 msgid "H2"
 msgstr ""
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:427
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:428
 msgid "H3"
 msgstr ""
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:428
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:429
 msgid "H4"
 msgstr ""
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:429
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:430
 msgid "H5"
 msgstr ""
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:430
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:431
 msgid "H6"
 msgstr ""
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:432
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:433
 msgid "P"
 msgstr ""
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:447
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:448
 msgid "View Options"
 msgstr "Посмотреть опции"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:450
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:451
 msgid "No Slider Select!"
 msgstr "Слайдер не выбран!"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:453
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:454
 msgid "Animation type"
 msgstr "Тип анимации"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:454
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:455
 msgid "Sliding direction, \"horizontal\" or \"vertical\""
 msgstr "Направления скольжения, \"Горизонталь \" или \"Вертикаль \""
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:455
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:456
 msgid "Reverse the animation direction"
 msgstr "Обратная анимация"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:456
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:457
 msgid "Animate slider automatically"
 msgstr "Автоматическая анимация слайдов"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:457
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:458
 msgid "Set the speed of the slideshow cycling, in milliseconds"
 msgstr "Установить скорость слайд-шоу, в миллисекундах"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:458
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:459
 msgid "Set the speed of animations, in milliseconds"
 msgstr "Установить скорость анимации, в миллисекундах"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:459
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:460
 msgid "Set an initialization delay, in milliseconds"
 msgstr "Установить задержку при инициализации, в миллисекундах"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:460
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:461
 msgid "Randomize slide order"
 msgstr "Случайный порядок слайдов"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:461
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:462
 msgid "Manual control usage"
 msgstr "Ручной контроль"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:464
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:465
 msgid "Slider Skins"
 msgstr "Стили слайдера"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:465
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:466
 msgid "Effect"
 msgstr "Эффекты"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:466
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:467
 msgid "For slice animations"
 msgstr ""
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:467
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:468
 msgid "For box animations (Cols)"
 msgstr "Для окна анимации (колонки)"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:468
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:469
 msgid "For box animations (Rows)"
 msgstr "Для окна анимации (строки)"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:469
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:470
 msgid "Slide transition speed"
 msgstr "Скорость смены слайдов"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:470
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:471
 msgid "How long each slide will show"
 msgstr "Временной промежуток между переключением слайдов"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:471
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:472
 msgid "Set starting Slide (0 index)"
 msgstr "Установить начальный слайд (0 index)"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:472
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:473
 msgid "Next & Prev navigation"
 msgstr "Следующая и Предыдущая навигации"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:473
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:474
 msgid "1,2,3... navigation"
 msgstr "1,2,3 … навигация"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:474
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:475
 msgid "Use thumbnails for Control Nav"
 msgstr "Использование миниатюр для \"Control Nav\""
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:475
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:476
 msgid "Stop animation while hovering"
 msgstr "Остановить анимацию при наведении"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:476
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:477
 msgid "Force manual transitions"
 msgstr ""
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:477
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:478
 msgid "Prev directionNav text"
 msgstr "Предыдущий  \"directionNav\" текст"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:478
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:479
 msgid "Next directionNav text"
 msgstr "Следующий \"directionNav\" текст"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:479
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:480
 msgid "Start on a random slide"
 msgstr "Случайный слайд"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:489
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:490
 #, php-format
 msgid "Slide # %1$d"
 msgstr "Слайдер # %1$d"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:509
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:510
 msgid "Collapse all"
 msgstr "Свернуть все"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:510
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:511
 msgid "Expand all"
 msgstr "Развернуть все"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:532
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:533
 msgid "Add New Slide"
 msgstr "Добваить новый слайд"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:540
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:541
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:571
 msgid "Background color"
 msgstr "Цвет фона"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:546
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:547
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:577
 msgid "Menu button color"
 msgstr "Цвет кнопок меню"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:552
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:571
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:553
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:583
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:602
 msgid "Font color"
 msgstr "Цвет шрифта"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:558
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:559
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:589
 msgid "Font color (active and hover)"
 msgstr "Цвет шрифта (при наведении и нажатии)"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:580
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:611
 msgid "Link color"
 msgstr "Цвет ссылок"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:586
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:617
 msgid "Link color (hover)"
 msgstr "Цвет ссылок (при наведении)"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:592
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:623
 msgid "Link color (focus)"
 msgstr "Цвет ссылок (при фокусе)"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:598
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:629
 msgid "Link color (active)"
 msgstr "Цвет ссылок (при нажатии)"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:611
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:642
 msgid "Widget separator color"
 msgstr "Цвет разделителя виджета"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:618
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:649
 msgid "Blog post date color"
 msgstr "Цвет даты поста блога"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:625
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:656
 msgid "Date font color"
 msgstr "Цвет шрифта даты"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:638
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:669
 msgid "Button background color"
 msgstr "Цвет кнопок"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:645
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:676
 msgid "Button background color (hover, active, focus, current page - pagenavi)"
 msgstr ""
 "Цвет кнопок (при наведении, нажатии, фокусе, цвет текущей страницы - "
 "навигация)"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:687
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:712
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:718
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:743
 msgid "Save"
 msgstr "Сохранить"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:693
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:724
 msgid "General"
 msgstr "Общие"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:695
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:726
 msgid "Background"
 msgstr "Фон"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:696
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:727
 msgid "Logo"
 msgstr "Логотип"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:697
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:728
 msgid "Colors"
 msgstr "Цвета"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:700
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:731
 msgid "Social Links"
 msgstr "Соц. сети"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:719
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:750
 msgid "Support developers"
 msgstr "Техподдержка"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:721
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:752
 msgid "If you like our theme please rate it and "
 msgstr "Если вам понравился наш шаблон, пожалуйста, оцените его и "
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:722
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:753
 msgid "leave us review"
 msgstr "оставьте отзыв"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:723
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:754
 msgid "On"
 msgstr "На"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:723
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:754
 msgid "Support forum"
 msgstr "Форуме поддержки"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:724
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:755
 msgid ""
 "you may find answers on your questions. With customization requests and "
 "suggestion you always can "
@@ -1657,17 +1650,30 @@ msgstr ""
 "Вы можете найти ответы на свои вопросы. С запросами дополнительной настройки "
 "и кастомизации вы всегда можете "
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:725
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:756
 msgid "contact us"
 msgstr "связаться с нами"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:726
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:757
 msgid "by email. Please visit our website "
 msgstr "по электронной почте. Пожалуйста, посетите наш сайт "
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:726
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:757
 msgid "to know about us and our services."
 msgstr "чтобы узнать больше о нас и наших услугах."
+
+#~ msgid "This theme requires the following plugin: %1$s."
+#~ msgstr "Fruitful Тема требует установки следующих плагинов: %1$s."
+
+#~ msgid "This theme recommends the following plugin: %1$s."
+#~ msgstr "Fruitful Тема рекоммендует установить следующие плагины: %1$s."
+
+#~ msgid ""
+#~ "The following plugin needs to be updated to its latest version to ensure "
+#~ "maximum compatibility with this theme: %1$s."
+#~ msgstr ""
+#~ "Следующие плагины рекомендуется обновить до последней версии для "
+#~ "максимальной совместимости с Fruitful темой: %1$s."
 
 #~ msgid "Tagged %1$s"
 #~ msgstr "Тэги %1$s"
