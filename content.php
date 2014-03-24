@@ -56,11 +56,12 @@
 	<?php endif; ?>
 
 	<footer class="entry-meta">
+		<?php fruitful_entry_meta(); ?>
+		
 		<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) { ?>
 			<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'fruitful' ), __( '1 Comment', 'fruitful' ), __( '% Comments', 'fruitful' ) ); ?></span>
 		<?php } ?>
 		
-		<?php fruitful_entry_meta(); ?>
 		<?php edit_post_link( __( 'Edit', 'fruitful' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-meta -->
 	</div>
