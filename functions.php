@@ -1198,42 +1198,41 @@ function fruitful_is_woo_sidebar() {
 }
 
 /* Add sidebar option for Standard Post */
-function add_post_sidebar() {  
-	$post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
-	if ($post_id ) {
-		add_meta_box( 	'post_sidebar_metaboxes', __( 'Page Attributes', 'fruitful' ),   
-						'post_sidebar_metaboxes', 'post',  'side', 'low' );  
-	}
+function fruitful_add_post_sidebar() {  
+	$screens = array( 'post');
+	foreach ( $screens as $screen ) {
+		 add_meta_box(
+            'fruitful_post_sidebar_metaboxes',
+            __( 'Page Attributes', 'fruitful' ),  
+            'fruitful_post_sidebar_metaboxes_inner',
+            $screen,
+			'side',
+			'low'
+        );
+	}					
 }  
-add_action('admin_init', 'add_post_sidebar', 1); 
+add_action( 'add_meta_boxes', 'fruitful_add_post_sidebar', 99 );
 
-function post_sidebar_metaboxes($post ){
-	wp_nonce_field( 'post_sidebar_metaboxes', 'post_sidebar_metaboxes_nonce' );
-	$post_sidebar_position = (get_post_meta( $post->ID, 'post_sidebar_position_val', true ) !== '' ? get_post_meta( $post->ID, 'post_sidebar_position_val', true ) : 'right_side');
-	
-	echo '<label for="post_sidebar_position_val" style="font-weight: bold; display: block; margin: 10px 0 10px;">';
-		echo __( "Template", 'fruitful' );
-	echo '</label> ';
-	
-	echo '<select id="post_sidebar_position_val" name="post_sidebar_position_val" style="width:100%">';
-		echo '<option value="right_side" ';
-			if ($post_sidebar_position == 'right_side') echo 'selected';
-		echo '>'.__('Right sidebar Template','fruitful').'</option>';
-		echo '<option value="left_side" ';
-			if ($post_sidebar_position == 'left_side') echo 'selected';
-		echo '>'.__('Left sidebar Template','fruitful').'</option>';
-		echo '<option value="full_width" ';
-			if ($post_sidebar_position == 'full_width') echo 'selected';
-		echo '>'.__('Full width Template','fruitful').'</option>';
-	echo '</select>';
+function fruitful_post_sidebar_metaboxes_inner($post ){
+	wp_nonce_field( 'fruitful_post_sidebar_metaboxes', 'fruitful_post_sidebar_metaboxes_nonce' );
+	$frutiful_posts_template = (get_post_meta( $post->ID, 'frutiful_posts_template', true ) !== '' ? get_post_meta( $post->ID, 'frutiful_posts_template', true ) : '3');
+	?>
+	<label for="frutiful_posts_template_val" class="screen-reader-text"><?php _e( 'Template', 'fruitful' ); ?></label>
+	<select id="frutiful_posts_template" name="frutiful_posts_template">
+		<option value="1" <?php selected( $frutiful_posts_template, 1 ); ?>><?php _e('Left sidebar Template','fruitful'); ?></option>
+		<option value="2" <?php selected( $frutiful_posts_template, 2 ); ?>><?php _e('Full width Template','fruitful'); ?></option>
+		<option value="3" <?php selected( $frutiful_posts_template, 3 ); ?>><?php _e('Right sidebar Template','fruitful'); ?></option>
+	</select>
+	<p class="howto"><?php _e( 'Choose template for post', 'fruitful' ); ?></p>
+	<?php
 }
 
-function post_sidebar_metabox_save( $post_id ) {
-	if ( ! isset( $_POST['post_sidebar_metaboxes_nonce'] ) )
+function fruitful_post_sidebar_metabox_save( $post_id ) {
+	if ( ! isset( $_POST['fruitful_post_sidebar_metaboxes_nonce'] ) )
 		return $post_id;
-	$nonce = $_POST['post_sidebar_metaboxes_nonce'];
+	$nonce = $_POST['fruitful_post_sidebar_metaboxes_nonce'];
 
-	if ( ! wp_verify_nonce( $nonce, 'post_sidebar_metaboxes' ) )
+	if ( ! wp_verify_nonce( $nonce, 'fruitful_post_sidebar_metaboxes' ) )
 		return $post_id;
 
 	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) 
@@ -1247,7 +1246,48 @@ function post_sidebar_metabox_save( $post_id ) {
 		return $post_id;
 	}
 	
-	$post_sidebar_position = $_POST['post_sidebar_position_val'];
-	update_post_meta( $post_id, 'post_sidebar_position_val', $post_sidebar_position );
+	$frutiful_posts_template = $_POST['frutiful_posts_template'];
+	update_post_meta( $post_id, 'frutiful_posts_template', $frutiful_posts_template );
 }
-add_action( 'save_post', 'post_sidebar_metabox_save' );
+add_action( 'save_post', 'fruitful_post_sidebar_metabox_save' );
+
+
+function fruitful_get_content_with_custom_sidebar($curr_template) {
+	function get_content_part() {
+		global $post;
+		while ( have_posts() ) : the_post();
+			get_template_part( 'content', get_post_format() );
+			fruitful_content_nav( 'nav-below' );
+			if (fruitful_state_post_comment()) {
+				if ( comments_open() || '0' != get_comments_number() ) comments_template(); 
+			}
+		endwhile;
+	}
+	function get_html_custom_post_template($content_, $sidebar_, $type_ = 1) { ?>
+		<?php if ($type_ == 1) { ?>
+		<div class="eleven columns <?php echo $content_;?>">
+		<?php } else { ?>
+		<div class="sixteen columns <?php echo $content_ . ' ' . $sidebar_;?>">
+		<?php } ?>
+			<div id="primary" class="content-area">
+				<div id="content" class="site-content" role="main">
+					<?php get_content_part(); ?>				
+				</div><!-- #content .site-content -->
+			</div><!-- #primary .content-area -->
+		</div>
+		<?php if ($type_ == 1) { ?>
+			<div class="five columns <?php echo $sidebar_;?>">
+				<?php get_sidebar('single-post'); ?>
+			</div>
+		<?php } ?>
+	<?php	
+	}
+	if ($curr_template == 1) { 
+		get_html_custom_post_template('omega', 'alpha');
+	} else if ($curr_template == 3) { 
+		get_html_custom_post_template('alpha', 'omega');
+	} else {
+		get_html_custom_post_template('omega', 'alpha', 0);
+	}
+
+}

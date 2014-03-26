@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Fruitful theme\n"
 "POT-Creation-Date: 2014-03-24 11:47+0200\n"
-"PO-Revision-Date: 2014-03-26 14:55+0200\n"
+"PO-Revision-Date: 2014-03-26 17:24+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Russian\n"
@@ -1676,6 +1676,9 @@ msgstr "Атрибуты страницы"
 
 msgid "Template"
 msgstr "Шаблон"
+
+msgid "Choose template for post"
+msgstr "Выберите шаблон для поста"
 
 msgid "Right sidebar Template"
 msgstr "Сайдбар справа"
