@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Fruitful theme\n"
 "POT-Creation-Date: 2014-03-24 11:47+0200\n"
-"PO-Revision-Date: 2014-03-24 12:38+0200\n"
+"PO-Revision-Date: 2014-03-26 14:55+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Russian\n"
@@ -1164,7 +1164,7 @@ msgstr "Выберите Ваши цвета для меню в заголовк
 
 #: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:71
 msgid "Dropdown menu color"
-msgstr "Цвет главного меню"
+msgstr "Цвет выпадающего меню"
 
 #: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:71
 msgid "Choose your colors for dropdown menu in header"
@@ -1662,18 +1662,29 @@ msgstr "по электронной почте. Пожалуйста, посет
 msgid "to know about us and our services."
 msgstr "чтобы узнать больше о нас и наших услугах."
 
-#~ msgid "This theme requires the following plugin: %1$s."
-#~ msgstr "Fruitful Тема требует установки следующих плагинов: %1$s."
+msgid "Reset Defaults"
+msgstr "Восстановить"
 
-#~ msgid "This theme recommends the following plugin: %1$s."
-#~ msgstr "Fruitful Тема рекоммендует установить следующие плагины: %1$s."
+msgid "Font color for :active and :hover"
+msgstr "Цвет ссылок при нажатии и наведении курсора"
 
-#~ msgid ""
-#~ "The following plugin needs to be updated to its latest version to ensure "
-#~ "maximum compatibility with this theme: %1$s."
-#~ msgstr ""
-#~ "Следующие плагины рекомендуется обновить до последней версии для "
-#~ "максимальной совместимости с Fruitful темой: %1$s."
+msgid "Type Here to Search"
+msgstr "Поиск по сайту"
+
+msgid "Page Attributes"
+msgstr "Атрибуты страницы"
+
+msgid "Template"
+msgstr "Шаблон"
+
+msgid "Right sidebar Template"
+msgstr "Сайдбар справа"
+
+msgid "Left sidebar Template"
+msgstr "Сайдбар слева"
+
+msgid "Full width Template"
+msgstr "Страница без сайдбара"
 
 #~ msgid "Tagged %1$s"
 #~ msgstr "Тэги %1$s"
@@ -1858,9 +1869,6 @@ msgstr "чтобы узнать больше о нас и наших услуг�
 #~ msgid "Support"
 #~ msgstr "Поддержка"
 
-#~ msgid "Reset Defaults"
-#~ msgstr "Восстановить"
-
 #~ msgid "Menu styling"
 #~ msgstr "Стилизация меню"
 
@@ -1872,9 +1880,3 @@ msgstr "чтобы узнать больше о нас и наших услуг�
 
 #~ msgid "Button background-color"
 #~ msgstr "Цвет фона кнопок"
-
-#~ msgid "Font color for :active and :hover"
-#~ msgstr "Цвет ссылок при нажатии и наведении курсора"
-
-#~ msgid "Type Here to Search"
-#~ msgstr "Поиск по сайту"

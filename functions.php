@@ -1196,3 +1196,58 @@ function fruitful_is_woo_sidebar() {
 	}	
 	return $is_sidebar;
 }
+
+/* Add sidebar option for Standard Post */
+function add_post_sidebar() {  
+	$post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
+	if ($post_id ) {
+		add_meta_box( 	'post_sidebar_metaboxes', __( 'Page Attributes', 'fruitful' ),   
+						'post_sidebar_metaboxes', 'post',  'side', 'low' );  
+	}
+}  
+add_action('admin_init', 'add_post_sidebar', 1); 
+
+function post_sidebar_metaboxes($post ){
+	wp_nonce_field( 'post_sidebar_metaboxes', 'post_sidebar_metaboxes_nonce' );
+	$post_sidebar_position = (get_post_meta( $post->ID, 'post_sidebar_position_val', true ) !== '' ? get_post_meta( $post->ID, 'post_sidebar_position_val', true ) : 'right_side');
+	
+	echo '<label for="post_sidebar_position_val" style="font-weight: bold; display: block; margin: 10px 0 10px;">';
+		echo __( "Template", 'fruitful' );
+	echo '</label> ';
+	
+	echo '<select id="post_sidebar_position_val" name="post_sidebar_position_val" style="width:100%">';
+		echo '<option value="right_side" ';
+			if ($post_sidebar_position == 'right_side') echo 'selected';
+		echo '>'.__('Right sidebar Template','fruitful').'</option>';
+		echo '<option value="left_side" ';
+			if ($post_sidebar_position == 'left_side') echo 'selected';
+		echo '>'.__('Left sidebar Template','fruitful').'</option>';
+		echo '<option value="full_width" ';
+			if ($post_sidebar_position == 'full_width') echo 'selected';
+		echo '>'.__('Full width Template','fruitful').'</option>';
+	echo '</select>';
+}
+
+function post_sidebar_metabox_save( $post_id ) {
+	if ( ! isset( $_POST['post_sidebar_metaboxes_nonce'] ) )
+		return $post_id;
+	$nonce = $_POST['post_sidebar_metaboxes_nonce'];
+
+	if ( ! wp_verify_nonce( $nonce, 'post_sidebar_metaboxes' ) )
+		return $post_id;
+
+	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) 
+		return $post_id;
+
+	if ( 'post' == $_POST['post_type'] ) {
+	if ( ! current_user_can( 'edit_page', $post_id ) )
+		return $post_id;
+	} else {
+	if ( ! current_user_can( 'edit_post', $post_id ) )
+		return $post_id;
+	}
+	
+	$post_sidebar_position = $_POST['post_sidebar_position_val'];
+	update_post_meta( $post_id, 'post_sidebar_position_val', $post_sidebar_position );
+}
+add_action( 'save_post', 'post_sidebar_metabox_save' );
