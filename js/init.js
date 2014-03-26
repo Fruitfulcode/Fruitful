@@ -70,11 +70,18 @@ jQuery(window).bind('resize', function() {
 });
 
 function autoWidthMenu () {
+	var vElemsWidth = 0;
 	if (jQuery('.menu-wrapper').hasClass('center-pos')) {
-		if (jQuery('.cart-button').length > 0) {
-			vElemsWidth = jQuery('.cart-button').outerWidth() + jQuery('.site-navigation').outerWidth();
+		if ((jQuery('.cart-button').length > 0) || (jQuery('#header_language_select').length > 0)) {
+			if (jQuery('.cart-button').length > 0){
+				vElemsWidth += jQuery('.cart-button').outerWidth();
+			}
+			if (jQuery('#header_language_select').length > 0){
+				vElemsWidth += jQuery('#header_language_select').outerWidth();
+			}
+			vElemsWidth += jQuery('.site-navigation').outerWidth();
 		} else {
-			vElemsWidth = jQuery('.site-navigation').outerWidth();
+			vElemsWidth = jQuery('.site-navigation').outerWidth() + 20;
 		}		
 		vElemsWidth = vElemsWidth + 50;
 		jQuery('.menu-wrapper').css({'max-width': vElemsWidth + 'px'})
