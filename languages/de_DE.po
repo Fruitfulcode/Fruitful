@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Fruitful Theme\n"
-"POT-Creation-Date: 2014-03-27 17:16+0200\n"
-"PO-Revision-Date: 2014-03-27 17:16+0200\n"
+"POT-Creation-Date: 2014-03-27 17:59+0200\n"
+"PO-Revision-Date: 2014-03-27 17:59+0200\n"
 "Last-Translator: \n"
 "Language-Team: Fruitful Team <fruitfulcode.com>\n"
 "Language: de_DE\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.3\n"
-"X-Poedit-KeywordsList: _;gettext;gettext_noop;_e;__;_x;_n\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;_e;__;_x;_n;esc_attr_e\n"
 "X-Poedit-Basepath: C:\\wamp\\www\\fruitful-woocommerce\\wp-content\\themes"
 "\\fruitful\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -245,40 +245,40 @@ msgstr "%1$s auf %2$s"
 msgid "Fruitful Theme Options"
 msgstr "Fruitful Theme-Optionen"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/functions.php:1118
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/functions.php:1092
 msgid "Search for products"
 msgstr "Suchen Sie nach Produkten"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/functions.php:1160
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/functions.php:1134
 msgid "You may be interested in&hellip;"
 msgstr "Sie können interessiert sein&hellip;"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/functions.php:1202
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/functions.php:1176
 #, php-format
 msgid "%d "
 msgstr "%d "
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/functions.php:1226
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/functions.php:1200
 msgid "Page Attributes"
 msgstr "Seite Attribute"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/functions.php:1240
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/functions.php:1214
 msgid "Template"
 msgstr "Schablone"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/functions.php:1242
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/functions.php:1216
 msgid "Left sidebar Template"
 msgstr "Linke Seitenleiste Schablone"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/functions.php:1243
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/functions.php:1217
 msgid "Full width Template"
 msgstr "Volle Breite Schablone"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/functions.php:1244
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/functions.php:1218
 msgid "Right sidebar Template"
 msgstr "Recht Seitenleiste Schablone"
 
-#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/functions.php:1246
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/functions.php:1220
 msgid "Choose template for post"
 msgstr "Wählen Sie Vorlage für Post"
 
@@ -373,8 +373,13 @@ msgid "Search Results for: %s"
 msgstr "Suchergebnisse für: %s"
 
 #: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/searchform.php:11
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/searchform.php:13
 msgid "Search"
 msgstr "Suche"
+
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/searchform.php:12
+msgid "Type Here to Search"
+msgstr "Geben Sie hier, um Suche"
 
 #: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/sidebar-blogright.php:26
 #: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/sidebar-page.php:26
@@ -1408,6 +1413,10 @@ msgstr "Header-Hintergrundfarbe"
 #: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:250
 msgid "Enable"
 msgstr "Ermöglichen"
+
+#: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:240
+msgid "Reset Defaults"
+msgstr "Standardwerte zurücksetzen"
 
 #: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:291
 msgid "Copyright section"
