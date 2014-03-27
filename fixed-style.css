@@ -500,7 +500,7 @@ a:hover,a:focus,a:active {
 	float:right;
 	height:100%;
 	margin: 10px 0 0;
-	padding:0 10px;
+	padding:0;
 	z-index:99999999;
 }
 #header_language_select ul{
@@ -515,7 +515,7 @@ a:hover,a:focus,a:active {
 	color:#333333;
     text-decoration:none;
     text-transform:uppercase;
-    padding:7px 10px;
+    padding:7px 20px;
 	font-size:14px;
 }
 #lang-select-block .current a{
@@ -1586,7 +1586,7 @@ address {
 	background-size: cover;
 	background-attachment: fixed;
 	background-position:center center;
-	z-index:9;
+	z-index:9999;
 }
 
 .head-container.fixed {
