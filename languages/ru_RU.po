@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Fruitful theme\n"
 "POT-Creation-Date: 2014-03-24 11:47+0200\n"
-"PO-Revision-Date: 2014-03-27 14:44+0200\n"
+"PO-Revision-Date: 2014-03-27 17:20+0200\n"
 "Last-Translator: \n"
 "Language-Team: Fruitful Team <fruitfulcode.com>\n"
 "Language: Russian\n"
@@ -408,7 +408,7 @@ msgid "View all posts by %s"
 msgstr "Просмотреть все записи по %s"
 
 #: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/widgets.php:17
-msgid "News Archiv"
+msgid "News Archive"
 msgstr "Архив новостей"
 
 #: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/widgets.php:18
@@ -416,9 +416,6 @@ msgid "Use this widget to list your Link posts"
 msgstr "Используйте этот виджет, чтобы вывести свои сообщения"
 
 #: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/widgets.php:51
-msgid "News-Archiv"
-msgstr "Архив новостей"
-
 #: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/widgets.php:62
 msgid "News-Archive"
 msgstr "Архив новостей"

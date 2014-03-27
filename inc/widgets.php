@@ -14,7 +14,7 @@ class Fruitful_Widget_News_Archive extends WP_Widget {
 	 **/
 	function Fruitful_Widget_News_Archive () {
 		$theme_name = wp_get_theme();
-		$widget_name = $theme_name.' '.__( 'News Archiv', 'fruitful' );
+		$widget_name = $theme_name.' '.__( 'News Archive', 'fruitful' );
 		$widget_ops = array( 'classname' => 'widget_news_archive', 'description' => __( 'Use this widget to list your Link posts', 'fruitful' ) );
 		$this->WP_Widget( 'widget_news_archive', $widget_name, $widget_ops );
 		$this->alt_option_name = 'widget_news_archive';
@@ -48,7 +48,7 @@ class Fruitful_Widget_News_Archive extends WP_Widget {
 		ob_start();
 		extract( $args, EXTR_SKIP );
 
-		$title = apply_filters( 'widget_title', empty( $instance['title'] ) ? __( 'News-Archiv', 'fruitful' ) : $instance['title'], $instance, $this->id_base);
+		$title = apply_filters( 'widget_title', empty( $instance['title'] ) ? __( 'News-Archive', 'fruitful' ) : $instance['title'], $instance, $this->id_base);
 
 		if ( ! isset( $instance['number'] ) )
 			$instance['number'] = '10';

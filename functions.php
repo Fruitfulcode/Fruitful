@@ -1199,7 +1199,7 @@ function fruitful_woocommerce_header_add_to_cart_fragment( $fragments ) {
 	<a href="<?php echo get_permalink( woocommerce_get_page_id( 'cart' ) ); ?>" class="cart-contents">
 		<div class="cart_image"></div>
 		<span class="num_of_product_cart"><?php global $woocommerce;
-		 echo sprintf(_n('%d ', '%d ', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count); ?> </span>
+		 echo sprintf(_n('%d ', '%d ', $woocommerce->cart->cart_contents_count, 'fruitful'), $woocommerce->cart->cart_contents_count); ?> </span>
 	</a>
 	<?php
 	$fragments['a.cart-contents'] = ob_get_clean();
