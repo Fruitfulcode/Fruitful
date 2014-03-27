@@ -1038,7 +1038,7 @@ function p_link( $i, $title = '' ) {
   echo "<a class='page-numbers' href='", esc_html( get_pagenum_link( $i ) ), "' title='{$title}'>{$i}</a> ";
 }
 
-function wp_corenavi() {  
+function fruitful_wp_corenavi() {  
 	global $wp_query, 
 			$wp_rewrite;  
 	$next_label = $prev_label = '';
@@ -1087,7 +1087,7 @@ if (class_exists('Woocommerce')) {
 	add_action( 'woocommerce_pagination', 'woocommerce_pagination', 10);
 }
 function woocommerce_pagination() { 
-	wp_corenavi();
+	fruitful_wp_corenavi();
 }
 
 /*rewrite get_product_search_form() function*/
