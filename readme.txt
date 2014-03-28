@@ -98,6 +98,22 @@ Files: .pot, ru_Ru.po, ru_Ru.mo icluded. Default language is english.
     Changelog
 -------------------------------------------------------
 
+= 1.4 = 
+28.03.14
+
+* New: full width post template 
+* New: drop down menu colors 
+* New: bundled plugins: WooCommerce, Maintenance, Contact form 7, WordPress SEO by Yoast
+* New: social media icon Soundcloud
+* New: social media icon Tumblr
+* New translations: German, French, Spanish, Vietnamese
+* Bug fix: WooCommerce display SKU
+* Bug fix: 'hgroup' element has been removed from the HTML5 specification
+* Bug fix: removed notices
+* Bug fix: max-width js header language selector
+* Bug fix: wpml menu and widget
+* Update: translations updates
+
 = 1.3.3 =
 05.03.14
 
