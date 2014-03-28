@@ -39,6 +39,9 @@ body {
 	overflow:hidden;
 	min-width:1024px;
 }
+.container.page-container{
+	margin-top:10px;
+}
 /*Fix fancybox 2*/
 body.fancybox-lock {
     overflow:visible !important;

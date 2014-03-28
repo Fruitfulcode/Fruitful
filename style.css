@@ -39,6 +39,9 @@ body {
     color:#333333;
 	overflow:hidden;
 }
+.container.page-container{
+	margin-top:10px;
+}
 /*Fix fancybox 2*/
 body.fancybox-lock {
     overflow:visible !important;
