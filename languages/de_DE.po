@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Fruitful Theme\n"
 "POT-Creation-Date: 2014-03-27 17:59+0200\n"
-"PO-Revision-Date: 2014-03-27 17:59+0200\n"
+"PO-Revision-Date: 2014-03-28 13:25+0200\n"
 "Last-Translator: \n"
 "Language-Team: Fruitful Team <fruitfulcode.com>\n"
 "Language: de_DE\n"
@@ -292,8 +292,8 @@ msgid ""
 msgstr ""
 "Veröffentlicht <span class=\"entry-date\"><time class=\"entry-date\" "
 "datetime=\"%1$s\" pubdate>%2$s</time></span> bei <a href=\"%3$s\" title="
-"\"Link to full-size image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title="
-"\"Return to %7$s\" rel=\"gallery\">%7$s</a>"
+"\"Link zum Bild in voller Größe\">%4$s &times; %5$s</a> in <a href=\"%6$s\" "
+"title=\"Zurück zu %7$s\" rel=\"gallery\">%7$s</a>"
 
 #: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/image.php:39
 msgid "&larr; Previous"
@@ -1531,7 +1531,7 @@ msgstr "Für Slice-Animationen"
 
 #: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:468
 msgid "For box animations (Cols)"
-msgstr "Für Box-Animationen (Cols)"
+msgstr "Für Box-Animationen (Spalten)"
 
 #: C:\wamp\www\fruitful-woocommerce\wp-content\themes\fruitful/inc/theme-options/theme-options.php:469
 msgid "For box animations (Rows)"
