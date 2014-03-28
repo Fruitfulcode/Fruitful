@@ -1280,8 +1280,9 @@ function fruitful_get_content_with_custom_sidebar($curr_template) {
 		get_html_custom_post_template('omega', 'alpha');
 	} else if ($curr_template == 3) { 
 		get_html_custom_post_template('alpha', 'omega');
+	} else if ($curr_template == ''){
+		get_html_custom_post_template('alpha', 'omega');
 	} else {
 		get_html_custom_post_template('omega', 'alpha', 0);
 	}
-
 }
