@@ -1,6 +1,6 @@
 <?php
 
-require_once ('plugin-activation.php');
+get_template_part('inc/func/plugin-activation');
 
 add_action( 'tgmpa_register', 'fruitful_register_required_plugins' );
 /**
