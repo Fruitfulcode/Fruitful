@@ -588,7 +588,7 @@ function fruitful_dropdown_menu_style_color () {
 		<div class="box-options">
 			<h4><?php _e( 'Font color (active and hover)', 'fruitful' ); ?></h4>
 			<fieldset>
-				<input type="text" id="dd_menu_hover_color" class="colorPicker" name="fruitful_theme_options[dd_menu_hover_color]" value="<?php echo esc_attr($options['dd_menu_hover_color']); ?>" data-default-color="#333333" />
+				<input type="text" id="dd_menu_hover_color" class="colorPicker" name="fruitful_theme_options[dd_menu_hover_color]" value="<?php echo esc_attr($options['dd_menu_hover_color']); ?>" data-default-color="#ffffff" />
 			</fieldset>	
 		</div>
 	<?php

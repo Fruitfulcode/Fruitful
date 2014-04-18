@@ -487,7 +487,7 @@ return array(
 				/*Dropdown Color*/
 				'dd_menu_bg_color'		=> '#ffffff',
 				'dd_menu_btn_color'		=> '#F15A23',
-				'dd_menu_hover_color'	=> '#333333',
+				'dd_menu_hover_color'	=> '#ffffff',
 				'dd_menu_font_color'	=> '#333333',		
 	
 				/*General font colors*/
