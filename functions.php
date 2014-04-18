@@ -1200,7 +1200,7 @@ function fruitful_add_post_sidebar() {
             __( 'Page Attributes', 'fruitful' ),  
             'fruitful_post_sidebar_metaboxes_inner',
             $screen,
-			'side',
+			'normal',
 			'low'
         );
 	}					
