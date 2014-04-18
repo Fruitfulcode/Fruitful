@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Fruitful Theme\n"
 "POT-Creation-Date: 2014-03-27 17:59+0200\n"
-"PO-Revision-Date: 2014-03-28 16:54+0200\n"
+"PO-Revision-Date: 2014-04-18 15:17+0200\n"
 "Last-Translator: \n"
 "Language-Team: Fruitful Team <fruitfulcode.com>\n"
 "Language: de_DE\n"
@@ -1587,7 +1587,7 @@ msgstr ""
 #: inc/theme-options/theme-options.php:718
 #: inc/theme-options/theme-options.php:743
 msgid "Save"
-msgstr "Sparen"
+msgstr "Speichern"
 
 #: inc/theme-options/theme-options.php:724
 msgid "General"
