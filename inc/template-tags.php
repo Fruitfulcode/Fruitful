@@ -15,7 +15,9 @@ if ( ! function_exists( 'fruitful_content_nav' ) ):
  *
  * @since Fruitful theme 1.0
  */
-function fruitful_content_nav( $nav_id ) {
+
+if( !function_exists('fruitful_content_nav') ) {
+function fruitful_content_nav ( $nav_id ) {
 	global $wp_query;
 
 	$nav_class = 'site-navigation paging-navigation';
@@ -45,7 +47,7 @@ function fruitful_content_nav( $nav_id ) {
 
 	</nav><!-- #<?php echo $nav_id; ?> -->
 	<?php
-}
+}}
 endif; // fruitful_content_nav
 
 if ( ! function_exists( 'fruitful_comment' ) ) :
@@ -56,7 +58,9 @@ if ( ! function_exists( 'fruitful_comment' ) ) :
  *
  * @since Fruitful theme 1.0
  */
-function fruitful_comment( $comment, $args, $depth ) {
+
+if( !function_exists('fruitful_comment') ) {
+function fruitful_comment ( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment;
 	switch ( $comment->comment_type ) :
 		case 'pingback' :
@@ -108,7 +112,7 @@ function fruitful_comment( $comment, $args, $depth ) {
 	<?php
 			break;
 	endswitch;
-}
+}}
 endif; // ends check for fruitful_comment()
 
 if ( ! function_exists( 'fruitful_posted_on' ) ) :
@@ -117,7 +121,9 @@ if ( ! function_exists( 'fruitful_posted_on' ) ) :
  *
  * @since Fruitful theme 1.0
  */
-function fruitful_posted_on() {
+
+if( !function_exists('fruitful_posted_on') ) {
+function fruitful_posted_on () {
 	printf( __( 'Posted on <a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s" pubdate>%4$s</time></a><span class="byline"> by <span class="author vcard"><a class="url fn n" href="%5$s" title="%6$s" rel="author">%7$s</a></span></span>', 'fruitful' ),
 		esc_url( get_permalink() ),
 		esc_attr( get_the_time() ),
@@ -127,7 +133,7 @@ function fruitful_posted_on() {
 		esc_attr( sprintf( __( 'View all posts by %s', 'fruitful' ), get_the_author() ) ),
 		esc_html( get_the_author() )
 	);
-}
+}}
 endif;
 
 /**
@@ -135,7 +141,9 @@ endif;
  *
  * @since Fruitful theme 1.0
  */
-function fruitful_categorized_blog() {
+
+if( !function_exists('fruitful_categorized_blog') ) {
+function fruitful_categorized_blog () {
 	if ( false === ( $all_the_cool_cats = get_transient( 'all_the_cool_cats' ) ) ) {
 		// Create an array of all the categories that are attached to posts
 		$all_the_cool_cats = get_categories( array(
@@ -155,15 +163,17 @@ function fruitful_categorized_blog() {
 		// This blog has only 1 category so fruitful_categorized_blog should return false
 		return false;
 	}
-}
+}}
 
 /**
  * Flush out the transients used in fruitful_categorized_blog
  *
  * @since Fruitful theme 1.0
  */
-function fruitful_category_transient_flusher() {
+
+if( !function_exists('fruitful_category_transient_flusher') ) {
+function fruitful_category_transient_flusher () {
 	delete_transient( 'all_the_cool_cats' );
-}
+}}
 add_action( 'edit_category', 'fruitful_category_transient_flusher' );
 add_action( 'save_post', 	 'fruitful_category_transient_flusher' );

@@ -33,7 +33,9 @@
  *
  * @package Fruitful theme
  */
-function fruitful_custom_header_setup() {
+
+if( !function_exists('fruitful_custom_header_setup') ) {
+function fruitful_custom_header_setup () {
 	$args = array(
 		'default-image'          => '',
 		'flex-height' 			 => false,
@@ -54,7 +56,7 @@ function fruitful_custom_header_setup() {
 	if ( function_exists( 'wp_get_theme' ) ) {
 		 add_theme_support( 'custom-header', $args );
 	} 
-}
+}}
 add_action( 'after_setup_theme', 'fruitful_custom_header_setup' );
 
 /**
@@ -91,7 +93,9 @@ if ( ! function_exists( 'fruitful_header_style' ) ) :
  *
  * @since Fruitful theme 1.0
  */
-function fruitful_header_style() {
+
+if( !function_exists('fruitful_header_style') ) {
+function fruitful_header_style () {
 
 	// If no custom options for text are set, let's bail
 	// get_header_textcolor() options: HEADER_TEXTCOLOR is default, hide text (returns 'blank') or any hex value
@@ -121,7 +125,7 @@ function fruitful_header_style() {
 	<?php endif; ?>
 	</style>
 	<?php
-}
+}}
 endif; // fruitful_header_style
 
 if ( ! function_exists( 'fruitful_admin_header_style' ) ) :
@@ -132,7 +136,9 @@ if ( ! function_exists( 'fruitful_admin_header_style' ) ) :
  *
  * @since Fruitful theme 1.0
  */
-function fruitful_admin_header_style() {
+
+if( !function_exists('fruitful_admin_header_style') ) {
+function fruitful_admin_header_style () {
 ?>
 	<style type="text/css">
 	.appearance_page_custom-header #headimg {
@@ -151,7 +157,7 @@ function fruitful_admin_header_style() {
 	}
 	</style>
 <?php
-}
+}}
 endif; // fruitful_admin_header_style
 
 if ( ! function_exists( 'fruitful_admin_header_image' ) ) :

@@ -6,7 +6,9 @@ add_action( 'tgmpa_register', 'fruitful_register_required_plugins' );
 /**
  * Register the required plugins for Fruitful theme.
  */
-function fruitful_register_required_plugins() {
+
+if( !function_exists('fruitful_register_required_plugins') ) {
+function fruitful_register_required_plugins () {
 
 	$plugins = array(
 		array(
@@ -67,6 +69,6 @@ function fruitful_register_required_plugins() {
 	
 
   tgmpa( $plugins, $config );
-}
+}}
 
 ?>
