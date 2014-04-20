@@ -6,7 +6,9 @@ global $arr_img_for_post,
 $arr_img_for_post   = array ('1column.png', '2column.png', '3column.png', '4column.png');
 $arr_img_for_slider = array ('s1.png', 's2.png', 's3.png');
 
-function fruitful_create_custom_page($args = null) {
+
+if( !function_exists('fruitful_create_custom_page') ) {
+function fruitful_create_custom_page ($args = null) {
 	$post    = array();
 	$content = $title = '';
 	
@@ -27,9 +29,11 @@ function fruitful_create_custom_page($args = null) {
 	$id_ = wp_insert_post($post);
 	
 	return $id_;
-}
+}}
 
-function fruitful_custom_media_upload_image($file, $post_id, $desc = null) {
+
+if( !function_exists('fruitful_custom_media_upload_image') ) {
+function fruitful_custom_media_upload_image ($file, $post_id, $desc = null) {
 	$id = '';
 	if ( ! empty($file) ) {
 		$tmp = download_url( $file );
@@ -54,9 +58,11 @@ function fruitful_custom_media_upload_image($file, $post_id, $desc = null) {
 	if ( ! empty($id) ) {
 		return $id;
 	}
-}
+}}
  		
-function fruitful_create_home_page() {
+
+if( !function_exists('fruitful_create_home_page') ) {
+function fruitful_create_home_page () {
 	global $arr_img_for_post, $arr_img_for_slider;
 	
 	
@@ -112,4 +118,4 @@ function fruitful_create_home_page() {
 		update_option('fruitful_demo_content', 1);
 		return true;
 	}	
-}
+}}

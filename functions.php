@@ -59,7 +59,9 @@ require get_template_directory() . '/inc/func/comment-inline-error.php';
  */
 require get_template_directory() . '/inc/theme-options/theme-options.php';
 
-function fruitful_fonts_url() {
+
+if( !function_exists('fruitful_fonts_url') ) {
+function fruitful_fonts_url () {
 	$fonts_url = '';
 
 	/* Translators: If there are characters in your language that are not
@@ -91,9 +93,11 @@ function fruitful_fonts_url() {
 	}
 
 	return $fonts_url;
-}
+}}
 
-function fruitful_setup() {
+
+if( !function_exists('fruitful_setup') ) {
+function fruitful_setup () {
 	/**
 	 * Make theme available for translation
 	 * Translations can be filed in the /languages/ directory
@@ -140,13 +144,15 @@ function fruitful_setup() {
 	
 	add_filter( 'use_default_gallery_style', '__return_false' );
 	
-}
+}}
 endif; 
 add_action( 'after_setup_theme', 'fruitful_setup' );
 // fruitful_setup
 
 
-function fruitful_wp_title( $title, $sep ) {
+
+if( !function_exists('fruitful_wp_title') ) {
+function fruitful_wp_title ( $title, $sep ) {
 	global $paged, $page;
 	if ( is_feed() ) return $title;
 
@@ -157,7 +163,7 @@ function fruitful_wp_title( $title, $sep ) {
 	if ( $paged >= 2 || $page >= 2 )
 		$title = "$title $sep " . sprintf( __( 'Page %s', 'fruitful' ), max( $paged, $page ) );
 	return $title;
-}
+}}
 add_filter( 'wp_title', 'fruitful_wp_title', 10, 2 );
 
 
@@ -166,7 +172,9 @@ add_filter( 'wp_title', 'fruitful_wp_title', 10, 2 );
  *
  * @since Fruitful theme 1.0
  */
-function fruitful_widgets_init() {
+
+if( !function_exists('fruitful_widgets_init') ) {
+function fruitful_widgets_init () {
 	register_widget( 'Fruitful_Widget_News_Archive' );
 	
 	register_sidebar( array(
@@ -205,7 +213,7 @@ function fruitful_widgets_init() {
 		'after_title' => '</h3>',
 	) );
 	
-}
+}}
 
 
 add_action( 'widgets_init', 'fruitful_widgets_init' );
@@ -269,16 +277,20 @@ add_action( 'widgets_init', 'fruitful_widgets_init' );
 }
 add_action( 'wp_enqueue_scripts', 'fruitful_scripts' );
 
-function fruitful_get_link_url() {
+
+if( !function_exists('fruitful_get_link_url') ) {
+function fruitful_get_link_url () {
 	$content = get_the_content();
 	$has_url = get_url_in_content( $content );
 
 	return ( $has_url ) ? $has_url : apply_filters( 'the_permalink', get_permalink() );
-}
+}}
 
 /*Slider*/
 
-function fruitful_get_slider_options_flex() {
+
+if( !function_exists('fruitful_get_slider_options_flex') ) {
+function fruitful_get_slider_options_flex () {
 	$out = "";
 	$theme_options = fruitful_ret_options("fruitful_theme_options");
 	
@@ -298,10 +310,12 @@ function fruitful_get_slider_options_flex() {
     $out .= '});' . "\n";
 	
 	return $out;
-}	  
+}}	  
 
 
-function fruitful_get_slider_options_nivo() {
+
+if( !function_exists('fruitful_get_slider_options_nivo') ) {
+function fruitful_get_slider_options_nivo () {
 	$out = "";
 	$theme_options = fruitful_ret_options("fruitful_theme_options");
 	
@@ -324,10 +338,12 @@ function fruitful_get_slider_options_nivo() {
 	$out .= '});';
 	
 	return $out;
-}
+}}
 
 
-function fruitful_get_slider($atts) {
+
+if( !function_exists('fruitful_get_slider') ) {
+function fruitful_get_slider ($atts) {
 	$slider_ = "";
 	
 	shortcode_atts(array( 'id' => ''), $atts, 'fruitful_slider');
@@ -389,11 +405,13 @@ function fruitful_get_slider($atts) {
 		$slider_ .= '<h3>Please add images for slider in theme options!</h3>';
 	}
 	return $slider_;
-}
+}}
 add_shortcode('fruitful_slider', 'fruitful_get_slider');
 
 /*Get logo img*/
-function fruitful_get_logo () {
+
+if( !function_exists('fruitful_get_logo') ) {
+function fruitful_get_logo  () {
 	$theme_options  = fruitful_ret_options("fruitful_theme_options");
 	$url_logo = '';
 	
@@ -411,11 +429,13 @@ function fruitful_get_logo () {
 	} else {
 		echo  '<a class="logo-description" href="' . esc_url( home_url( '/' ) ) . '" title="' . $description .'" rel="home"><h1 class="site-title">'. $name .'</h1><h2 class="site-description">'. $description .'</h2></a>';
 	}	
-}
+}}
 
 
 /*Get Favicon*/
-function fruitful_get_favicon () {
+
+if( !function_exists('fruitful_get_favicon') ) {
+function fruitful_get_favicon  () {
 	$out_fav_html = '';
 	$theme_options  = fruitful_ret_options("fruitful_theme_options");
 	
@@ -434,10 +454,12 @@ function fruitful_get_favicon () {
 		/*Default favicon file*/
 	}	
 	echo $out_fav_html;
-}
+}}
 
 /*Get footer text*/
-function fruitful_get_footer_text () {
+
+if( !function_exists('fruitful_get_footer_text') ) {
+function fruitful_get_footer_text  () {
 	$out_footer_text = $footer_text = '';
 	$theme_options   = fruitful_ret_options("fruitful_theme_options"); 
 	if (!empty($theme_options['footer_text'])) {
@@ -453,18 +475,22 @@ function fruitful_get_footer_text () {
 		}		
 	echo $out_footer_text;
 	}	
-}
+}}
 
 /*Get position for social icons*/
-function fruitful_is_social_header () {
+
+if( !function_exists('fruitful_is_social_header') ) {
+function fruitful_is_social_header  () {
 	$pos = false;
 	$theme_options  = fruitful_ret_options("fruitful_theme_options"); 
 	if(!empty($theme_options['sl_position']))	{ $pos =  esc_attr($theme_options['sl_position']); }
 	return $pos;
-}
+}}
 
 /*Get footer social icons*/
-function fruitful_get_socials_icon () {
+
+if( !function_exists('fruitful_get_socials_icon') ) {
+function fruitful_get_socials_icon  () {
 	$out = '';
 	$theme_options  = fruitful_ret_options("fruitful_theme_options"); 
 	
@@ -485,11 +511,13 @@ function fruitful_get_socials_icon () {
 	if(!empty($theme_options['email_link'])) 		{ $out .= '<a class="email" 	href="mailto:'		. sanitize_email($theme_options['email_link']) . '"></a>'; }			
 	
 	echo '<div class="social-icon">' . $out . '</div>';
-}
+}}
 
 
 /*Add description block into content block*/
-function fruitful_add_description_block ($atts, $content = null) {
+
+if( !function_exists('fruitful_add_description_block') ) {
+function fruitful_add_description_block  ($atts, $content = null) {
 	$out = '';
 	shortcode_atts(array(
 		  'id'		=> '',
@@ -515,10 +543,12 @@ function fruitful_add_description_block ($atts, $content = null) {
 	$out .= '</div>';
 	
     return $out;
-}
+}}
 add_shortcode ("description", "fruitful_add_description_block");
 
-function fruitful_add_info_box_area ($atts, $content = null) {
+
+if( !function_exists('fruitful_add_info_box_area') ) {
+function fruitful_add_info_box_area  ($atts, $content = null) {
 	 global $columns_count;
 			$columns_count = 3;
 			
@@ -538,11 +568,13 @@ function fruitful_add_info_box_area ($atts, $content = null) {
 	 $out .= '</div>';
 	 return $out;
 	 
-}
+}}
 add_shortcode('info_box_area', 'fruitful_add_info_box_area');
 
 /*Add information box into content block*/
-function fruitful_add_info_box ($atts, $content = null) {
+
+if( !function_exists('fruitful_add_info_box') ) {
+function fruitful_add_info_box  ($atts, $content = null) {
 	global $columns_count;
 	$out = $columns_class = "";
 	shortcode_atts(array(
@@ -584,11 +616,13 @@ function fruitful_add_info_box ($atts, $content = null) {
 		$out .= '<div class="info_box_text" style="' . $style_text .'" >'  . $content . '</div>';
 	 $out .= '</div>';
 return $out;	 
-} 
+}} 
 add_shortcode ("info_box", "fruitful_add_info_box");
 
 /*Enable Comment*/
-function fruitful_state_post_comment () {
+
+if( !function_exists('fruitful_state_post_comment') ) {
+function fruitful_state_post_comment  () {
 	$theme_options  = fruitful_ret_options("fruitful_theme_options"); 
 	if (!empty($theme_options['postcomment'])) {
 		return ($theme_options['postcomment'] == "on");
@@ -596,18 +630,22 @@ function fruitful_state_post_comment () {
 		return false;
 	}	
 	
-}
+}}
 
-function fruitful_state_page_comment () {
+
+if( !function_exists('fruitful_state_page_comment') ) {
+function fruitful_state_page_comment  () {
 	$theme_options  = fruitful_ret_options("fruitful_theme_options"); 
 	if (!empty($theme_options['pagecomment'])) {
 		return ($theme_options['pagecomment'] == "on");
 	} else {
 		return false;
 	}	
-}
+}}
 
-function fruitful_get_responsive_style () {
+
+if( !function_exists('fruitful_get_responsive_style') ) {
+function fruitful_get_responsive_style  () {
 	$style_ = $back_style = $woo_style_ = '';
 	$theme_options  = fruitful_ret_options("fruitful_theme_options"); 
  
@@ -777,10 +815,12 @@ function fruitful_get_responsive_style () {
 	if ($woo_style_ != '') {
 		wp_add_inline_style( 'woo-style', $woo_style_ ); 
 	}	
-}
+}}
 add_action('wp_enqueue_scripts', 'fruitful_get_responsive_style', 99);
 
-function fruitful_get_sliders() {
+
+if( !function_exists('fruitful_get_sliders') ) {
+function fruitful_get_sliders () {
 	$theme_options = fruitful_ret_options("fruitful_theme_options");
 	if (!empty($theme_options['select_slider'])) {
 		if ($theme_options['select_slider'] == "1") {
@@ -789,18 +829,22 @@ function fruitful_get_sliders() {
 			echo fruitful_get_slider_options_nivo();
 		}	
 	}	
-}
+}}
 
-function fruitful_custom_css_and_slider_scripts() {
+
+if( !function_exists('fruitful_custom_css_and_slider_scripts') ) {
+function fruitful_custom_css_and_slider_scripts () {
 	echo '<script type="text/javascript">';
 		echo 'jQuery(document).ready(function($) { ';
 				fruitful_get_sliders();
 		echo '});';
 	echo '</script>';
-}
+}}
 add_action('wp_head', 'fruitful_custom_css_and_slider_scripts', 25);
 
-function fruitful_entry_meta() { 
+
+if( !function_exists('fruitful_entry_meta') ) {
+function fruitful_entry_meta () { 
 ?>
 	<span class="author-link"><a href="<?php print esc_url( get_author_posts_url( get_the_author_meta( 'ID' ))); ?>"><?php print get_the_author(); ?></a></span>
 	<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
@@ -825,9 +869,11 @@ function fruitful_entry_meta() {
 		<?php endif; // End if $tags_list ?>
 	<?php endif; // End if 'post' == get_post_type() ?>
 <?php 
-}
+}}
 
-function fruitful_entry_date( $echo = true ) {
+
+if( !function_exists('fruitful_entry_date') ) {
+function fruitful_entry_date ( $echo = true ) {
 	if ( has_post_format( array( 'chat', 'status' ) ) )
 		$format_prefix = _x( '%1$s on %2$s', '1: post format name. 2: date', 'fruitful' );
 	else
@@ -842,10 +888,12 @@ function fruitful_entry_date( $echo = true ) {
 
 	if ($echo ) echo $date;
 	return $date;
-}
+}}
 
 
-function fruitful_customize_register( $wp_customize ) {
+
+if( !function_exists('fruitful_customize_register') ) {
+function fruitful_customize_register ( $wp_customize ) {
 
 	class Fruitful_Theme_Options_Button_Control extends WP_Customize_Control {
 		public $type = 'button_link_control';
@@ -887,15 +935,19 @@ function fruitful_customize_register( $wp_customize ) {
         )
     )
 );
-}
+}}
 add_action( 'customize_register', 'fruitful_customize_register' );
 
-function fruitful_customize_preview_js() {
+
+if( !function_exists('fruitful_customize_preview_js') ) {
+function fruitful_customize_preview_js () {
 	wp_enqueue_script( 'fruitful-customizer', get_template_directory_uri() . '/js/theme-customizer.js', array( 'customize-preview' ), '20130226', true );
-}
+}}
 add_action( 'customize_preview_init', 'fruitful_customize_preview_js' );
 
-function fruitful_tabs_main($atts, $content = null) {
+
+if( !function_exists('fruitful_tabs_main') ) {
+function fruitful_tabs_main ($atts, $content = null) {
 	global $tab_counter_2;
 	$output = '';
 	shortcode_atts(array('tab' => array('')), $atts, 'tabs');
@@ -927,21 +979,25 @@ function fruitful_tabs_main($atts, $content = null) {
 	$output .='</div>';
 	return $output;
 	unset($tab_counter_2);
-}
+}}
 add_shortcode('tabs', 'fruitful_tabs_main');
 
-function fruitful_tab_elements($atts, $content = null) {
+
+if( !function_exists('fruitful_tab_elements') ) {
+function fruitful_tab_elements ($atts, $content = null) {
 	global $tab_counter_2;
 	$out_tab = '';
 	shortcode_atts(array(), $atts);
 	$out_tab .= '<div>' . do_shortcode($content) . '</div>';
 	$tab_counter_2++;
 	return $out_tab;
-}
+}}
 add_shortcode('tab', 'fruitful_tab_elements');
 
 
-function fruitful_metadevice() {
+
+if( !function_exists('fruitful_metadevice') ) {
+function fruitful_metadevice () {
 	$browser = '';				
 	$browser_ip	= strpos($_SERVER['HTTP_USER_AGENT'],"iPhone");		
 	$browser_an	= strpos($_SERVER['HTTP_USER_AGENT'],"Android");		
@@ -953,17 +1009,21 @@ function fruitful_metadevice() {
 	if($browser == 'iphone') 	{ echo '<meta name="viewport" content="width=480">';  } 
     if($browser == 'android') 	{ echo '<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width" />'; } 
 	if($browser == 'ipad') 		{ echo '<meta name="viewport" content="width=768px, minimum-scale=1.0, maximum-scale=1.0" />'; } 
-}
+}}
 
-function fruitful_esc_content_pbr($content = null) {
+
+if( !function_exists('fruitful_esc_content_pbr') ) {
+function fruitful_esc_content_pbr ($content = null) {
 	 $content = preg_replace( '%<p>&nbsp;\s*</p>%', '', $content );
 	 $Old     = array( '<br />', '<br>' );
 	 $New     = array( '','' );
 	 $content = str_replace( $Old, $New, $content );
 	 return $content;
-}
+}}
 
-function fruitful_get_class_pos($index)  {
+
+if( !function_exists('fruitful_get_class_pos') ) {
+function fruitful_get_class_pos ($index)  {
 	if ($index == 0) {
 		$pos_class = 'left-pos';
 	} else if ($index == 1) {
@@ -973,14 +1033,18 @@ function fruitful_get_class_pos($index)  {
 	}
 	
 	return $pos_class;
-}
+}}
 
-function fruitful_kses_data($text = null) {
+
+if( !function_exists('fruitful_kses_data') ) {
+function fruitful_kses_data ($text = null) {
 	$allowed_tags = wp_kses_allowed_html( 'post' );
 	return wp_kses($text, $allowed_tags);
-}
+}}
 
-function fruitful_get_languages_list(){
+
+if( !function_exists('fruitful_get_languages_list') ) {
+function fruitful_get_languages_list (){
     $theme_options = fruitful_ret_options("fruitful_theme_options");
 	if( function_exists('icl_get_languages') && $theme_options['is_wpml_ready'] == 'on' ){ 
 		$languages = icl_get_languages('skip_missing=0');
@@ -1015,7 +1079,7 @@ function fruitful_get_languages_list(){
 			echo '</ul></div>';
 		}
 	}
-}
+}}
 
 /*woocommerce theme support*/
 add_theme_support( 'woocommerce' );
@@ -1032,7 +1096,9 @@ if (class_exists('Woocommerce')) {
 
 
 /*rewrite pagenavi for woocommerce*/
-function fruitful_wp_corenavi() {  
+
+if( !function_exists('fruitful_wp_corenavi') ) {
+function fruitful_wp_corenavi () {  
 	global $wp_query, 
 			$wp_rewrite;  
 	$next_label = $prev_label = '';
@@ -1074,18 +1140,22 @@ function fruitful_wp_corenavi() {
 	if ($max > 1) {
 		echo '</div>';  
 	} 
-}
+}}
 
 if (class_exists('Woocommerce')) { 
 	remove_action('woocommerce_pagination', 'woocommerce_pagination', 10);
 	add_action( 'woocommerce_pagination', 'woocommerce_pagination', 10);
 }
-function woocommerce_pagination() { 
+
+if( !function_exists('woocommerce_pagination') ) {
+function woocommerce_pagination () { 
 	fruitful_wp_corenavi();
-}
+}}
 
 /*rewrite get_product_search_form() function*/
-function fruitful_get_product_search_form(){
+
+if( !function_exists('fruitful_get_product_search_form') ) {
+function fruitful_get_product_search_form (){
 	?>
 	<form role="search" method="get" id="searchform" action="<?php echo esc_url( home_url( '/'  ) ); ?>">
 			<div>
@@ -1095,15 +1165,17 @@ function fruitful_get_product_search_form(){
 			</div>
 		</form>
 	<?php
-}
+}}
 
 /*change title in tabs on single product page*/
 if (class_exists('Woocommerce')) { 
 	add_filter('woocommerce_product_description_heading','fruitful_product_description_heading');
 }
-function fruitful_product_description_heading() {
+
+if( !function_exists('fruitful_product_description_heading') ) {
+function fruitful_product_description_heading () {
    return '';
-}
+}}
 
 /*4 cross products for cart*/
 if (class_exists('Woocommerce')) { 
@@ -1111,7 +1183,9 @@ if (class_exists('Woocommerce')) {
 	add_action( 'woocommerce_cart_collaterals', 'fruitful_woocommerce_cross_sell_display' );
 }
 
-function fruitful_woocommerce_cross_sell_display(){
+
+if( !function_exists('fruitful_woocommerce_cross_sell_display') ) {
+function fruitful_woocommerce_cross_sell_display (){
 	
 	if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	global $woocommerce_loop, $woocommerce, $product;
@@ -1141,10 +1215,12 @@ function fruitful_woocommerce_cross_sell_display(){
 	<?php endif;
 	wp_reset_query();
 	
-}
+}}
 
 /*4 related products for single-product*/
-function fruitful_woocommerce_related_products_limit() {
+
+if( !function_exists('fruitful_woocommerce_related_products_limit') ) {
+function fruitful_woocommerce_related_products_limit () {
 		global $product;
 		$args = array(
 			'post_type'        		=> 'product',
@@ -1160,13 +1236,15 @@ function fruitful_woocommerce_related_products_limit() {
 
 if (class_exists('Woocommerce')) { 
 	add_filter( 'woocommerce_related_products_args', 'fruitful_woocommerce_related_products_limit' ); 
-}
+}}
 
 // Update cart contents update when products are added to the cart via AJAX 
 if (class_exists('Woocommerce')) { 
 	add_filter('add_to_cart_fragments', 'fruitful_woocommerce_header_add_to_cart_fragment');
 }
-function fruitful_woocommerce_header_add_to_cart_fragment( $fragments ) {
+
+if( !function_exists('fruitful_woocommerce_header_add_to_cart_fragment') ) {
+function fruitful_woocommerce_header_add_to_cart_fragment ( $fragments ) {
 	global $woocommerce;
 	ob_start();
 	?>
@@ -1178,10 +1256,12 @@ function fruitful_woocommerce_header_add_to_cart_fragment( $fragments ) {
 	<?php
 	$fragments['a.cart-contents'] = ob_get_clean();
 	return $fragments;
-}
+}}
 
 
-function fruitful_is_woo_sidebar() {
+
+if( !function_exists('fruitful_is_woo_sidebar') ) {
+function fruitful_is_woo_sidebar () {
 	$is_sidebar = true;
 	if (class_exists('Woocommerce')) { 
 		if (is_cart() || is_checkout() || is_account_page()) {
@@ -1189,10 +1269,12 @@ function fruitful_is_woo_sidebar() {
 		}
 	}	
 	return $is_sidebar;
-}
+}}
 
 /* Add sidebar option for Standard Post */
-function fruitful_add_post_sidebar() {  
+
+if( !function_exists('fruitful_add_post_sidebar') ) {
+function fruitful_add_post_sidebar () {  
 	$screens = array( 'post');
 	foreach ( $screens as $screen ) {
 		 add_meta_box(
@@ -1204,10 +1286,12 @@ function fruitful_add_post_sidebar() {
 			'low'
         );
 	}					
-}  
+}}  
 add_action( 'add_meta_boxes', 'fruitful_add_post_sidebar', 99 );
 
-function fruitful_post_sidebar_metaboxes_inner($post ){
+
+if( !function_exists('fruitful_post_sidebar_metaboxes_inner') ) {
+function fruitful_post_sidebar_metaboxes_inner ($post ){
 	wp_nonce_field( 'fruitful_post_sidebar_metaboxes', 'fruitful_post_sidebar_metaboxes_nonce' );
 	$frutiful_posts_template = (get_post_meta( $post->ID, 'frutiful_posts_template', true ) !== '' ? get_post_meta( $post->ID, 'frutiful_posts_template', true ) : '3');
 	?>
@@ -1219,9 +1303,11 @@ function fruitful_post_sidebar_metaboxes_inner($post ){
 	</select>
 	<p class="howto"><?php _e( 'Choose template for post', 'fruitful' ); ?></p>
 	<?php
-}
+}}
 
-function fruitful_post_sidebar_metabox_save( $post_id ) {
+
+if( !function_exists('fruitful_post_sidebar_metabox_save') ) {
+function fruitful_post_sidebar_metabox_save ( $post_id ) {
 	if ( ! isset( $_POST['fruitful_post_sidebar_metaboxes_nonce'] ) )
 		return $post_id;
 	$nonce = $_POST['fruitful_post_sidebar_metaboxes_nonce'];
@@ -1242,11 +1328,13 @@ function fruitful_post_sidebar_metabox_save( $post_id ) {
 	
 	$frutiful_posts_template = $_POST['frutiful_posts_template'];
 	update_post_meta( $post_id, 'frutiful_posts_template', $frutiful_posts_template );
-}
+}}
 add_action( 'save_post', 'fruitful_post_sidebar_metabox_save' );
 
 
-function fruitful_get_content_with_custom_sidebar($curr_template) {
+
+if( !function_exists('fruitful_get_content_with_custom_sidebar') ) {
+function fruitful_get_content_with_custom_sidebar ($curr_template) {
 	function get_content_part() {
 		global $post;
 		while ( have_posts() ) : the_post();
@@ -1285,4 +1373,4 @@ function fruitful_get_content_with_custom_sidebar($curr_template) {
 	} else {
 		get_html_custom_post_template('omega', 'alpha', 0);
 	}
-}
+}}
