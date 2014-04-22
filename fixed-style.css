@@ -937,7 +937,8 @@ embed,iframe,object {
 }
 
 #page .container header .header-hgroup.center-pos {
-	float:left;
+	float:right;
+    margin: 0 15px 0 15px;
 	width:100%;
 	display:block;
 }
@@ -970,11 +971,6 @@ embed,iframe,object {
 	display:inline-block;
 }
 
-
-#page .container header .header-hgroup.center-pos {
-    float:right;
-    margin: 0 15px 0 15px;
-}
 
 .page-header {
 	 margin: 0 0 20px;
