@@ -38,7 +38,7 @@
 		echo '</div><!-- #primary .content-area -->';
 	echo '</div>';
 	echo '<div class="five columns omega">';
-		  get_sidebar('blogright'); 
+		  get_sidebar('homepage'); 
 	echo '</div>';
 	} ?>
 	
