@@ -221,7 +221,8 @@ add_action( 'widgets_init', 'fruitful_widgets_init' );
 /**
  * Enqueue scripts and styles
  */
- function fruitful_scripts() {
+if( !function_exists('fruitful_scripts') ) {
+function fruitful_scripts() {
 	$theme_options = fruitful_ret_options("fruitful_theme_options");
 	wp_enqueue_script('migrate', get_template_directory_uri() . '/js/jquery-migrate-1.2.1.min.js', array( 'jquery' ), '20130930', false );
 	if (isset($theme_options['select_slider'])){
@@ -274,7 +275,7 @@ add_action( 'widgets_init', 'fruitful_widgets_init' );
 	if ( is_singular() && wp_attachment_is_image() ) {
 		wp_enqueue_script( 'keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
 	}
-}
+}}
 add_action( 'wp_enqueue_scripts', 'fruitful_scripts' );
 
 

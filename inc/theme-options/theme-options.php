@@ -133,7 +133,9 @@ add_filter( 'option_page_capability_fruitful_options', 'fruitful_option_page_cap
  * @since Fruitful theme 1.0
  */
 add_action( 'admin_menu', 'fruitful_theme_options_add_page' );
- function fruitful_theme_options_add_page() {
+
+if( !function_exists('fruitful_theme_options_add_page') ) {
+function fruitful_theme_options_add_page() {
 	$theme_page = add_theme_page(
 		__( 'Fruitful Theme Options', 'fruitful' ),   	// Name of page
 		__( 'Theme Options', 'fruitful' ),   			// Label in menu
@@ -141,7 +143,7 @@ add_action( 'admin_menu', 'fruitful_theme_options_add_page' );
 			'theme_options',                     		// Menu slug, used to uniquely identify the page
 			'fruitful_theme_options_render_page' 		// Function that renders the options page
 	);
-}
+}}
 
 
 add_action( 'admin_bar_menu', 'fruitful_add_custom_link_options', 1000 );
