@@ -83,7 +83,6 @@ function autoWidthMenu () {
 		} else {
 			vElemsWidth = jQuery('.site-navigation').outerWidth() + 20;
 		}		
-		vElemsWidth = vElemsWidth + 50;
 		jQuery('.menu-wrapper').css({'max-width': vElemsWidth + 'px'})
 	} else {
 		jQuery('.menu-wrapper').css({'max-width': 'none'})
