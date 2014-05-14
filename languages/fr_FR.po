@@ -23,7 +23,7 @@ msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
-"Il ressemble à rien n'a été trouvé à cet endroit. Peut-être essayer un des "
+"On dirait que rien n'a été trouvé à cet endroit. Peut-être faudrait-il essayer un des "
 "liens ci-dessous ou une recherche?"
 
 #: archive.php:22 category.php:11
@@ -34,7 +34,7 @@ msgstr "Archives de la catégorie: %s"
 #: archive.php:25 tag.php:11
 #, php-format
 msgid "Tag Archives: %s"
-msgstr "Tag Archives: %s"
+msgstr "Archives du tag: %s"
 
 #: archive.php:32
 #, php-format
@@ -44,17 +44,17 @@ msgstr "Archives de l'auteur: %s"
 #: archive.php:40
 #, php-format
 msgid "Daily Archives: %s"
-msgstr "Archives de la jour: %s"
+msgstr "Archives du: %s"
 
 #: archive.php:43
 #, php-format
 msgid "Monthly Archives: %s"
-msgstr "Archives de la mois: %s"
+msgstr "Archives du mois : %s"
 
 #: archive.php:46
 #, php-format
 msgid "Yearly Archives: %s"
-msgstr "Archives de la année: %s "
+msgstr "Archives de l'année: %s "
 
 #: archive.php:49 sidebar-blogright.php:19 sidebar-page.php:19
 #: sidebar-single-post.php:19 sidebar.php:19
@@ -64,7 +64,7 @@ msgstr "Archives"
 #: author-bio.php:16
 #, php-format
 msgid "About %s"
-msgstr "Sur %s"
+msgstr "A propos %s"
 
 #: author-bio.php:20
 #, php-format
@@ -87,7 +87,7 @@ msgstr "Commentaire navigation"
 
 #: comments.php:41 comments.php:61
 msgid "&larr; Older Comments"
-msgstr "&larr; Âgées Commentaires"
+msgstr "&larr; Anciens Commentaires"
 
 #: comments.php:42 comments.php:62
 msgid "Newer Comments &rarr;"
@@ -121,7 +121,7 @@ msgstr "Modifier"
 #: content-chat.php:22 content-quote.php:23 content.php:32 functions.php:838
 #, php-format
 msgid "Permalink to %s"
-msgstr "Permalink à %s"
+msgstr "Permalien vers %s"
 
 #: content-gallery.php:43 content-image.php:42 content-quote.php:40
 #: content-video.php:41 content.php:62
@@ -172,11 +172,11 @@ msgstr "Blog barre de droite"
 
 #: functions.php:191
 msgid "Single Post Sidebar"
-msgstr "Seul Poste Sidebar"
+msgstr "Poste Seul Sidebar"
 
 #: functions.php:200
 msgid "Shop Page Sidebar"
-msgstr "Encadré de la page à magasiner"
+msgstr "Encadré de la page du magasin"
 
 #: functions.php:809 functions.php:818
 msgid ", "
@@ -223,15 +223,15 @@ msgstr "Modèle de la barre latérale gauche"
 
 #: functions.php:1217
 msgid "Full width Template"
-msgstr "Pleine largeur modèle"
+msgstr "Modèle Pleine largeur"
 
 #: functions.php:1218
 msgid "Right sidebar Template"
-msgstr "Droit sidebar modèle"
+msgstr "Modèle Sidebar Droite"
 
 #: functions.php:1220
 msgid "Choose template for post"
-msgstr "Choisissez modèle de poste"
+msgstr "Choisissez modèle d'article"
 
 #: image.php:25
 #, php-format
@@ -291,14 +291,14 @@ msgstr "Les commentaires et les trackbacks sont fermés."
 
 #: no-results.php:15
 msgid "Nothing Found"
-msgstr "Rien trouvé"
+msgstr "Rien n'a été trouvé"
 
 #: no-results.php:21
 #, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
-"Prêt à publier votre premier poste? <a href=\"%1$s\">Commencez ici</a>."
+"Prêt à publier votre premier article? <a href=\"%1$s\">Commencez ici</a>."
 
 #: no-results.php:25
 msgid ""
@@ -306,15 +306,15 @@ msgid ""
 "different keywords."
 msgstr ""
 "Désolé, mais rien ne correspond à vos critères de recherche. S'il vous plaît "
-"essayer de nouveau avec quelques mots clés différents."
+"essayer de nouveau avec des mots clés différents."
 
 #: no-results.php:30
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
-"Il semble que nous ne pouvons pas trouver ce que vous cherchez. Peut-être la "
-"recherche peut aider."
+"Il semble que nous ne pouvons pas trouver ce que vous cherchez. Peut-être que la "
+"recherche peut vous aider."
 
 #: search.php:15
 #, php-format
