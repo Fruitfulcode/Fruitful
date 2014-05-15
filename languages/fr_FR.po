@@ -341,7 +341,7 @@ msgstr "%s Archives"
 
 #: inc/template-tags.php:27
 msgid "Post navigation"
-msgstr "Poster navigation"
+msgstr "Navigation dans les articles"
 
 #: inc/template-tags.php:31
 msgid "&larr;"
@@ -353,11 +353,11 @@ msgstr "&rarr;"
 
 #: inc/template-tags.php:37
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
-msgstr "<span class=\"meta-nav\">&larr;</span> Les seniors messages"
+msgstr "<span class=\"meta-nav\">&larr;</span> Anciens messages"
 
 #: inc/template-tags.php:41
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
-msgstr "Les nouveaux messages <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Nouveaux messages <span class=\"meta-nav\">&rarr;</span>"
 
 #: inc/template-tags.php:66
 msgid "Pingback:"
@@ -401,15 +401,15 @@ msgstr "Voir tous les messages de %s"
 
 #: inc/widgets.php:17
 msgid "News Archive"
-msgstr "Archives Nouvelles"
+msgstr "Archives des Nouvelles"
 
 #: inc/widgets.php:18
 msgid "Use this widget to list your Link posts"
-msgstr "Utilisez ce widget à la liste de vos messages lien"
+msgstr "Utilisez ce widget pour lister vos articles de liens"
 
 #: inc/widgets.php:51 inc/widgets.php:62
 msgid "News-Archive"
-msgstr "Archive des nouvelles"
+msgstr "Archive des Nouvelles"
 
 #: inc/widgets.php:152
 msgid "Title:"
@@ -637,7 +637,7 @@ msgstr "Droid Sans, sans-serif"
 
 #: inc/func/fruitful-function.php:284 inc/theme-options/theme-options.php:725
 msgid "Header"
-msgstr "Rubrique"
+msgstr "Header"
 
 #: inc/func/fruitful-function.php:288 inc/theme-options/theme-options.php:732
 msgid "Footer"
@@ -657,7 +657,7 @@ msgstr "Lien URL"
 
 #: inc/func/fruitful-function.php:418
 msgid "Target \"_blank\""
-msgstr "Target \"_blank\""
+msgstr "Cible \"_blank\""
 
 #: inc/func/fruitful-function.php:561
 msgid "http://fruitfulcode.com"
@@ -669,16 +669,16 @@ msgstr "http://wordpress.org"
 
 #: inc/func/plugin-activation.php:155
 msgid "Install Required Plugins"
-msgstr "Install Required Plugins"
+msgstr "Installer les Extensions nécessaires"
 
 #: inc/func/plugin-activation.php:156
 msgid "Install Plugins"
-msgstr "Installer des plugins"
+msgstr "Installer des Extensions"
 
 #: inc/func/plugin-activation.php:157 inc/func/plugins-included.php:49
 #, php-format
 msgid "Installing Plugin: %s"
-msgstr "Plugin Installation: %s"
+msgstr "Installation de l'extension: %s"
 
 #: inc/func/plugin-activation.php:158
 msgid "Something went wrong."
@@ -687,12 +687,12 @@ msgstr "Quelque chose s'est mal passé."
 #: inc/func/plugin-activation.php:159 inc/func/plugins-included.php:51
 #, php-format
 msgid "Fruitful theme requires the following plugin: %1$s."
-msgstr "Fruitful thème nécessite le plugin suivant: %1$s."
+msgstr "Fruitful thème nécessite l'extension suivante: %1$s."
 
 #: inc/func/plugin-activation.php:160 inc/func/plugins-included.php:52
 #, php-format
 msgid "Fruitful theme recommends the following plugin: %1$s."
-msgstr "Fruitful thème recommande le plugin suivant: %1$s."
+msgstr "Fruitful thème recommande l'extension suivante: %1$s."
 
 #: inc/func/plugin-activation.php:161 inc/func/plugins-included.php:53
 #, php-format
@@ -702,18 +702,18 @@ msgid ""
 "installed."
 msgstr ""
 "Désolé, mais vous ne disposez pas des autorisations nécessaires pour "
-"installer le plugin  %s. Contactez l'administrateur de ce site pour obtenir "
-"de l'aide sur le plugin installé."
+"installer l'extension  %s. Contactez l'administrateur de ce site pour obtenir "
+"de l'aide sur cette extension."
 
 #: inc/func/plugin-activation.php:162 inc/func/plugins-included.php:54
 #, php-format
 msgid "The following required plugin is currently inactive: %1$s."
-msgstr "Le plugin requis à la suite est actuellement inactive: %1$s."
+msgstr "Cette extension requise est actuellement inactive: %1$s."
 
 #: inc/func/plugin-activation.php:163 inc/func/plugins-included.php:55
 #, php-format
 msgid "The following recommended plugin is currently inactive: %1$s."
-msgstr "Le plugin est recommandé suite est actuellement inactive: %1$s."
+msgstr "Cette extension recommandée est actuellement: %1$s."
 
 #: inc/func/plugin-activation.php:164 inc/func/plugins-included.php:56
 #, php-format
@@ -722,9 +722,9 @@ msgid ""
 "plugin. Contact the administrator of this site for help on getting the "
 "plugin activated."
 msgstr ""
-"Désolé, mais vous n'avez pas les autorisations nécessaires pour activer le "
-"plugin %s. Contactez l'administrateur de ce site pour obtenir de l'aide sur "
-"le plugin activé."
+"Désolé, mais vous n'avez pas les autorisations nécessaires pour activer "
+"l'extension %s. Contactez l'administrateur de ce site pour obtenir de l'aide sur "
+"l'extension activée."
 
 #: inc/func/plugin-activation.php:165 inc/func/plugins-included.php:57
 #, php-format
@@ -732,8 +732,8 @@ msgid ""
 "The following plugin needs to be updated to its latest version to ensure "
 "maximum compatibility with Fruitful theme: %1$s."
 msgstr ""
-"Le plugin suivante doit être mis à jour dans sa dernière version pour "
-"assurer une compatibilité maximale avec le Fruitful thème: %1$s."
+"L'extension suivante doit être mis à jour dans sa dernière version pour "
+"assurer une compatibilité maximale avec le thème Fruitful: %1$s."
 
 #: inc/func/plugin-activation.php:166 inc/func/plugins-included.php:58
 #, php-format
@@ -743,20 +743,20 @@ msgid ""
 "updated."
 msgstr ""
 "Désolé, mais vous n'avez pas les autorisations nécessaires pour mettre à "
-"jour le plugin %s. Contactez l'administrateur de ce site pour obtenir de "
-"l'aide sur le plugin à jour."
+"jour l'extension %s. Contactez l'administrateur de ce site pour obtenir de "
+"l'aide sur cette extension."
 
 #: inc/func/plugin-activation.php:167 inc/func/plugins-included.php:59
 msgid "Begin installing plugin"
-msgstr "Commencez à installer le plugin"
+msgstr "Commencez à installer l'extension"
 
 #: inc/func/plugin-activation.php:168
 msgid "Begin activating plugin"
-msgstr "Commencez activer le plugin"
+msgstr "Commencez à activer l'extension"
 
 #: inc/func/plugin-activation.php:169 inc/func/plugins-included.php:61
 msgid "Return to Required Plugins Installer"
-msgstr "Retour à Obligatoires Plugins Installer"
+msgstr "Retour à Installeur d'Extensions Obligatoires"
 
 #: inc/func/plugin-activation.php:170
 msgid "Return to the dashboard"
@@ -765,16 +765,16 @@ msgstr "Retour au tableau de bord"
 #: inc/func/plugin-activation.php:171 inc/func/plugin-activation.php:1844
 #: inc/func/plugins-included.php:62
 msgid "Plugin activated successfully."
-msgstr "Plugin activé avec succès."
+msgstr "Extension activée avec succès."
 
 #: inc/func/plugin-activation.php:172 inc/func/plugin-activation.php:1542
 msgid "The following plugin was activated successfully:"
-msgstr "Le plugin suivant a été activé avec succès:"
+msgstr "L'extension suivante a été activée avec succès:"
 
 #: inc/func/plugin-activation.php:173
 #, php-format
 msgid "All plugins installed and activated successfully. %1$s"
-msgstr "Tous les plugins installés et activés avec succès. %1$s"
+msgstr "Toutes les extensions sont installées et activées avec succès. %1$s"
 
 #: inc/func/plugin-activation.php:174
 msgid "Dismiss this notice"
@@ -818,12 +818,12 @@ msgid ""
 "No plugins to install or activate. <a href=\"%1$s\" title=\"Return to the "
 "Dashboard\">Return to the Dashboard</a>"
 msgstr ""
-"Aucun plugin à installer ou activer. <a href=\"%1$s\" title=\"Retour au "
+"Aucune extension à installer ou activer. <a href=\"%1$s\" title=\"Retour au "
 "tableau de bord\">Retour au tableau de bord</a>"
 
 #: inc/func/plugin-activation.php:1295
 msgid "Plugin"
-msgstr "Plugin"
+msgstr "Extension"
 
 #: inc/func/plugin-activation.php:1296
 msgid "Source"
@@ -847,13 +847,13 @@ msgstr "Activer"
 
 #: inc/func/plugin-activation.php:1827
 msgid "Install package not available."
-msgstr "Installer le paquet n'est pas disponible."
+msgstr "Le paquet d'installation n'est pas disponible."
 
 #: inc/func/plugin-activation.php:1828
 #, php-format
 msgid "Downloading install package from <span class=\"code\">%s</span>&#8230;"
 msgstr ""
-"Téléchargement package d'installation de <span class=\"code\">%s</"
+"Téléchargement du paquet d'installation de <span class=\"code\">%s</"
 "span>&#8230;"
 
 #: inc/func/plugin-activation.php:1829
@@ -862,19 +862,19 @@ msgstr "Déballage du paquet&#8230;"
 
 #: inc/func/plugin-activation.php:1830
 msgid "Installing the plugin&#8230;"
-msgstr "Installation du plug-in&#8230;"
+msgstr "Installation de l'exension&#8230;"
 
 #: inc/func/plugin-activation.php:1831
 msgid "Plugin install failed."
-msgstr "Plugin installation a échoué."
+msgstr "L'installation de l'extension a échoué."
 
 #: inc/func/plugin-activation.php:1832
 msgid "Plugin installed successfully."
-msgstr "Plugin installé avec succès."
+msgstr "Extension installée avec succès."
 
 #: inc/func/plugin-activation.php:1843
 msgid "Plugin activation failed."
-msgstr "Plugin activation a échoué."
+msgstr "L'activation de l'extension a échoué."
 
 #: inc/func/plugin-activation.php:1953
 msgid ""
@@ -882,8 +882,7 @@ msgid ""
 "while on some hosts, so please be patient."
 msgstr ""
 "Le processus d'installation et d'activation commence. Ce processus peut "
-"prendre un certain temps sur certains hôtes, donc s'il vous plaît soyez "
-"patient."
+"prendre un certain temps sur certains serveurs, Merci de patienter."
 
 #: inc/func/plugin-activation.php:1954
 #, php-format
@@ -905,7 +904,7 @@ msgstr "Toutes les installations et activations ont été achevés."
 #: inc/func/plugin-activation.php:1956
 #, php-format
 msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
-msgstr "Installation et activation Plugin %1$s (%2$d/%3$d)"
+msgstr "Installation et activation de l'extension %1$s (%2$d/%3$d)"
 
 #: inc/func/plugin-activation.php:1960
 msgid ""
@@ -913,7 +912,7 @@ msgid ""
 "hosts, so please be patient."
 msgstr ""
 "Le processus d'installation commence. Ce processus peut prendre un certain "
-"temps sur certains hôtes, donc s'il vous plaît soyez patient."
+"temps sur certains serveurs, merci de patienter."
 
 #: inc/func/plugin-activation.php:1961
 #, php-format
@@ -939,7 +938,7 @@ msgstr "Toutes les installations ont été achevées."
 #: inc/func/plugin-activation.php:1965
 #, php-format
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
-msgstr "Installation Plugin %1$s (%2$d/%3$d)"
+msgstr "Installation de l'extension %1$s (%2$d/%3$d)"
 
 #: inc/func/plugin-activation.php:2056
 msgid "Return to the Dashboard"
@@ -947,24 +946,24 @@ msgstr "Retour au tableau de bord"
 
 #: inc/func/plugins-included.php:47
 msgid "Fruitful Plugin Integration"
-msgstr "Fruitful intégration plugin"
+msgstr "Extension d'Intégration Fruitful"
 
 #: inc/func/plugins-included.php:48
 msgid "Plugin Integration"
-msgstr "Intégration plugin"
+msgstr "Integration d'Extension"
 
 #: inc/func/plugins-included.php:50
 msgid "Something went wrong with the plugin API."
-msgstr "Quelque chose n'allait pas avec l'API de plugin."
+msgstr "Quelque chose n'allait pas avec l'API de l'extension."
 
 #: inc/func/plugins-included.php:60
 msgid "Activate installed plugin"
-msgstr "Activez le plugin installé"
+msgstr "Activez l'extension installée"
 
 #: inc/func/plugins-included.php:63
 #, php-format
 msgid "All plugins installed and activated successfully. %s"
-msgstr "Tous les plugins installés et activés avec succès. %s"
+msgstr "Toutes les extensions installées et activées avec succès. %s"
 
 #: inc/theme-options/theme-options.php:41
 msgid "Install Home Page"
@@ -974,11 +973,11 @@ msgstr "Installez la page d'accueil"
 msgid "Setup home page with dummy data, like on demo. Option can be used once."
 msgstr ""
 "Page d'accueil du programme d'installation avec des données factices, comme "
-"sur la démo. Option peut être utilisée qu'une seule fois."
+"sur la démo. Cette uption ne peut être utilisée qu'une seule fois."
 
 #: inc/theme-options/theme-options.php:44
 msgid "Layout"
-msgstr "Disposition"
+msgstr "Mise en page"
 
 #: inc/theme-options/theme-options.php:44
 msgid ""
@@ -986,10 +985,10 @@ msgid ""
 "adapt for mobile devices and static page with fixed width. Uncheck arrow "
 "below if you need static website display. "
 msgstr ""
-"Thème en charge 2 types de mise en page html. Réglage par défaut sensibles "
-"qui s'adaptent pour les appareils mobiles et page statique avec une largeur "
-"fixe. Décochez la case ci-dessous, flèche si vous avez besoin d'affichage "
-"site Web statique."
+"Le thème prend en charge 2 types de mise en page html. Par défaut le réglage sensible "
+" s'adapte aux appareils mobiles avec une page statique à largeur fixe."
+" Décochez la case ci-dessous si vous avez besoin d'une mise en page"
+" statique."
 
 #: inc/theme-options/theme-options.php:45
 msgid "Comments"
@@ -1000,7 +999,7 @@ msgid ""
 "If you want to display comments on your post page or page, select options "
 "below."
 msgstr ""
-"Si vous souhaitez afficher des commentaires sur votre page ou après, "
+"Si vous souhaitez afficher des commentaires sur votre page ou votre article, "
 "sélectionnez les options ci-dessous."
 
 #: inc/theme-options/theme-options.php:46
@@ -1011,17 +1010,17 @@ msgstr "Styles de thème par défaut"
 msgid ""
 "Default CSS. Theme option for styling is not working, if this option enable."
 msgstr ""
-"Par défaut CSS. Option Thème pour le style ne fonctionne pas, si cette "
-"option permettent."
+"CSS par défaut. "Options du Thème" ne fonctionne pas si cette "
+"option est activée."
 
 #: inc/theme-options/theme-options.php:48
 msgid "Show cart in header"
-msgstr "Voir le panier en tête"
+msgstr "Voir le panier dans le header"
 
 #: inc/theme-options/theme-options.php:48
 msgid "If you want to display cart link in header select options below."
 msgstr ""
-"Si vous souhaitez afficher panier lien en tête de sélectionner des options "
+"Si vous souhaitez afficher un lien vers le panier, sélectionnez des options "
 "ci-dessous."
 
 #: inc/theme-options/theme-options.php:50
@@ -1030,36 +1029,36 @@ msgstr "Réinitialiser les options"
 
 #: inc/theme-options/theme-options.php:50
 msgid "All theme options will be reset to default. "
-msgstr "Toutes les options thématiques seront remis à zéro par défaut."
+msgstr "Toutes les options du théme seront remises par défaut."
 
 #: inc/theme-options/theme-options.php:52
 msgid "Multilingual Switch in Header (WPML)"
-msgstr "Changer multilingue en tête (WPML)"
+msgstr "Changeur multilingue dans le Header (WPML)"
 
 #: inc/theme-options/theme-options.php:52
 msgid "If you wish to show Language Switch in header, select option below. "
 msgstr ""
-"Si vous souhaitez montrer Changement de langue en-tête, sélectionnez "
+"Si vous souhaitez afficher le Changeur de langue dans le Header, sélectionnez "
 "l'option ci-dessous."
 
 #: inc/theme-options/theme-options.php:54
 msgid "Sticky  header"
-msgstr "Tête collant"
+msgstr "Header collé"
 
 #: inc/theme-options/theme-options.php:54
 msgid "Options relating to the website header"
-msgstr "Les options relatives à l'en-tête de site Web"
+msgstr "Les options relatives au header du site web"
 
 #: inc/theme-options/theme-options.php:55
 msgid "Background for header"
-msgstr "Fond de tête"
+msgstr "Arrière-plan pour le header"
 
 #: inc/theme-options/theme-options.php:55
 msgid ""
 "Upload image with full width for background in header area. (Supported "
 "files .png, .jpg, .gif)  "
 msgstr ""
-"Télécharger l'image en pleine largeur pour le fond dans la zone d'en-tête. "
+"Uploader une image dont la largeur est complète pour l'arrière-plan dans la zone du header. "
 "(Fichiers pris en charge .png, .jpg, .gif)"
 
 #: inc/theme-options/theme-options.php:56
@@ -1335,13 +1334,13 @@ msgstr "Activé"
 
 #: inc/theme-options/theme-options.php:209
 msgid "Header background-color"
-msgstr "Couleur de fond d'en-tête"
+msgstr "Couleur de fond du header"
 
 #: inc/theme-options/theme-options.php:220
 #: inc/theme-options/theme-options.php:231
 #: inc/theme-options/theme-options.php:250
 msgid "Enable"
-msgstr "Permettre"
+msgstr "Activer"
 
 #: inc/theme-options/theme-options.php:240
 msgid "Reset Defaults"
