@@ -294,6 +294,8 @@ body.single.woocommerce-page .woocommerce-breadcrumb{margin-bottom:40px;}
 .archive.woocommerce-page .woocommerce-breadcrumb{float:left; width:auto;max-width:423px; margin-bottom:0px;line-height:35px;}
 .archive.woocommerce.post-type-archive-product .woocommerce-breadcrumb,
 .archive.woocommerce-page.post-type-archive-product .woocommerce-breadcrumb{float:left; width:100%;max-width:423px; margin-bottom:0px;line-height:35px;}
+.archive.woocommerce.tax-product_cat .woocommerce-breadcrumb,
+.archive.woocommerce-page.tax-product_cat .woocommerce-breadcrumb{float:left; width:100%;max-width:423px; margin-bottom:0px;line-height:35px;}
 .archive.woocommerce .woocommerce-breadcrumb a,
 .archive.woocommerce-page .woocommerce-breadcrumb a{line-height:35px;}
 
@@ -531,7 +533,11 @@ body.woocommerce-page #content nav.woocommerce-pagination ul li a.next:hover{tex
 }
 
 .post-type-archive-product  .woocommerce-info,
-.post-type-archive-product  .woocommerce-error{float: left;max-width: 630px;}
+.post-type-archive-product  .woocommerce-error,
+.post-type-archive-product  .woocommerce-message{float: left;max-width: 620px;}
+.tax-product_cat  .woocommerce-info,
+.tax-product_cat  .woocommerce-error,
+.tax-product_cat  .woocommerce-message{float: left;max-width: 620px;}
 
 .single-product .woocommerce-message:before,
 .woocommerce .woocommerce-info:before,.woocommerce-page .woocommerce-info:before,
@@ -1231,7 +1237,8 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 	body.woocommerce #page .container #secondary.widget-area {max-width:215px}
 	.nav-links.shop .pages-links .page-numbers,.nav-links.shop .nav-next a,.nav-links.shop .nav-previous a{padding: 10px 18px;}
 	.woocommerce a.added_to_cart, body.woocommerce-page a.added_to_cart{width:145px; clear:both}
-	.post-type-archive-product  .woocommerce-info,.post-type-archive-product  .woocommerce-error{width: 100%;}
+	.post-type-archive-product  .woocommerce-info,.post-type-archive-product  .woocommerce-error,.post-type-archive-product  .woocommerce-message{width: 100%;}
+	.tax-product_cat  .woocommerce-info,.post-type-archive-product  .woocommerce-error,.tax-product_cat  .woocommerce-message{width: 100%;}
 	/*cart*/
 	.woocommerce-cart .woocommerce .cart-collaterals .cart_totals, body.woocommerce-cart.woocommerce-page .cart-collaterals .cart_totals{max-width:450px}
 	.woocommerce-cart .woocommerce .cart-collaterals .shipping_calculator section, body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator section{max-width:450px}
