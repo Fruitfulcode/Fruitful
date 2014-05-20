@@ -65,8 +65,7 @@ body.post-type-archive input#s{padding-left: 12px;max-width:168px}
 .woocommerce-cart .eleven.columns {float: left;width: 100%;padding: 0;margin-left: 0;margin-right: 0;}
 
 /*---SHOP PAGE---*/
-.shop-page #page  #container,
-.archive.tax-product_cat #page  #container{width:100%;max-width:684px;float:right}
+.page-description{float:left; width:100%;}
 .woocommerce .products div.star-rating,
 .woocommerce-page .products div.star-rating{margin-left:15px}
 /*pagenavi*/
@@ -106,7 +105,7 @@ body.post-type-archive input#s{padding-left: 12px;max-width:168px}
 body.shop-page #page div.container .sixteen .five #secondary.widget-area,
 body.archive.tax-product_cat #page div.container .sixteen .five #secondary.widget-area{margin-top:10px;}
 body.archive.post-type-archive-product.shop-page #page .container #secondary.widget-area,
-body.archive.tax-product_cat #page .container #secondary.widget-area {float:left; width:100%;padding:0;}
+body.archive.tax-product_cat #page .container #secondary.widget-area {width:100%;padding:0;}
 .woocommerce #secondary .widget_shopping_cart .total, .woocommerce-page #secondary .widget_shopping_cart .total {border-top: none;}
 
 .woocommerce #page .container #secondary .widget{margin-bottom:30px}
@@ -169,8 +168,8 @@ box-shadow: none;
 .woocommerce ul.products li.first,
 .woocommerce-page ul.products li.first {clear:none; float: left;}
 
-.woocommerce .container ul.products li.product,
-body.woocommerce-page .container ul.products li.product {width: 219px; display: inline-table;float: none;position: relative;margin-right:0.9%}
+.woocommerce ul.products li.product,
+.woocommerce-page ul.products li.product {display: inline-table;float: none;position: relative;padding:0;margin-top:0;margin-bottom:2em}
 .shop-page #page.site .container #secondary .widget ul li.cat-item,
 .shop-page #page.site .container #secondary .widget ul li.cat-item:hover,
 .archive.tax-product_cat #page.site .container #secondary .widget ul li.cat-item,
@@ -1266,8 +1265,8 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 	body.woocommerce-page #content div.product div.images{float:left; width:350px; margin:0 25px 0 0}
 	.single.woocommerce span.onsale, .single.woocommerce-page span.onsale{top: 10px;left: 278px;}
 	/*product category*/
-	body.woocommerce.archive.tax-product_cat #page #secondary{float:left;width:215px;}
-	body.woocommerce.archive.tax-product_cat #page #container{float: right;width: 100%;padding: 0;max-width: 684px;}
+	body.woocommerce.archive.tax-product_cat #page #secondary{width:215px;}
+	body.woocommerce.archive.tax-product_cat #page .woo-loop-content{padding: 0;}
 	
 } 
  
@@ -1277,8 +1276,6 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 	.woocommerce #page #container,
 	.woocommerce-checkout .eleven.columns,
 	.woocommerce-cart .eleven.columns{float:right; width:100%; padding:0;}	
-	.woocommerce.shop-page #page #container,
-	.woocommerce.archive.tax-product_cat #page #container{width:calc(100% - 250px);}
 	.nav-links.shop .pages-links .page-numbers,.nav-links.shop .nav-next a,.nav-links.shop .nav-previous a{padding: 10px 18px;}
 	/*single product*/
 	.woocommerce #review_form #respond textarea, .woocommerce-page #review_form #respond textarea{width:100% !important}
@@ -1300,14 +1297,14 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 	.single.woocommerce span.onsale, .single.woocommerce-page span.onsale{top: 6px;right: 31%;left: auto;}
 	/*product category*/
 	body.woocommerce.archive.tax-product_cat #page  #secondary{float:left;width:100%;max-width:219px;}
-	body.woocommerce.archive.tax-product_cat #page  #container{float: right;width: calc(100% - 250px) ;padding: 0;max-width: 684px;}
+	body.woocommerce.archive.tax-product_cat #page  .woo-loop-content{float: right; padding: 0;}
 } 
  
 @media only screen and (min-width: 768px) and (max-width: 950px){
-	/*shop*/
-	.woocommerce .container ul.products li.product, body.woocommerce-page .container ul.products li.product{float:left}
-	.archive.woocommerce .container ul.products li.product, body.woocommerce-page.archive .container ul.products li.product{margin:10px}
-	.woocommerce .container ul.products li.product:nth-child(2n), body.woocommerce-page .container ul.products li.product:nth-child(2n){float:right}
+	.woocommerce .woo-loop-content ul.products li.product, .woocommerce-page .woo-loop-content ul.products li.product,
+	.woocommerce .woo-loop-content ul.products li.product.first, .woocommerce-page .woo-loop-content ul.products li.product.first,
+	.woocommerce .woo-loop-content ul.products li.product.last, .woocommerce-page .woo-loop-content ul.products li.product.last,
+	.entry-content .woocommerce ul.products li.product{float:left; width:31%; margin:0 5px 25px}
 	.woocommerce .container .cross-sells ul.products li.product, body.woocommerce-page .container .cross-sells ul.products li.product{float:none}
 	.woocommerce .container .cross-sells ul.products li.product:nth-child(2n), body.woocommerce-page .container .cross-sells ul.products li.product:nth-child(2n){float:none}
 	.woocommerce .container .related.products ul.products li.product, body.woocommerce-page .container .related.products ul.products li.product{float:none}
@@ -1320,7 +1317,10 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 	.archive.post-type-archive-product #container {float:right; width:100%; padding:0;}	
 	.archive.tax-product_cat #page #container{width:100%}
 	.woocommerce .products ul, .woocommerce-page .products ul, .woocommerce ul.products, .woocommerce-page ul.products{text-align:center}
-	.woocommerce .container ul.products li.product, body.woocommerce-page .container ul.products li.product{width:195px !important;margin-left:3px;margin-right:3px;min-height: 315px;}
+	.woocommerce .woo-loop-content ul.products li.product, .woocommerce-page .woo-loop-content ul.products li.product,
+	.woocommerce .woo-loop-content ul.products li.product.first, .woocommerce-page .woo-loop-content ul.products li.product.first,
+	.woocommerce .woo-loop-content ul.products li.product.last, .woocommerce-page .woo-loop-content ul.products li.product.last,
+	.entry-content .woocommerce ul.products li.product{width:195px !important;float:none; margin:0 3px 30px;min-height: 315px;}
 	.woocommerce.single-product .container .related.products ul.products li.product, body.woocommerce-page.single-product .container .related.products ul.products li.product{min-height: 330px;margin-right:3px}
 	.woocommerce .woocommerce-ordering, .woocommerce-page .woocommerce-ordering{width:100%;}
 	body.woocommerce form.woocommerce-ordering, body.woocommerce-page form.woocommerce-ordering{margin-bottom:40px}

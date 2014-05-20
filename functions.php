@@ -772,7 +772,56 @@ function fruitful_get_responsive_style () {
 				$style_ .= 'input[type="reset"]:hover, input[type="reset"]:active, input[type="reset"]:focus{background-color : '.esc_js($theme_options['btn_active_color']).' !important; } ' . "\n";
 				$woo_style_  .= '.woocommerce table.my_account_orders .order-actions .button:hover, .woocommerce-page table.my_account_orders .order-actions .button:hover{background-color : '.esc_js($theme_options['btn_active_color']).' !important; } ' . "\n";
 				$style_ .= '.nav-links.shop .pages-links .page-numbers:hover, .nav-links.shop .nav-next a:hover, .nav-links.shop .nav-previous a:hover, .nav-links.shop .pages-links .page-numbers.current{background-color : '.esc_js($theme_options['btn_active_color']).' !important; } ' . "\n";
-			}	
+			}
+			
+			/*Number of products in woocommerce loop*/
+			if (class_exists('woocommerce')){
+				if (!empty($theme_options['shop_num_row'])){
+					$woo_style_ .= '@media only screen and (min-width: 959px){'."\n";
+						switch ($theme_options['shop_num_row']):
+							case 2:
+								$woo_style_ .= '.woocommerce ul.products li.product.first, .woocommerce-page ul.products li.product.first{width:48%; margin-left:0; 	margin-right:1.5%;}'."\n";
+								$woo_style_ .= '.woocommerce ul.products li.product.last, .woocommerce-page ul.products li.product.last{width:48%; margin-left:1.5%;margin-right:0;}'."\n";
+								break;
+							case 3:
+								$woo_style_ .= '.woocommerce ul.products li.product, .woocommerce-page ul.products li.product{width:32%; margin-left:0.6%; 	margin-right:0.6%;}'."\n";
+								$woo_style_ .= '.woocommerce ul.products li.product.first, .woocommerce-page ul.products li.product.first{margin-left:0;}'."\n";
+								$woo_style_ .= '.woocommerce ul.products li.product.last, .woocommerce-page ul.products li.product.last{margin-right:0;}'."\n";
+								break;
+							case 4:
+								$woo_style_ .= '.woocommerce ul.products li.product, .woocommerce-page ul.products li.product{width:23.5%; margin-left:0.6%; 	margin-right:0.6%;}'."\n";
+								$woo_style_ .= '.woocommerce ul.products li.product.first, .woocommerce-page ul.products li.product.first{margin-left:0;}'."\n";
+								$woo_style_ .= '.woocommerce ul.products li.product.last, .woocommerce-page ul.products li.product.last{margin-right:0;}'."\n";
+								break;
+							case 5:
+								$woo_style_ .= '.woocommerce ul.products li.product, .woocommerce-page ul.products li.product{width:18.5%; margin-left:0.6%; 	margin-right:0.6%;}'."\n";
+								$woo_style_ .= '.woocommerce ul.products li.product.first, .woocommerce-page ul.products li.product.first{margin-left:0;}'."\n";
+								$woo_style_ .= '.woocommerce ul.products li.product.last, .woocommerce-page ul.products li.product.last{margin-right:0;}'."\n";
+								break;
+							default:
+								$woo_style_ .= '.woocommerce ul.products li.product, .woocommerce-page ul.products li.product{width:32%; margin-left:0.6%; 	margin-right:0.6%;}'."\n";
+								$woo_style_ .= '.woocommerce ul.products li.product.first, .woocommerce-page ul.products li.product.first{margin-left:0;}'."\n";
+								$woo_style_ .= '.woocommerce ul.products li.product.last, .woocommerce-page ul.products li.product.last{margin-right:0;}'."\n";
+						endswitch;
+					$woo_style_ .= '}'."\n";
+				}
+				if (!empty($theme_options['woo_shop_sidebar'])){
+					$shop_sidebar_template = $theme_options['woo_shop_sidebar'];
+					if ($shop_sidebar_template == 3){
+						$woo_style_ .= '#page .container .woo-loop-content{float:left}'."\n";
+						$woo_style_ .= '#page .container .woo-loop-sidebar{float:right}'."\n";
+						$woo_style_ .= '#page .container .woo-loop-sidebar #secondary{float:right}'."\n";
+						$woo_style_ .= '.woocommerce .woocommerce-ordering, .woocommerce-page .woocommerce-ordering{float:left}'."\n";
+					} else {
+						$woo_style_ .= '#page .container .woo-loop-content{float:right}'."\n";
+						$woo_style_ .= '#page .container .woo-loop-sidebar{float:left}'."\n";
+						$woo_style_ .= '#page .container .woo-loop-sidebar #secondary{float:left}'."\n";
+						$woo_style_ .= '.woocommerce .woocommerce-ordering, .woocommerce-page .woocommerce-ordering{float:right}'."\n";
+					}
+				}
+				
+			}
+			
 		} else {
 			$style_ .= 'body {font-family:Open Sans, sans-serif}' . "\n";
 		}
@@ -799,6 +848,53 @@ function fruitful_get_sliders() {
 		}	
 	}	
 }
+
+/* Woocommerce functions */
+if (class_exists('Woocommerce')) { 
+	/*change number of products per row shop page*/
+	add_filter('loop_shop_columns', 'fruitful_loop_columns');
+	if (!function_exists('fruitful_loop_columns')) {
+		function fruitful_loop_columns() {
+			$theme_options = fruitful_ret_options("fruitful_theme_options");
+			if (!empty($theme_options['shop_num_row'])){
+				return esc_attr($theme_options['shop_num_row']);
+			}
+		}
+	}
+	
+	/*remove shop sidebar*/
+	add_action('template_redirect', 'fruitful_remove_shop_sidebar');
+	if (!function_exists('fruitful_remove_shop_sidebar')) {
+		function fruitful_remove_shop_sidebar() {
+			if (fruitful_get_shop_sidebar() == 1){
+				remove_action('woocommerce_sidebar', 'woocommerce_get_sidebar');
+			}
+		}
+	}
+	
+	/*check is woocommerce sidebar will be hidden*/
+	if (!function_exists('fruitful_check_shop_sidebar')) {
+		function fruitful_get_shop_sidebar() {
+			if ( is_shop() ) {
+				$theme_options = fruitful_ret_options("fruitful_theme_options");
+				if (!empty($theme_options['woo_shop_sidebar'])){
+					return $theme_options['woo_shop_sidebar'];
+				} 
+			}
+		}
+	}
+	
+	/*change number of products per page shop page*/
+	add_filter( 'loop_shop_per_page', 'fruitful_loop_shop_per_page', 20);
+	if (!function_exists('fruitful_loop_shop_per_page')) {
+		function fruitful_loop_shop_per_page(){
+			$theme_options = fruitful_ret_options("fruitful_theme_options");
+			$woo_shop_num_prod  = esc_js($theme_options['woo_shop_num_prod']);
+			return $woo_shop_num_prod;
+		}
+	}
+}
+
 
 function fruitful_custom_css_and_slider_scripts() {
 	echo '<script type="text/javascript">';
@@ -1295,3 +1391,4 @@ function fruitful_get_content_with_custom_sidebar($curr_template) {
 		get_html_custom_post_template('omega', 'alpha', 0);
 	}
 }
+

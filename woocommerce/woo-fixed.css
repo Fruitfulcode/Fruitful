@@ -65,8 +65,7 @@ body.post-type-archive input#s{padding-left: 12px;max-width:168px}
 .woocommerce-cart .eleven.columns {float: left;width: 100%;padding: 0;margin-left: 0;margin-right: 0;}
 
 /*---SHOP PAGE---*/
-.shop-page #page  #container,
-.archive.tax-product_cat #page  #container{width:100%;max-width:684px;float:right}
+.page-description{float:left; width:100%;}
 .woocommerce .products div.star-rating,
 .woocommerce-page .products div.star-rating{margin-left:15px}
 /*pagenavi*/
@@ -106,7 +105,7 @@ body.post-type-archive input#s{padding-left: 12px;max-width:168px}
 body.shop-page #page div.container .sixteen .five #secondary.widget-area,
 body.archive.tax-product_cat #page div.container .sixteen .five #secondary.widget-area{margin-top:10px;}
 body.archive.post-type-archive-product.shop-page #page .container #secondary.widget-area,
-body.archive.tax-product_cat #page .container #secondary.widget-area {float:left; width:100%;padding:0;}
+body.archive.tax-product_cat #page .container #secondary.widget-area {width:100%;padding:0;}
 .woocommerce #secondary .widget_shopping_cart .total, .woocommerce-page #secondary .widget_shopping_cart .total {border-top: none;}
 
 .woocommerce #page .container #secondary .widget{margin-bottom:30px}
@@ -169,8 +168,8 @@ box-shadow: none;
 .woocommerce ul.products li.first,
 .woocommerce-page ul.products li.first {clear:none; float: left;}
 
-.woocommerce .container ul.products li.product,
-body.woocommerce-page .container ul.products li.product {width: 219px; display: inline-table;float: none;position: relative;margin-right:0.9%}
+.woocommerce ul.products li.product,
+.woocommerce-page ul.products li.product {display: inline-table;float: none;position: relative;padding:0;margin-top:0;margin-bottom:2em}
 .shop-page #page.site .container #secondary .widget ul li.cat-item,
 .shop-page #page.site .container #secondary .widget ul li.cat-item:hover,
 .archive.tax-product_cat #page.site .container #secondary .widget ul li.cat-item,
@@ -1262,6 +1261,6 @@ body.woocommerce #content div.product div.images,
 body.woocommerce-page #content div.product div.images{float:left; width:350px; margin:0 25px 0 0}
 .single.woocommerce span.onsale, .single.woocommerce-page span.onsale{top: 10px;left: 278px;}
 /*product category*/
-body.woocommerce.archive.tax-product_cat #page #secondary{float:left;width:215px;}
-body.woocommerce.archive.tax-product_cat #page #container{float: right;width: 100%;padding: 0;max-width: 684px;}
+body.woocommerce.archive.tax-product_cat #page #secondary{width:215px;}
+body.woocommerce.archive.tax-product_cat #page .woo-loop-content{width: 100%;padding: 0;}
 
