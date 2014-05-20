@@ -51,6 +51,7 @@ function fruitful_theme_options_init() {
 	}
 	add_settings_field( 'header_hd',		__( 'Sticky  header', 	 		 'fruitful' ), 	'fruitful_get_general_header', 	'theme_options',  'header', array('info' => __( 'Options relating to the website header', 'fruitful' )));
 	add_settings_field( 'header_hi',		__( 'Background for header', 	 'fruitful' ), 	'fruitful_get_header_img', 		'theme_options',  'header', array('info' => __( 'Upload image with full width for background in header area. (Supported files .png, .jpg, .gif)  ', 'fruitful' )));
+	add_settings_field( 'header_hs',		__( 'Background image size', 	 		 'fruitful' ), 	'fruitful_get_header_img_size', 'theme_options',  'header', array('info' => __( 'Choose size for background image - full width or only for content area.', 'fruitful' )));
 	add_settings_field( 'header_hh',		__( 'Height for header area', 	 'fruitful' ), 	'fruitful_get_header_height', 	'theme_options',  'header', array('info' => __( 'Minimum height in pixels', 'fruitful' )));
 	add_settings_field( 'header_mp',		__( 'Menu Position', 			 'fruitful' ), 	'fruitful_set_menu_position', 	'theme_options',  'header', array('info' => __( 'Set menu position.', 'fruitful' )));
 		
@@ -326,6 +327,15 @@ function fruitful_get_header_img () {
 	$upload  = intval($options['header_img']);
 
 	echo fruitful_get_box_upload_image($upload, 'header_img', 'upload_btn', 'reset_btn', 'headerbackground', 'headerimgbackground');
+}
+
+function fruitful_get_header_img_size () {
+	$options = fruitful_get_theme_options();
+?>
+	<div class="box-option">
+		<?php fruitful_get_select_fields('header_img_size', $options, fruitful_get_header_img_sizes(), 'headerimgbackground'); ?>		
+	</div>
+<?php 
 }
 
 function fruitful_get_header_height() {

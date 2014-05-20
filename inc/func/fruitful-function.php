@@ -1,4 +1,20 @@
 <?php
+
+function fruitful_get_header_img_sizes() {
+	$num_row = array(
+		'0' => array(
+			'value' =>	   'full',
+			'label' => __( 'Full width position', 'fruitful' )
+		),
+		'1' => array(
+			'value' =>	   'centered',
+			'label' => __( 'Centered position', 'fruitful' )
+		)
+	);
+
+	return apply_filters( 'fruitful_number_per_row', $num_row );
+}
+
 function fruitful_slide_skins_select() {
 	$slide_skins = array(
 		'0' => array(
@@ -501,8 +517,9 @@ return array(
 
 				/*Header image*/
 				'header_bg_color'	=> '#ffffff',	
-				'header_img' 	=> '',
-				'header_height' => '84',
+				'header_img' 		=> '',
+				'header_img_size'	=> 'full',
+				'header_height' 	=> '84',
 				
 				/*Background Image*/
 				'backgroung_img'    => '',
