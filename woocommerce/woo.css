@@ -1320,7 +1320,7 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 	.woocommerce .woo-loop-content ul.products li.product, .woocommerce-page .woo-loop-content ul.products li.product,
 	.woocommerce .woo-loop-content ul.products li.product.first, .woocommerce-page .woo-loop-content ul.products li.product.first,
 	.woocommerce .woo-loop-content ul.products li.product.last, .woocommerce-page .woo-loop-content ul.products li.product.last,
-	.entry-content .woocommerce ul.products li.product{width:195px !important;float:none; margin:0 3px 30px;min-height: 315px;}
+	.entry-content .woocommerce ul.products li.product{width:48% !important;float:none; margin:0 3px 30px;min-height: 315px;}
 	.woocommerce.single-product .container .related.products ul.products li.product, body.woocommerce-page.single-product .container .related.products ul.products li.product{min-height: 330px;margin-right:3px}
 	.woocommerce .woocommerce-ordering, .woocommerce-page .woocommerce-ordering{width:100%;}
 	body.woocommerce form.woocommerce-ordering, body.woocommerce-page form.woocommerce-ordering{margin-bottom:40px}
@@ -1419,7 +1419,8 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 	.woocommerce .woocommerce-ordering, .woocommerce-page .woocommerce-ordering{width:100%;}
 	body.woocommerce .woocommerce-ordering select, body.woocommerce-page .woocommerce-ordering select{width:100%}
 	body.woocommerce form.woocommerce-ordering, body.woocommerce-page form.woocommerce-ordering {margin-bottom: 40px;}
-	body.woocommerce .container ul.products li.product, body.woocommerce-page .container ul.products li.product {width: 100%;margin-right: 0;}
+	body.woocommerce .container ul.products li.product, body.woocommerce-page .container ul.products li.product,
+	.entry-content .woocommerce ul.products li.product	{width: 100%;margin-right: 0;}
 	body.woocommerce ul.products li.product h3, body.woocommerce-page ul.products li.product h3 {text-align:left;}
 	.nav-links.shop .pages-links .page-numbers,.nav-links.shop .nav-next a,.nav-links.shop .nav-previous a{padding: 5px 12px;}
 	.woocommerce ul.products li.product a.add_to_cart_button.product_type_simple,
