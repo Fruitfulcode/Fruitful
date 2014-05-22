@@ -83,6 +83,8 @@
 			</div>	
 		</div>		
 		
+		<?php if (is_front_page()) fruitful_get_slider(); ?>
+		
 		<div class="container page-container">		
 			<?php do_action( 'before' ); ?>		
 				<div class="sixteen columns">

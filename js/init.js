@@ -35,15 +35,7 @@ jQuery(document).ready(function($) {
 			$('body,html').animate({ scrollTop: 0}, 850)
 			return false;
 		});
-		
-		if ($(".tabbed-nav").length > 0 ) {
-			$(".tabbed-nav").easyResponsiveTabs({
-				type: 'vertical',
-				width: 'auto',
-				fit: true
-			});
-		}
-		
+	
 		$('.menu li:has(ul)').mobileMenuDropdown();
 		$(window).resize();
 });

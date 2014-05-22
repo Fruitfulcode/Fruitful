@@ -39,7 +39,7 @@ function fruitful_theme_options_init() {
 	add_settings_section('woocommerce', 	'',  '__return_false', 'theme_options' );
 	
 	if (!$is_demo_content_installed) {
-		add_settings_field( 'general_idc', 		__( 'Install Home Page', 	'fruitful' ),	'fruitful_demo_content',	'theme_options',  'general', array('info' => __( 'Setup home page with dummy data, like on demo. Option can be used once.', 'fruitful' )));
+		//add_settings_field( 'general_idc', 		__( 'Install Home Page', 	'fruitful' ),	'fruitful_demo_content',	'theme_options',  'general', array('info' => __( 'Setup home page with dummy data, like on demo. Option can be used once.', 'fruitful' )));
 	}
 	
 	add_settings_field( 'general_rs', 		__( 'Layout', 	'fruitful' ),	'fruitful_get_responsive_design',	'theme_options',  'general', array('info' => __( 'Theme supported 2 types of html layout. Default responsive  setting which adapt for mobile devices and static page with fixed width. Uncheck arrow below if you need static website display. ', 'fruitful' )));
@@ -60,17 +60,17 @@ function fruitful_theme_options_init() {
 	add_settings_field( 'background_color', __( 'Background Color ', 'fruitful' ), 'fruitful_get_background_color', 'theme_options',  'background', array('info' => __( 'Choose color for body background', 'fruitful' )));
 	add_settings_field( 'content_background_color', __( 'Background color for content  ', 'fruitful' ), 'fruitful_get_container_background_color', 'theme_options',  'background', array('info' => __( 'Choose color for main content area', 'fruitful' )));
 		
-	add_settings_field( 'logo_image', 		__( 'Logo image', 'fruitful' ), 	'fruitful_get_logo_img', 		'theme_options', 'logo', 		array('info' => __( 'Upload logo image for your website. Size is original (Supported files .png, .jpg, .gif)', 'fruitful' )));
-	//add_settings_field( 'logo_size', 		__( 'Logo Size', 'fruitful' ), 		'fruitful_get_logo_wh',	 		'theme_options', 'logo', 		array('info' => __( 'Specify resolution for your logo image. Our theme will crop (timthumb) your image for need size.', 'fruitful' )) );
-	add_settings_field( 'fav_icon', 		__( 'Favicon', 'fruitful' ), 		'fruitful_get_fav_icon', 		'theme_options', 'logo', 		array('info' => __( 'Upload needed image for site favicon. (Supported files .ico (16x16))', 'fruitful' )));
-	add_settings_field( 'logo_position', 	__( 'Logo Position', 'fruitful' ), 	'fruitful_set_logo_position', 	'theme_options', 'logo', 		array('info' => __( 'Set Logo Position', 'fruitful' )));
+	add_settings_field( 'logo_image', 		__( 'Logo image', 'fruitful' ), 	'fruitful_get_logo_img', 		'theme_options', 'logo',  	array('info' => __( 'Upload logo image for your website. Size is original (Supported files .png, .jpg, .gif)', 'fruitful' )));
+  //add_settings_field( 'logo_size', 		__( 'Logo Size', 'fruitful' ), 		'fruitful_get_logo_wh',	 		'theme_options', 'logo',  	array('info' => __( 'Specify resolution for your logo image. Our theme will crop (timthumb) your image for need size.', 'fruitful' )) );
+	add_settings_field( 'fav_icon', 		__( 'Favicon', 'fruitful' ), 		'fruitful_get_fav_icon', 		'theme_options', 'logo',  	array('info' => __( 'Upload needed image for site favicon. (Supported files .ico (16x16))', 'fruitful' )));
+	add_settings_field( 'logo_position', 	__( 'Logo Position', 'fruitful' ), 	'fruitful_set_logo_position', 	'theme_options', 'logo',  	array('info' => __( 'Set Logo Position', 'fruitful' )));
 	
 	
-	add_settings_field( 'menu_style',		__( 'Main menu color', 'fruitful' ),	'fruitful_menu_style_color',		'theme_options', 'colors',    	array('info' => __( 'Choose your colors for main menu in header', 'fruitful' )) );
-	add_settings_field( 'dropdown_menu_style',		__( 'Dropdown menu color', 'fruitful' ),'fruitful_dropdown_menu_style_color', 'theme_options', 'colors',    array('info' => __( 'Choose your colors for dropdown menu in header', 'fruitful' )) );
-	add_settings_field( 'font_style',		__( 'General font color', 'fruitful' ),	'fruitful_font_style_color',		'theme_options', 'colors',    	array('info' => __( 'Choose your colors for text and links', 'fruitful' )) );
+	add_settings_field( 'menu_style',		__( 'Main menu color', 'fruitful' ),	'fruitful_menu_style_color', 'theme_options', 'colors',    	array('info' => __( 'Choose your colors for main menu in header', 'fruitful' )) );
+	add_settings_field( 'dropdown_menu_style',	__( 'Dropdown menu color', 'fruitful' ),'fruitful_dropdown_menu_style_color', 'theme_options', 'colors',    array('info' => __( 'Choose your colors for dropdown menu in header', 'fruitful' )) );
+	add_settings_field( 'font_style',		__( 'General font color', 'fruitful' ),	'fruitful_font_style_color',	'theme_options', 'colors',    	array('info' => __( 'Choose your colors for text and links', 'fruitful' )) );
 	add_settings_field( 'separator_style',	__( 'Color for lines', 'fruitful' ),	'fruitful_sep_style_color',		'theme_options', 'colors',    	array('info' => __( 'Choose you colors for lines and separators', 'fruitful' )) );
-	add_settings_field( 'button_style',		__( 'Color for buttons', 'fruitful' ),	'fruitful_but_style_color',		'theme_options', 'colors',    	array('info' => __( 'Choose you colors for buttons', 'fruitful' )) );
+	add_settings_field( 'button_style',		__( 'Color for buttons', 'fruitful' ),	'fruitful_but_style_color',		'theme_options', 'colors',    	array('info' => __( 'Choose you colors for buttons', 'fruitful' ), 'newrow' => true) );
 	
 	
 	add_settings_field( 'fonts_options', 	__( 'Fonts', 'fruitful' ), 	'fruitful_fonts_options',	'theme_options', 'fonts', 		array('info' => __( 'Popular web safe font collection, select and use for your needs.', 'fruitful' )) );
@@ -634,6 +634,7 @@ function fruitful_dropdown_menu_style_color () {
 				<input type="text" id="dd_menu_hover_color" class="colorPicker" name="fruitful_theme_options[dd_menu_hover_color]" value="<?php echo esc_attr($options['dd_menu_hover_color']); ?>" data-default-color="#ffffff" />
 			</fieldset>	
 		</div>
+		<div class="row"></div>
 	<?php
 }
 
@@ -701,6 +702,7 @@ function fruitful_sep_style_color() {
 				<input type="text" id="date_of_post_f_color" class="colorPicker" name="fruitful_theme_options[date_of_post_f_color]" value="<?php echo esc_attr($options['date_of_post_f_color']); ?>" data-default-color="#ffffff" />
 			</fieldset>
 		</div>
+		<div class="row"></div>
 	<?php 
 
 }	

@@ -385,7 +385,12 @@ function fruitful_custom_do_settings_fields($page, $section) {
         return;
 		
     foreach ( (array) $wp_settings_fields[$page][$section] as $field ) {
-        print '<div id="set_form_row_' . $id_ .'" class="settings-form-row">';
+        if (!empty($field['args']['newrow'])) {
+			print '<div id="set_form_row_' . $id_ .'" class="settings-form-row newrow">';
+		} else {
+			print '<div id="set_form_row_' . $id_ .'" class="settings-form-row">';
+		}
+		
         if ( !empty($field['args']['label_for']) )
             print '<h3 class="main-header-options">' . esc_attr($field['title']);
         else

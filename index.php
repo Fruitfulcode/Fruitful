@@ -14,27 +14,7 @@
  */
 
 get_header(); ?>
-		<div class="eleven columns alpha">
-		<div id="primary" class="content-area">
-			<div id="content" class="site-content" role="main">
-		<?php if ( have_posts() ) : ?>
-			
-			<?php //fruitful_content_nav( 'nav-above' ); ?>
-			<?php /* The loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'content', get_post_format() ); ?>
-			<?php endwhile; ?>
-			<?php fruitful_content_nav( 'nav-below' ); ?>
-			
+	
+	<?php fruitful_get_content_with_custom_sidebar('blogright'); ?>
 
-		<?php else : ?>
-			<?php get_template_part( 'no-results', 'index' ); ?>
-		<?php endif; ?>
-		
-			</div><!-- #content .site-content -->
-		</div><!-- #primary .content-area -->
-	</div>
-	<div class="five columns omega">
-		<?php get_sidebar('blogright'); ?>
-	</div>
 <?php get_footer(); ?>

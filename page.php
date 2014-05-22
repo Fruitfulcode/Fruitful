@@ -13,24 +13,7 @@
  */
 
 get_header(); ?>
-		<div class="eleven columns alpha">
-			<div id="primary" class="content-area">
-				<div id="content" class="site-content" role="main">
-				<?php while ( have_posts() ) : the_post(); ?>
-					<?php get_template_part( 'content', 'page' ); ?>
-					<?php if (fruitful_state_page_comment()) { comments_template( '', true );  }	 ?>
-				<?php endwhile; // end of the loop. ?>
-				</div><!-- #content .site-content -->
-			</div><!-- #primary .content-area -->
-		</div>
-		<?php 
-			$is_sidebar = true;
-			$is_sidebar = fruitful_is_woo_sidebar();
-			if ($is_sidebar) {
-		?>
-		<div class="five columns omega">
-			<?php get_sidebar('page'); ?>
-		</div>	
-		<?php } ?>
-		
+	
+	<?php fruitful_get_content_with_custom_sidebar('page'); ?>
+	
 <?php get_footer(); ?>

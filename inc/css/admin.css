@@ -127,6 +127,9 @@ a:hover, a:active, a:focus {	outline: 0; }
 
 div.updated, div.error { margin: 15px 0 15px; }
 
+#settings-section-4 .settings-form-row { width:42%; }
+.newrow {clear:both; content:"";}
+
 @media only screen and (max-width: 641px) {
 	.form-admin-fruitful { padding:0 0 20px 1%; width:99%; }
 	.form-admin-fruitful .header, .form-admin-fruitful .footer { padding: 10px 0 10px 0; width: 100%; }
@@ -143,6 +146,7 @@ div.updated, div.error { margin: 15px 0 15px; }
 	.form-admin-fruitful .content .settings-section .slides .slide h4 {margin: 0 0 10px 0; line-height: 36px;}
 	.form-admin-fruitful .content .settings-section .settings-form-row .box-options .slides .slide h4 span.content-close-slide {background: url("../images/arrows.png") no-repeat scroll 15px 17px transparent;	margin: -5px 0 0; padding: 10px;}
 	.form-admin-fruitful .content .settings-section .settings-form-row .box-options .slides .slide h4 span.remove-slide {background: url("../images/cross.png") no-repeat scroll 7px 10px transparent; padding: 10px 5px;}
+	#settings-section-4 .settings-form-row { width:286px; }
 }
 
 @media only screen 
@@ -157,6 +161,7 @@ and (max-device-width : 568px) {
 	.form-admin-fruitful .content .settings-section .settings-form-row .box-options .text_fonts .sample_text {margin: 0 0 10px 0;width: 184px;}
 	.settings-form-row select{width:205px;}
 	.colorpicker { left: 0 !important;}
+	#settings-section-4 .settings-form-row { width:286px; }
 }
 
 /* Disable hover on iPhone */

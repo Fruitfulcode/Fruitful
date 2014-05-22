@@ -23,7 +23,7 @@
 *********************************/ 
 .flexslider {margin: 0; padding: 0;}
 .flexslider .slides > li {display: none; /*-webkit-backface-visibility: hidden;*/} /* Hide the slides before the JS is loaded. Avoids image jumping */
-.flexslider .slides img {width: 100%; display: block;}
+.flexslider .slides img {width: 100%; display: block; max-height:900px;}
 .flex-pauseplay span {text-transform: capitalize;}
 
 /* Clearfix for the .slides element */
@@ -42,7 +42,7 @@ html[xmlns] .slides {display: block;}
 .flexslider {margin: 0 0 60px; background: #fff; position: relative;  zoom: 1;}
 .flex-viewport {max-height: 2000px; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; transition: all 1s ease;}
 .loading .flex-viewport {max-height: 300px;}
-.flexslider .slides {zoom: 1;}
+.flexslider .slides {zoom: 1;  height: 100%;}
 
 .carousel li {margin-right: 5px}
 
