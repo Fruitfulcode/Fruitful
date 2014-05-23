@@ -71,7 +71,7 @@ function autoWidthMenu () {
 			if (jQuery('#header_language_select').length > 0){
 				vElemsWidth += jQuery('#header_language_select').outerWidth(true);
 			}
-			vElemsWidth += jQuery('.site-navigation').outerWidth();
+			vElemsWidth += jQuery('.site-navigation').outerWidth() + 2;
 		} else {
 			vElemsWidth = jQuery('.site-navigation').outerWidth() + 20;
 		}		
