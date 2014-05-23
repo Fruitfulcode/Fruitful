@@ -384,7 +384,13 @@ function fruitful_get_slider() {
 							}
 							$slider_ .= '</ul></div></section></div>';
 		} else if ($theme_options['select_slider'] == "2") {
-				$slider_ .= '<div class="slider-wrapper '. $theme_options['nv_skins'] .'">';
+				
+				if ($slider_options == 1) {
+					$slider_ .= '<div class="slider-wrapper '. $theme_options['nv_skins'] .'">';
+				} else {
+					$slider_ .= '<div class="slider-wrapper fullwidth'. $theme_options['nv_skins'] .'">'; 
+				}
+				
 					$slider_ .= '<div id="nivo-slider-'. $id . '" class="nivoSlider">';
 					foreach ($theme_options['slides'] as $key=>$slide) {
 						$path_to_img = $val = '';
@@ -407,7 +413,7 @@ function fruitful_get_slider() {
 				$slider_ .= '</div>';
 		}	
 	} else {
-		$slider_ .= '<h3>Please add images for slider in theme options!</h3>';
+		$slider_ .= '<h3 class="no-slider-text">'. __('Please add images for slider in theme options!', 'fruitful') .'</h3>';
 	}
 	
 	if (!empty($slider_options)) {

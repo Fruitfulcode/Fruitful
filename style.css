@@ -1070,6 +1070,11 @@ embed,iframe,object {
 #searchsubmit {
     display:none;
 }
+
+.no-slider-text {
+	text-align:center;
+}
+
 .main-slider-container {
     margin:10px 0;
     -webkit-box-shadow: none;
