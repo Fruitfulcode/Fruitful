@@ -14,7 +14,6 @@ function cmb_initialize_cmb_meta_boxes() {
 	if ( ! class_exists( 'cmb_Meta_Box' ) ) {
 		require_once dirname(__FILE__) . '/init.php';
 		require_once dirname(__FILE__) . '/custom-fields-for-metaboxes.php';
-		require_once dirname(__FILE__) . '/select2/cmb-field-select2.php';
 	}	
 	
 }
@@ -49,7 +48,7 @@ function fruitful_all_metaboxes( array $meta_boxes ) {
 										'1' => __('Full width slider', 'fruitful'),
 										'2' => __('Slider content width', 'fruitful'),
 										),
-					'type' => 'pw_select'
+					'type' => 'select'
 				),
 		),
 	);
