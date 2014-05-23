@@ -14,20 +14,26 @@ jQuery(document).ready(function($) {
 		
 		if ($(".fancybox").length > 0) {
 			$(".fancybox").fancybox({
-				'overlayShow'	 : true,
-				'transitionIn'	 : 'elastic',
-				'transitionOut'	 : 'elastic',
-				'padding'		 : 0,
-				'autoScale'		 : false,
-				'speedIn' 		 : 250,
-				'speedOut'  	 : 250,
-				'width' 		 : 800,
-				'height' 		 : 600,
-				'overlayOpacity' : 0.25,
-				'overlayColor'   : '#000',
-				'autoScale' : true,
-				'autoDimensions' : false,
-				'centerOnScroll' : true
+				openEffect		 : 'elastic',
+				closeEffect		 : 'elastic',
+				openSpeed  		 : 250,
+				closeSpeed 	 	 : 250,
+				width 		 	 : 800,
+				height 		 	 : 600,
+				autoCenter 		 : true,
+				autoSize		 : true,
+				preload   		 : true,
+				maxWidth 		 : 1024,
+				maxHeight 		 : 768,
+				'hideOnContentClick': true,
+				helpers : {
+					overlay : {
+						css : {
+							'background' : 'rgba(0, 0, 0, 0.85)'
+						}
+					}
+				}
+				
 		});
 		}
 		
