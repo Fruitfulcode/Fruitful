@@ -66,10 +66,10 @@ function autoWidthMenu () {
 	if (jQuery('.menu-wrapper').hasClass('center-pos')) {
 		if ((jQuery('.cart-button').length > 0) || (jQuery('#header_language_select').length > 0)) {
 			if (jQuery('.cart-button').length > 0){
-				vElemsWidth += jQuery('.cart-button').outerWidth();
+				vElemsWidth += jQuery('.cart-button').outerWidth(true);
 			}
 			if (jQuery('#header_language_select').length > 0){
-				vElemsWidth += jQuery('#header_language_select').outerWidth();
+				vElemsWidth += jQuery('#header_language_select').outerWidth(true);
 			}
 			vElemsWidth += jQuery('.site-navigation').outerWidth();
 		} else {
