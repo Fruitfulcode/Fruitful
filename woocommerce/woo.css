@@ -24,7 +24,8 @@ body div.pp_overlay{background-color:#333333}
 button,html input[type="button"],input[type="reset"],input[type="submit"]{line-height:100%;  -webkit-appearance: none;}
 
 /*header*/
-.cart-button{display:block;float: right;margin:20px 10px 0 30px;padding:0;position:relative;margin:15px 10px;}
+.cart-button{display:block;float: right;padding:0;position:relative;margin:14px 10px 10px;clear:left}
+#header_language_select{clear:both}
 .cart-button a,
 .cart-button a .cart_image{display:block;float: left;margin: 0;padding:0;width:24px; height:21px;border:0;text-decoration:none;background:url(images/cart_image.png) no-repeat transparent;}
 .num_of_product_cart{
