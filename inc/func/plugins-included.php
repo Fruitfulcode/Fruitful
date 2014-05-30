@@ -16,22 +16,11 @@ function fruitful_register_required_plugins() {
 		),
 
 		array(
-			'name'    => 'Contact Form 7',
-			'slug'    => 'contact-form-7',
-			'required'  => false,
+			'name'    => 'Fruitful Shortcodes',
+			'slug'    => 'fruitful-shortcodes',
+			'required'  => true,
 		),
 		
-		array(
-			'name'    => 'WordPress SEO by Yoast',
-			'slug'    => 'wordpress-seo',
-			'required'  => false,
-		),
-
-		array(
-			'name'    => 'WooCommerce - excelling eCommerce',
-			'slug'    => 'woocommerce',
-			'required'  => false,
-		),
 	);
 
 	$config = array(
