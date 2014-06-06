@@ -1354,6 +1354,7 @@ if ( ! function_exists( 'fruitful_get_content_with_custom_sidebar' ) ) {
 		<?php } else if ($content_type == 1) { ?>
 				
 				<div class="eleven columns  <?php echo $content_class;?>"><?php get_content_part(); ?> </div>	
+				
 				<?php if ($is_sidebar && is_page()) { ?>
 					<div class="five columns <?php echo $sidebar_class;?>"> <?php get_sidebar($curr_sidebar); ?> </div>
 				<?php } else { ?>	
@@ -1361,13 +1362,15 @@ if ( ! function_exists( 'fruitful_get_content_with_custom_sidebar' ) ) {
 				<?php } ?>	
 				
 		<?php } else if ($content_type == 2) { ?>
+				
+				<div class="eleven columns  <?php echo $content_class;?>"> <?php get_content_part(); ?> </div>	
+				
 				<?php if ($is_sidebar && is_page()) { ?>
 					<div class="five columns <?php echo $sidebar_class;?>"> <?php get_sidebar($curr_sidebar); ?> </div>
 				<?php } else { ?>	
 					<div class="five columns <?php echo $sidebar_class;?>"> <?php get_sidebar($curr_sidebar); ?> </div>
 				<?php } ?>	
 				
-				<div class="eleven columns  <?php echo $content_class;?>"> <?php get_content_part(); ?> </div>	
 		<?php } 
 		}
 		

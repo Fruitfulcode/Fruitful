@@ -65,9 +65,11 @@ body.fancybox-lock {
 /* Nested Column Classes */
 .column.alpha, .columns.alpha {
     margin-left:0;
+	float:left;
 }
 .column.omega, .columns.omega {
     margin-right:0;
+	float:right;
 }
 /* Base Grid */
 .container .one.column,.container .one.columns {
