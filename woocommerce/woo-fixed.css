@@ -61,10 +61,6 @@ body input#s{padding-left: 12px}
 body.post-type-archive input#s{padding-left: 12px;max-width:168px}
 
 
-/*---ALL WOOCOMMERCE PAGES---*/
-.woocommerce-checkout .eleven.columns,
-.woocommerce-cart .eleven.columns {float: left;width: 100%;padding: 0;margin-left: 0;margin-right: 0;}
-
 /*---SHOP PAGE---*/
 .page-description{float:left; width:100%;}
 .woocommerce .products div.star-rating,
@@ -1232,7 +1228,6 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 .woocommerce-page #secondary input#s{	width: 168px;}
 .woocommerce-page.woocommerce-account #secondary input#s{	width: 235px;}
 /*shop*/
-body.woocommerce #page .container #secondary.widget-area {max-width:215px}
 .nav-links.shop .pages-links .page-numbers,.nav-links.shop .nav-next a,.nav-links.shop .nav-previous a{padding: 10px 18px;}
 .woocommerce a.added_to_cart, body.woocommerce-page a.added_to_cart{width:145px; clear:both}
 /*cart*/
@@ -1245,8 +1240,6 @@ body.woocommerce #page .container #secondary.widget-area {max-width:215px}
 .woocommerce-checkout .woocommerce #payment ul.payment_methods, .woocommerce-checkout.woocommerce-page #payment ul.payment_methods{max-width:410px}
 .shop-page.woocommerce-page #page  .five.columns.omega #secondary input#s, 
 .archive.tax-product_cat.woocommerce-page #page  .five.columns.omega #secondary input#s {width: 241px;}
-.woocommerce-checkout .five.columns,
-.woocommerce-cart .five.columns{max-width:215px}
 /*product*/
 body.woocommerce div.product div.summary,
 body.woocommerce-page div.product div.summary,
@@ -1262,6 +1255,5 @@ body.woocommerce #content div.product div.images,
 body.woocommerce-page #content div.product div.images{float:left; width:350px; margin:0 25px 0 0}
 .single.woocommerce span.onsale, .single.woocommerce-page span.onsale{top: 10px;left: 278px;}
 /*product category*/
-body.woocommerce.archive.tax-product_cat #page #secondary{width:215px;}
 body.woocommerce.archive.tax-product_cat #page .woo-loop-content{width: 100%;padding: 0;}
 
