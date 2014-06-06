@@ -183,7 +183,7 @@ function fruitful_widgets_init() {
 	) );
 	
 	register_sidebar( array(
-		'name' => __( 'Blog Right Sidebar', 'fruitful' ),
+		'name' => __( 'Blog Sidebar', 'fruitful' ),
 		'id' => 'sidebar-2',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => '</aside>',
