@@ -786,6 +786,18 @@ function fruitful_get_responsive_style () {
 						$woo_style_ .= '.woocommerce .woocommerce-ordering, .woocommerce-page .woocommerce-ordering{float:right}'."\n";
 					}
 				}
+				if (!empty($theme_options['woo_product_sidebar'])){
+					$product_sidebar_template = $theme_options['woo_product_sidebar'];
+					if ($product_sidebar_template == 3){
+						$woo_style_ .= '.single-product #page .container .woo-loop-content{float:left}'."\n";
+						$woo_style_ .= '.single-product #page .container .woo-loop-sidebar{float:right}'."\n";
+						$woo_style_ .= '.single-product #page .container .woo-loop-sidebar #secondary{float:right}'."\n";
+					} else {
+						$woo_style_ .= '.single-product #page .container .woo-loop-content{float:right}'."\n";
+						$woo_style_ .= '.single-product #page .container .woo-loop-sidebar{float:left}'."\n";
+						$woo_style_ .= '.single-product #page .container .woo-loop-sidebar #secondary{float:left}'."\n";
+					}
+				}
 				
 			}
 			
@@ -833,22 +845,28 @@ if (class_exists('Woocommerce')) {
 	}
 	
 	/*remove shop sidebar*/
-	add_action('template_redirect', 'fruitful_remove_shop_sidebar');
-	if (!function_exists('fruitful_remove_shop_sidebar')) {
-		function fruitful_remove_shop_sidebar() {
-			if (fruitful_get_shop_sidebar() == 1){
+	add_action('template_redirect', 'fruitful_remove_woo_sidebar');
+	if (!function_exists('fruitful_remove_woo_sidebar')) {
+		function fruitful_remove_woo_sidebar() {
+			if (fruitful_get_woo_sidebar() == 1){
 				remove_action('woocommerce_sidebar', 'woocommerce_get_sidebar');
 			}
 		}
 	}
 	
 	/*check is woocommerce sidebar will be hidden*/
-	if (!function_exists('fruitful_check_shop_sidebar')) {
-		function fruitful_get_shop_sidebar() {
+	if (!function_exists('fruitful_get_woo_sidebar')) {
+		function fruitful_get_woo_sidebar() {
 			if ( is_shop() ) {
 				$theme_options = fruitful_ret_options("fruitful_theme_options");
 				if (!empty($theme_options['woo_shop_sidebar'])){
 					return $theme_options['woo_shop_sidebar'];
+				} 
+			}
+			if ( is_product() ) {
+				$theme_options = fruitful_ret_options("fruitful_theme_options");
+				if (!empty($theme_options['woo_product_sidebar'])){
+					return $theme_options['woo_product_sidebar'];
 				} 
 			}
 		}

@@ -644,6 +644,7 @@ return array(
 				/*woocoommerce*/
 				'showcart'  		=> 'on',
 				'woo_shop_sidebar'	=> '2',
+				'woo_product_sidebar'	=> '1',
 				'shop_num_row'		=> '4',
 				'woo_shop_num_prod' => '10',
 				

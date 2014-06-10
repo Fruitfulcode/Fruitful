@@ -93,6 +93,7 @@ function fruitful_theme_options_init() {
 	if (class_exists('Woocommerce')) { 
 		add_settings_field( 'general_sc',		 __( 'Show cart in header',  'fruitful' ),'fruitful_show_cart_theme', 'theme_options',  'woocommerce', array('info' => __( 'If you want to display cart link in header select options below.', 'fruitful' )));
 		add_settings_field( 'woo_shop_sidebar',	 __( 'Woocommerce Shop Sidebar', 'fruitful' ), 	'fruitful_woo_shop_sidebar', 'theme_options', 'woocommerce', 		array('info' => __( 'Show or hide sidebar', 'fruitful' )));
+		add_settings_field( 'woo_product_sidebar', __( 'Woocommerce Product Sidebar', 'fruitful' ), 	'fruitful_woo_product_sidebar', 'theme_options', 'woocommerce', 		array('info' => __( 'Show or hide sidebar', 'fruitful' )));
 		add_settings_field( 'shop_num_row',		 __( 'Woocommerce pages products per row', 'fruitful' ), 	'fruitful_set_shop_num_row', 'theme_options', 'woocommerce', 		array('info' => __( 'Choose number of products', 'fruitful' )));
 		add_settings_field( 'woo_shop_num_prod', __( 'Number of products on Shop pages', 'fruitful' ), 	'fruitful_woo_shop_prod', 'theme_options', 'woocommerce', 		array('info' => __( 'Choose number of products. Write -1 for show all products on one page', 'fruitful' )));
 	}
@@ -362,6 +363,15 @@ function fruitful_woo_shop_sidebar() {
 	?>
 	<div class="box-option">
 		<?php fruitful_get_select_fields('woo_shop_sidebar', $options, fruitful_woo_shop_sidebar_list(), 'woocommerce'); ?>		
+	</div>	
+<?php	
+}
+
+function fruitful_woo_product_sidebar() {
+	$options = fruitful_get_theme_options();
+	?>
+	<div class="box-option">
+		<?php fruitful_get_select_fields('woo_product_sidebar', $options, fruitful_woo_shop_sidebar_list(), 'woocommerce'); ?>		
 	</div>	
 <?php	
 }
