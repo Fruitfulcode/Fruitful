@@ -58,7 +58,7 @@ button,html input[type="button"],input[type="reset"],input[type="submit"]{line-h
 	border:0px
 }
 body input#s{padding-left: 12px}
-body.post-type-archive input#s{padding-left: 12px;max-width:168px}
+body.post-type-archive input#s{padding-left: 12px;max-width:228px}
 
 
 /*---SHOP PAGE---*/
@@ -109,9 +109,6 @@ body.archive.tax-product_cat #page .container #secondary.widget-area {width:100%
 .woocommerce #page .container #secondary .widget ul{margin:0}
 .woocommerce #page aside.widget_price_filter .ui-slider .ui-slider-range,
 .woocommerce #page aside.widget_price_filter .ui-slider .ui-slider-range {background:#333333; }
-
-.shop-page #calendar_wrap{width:212px;border:1px solid #d9d9d9;padding:15px 0;}
-.shop-page #wp-calendar caption {padding: 0 0 15px 15px;}
 
 .archive.post-type-archive-product.shop-page #page .woocommerce .widget_layered_nav_filters ul li a,
 .archive.post-type-archive-product.woocommerce-page.shop-page #page .widget_layered_nav_filters ul li a,
@@ -1225,8 +1222,7 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 
 /* styles from 		"@media only screen and (min-width:1024px)"		*/
 /*secondary*/
-.woocommerce-page #secondary input#s{	width: 168px;}
-.woocommerce-page.woocommerce-account #secondary input#s{	width: 235px;}
+.woocommerce-page #secondary input#s{	width: 228px;}
 /*shop*/
 .nav-links.shop .pages-links .page-numbers,.nav-links.shop .nav-next a,.nav-links.shop .nav-previous a{padding: 10px 18px;}
 .woocommerce a.added_to_cart, body.woocommerce-page a.added_to_cart{width:145px; clear:both}
