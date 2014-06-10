@@ -201,7 +201,7 @@ function fruitful_widgets_init() {
 	) );
 	
 	register_sidebar( array(
-		'name' => __( 'Shop Page Sidebar', 'fruitful' ),
+		'name' => __( 'Homepage Sidebar', 'fruitful' ),
 		'id' => 'sidebar-4',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => '</aside>',
@@ -209,15 +209,25 @@ function fruitful_widgets_init() {
 		'after_title' => '</h3>',
 	) );
 	
-	register_sidebar( array(
-		'name' => __( 'Homepage Sidebar', 'fruitful' ),
-		'id' => 'sidebar-5',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget' => '</aside>',
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
-	) );
-	
+	if (class_exists('woocommerce')){
+		register_sidebar( array(
+			'name' => __( 'Shop Page Sidebar', 'fruitful' ),
+			'id' => 'sidebar-5',
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget' => '</aside>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>',
+		) );
+		
+		register_sidebar( array(
+			'name' => __( 'Product Page Sidebar', 'fruitful' ),
+			'id' => 'sidebar-6',
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget' => '</aside>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>',
+		) );
+	}
 }
 
 add_action( 'widgets_init', 'fruitful_widgets_init' );
