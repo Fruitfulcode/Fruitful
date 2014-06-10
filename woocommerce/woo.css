@@ -166,7 +166,7 @@ box-shadow: none;
 .woocommerce-page ul.products li.first {clear:none; float: left;}
 
 .woocommerce ul.products li.product,
-.woocommerce-page ul.products li.product {display: inline-table;float: none;position: relative;padding:0;margin-top:0;margin-bottom:2em}
+.woocommerce-page ul.products li.product {display: inline-table;float: left;position: relative;padding:0;margin-top:0;margin-bottom:2em}
 .shop-page #page.site .container #secondary .widget ul li.cat-item,
 .shop-page #page.site .container #secondary .widget ul li.cat-item:hover,
 .archive.tax-product_cat #page.site .container #secondary .widget ul li.cat-item,

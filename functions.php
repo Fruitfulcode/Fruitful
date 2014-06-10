@@ -734,25 +734,26 @@ function fruitful_get_responsive_style () {
 				if (!empty($theme_options['shop_num_row'])){
 					$first = $last = $main =  '';
 					$first = 'margin-left:0;';
-					$last  = 'margin-left:0;';
+					$last  = 'margin-right:0;';
 					
 					$woo_style_ .= '@media only screen and (min-width: 959px) {'."\n";
 						switch ($theme_options['shop_num_row']):
 							case 2:
-								$first = 'width:48%; margin-left:0; margin-right:1.5%;';
-								$last  = 'width:48%; margin-left:1.5%;margin-right:0;';
+								$main  = 'width:48%;';
+								$first = 'margin-left:0; margin-right:2%;';
+								$last  = 'margin-left:2%; margin-right:0;';
 								break;
 							case 3:
-								$main  = 'width:32%; margin-left:0.6%; 	margin-right:0.6%;';
+								$main  = 'width:32%; margin-left:1%; margin-right:1%;';
 								break;
 							case 4:
-								$main  = 'width:23.5%; margin-left:0.6%; margin-right:0.6%;';
+								$main  = 'width:23.5%; margin-left:1%; margin-right:1%;';
 								break;
 							case 5:
-								$main  = 'width:18.5%; margin-left:0.6%; margin-right:0.6%;';
+								$main  = 'width:19%; margin-left:0.625%; margin-right:0.625%;';
 								break;
 							default:
-								$main  = 'width:32%; margin-left:0.6%; 	margin-right:0.6%;';
+								$main  = 'width:32%; margin-left:1%; 	margin-right:1%;';
 						endswitch;
 						
 						if (!empty($main))  $woo_style_ .= '.woocommerce ul.products li.product, .woocommerce-page ul.products li.product{'.$main.'}'."\n";
