@@ -25,17 +25,25 @@ switch( $template ) {
 		get_sidebar( 'content' );
 		break;
 	case 'fruitful' :
-		if (fruitful_get_shop_sidebar() == 1){
+		if (fruitful_get_woo_sidebar() == 1){
 			echo '</div></div></div>';
-		} elseif(fruitful_get_shop_sidebar() == 2) {
+		} elseif(fruitful_get_woo_sidebar() == 2) {
 			echo '</div></div></div>';
 			echo '<div class="five columns alpha woo-loop-sidebar">';
-				get_sidebar( 'shop' );
+				if (is_shop()){
+					get_sidebar( 'shop' );
+				} else {
+					get_sidebar( 'product' );
+				}
 			echo '</div>';
 		} else {
 			echo '</div></div></div>';
 			echo '<div class="five columns omega woo-loop-sidebar">';
-				get_sidebar( 'shop' );
+				if (is_shop()){
+					get_sidebar( 'shop' );
+				} else {
+					get_sidebar( 'product' );
+				}
 			echo '</div>';
 		}
 		break;

@@ -25,9 +25,9 @@ switch( $template ) {
 		echo '<div id="primary" class="content-area"><div id="content" role="main" class="site-content twentyfourteen"><div class="tfwc">';
 		break;
 	case 'fruitful' :
-		if (fruitful_get_shop_sidebar() == 1){
+		if (fruitful_get_woo_sidebar() == 1){
 			echo '<div class="sixteen columns woo-loop-content alpha omega"><div id="container"><div id="content" role="main">';
-		} elseif(fruitful_get_shop_sidebar() == 2) {
+		} elseif(fruitful_get_woo_sidebar() == 2) {
 			echo '<div class="eleven columns woo-loop-content omega"><div id="container"><div id="content" role="main">';
 		} else {
 			echo '<div class="eleven columns woo-loop-content alpha"><div id="container"><div id="content" role="main">';
