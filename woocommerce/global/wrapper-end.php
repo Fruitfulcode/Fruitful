@@ -30,7 +30,7 @@ switch( $template ) {
 		} elseif(fruitful_get_woo_sidebar() == 2) {
 			echo '</div></div></div>';
 			echo '<div class="five columns alpha woo-loop-sidebar">';
-				if (is_shop()){
+				if (is_shop() || is_product_category()){
 					get_sidebar( 'shop' );
 				} else {
 					get_sidebar( 'product' );
@@ -39,7 +39,7 @@ switch( $template ) {
 		} else {
 			echo '</div></div></div>';
 			echo '<div class="five columns omega woo-loop-sidebar">';
-				if (is_shop()){
+				if (is_shop() || is_product_category()){
 					get_sidebar( 'shop' );
 				} else {
 					get_sidebar( 'product' );

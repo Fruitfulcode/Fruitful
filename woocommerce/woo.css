@@ -1236,8 +1236,6 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 	/*checkout*/
 	.woocommerce-checkout .checkout{float:left; width:940px}
 	.woocommerce-checkout .woocommerce #payment ul.payment_methods, .woocommerce-checkout.woocommerce-page #payment ul.payment_methods{max-width:410px}
-	.shop-page.woocommerce-page #page  .five.columns.omega #secondary input#s, 
-	.archive.tax-product_cat.woocommerce-page #page  .five.columns.omega #secondary input#s {width: 241px;}
 	/*product*/
 	body.woocommerce div.product div.summary,
 	body.woocommerce-page div.product div.summary,

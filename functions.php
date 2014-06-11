@@ -774,7 +774,7 @@ function fruitful_get_responsive_style () {
 				}
 				if (!empty($theme_options['woo_shop_sidebar'])){
 					$shop_sidebar_template = $theme_options['woo_shop_sidebar'];
-					if ($shop_sidebar_template == 3){
+					if ($shop_sidebar_template == 3){		/*right sidebar template*/
 						$woo_style_ .= '#page .container .woo-loop-content{float:left}'."\n";
 						$woo_style_ .= '#page .container .woo-loop-sidebar{float:right}'."\n";
 						$woo_style_ .= '#page .container .woo-loop-sidebar #secondary{float:right}'."\n";
@@ -788,7 +788,7 @@ function fruitful_get_responsive_style () {
 				}
 				if (!empty($theme_options['woo_product_sidebar'])){
 					$product_sidebar_template = $theme_options['woo_product_sidebar'];
-					if ($product_sidebar_template == 3){
+					if ($product_sidebar_template == 3){	/*right sidebar template*/
 						$woo_style_ .= '.single-product #page .container .woo-loop-content{float:left}'."\n";
 						$woo_style_ .= '.single-product #page .container .woo-loop-sidebar{float:right}'."\n";
 						$woo_style_ .= '.single-product #page .container .woo-loop-sidebar #secondary{float:right}'."\n";
@@ -857,7 +857,7 @@ if (class_exists('Woocommerce')) {
 	/*check is woocommerce sidebar will be hidden*/
 	if (!function_exists('fruitful_get_woo_sidebar')) {
 		function fruitful_get_woo_sidebar() {
-			if ( is_shop() ) {
+			if ( is_shop() || is_product_category() ) {
 				$theme_options = fruitful_ret_options("fruitful_theme_options");
 				if (!empty($theme_options['woo_shop_sidebar'])){
 					return $theme_options['woo_shop_sidebar'];
