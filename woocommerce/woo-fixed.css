@@ -810,7 +810,7 @@ body.single-product .related.products h2{float:left;width:100%;margin:25px 0;bor
 .woocommerce .related ul li.product, 
 .woocommerce-page .related ul li.product, 
 .woocommerce .upsells.products ul li.product, 
-.woocommerce-page .upsells.products ul li.product{width: 22.05%;margin-left: 3.8%;margin-right: 0;}
+.woocommerce-page .upsells.products ul li.product{width: 22.05%;margin-left: 3.8%;margin-right: 0;float:left; clear:none}
 
 body.woocommerce div.product .related.products span.price,
 body.woocommerce-page div.product .related.products span.price,
@@ -1049,7 +1049,7 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 .woocommerce-cart .woocommerce .cart-collaterals .cross-sells,
 .woocommerce-cart.woocommerce-page .cart-collaterals .cross-sells{width:100%;}
 .woocommerce.woocommerce-cart  ul.products li.product,
- .woocommerce-page.woocommerce-cart  ul.products li.product{width: 22.05%;margin: 0 3.8% 2.992em 0;}
+ .woocommerce-page.woocommerce-cart  ul.products li.product{width: 22.05%;margin: 0 3.8% 2.992em 0;float:left;clear:none}
 
 /*---CHEKOUT---*/
 .woocommerce-checkout #customer_details{display:block;float:left;width:100%;margin:0 ;}
@@ -1243,7 +1243,7 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 .woocommerce form .form-row select#calc_shipping_country, .woocommerce-page form .form-row select#calc_shipping_country{width:444px}
 .woocommerce div form .form-row input.input-text, .woocommerce-page form .form-row input.input-text, .woocommerce div form .form-row textarea, .woocommerce-page form .form-row textarea{max-width:100%}
 /*checkout*/
-.woocommerce-checkout .checkout{float:left; width:940px}
+.woocommerce-checkout .checkout{float:left; width:100%}
 .woocommerce-checkout .woocommerce #payment ul.payment_methods, .woocommerce-checkout.woocommerce-page #payment ul.payment_methods{max-width:410px}
 /*product*/
 body.woocommerce div.product div.summary,
@@ -1268,5 +1268,5 @@ body.woocommerce #content div.product div.images,
 body.woocommerce-page #content div.product div.images{float:left; width:350px; margin:0 25px 0 0}
 .single.woocommerce span.onsale, .single.woocommerce-page span.onsale{top: 10px;left: 278px;}
 /*product category*/
-body.woocommerce.archive.tax-product_cat #page .woo-loop-content{width: 100%;padding: 0;}
+body.woocommerce.archive.tax-product_cat #page .woo-loop-content{padding: 0;}
 
