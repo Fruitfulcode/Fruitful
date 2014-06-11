@@ -741,37 +741,7 @@ function fruitful_get_responsive_style () {
 			
 			/*Number of products in woocommerce loop*/
 			if (class_exists('woocommerce')){
-				if (!empty($theme_options['shop_num_row'])){
-					$first = $last = $main =  '';
-					$first = 'margin-left:0;';
-					$last  = 'margin-right:0;';
-					
-					$woo_style_ .= '@media only screen and (min-width: 959px) {'."\n";
-						switch ($theme_options['shop_num_row']):
-							case 2:
-								$main  = 'width:48%;';
-								$first = 'margin-left:0; margin-right:2%;';
-								$last  = 'margin-left:2%; margin-right:0;';
-								break;
-							case 3:
-								$main  = 'width:32%; margin-left:1%; margin-right:1%;';
-								break;
-							case 4:
-								$main  = 'width:23.5%; margin-left:1%; margin-right:1%;';
-								break;
-							case 5:
-								$main  = 'width:19%; margin-left:0.625%; margin-right:0.625%;';
-								break;
-							default:
-								$main  = 'width:32%; margin-left:1%; 	margin-right:1%;';
-						endswitch;
-						
-						if (!empty($main))  $woo_style_ .= '.woocommerce ul.products li.product, .woocommerce-page ul.products li.product{'.$main.'}'."\n";
-						if (!empty($main))  $woo_style_ .= '.woocommerce ul.products li.product.first, .woocommerce-page ul.products li.product.first{'.$first.'}'."\n";
-						if (!empty($main))  $woo_style_ .= '.woocommerce ul.products li.product.last, .woocommerce-page ul.products li.product.last{'.$last.'}'."\n";
-								
-					$woo_style_ .= '}'."\n";
-				}
+				
 				if (!empty($theme_options['woo_shop_sidebar'])){
 					$shop_sidebar_template = $theme_options['woo_shop_sidebar'];
 					if ($shop_sidebar_template == 3){		/*right sidebar template*/
@@ -844,7 +814,25 @@ if (class_exists('Woocommerce')) {
 		}
 	}
 	
-	/*remove shop sidebar*/
+	/*change number of products per page shop page*/
+	add_filter( 'loop_shop_per_page', 'fruitful_loop_shop_per_page', 20);
+	if (!function_exists('fruitful_loop_shop_per_page')) {
+		function fruitful_loop_shop_per_page(){
+			$theme_options = fruitful_ret_options("fruitful_theme_options");
+			$woo_shop_num_prod  = esc_js($theme_options['woo_shop_num_prod']);
+			return $woo_shop_num_prod;
+		}
+	}
+	
+	/*remove sidebar from all woocommerce pages except shop page*/
+	add_action( 'wp', 'init' );
+	function init() {
+		if ( !is_shop() && !is_product_category()) {
+			remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10);
+		}
+	}
+	
+	/*remove woocommerce sidebar on some pages*/
 	add_action('template_redirect', 'fruitful_remove_woo_sidebar');
 	if (!function_exists('fruitful_remove_woo_sidebar')) {
 		function fruitful_remove_woo_sidebar() {
@@ -872,13 +860,99 @@ if (class_exists('Woocommerce')) {
 		}
 	}
 	
-	/*change number of products per page shop page*/
-	add_filter( 'loop_shop_per_page', 'fruitful_loop_shop_per_page', 20);
-	if (!function_exists('fruitful_loop_shop_per_page')) {
-		function fruitful_loop_shop_per_page(){
-			$theme_options = fruitful_ret_options("fruitful_theme_options");
-			$woo_shop_num_prod  = esc_js($theme_options['woo_shop_num_prod']);
-			return $woo_shop_num_prod;
+	/*rewrite pagenavi for woocommerce*/
+	remove_action('woocommerce_pagination', 'woocommerce_pagination', 10);
+	add_action( 'woocommerce_pagination', 'woocommerce_pagination', 10);
+	if ( ! function_exists( 'woocommerce_pagination' ) ) {
+		function woocommerce_pagination() { 
+			fruitful_wp_corenavi();
+		}
+	}
+
+	/*change title in tabs on single product page*/
+	add_filter('woocommerce_product_description_heading','fruitful_product_description_heading');
+	function fruitful_product_description_heading() {
+	   return '';
+	}
+	
+	/*4 cross products for cart*/
+	remove_action( 'woocommerce_cart_collaterals', 'woocommerce_cross_sell_display' );
+	add_action( 'woocommerce_cart_collaterals', 'fruitful_woocommerce_cross_sell_display' );
+	if ( ! function_exists( 'fruitful_woocommerce_cross_sell_display' ) ) {
+		function fruitful_woocommerce_cross_sell_display() {
+			
+			if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
+			global $woocommerce_loop, $woocommerce, $product;
+			$crosssells = $woocommerce->cart->get_cross_sells();
+			if ( sizeof( $crosssells ) == 0 ) return;
+			$meta_query = $woocommerce->query->get_meta_query();
+			$args = array(
+				'post_type'           => 'product',
+				'ignore_sticky_posts' => 1,
+				'posts_per_page'      => apply_filters( 'woocommerce_cross_sells_total', 4 ),
+				'no_found_rows'       => 1,
+				'orderby'             => 'rand',
+				'post__in'            => $crosssells,
+				'meta_query'          => $meta_query
+			);
+			$products = new WP_Query( $args );
+			$woocommerce_loop['columns'] 	= apply_filters( 'woocommerce_cross_sells_columns', 4 );
+			if ( $products->have_posts() ) : ?>
+				<div class="cross-sells">
+					<h2><?php _e( 'You may be interested in&hellip;', 'woocommerce' ) ?></h2>
+					<?php woocommerce_product_loop_start(); ?>
+						<?php while ( $products->have_posts() ) : $products->the_post(); ?>
+							<?php woocommerce_get_template_part( 'content', 'product' ); ?>
+						<?php endwhile; // end of the loop. ?>
+					<?php woocommerce_product_loop_end(); ?>
+				</div>
+			<?php endif;
+			wp_reset_query();
+		}
+	}
+	
+	/*4 related products for single-product*/
+	add_filter( 'woocommerce_related_products_args', 'fruitful_woocommerce_related_products_limit' ); 
+	if ( ! function_exists( 'fruitful_woocommerce_related_products_limit' ) ) {
+	function fruitful_woocommerce_related_products_limit() {
+			global $product;
+			$args = array(
+				'post_type'        		=> 'product',
+				'no_found_rows'    		=> 1,
+				'posts_per_page'   		=> 4,
+				'ignore_sticky_posts' 	=> 1,
+				'orderby'             	=> $orderby,
+				'post__in'            	=> $related,
+				'post__not_in'        	=> array($product->id)
+			);
+			return $args;
+		}
+	}
+	
+	/*4 of related products per row*/	
+	remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+	add_action( 'woocommerce_after_single_product_summary', 'fruitful_after_single_product_summary', 20 );
+	if ( ! function_exists( 'fruitful_after_single_product_summary' ) ) {
+		function fruitful_after_single_product_summary() {
+		  woocommerce_related_products( 4, 4 );
+		}
+	}
+	
+	/*Update cart contents update when products are added to the cart via AJAX */
+	add_filter('add_to_cart_fragments', 'fruitful_woocommerce_header_add_to_cart_fragment');
+	if ( ! function_exists( 'fruitful_woocommerce_header_add_to_cart_fragment' ) ) {
+		function fruitful_woocommerce_header_add_to_cart_fragment( $fragments ) {
+			global $woocommerce;
+			ob_start();
+			?>
+			<a href="<?php echo get_permalink( woocommerce_get_page_id( 'cart' ) ); ?>" class="cart-contents">
+				<div class="cart_image"></div>
+				<span class="num_of_product_cart"><?php global $woocommerce;
+				 echo sprintf(_n('%d ', '%d ', $woocommerce->cart->cart_contents_count, 'fruitful'), $woocommerce->cart->cart_contents_count); ?> </span>
+			</a>
+			<?php
+			$fragments['a.cart-contents'] = ob_get_clean();
+			return $fragments;
 		}
 	}
 }
@@ -975,24 +1049,24 @@ function fruitful_customize_register( $wp_customize ) {
  
 	$wp_customize->add_control(
 		new Fruitful_Theme_Options_Button_Control (
-        $wp_customize,
-        'button_link_control',
-        array(
-            'label' 	=> 'Advanced theme settings',
-			'section' 	=> 'fruitful_themeoptions_link',
-            'settings' 	=> 'themeoptions_button_control'
-        )
-    )
-);
+			$wp_customize,
+			'button_link_control',
+			array(
+				'label' 	=> 'Advanced theme settings',
+				'section' 	=> 'fruitful_themeoptions_link',
+				'settings' 	=> 'themeoptions_button_control'
+			)
+		)
+	);
 }
-	add_action( 'customize_register', 'fruitful_customize_register' );
+add_action( 'customize_register', 'fruitful_customize_register' );
 }
 
 if ( ! function_exists( 'fruitful_customize_preview_js' ) ) {
 function fruitful_customize_preview_js() {
 	wp_enqueue_script( 'fruitful-customizer', get_template_directory_uri() . '/js/theme-customizer.js', array( 'customize-preview' ), '20130226', true );
 }
-	add_action( 'customize_preview_init', 'fruitful_customize_preview_js' );
+add_action( 'customize_preview_init', 'fruitful_customize_preview_js' );
 }	
 
 
@@ -1131,19 +1205,6 @@ function fruitful_get_languages_list(){
 }
 }
 
-
-/*remove sidebar from all woocommerce pages except shop page*/
-if (class_exists('Woocommerce')) { 
-	add_action( 'wp', 'init' );
-	function init() {
-		if ( !is_shop() && !is_product_category()) {
-			remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10);
-		}
-	}
-}
-
-
-/*rewrite pagenavi for woocommerce*/
 if ( ! function_exists( 'fruitful_wp_corenavi' ) ) {
 function fruitful_wp_corenavi() {  
 	global $wp_query, 
@@ -1190,17 +1251,6 @@ function fruitful_wp_corenavi() {
 }
 }
 
-if (class_exists('Woocommerce')) { 
-	remove_action('woocommerce_pagination', 'woocommerce_pagination', 10);
-	add_action( 'woocommerce_pagination', 'woocommerce_pagination', 10);
-}
-
-if ( ! function_exists( 'woocommerce_pagination' ) ) {
-	function woocommerce_pagination() { 
-		fruitful_wp_corenavi();
-	}
-}
-
 /*rewrite get_product_search_form() function*/
 if ( ! function_exists( 'fruitful_get_product_search_form' ) ) {
 	function fruitful_get_product_search_form(){
@@ -1215,96 +1265,6 @@ if ( ! function_exists( 'fruitful_get_product_search_form' ) ) {
 		<?php
 	}
 }	
-
-/*change title in tabs on single product page*/
-if (class_exists('Woocommerce')) { 
-	add_filter('woocommerce_product_description_heading','fruitful_product_description_heading');
-}
-
-function fruitful_product_description_heading() {
-   return '';
-}
-
-/*4 cross products for cart*/
-if (class_exists('Woocommerce')) { 
-	remove_action( 'woocommerce_cart_collaterals', 'woocommerce_cross_sell_display' );
-	add_action( 'woocommerce_cart_collaterals', 'fruitful_woocommerce_cross_sell_display' );
-}
-
-if ( ! function_exists( 'fruitful_woocommerce_cross_sell_display' ) ) {
-function fruitful_woocommerce_cross_sell_display() {
-	
-	if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
-	global $woocommerce_loop, $woocommerce, $product;
-	$crosssells = $woocommerce->cart->get_cross_sells();
-	if ( sizeof( $crosssells ) == 0 ) return;
-	$meta_query = $woocommerce->query->get_meta_query();
-	$args = array(
-		'post_type'           => 'product',
-		'ignore_sticky_posts' => 1,
-		'posts_per_page'      => apply_filters( 'woocommerce_cross_sells_total', 4 ),
-		'no_found_rows'       => 1,
-		'orderby'             => 'rand',
-		'post__in'            => $crosssells,
-		'meta_query'          => $meta_query
-	);
-	$products = new WP_Query( $args );
-	$woocommerce_loop['columns'] 	= apply_filters( 'woocommerce_cross_sells_columns', 4 );
-	if ( $products->have_posts() ) : ?>
-		<div class="cross-sells">
-			<h2><?php _e( 'You may be interested in&hellip;', 'woocommerce' ) ?></h2>
-			<?php woocommerce_product_loop_start(); ?>
-				<?php while ( $products->have_posts() ) : $products->the_post(); ?>
-					<?php woocommerce_get_template_part( 'content', 'product' ); ?>
-				<?php endwhile; // end of the loop. ?>
-			<?php woocommerce_product_loop_end(); ?>
-		</div>
-	<?php endif;
-	wp_reset_query();
-}
-}
-
-/*4 related products for single-product*/
-if ( ! function_exists( 'fruitful_woocommerce_related_products_limit' ) ) {
-function fruitful_woocommerce_related_products_limit() {
-		global $product;
-		$args = array(
-			'post_type'        		=> 'product',
-			'no_found_rows'    		=> 1,
-			'posts_per_page'   		=> 4,
-			'ignore_sticky_posts' 	=> 1,
-			'orderby'             	=> $orderby,
-			'post__in'            	=> $related,
-			'post__not_in'        	=> array($product->id)
-		);
-		return $args;
-	}
-}
-
-if (class_exists('Woocommerce')) { 
-	add_filter( 'woocommerce_related_products_args', 'fruitful_woocommerce_related_products_limit' ); 
-}
-
-// Update cart contents update when products are added to the cart via AJAX 
-if (class_exists('Woocommerce')) { 
-	add_filter('add_to_cart_fragments', 'fruitful_woocommerce_header_add_to_cart_fragment');
-}
-
-if ( ! function_exists( 'fruitful_woocommerce_header_add_to_cart_fragment' ) ) {
-	function fruitful_woocommerce_header_add_to_cart_fragment( $fragments ) {
-		global $woocommerce;
-		ob_start();
-		?>
-		<a href="<?php echo get_permalink( woocommerce_get_page_id( 'cart' ) ); ?>" class="cart-contents">
-			<div class="cart_image"></div>
-			<span class="num_of_product_cart"><?php global $woocommerce;
-			 echo sprintf(_n('%d ', '%d ', $woocommerce->cart->cart_contents_count, 'fruitful'), $woocommerce->cart->cart_contents_count); ?> </span>
-		</a>
-		<?php
-		$fragments['a.cart-contents'] = ob_get_clean();
-		return $fragments;
-	}
-}
 
 if ( ! function_exists( 'fruitful_is_woo_sidebar' ) ) {
 	function fruitful_is_woo_sidebar() {
