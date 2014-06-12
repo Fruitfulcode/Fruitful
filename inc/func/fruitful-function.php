@@ -405,7 +405,11 @@ function fruitful_custom_do_settings_fields($page, $section) {
 }
 
 function fruitful_add_admin_style() {
-	wp_enqueue_style('admin-style', 		get_template_directory_uri() . '/inc/css/admin.css');
+	if(is_rtl()){
+		wp_enqueue_style('admin-style', 		get_template_directory_uri() . '/inc/css/admin-rtl.css');
+	} else {
+		wp_enqueue_style('admin-style', 		get_template_directory_uri() . '/inc/css/admin.css');
+	}
 	wp_enqueue_style('fonts-style', 		get_template_directory_uri() . '/inc/css/fonts-style.css');
 	wp_enqueue_style('ch-style',			get_template_directory_uri() . '/inc/js/ch/ch.css');
 	wp_enqueue_style('sl-style',			get_template_directory_uri() . '/inc/js/sl/jquery.formstyler.css');
