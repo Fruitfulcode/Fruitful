@@ -1384,3 +1384,12 @@ if ( ! function_exists( 'fruitful_get_content_with_custom_sidebar' ) ) {
 		}
 	}
 }	
+
+if (!class_exists('ffs')){
+function fruitful_shortcodes_admin_notice(){
+    echo '<div class="updated">
+       <p>Attention! Fruitful theme version 2.0 got major updates. You may have a problems with display content in shortcodes, because we created this part as plugin. You need install Fruitful Shortcodes and use them.</p>
+    </div>';
+}
+add_action('admin_notices', 'fruitful_shortcodes_admin_notice');
+}
