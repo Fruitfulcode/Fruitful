@@ -46,7 +46,7 @@ function fruitful_all_metaboxes( array $meta_boxes ) {
 					'options' 	=> array(
 										'0' => __('Disable slider', 'fruitful'),
 										'1' => __('Full width slider', 'fruitful'),
-										'2' => __('Slider content width', 'fruitful'),
+										'2' => __('Boxed slider', 'fruitful'),
 										),
 					'type' => 'select'
 				),
