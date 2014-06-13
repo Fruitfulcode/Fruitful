@@ -569,10 +569,10 @@ function fruitful_get_responsive_style () {
 	wp_enqueue_style('fonts-style', get_template_directory_uri()    . '/inc/css/fonts-style.css');
 	if (isset($theme_options['responsive']) && ($theme_options['responsive'] == 'on')) {
 		wp_enqueue_style('main-style',  get_stylesheet_uri());
-		wp_enqueue_style( 'woo-style', get_template_directory_uri() . '/woocommerce/woo.css');
+		if (class_exists('woocommerce')){wp_enqueue_style( 'woo-style', get_template_directory_uri() . '/woocommerce/woo.css');}
 	} else {
 		wp_enqueue_style('main-style',  get_stylesheet_directory_uri()  .'/fixed-style.css');
-		wp_enqueue_style( 'woo-style', get_template_directory_uri() . '/woocommerce/woo-fixed.css');
+		if (class_exists('woocommerce')){wp_enqueue_style( 'woo-style', get_template_directory_uri() . '/woocommerce/woo-fixed.css');}
 	} 
  
 	if (!empty($theme_options['styletheme'])) {
