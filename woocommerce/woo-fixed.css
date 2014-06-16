@@ -542,10 +542,18 @@ body.woocommerce-page div.product form.cart .variations td.label,
 body.woocommerce #content div.product form.cart .variations td.label, 
 body.woocommerce-page #content div.product form.cart .variations td.label{padding-top:15px;width:100%;padding-left:0;padding-right:0;float:left;color: #333333;}
 
+body.woocommerce div.product form.cart, 
+body.woocommerce #content div.product form.cart, 
+body.woocommerce-page div.product form.cart, 
+body.woocommerce-page #content div.product form.cart{margin:0;}
 body.woocommerce div.product form.cart .variations td.value,
 body.woocommerce-page div.product form.cart .variations td.value, 
 body.woocommerce #content div.product form.cart .variations td.value, 
 body.woocommerce-page #content div.product form.cart .variations td.value{width:100%;padding-left:0;padding-right:0;float:left}
+body.woocommerce div.product form.cart .single_variation,
+body.woocommerce-page div.product form.cart .single_variation{float:left;width:100%;margin:0 0 15px 0}
+body.woocommerce div.product form.cart .variations_button,
+body.woocommerce-page div.product form.cart .variations_button{float:left;width:100%;margin:0 0 15px 0}
 
 body.woocommerce-page #content input.button.alt,
 body.woocommerce-page #content input.button,
