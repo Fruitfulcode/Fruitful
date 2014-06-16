@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Fruitful theme\n"
 "POT-Creation-Date: 2014-03-28 11:11+0200\n"
-"PO-Revision-Date: 2014-03-28 16:55+0200\n"
+"PO-Revision-Date: 2014-06-16 10:54+0200\n"
 "Last-Translator: \n"
 "Language-Team: Fruitful Team <fruitfulcode.com>\n"
 "Language: fr_FR\n"
@@ -1087,8 +1087,8 @@ msgid ""
 "Upload your background image for site background. (Supported files .png, ."
 "jpg, .gif)"
 msgstr ""
-"Uploadez votre image de fond pour l'arrière-plan du site (Fichiers pris en charge ."
-"png, .jpg, .gif)"
+"Uploadez votre image de fond pour l'arrière-plan du site (Fichiers pris en "
+"charge .png, .jpg, .gif)"
 
 #: inc/theme-options/theme-options.php:61
 msgid "Background Color "
@@ -1115,8 +1115,8 @@ msgid ""
 "Upload logo image for your website. Size is original (Supported files .png, ."
 "jpg, .gif)"
 msgstr ""
-"Uploader le logo pour votre site web. Le fichier ne sera pas redimensionné (les fichiers "
-"pris en charge .png, .jpg, .gif)"
+"Uploader le logo pour votre site web. Le fichier ne sera pas redimensionné "
+"(les fichiers pris en charge .png, .jpg, .gif)"
 
 #: inc/theme-options/theme-options.php:66
 msgid "Favicon"
@@ -1165,7 +1165,7 @@ msgid "Color for lines"
 msgstr "Couleur des lignes"
 
 #: inc/theme-options/theme-options.php:73
-msgid "Choose you colors for lines and separators"
+msgid "Choose your colors for lines and separators"
 msgstr "Choisissez les couleurs des lignes et des séparateurs"
 
 #: inc/theme-options/theme-options.php:74
@@ -1173,7 +1173,7 @@ msgid "Color for buttons"
 msgstr "Couleur des boutons"
 
 #: inc/theme-options/theme-options.php:74
-msgid "Choose you colors for buttons"
+msgid "Choose your colors for buttons"
 msgstr "Choisissez les couleurs pour les boutons"
 
 #: inc/theme-options/theme-options.php:77
@@ -1184,7 +1184,8 @@ msgstr "Polices"
 #: inc/theme-options/theme-options.php:77
 msgid "Popular web safe font collection, select and use for your needs."
 msgstr ""
-"Collection de police web populaire et sûr, choisissez et utilisez pour votre site."
+"Collection de police web populaire et sûr, choisissez et utilisez pour votre "
+"site."
 
 #: inc/theme-options/theme-options.php:79
 msgid "Headers"
@@ -1258,10 +1259,9 @@ msgstr ""
 "Ajouter des images au slider (fichiers pris en charge .png, .jpg, .gif) Si "
 "vous souhaitez modifier l'ordre, il suffit de glisser et déposer. La taille "
 "de l'image pour les diapositives est la meme que dans la galerie de médias, "
-"uploadez des images de même taille, pour obtenir le meilleur "
-"affichage sur la page. Pour afficher le slider a l'endroit voulu, utilisez "
-"le code [fruitful_slider]. Le thème actuel ne supportte qu'un seul "
-"slider par site."
+"uploadez des images de même taille, pour obtenir le meilleur affichage sur "
+"la page. Pour afficher le slider a l'endroit voulu, utilisez le code "
+"[fruitful_slider]. Le thème actuel ne supportte qu'un seul slider par site."
 
 #: inc/theme-options/theme-options.php:88
 msgid "Socials Links Position"

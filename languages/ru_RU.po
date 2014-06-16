@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Fruitful theme\n"
 "POT-Creation-Date: 2014-05-21 15:12+0200\n"
-"PO-Revision-Date: 2014-05-21 15:34+0200\n"
+"PO-Revision-Date: 2014-06-16 10:47+0200\n"
 "Last-Translator: \n"
 "Language-Team: Fruitful Team <fruitfulcode.com>\n"
 "Language: Russian\n"
@@ -1208,7 +1208,7 @@ msgid "Color for lines"
 msgstr "Цвета для линий"
 
 #: fruitful/inc/theme-options/theme-options.php:72
-msgid "Choose you colors for lines and separators"
+msgid "Choose your colors for lines and separators"
 msgstr "Выберите Ваши цвета для линий и разделителей"
 
 #: fruitful/inc/theme-options/theme-options.php:73
@@ -1216,7 +1216,7 @@ msgid "Color for buttons"
 msgstr "Цвета для кнопок"
 
 #: fruitful/inc/theme-options/theme-options.php:73
-msgid "Choose you colors for buttons"
+msgid "Choose your colors for buttons"
 msgstr "Выберите Ваши цвета для кнопок"
 
 #: fruitful/inc/theme-options/theme-options.php:76

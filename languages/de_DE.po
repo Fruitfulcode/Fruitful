@@ -2,14 +2,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Fruitful Theme\n"
 "POT-Creation-Date: 2014-03-27 17:59+0200\n"
-"PO-Revision-Date: 2014-04-20 00:59+0100\n"
+"PO-Revision-Date: 2014-06-16 10:50+0200\n"
 "Last-Translator: pixolin <pixolin@gmx.com>\n"
 "Language-Team: Fruitful Team <fruitfulcode.com>\n"
 "Language: de_DE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.4\n"
+"X-Generator: Poedit 1.5.3\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop;_e;__;_x;_n;esc_attr_e\n"
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -1164,7 +1164,7 @@ msgid "Color for lines"
 msgstr "Farbe für Linien"
 
 #: inc/theme-options/theme-options.php:73
-msgid "Choose you colors for lines and separators"
+msgid "Choose your colors for lines and separators"
 msgstr "Wählen Sie die Farben für Linien und Trennlinien"
 
 #: inc/theme-options/theme-options.php:74
@@ -1172,7 +1172,7 @@ msgid "Color for buttons"
 msgstr "Farbe für Buttons"
 
 #: inc/theme-options/theme-options.php:74
-msgid "Choose you colors for buttons"
+msgid "Choose your colors for buttons"
 msgstr "Wählen Sie Farben für Buttons"
 
 #: inc/theme-options/theme-options.php:77
