@@ -536,7 +536,7 @@ body.woocommerce-page #content div.product form.cart .variations td.label{paddin
 body.woocommerce div.product form.cart, 
 body.woocommerce #content div.product form.cart, 
 body.woocommerce-page div.product form.cart, 
-body.woocommerce-page #content div.product form.cart{margin:0;}
+body.woocommerce-page #content div.product form.cart{margin:0 0 2em 0;}
 body.woocommerce div.product form.cart .variations td.value,
 body.woocommerce-page div.product form.cart .variations td.value, 
 body.woocommerce #content div.product form.cart .variations td.value, 
@@ -545,6 +545,8 @@ body.woocommerce div.product form.cart .single_variation,
 body.woocommerce-page div.product form.cart .single_variation{float:left;width:100%;margin:0 0 15px 0}
 body.woocommerce div.product form.cart .variations_button,
 body.woocommerce-page div.product form.cart .variations_button{float:left;width:100%;margin:0 0 15px 0}
+body.woocommerce div.product .product_meta,
+body.woocommerce-page div.product .product_meta{padding:0 0 2em 0}
 
 body.woocommerce-page #content input.button.alt,
 body.woocommerce-page #content input.button,
@@ -819,9 +821,9 @@ body.woocommerce-page #content div.product .woocommerce-tabs{
 	float:right; 
 	width:100%; 
 	clear:none; 
-	margin:25px 0 0; 
+	margin:0; 
 	padding:0;
-	 box-shadow: 0 0px 3px 0 rgba(0,0,0,0.3);
+	box-shadow: 0 0px 3px 0 rgba(0,0,0,0.3);
 	-webkit-box-shadow: 0 0px 3px 0 rgba(0,0,0,0.3);
 	-moz-box-shadow: 0 0px 3px 0 rgba(0,0,0,0.3);
 }
