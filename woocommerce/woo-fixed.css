@@ -619,7 +619,7 @@ body.woocommerce-page .woocommerce .cart-collaterals button.button:hover,
 
 .single-product form.cart .button,
 .single-product.woocommerce button.button.alt,
-.single-product.woocommerce-page button.button.alt{margin: 0 0 0 30px }
+.single-product.woocommerce-page button.button.alt{margin:0}
 
 .widget_shopping_cart_content .buttons a.button{margin:5px 5px 5px 0;float:left}
 
@@ -697,7 +697,7 @@ body.woocommerce div.product form.cart div.quantity,
 body.woocommerce-page div.product form.cart div.quantity, 
 body.woocommerce #content div.product form.cart div.quantity, 
 body.woocommerce-page #content div.product form.cart div.quantity,
-.woocommerce-page.woocommerce-cart #content .product-quantity div.quantity{width:120px; margin:0; border:1px solid #e5e5e5;}
+.woocommerce-page.woocommerce-cart #content .product-quantity div.quantity{width:120px; margin:0 30px 0 0; border:1px solid #e5e5e5;}
 
 body.woocommerce .quantity .minus, 
 body.woocommerce-page .quantity .minus, 
