@@ -176,7 +176,7 @@ body.fancybox-lock {
 /* #Tablet (Portrait)================================================== */
 /* Note:Design for a width of 768px */
 @media only screen and (min-width:768px) and (max-width:959px) {
-    .container {
+.container {
     width:768px;
 }
 .container .column,.container .columns {
@@ -299,7 +299,7 @@ body.fancybox-lock {
 /* #Mobile (Portrait)================================================== */
 /* Note:Design for a width of 320px */
 @media only screen and (max-width:767px) {
-    .container {
+.container {
     width:300px;
 }
 .container .columns,.container .column {
@@ -409,29 +409,13 @@ h1,h2,h3,h4,h5,h6 {
     clear:both;
 	line-height:24px;
 }
-h1 {
-	font-size: 27px;
-}
+h1 {	font-size: 27px;}
+h2 {	font-size: 23px;}
+h3 {	font-size: 20px;}
+h4 {	font-size: 17px;}
+h5 {	font-size: 14px;}
+h6 {	font-size: 12px;}
 
-h2 {
-	font-size: 23px;
-}
-
-h3 {
-	font-size: 20px;
-}
-
-h4 {
-	font-size: 17px;
-}
-
-h5 {
-	font-size: 14px;
-}
-
-h6 {
-	font-size: 12px;
-}
 .entry-content h1,
 .entry-content h2,
 .entry-content h3,
@@ -629,16 +613,6 @@ input[type=text]:focus,input[type=email]:focus,textarea:focus {
 input[type=text],input[type=email],input[type=url] {
     padding:3px;
 }
-
-#commentform label {
-width: 75px;
-float: left;
-}
-
-.form-allowed-tags{
-	display:none
-}
-
 textarea {
     overflow:auto;
     padding-left:3px;
@@ -651,6 +625,15 @@ a {
 
 a:hover,a:focus,a:active {
     color:#FF5D2A;
+}
+
+#commentform label {
+	width: 75px;
+	float: left;
+}
+
+.form-allowed-tags{
+	display:none
 }
 
 .alignleft {
@@ -759,7 +742,7 @@ ul#lang-select-popup{
     margin:0 0 0 10px;
 }
 
- .main-navigation li {
+.main-navigation li {
     float:left;
     position:relative;
 }
@@ -1173,7 +1156,7 @@ section {
 }
 
 .page-header {
-	 margin: 0 0 20px;
+	margin: 0 0 20px;
 }
 
 #page .container .content p {
@@ -1288,26 +1271,26 @@ header.post-header, .blog_post {
     margin:0;
 }
 .blog_post .post-content footer.entry-meta .comments-link {
-    background:url(images/comment.png) no-repeat 0 0 transparent;
+	background:url(images/comment.png) no-repeat 0 0 transparent;
 }
 .blog_post .post-content footer.entry-meta .author-link {
-    background:url(images/user.png) no-repeat 0 0 transparent;
+	background:url(images/user.png) no-repeat 0 0 transparent;
 }
 .blog_post .post-content footer.entry-meta .cat-links {
-    background:url(images/category.png) no-repeat 0 3px transparent;
+	background:url(images/category.png) no-repeat 0 3px transparent;
 }
 .blog_post .post-content footer.entry-meta .tag-links {
-    background:url(images/tag.png) no-repeat 0 3px transparent;
+	background:url(images/tag.png) no-repeat 0 3px transparent;
 }
 .blog_post .post-content footer.entry-meta .comments-link:hover,.blog_post .post-content footer.entry-meta .author-link:hover,.blog_post .post-content footer.entry-meta .cat-links:hover {
-    opacity:0.9
+	opacity:0.9
 }
 .blog_post .post-content footer.entry-meta .comments-link a,.blog_post .post-content footer.entry-meta .tag-links a,.blog_post .post-content footer.entry-meta .author-link a,.blog_post .post-content footer.entry-meta .cat-links a,.blog_post .post-content footer.entry-meta .edit-link a {
-    text-decoration:none;
+	text-decoration:none;
 }
 .more-link {
-    text-decoration:none;
-    font-size:13px
+	text-decoration:none;
+	font-size:13px
 }
 
 body div.pp_pic_holder{z-index:100000}
@@ -1845,9 +1828,6 @@ address {
 	float:left;
 	display:block;
 	max-width:40px;
-}
-
-#comments.comments-area ol.commentlist li.comment .comment-author {
 	font-size:12px;
 	font-family:inherit;
 }
@@ -2093,7 +2073,7 @@ body .resp-vtabs .resp-tabs-container{border:0}
 	margin: 0; 
 	width: 100%;
 	list-style:none;
-	 max-width: 240px;
+	max-width: 240px;
 }
 
 .custom-tabs ul li { 
@@ -2166,9 +2146,9 @@ body .resp-vtabs .resp-tabs-container{border:0}
 
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (min-width:768px) {
-	.search header.post-header .post-title { width:94.01%; padding: 0 3% 13px ;}
+	.search header.post-header .post-title {width:94.01%; padding: 0 3% 13px ;}
 	.blog_post .post-content .entry-summary{padding:20px 3% 10px;margin-top:0}
-	.search .blog_post .post-content footer.entry-meta{	padding:0 3%}
+	.search .blog_post .post-content footer.entry-meta{padding:0 3%}
 	.search article.post-password-required header.post-header .post-title{width:90.51%;padding: 0 6.5% 13px 3%;}
 	.search article.format-link header.post-header .post-title{width:90.51%;padding: 0 6.5% 13px 3%;}
 	.search article[class*=tag-twitter] header.post-header .post-title{width:90.51%;padding: 0 6.5% 13px 3%;}
@@ -2178,9 +2158,9 @@ body .resp-vtabs .resp-tabs-container{border:0}
 	.single-post .five.columns.alpha{float:left}
 }
 @media only screen and (min-width:768px) and (max-width:959px) {
-	.blog_post .post-content { width: 692px;}
-	.eleven.columns .blog_post .post-content { width: 452px;}
-	.search .blog_post .post-content { width:692px; }
+	.blog_post .post-content {width: 692px;}
+	.eleven.columns .blog_post .post-content {width: 452px;}
+	.search .blog_post .post-content {width:692px;}
 	#calendar_wrap{padding:10px 3px}
 	input#s { width:177px;}
 	/*single post*/
@@ -2214,6 +2194,7 @@ body .resp-vtabs .resp-tabs-container{border:0}
 	#comments	{width: 94%;padding: 10px 3%;margin:0}
 	article		{width: 94%;padding: 10px 3%;margin:0}
 	#colophon	{width: 94%;padding: 10px 3%;margin:0}
+	.blog_post	{width:auto}
 	#page .container #secondary	{width: 94%;padding: 10px 3%;margin:40px 0 0 0}
 	#colophon .site-info{width:100%}
 }
@@ -2224,15 +2205,66 @@ body .resp-vtabs .resp-tabs-container{border:0}
 }
 @media only screen and (max-width:479px) {
 	#masthead .social-icon{float: left;clear: both;margin:20px 0;}
-	.blog_post .date_of_post {	width: 50px; height: 50px; float:none; left:0; top:1px}
+	.blog_post .date_of_post {width: 50px; height: 50px; float:none; left:0; top:1px}
 	.blog_post .date_of_post .day_post {font-size: 18px;}
 	.blog_post .post-content,
 	.eleven.columns .blog_post .post-content,
 	.search .blog_post .post-content{width: 281px;}
-	input#s {   width:235px;}
+	input#s {width:235px;}
 	#page .container #secondary .widget>ul>li.cat-item{overflow-x:hidden}
 	.responsive .select-menu{margin: 16px 0 25px 0 !important}
 }
 
 @media only screen and (max-device-width:1024px) and (orientation:portrait)  {}
 @media only screen and (max-device-width:1024px) and (orientation:landscape) {}
+
+/*RTL Styles*/
+html[dir="rtl"] #colophon .site-info {	float:right;}
+html[dir="rtl"] #masthead .social-icon{	float:left;}
+html[dir="rtl"] #colophon .social-icon{	float:left;}
+html[dir="rtl"] .site-content .nav-previous a{float:right;}
+html[dir="rtl"] .site-content .nav-previous a .meta-nav{float:left;}
+html[dir="rtl"] .site-content .nav-next{text-align:left;margin-left:8%;float:left}
+html[dir="rtl"] .site-content .nav-next a{float:left;direction:ltr}
+html[dir="rtl"] .site-content .nav-next a .meta-nav{float:none;}
+html[dir="rtl"] .blog_post .date_of_post {float:right;right:1px;left:initial}
+html[dir="rtl"] .blog_post .post-content footer.entry-meta .edit-link{float:left;}
+html[dir="rtl"] .blog_post .post-content footer.entry-meta .comments-link	{padding:0 26px 2px 0; margin:0 0 0 10px;background:url(images/comment.png) no-repeat right 0 transparent;}
+html[dir="rtl"] .blog_post .post-content footer.entry-meta .author-link	{padding:0 26px 2px 0; margin:0 0 0 10px;background:url(images/user.png) no-repeat right 0 transparent;}
+html[dir="rtl"] .blog_post .post-content footer.entry-meta .cat-links		{padding:0 26px 2px 0; margin:0 0 0 10px;background:url(images/category.png) no-repeat right 3px transparent;}
+html[dir="rtl"] .blog_post .post-content footer.entry-meta .tag-links 		{padding:0 26px 2px 0; margin:0 0 0 10px;background:url(images/tag.png) no-repeat right 3px transparent;}
+html[dir="rtl"] .screen-reader-text {padding:8px 0 8px 15px}
+html[dir="rtl"] article.post-password-required header.post-header .post-title	{padding: 0 4.4% 13px 10%;background:url(images/post-password.png) no-repeat 3% 0 transparent;}
+html[dir="rtl"] article.format-link header.post-header .post-title				{padding: 0 4.4% 13px 10%;background:url(images/post-link.png) no-repeat 3% 0 transparent;}
+html[dir="rtl"] article[class*=tag-twitter] header.post-header .post-title		{padding: 0 4.4% 13px 10%;background:url(images/post-twitter.png) no-repeat 3% 0 transparent;}
+html[dir="rtl"] article.format-quote header.post-header .post-title			{padding: 0 4.4% 13px 10%;background:url(images/post-quote.png) no-repeat 3% 0 transparent;}
+html[dir="rtl"] article.format-image .wp-caption a:after{left:initial;right:0;}
+html[dir="rtl"] #page .container #secondary .widget ul {margin:0 8px 0 0;}
+html[dir="rtl"] #page .container #secondary .widget ul li.cat-item {margin:0 15px 0 0;background:url(images/arrow_cat.png) no-repeat right 8px transparent;}
+html[dir="rtl"] #page .container #secondary .widget ul li.current-cat,#page .container #secondary .widget ul li.cat-item:hover {margin:0 15px 0 0;background:url(images/arrow_cat_curr.png) no-repeat right 15px transparent;}
+html[dir="rtl"] input#s { background:url("images/search_icon_rtl.png") no-repeat scroll 3% 5px transparent;padding:4px 5px 4px 32px;float:right}
+html[dir="rtl"] #comments.comments-area ol.commentlist li.comment .comment-author {float:right}
+html[dir="rtl"] #comments.comments-area ol.commentlist li.comment .comment-author cite.fn {float:right}
+html[dir="rtl"] #comments.comments-area ol.commentlist li.comment .comment-author span.says {float:right}
+html[dir="rtl"] .comment-content{float:left}
+html[dir="rtl"] .commentlist .reply {right:initial;left:14px;}
+html[dir="rtl"] #comments.comments-area #respond.comment-respond form#commentform.comment-form p.comment-form-comment label {float:right}
+html[dir="rtl"] .commentsErrorBox {padding:14px 46px 14px 26px;}
+html[dir="rtl"] .gallery .gallery-item {margin:0 0 4px 4px}
+html[dir="rtl"] .gallery-caption {left:initial;right:0; text-align: right;}
+html[dir="rtl"] .gallery-caption:before {left:initial;right:0;}
+html[dir="rtl"] .gallery .gallery-item .gallery-icon a {float:right}
+html[dir="rtl"] .gallery .gallery-item .gallery-icon a img.attachment-thumbnail {float:right}
+html[dir="rtl"] 	.entry-thumbnail {float:right}
+html[dir="rtl"] body.page .entry-thumbnail {float:right}
+
+@media only screen and (min-width:768px) {
+	html[dir="rtl"] .search article.post-password-required header.post-header .post-title	{padding: 0 3% 13px 6.5%;}
+	html[dir="rtl"] .search article.format-link header.post-header .post-title				{padding: 0 3% 13px 6.5%;}
+	html[dir="rtl"] .search article[class*=tag-twitter] header.post-header .post-title		{padding: 0 3% 13px 6.5%;}
+	html[dir="rtl"] .search article.format-quote header.post-header .post-title			{padding: 0 3% 13px 6.5%;}
+}
+@media only screen and (max-width:479px) {
+	html[dir="rtl"] #masthead .social-icon{float: right;}
+	html[dir="rtl"] .blog_post .date_of_post {right:0px;}
+}
