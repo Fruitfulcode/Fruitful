@@ -351,6 +351,9 @@ body.fancybox-lock {
 .row,.clearfix {
     zoom:1;
 }
+.container.after-head-container {
+	overflow:hidden
+}
 /* You can also use a <br class="clear" /> to clear columns */
 .clear {
     clear:both;
@@ -398,6 +401,9 @@ body,button,input,select,textarea {
     font-size:14px;
     line-height:1.5;
     font-weight:normal;
+}
+textarea{
+	max-width:100%;
 }
 h1,h2,h3,h4,h5,h6 {
     clear:both;
@@ -562,14 +568,22 @@ button,html input[type="button"],input[type="reset"],input[type="submit"] {
     cursor:pointer;
     font-size:1.4rem;
     font-size:14px;
-    padding:0.62em .7em .5em;
-    webkit-appearance:button;
+    /* padding:0.62em .7em .5em; */
+	padding: 10px 18px ;
+    /* webkit-appearance:button; */
+	-webkit-appearance: none;
 	-webkit-transition: background 0.2s ease-in-out; 
 	-moz-transition: background 0.2s ease-in-out; 
 	-khtml-transition: background 0.2s ease-in-out; 
 	-o-transition: background 0.2s ease-in-out; 
 	-ms-transition: background 0.2s ease-in-out; 
 	transition: background 0.2s ease-in-out;
+	line-height:100%;
+}
+@-moz-document url-prefix() {
+	.page #comments #respond input[type="submit"]{
+		padding: 7px 18px !important;
+	}
 }
 #comments{
 	width:100%;
@@ -665,6 +679,7 @@ a:hover,a:focus,a:active {
 	margin: 10px 0 0;
 	padding:0;
 	z-index:99999999;
+	clear:both;
 }
 #header_language_select ul{
 	margin:0;
@@ -774,7 +789,7 @@ ul#lang-select-popup{
 	-o-transition: all 0.2s ease-in-out; 
 	-ms-transition: all 0.2s ease-in-out; 
 	transition: all 0.2s ease-in-out; 
-	opacity:0;
+	opacity:1;
 	margin:20px 0 0 0;
 	_margin: 0; /*IE6 only*/
 	visibility:hidden;
@@ -954,8 +969,7 @@ ul#lang-select-popup{
 #colophon .social-icon a.email {
     background-position:-342px 0;
 }
-.sticky {
-}
+.sticky {}
 .hentry {
     margin:0 0 1.5em;
 }
@@ -1068,8 +1082,7 @@ embed,iframe,object {
     text-align:right;
     width:46%;
 }
-.bypostauthor {
-}
+.bypostauthor {}
 .widget {
     margin:0 0 1.5em;
 }
@@ -1110,10 +1123,9 @@ section {
 	z-index:999
 }
 
-
 #page {position:relative;}
 #page .container .btm_header, #page .container .entry-header {
-    border-bottom:1px solid #d6d6d6;
+	border:0;
 	margin: 0 0 10px;
 }
 
@@ -1144,7 +1156,6 @@ section {
     margin: 0 0 0 15px;
 }
 
-
 #page .container header .menu-wrapper.left-pos {
 	float:left;
 	display:inline-block;
@@ -1169,7 +1180,6 @@ section {
     text-align:justify;
 }
 
-
 #page .container header.entry-header h1.entry-title, 
 #page .container header.archive-header h1.archive-title {
     /*font-size:20px;*/
@@ -1189,10 +1199,12 @@ span.text_orange {
     background:#f9f9f9;
     border:1px solid #e3e3e3;
     color:#777;
-    float:left}
+    float:left
+}
 header.post-header, .blog_post {
     float:left;
-    width:100%}
+    width:100%
+}
 .post-content .entry-summary,
 .post-content .entry-content{clear:both}
 .blog .blog_post,
@@ -1201,13 +1213,15 @@ header.post-header, .blog_post {
 .author .blog_post,
 .archive .blog_post,
 .search .blog_post{
-	margin:0 0 55px}
+	margin:0 0 55px
+}
 .blog .blog_post:last-of-type,
 .category .blog_post:last-of-type,
 .tag .blog_post:last-of-type,
 .author .blog_post:last-of-type,
 .search .blog_post:last-of-type{
-	margin:0 0 35px}
+	margin:0 0 35px
+}
 .blog_post .date_of_post {
     position:relative;
 	left:1px;
@@ -1244,14 +1258,17 @@ header.post-header, .blog_post {
 	border:1px solid #d6d6d6
 }
 .search .blog_post .post-content {
-    width:884px;	}
+    width:884px;
+}
 .blog_post .post-content .entry-content,
 .blog_post .post-content .entry-summary{
 	padding:20px 4.4% 10px;
-	margin-top:0}
+	margin-top:0
+}
 .blog_post .post-content footer.entry-meta{
 	margin:0;
-	padding:0 4.4%}
+	padding:0 4.4%
+}
 .blog_post .post-content footer.entry-meta .comments-link,
 .blog_post .post-content footer.entry-meta .author-link,
 .blog_post .post-content footer.entry-meta .cat-links,
@@ -1259,7 +1276,8 @@ header.post-header, .blog_post {
 	height:22px;
     width:auto;
     padding:0 0 2px 26px;
-    margin:0 10px 0 0}
+    margin:0 10px 0 0
+}
 .blog_post .post-content footer.entry-meta .edit-link{
 	float:right;
 	width:auto;
@@ -1279,13 +1297,20 @@ header.post-header, .blog_post {
     background:url(images/tag.png) no-repeat 0 3px transparent;
 }
 .blog_post .post-content footer.entry-meta .comments-link:hover,.blog_post .post-content footer.entry-meta .author-link:hover,.blog_post .post-content footer.entry-meta .cat-links:hover {
-    opacity:0.9}
+    opacity:0.9
+}
 .blog_post .post-content footer.entry-meta .comments-link a,.blog_post .post-content footer.entry-meta .tag-links a,.blog_post .post-content footer.entry-meta .author-link a,.blog_post .post-content footer.entry-meta .cat-links a,.blog_post .post-content footer.entry-meta .edit-link a {
     text-decoration:none;
 }
 .more-link {
     text-decoration:none;
-    font-size:13px}
+    font-size:13px
+}
+
+body div.pp_pic_holder{z-index:100000}
+body div.pp_overlay{background-color:#333333}
+.screen-reader-text {float:left;padding:8px 15px 8px 0}
+
 /* =Custom posts= */
 article.post-password-required header.post-header .post-title{
 	width:85.61%;
@@ -1776,6 +1801,10 @@ address {
 #comments.comments-area #respond.comment-respond h3.comment-reply-title {
 	margin:20px 0;
 	font-weight:normal;
+}
+
+.page #comments #respond input[type="submit"]{
+	line-height:100%;
 }
 
 #comments.comments-area ol.commentlist {

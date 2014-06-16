@@ -2,8 +2,6 @@
 Responsive Styles for Woocommerce.
 */
 
-body .main-navigation ul ul	{opacity:1}
-.container.after-head-container {overflow:hidden}
 .woocommerce div form .form-row input.input-text,
 .woocommerce-page form .form-row input.input-text,
 .woocommerce div form .form-row textarea,
@@ -13,19 +11,11 @@ body .main-navigation ul ul	{opacity:1}
 .woocommerce-page form .form-row-first,
 .woocommerce form .form-row-last,
 .woocommerce-page form .form-row-last {width: 100%;}
-.page #page .container .entry-header {border: 0;}
-.page #comments #respond input[type="submit"]{line-height:100%;}
 .woocommerce h2{margin:20px 0}
 .woocommerce .head-container h2{margin:0}
-body div.pp_pic_holder{z-index:100000}
-textarea{max-width:100%}
-body div.pp_overlay{background-color:#333333}
-.screen-reader-text {float:left;padding:8px 15px 8px 0}
-button,html input[type="button"],input[type="reset"],input[type="submit"]{line-height:100%;  -webkit-appearance: none;}
 
 /*header*/
 .cart-button{display:block;float: right;padding:0;position:relative;margin:14px 10px 10px;clear:left}
-#header_language_select{clear:both}
 .cart-button a,
 .cart-button a .cart_image{display:block;float: left;margin: 0;padding:0;width:24px; height:21px;border:0;text-decoration:none;background:url(images/cart_image.png) no-repeat transparent;}
 .num_of_product_cart{
@@ -345,8 +335,8 @@ body.woocommerce-page ul.products li.product .price{float:left;margin: 5px 0 10p
 .woocommerce ul.products li.product a.product_type_variable {background: url(images/product_button_set.png) no-repeat transparent;}
 
 .woocommerce ul.products li.product a.add_to_cart_button.product_type_simple  {
-background: url(images/product_button_buy.png) no-repeat #333333 !important;
--webkit-transition: none;
+	background: url(images/product_button_buy.png) no-repeat #333333 !important;
+	-webkit-transition: none;
 	-moz-transition: none;
 	-khtml-transition: none;
 	-o-transition: none;
@@ -541,12 +531,12 @@ body.woocommerce-page #content nav.woocommerce-pagination ul li a.next:hover{tex
 body.woocommerce div.product form.cart .variations td.label,
 body.woocommerce-page div.product form.cart .variations td.label, 
 body.woocommerce #content div.product form.cart .variations td.label, 
-body.woocommerce-page #content div.product form.cart .variations td.label{padding-top:15px;width:565px;float:left;color: #333333;}
+body.woocommerce-page #content div.product form.cart .variations td.label{padding-top:15px;width:100%;padding-left:0;padding-right:0;float:left;color: #333333;}
 
 body.woocommerce div.product form.cart .variations td.value,
 body.woocommerce-page div.product form.cart .variations td.value, 
 body.woocommerce #content div.product form.cart .variations td.value, 
-body.woocommerce-page #content div.product form.cart .variations td.value{width:565px;float:left}
+body.woocommerce-page #content div.product form.cart .variations td.value{width:100%;padding-left:0;padding-right:0;float:left}
 
 body.woocommerce-page #content input.button.alt,
 body.woocommerce-page #content input.button,
@@ -564,11 +554,9 @@ body.woocommerce #respond input#submit, body.woocommerce-page #respond input#sub
 .woocommerce-account .woocommerce  .form-row input.button, .woocommerce-account.woocommerce-page .form-row input.button,				
 .woocommerce-account .button[type='submit'], .woocommerce-account.woocommerce-page .button[type='submit'],
 body.woocommerce-page .woocommerce .cart-collaterals button.button,
-.page #comments #respond input[type="submit"],
 .woocommerce table.my_account_orders .order-actions .button, body.woocommerce-page table.my_account_orders .order-actions .button,
-#page input[type="submit"],
-.widget_shopping_cart_content .buttons a.button
-{	padding: 10px 18px !important;
+.widget_shopping_cart_content .buttons a.button{
+	padding: 10px 18px !important;
 	background: #333333;
 	border: 0 !important;
 	-webkit-border-radius: 0 !important;
@@ -587,11 +575,10 @@ body.woocommerce-page .woocommerce .cart-collaterals button.button,
 	width:auto ;
 }
 
-  @-moz-document url-prefix() {
+@-moz-document url-prefix() {
 	body.woocommerce #respond input#submit[type="submit"],
 	body.woocommerce-account #content input.button[type="submit"],
-	body.woocommerce-checkout .woocommerce #payment #place_order,
-	.page #comments #respond input[type="submit"]{					/*for sample page comments*/
+	body.woocommerce-checkout .woocommerce #payment #place_order{
 		padding: 7px 18px !important;
 	}
 }
@@ -615,11 +602,9 @@ body.woocommerce-checkout .woocommerce #payment #place_order:hover, .woocommerce
 body.woocommerce-account .woocommerce  .form-row input.button:hover, .woocommerce-account.woocommerce-page .form-row input.button:hover,
 body.woocommerce-account .button[type='submit']:hover, .woocommerce-account.woocommerce-page .button[type='submit']:hover,
 body.woocommerce-page .woocommerce .cart-collaterals button.button:hover,
-.page #comments #respond input[type="submit"]:hover,
 .woocommerce table.my_account_orders .order-actions .button:hover, body.woocommerce-page table.my_account_orders .order-actions .button:hover,
-#page input[type="submit"]:hover,
-.widget_shopping_cart_content .buttons a.button:hover
-{	color:white;
+.widget_shopping_cart_content .buttons a.button:hover{
+	color:white;
 	background: none repeat scroll 0 0 #F15A23;
 }
 
@@ -640,15 +625,15 @@ body.woocommerce-page .woocommerce .cart-collaterals button.button:hover,
 }
 
 .woocommerce div.product form.cart .variations td,
- .woocommerce-page div.product form.cart .variations td,
- .woocommerce #content div.product form.cart .variations td,
- .woocommerce-page #content div.product form.cart .variations td{border:0;}
+.woocommerce-page div.product form.cart .variations td,
+.woocommerce #content div.product form.cart .variations td,
+.woocommerce-page #content div.product form.cart .variations td{border:0;}
 .woocommerce div.product form.cart .variations select,
- .woocommerce-page div.product form.cart .variations select,
- .woocommerce #content div.product form.cart .variations select,
- .woocommerce-page #content div.product form.cart .variations select{width:auto !important;max-width:490px}
+.woocommerce-page div.product form.cart .variations select,
+.woocommerce #content div.product form.cart .variations select,
+.woocommerce-page #content div.product form.cart .variations select{width:auto !important;max-width:490px}
 
- .woocommerce table.shop_table, .woocommerce-page table.shop_table{position:initial !important}
+.woocommerce table.shop_table, .woocommerce-page table.shop_table{position:initial !important}
 
 body.woocommerce div.product form.cart .variations select, 
 body.woocommerce-page div.product form.cart .variations select, 
