@@ -1107,18 +1107,15 @@ header.post-header, .blog_post {
 }
 .blog_post .post-content {
     float:left;
-    width:584px;
+    width:884px;
 	padding:0 0 18px 0;
 	border:1px solid #d6d6d6
 }
-.single-post .sixteen.columns.alpha.omega .blog_post .post-content {
-	width:94%
-}
-.single-post .eleven.columns.omega{
-	float:right
-}
-.single-post .five.columns.alpha{
-	float:left
+.eleven.columns .blog_post .post-content {
+    float:left;
+    width:584px;
+	padding:0 0 18px 0;
+	border:1px solid #d6d6d6
 }
 .search .blog_post .post-content {
     width:884px;
