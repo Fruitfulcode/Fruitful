@@ -34,7 +34,7 @@ switch( $template ) {
 			}
 		}
 		if (fruitful_get_woo_sidebar() == 1){
-			echo '<div class="sixteen columns woo-loop-content alpha omega '.$prod_num_row_class.'"><div id="container"><div id="content" role="main">';
+			echo '<div class="woo-loop-content alpha omega '.$prod_num_row_class.'"><div id="container"><div id="content" role="main">';
 		} elseif(fruitful_get_woo_sidebar() == 2) {
 			echo '<div class="eleven columns woo-loop-content omega '.$prod_num_row_class.'"><div id="container"><div id="content" role="main">';
 		} else {

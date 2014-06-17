@@ -1339,10 +1339,10 @@ if ( ! function_exists( 'fruitful_get_content_with_custom_sidebar' ) ) {
 			$is_sidebar = fruitful_is_woo_sidebar();
 				
 			if ($content_type == 0) { ?>
-				<div class="sixteen columns <?php echo $content_class; ?>"> <?php get_content_part(); ?> </div>	
+				<?php get_content_part(); ?>	
 		<?php } else if ($content_type == 1) { ?>
 				
-				<div class="eleven columns  <?php echo $content_class;?>"><?php get_content_part(); ?> </div>	
+				<div class="eleven columns <?php echo $content_class;?>"><?php get_content_part(); ?> </div>	
 				
 				<?php if ($is_sidebar && is_page()) { ?>
 					<div class="five columns <?php echo $sidebar_class;?>"> <?php get_sidebar($curr_sidebar); ?> </div>
@@ -1352,7 +1352,7 @@ if ( ! function_exists( 'fruitful_get_content_with_custom_sidebar' ) ) {
 				
 		<?php } else if ($content_type == 2) { ?>
 				
-				<div class="eleven columns  <?php echo $content_class;?>"> <?php get_content_part(); ?> </div>	
+				<div class="eleven columns <?php echo $content_class;?>"> <?php get_content_part(); ?> </div>	
 				
 				<?php if ($is_sidebar && is_page()) { ?>
 					<div class="five columns <?php echo $sidebar_class;?>"> <?php get_sidebar($curr_sidebar); ?> </div>

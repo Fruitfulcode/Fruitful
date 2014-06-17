@@ -81,10 +81,11 @@
 					</header><!-- #masthead .site-header -->			
 				</div>		
 			</div>	
-		</div>		
+		</div><!-- .header-container -->
 		
 		<?php if (is_front_page()) fruitful_get_slider(); ?>
 		
-		<div class="container page-container">		
-			<?php do_action( 'before' ); ?>		
-				<div class="sixteen columns">
+		<div class="page-container">		
+			<div class="container">		
+				<?php do_action( 'before' ); ?>		
+					<div class="sixteen columns">

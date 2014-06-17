@@ -9,9 +9,12 @@
  * @since Fruitful theme 1.0
  */
 ?>
-		</div>
-			<div class="sixteen columns">
-				<footer id="colophon" class="site-footer" role="contentinfo">
+				</div>
+			</div>
+		</div><!-- .page-container-->
+		<footer id="colophon" class="site-footer" role="contentinfo">
+			<div class="container">
+				<div class="sixteen columns">
 					<div class="site-info">
 						<?php fruitful_get_footer_text(); ?>
 					</div><!-- .site-info -->
@@ -19,14 +22,14 @@
 							   fruitful_get_socials_icon(); 
 						  } 
 					?>
-				</footer><!-- #colophon .site-footer -->
+				</div>
 			</div>
-			</div><!-- #main .site-main -->
 			<div id="back-top">
 				<a rel="nofollow" href="#top" title="Back to top">&uarr;</a>
 			</div>
-		</div><!-- #page .hfeed .site -->
-		<!--WordPress Development by Fruitful Code-->
+		</footer><!-- #colophon .site-footer -->
+	</div><!-- #page .hfeed .site -->
+	<!--WordPress Development by Fruitful Code-->
 <?php wp_footer(); ?>
 </body>
 </html>
