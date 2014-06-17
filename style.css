@@ -39,8 +39,9 @@ body {
     color:#333333;
 	overflow:hidden;
 }
-.container.page-container{
+.page-container{
 	margin-top:10px;
+	margin-bottom:10px;
 }
 
 /*Fix fancybox 2*/
@@ -851,12 +852,14 @@ ul#lang-select-popup{
     min-height:60px;
 }
 #colophon{
-	position:relative
+	position:relative;
+	margin:0;
+	padding:0;
 }
 #colophon>.container{
     margin:0 auto;
     border-top:1px solid #d6d6d6;
-    padding:10px 0;
+    padding:20px 0;
 	position: relative;
 }
 #colophon .site-info {

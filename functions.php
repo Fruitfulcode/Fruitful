@@ -611,7 +611,7 @@ function fruitful_get_responsive_style () {
 			$style_ .= 'body {'. $back_style .'}' . "\n";
  
 			if(!empty($theme_options['container_bg_color']))  {
-				$style_ .= '.container.page-container {background-color : '. esc_js($theme_options['container_bg_color']) . '; } ' . "\n";
+				$style_ .= '.page-container .container {background-color : '. esc_js($theme_options['container_bg_color']) . '; } ' . "\n";
 			}
  
   
