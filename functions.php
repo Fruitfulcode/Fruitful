@@ -1312,16 +1312,16 @@ if ( ! function_exists( 'fruitful_get_content_with_custom_sidebar' ) ) {
 						if (is_page() && !is_front_page() && !is_home()) {
 							get_template_part( 'content', 'page' ); 
 						
-							if (fruitful_state_post_comment()) { 
-								if ( comments_open() || '0' != get_comments_number() ) comments_template();  
+							if (fruitful_state_page_comment()) { 
+								comments_template( '', true );  
 							}
 						} else if (is_single()) {
 							get_template_part( 'content', get_post_format() );	
 							fruitful_content_nav( 'nav-below' );
 						
-							if (fruitful_state_page_comment()) { 
-								comments_template( '', true );  
-							}	
+							if (fruitful_state_post_comment()) { 
+								if ( comments_open() || '0' != get_comments_number() ) comments_template();  
+							}
 						} else if (is_front_page())	{
 							the_content();
 						}
