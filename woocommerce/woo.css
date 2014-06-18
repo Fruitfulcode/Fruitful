@@ -48,7 +48,7 @@ Responsive Styles for Woocommerce.
 	border:0px
 }
 body input#s{padding-left: 12px}
-body.post-type-archive input#s{padding-left: 12px;max-width:228px}
+body.post-type-archive input#s{padding-left: 12px;max-width:234px}
 
 
 /*---SHOP PAGE---*/
@@ -1185,7 +1185,7 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 
 @media only screen and (min-width: 1024px){
 	/*secondary*/
-	.woocommerce-page #secondary input#s{	width: 228px;}
+	.woocommerce-page #secondary input#s{	width: 234px;}
 	/*shop*/
 	.nav-links.shop .pages-links .page-numbers,.nav-links.shop .nav-next a,.nav-links.shop .nav-previous a{padding: 10px 18px;}
 	.woocommerce a.added_to_cart, body.woocommerce-page a.added_to_cart{width:145px; clear:both}
@@ -1299,7 +1299,6 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 	.woocommerce a.added_to_cart, body.woocommerce-page a.added_to_cart{width:60%; clear:both}
 	body.woocomemrce #page .container #secondary.widget-area, body.woocommerce #page .container #secondary.widget-area{width: 94%; padding: 0 3%;}
 	body.woocommerce #page .container #content,	body.woocommerce-page #page .container #content{width: 98%; padding: 0 1%;}
-	.woocommerce #calendar_wrap{padding:30px}
 	/*cart*/
 	.woocommerce-cart.woocommerce-page #content table thead th{font-size:12px}
 	#body .woocommerce table.shop_table td.product-quantity,body.woocommerce-page table.shop_table td.product-quantity {padding: 0}
@@ -1395,7 +1394,6 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 	.woocommerce a.added_to_cart, body.woocommerce-page a.added_to_cart{width:40%; clear:both}
 	body.woocommerce #page .container #secondary.widget-area, body.woocommerce-page #page .container #secondary.widget-area{width: 94%; padding: 0 3%;}
 	body.woocommerce #page .container #content,	body.woocommerce-page #page .container #content{width: 94%; padding: 0 3%;}
-	.woocommerce #calendar_wrap{padding:30px}
 	/*cart*/
 	.woocommerce table.cart td.actions .coupon, .woocommerce-page table.cart td.actions .coupon,
 	.woocommerce #content table.cart td.actions .coupon, .woocommerce-page #content table.cart td.actions .coupon{width:100%}

@@ -48,7 +48,7 @@ Fixed Styles for Woocommerce.
 	border:0px
 }
 body input#s{padding-left: 12px}
-body.post-type-archive input#s{padding-left: 12px;max-width:228px}
+body.post-type-archive input#s{padding-left: 12px;max-width:234px}
 
 
 /*---SHOP PAGE---*/
@@ -1196,7 +1196,7 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 
 /* styles from 		"@media only screen and (min-width:1024px)"		*/
 /*secondary*/
-.woocommerce-page #secondary input#s{	width: 228px;}
+.woocommerce-page #secondary input#s{	width: 234px;}
 /*shop*/
 .nav-links.shop .pages-links .page-numbers,.nav-links.shop .nav-next a,.nav-links.shop .nav-previous a{padding: 10px 18px;}
 .woocommerce a.added_to_cart, body.woocommerce-page a.added_to_cart{width:145px; clear:both}

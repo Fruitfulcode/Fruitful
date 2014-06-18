@@ -1392,7 +1392,7 @@ header.post-header .post-title a {
 }
 #page .container #secondary .widget {
     float:left;
-    width:98%;
+    width:100%;
 }
 #page .container #secondary .widget h3.widget-title, #page .container #secondary .widget h1.widget-title {
     font-size:17px;
@@ -1431,7 +1431,7 @@ header.post-header .post-title a {
 #calendar_wrap{
 	width:212px;
 	border:1px solid #d9d9d9;
-	padding:30px;
+	padding:30px 33px;
 	margin: 0 auto;
 }
 #calendar_wrap #wp-calendar{
@@ -1525,7 +1525,7 @@ input#s {
     height:22px;
     line-height:1.2em;
     padding:4px 32px 4px 5px;
-    width:235px;
+    width:234px;
 }
 input[type="password"] {
 	border: 1px solid #e5e5e5;
@@ -2182,7 +2182,7 @@ body .resp-vtabs .resp-tabs-container{border:0}
 	.eleven.columns .blog_post .post-content {width: 452px;}
 	.search .blog_post .post-content {width:692px;}
 	#calendar_wrap{padding:10px 3px}
-	input#s { width:177px;}
+	input#s { width:174px;}
 	/*single post*/
 	.single-post .sixteen.columns.alpha.omega .blog_post .post-content {width:92%}
 }
@@ -2205,7 +2205,7 @@ body .resp-vtabs .resp-tabs-container{border:0}
 	.blog_post .post-content,
 	.eleven.columns .blog_post .post-content,
 	.search .blog_post .post-content {width: 338px;}
-	input#s { width:343px; }	
+	input#s { width:348px; }	
 	body.post-type-archive #searchform input#s{max-width:100%}
 	.comment-meta{	width:80%;}
 	#page .container #secondary .widget>ul>li.cat-item{overflow-x:hidden}
@@ -2232,7 +2232,7 @@ body .resp-vtabs .resp-tabs-container{border:0}
 	.blog_post .post-content,
 	.eleven.columns .blog_post .post-content,
 	.search .blog_post .post-content{width: 281px;}
-	input#s {width:235px;}
+	input#s {width:236px;}
 	#page .container #secondary .widget>ul>li.cat-item{overflow-x:hidden}
 	.responsive .select-menu{margin: 16px 0 25px 0 !important}
 }
