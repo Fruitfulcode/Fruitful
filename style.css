@@ -2217,6 +2217,8 @@ body .resp-vtabs .resp-tabs-container{border:0}
 	.blog_post	{width:auto}
 	#page .container #secondary	{width: 94%;padding: 10px 3%;margin:40px 0 0 0}
 	#colophon .site-info{width:100%}
+	body .resp-tab-content{border: 1px solid #c1c1c1;}
+	body .resp-tabs-container{width: 96% !important;margin: 0 2%;}
 }
 
 @media only screen and (min-width:480px) and (max-width:767px) {
