@@ -180,7 +180,7 @@ body.woocommerce-page #page aside.widget_price_filter .price_slider_amount .butt
 .woocommerce #page .price_label .to,
 .woocommerce-page #page .price_label .to{font-size:12px; float:right}
 body.woocommerce #page aside.widget_price_filter .price_slider_amount, 
-body.woocommerce-page #page aside.widget_price_filter .price_slider_amount{min-height:65px;}
+body.woocommerce-page #page aside.widget_price_filter .price_slider_amount{min-height:65px;position:relative;}
 
   /*content*/
 body.woocommerce .woocommerce-ordering select, 
