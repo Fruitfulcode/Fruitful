@@ -462,8 +462,14 @@ input[type=text],input[type=email],input[type=url] {
 }
 
 #commentform label {
-width: 75px;
-float: left;
+	width: 75px;
+	float: left;
+}
+#commentform p{
+	margin:0 0 1em;
+}
+#commentform p.form-submit{
+	margin:0;
 }
 textarea {
     overflow:auto;
@@ -1730,7 +1736,7 @@ address {
     border-radius: 4px;
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
-    padding: 14px 14px 0;
+    padding: 14px;
 }
 
 #comments.comments-area ol.commentlist li.comment .comment-meta a.meta-date {
