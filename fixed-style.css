@@ -1094,6 +1094,10 @@ header.post-header, .blog_post {
 	position:relative;
 	top: -6px;
 }
+.blog .post-title,
+.single .post-title{
+	line-height:24px;
+}
 .blog_post .post-content {
     float:left;
     width:884px;
