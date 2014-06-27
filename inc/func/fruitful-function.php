@@ -73,6 +73,25 @@ function fruitful_elem_position() {
 	return apply_filters( 'fruitful_elem_position', $elem_pos );
 }
 
+function fruitful_latest_posts_select() {
+	$elem_pos = array(
+		'0' => array(
+			'value' =>	   '0',
+			'label' => __( 'Center', 'fruitful' )
+		),
+		'1' => array(
+			'value' =>	   '1',
+			'label' => __( 'Right', 'fruitful' )
+		),
+		'2' => array(
+			'value' =>	   '2',
+			'label' => __( 'Left', 'fruitful' )
+		)
+	);
+
+	return apply_filters( 'fruitful_elem_position', $elem_pos );
+}
+
 function fruitful_woo_shop_sidebar_list() {
 	$num_row = array(
 		'0' => array(
@@ -523,6 +542,7 @@ return array(
 				'is_fixed_header'	=> 'off',
 				'styletheme'		=> 'off',
 				'is_wpml_ready'		=> 'on',
+				'latest_posts_templ'=> '1',
 
 				/*Header image*/
 				'header_bg_color'	=> '#ffffff',	
