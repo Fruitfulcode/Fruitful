@@ -38,6 +38,7 @@ body {
     text-rendering:optimizelegibility;
     color:#333333;
 	overflow:hidden;
+	font-family: Open Sans, Helvetica, Arial, sans-serif;
 }
 .page-container{
 	margin-top:10px;
