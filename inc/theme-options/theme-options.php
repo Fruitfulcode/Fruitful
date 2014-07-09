@@ -814,15 +814,33 @@ function fruitful_theme_options_render_page() {
 		</form>
 		
 		<div id="sidebar-promo" class="sidebar-promo">
-			<h3><?php _e('Support developers', 'fruitful'); ?></h3>
-			<p><?php 
-					_e('If you like our theme please rate it and ','fruitful'); 
-					echo '<a target="_blank" href="http://wordpress.org/support/view/theme-reviews/fruitful">'; _e('leave us review','fruitful'); echo '</a>. ';
-					_e('On','fruitful'); echo ' <a target="_blank" href="http://wordpress.org/support/theme/fruitful">'; _e('Support forum','fruitful'); echo '</a> ';
-					_e('you may find answers on your questions. With customization requests and suggestion you always can ','fruitful'); 
-					echo '<a target="_blank" href="mailto:mail@fruitfulcode.com?subject=Question regarding Fruitful theme">'; _e('contact us','fruitful'); echo '</a> ';
-					_e('by email. Please visit our website ','fruitful'); echo ' <a target="_blank" href="http://fruitfulcode.com">fruitfulcode.com</a> '; _e('to know about us and our services.','fruitful');   
-			?></p>
+			<div class="sidebar-promo-widget promo-support">
+				<h3><?php _e('Support', 'fruitful'); ?></h3>
+				<p class="sidebar-promo-content"><?php 
+						_e('If You faced with problems or find error or bug, please','fruitful'); 
+						echo ' <a target="_blank" href="http://support.fruitfulcode.com/hc/en-us/requests/new">'; _e('submit request.','fruitful'); echo '</a> ';
+						_e('On official ','fruitful'); echo ' <a target="_blank" href="http://wordpress.org/support/theme/fruitful">'; _e('Support forum','fruitful'); echo '</a> ';
+						_e('You may find answers on Your questions.','fruitful'); 
+				?></p>
+			</div>
+			<div class="sidebar-promo-widget promo-customization">
+				<h3><?php _e('Additional customization', 'fruitful'); ?></h3>
+				<p class="sidebar-promo-content"><?php 
+						_e('Our team is available for any type of WordPress development. ','fruitful'); 
+						_e('If You want customize theme or add new features, You can','fruitful'); 
+						echo ' <a target="_blank" href="http://fruitfulcode.com/order/">'; _e('submit order','fruitful'); echo '</a> ';
+						_e('on our website','fruitful'); 
+						echo ' <a target="_blank" href="http://fruitfulcode.com"> fruitfulcode.com </a> ';
+				?></p>
+			</div>
+			<div class="sidebar-promo-widget promo-anaglyph">
+				<h3><?php _e('Check our latest theme', 'fruitful'); ?></h3>
+				<div>
+					<a target="_blank" href="http://themeforest.net/item/anaglyph-one-page-multi-page-wordpress-theme/7874320/?ref=fruitfulcode">
+						<img src="<?php echo get_bloginfo('template_url'); ?>/inc/images/sidebar-anaglyph.png" alt="" width="253" height="130" />
+					</a>
+				</div>
+			</div>
 		</div>
 	</div>
 	<?php

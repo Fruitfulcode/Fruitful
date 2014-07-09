@@ -1,13 +1,11 @@
-.form-admin-fruitful {font-family: 'Arial', sans-serif;} 
+.form-admin-fruitful {float:right; width:914px; display:block; background: #fff; padding: 0px 20px 20px 0px;font-family: 'Arial', sans-serif;}
 .form-admin-fruitful h4 {font-weight: normal; margin: 5px 0;}
-.form-admin-fruitful .header, 
-.form-admin-fruitful .footer, 
-.form-admin-fruitful .content {float:right;  width: 914px;}
-.form-admin-fruitful .header, 
-.form-admin-fruitful .footer  {padding: 10px 0 10px 10px; width: 892px;}
+#wpbody .form-admin-fruitful select{left:initial !important;}
+.form-admin-fruitful .header	,
+.form-admin-fruitful .footer	{float:right;width: 904px;padding: 10px 0 10px 10px;}
+.form-admin-fruitful .content{float:right;width:914px;position:relative; min-height:600px;margin-top:8px;}
 .form-admin-fruitful .header div.error {float:right;}
 .form-admin-fruitful .footer p.submit {line-height:10px; padding:0}
-.form-admin-fruitful .content 	{position:relative; min-height:600px;min-width: 520px;margin-top:8px;}
 .form-admin-fruitful .footer .button-primary, 
 .form-admin-fruitful .header .button-primary {width: 120px;text-transform: uppercase;}
 .form-admin-fruitful #message.updated.woocommerce-message.wc-connect{float:right; clear:both; max-width:98%}
@@ -15,7 +13,6 @@
 .form-admin-fruitful #message.updated.woocommerce-message.wc-connect .button-primary{width:auto}
 .form-admin-fruitful .header p.submit {padding:0;}
 .form-admin-fruitful p.submit {width:130px;float:left;margin-top:15px;}
-.form-admin-fruitful {float:right; width:914px; display:block; background: #fff; padding: 0px 20px 20px 0px;}
 .form-admin-fruitful #icon-theme_options { background: url("../images/icons32.png") no-repeat scroll -492px -5px transparent;}
 .form-admin-fruitful .title_theme {font-family:Arial; font-size:22px; font-weight:bold; display:block; float:right; line-height: 40px;}
 .form-admin-fruitful .content .menu-options {  bottom: 0; height: 100%; position: absolute; top: 0; width: 168px; }
@@ -108,8 +105,13 @@ a:hover, a:active, a:focus {	outline: 0; }
 .form-admin-fruitful .content .settings-section .settings-form-row .add_element_info {color:#a0a0a0; font-family: Arial; font-size:13px; float:right; width:100%; display:block; margin: 0 0 10px;}
 .form-admin-fruitful .content .settings-section .settings-form-row .box-options {float:right; width:100%}
 .box-options label {font-family: Arial;}
-.sidebar-promo {float: right; width: 254px; padding: 25px 22px; min-height: 150px; background-color: #f1f1f1; margin: 15px 0 0 0;}
-.sidebar-promo h3 {color: #3e3e3e; background: url('../images/support.png') no-repeat right 0 transparent; font-weight: bold; font-size: 16px; padding: 6px 40px 6px 0; margin: 0 0 20px 0;}
+.sidebar-promo {float: right; width:298px; max-width: 934px; padding: 0; min-height: 150px; background-color: #f1f1f1; margin:0;}
+.sidebar-promo-widget{float:right; width:254px; padding: 15px 22px 5px; margin:0;}
+.sidebar-promo .sidebar-promo-content{float: right;padding:15px 20px 25px; background-color: #ffffff; margin:0;}
+.sidebar-promo h3 {color: #3e3e3e; font-weight: bold; font-size: 16px; padding: 6px 40px 6px 0; margin: 0 0 20px 0;}
+.sidebar-promo .promo-support h3 {background: url('../images/support.png') no-repeat right 0 transparent;}
+.sidebar-promo .promo-customization h3 {background: url('../images/customization.png') no-repeat right 0 transparent;}
+.sidebar-promo .promo-anaglyph h3 {background: url('../images/promo-anaglyph.png') no-repeat right 0 transparent;}
 .sidebar-promo p {color:#3e3e3e; font-size:14px; margin:0 0 1.5em 0; padding:0; font-family:Arial; line-height:24px;}
 .form-admin-fruitful .content .settings-section .settings-form-row .box-options #slider_main_options {display:none; float: right; margin: 0 0 20px 0;}
 .box-options .upload_button_div .reset_btn,.box-options ul.slides li.slide .slide-content .upload_button_div .reset_slide_btn  {margin-right:5px}
@@ -133,10 +135,30 @@ div.updated, div.error { margin: 15px 0 15px; }
 #settings-section-4 .settings-form-row { width:42%; }
 .newrow {clear:both; content:"";}
 
+@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+	.form-admin-fruitful{width:914px;max-width:914px;width:calc(100% - 320px);}
+	.form-admin-fruitful .content{width:914px;width:calc(100% - 20px);}
+	.form-admin-fruitful .header, .form-admin-fruitful .footer{width: 904px;width:calc(100% - 10px);}
+	.form-admin-fruitful .content .settings-section{width:710px;width:calc(100% - 205px);}
+}
+
+@media only screen and (min-width: 1200px) {
+	.form-admin-fruitful .content{min-width: 520px;}
+}
+
+@media only screen and (max-width: 1199px) {
+	.sidebar-promo{width:auto;margin-top:25px;}
+	.sidebar-promo-widget{width:auto;padding:15px 0}
+	.form-admin-fruitful{width:914px;width:calc(100% - 20px);}
+	.form-admin-fruitful .content{width:914px;width:calc(100% - 20px);}
+	.form-admin-fruitful .header, .form-admin-fruitful .footer{width: 904px;width:calc(100% - 10px);}
+	.form-admin-fruitful .content .settings-section{width:710px;width:calc(100% - 205px);}
+}
+
 @media only screen and (max-width: 641px) {
-	.form-admin-fruitful { padding:0 1% 20px 0; width:99%; }
+	.form-admin-fruitful { padding:0 1% 20px 0; width:99%; min-width:294px;}
 	.form-admin-fruitful .header, .form-admin-fruitful .footer { padding: 10px 0 10px 0; width: 100%; }
-	.form-admin-fruitful .content .settings-section {width: 80%; background: none;}
+	.form-admin-fruitful .content .settings-section {width: 75%; background: none;}
 	.form-admin-fruitful .header, .form-admin-fruitful .footer, .form-admin-fruitful .content {width:100%; }
 	.box-image .img-container.custom-slide {max-height: 220px;}
 	.menu-options span.menu-text{display:none}
@@ -150,6 +172,8 @@ div.updated, div.error { margin: 15px 0 15px; }
 	.form-admin-fruitful .content .settings-section .settings-form-row .box-options .slides .slide h4 span.content-close-slide {background: url("../images/arrows.png") no-repeat scroll 15px 17px transparent;	margin: -5px 0 0; padding: 10px;}
 	.form-admin-fruitful .content .settings-section .settings-form-row .box-options .slides .slide h4 span.remove-slide {background: url("../images/cross.png") no-repeat scroll 7px 10px transparent; padding: 10px 5px;}
 	#settings-section-4 .settings-form-row { width:286px; }
+	body .jq-selectbox__select{width:160px}
+	body .jq-selectbox__dropdown{width:215px;}
 }
 
 @media only screen 
