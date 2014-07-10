@@ -1335,7 +1335,7 @@ if ( ! function_exists( 'fruitful_get_content_with_custom_sidebar' ) ) {
 										if ( comments_open() || '0' != get_comments_number() ) comments_template();  
 									}
 								} else if (is_front_page())	{
-									the_content();
+									get_template_part( 'content', 'page' );
 								}
 						   endwhile;
 						}
