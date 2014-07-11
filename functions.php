@@ -1460,21 +1460,19 @@ if ( ! function_exists( 'fruitful_get_content_with_custom_sidebar' ) ) {
 			$options = fruitful_get_theme_options();
 			$curr_template = $options['latest_posts_templ'];
 		} else {
+			$default_blog_template = (get_post_meta( get_option('page_for_posts', true), '_fruitful_page_layout', true ))?(get_post_meta( get_option('page_for_posts', true), '_fruitful_page_layout', true )):1;
+			$default_page_template = (get_post_meta( $post->ID , '_fruitful_page_layout', true ))?(get_post_meta(  $post->ID , '_fruitful_page_layout', true )):1;
 			if (!fruitful_is_blog()){
 				if (is_archive()){
-					$curr_template = get_post_meta( get_option('page_for_posts', true), '_fruitful_page_layout', true );
+					$curr_template = $default_blog_template;
 				} else {
-					$curr_template = get_post_meta( $post->ID, '_fruitful_page_layout', true );
+					$curr_template = $default_page_template;
 				}
 			} else {
 				if (is_single()){
-					if ( !get_post_meta( $post->ID, '_fruitful_page_layout', true ) ){
-						$curr_template = 2;
-					} else {
-						$curr_template = get_post_meta( $post->ID, '_fruitful_page_layout', true );
-					}
+					$curr_template = $default_page_template;
 				} else {
-					$curr_template = get_post_meta( get_option('page_for_posts', true), '_fruitful_page_layout', true );
+					$curr_template = $default_blog_template;
 				}
 			}
 		}
