@@ -1307,103 +1307,117 @@ if ( ! function_exists( 'fruitful_get_content_with_custom_sidebar' ) ) {
 				<div id="content" class="site-content" role="main">	
 			<?php			
 				/* Start the Loop */ 
-				if (!is_archive()){
-					if (is_home()) {
-						 if ( have_posts() ) : 
-							/* The loop */ 
-							while ( have_posts() ) : the_post(); 
-								get_template_part( 'content', get_post_format() ); 
-							endwhile; 
-							fruitful_content_nav( 'nav-below' ); 
-						else :
-							get_template_part( 'no-results', 'index' ); 
-						endif;
-					} else {
-						if ( have_posts() ){
-							while ( have_posts() ) : the_post();
-								if (is_page() && !is_front_page() && !is_home()) {
-									get_template_part( 'content', 'page' ); 
-								
-									if (fruitful_state_page_comment()) { 
-										comments_template( '', true );  
-									}
-								} else if (is_single()) {
-									get_template_part( 'content', get_post_format() );	
-									fruitful_content_nav( 'nav-below' );
-								
-									if (fruitful_state_post_comment()) { 
-										if ( comments_open() || '0' != get_comments_number() ) comments_template();  
-									}
-								} else if (is_front_page())	{
-									get_template_part( 'content', 'page' );
-								}
-						   endwhile;
-						}
-					} 
+				if (is_page() && get_option('page_on_front') &&  get_option('page_for_posts') && (get_option('page_on_front') == get_option('page_for_posts'))) {
+					$args = array(
+						'orderby' 		 => 'date',
+						'order' 		 => 'DESC',
+						'post_type' 	 => 'post',
+						'post_status' 	 => 'publish',
+						'posts_per_page' => 10
+					);
+					$loop = new WP_Query($args);
+					while ( $loop->have_posts() ) : $loop->the_post(); 
+						get_template_part( 'content', get_post_format() ); 
+					endwhile; 
 				} else {
-					?>
-						<section id="primary" class="content-area">
-							<div id="content" class="site-content" role="main">
+					if (!is_archive()){
+						if (is_home()) {
+							if ( have_posts() ) : 
+								/* The loop */ 
+								while ( have_posts() ) : the_post(); 
+									get_template_part( 'content', get_post_format() ); 
+								endwhile; 
+								fruitful_content_nav( 'nav-below' ); 
+							else :
+								get_template_part( 'no-results', 'index' ); 
+							endif;
+						} else {
+							if ( have_posts() ){
+								while ( have_posts() ) : the_post();
+									if (is_page() && !is_front_page() && !is_home()) {
+										get_template_part( 'content', 'page' ); 
+									
+										if (fruitful_state_page_comment()) { 
+											comments_template( '', true );  
+										}
+									} else if (is_single()) {
+										get_template_part( 'content', get_post_format() );	
+										fruitful_content_nav( 'nav-below' );
+									
+										if (fruitful_state_post_comment()) { 
+											if ( comments_open() || '0' != get_comments_number() ) comments_template();  
+										}
+									} else if (is_front_page())	{
+										get_template_part( 'content', 'page' );
+									}
+							   endwhile;
+							}
+						} 
+					} else {
+						?>
+							<section id="primary" class="content-area">
+								<div id="content" class="site-content" role="main">
 
-							<?php if ( have_posts() ) : ?>
-									<header class="page-header">
-										<h1 class="page-title">
+								<?php if ( have_posts() ) : ?>
+										<header class="page-header">
+											<h1 class="page-title">
+												<?php
+													if ( is_category() ) {
+														printf( __( 'Category Archives: %s', 'fruitful' ), '<span>' . single_cat_title( '', false ) . '</span>' );
+
+													} elseif ( is_tag() ) {
+														printf( __( 'Tag Archives: %s', 'fruitful' ), '<span>' . single_tag_title( '', false ) . '</span>' );
+
+													} elseif ( is_author() ) {
+														the_post();
+														printf( __( 'Author Archives: %s', 'fruitful' ), '<span class="vcard"><a class="url fn n" href="' . get_author_posts_url( get_the_author_meta( "ID" ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' );
+														rewind_posts();
+
+													} elseif ( is_day() ) {
+														printf( __( 'Daily Archives: %s', 'fruitful' ), '<span>' . get_the_date() . '</span>' );
+
+													} elseif ( is_month() ) {
+														printf( __( 'Monthly Archives: %s', 'fruitful' ), '<span>' . get_the_date( 'F Y' ) . '</span>' );
+
+													} elseif ( is_year() ) {
+														printf( __( 'Yearly Archives: %s', 'fruitful' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
+
+													} else {
+														_e( 'Archives', 'fruitful' );
+
+													}
+												?>
+											</h1>
 											<?php
 												if ( is_category() ) {
-													printf( __( 'Category Archives: %s', 'fruitful' ), '<span>' . single_cat_title( '', false ) . '</span>' );
+													$category_description = category_description();
+													if ( ! empty( $category_description ) )
+														echo apply_filters( 'category_archive_meta', '<div class="taxonomy-description">' . $category_description . '</div>' );
 
 												} elseif ( is_tag() ) {
-													printf( __( 'Tag Archives: %s', 'fruitful' ), '<span>' . single_tag_title( '', false ) . '</span>' );
-
-												} elseif ( is_author() ) {
-													the_post();
-													printf( __( 'Author Archives: %s', 'fruitful' ), '<span class="vcard"><a class="url fn n" href="' . get_author_posts_url( get_the_author_meta( "ID" ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' );
-													rewind_posts();
-
-												} elseif ( is_day() ) {
-													printf( __( 'Daily Archives: %s', 'fruitful' ), '<span>' . get_the_date() . '</span>' );
-
-												} elseif ( is_month() ) {
-													printf( __( 'Monthly Archives: %s', 'fruitful' ), '<span>' . get_the_date( 'F Y' ) . '</span>' );
-
-												} elseif ( is_year() ) {
-													printf( __( 'Yearly Archives: %s', 'fruitful' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
-
-												} else {
-													_e( 'Archives', 'fruitful' );
-
+													$tag_description = tag_description();
+													if ( ! empty( $tag_description ) )
+														echo apply_filters( 'tag_archive_meta', '<div class="taxonomy-description">' . $tag_description . '</div>' );
 												}
 											?>
-										</h1>
-										<?php
-											if ( is_category() ) {
-												$category_description = category_description();
-												if ( ! empty( $category_description ) )
-													echo apply_filters( 'category_archive_meta', '<div class="taxonomy-description">' . $category_description . '</div>' );
+										</header><!-- .page-header -->
 
-											} elseif ( is_tag() ) {
-												$tag_description = tag_description();
-												if ( ! empty( $tag_description ) )
-													echo apply_filters( 'tag_archive_meta', '<div class="taxonomy-description">' . $tag_description . '</div>' );
-											}
-										?>
-									</header><!-- .page-header -->
-
-									<?php /* Start the Loop */ 
-									while ( have_posts() ) : the_post(); 
-										get_template_part( 'content', get_post_format() );
-									endwhile; 
-									fruitful_content_nav( 'nav-below' );
+										<?php /* Start the Loop */ 
+										while ( have_posts() ) : the_post(); 
+											get_template_part( 'content', get_post_format() );
+										endwhile; 
+										fruitful_content_nav( 'nav-below' );
+										
+									else : 
 									
-								else : 
-								
-									get_template_part( 'no-results', 'archive' );
-									
-								endif; ?>
+										get_template_part( 'no-results', 'archive' );
+										
+									endif; ?>
 
-							</div><!-- #content .site-content -->
-						</section><!-- #primary .content-area -->
-					<?php
+								</div><!-- #content .site-content -->
+							</section><!-- #primary .content-area -->
+						<?php
+					}
 				}
 			?>
 				</div>
