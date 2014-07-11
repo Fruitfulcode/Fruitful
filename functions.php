@@ -1461,7 +1461,8 @@ if ( ! function_exists( 'fruitful_get_content_with_custom_sidebar' ) ) {
 			$curr_template = $options['latest_posts_templ'];
 		} else {
 			$default_blog_template = (get_post_meta( get_option('page_for_posts', true), '_fruitful_page_layout', true ))?(get_post_meta( get_option('page_for_posts', true), '_fruitful_page_layout', true )):1;
-			$default_page_template = (get_post_meta( $post->ID , '_fruitful_page_layout', true ))?(get_post_meta(  $post->ID , '_fruitful_page_layout', true )):1;
+			$default_post_template = (get_post_meta( $post->ID , '_fruitful_page_layout', true ))?(get_post_meta(  $post->ID , '_fruitful_page_layout', true )):1;
+			$default_page_template = (get_post_meta( $post->ID , '_fruitful_page_layout', true ))?(get_post_meta(  $post->ID , '_fruitful_page_layout', true )):0;
 			if (!fruitful_is_blog()){
 				if (is_archive()){
 					$curr_template = $default_blog_template;
@@ -1470,7 +1471,7 @@ if ( ! function_exists( 'fruitful_get_content_with_custom_sidebar' ) ) {
 				}
 			} else {
 				if (is_single()){
-					$curr_template = $default_page_template;
+					$curr_template = $default_post_template;
 				} else {
 					$curr_template = $default_blog_template;
 				}
