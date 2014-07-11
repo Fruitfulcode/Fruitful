@@ -285,8 +285,8 @@ function fruitful_scripts() {
 		wp_enqueue_script( 'keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'fruitful_scripts' );
 }
+add_action( 'wp_enqueue_scripts', 'fruitful_scripts' );
 
 if ( ! function_exists( 'fruitful_get_link_url' ) ) {
 function fruitful_get_link_url() {
@@ -294,6 +294,36 @@ function fruitful_get_link_url() {
 	$has_url = get_url_in_content( $content );
 
 	return ( $has_url ) ? $has_url : apply_filters( 'the_permalink', get_permalink() );
+}
+}
+
+
+/*function for including google fonts*/
+if ( ! function_exists( 'fruitful_add_custom_fonts' ) ) {
+function fruitful_add_custom_fonts() {
+    $font_url = array();
+	$http_ = 'http://';
+	if (is_ssl()) {
+		$http_ = 'https://';
+	}
+	
+	$font_url[] = $http_ .'fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300';
+	$font_url[] = $http_ .'fonts.googleapis.com/css?family=Josefin+Slab:400,100,100italic,300,300italic,400italic,600,600italic,700,700italic';
+	$font_url[] = $http_ .'fonts.googleapis.com/css?family=Lobster&subset=cyrillic-ext,latin-ext,latin,cyrillic';
+	$font_url[] = $http_ .'fonts.googleapis.com/css?family=Arvo:400,400italic,700,700italic';
+	$font_url[] = $http_ .'fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic';
+	$font_url[] = $http_ .'fonts.googleapis.com/css?family=Vollkorn:400,400italic,700,700italic';
+	$font_url[] = $http_ .'fonts.googleapis.com/css?family=Abril+Fatface';
+	$font_url[] = $http_ .'fonts.googleapis.com/css?family=Ubuntu:400,300italic,400italic,500,500italic,700,700italic,300&subset=latin,greek,latin-ext,cyrillic';
+	$font_url[] = $http_ .'fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin,cyrillic';
+	$font_url[] = $http_ .'fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic,700';
+	$font_url[] = $http_ .'fonts.googleapis.com/css?family=Droid+Sans:400,700';
+	
+	foreach ($font_url as $font) {
+		$unq_id = uniqid('custom_fonts_');
+		wp_register_style($unq_id, $font);
+		wp_enqueue_style($unq_id);
+	}
 }
 }
 
@@ -565,8 +595,7 @@ if ( ! function_exists( 'fruitful_get_responsive_style' ) ) {
 function fruitful_get_responsive_style () {
 	$style_ = $back_style = $woo_style_ = '';
 	$theme_options  = fruitful_ret_options("fruitful_theme_options"); 
- 
-	wp_enqueue_style('fonts-style', get_template_directory_uri()    . '/inc/css/fonts-style.css');
+	fruitful_add_custom_fonts();
 	if (isset($theme_options['responsive']) && ($theme_options['responsive'] == 'on')) {
 		wp_enqueue_style('main-style',  get_stylesheet_uri());
 		if (class_exists('woocommerce')){wp_enqueue_style( 'woo-style', get_template_directory_uri() . '/woocommerce/woo.css');}
