@@ -1468,7 +1468,11 @@ if ( ! function_exists( 'fruitful_get_content_with_custom_sidebar' ) ) {
 				}
 			} else {
 				if (is_single()){
-					$curr_template = get_post_meta( $post->ID, '_fruitful_page_layout', true );
+					if ( !get_post_meta( $post->ID, '_fruitful_page_layout', true ) ){
+						$curr_template = 2;
+					} else {
+						$curr_template = get_post_meta( $post->ID, '_fruitful_page_layout', true );
+					}
 				} else {
 					$curr_template = get_post_meta( get_option('page_for_posts', true), '_fruitful_page_layout', true );
 				}
