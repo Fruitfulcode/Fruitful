@@ -732,6 +732,8 @@ function fruitful_get_responsive_style () {
 				$style_ .= '.resp_full_width_menu .site-header .menu_wrapper .menu li a{'. "\n";
 					if (!empty($theme_options['dd_menu_font_color']))	{ $style_ .= 'color : '.esc_js($theme_options['dd_menu_font_color']) . ';  ' . "\n"; }
 				$style_ .= '}' . "\n";
+				$style_ .= '.resp_full_width_menu .site-header .menu_wrapper .menu li.current-menu-item>a,'. "\n";
+				$style_ .= '.resp_full_width_menu .site-header .menu_wrapper .menu li.current_page_item >a,'. "\n";
 				$style_ .= '.resp_full_width_menu .site-header .menu_wrapper .menu li:hover>a{'. "\n";
 					if (!empty($theme_options['dd_menu_btn_color']))    { $style_ .= 'background-color : '. esc_js($theme_options['dd_menu_btn_color']) . '; ' . "\n"; }
 					if (!empty($theme_options['dd_menu_hover_color']))  { $style_ .= 'color : '.esc_js($theme_options['dd_menu_hover_color']) . ';  ' . "\n"; }
