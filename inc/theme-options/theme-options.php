@@ -56,6 +56,7 @@ function fruitful_theme_options_init() {
 	add_settings_field( 'header_hs',		__( 'Background image size', 	 'fruitful' ), 	'fruitful_get_header_img_size', 'theme_options',  'header', array('info' => __( 'Choose size for background image - full width or only for content area.', 'fruitful' )));
 	add_settings_field( 'header_hh',		__( 'Height for header area', 	 'fruitful' ), 	'fruitful_get_header_height', 	'theme_options',  'header', array('info' => __( 'Minimum height in pixels', 'fruitful' )));
 	add_settings_field( 'header_mp',		__( 'Menu Position', 			 'fruitful' ), 	'fruitful_set_menu_position', 	'theme_options',  'header', array('info' => __( 'Set menu position.', 'fruitful' )));
+	add_settings_field( 'header_rt',		__( 'Type of Responsive menu', 	 'fruitful' ), 	'fruitful_get_menu_type_resp', 	'theme_options',  'header', array('info' => __( 'Set type of responsive menu.', 'fruitful' )));
 		
 	add_settings_field( 'background_image', __( 'Background Image', 'fruitful' ),  'fruitful_get_background_img',   'theme_options',  'background', array('info' => __( 'Upload your background image for site background. (Supported files .png, .jpg, .gif)', 'fruitful' )));
 	add_settings_field( 'background_color', __( 'Background Color ', 'fruitful' ), 'fruitful_get_background_color', 'theme_options',  'background', array('info' => __( 'Choose color for body background', 'fruitful' )));
@@ -212,11 +213,6 @@ function fruitful_get_general_header() {
 			<?php _e( 'Enabled', 'fruitful' ); ?>
 			</label>
 		</div>
-		
-		<div class="box-option">
-			<h4><?php _e( 'Header background-color', 'fruitful' ); ?></h4>
-			<input type="text" id="header_bg_color" class="colorPicker" name="fruitful_theme_options[header_bg_color]" value="<?php echo esc_attr($options['header_bg_color']); ?>" data-default-color="#ffffff"/>
-		</div>
 	<?php
 }
 
@@ -329,6 +325,12 @@ function fruitful_get_header_img () {
 	$upload  = intval($options['header_img']);
 
 	echo fruitful_get_box_upload_image($upload, 'header_img', 'upload_btn', 'reset_btn', 'headerbackground', 'headerimgbackground');
+	?>
+	<div class="box-option">
+		<h4><?php _e( 'Header background-color', 'fruitful' ); ?></h4>
+		<input type="text" id="header_bg_color" class="colorPicker" name="fruitful_theme_options[header_bg_color]" value="<?php echo esc_attr($options['header_bg_color']); ?>" data-default-color="#ffffff"/>
+	</div>
+	<?php
 }
 
 function fruitful_get_header_img_size () {
@@ -363,6 +365,16 @@ function fruitful_set_menu_position() {
 	?>
 	<div class="box-option">
 		<?php fruitful_get_select_fields('menu_position', $options, fruitful_elem_position(), 'menu-position'); ?>		
+	</div>	
+<?php	
+}
+
+
+function fruitful_get_menu_type_resp() {
+	$options = fruitful_get_theme_options();
+	?>
+	<div class="box-option">
+		<?php fruitful_get_select_fields('menu_type_responsive', $options, fruitful_get_menu_type_select(), 'menu-type-responsive'); ?>		
 	</div>	
 <?php	
 }

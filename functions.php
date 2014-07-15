@@ -711,18 +711,33 @@ function fruitful_get_responsive_style () {
 			$style_ .= '#lang-select-block li ul li a{'. "\n";
 				if (!empty($theme_options['dd_menu_bg_color']))    { $style_ .= 'background-color : '. esc_js($theme_options['dd_menu_bg_color']) . '; ' . "\n"; }
 				if (!empty($theme_options['dd_menu_font_color']))  { $style_ .= 'color : '.esc_js($theme_options['dd_menu_font_color']) . ';  ' . "\n"; }
-			$style_ .= '}';
+			$style_ .= '}' . "\n";
 			
 			$style_ .= '#lang-select-block li ul li a:hover{'. "\n";
 				if (!empty($theme_options['dd_menu_btn_color']))    { $style_ .= 'background-color : '. esc_js($theme_options['dd_menu_btn_color']) . '; ' . "\n"; }
 				if (!empty($theme_options['dd_menu_hover_color']))  { $style_ .= 'color : '.esc_js($theme_options['dd_menu_hover_color']) . ';  ' . "\n"; }
-			$style_ .= '}';
+			$style_ .= '}' . "\n";
 			
 			$style_ .= '#lang-select-block li ul li.active a{'. "\n";
 				if (!empty($theme_options['dd_menu_btn_color']))    { $style_ .= 'background-color : '. esc_js($theme_options['dd_menu_btn_color']) . '; ' . "\n"; }
 				if (!empty($theme_options['dd_menu_hover_color']))  { $style_ .= 'color : '.esc_js($theme_options['dd_menu_hover_color']) . ';  ' . "\n"; }
-			$style_ .= '}';
+			$style_ .= '}' . "\n";
 			/*end of styles for dropdown menu*/
+			
+			/*styles for responsive full width menu*/
+			if (!empty($theme_options['menu_type_responsive']) && ($theme_options['menu_type_responsive'] == 'full_width')) {
+				$style_ .= '.resp_full_width_menu .site-header .menu_wrapper{'. "\n";
+					if (!empty($theme_options['dd_menu_bg_color']))    { $style_ .= 'background-color : '. esc_js($theme_options['dd_menu_bg_color']) . '; ' . "\n"; }
+				$style_ .= '}' . "\n";
+				$style_ .= '.resp_full_width_menu .site-header .menu_wrapper .menu li a{'. "\n";
+					if (!empty($theme_options['dd_menu_font_color']))	{ $style_ .= 'color : '.esc_js($theme_options['dd_menu_font_color']) . ';  ' . "\n"; }
+				$style_ .= '}' . "\n";
+				$style_ .= '.resp_full_width_menu .site-header .menu_wrapper .menu li:hover>a{'. "\n";
+					if (!empty($theme_options['dd_menu_btn_color']))    { $style_ .= 'background-color : '. esc_js($theme_options['dd_menu_btn_color']) . '; ' . "\n"; }
+					if (!empty($theme_options['dd_menu_hover_color']))  { $style_ .= 'color : '.esc_js($theme_options['dd_menu_hover_color']) . ';  ' . "\n"; }
+				$style_ .= '}' . "\n";
+			}
+			/*end of styles for responsive full width menu*/
   
 			$style_ .= '#header_language_select ul li.current > a { color : '.esc_js($theme_options['menu_font_color']). '; } ' . "\n";
 			if (!empty($theme_options['menu_bg_color'])) { $style_ .= '#header_language_select { background-color : '.esc_js($theme_options['menu_bg_color']) . '; } ' . "\n";  }

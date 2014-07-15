@@ -165,7 +165,21 @@
 			jQuery("#save_options").center();		
 		}
 	});
-
+	
+	if (jQuery('.menu-type-responsive').length > 0){
+		var responsiveMenuOptionBox = jQuery('.menu-type-responsive').parents('.settings-form-row');
+		if (!jQuery('#responsive_ch').prop('checked')) {
+			responsiveMenuOptionBox.hide();
+		}
+		jQuery('#responsive_ch').change(function(){
+			if (responsiveMenuOptionBox.css('display') == 'none'){
+				responsiveMenuOptionBox.show();
+			} else {
+				responsiveMenuOptionBox.hide();
+			}
+		});
+	}
+	
 });
 
 function show_message(n) {	

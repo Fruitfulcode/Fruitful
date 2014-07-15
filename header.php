@@ -34,57 +34,119 @@
 		}
 		body_class(trim($additional_body_classes)); 
 	  ?>>
-	<div id="page" class="hfeed site">
-		<div class="head-container">		
-			<div class="container">			
-				<div class="sixteen columns">				
-					<header id="masthead" class="site-header" role="banner">
-						<?php	
-							if (fruitful_is_social_header()) { 
-								fruitful_get_socials_icon(); 
-							} 
-									
-							$logo_pos_class = $menu_pos_class = '';
-							$options = fruitful_get_theme_options();
-							$logo_position = $options['logo_position'];
-							$menu_position = $options['menu_position'];
-							
-							$logo_pos_class = fruitful_get_class_pos($logo_position);
-							$menu_pos_class = fruitful_get_class_pos($menu_position);
-						?>
-						
-						<div data-originalstyle="<?php echo $logo_pos_class; ?>" class="header-hgroup <?php echo $logo_pos_class; ?>">  
-							<?php echo fruitful_get_logo(); ?>
-						</div>	
-							
-						<div data-originalstyle="<?php echo $menu_pos_class; ?>" class="menu-wrapper <?php echo $menu_pos_class; ?>">
-							<?php fruitful_get_languages_list(); ?>
-								
-							<?php if (class_exists('Woocommerce')) { ?>
-								<?php if (!empty($theme_options['showcart'])) {
-										if (($theme_options['showcart']) == 'on'){?>
-											<div class="cart-button">
-												<a href="<?php echo get_permalink( woocommerce_get_page_id( 'cart' ) ); ?>" class="cart-contents">
-													<div class="cart_image"></div> 
-													<span class="num_of_product_cart"><?php global $woocommerce;
-													echo $woocommerce->cart->cart_contents_count; ?> </span>
-												</a>
-											</div>							
-									<?php } ?>
-								<?php } ?>
-							<?php } ?>
-								
-							<nav role="navigation" class="site-navigation main-navigation">
-								<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>					
-							</nav><!-- .site-navigation .main-navigation -->	
+	<div id="page" class="hfeed site"><?php
+			
+			/*get fruitful options*/
+			$options = fruitful_get_theme_options();
+			
+			/*get cart button html*/
+			$cart_content_header = '';
+			if (class_exists('Woocommerce')) { 
+				global $woocommerce;
+				if (!empty($theme_options['showcart'])) {
+					if (($theme_options['showcart']) == 'on'){
+						$cart_content_header = '<div class="cart-button">
+							<a href="'.get_permalink( woocommerce_get_page_id( 'cart' ) ).'" class="cart-contents">
+								<div class="cart_image"></div> 
+								<span class="num_of_product_cart">'.$woocommerce->cart->cart_contents_count.'</span>
+							</a>
+						</div>';
+					}
+				} 
+			}
+			
+			/*get logo and menu position and elements classes*/
+			$logo_pos_class = $menu_pos_class = '';
+			$logo_position = $options['logo_position'];
+			$menu_position = $options['menu_position'];
+			
+			$logo_pos_class = fruitful_get_class_pos($logo_position);
+			$menu_pos_class = fruitful_get_class_pos($menu_position);
+			
+			/*check if responsive option is ON*/
+			$is_responsive = false;
+			if (isset($theme_options['responsive']) && ($theme_options['responsive'] == 'on')) {
+				$is_responsive = true;
+			}
+			
+			/*get type of responsive menu*/
+			$responsive_menu_type = $options['menu_type_responsive'];
+			
+			if ( !$is_responsive || ( $is_responsive && ( $responsive_menu_type == 'inside_content' ) ) ){ ?>
+			
+					<div class="head-container">
+						<div class="container">
+							<div class="sixteen columns">
+								<header id="masthead" class="site-header" role="banner">
+									<?php 	
+										if (fruitful_is_social_header()) { 
+											fruitful_get_socials_icon(); 
+										}	 
+									?>
+									<div data-originalstyle="<?php echo $logo_pos_class; ?>" class="header-hgroup <?php echo $logo_pos_class; ?>">  
+										<?php echo fruitful_get_logo(); ?>
+									</div>	
+										
+									<div data-originalstyle="<?php echo $menu_pos_class; ?>" class="menu-wrapper <?php echo $menu_pos_class; ?>">
+										<?php fruitful_get_languages_list(); ?>
+											
+										<?php echo $cart_content_header; ?>
+											
+										<nav role="navigation" class="site-navigation main-navigation">
+											<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+										</nav><!-- .site-navigation .main-navigation -->
+									</div>
+								</header><!-- #masthead .site-header -->
+							</div>
 						</div>
-					</header><!-- #masthead .site-header -->			
-				</div>		
-			</div>	
+					</div>
+					
+			<?php } else { ?>
+				
+					<div class="head-container resp_full_width_menu">
+						<div class="container ">
+							<div class="sixteen columns">
+								<header id="masthead" class="site-header" role="banner">
+									<?php 	
+										if (fruitful_is_social_header()) { 
+											fruitful_get_socials_icon(); 
+										}	 
+									?>
+									<div data-originalstyle="<?php echo $logo_pos_class; ?>" class="header-hgroup <?php echo $logo_pos_class; ?>">  
+										<?php echo fruitful_get_logo(); ?>
+									</div>	
+									<div data-originalstyle="<?php echo $menu_pos_class; ?>" class="menu-wrapper <?php echo $menu_pos_class; ?>">
+										<?php fruitful_get_languages_list(); ?>
+											
+										<?php echo $cart_content_header; ?>
+											
+										<nav role="navigation" class="site-navigation main-navigation">
+											<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+										</nav><!-- .site-navigation .main-navigation -->
+									</div>
+								</header><!-- #masthead .site-header -->
+							</div>
+						</div>
+						<div class="site-header">
+							<div class="logo_wrapper"><?php echo fruitful_get_logo(); ?></div>
+							<div class="menu_button collapsed">
+								<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+							</div>
+							<div class="language_switcher"><?php fruitful_get_languages_list(); ?></div>
+							<div class="cart_wrapper"><?php echo $cart_content_header; ?></div>
+							<div class="menu_wrapper collapse"><?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?></div>
+						</div>
+					</div>
+					
+			<?php } ?>
 		</div><!-- .header-container -->
-		
-		<?php if (is_front_page()) fruitful_get_slider(); ?>
-		
+		<?php
+			if (is_front_page()) fruitful_get_slider();
+		?>
 		<div class="page-container">		
 			<div class="container">		
 				<?php do_action( 'before' ); ?>		

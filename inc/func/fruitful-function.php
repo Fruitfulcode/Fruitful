@@ -238,7 +238,19 @@ function fruitful_bool_list() {
 	return apply_filters( 'fruitful_bool_list', $font_bool_options);
 }
 
-
+function fruitful_get_menu_type_select(){
+	$menu_type_responsive = array(
+		'0' => array(
+			'value' =>	   'full_width',
+			'label' => __( 'Button menu', 'fruitful' )
+		),
+		'1' => array(
+			'value' =>	   'inside_content',
+			'label' => __( 'Select menu', 'fruitful' )
+		)
+	);
+	return apply_filters( 'fruitful_get_menu_type_select', $menu_type_responsive);
+}
 
 function fruitful_fonts_list() {
 	$font_family_options = array(
@@ -549,6 +561,7 @@ return array(
 				'header_img' 		=> '',
 				'header_img_size'	=> 'full',
 				'header_height' 	=> '84',
+				'menu_type_responsive'=> 'inside_content',
 				
 				/*Background Image*/
 				'backgroung_img'    => '',

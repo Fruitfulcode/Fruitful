@@ -32,6 +32,7 @@ html {
     webkit-text-size-adjust:100%;
 }
 body {
+	min-width:300px;
     background:none no-repeat scroll 0 0 #fff;
     font-size:14px;
     line-height:14px;
@@ -1530,7 +1531,6 @@ table#wp-calendar td#next{
 input#s {
     background:url("images/search_icon.png") no-repeat scroll 97% 5px transparent;
     border-radius:2px 2px 2px 2px;
-    float:left;
     font-size:13px;
     height:22px;
     line-height:1.2em;
@@ -2054,6 +2054,7 @@ aside #lang_sel {
     z-index: 5;
 }
 
+
 /*Styles for Fruitful Shortcodes Plugin*/
 /*buttons*/
 body .btn{padding:10px 18px;margin-bottom:0;font-size:14px;line-height:20px;text-shadow:none;background-image:none;filter:none;border-width:0;-webkit-border-radius:0px;-moz-border-radius:0px;border-radius:0px;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;transition: all 0.3s ease-in-out;}.btn:hover,.btn:focus,.btn:active,.btn.active,.btn.disabled,.btn[disabled]{color:#333333;background-color:#e6e6e6;*background-color:#d9d9d9;}
@@ -2183,10 +2184,16 @@ body .resp-vtabs .resp-tabs-container{border:0}
 	.search article.format-link header.post-header .post-title{width:90.51%;padding: 0 6.5% 13px 3%;}
 	.search article[class*=tag-twitter] header.post-header .post-title{width:90.51%;padding: 0 6.5% 13px 3%;}
 	.search article.format-quote header.post-header .post-title{width:90.51%;padding: 0 6.5% 13px 3%;}
+	
 	/*single post*/
 	.single-post .eleven.columns.omega{float:right}
 	.single-post .five.columns.alpha{float:left}
+	
+	/*styles for responsive full header*/
+	.resp_full_width_menu>.container{display:block;}
+	.resp_full_width_menu>.site-header{display:none;}
 }
+
 @media only screen and (min-width:768px) and (max-width:959px) {
 	.blog_post .post-content {width: 692px;}
 	.eleven.columns .blog_post .post-content {width: 452px;}
@@ -2196,12 +2203,15 @@ body .resp-vtabs .resp-tabs-container{border:0}
 	/*single post*/
 	.single-post .sixteen.columns.alpha.omega .blog_post .post-content {width:92%}
 }
+
 @media screen and ( max-width: 782px ) {
 	.head-container.is_indent {top: 46px;}
 }
+
 @media screen and (max-width: 600px) {
 	.head-container.is_indent {top: 0;}
 }
+
 @media only screen and (max-width:767px) {
 	.page-container{margin-bottom:40px;}
     /* nav menu ul & select */
@@ -2229,12 +2239,42 @@ body .resp-vtabs .resp-tabs-container{border:0}
 	#colophon .site-info{width:100%}
 	body .resp-tab-content{border: 1px solid #c1c1c1;}
 	body .resp-tabs-container{width: 96% !important;margin: 0 2%;}
+	
+	/*styles for responsive full header*/
+	.resp_full_width_menu>.container{display:none;}
+	.resp_full_width_menu>.site-header{display:block;}
+	.resp_full_width_menu.head-container{background-image:none;float:left;min-height:0}
+	.resp_full_width_menu #header_language_select{display:block;}
+		
+	.resp_full_width_menu .site-header{ width:100%; float:left; min-height:56px; }
+	.resp_full_width_menu .site-header .logo_wrapper{ display:block; float:left; width:48%; margin:0 0 0 2%; }
+	.resp_full_width_menu .site-header .cart_wrapper, .resp_full_width_menu .site-header .language_switcher, .resp_full_width_menu .site-header .menu_button{ display:block; float:right; margin-left:12px; margin-right:12px; }
+	.resp_full_width_menu .site-header .select-menu{ display:none; } 	
+	.resp_full_width_menu .site-header .menu_button button{ background:none !important; float:left; margin: 15px 10px 9px; padding: 0; z-index: 9; background: none; border: 0; height: 30px; width: 35px; outline:none; }
+	.resp_full_width_menu .site-header .menu_button button span{ display: block; margin: 0 auto; margin-bottom: 5px; background: white; height: 5px; width: 35px; border-radius: 3px; }
+
+	.resp_full_width_menu .menu_wrapper{ float:left; width:100%; overflow-y:auto; }
+	.resp_full_width_menu .menu_wrapper.collapse{ display:none; }
+	.resp_full_width_menu .menu_wrapper>div{ width:100%; float:left; }
+	.resp_full_width_menu ul{ list-style:none; }
+	.resp_full_width_menu .menu{ display:block; width:100%; float:left; margin:0; padding:0; }
+	.resp_full_width_menu .menu ul{ margin:0; }
+	.resp_full_width_menu .menu li a{ width:97%; padding:15px 1% 15px 2%; float:left; text-decoration:none; }
+	.resp_full_width_menu .menu>li>ul>li>a{ width:93%; padding-left:6%; }
+	.resp_full_width_menu .menu>li>ul>li>ul>li>a{ width:87%; padding-left:12%; }
+	.resp_full_width_menu .menu ul ul ul{ display:none; }
+	.resp_full_width_menu .site-header .menu_wrapper .menu li a{ -webkit-transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -khtml-transition: all 0.2s ease-in-out; -o-transition: all 0.2s ease-in-out; -ms-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
+	.resp_full_width_menu .cart-button{ clear:none; margin: 21px 10px 14px; } 
 }
 
 @media only screen and (min-width:480px) and (max-width:767px) {
 	.mejs-controls div.mejs-time-rail{width:149px !important}
 	.responsive .select-menu{margin: 16px 0 25px 0 !important}
+
+	/*styles for responsive full header*/
+	.resp_full_width_menu .site-header .cart_wrapper, .resp_full_width_menu .site-header .language_switcher, .resp_full_width_menu .site-header .menu_button{ margin-left:5px; margin-right:5px; }
 }
+
 @media only screen and (max-width:479px) {
 	#masthead .social-icon{float: left;clear: both;margin:20px 0;}
 	.blog_post .date_of_post {width: 50px; height: 50px; float:none; left:0; top:1px}
