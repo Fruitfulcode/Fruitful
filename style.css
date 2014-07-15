@@ -1530,6 +1530,7 @@ table#wp-calendar td#next{
 input#s {
     background:url("images/search_icon.png") no-repeat scroll 97% 5px transparent;
     border-radius:2px 2px 2px 2px;
+    float:left;
     font-size:13px;
     height:22px;
     line-height:1.2em;
