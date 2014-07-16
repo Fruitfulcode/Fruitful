@@ -2245,13 +2245,14 @@ body .resp-vtabs .resp-tabs-container{border:0}
 	.resp_full_width_menu>.site-header{display:block;}
 	.resp_full_width_menu.head-container{background-image:none;float:left;min-height:0}
 	.resp_full_width_menu #header_language_select{display:block;}
+	.resp_full_width_menu #header_language_select .current{border:1px solid #333333;}
 		
 	.resp_full_width_menu .site-header{ width:100%; float:left; min-height:56px; }
 	.resp_full_width_menu .site-header .logo_wrapper{ display:block; float:left; width:48%; margin:0 0 0 2%; }
 	.resp_full_width_menu .site-header .cart_wrapper, .resp_full_width_menu .site-header .language_switcher, .resp_full_width_menu .site-header .menu_button{ display:block; float:right; margin-left:12px; margin-right:12px; }
 	.resp_full_width_menu .site-header .select-menu{ display:none; } 	
 	.resp_full_width_menu .site-header .menu_button button{ background:none !important; float:left; margin: 15px 10px 9px; padding: 0; z-index: 9; background: none; border: 0; height: 30px; width: 35px; outline:none; }
-	.resp_full_width_menu .site-header .menu_button button span{ display: block; margin: 0 auto; margin-bottom: 5px; background: white; height: 5px; width: 35px; border-radius: 3px; }
+	.resp_full_width_menu .site-header .menu_button button span{ display: block; margin: 0 auto; margin-bottom: 5px; background: #333333; height: 5px; width: 35px; border-radius: 3px; }
 
 	.resp_full_width_menu .menu_wrapper{ float:left; width:100%; overflow-y:auto; }
 	.resp_full_width_menu .menu_wrapper.collapse{ display:none; }
@@ -2259,7 +2260,8 @@ body .resp-vtabs .resp-tabs-container{border:0}
 	.resp_full_width_menu ul{ list-style:none; }
 	.resp_full_width_menu .menu{ display:block; width:100%; float:left; margin:0; padding:0; }
 	.resp_full_width_menu .menu ul{ margin:0; }
-	.resp_full_width_menu .menu li a{ width:97%; padding:15px 1% 15px 2%; float:left; text-decoration:none; }
+	.resp_full_width_menu .menu li a{ width:97%; padding:17px 1% 17px 2%; float:left; text-decoration:none; height:21px; }
+	.resp_full_width_menu .menu li a:hover{ padding-top:17px;padding-bottom:17px; float:left; text-decoration:none; height:21px; }
 	.resp_full_width_menu .menu>li>ul>li>a{ width:93%; padding-left:6%; }
 	.resp_full_width_menu .menu>li>ul>li>ul>li>a{ width:87%; padding-left:12%; }
 	.resp_full_width_menu .menu ul ul ul{ display:none; }
@@ -2270,9 +2272,6 @@ body .resp-vtabs .resp-tabs-container{border:0}
 @media only screen and (min-width:480px) and (max-width:767px) {
 	.mejs-controls div.mejs-time-rail{width:149px !important}
 	.responsive .select-menu{margin: 16px 0 25px 0 !important}
-
-	/*styles for responsive full header*/
-	.resp_full_width_menu .site-header .cart_wrapper, .resp_full_width_menu .site-header .language_switcher, .resp_full_width_menu .site-header .menu_button{ margin-left:5px; margin-right:5px; }
 }
 
 @media only screen and (max-width:479px) {
@@ -2285,6 +2284,9 @@ body .resp-vtabs .resp-tabs-container{border:0}
 	input#s {width:236px;}
 	#page .container #secondary .widget>ul>li.cat-item{overflow-x:hidden}
 	.responsive .select-menu{margin: 16px 0 25px 0 !important}
+
+	/*styles for responsive full header*/
+	.resp_full_width_menu .site-header .cart_wrapper, .resp_full_width_menu .site-header .language_switcher, .resp_full_width_menu .site-header .menu_button{ margin-left:2px; margin-right:2px; }
 }
 
 @media only screen and (max-device-width:1024px) and (orientation:portrait)  {}
