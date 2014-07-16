@@ -113,7 +113,7 @@ function autoWidthMenu () {
 
 jQuery(window).bind('scroll', function() { 
 	var is_sufficient_height = false;
-	var vContentHeight 	 = jQuery('#page').outerHeight();
+	var vContentHeight 	 = jQuery('body').outerHeight();
 	var vWinHeight  	 = jQuery(window).height();
 	var vHeaderContainer = jQuery('.head-container').outerHeight();
 	
