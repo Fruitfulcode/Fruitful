@@ -58,6 +58,16 @@ jQuery(document).ready(function($) {
 				}
 			});
 		}
+		
+		$('.resp_full_width_menu .language_switcher .current').live('click', function(e) {
+			var el = $(this);
+			var child = el.find('#lang-select-popup');
+			if (child.hasClass('active')) {
+				child.removeClass('active').hide().css({'margin':'20px 0 0 0','opacity':0,'visibility':'hidden'});
+			} else {
+				child.addClass('active').show().css({'margin':'1px 0 0 0','opacity':1,'visibility':'visible'});
+			}
+		});
 });
 
 jQuery(window).bind('resize', function() { 
