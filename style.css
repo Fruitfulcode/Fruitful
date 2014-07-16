@@ -2246,6 +2246,10 @@ body .resp-vtabs .resp-tabs-container{border:0}
 	.resp_full_width_menu.head-container{background-image:none;float:left;min-height:0}
 	.resp_full_width_menu #header_language_select{display:block;}
 	.resp_full_width_menu #header_language_select .current{border:1px solid #333333;}
+	.resp_full_width_menu #header_language_select .current,
+	.resp_full_width_menu #header_language_select .current a,
+	.resp_full_width_menu #header_language_select .current ul#lang-select-popup{transition:none;-webkit-transition:none; -moz-transition:none; -khtml-transition: none; -o-transition: none; -ms-transition: none; transition: none;}
+	.resp_full_width_menu #header_language_select ul li:hover > ul{visibility:hidden;}
 		
 	.resp_full_width_menu .site-header{ width:100%; float:left; min-height:56px; }
 	.resp_full_width_menu .site-header .logo_wrapper{ display:block; float:left; width:48%; margin:0 0 0 2%; }
