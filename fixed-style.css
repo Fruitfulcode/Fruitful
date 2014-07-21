@@ -946,42 +946,42 @@ embed,iframe,object {
 	border:0;
 }
 
-#page .container header .header-hgroup.left-pos {
+#page-header .container header .header-hgroup.left-pos {
     float:left;
     margin: 0 15px 0 0;
 }
 
-#page .container header .header-hgroup.center-pos {
+#page-header .container header .header-hgroup.center-pos {
 	float:right;
     margin: 0 15px 0 15px;
 	width:100%;
 	display:block;
 }
 
-#page .container header .header-hgroup.center-pos a {
+#page-header .container header .header-hgroup.center-pos a {
 	text-align:center;
 	display:block;
 	float:none;
 }
 
-#page .container header .header-hgroup.right-pos  {
+#page-header .container header .header-hgroup.right-pos  {
     float:right;
     margin: 0 0 0 15px;
 }
 
 
-#page .container header .menu-wrapper.left-pos {
+#page-header .container header .menu-wrapper.left-pos {
 	float:left;
 	display:inline-block;
 }
 
-#page .container header .menu-wrapper.center-pos {
+#page-header .container header .menu-wrapper.center-pos {
 	float:none;
 	display:block;
 	margin:0 auto;
 }
 
-#page .container header .menu-wrapper.right-pos {
+#page-header .container header .menu-wrapper.right-pos {
 	float:right;
 	display:inline-block;
 }

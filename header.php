@@ -34,7 +34,7 @@
 		}
 		body_class(trim($additional_body_classes)); 
 	  ?>>
-	<div id="page" class="hfeed site"><?php
+	<div id="page-header" class="hfeed site"><?php
 			
 			/*get fruitful options*/
 			$options = fruitful_get_theme_options();
@@ -143,11 +143,11 @@
 					</div>
 					
 			<?php } ?>
-		</div><!-- .header-container -->
-		<?php
-			if (is_front_page()) fruitful_get_slider();
-		?>
-		<div class="page-container">		
-			<div class="container">		
-				<?php do_action( 'before' ); ?>		
-					<div class="sixteen columns">
+	</div><!-- .header-container -->
+	<?php
+		if (is_front_page()) fruitful_get_slider();
+	?>
+	<div id="page" class="page-container">		
+		<div class="container">		
+			<?php do_action( 'before' ); ?>		
+				<div class="sixteen columns">

@@ -28,7 +28,6 @@
 				<a rel="nofollow" href="#top" title="Back to top">&uarr;</a>
 			</div>
 		</footer><!-- #colophon .site-footer -->
-	</div><!-- #page .hfeed .site -->
 	<!--WordPress Development by Fruitful Code-->
 <?php wp_footer(); ?>
 </body>
