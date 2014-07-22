@@ -10,15 +10,15 @@ function fruitful_custom_layout_sidebars( $field, $meta ) {
     ?>
 		<ul class="list-layouts">
 			<li>
-				<input type="radio" id="full-width" value="0" name="<?php echo $field['id'];?>"  <?php checked( $layout, '0' ); ?>/>
+				<input type="radio" id="full-width" value="1" name="<?php echo $field['id'];?>"  <?php checked( $layout, '1' ); ?>/>
 				<img src="<?php echo CMB_META_BOX_URL . 'images/full.png'; ?>" alt="" />
 			</li>
 			<li>
-				<input type="radio" id="left-sidebar" value="1" name="<?php echo $field['id'];?>"  <?php checked( $layout, '1' ); ?>/>
+				<input type="radio" id="right-sidebar" value="2" name="<?php echo $field['id'];?>"  <?php checked( $layout, '2' ); ?>/>
 				<img src="<?php echo CMB_META_BOX_URL . 'images/left.png'; ?>" alt="" />
 			</li>
 			<li>
-				<input type="radio" id="right-sidebar" value="2" name="<?php echo $field['id'];?>"  <?php checked( $layout, '2' ); ?>/>
+				<input type="radio" id="left-sidebar" value="3" name="<?php echo $field['id'];?>"  <?php checked( $layout, '3' ); ?>/>
 				<img src="<?php echo CMB_META_BOX_URL . 'images/right.png'; ?>" alt="" />
 			</li>
 		</ul>
@@ -32,7 +32,7 @@ function fruitful_custom_layout_sidebars_script($hook) {
 	wp_register_script( 'cmb-layouts', CMB_META_BOX_URL . 'js/layout/layout.js'  );
 	wp_register_style ( 'cmb-layouts', CMB_META_BOX_URL . 'js/layout/layout.css' );
 	
-	if ( $hook == 'post.php' || $hook == 'post-new.php' || $hook == 'page-new.php' || $hook == 'page.php' ) {
+	if ( ($hook == 'post.php') || ($hook == 'post-new.php') || ($hook == 'page-new.php') || ($hook == 'page.php') ) {
 		wp_enqueue_script( 'cmb-layouts' );
 		wp_enqueue_style ( 'cmb-layouts' );
 	}

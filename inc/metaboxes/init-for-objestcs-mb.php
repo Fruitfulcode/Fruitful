@@ -63,11 +63,11 @@ function fruitful_all_metaboxes( array $meta_boxes ) {
 		'show_names' => true, 
 		'fields'     => array(
 			array(
-				'name' => __( 'Layout', 'fruitful' ),
-				'subname' => __( 'Select a specific layout for this page.', 'fruitful' ),
-				'id'      => $prefix . 'page_layout',
-				'type' 	  => 'custom_layout_sidebars',
-				'std' => '0'
+				'name' 		=> __( 'Layout', 'fruitful' ),
+				'subname' 	=> __( 'Select a specific layout for this page.', 'fruitful' ),
+				'id'      	=> $prefix . 'page_layout',
+				'type' 	  	=> 'custom_layout_sidebars',
+				'default' 	=> '1'
 			),
 		),
 	);
@@ -82,11 +82,11 @@ function fruitful_all_metaboxes( array $meta_boxes ) {
 		'show_names' => true, 
 		'fields'     => array(
 			array(
-				'name' => __( 'Layout', 'fruitful' ),
-				'subname' => __( 'Select a specific layout for this post.', 'fruitful' ),
-				'id' => $prefix . 'page_layout',
-				'type' => 'custom_layout_sidebars',
-				'std' => '1'
+				'name' 		=> __( 'Layout', 'fruitful' ),
+				'subname' 	=> __( 'Select a specific layout for this post.', 'fruitful' ),
+				'id' 		=> $prefix . 'page_layout',
+				'type' 		=> 'custom_layout_sidebars',
+				'default' 	=> '2'
 			),
 		),
 	);
