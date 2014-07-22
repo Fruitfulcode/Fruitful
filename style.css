@@ -1422,21 +1422,25 @@ header.post-header .post-title a {
     text-decoration:none
 }
 #page .container #secondary .widget ul li {
-    margin:0 0 10px 0
+    margin:0;
 }
 #page .container #secondary .widget ul li.cat-item {
-    background:url(images/arrow_cat.png) no-repeat 0 4px transparent;
     float:left;
     width:95%;
-    padding:0 0 0 15px;
+    padding:0;
 }
-#page .container #secondary .widget ul li.current-cat,#page .container #secondary .widget ul li.cat-item:hover {
-    background:url(images/arrow_cat.png) no-repeat 0 -12px transparent;
-    float:left;
-    width:95%;
-    padding:0 0 0 15px;
+#page .container #secondary .widget ul.children{
+	padding-left:15px;
 }
-
+#page .container #secondary .widget ul li.cat-item  a{
+    background:url(images/arrow_cat.png) no-repeat 0 1px transparent;
+    padding:0 0 0 15px;
+	margin-bottom:10px;
+	float:left;
+}
+#page .container #secondary .widget ul li.current-cat a,#page .container #secondary .widget ul li.cat-item a:hover {
+    background:url(images/arrow_cat.png) no-repeat 0 -15px transparent;
+}
 
 /*calendar widget*/
 #calendar_wrap{
@@ -2318,8 +2322,9 @@ html[dir="rtl"] article[class*=tag-twitter] header.post-header .post-title		{pad
 html[dir="rtl"] article.format-quote header.post-header .post-title			{padding: 0 4.4% 13px 10%;background:url(images/post-quote.png) no-repeat 3% 0 transparent;}
 html[dir="rtl"] article.format-image .wp-caption a:after{left:initial;right:0;}
 html[dir="rtl"] #page .container #secondary .widget ul {margin:0 8px 0 0;}
-html[dir="rtl"] #page .container #secondary .widget ul li.cat-item {margin:0 15px 0 0;background:url(images/arrow_cat_rtl.png) no-repeat right 4px transparent;}
-html[dir="rtl"] #page .container #secondary .widget ul li.current-cat, html[dir="rtl"] #page .container #secondary .widget ul li.cat-item:hover {margin:0 15px 0 0;background:url(images/arrow_cat_rtl.png) no-repeat right -12px transparent;}
+html[dir="rtl"] #page .container #secondary .widget ul.children{padding-right:15px;}
+html[dir="rtl"] #page .container #secondary .widget ul li.cat-item  a{background:url(images/arrow_cat.png) no-repeat right 1px transparent;padding:0 15px 0 0;float:right;}
+html[dir="rtl"] #page .container #secondary .widget ul li.current-cat a, html[dir="rtl"] #page .container #secondary .widget ul li.cat-item a:hover {background:url(images/arrow_cat.png) no-repeat right -15px transparent;}
 html[dir="rtl"] input#s { background:url("images/search_icon_rtl.png") no-repeat scroll 3% 5px transparent;padding:4px 5px 4px 32px;float:right}
 html[dir="rtl"] #comments.comments-area ol.commentlist li.comment .comment-author {float:right}
 html[dir="rtl"] #comments.comments-area ol.commentlist li.comment .comment-author cite.fn {float:right}
