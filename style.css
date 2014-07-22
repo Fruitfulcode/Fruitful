@@ -1422,12 +1422,13 @@ header.post-header .post-title a {
     text-decoration:none
 }
 #page .container #secondary .widget ul li {
-    margin:0;
+    margin:0 0 10px 0;
 }
 #page .container #secondary .widget ul li.cat-item {
     float:left;
     width:95%;
     padding:0;
+	margin:0;
 }
 #page .container #secondary .widget ul.children{
 	padding-left:15px;
