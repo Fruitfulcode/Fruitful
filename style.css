@@ -2259,6 +2259,7 @@ body .resp-vtabs .resp-tabs-container{border:0}
 	.resp_full_width_menu .site-header{ width:100%; float:left; min-height:56px; }
 	.resp_full_width_menu .site-header .logo_wrapper{ display:block; float:left; width:48%; margin:0 0 0 2%; }
 	.resp_full_width_menu .site-header .cart_wrapper, .resp_full_width_menu .site-header .menu_button{ display:block; float:right; margin-left:12px; margin-right:12px; }
+	.resp_full_width_menu .site-header .language_switcher{ display:block; float:right;}
 	.resp_full_width_menu .site-header .select-menu{ display:none; } 	
 	.resp_full_width_menu .site-header .menu_button button{ background:none !important; float:left; margin: 15px 10px 9px; padding: 0; z-index: 9; background: none; border: 0; height: 30px; width: 35px; outline:none; }
 	.resp_full_width_menu .site-header .menu_button button span{ display: block; margin: 0 auto; margin-bottom: 5px; background: #333333; height: 5px; width: 35px; border-radius: 3px; }
