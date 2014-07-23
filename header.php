@@ -136,8 +136,8 @@
 									<span class="icon-bar"></span>
 								</button>
 							</div>
-							<div class="language_switcher"><?php fruitful_get_languages_list(); ?></div>
 							<div class="cart_wrapper"><?php echo $cart_content_header; ?></div>
+							<div class="language_switcher"><?php fruitful_get_languages_list(); ?></div>
 							<div class="menu_wrapper collapse"><?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?></div>
 						</div>
 					</div>
