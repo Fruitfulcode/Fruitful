@@ -75,17 +75,17 @@ function fruitful_elem_position() {
 
 function fruitful_latest_posts_select() {
 	$latest_posts_pos = array(
+		'0' => array(
+			'value' =>	   '0',
+			'label' => __( 'Full width', 'fruitful' )
+		),
 		'1' => array(
 			'value' =>	   '1',
-			'label' => __( 'Full width', 'fruitful' )
+			'label' => __( 'Right sidebar', 'fruitful' )
 		),
 		'2' => array(
 			'value' =>	   '2',
 			'label' => __( 'Left sidebar', 'fruitful' )
-		),
-		'3' => array(
-			'value' =>	   '3',
-			'label' => __( 'Right sidebar', 'fruitful' )
 		)
 	);
 
