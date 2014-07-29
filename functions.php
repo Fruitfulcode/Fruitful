@@ -53,7 +53,6 @@ require_once('inc/func/plugins-included.php');
  */
 require get_template_directory() . '/inc/tweaks.php';
 require get_template_directory() . '/inc/func/fruitful-function.php';
-require get_template_directory() . '/inc/func/import_front_page.php';
 require get_template_directory() . '/inc/func/comment-inline-error.php';
 require get_template_directory() . '/inc/metaboxes/init-for-objestcs-mb.php';
 	
