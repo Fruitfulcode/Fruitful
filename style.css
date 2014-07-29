@@ -390,7 +390,7 @@ a:hover, a:active {
     outline:0;
 }
 .site-content .entry-content p a img, .site-content .entry-content p img {
-	box-shadow: 0 0px 1px rgba(0, 0, 0, 0.5)
+	/*box-shadow: 0 0px 1px rgba(0, 0, 0, 0.5) */
 }
 
 .entry-content img, .entry-summary img, .comment-content img, .widget img, .wp-caption {

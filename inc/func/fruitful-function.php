@@ -608,8 +608,8 @@ return array(
 				/*fonts*/
 				'h_font_family'		=> 'Open Sans, sans-serif',
 				'h1_size'			=> '27',
-				'h2_size'			=> '23',
-				'h3_size'			=> '20',
+				'h2_size'			=> '34',
+				'h3_size'			=> '18',
 				'h4_size'			=> '17',
 				'h5_size'			=> '14',
 				'h6_size'			=> '12',
