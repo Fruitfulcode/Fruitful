@@ -98,6 +98,37 @@ Files: .pot, ru_Ru.po, ru_Ru.mo icluded. Default language is english.
     Changelog
 -------------------------------------------------------
 
+= 2.0 = 
+29.07.14
+
+* New: Shortcodes moved to plugin territory
+* New: Home page template
+* New: Page template switcher
+* New: WooCommerce tab in theme options
+* New: Theme options, Header background image size full width or centered
+* New: Theme options RTL support
+* New: Theme options, responsive menu select or button.
+* New: Ability to choose slider width boxed or full width.
+* New: Persian localization (fa_IR)
+* Improvements: German localization (de_DE)
+* Improvements: French localization (fr_FR)
+* Improvements: Russian localization (ru_RU)
+* Improvements: add_theme_page() instead of add_submenu_page()
+* Improvements: get_template_part instead of required_once
+* Improvements: Change default color for font in dropdown menu
+* Improvements: WooCommerce products per row
+* Improvements: WoCommerce additional styles
+* Update: Fancybox version
+* Update: select2 library removed
+* Bug fix: WooCommerce alert box shop page
+* Bug fix: Centered logo position at responsive site versions
+* Bug fix: Woocommerce alert box category page
+* Bug fix: Cart button and WPML position
+* Bug fix: WooCommerce related products styles
+* Bug fix: Theme options, comments option.
+* Bug fix: Scalable for iPhone
+
+
 = 1.4 = 
 28.03.14
 
