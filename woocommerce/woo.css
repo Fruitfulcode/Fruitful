@@ -84,6 +84,7 @@ body.post-type-archive input#s{padding-left: 12px;max-width:234px}
 .nav-links.shop .pages-links .page-numbers.current{background:#F15A23;text-decoration:none !important;}
 .nav-links.shop .pages-links .page-numbers.next,
 .nav-links.shop .pages-links .page-numbers.prev{display:none}
+#page .container .woo-loop-content.alpha.omega{width:100%;}
 
  /*secondary*/
 body.woocommerce #page div.container .sixteen .five #secondary.widget-area{margin-top:10px;}
