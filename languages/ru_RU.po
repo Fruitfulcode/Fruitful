@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Fruitful theme\n"
 "POT-Creation-Date: 2014-07-14 16:43+0200\n"
-"PO-Revision-Date: 2014-07-14 16:54+0200\n"
+"PO-Revision-Date: 2014-07-31 11:38+0200\n"
 "Last-Translator: \n"
 "Language-Team: Fruitful Team <fruitfulcode.com>\n"
 "Language: Russian\n"
@@ -1488,7 +1488,7 @@ msgstr "Показать или спрятать сайдбар"
 
 #: fruitful/inc/theme-options/theme-options.php:97
 msgid "Woocommerce Product Sidebar"
-msgstr "Сайдбар Магазина "
+msgstr "Сайдбар Продукта "
 
 #: fruitful/inc/theme-options/theme-options.php:98
 msgid "Woocommerce pages products per row"
