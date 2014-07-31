@@ -425,7 +425,7 @@ function fruitful_get_slider() {
 				if ($slider_options == 1) {
 					$slider_ .= '<div class="slider-wrapper '. $theme_options['nv_skins'] .'">';
 				} else {
-					$slider_ .= '<div class="slider-wrapper fullwidth'. $theme_options['nv_skins'] .'">'; 
+					$slider_ .= '<div class="slider-wrapper fullwidth '. $theme_options['nv_skins'] .'">'; 
 				}
 				
 					$slider_ .= '<div id="nivo-slider-'. $id . '" class="nivoSlider">';
