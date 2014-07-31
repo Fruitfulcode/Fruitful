@@ -1643,6 +1643,7 @@ address {
 
 .head-container.is_indent {
 	top:32px;
+	min-width:1024px;
 }
 
 .single-post #comments ol.commentlist li img.avatar,
