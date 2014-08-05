@@ -596,11 +596,11 @@ function fruitful_get_responsive_style () {
 	$theme_options  = fruitful_ret_options("fruitful_theme_options"); 
 	fruitful_add_custom_fonts();
 	if (isset($theme_options['responsive']) && ($theme_options['responsive'] == 'on')) {
-		wp_enqueue_style('main-style',  get_stylesheet_uri());
 		if (class_exists('woocommerce')){wp_enqueue_style( 'woo-style', get_template_directory_uri() . '/woocommerce/woo.css');}
+		wp_enqueue_style('main-style',  get_stylesheet_uri());
 	} else {
-		wp_enqueue_style('main-style',  get_stylesheet_directory_uri()  .'/fixed-style.css');
 		if (class_exists('woocommerce')){wp_enqueue_style( 'woo-style', get_template_directory_uri() . '/woocommerce/woo-fixed.css');}
+		wp_enqueue_style('main-style',  get_stylesheet_directory_uri()  .'/fixed-style.css');
 	} 
  
 	if (!empty($theme_options['styletheme'])) {
@@ -814,6 +814,20 @@ function fruitful_get_responsive_style () {
 						$woo_style_ .= '.single-product #page .container .woo-loop-sidebar{float:left}'."\n";
 						$woo_style_ .= '.single-product #page .container .woo-loop-sidebar #secondary{float:left}'."\n";
 					}
+				}
+				
+				/*price color*/
+				if (!empty($theme_options['a_hover_font_color']))   { 
+					$style_ .= '.woocommerce ul.products li.product .price ,' . "\n";
+					$style_ .= '.woocommerce-page ul.products li.product .price,' . "\n";
+					$style_ .= 'body.woocommerce div.product span.price, ' . "\n";
+					$style_ .= 'body.woocommerce-page div.product span.price, ' . "\n";
+					$style_ .= 'body.woocommerce #content div.product span.price, ' . "\n";
+					$style_ .= 'body.woocommerce-page #content div.product span.price,' . "\n";
+					$style_ .= 'body.woocommerce div.product p.price, ' . "\n";
+					$style_ .= 'body.woocommerce-page div.product p.price, ' . "\n";
+					$style_ .= 'body.woocommerce #content div.product p.price, ' . "\n";
+					$style_ .= 'body.woocommerce-page #content div.product p.price{color : '. esc_js($theme_options['a_hover_font_color']) .'; } ' . "\n"; 
 				}
 				
 			}

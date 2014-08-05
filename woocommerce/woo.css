@@ -1135,10 +1135,7 @@ body.woocommerce .woocommerce-breadcrumb,
 body.woocommerce-page .woocommerce-breadcrumb a {font-size:14px; color:#333333; }
 
 .woocommerce ul.products li.product .price ,
-.woocommerce-page ul.products li.product .price {color: #ea3c00 !important; font-size:14px !important;word-wrap: break-word;max-width: 75px;}
-
-.woocommerce ul.products li.product .price ,
-body.woocommerce-page ul.products li.product .price {color: #ea3c00; font-size:14px}
+.woocommerce-page ul.products li.product .price {color: #ea3c00; font-size:14px !important;word-wrap: break-word;max-width: 75px;}
 
 .woocommerce-cart .cart_totals  table td{color:#333333; font-weight:bold; }
 .woocommerce-cart .cart_totals  table td select{font-weight:initial}
