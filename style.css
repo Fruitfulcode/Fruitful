@@ -14,6 +14,24 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 
+/* Font Awesome  */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome-webfont.eot?v=4.1.0');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.1.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff?v=4.1.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.1.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.fa {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, font, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td {
     border:0;
     font-family:inherit;
@@ -883,21 +901,25 @@ ul#lang-select-popup{
 #colophon .social-icon {
     float:right
 }
-#masthead .social-icon a{
-	float:right;
+#masthead .social-icon a,
+#colophon .social-icon a{
     width:30px;
     height:30px;
     opacity:1;
-    background-image:url(images/social.png);
+    /* background-image:url(images/social.png); */
     background-repeat:no-repeat;
+}
+#masthead .social-icon a{
+	float:right;
 }
 #colophon .social-icon a {
     float:left;
-    width:30px;
-    height:30px;
-    opacity:1;
+}
+#masthead .social-icon a.myspace,
+#masthead .social-icon a.yelp,
+#colophon .social-icon a.myspace,
+#colophon .social-icon a.yelp {
     background-image:url(images/social.png);
-    background-repeat:no-repeat;
 }
 #masthead .social-icon a:hover, #masthead .social-icon a:active,
 #colophon .social-icon a:hover, #colophon .social-icon a:active {
@@ -907,7 +929,25 @@ ul#lang-select-popup{
 #colophon .social-icon a.facebook {
     background-position:-249px 0;
 }
-#masthead .social-icon a.twitter,
+
+.social-icon>a>i{color:tan;background: #333333; border-radius: 50%; padding: 5.5px; margin:1px; width: 17px; height: 17px; text-align: center; font-size: 17px;}
+.social-icon a>.fa:before{font-size:17px;}
+.social-icon a.facebook .fa:before	{content: "\f09a";}
+.social-icon a.twitter .fa:before	{content: "\f099";}
+.social-icon a.linkedin .fa:before	{content: "\f0e1";}
+.social-icon a.googleplus .fa:before	{content: "\f0d5";}
+.social-icon a.dribbble .fa:before	{content: "\f17d";}
+.social-icon a.skype .fa:before		{content: "\f17e";}
+.social-icon a.flickr .fa:before		{content: "\f16e";}
+.social-icon a.youtube .fa:before	{content: "\f167";}
+.social-icon a.rss .fa:before		{content: "\f09e";}
+.social-icon a.vk .fa:before			{content: "\f189";}
+.social-icon a.pinterest .fa:before	{content: "\f0d2";}
+.social-icon a.instagram .fa:before	{content: "\f16d";}
+.social-icon a.email .fa:before		{content: "\f0e0";}
+
+
+/* #masthead .social-icon a.twitter,
 #colophon .social-icon a.twitter {
     background-position:-280px 0;
 }
@@ -964,7 +1004,8 @@ ul#lang-select-popup{
 #masthead .social-icon a.email,
 #colophon .social-icon a.email {
     background-position:-342px 0;
-}
+} */
+
 .sticky {}
 .hentry {
     margin:0 0 1.5em;
