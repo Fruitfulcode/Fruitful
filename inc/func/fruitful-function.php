@@ -560,7 +560,7 @@ return array(
 				'header_bg_color'	=> '#ffffff',	
 				'header_img' 		=> '',
 				'header_img_size'	=> 'full',
-				'header_height' 	=> '84',
+				'header_height' 	=> '80',
 				'menu_type_responsive'=> 'inside_content',
 				
 				/*Background Image*/
