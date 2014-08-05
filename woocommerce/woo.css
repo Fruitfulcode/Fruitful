@@ -1478,7 +1478,7 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 	.woocommerce .related ul li.product,
 	.woocommerce-page .related ul li.product,
 	.woocommerce .upsells.products ul li.product,
-	.woocommerce-page .upsells.products ul li.product {width: 100% !important;}
+	.woocommerce-page .upsells.products ul li.product {width: 100% !important;margin-left:0;}
 	.single-product.woocommerce div.product, .single-product.woocommerce-page div.product, .single-product.woocommerce #content div.product, .single-product.woocommerce-page #content div.product{width:100%}
 	body.single-product #page .container #content,	body.single-product #page .container #content{width: 94%; padding: 0 3%;}
 	/*checkoout*/
