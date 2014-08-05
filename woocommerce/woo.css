@@ -1277,10 +1277,10 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 	.woocommerce .woo-loop-content .upsells.products ul.products li.product, 
 	.woocommerce-page .woo-loop-content .upsells.products ul.products li.product{width: 21.75%; margin-left: 3.8% !important; margin-right: 0 !important;}
 	.woocommerce .woo-loop-content .upsells.products li.product.first, .woocommerce-page .woo-loop-content .upsells.products li.product.first{margin-left:0 !important}
-	.woocommerce .woo-loop-content .related ul.products li.product.last, 
-	.woocommerce-page .woo-loop-content .related ul.products li.product.last, 
-	.woocommerce .woo-loop-content .upsells.products ul.products li.product.last, 
-	.woocommerce-page .woo-loop-content .upsells.products ul.products li.product.last{margin-right:0 !important}
+	.woocommerce .woo-loop-content .related ul.products li.product.first, 
+	.woocommerce-page .woo-loop-content .related ul.products li.product.first, 
+	.woocommerce .woo-loop-content .upsells.products ul.products li.product.first, 
+	.woocommerce-page .woo-loop-content .upsells.products ul.products li.product.first{margin-left:0 !important}
 }
 
 
