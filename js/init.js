@@ -150,7 +150,11 @@ jQuery(window).bind('scroll', function() {
 
 function fixed_header(){
 	if (ThGlobal.is_fixed_header == 1){
-		jQuery('#page').css({'margin-top':jQuery(".head-container").outerHeight()});
+		if (jQuery('.home .main-slider-container').length > 0){
+			jQuery('.home .main-slider-container').css({'margin-top':jQuery(".head-container").outerHeight()+10});
+		} else {
+			jQuery('#page').css({'margin-top':jQuery(".head-container").outerHeight()});
+		}
 	} else {
 		jQuery('#page').css({'margin-top':0});
 	}
