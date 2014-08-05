@@ -1181,6 +1181,7 @@ function fruitful_metadevice() {
 	if($browser == 'ipad') 		{ echo '<meta name="viewport" content="width=768px, minimum-scale=1.0, maximum-scale=1.0" />'; } 
 }
 }
+add_action( 'wp_head', 'fruitful_metadevice' );
 
 if ( ! function_exists( 'fruitful_esc_content_pbr' ) ) {
 function fruitful_esc_content_pbr($content = null) {
