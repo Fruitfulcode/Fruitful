@@ -98,6 +98,19 @@ Files: .pot, ru_Ru.po, ru_Ru.mo icluded. Default language is english.
     Changelog
 -------------------------------------------------------
 
+= 2.1 = 
+06.08.14
+
+New: Social icons changed to the Font Awesome (CSS) 
+Improvements: <h3> Headline in sidebar, can be selected in theme options
+Improvements: Sticky header effect
+Improvements: WooCommerce additional CSS styles
+Improvements: text domain updates
+Updates: fruitful.pot
+Bug fix: Nivo slider skins
+Bug fix: WooCommerce number of products in row single product
+
+
 = 2.0 = 
 29.07.14
 
