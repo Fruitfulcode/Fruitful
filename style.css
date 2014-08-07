@@ -930,7 +930,7 @@ ul#lang-select-popup{
     background-position:-249px 0;
 }
 
-.social-icon>a>i{color:tan;background: #333333; border-radius: 50%; padding: 5.5px; margin:1px; width: 17px; height: 17px; text-align: center; font-size: 17px;}
+.social-icon>a>i{color:#fff;background: #333333; border-radius: 50%; padding: 5.5px; margin:1px; width: 17px; height: 17px; text-align: center; font-size: 17px;}
 .social-icon a>.fa:before{font-size:17px;}
 .social-icon a.facebook .fa:before	{content: "\f09a";}
 .social-icon a.twitter .fa:before	{content: "\f099";}
