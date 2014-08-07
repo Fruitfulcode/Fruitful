@@ -92,11 +92,20 @@ Files: .pot, ru_Ru.po, ru_Ru.mo icluded. Default language is english.
 * SyntaxHighlighter jQuery script http://alexgorbatchev.com/SyntaxHighlighter/ Licensed under the MIT License
 * Easy Responsive Tabs to Accordion https://github.com/samsono/Easy-Responsive-Tabs-to-Accordion MIT and GPL licenses
 * Fonts by Google fonts http://www.google.com/fonts licensed under Apache License Version 2 (http://www.apache.org/licenses/LICENSE-2.0.html)
+* Font Awesome licensed under the MIT License http://fortawesome.github.io/Font-Awesome/
 * Dialogbox by Trent Richardson, http://trentrichardson.com/Impromptu/ Licensed under the MIT License
 
 -------------------------------------------------------
     Changelog
 -------------------------------------------------------
+
+= 2.1.1=
+08.08.14
+
+* New option: Colors tab, social icon color 
+* New option: Colors tab, social icon background color
+* New: Social tab, github social icon
+* Css improvements
 
 = 2.1 = 
 06.08.14
