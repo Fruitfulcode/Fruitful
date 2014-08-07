@@ -599,11 +599,16 @@ return array(
 				
 				/*Color for lines*/
 				'widgets_sep_color'		=> '#F15A23',	
-				'btn_color'				=> '#333333',	
-				'btn_active_color'		=> '#F15A23',	
 				'date_of_post_b_color' 	=> '#F15A23',
 				'date_of_post_f_color'	=> '#ffffff',
 				
+				/*Color for buttons*/
+				'btn_color'				=> '#333333',	
+				'btn_active_color'		=> '#F15A23',	
+				
+				/*Color for social icons*/
+				'soc_icon_bg_color'		=>	'#333333',
+				'soc_icon_color'		=>	'#ffffff',
 				
 				/*fonts*/
 				'h_font_family'		=> 'Open Sans, sans-serif',

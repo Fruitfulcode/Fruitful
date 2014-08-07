@@ -560,7 +560,7 @@ function fruitful_get_socials_icon () {
 	if(!empty($theme_options['instagram_url']))		{ $out .= '<a class="instagram"	href="'		. esc_url($theme_options['instagram_url'])	. '" target="_blank"><i class="fa"></i></a>'; }			
 	if(!empty($theme_options['pinterest_url']))		{ $out .= '<a class="pinterest"	href="'		. esc_url($theme_options['pinterest_url'])	. '" target="_blank"><i class="fa"></i></a>'; }			
 	if(!empty($theme_options['yelp_url']))			{ $out .= '<a class="yelp"		href="'		. esc_url($theme_options['yelp_url'])		. '" target="_blank"></a>'; }			
-	if(!empty($theme_options['email_link'])) 		{ $out .= '<a class="email" 	href="mailto:'		. sanitize_email($theme_options['email_link']) . '"><i class="fa"></i></a>'; }				
+	if(!empty($theme_options['email_link'])) 		{ $out .= '<a class="email" 	href="mailto:'		. sanitize_email($theme_options['email_link']) . '"><i class="fa"></i></a>'; }			
 	
 	echo '<div class="social-icon">' . $out . '</div>';
 }
@@ -775,7 +775,7 @@ function fruitful_get_responsive_style () {
 				$style_ .= '.blog_post .date_of_post  {color : '. esc_js($theme_options['date_of_post_f_color']) .'; } ' . "\n";
 			}
 			
-			$woo_style_ .= '.num_of_product_cart {border-color: '. esc_js($theme_options['menu_btn_color']) . '; }  ' . "\n"; 	
+			$woo_style_ .= '.num_of_product_cart {border-color: '. esc_js($theme_options['menu_btn_color']) . '; }  ' . "\n"; 
 			
 			if (!empty($theme_options['btn_color'])) {
 				$style_		 .= 'button, input[type="button"], input[type="submit"], input[type="reset"]{background-color : '.esc_js($theme_options['btn_color']).' !important; } ' . "\n";
@@ -793,7 +793,16 @@ function fruitful_get_responsive_style () {
 				$woo_style_  .= '.woocommerce table.my_account_orders .order-actions .button:hover, .woocommerce-page table.my_account_orders .order-actions .button:hover{background-color : '.esc_js($theme_options['btn_active_color']).' !important; } ' . "\n";
 				$style_ .= '.nav-links.shop .pages-links .page-numbers:hover, .nav-links.shop .nav-next a:hover, .nav-links.shop .nav-previous a:hover, .nav-links.shop .pages-links .page-numbers.current{background-color : '.esc_js($theme_options['btn_active_color']).' !important; } ' . "\n";
 			}
-
+			
+			/*social icons styles*/
+			if (!empty($theme_options['soc_icon_bg_color'])) {
+				$style_ .= '.social-icon>a>i{background:'.$theme_options['soc_icon_bg_color'].'}' . "\n";
+			}
+			if (!empty($theme_options['soc_icon_color'])) {
+				$style_ .= '.social-icon>a>i{color:'.$theme_options['soc_icon_color'].'}' . "\n";
+			}
+			
+			
 			/*Woocommerce styles*/
 			if (class_exists('woocommerce')){
 				
