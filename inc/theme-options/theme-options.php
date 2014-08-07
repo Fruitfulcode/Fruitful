@@ -286,6 +286,7 @@ function fruitful_settings_field_socials_links() {
 		<h4>Pinterest</h4>		<input id="pinterest_url"	class="text-input" name="fruitful_theme_options[pinterest_url]"	type="text"   value="<?php echo esc_url( $options['pinterest_url'] ); ?>"/>
 		<h4>Yelp</h4>			<input id="yelp_url"		class="text-input" name="fruitful_theme_options[yelp_url]"		type="text"   value="<?php echo esc_url( $options['yelp_url'] ); ?>"/>
 		<h4>E-mail</h4>			<input id="email_link" 		class="text-input" name="fruitful_theme_options[email_link]" 	type="text"   value="<?php echo sanitize_email( $options['email_link'] ); ?>"/>
+		<h4>Github</h4>			<input id="github_link"		class="text-input" name="fruitful_theme_options[github_link]" 	type="text"   value="<?php echo sanitize_email( $options['github_link'] ); ?>"/>
 	</div>
 	<?php
 }	

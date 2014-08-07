@@ -949,6 +949,7 @@ ul#lang-select-popup{
 .social-icon a.pinterest .fa:before	{content: "\f0d2";}
 .social-icon a.instagram .fa:before	{content: "\f16d";}
 .social-icon a.email .fa:before		{content: "\f0e0";}
+.social-icon a.github .fa:before		{content: "\f09b";}
 
 
 /* #masthead .social-icon a.twitter,

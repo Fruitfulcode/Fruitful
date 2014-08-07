@@ -682,6 +682,7 @@ return array(
 				'pinterest_url'		=> '',
 				'yelp_url'			=> '',
 				'email_link'		=> '', 
+				'github_link'		=> '', 
 
 				/*woocoommerce*/
 				'showcart'  		=> 'on',

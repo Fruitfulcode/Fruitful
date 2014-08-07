@@ -781,7 +781,7 @@ ul#lang-select-popup{
     background-position:-435px 0;
 }
 
-.social-icon>a>i{color:tan;background: #333333; border-radius: 50%; padding: 5.5px; margin:1px; width: 17px; height: 17px; text-align: center; font-size: 17px;}
+.social-icon>a>i{color:#fff;background: #333333; border-radius: 50%; padding: 5.5px; margin:1px; width: 17px; height: 17px; text-align: center; font-size: 17px;}
 .social-icon a>.fa:before{font-size:17px;}
 .social-icon a.facebook .fa:before	{content: "\f09a";}
 .social-icon a.twitter .fa:before	{content: "\f099";}
@@ -796,6 +796,7 @@ ul#lang-select-popup{
 .social-icon a.pinterest .fa:before	{content: "\f0d2";}
 .social-icon a.instagram .fa:before	{content: "\f16d";}
 .social-icon a.email .fa:before		{content: "\f0e0";}
+.social-icon a.github .fa:before		{content: "\f09b";}
 
 
 /* #masthead .social-icon a.twitter,
