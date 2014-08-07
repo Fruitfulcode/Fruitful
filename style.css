@@ -925,9 +925,13 @@ ul#lang-select-popup{
 #colophon .social-icon a:hover, #colophon .social-icon a:active {
     opacity:0.9
 }
-#masthead .social-icon a.facebook,
-#colophon .social-icon a.facebook {
-    background-position:-249px 0;
+#masthead .social-icon a.myspace,
+#colophon .social-icon a.myspace {
+    background-position:-31px 0;
+}
+#masthead .social-icon a.yelp,
+#colophon .social-icon a.yelp {
+    background-position:-435px 0;
 }
 
 .social-icon>a>i{color:#fff;background: #333333; border-radius: 50%; padding: 5.5px; margin:1px; width: 17px; height: 17px; text-align: center; font-size: 17px;}
@@ -995,12 +999,10 @@ ul#lang-select-popup{
 #colophon .social-icon a.instagram {
     background-position:-404px 0;
 }
-
 #masthead .social-icon a.yelp,
 #colophon .social-icon a.yelp {
     background-position:-435px 0;
 }
-
 #masthead .social-icon a.email,
 #colophon .social-icon a.email {
     background-position:-342px 0;

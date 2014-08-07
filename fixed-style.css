@@ -4,7 +4,7 @@ Theme URI: http://themes.fruitfulcode.com/fruitful
 Author: fruitfulcode
 Author URI: http://fruitfulcode.com
 Description: Fruitful - WordPress theme with powerful theme options panel and simple clean front end design. Ability to modify styles and options according to your needs. Two different layout types responsive and fixed. Easily upload logo, background, edit colors, header and menu positions, slider, fonts, social icons, footer, custom css and much more. Translated to Russian, German, Spanish, French, Vietnamese languages. WooCommerce and WPML ready.
-Version: 1.4
+Version: 2.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: white, orange, theme-options, responsive-layout, fixed-layout, custom-header, custom-background, custom-menu, custom-colors, custom-background, translation-ready, featured-images, full-width-template,  one-column, right-sidebar, editor-style
@@ -772,9 +772,13 @@ ul#lang-select-popup{
 #colophon .social-icon a:hover, #colophon .social-icon a:active {
     opacity:0.9
 }
-#masthead .social-icon a.facebook,
-#colophon .social-icon a.facebook {
-    background-position:-249px 0;
+#masthead .social-icon a.myspace,
+#colophon .social-icon a.myspace {
+    background-position:-31px 0;
+}
+#masthead .social-icon a.yelp,
+#colophon .social-icon a.yelp {
+    background-position:-435px 0;
 }
 
 .social-icon>a>i{color:tan;background: #333333; border-radius: 50%; padding: 5.5px; margin:1px; width: 17px; height: 17px; text-align: center; font-size: 17px;}
@@ -842,12 +846,10 @@ ul#lang-select-popup{
 #colophon .social-icon a.instagram {
     background-position:-404px 0;
 }
-
 #masthead .social-icon a.yelp,
 #colophon .social-icon a.yelp {
     background-position:-435px 0;
 }
-
 #masthead .social-icon a.email,
 #colophon .social-icon a.email {
     background-position:-342px 0;
