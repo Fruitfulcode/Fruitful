@@ -409,6 +409,9 @@ a:hover, a:active {
 }
 .site-content .entry-content p a img, .site-content .entry-content p img {
 	/*box-shadow: 0 0px 1px rgba(0, 0, 0, 0.5) */
+    height: 100%;
+    max-width: 100%;
+    width: 100%;
 }
 
 .entry-content img, .entry-summary img, .comment-content img, .widget img, .wp-caption {
@@ -1039,7 +1042,7 @@ ul#lang-select-popup{
     height:auto;
 }
 .site-header img, img.size-full {
-    width:auto;
+    width:auto !important;
 	max-width: 100%;
 }
 .entry-content img.wp-smiley,.comment-content img.wp-smiley {
