@@ -683,6 +683,7 @@ return array(
 				'yelp_url'			=> '',
 				'email_link'		=> '', 
 				'github_link'		=> '', 
+				'tumblr_link'		=> '',
 
 				/*woocoommerce*/
 				'showcart'  		=> 'on',

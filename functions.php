@@ -570,6 +570,7 @@ function fruitful_get_socials_icon () {
 	if(!empty($theme_options['yelp_url']))			{ $out .= '<a class="yelp"		href="'	.		esc_url($theme_options['yelp_url'])			. '" target="_blank"></a>'; }			
 	if(!empty($theme_options['email_link'])) 		{ $out .= '<a class="email" 	href="mailto:'. sanitize_email($theme_options['email_link']). '"><i class="fa"></i></a>'; }			
 	if(!empty($theme_options['github_link'])) 		{ $out .= '<a class="github" 	href="'	.		esc_url($theme_options['github_link']) 		. '" target="_blank"><i class="fa"></i></a>'; }			
+	if(!empty($theme_options['tumblr_link'])) 		{ $out .= '<a class="tumblr" 	href="'	.		esc_url($theme_options['tumblr_link']) 		. '" target="_blank"><i class="fa"></i></a>'; }			
 	
 	echo '<div class="social-icon">' . $out . '</div>';
 }
