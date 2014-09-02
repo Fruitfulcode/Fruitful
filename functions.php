@@ -336,23 +336,27 @@ function fruitful_add_custom_fonts() {
 /*Slider*/
 if (!function_exists('fruitful_get_slider_options_flex')) {
 function fruitful_get_slider_options_flex() {
+	global $post;
+	$front_page_id = get_option('page_on_front');
 	$out = "";
 	$theme_options = fruitful_ret_options("fruitful_theme_options");
-	
-	$out .= '$(".flexslider").flexslider({' . "\n";
-	$out .= 'animation: "'			. esc_attr($theme_options['s_animation'])		.'",' . "\n";
-	$out .= 'direction: "'  		. esc_attr($theme_options['s_direction'])   	.'",' . "\n";
-	$out .= 'reverse: '				. esc_attr($theme_options['s_reverse']) 		. ',' . "\n";
-	$out .= 'slideshow: ' 		  	. esc_attr($theme_options['s_slideshow']) 		. ',' . "\n";
-	$out .= 'slideshowSpeed: ' 		. esc_attr($theme_options['s_slideshowSpeed']) 	. ',' . "\n";
-	$out .= 'animationSpeed: ' 		. esc_attr($theme_options['s_animationSpeed']) 	. ',' . "\n";
-	$out .= 'controlNav: ' 			. esc_attr($theme_options['s_controlnav']) 		. ',' . "\n";
-	
-	if (isset($theme_options['s_initDelay'])) {
-		$out .= 'initDelay: ' . $theme_options['s_initDelay'] .',' . "\n";
+		
+	if($post->ID == $front_page_id){
+		$out .= '$(".flexslider").flexslider({' . "\n";
+		$out .= 'animation: "'			. esc_attr($theme_options['s_animation'])		.'",' . "\n";
+		$out .= 'direction: "'  		. esc_attr($theme_options['s_direction'])   	.'",' . "\n";
+		$out .= 'reverse: '				. esc_attr($theme_options['s_reverse']) 		. ',' . "\n";
+		$out .= 'slideshow: ' 		  	. esc_attr($theme_options['s_slideshow']) 		. ',' . "\n";
+		$out .= 'slideshowSpeed: ' 		. esc_attr($theme_options['s_slideshowSpeed']) 	. ',' . "\n";
+		$out .= 'animationSpeed: ' 		. esc_attr($theme_options['s_animationSpeed']) 	. ',' . "\n";
+		$out .= 'controlNav: ' 			. esc_attr($theme_options['s_controlnav']) 		. ',' . "\n";
+		
+		if (isset($theme_options['s_initDelay'])) {
+			$out .= 'initDelay: ' . $theme_options['s_initDelay'] .',' . "\n";
+		}
+		$out .= 'randomize: '	. $theme_options['s_randomize'] . "\n";
+		$out .= '});' . "\n";
 	}
-	$out .= 'randomize: '	. $theme_options['s_randomize'] . "\n";
-    $out .= '});' . "\n";
 	
 	return $out;
 }	  
