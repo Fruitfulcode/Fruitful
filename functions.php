@@ -364,26 +364,30 @@ function fruitful_get_slider_options_flex() {
 
 if (!function_exists('fruitful_get_slider_options_nivo')) {
 function fruitful_get_slider_options_nivo() {
+	global $post;
+	$front_page_id = get_option('page_on_front');
 	$out = "";
 	$theme_options = fruitful_ret_options("fruitful_theme_options");
 	
-	$out .= '$(".nivoSlider").nivoSlider({' . "\n";
-	$out .= 'effect: "'				. esc_attr($theme_options['nv_animation'])		. '",' . "\n";
-    $out .= 'slices: '				. esc_attr($theme_options['nv_slice'])			.  ',' . "\n";
-    $out .= 'boxCols: '				. esc_attr($theme_options['nv_boxCols'])		.  ',' . "\n";
-    $out .= 'boxRows: '				. esc_attr($theme_options['nv_boxRows'])		.  ',' . "\n";
-    $out .= 'animSpeed: '			. esc_attr($theme_options['nv_animSpeed'])		.  ',' . "\n";
-    $out .= 'pauseTime: '			. esc_attr($theme_options['nv_pauseTime'])		.  ',' . "\n";
-	$out .= 'startSlide:' . (isset($theme_options['nv_startSlide']) ? $theme_options['nv_startSlide'] : 0) . ',' . "\n";
-    $out .= 'directionNav: '		. esc_attr($theme_options['nv_directionNav'])		.  ',' . "\n";
-    $out .= 'controlNav: '			. esc_attr($theme_options['nv_controlNav'])			.  ',' . "\n";
-    $out .= 'controlNavThumbs: '	. esc_attr($theme_options['nv_controlNavThumbs'])	.  ',' . "\n";
-    $out .= 'pauseOnHover: '		. esc_attr($theme_options['nv_pauseOnHover'])	.  ',' . "\n";
-    $out .= 'manualAdvance: '		. esc_attr($theme_options['nv_manualAdvance'])	.  ',' . "\n";
-    $out .= 'prevText: "'			. esc_attr($theme_options['nv_prevText'])		.  '",' . "\n";
-    $out .= 'nextText: "'			. esc_attr($theme_options['nv_nextText'])		.  '",' . "\n";
-    $out .= 'randomStart: '			. esc_attr($theme_options['nv_randomStart']) . "\n";
-	$out .= '});';
+	if($post->ID == $front_page_id){
+		$out .= '$(".nivoSlider").nivoSlider({' . "\n";
+		$out .= 'effect: "'				. esc_attr($theme_options['nv_animation'])		. '",' . "\n";
+		$out .= 'slices: '				. esc_attr($theme_options['nv_slice'])			.  ',' . "\n";
+		$out .= 'boxCols: '				. esc_attr($theme_options['nv_boxCols'])		.  ',' . "\n";
+		$out .= 'boxRows: '				. esc_attr($theme_options['nv_boxRows'])		.  ',' . "\n";
+		$out .= 'animSpeed: '			. esc_attr($theme_options['nv_animSpeed'])		.  ',' . "\n";
+		$out .= 'pauseTime: '			. esc_attr($theme_options['nv_pauseTime'])		.  ',' . "\n";
+		$out .= 'startSlide:' . (isset($theme_options['nv_startSlide']) ? $theme_options['nv_startSlide'] : 0) . ',' . "\n";
+		$out .= 'directionNav: '		. esc_attr($theme_options['nv_directionNav'])		.  ',' . "\n";
+		$out .= 'controlNav: '			. esc_attr($theme_options['nv_controlNav'])			.  ',' . "\n";
+		$out .= 'controlNavThumbs: '	. esc_attr($theme_options['nv_controlNavThumbs'])	.  ',' . "\n";
+		$out .= 'pauseOnHover: '		. esc_attr($theme_options['nv_pauseOnHover'])	.  ',' . "\n";
+		$out .= 'manualAdvance: '		. esc_attr($theme_options['nv_manualAdvance'])	.  ',' . "\n";
+		$out .= 'prevText: "'			. esc_attr($theme_options['nv_prevText'])		.  '",' . "\n";
+		$out .= 'nextText: "'			. esc_attr($theme_options['nv_nextText'])		.  '",' . "\n";
+		$out .= 'randomStart: '			. esc_attr($theme_options['nv_randomStart']) . "\n";
+		$out .= '});';
+	}
 	
 	return $out;
 }
