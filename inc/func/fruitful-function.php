@@ -555,6 +555,7 @@ return array(
 				'styletheme'		=> 'off',
 				'is_wpml_ready'		=> 'on',
 				'latest_posts_templ'=> '3',
+				'show_featured_single'=> 'off',
 
 				/*Header image*/
 				'header_bg_color'	=> '#ffffff',	

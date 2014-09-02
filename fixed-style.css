@@ -905,7 +905,7 @@ ul#lang-select-popup{
 	display: block;
     float: left;
 	padding:0 4.4%;
-    max-width: 91.2%;
+    width: 91.2%;
 	margin:20px 0 0;
 	height:auto;
 }

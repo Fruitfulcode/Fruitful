@@ -46,6 +46,7 @@ function fruitful_theme_options_init() {
 	add_settings_field( 'general_cm',		__( 'Comments', 'fruitful' ), 	'fruitful_get_general_comment',  	'theme_options',  'general', array('info' => __( 'If you want to display comments on your post page or page, select options below.', 'fruitful' )));
 	add_settings_field( 'general_ds',		__( 'Default theme styles',  'fruitful' ),'fruitful_get_style_theme', 'theme_options',  'general', array('info' => __( 'Default CSS. Theme option for styling is not working, if this option enable.', 'fruitful' )));
 	add_settings_field( 'general_lp',		__( 'Front page display latest posts', 'fruitful' ),'fruitful_latest_posts_template','theme_options',  'general', array('info' => __( 'Set template for latest posts.', 'fruitful' )));
+	add_settings_field( 'general_sf',		__( 'Show Featured image on single post', 'fruitful' ),'fruitful_show_featured_single_post','theme_options',  'general', array('info' => __( 'Select option below for show featured image on single post page.', 'fruitful' )));
 	if(function_exists('icl_get_languages')){ // if WPML is activated
 		add_settings_field( 'general_wpml',		__( 'Multilingual Switch in Header (WPML)', 'fruitful' ), 'fruitful_wpml_ready',  'theme_options',  'general', array('info' => __( 'If you wish to show Language Switch in header, select option below. ', 'fruitful' )));
 	}
@@ -186,6 +187,16 @@ function fruitful_get_responsive_design() {
 	<div class="box-option">
 		<label for="responsive_ch"><input type="checkbox" name="fruitful_theme_options[responsive]" id="responsive_ch" <?php checked( 'on', $options['responsive']); ?> />
 			<?php _e( 'Responsive', 'fruitful' ); ?>
+		</label>
+	</div>
+<?php }
+
+function fruitful_show_featured_single_post(){
+	$options = fruitful_get_theme_options();
+	?>
+	<div class="box-option">
+		<label for="show_featured_single"><input type="checkbox" name="fruitful_theme_options[show_featured_single]" id="show_featured_sf" <?php checked( 'on', $options['show_featured_single']); ?> />
+			<?php _e( 'Show featured image', 'fruitful' ); ?>
 		</label>
 	</div>
 <?php }
