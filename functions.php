@@ -240,7 +240,7 @@ function fruitful_scripts() {
 	$theme_options = fruitful_ret_options("fruitful_theme_options");
 	$front_page_id = get_option('page_on_front');
 	$slider_options = get_post_meta( $front_page_id, $prefix . 'slider_layout');
-	$slider_options = current($slider_options);
+	if ($slider_options){$slider_options = current($slider_options);}
 	
 	if ($slider_options){
 		if (isset($theme_options['select_slider'])){
