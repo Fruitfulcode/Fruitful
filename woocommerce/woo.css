@@ -1248,7 +1248,7 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 	.woocommerce ul.products li.product.last, .woocommerce-page ul.products li.product.last{margin-right:0 !important}
 	/*cart page*/
 	.woocommerce.woocommerce-cart  ul.products li.product, .woocommerce-page.woocommerce-cart  ul.products li.product{width: 21.75%;margin: 0 0 2.992em 3.8%;}
-	body .chosen-container-single .chosen-single{width:490px;}
+	.woocommerce-account .chosen-container-single .chosen-single{width:490px;}
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px){
@@ -1290,7 +1290,7 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 	.woocommerce-page .woo-loop-content .related ul.products li.product.first, 
 	.woocommerce .woo-loop-content .upsells.products ul.products li.product.first, 
 	.woocommerce-page .woo-loop-content .upsells.products ul.products li.product.first{margin-left:0 !important}
-	body .chosen-container-single .chosen-single{width:490px;}
+	.woocommerce-account .chosen-container-single .chosen-single{width:490px;}
 }
 
 
@@ -1393,7 +1393,7 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 	body.single-product #page .container #content,	body.single-product #page .container #content{width: 94%; padding: 0 3%;}
 	.single-product.woocommerce .container ul.products li.product, body.single-product.woocommerce-page .container ul.products li.product {width: 189px !important;} 
 	/*account*/
-	body .chosen-container-single .chosen-single{width:377px;}
+	.woocommerce-account .chosen-container-single .chosen-single{width:377px;}
 }
  
 @media only screen and (max-width: 479px){
@@ -1501,7 +1501,7 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 	.woocommerce-account table.shop_table th, body.woocommerce-page.woocommerce-account table.shop_table th {padding: 17px 2px;}
 	.woocommerce table.my_account_orders td, .woocommerce-page table.my_account_orders td{text-align:center}
 	body.woocommerce table.my_account_orders .order-actions .button, body.woocommerce-page table.my_account_orders .order-actions .button{padding: 10px 10px !important;}
-	body .chosen-container-single .chosen-single{width:255px;}
+	.woocommerce-account .chosen-container-single .chosen-single{width:255px;}
 } 
  
  /*IPhone 4*/

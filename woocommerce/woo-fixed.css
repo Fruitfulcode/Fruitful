@@ -1144,7 +1144,7 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 
 .woocommerce table.my_account_orders th, body.woocommerce-page table.my_account_orders th{padding: 17px 12px;line-height:14px;}
 .woocommerce table.shop_table th, body.woocommerce-page table.shop_table th{padding: 17px 12px;line-height:14px;}
-body .chosen-container-single .chosen-single{width:490px;}
+.woocommerce-account .chosen-container-single .chosen-single{width:490px;}
 body .chosen-container .chosen-results{float: left; width: 100%;}
 
 /*FONTS*/
