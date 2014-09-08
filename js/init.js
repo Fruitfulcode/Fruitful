@@ -112,7 +112,7 @@ function autoWidthMenu () {
 		var sum = 0;
 		if (jQuery('.menu-wrapper').hasClass('center-pos')) {
 			if (jQuery('.cart-button').length > 0){
-				cartButtonWidth = jQuery('.cart-button').outerWidth(true);
+				cartButtonWidth = jQuery('.cart-button').outerWidth(true) + 2;
 			}
 			if (jQuery('#header_language_select').length > 0){
 				wpmlButtonWidth = jQuery('#header_language_select').outerWidth(true);
