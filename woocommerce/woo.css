@@ -991,7 +991,7 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 
 .woocommerce-cart .woocommerce .cart-collaterals .cart_totals table select, 
 .woocommerce-cart.woocommerce-page .cart-collaterals .cart_totals table select,
-.woocommerce-checkout #shipping_method{
+.woocommerce-checkout select#shipping_method{
 	height: 35px;
 	width: 250px !important;
 	max-width: 250px;
@@ -1096,6 +1096,7 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 	border:0;
 }
 .woocommerce .checkout .col-2 .notes, .woocommerce-page .checkout .col-2 .notes{padding:0;}
+body .woocommerce ul#shipping_method li, body.woocommerce-page ul#shipping_method li{width: 100%; float: left; text-indent: 0; margin-left: 0; text-align: left;}
 
 
 /*---ACCOUNT PAGE---*/
