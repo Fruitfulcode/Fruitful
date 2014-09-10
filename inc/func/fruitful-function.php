@@ -685,6 +685,7 @@ return array(
 				'email_link'		=> '', 
 				'github_link'		=> '', 
 				'tumblr_link'		=> '',
+				'soundcloud_link'	=> '',
 
 				/*woocoommerce*/
 				'showcart'  		=> 'on',

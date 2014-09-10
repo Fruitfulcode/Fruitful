@@ -286,7 +286,7 @@ function fruitful_settings_field_socials_links() {
 		<h4>Twitter</h4>		<input id="twitter_url" 	class="text-input" name="fruitful_theme_options[twitter_url]" 	type="text"   value="<?php echo esc_url( $options['twitter_url'] ); ?>"/>
 		<h4>LinkedIn</h4>		<input id="linkedin_url" 	class="text-input" name="fruitful_theme_options[linkedin_url]" 	type="text"   value="<?php echo esc_url( $options['linkedin_url'] ); ?>"/>
 		<h4>MySpace</h4>		<input id="myspace_url" 	class="text-input" name="fruitful_theme_options[myspace_url]" 	type="text"   value="<?php echo esc_url( $options['myspace_url'] ); ?>"/>
-		<h4>Google Plus+</h4>	<input id="googleplus_url" 	class="text-input" name="fruitful_theme_options[googleplus_url]" type="text" value="<?php echo esc_url( $options['googleplus_url'] ); ?>"/>
+		<h4>Google Plus+</h4>	<input id="googleplus_url" 	class="text-input" name="fruitful_theme_options[googleplus_url]" type="text"  value="<?php echo esc_url( $options['googleplus_url'] ); ?>"/>
 		<h4>Dribbble</h4>		<input id="dribbble_url" 	class="text-input" name="fruitful_theme_options[dribbble_url]" 	type="text"   value="<?php echo esc_url( $options['dribbble_url'] ); ?>"/>
 		<h4>Skype</h4>			<input id="skype_link" 		class="text-input" name="fruitful_theme_options[skype_link]" 	type="text"   value="<?php echo esc_attr( $options['skype_link'] ); ?>"/>
 		<h4>Flickr</h4>			<input id="flickr_link" 	class="text-input" name="fruitful_theme_options[flickr_link]" 	type="text"   value="<?php echo esc_url( $options['flickr_link'] ); ?>"/>
@@ -297,8 +297,9 @@ function fruitful_settings_field_socials_links() {
 		<h4>Pinterest</h4>		<input id="pinterest_url"	class="text-input" name="fruitful_theme_options[pinterest_url]"	type="text"   value="<?php echo esc_url( $options['pinterest_url'] ); ?>"/>
 		<h4>Yelp</h4>			<input id="yelp_url"		class="text-input" name="fruitful_theme_options[yelp_url]"		type="text"   value="<?php echo esc_url( $options['yelp_url'] ); ?>"/>
 		<h4>E-mail</h4>			<input id="email_link" 		class="text-input" name="fruitful_theme_options[email_link]" 	type="text"   value="<?php echo sanitize_email( $options['email_link'] ); ?>"/>
-		<h4>Github</h4>			<input id="github_link"		class="text-input" name="fruitful_theme_options[github_link]" 	type="text"   value="<?php echo sanitize_email( $options['github_link'] ); ?>"/>
-		<h4>Tumblr</h4>			<input id="tumblr_link"		class="text-input" name="fruitful_theme_options[tumblr_link]" 	type="text"   value="<?php echo sanitize_email( $options['tumblr_link'] ); ?>"/>
+		<h4>Github</h4>			<input id="github_link"		class="text-input" name="fruitful_theme_options[github_link]" 	type="text"   value="<?php echo esc_url( $options['github_link'] ); ?>"/>
+		<h4>Tumblr</h4>			<input id="tumblr_link"		class="text-input" name="fruitful_theme_options[tumblr_link]" 	type="text"   value="<?php echo esc_url( $options['tumblr_link'] ); ?>"/>
+		<h4>Soundcloud</h4>		<input id="soundcloud_link"	class="text-input" name="fruitful_theme_options[soundcloud_link]" type="text" value="<?php echo esc_url( $options['soundcloud_link'] ); ?>"/>
 	</div>
 	<?php
 }	
