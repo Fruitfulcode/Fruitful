@@ -402,7 +402,7 @@ function fruitful_get_slider() {
 	
 	$theme_options  = fruitful_ret_options("fruitful_theme_options");
 	$slider_options = get_post_meta( $post->ID, $prefix . 'slider_layout');
-	$slider_options = current($slider_options);
+	if ($slider_options){$slider_options = current($slider_options);}
 	
 	/*Full Backend Options*/
 	if(isset($theme_options['slides']) && (count($theme_options['slides']) > 0)) {
