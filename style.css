@@ -2375,7 +2375,7 @@ html[dir="rtl"] body.page .entry-thumbnail {float:right}
 
 /*STYLES FOR SOME PLUGINS*/
 
-/*Styles for Fruitful Shortcodes Plugin*/
+/* Styles for plugin "Fruitful Shortcodes" */
 /*buttons*/
 body .btn{padding:10px 18px;margin-bottom:0;font-size:14px;line-height:20px;text-shadow:none;background-image:none;filter:none;border-width:0;-webkit-border-radius:0px;-moz-border-radius:0px;border-radius:0px;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;transition: all 0.3s ease-in-out;}.btn:hover,.btn:focus,.btn:active,.btn.active,.btn.disabled,.btn[disabled]{color:#333333;background-color:#e6e6e6;*background-color:#d9d9d9;}
 body .btn.btn-mini{padding:6px 12px}
@@ -2405,10 +2405,10 @@ body .ffs-tabbed-nav .resp-vtabs li.resp-tab-item{ position: relative; z-index: 
 body .ffs-tabbed-nav.resp-vtabs li.resp-tab-active,body .resp-vtabs li.resp-tab-item:hover{margin:0; background: none repeat scroll 0 0 #EEEEEE; border:0;border-right: 3px solid #333333; margin-right:-3px !important; }
 body .ffs-tabbed-nav.resp-vtabs ul.resp-tabs-list{margin:0;border:0;border-right: 1px solid rgba(0, 0, 0, 0.15);}
 body .resp-vtabs .resp-tabs-container{border:0}
-/*end of styles for Fruitful Shortcodes Plugin*/
+/* end of styles for plugin "Fruitful Shortcodes" */
 
 
-/*Styles for Buddy Press plugin*/
+/* Styles for plugin "BuddyPress" */
 #buddypress input[type=submit]{
 	background:#f15a23;
 	border:none;
@@ -2436,4 +2436,11 @@ body .resp-vtabs .resp-tabs-container{border:0}
 #buddypress #whats-new-options{
 	height:auto !important;
 }
-/*end of styles for Buddy Press plugin*/
+/* end of styles for plugin "BuddyPress" */
+
+
+/* Styles for plugin "SEO Facebook Comments" */
+div#fbSEOComments{
+	float:left;
+}
+/* end styles for plugin "SEO Facebook Comments" */
