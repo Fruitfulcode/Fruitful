@@ -1073,7 +1073,7 @@ function fruitful_custom_css_and_slider_scripts() {
 if ( ! function_exists( 'fruitful_entry_meta' ) ) {
 function fruitful_entry_meta() { 
 ?>
-	<span class="author-link"><a href="<?php print esc_url( get_author_posts_url( get_the_author_meta( 'ID' ))); ?>"><?php print get_the_author(); ?></a></span>
+	<span class="author-link author"><a href="<?php print esc_url( get_author_posts_url( get_the_author_meta( 'ID' ))); ?>"><?php print get_the_author(); ?></a></span>
 	<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
 	<?php
 		/* translators: used between list items, there is a space after the comma */

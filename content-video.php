@@ -12,7 +12,7 @@
 	<?php $day 			= get_the_date('d'); 
 		  $month_abr 	= get_the_date('M');
 	?>
-	<div class="date_of_post">
+	<div class="date_of_post updated">
 		<span class="day_post"><?php print $day; ?></span>
 		<span class="month_post"><?php print $month_abr; ?></span>
 	</div>
@@ -20,9 +20,9 @@
 	<div class="post-content">	
 		<header class="post-header">
 			<?php if ( is_single() ) : ?>
-				<h1 class="post-title"><?php the_title(); ?></h1>
+				<h1 class="post-title entry-title"><?php the_title(); ?></h1>
 			<?php else : ?>
-				<h1 class="post-title">
+				<h1 class="post-title entry-title">
 					<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
 				</h1>
 			<?php endif; // is_single() ?>		

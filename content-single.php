@@ -10,7 +10,7 @@
 	<?php $day 			= get_the_date('d'); 
 		  $month_abr 	= get_the_date('M');
 	?>
-	<div class="date_of_post">
+	<div class="date_of_post updated">
 		<span class="day_post"><?php print $day; ?></span>
 		<span class="month_post"><?php print $month_abr; ?></span>
 	</div>
@@ -18,7 +18,7 @@
 	<div class="post-content">	
 		<?php if (get_the_title() != '') : ?>
 			<header class="post-header">
-				<h1 class="post-title"><?php the_title(); ?></h1>
+				<h1 class="post-title entry-title"><?php the_title(); ?></h1>
 				
 				<?php if ( has_post_thumbnail() ) : ?>
 				<div class="entry-thumbnail">

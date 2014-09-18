@@ -12,7 +12,7 @@
 
 <article id="post-0" class="post no-results not-found">
 	<header class="post-header">
-		<h1 class="post-title"><?php _e( 'Nothing Found', 'fruitful' ); ?></h1>
+		<h1 class="post-title entry-title"><?php _e( 'Nothing Found', 'fruitful' ); ?></h1>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
