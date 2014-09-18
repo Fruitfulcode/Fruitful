@@ -873,6 +873,15 @@ function fruitful_get_responsive_style () {
 				
 			}
 			
+			if (class_exists('BuddyPress')){
+				if (!empty($theme_options['btn_color'])) {
+					$style_ .= '#buddypress input[type=submit]{background-color : '.esc_js($theme_options['btn_color']).' !important; } ' . "\n";
+				}
+				if (!empty($theme_options['btn_active_color'])) {
+					$style_ .= '#buddypress input[type=submit]:hover, #buddypress input[type=submit]:active, #buddypress input[type=submit]:focus{background-color : '.esc_js($theme_options['btn_active_color']).' !important; } ' . "\n";
+				}
+			}
+			
 		} else {
 			$style_ .= 'body {font-family:Open Sans, sans-serif}' . "\n";
 		}
@@ -1568,7 +1577,22 @@ if ( ! function_exists( 'fruitful_get_content_with_custom_sidebar' ) ) {
 				if (is_archive()){
 					$curr_template = $default_blog_template;
 				} else {
-					$curr_template = $default_page_template;
+						
+					if (class_exists('BuddyPress')){
+						
+						$bp_pages = get_option('bp-pages');
+						$bp_pages_list = array('activity', 'members', 'register', 'activate');
+						
+						foreach ($bp_pages_list as $bp_page_slug){
+							$bp_page_id = $bp_pages[$bp_page_slug];
+							if (bp_is_current_component($bp_page_slug) == $bp_page_id){
+								$curr_template = (get_post_meta( $bp_page_id , '_fruitful_page_layout', true ))?(get_post_meta( $bp_page_id , '_fruitful_page_layout', true )-1):0;
+							}
+						}
+						
+					} else {
+						$curr_template = $default_page_template;
+					}
 				}
 			} else {
 				if (is_single()){

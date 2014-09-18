@@ -2109,39 +2109,6 @@ aside #lang_sel {
 }
 
 
-/*Styles for Fruitful Shortcodes Plugin*/
-/*buttons*/
-body .btn{padding:10px 18px;margin-bottom:0;font-size:14px;line-height:20px;text-shadow:none;background-image:none;filter:none;border-width:0;-webkit-border-radius:0px;-moz-border-radius:0px;border-radius:0px;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;transition: all 0.3s ease-in-out;}.btn:hover,.btn:focus,.btn:active,.btn.active,.btn.disabled,.btn[disabled]{color:#333333;background-color:#e6e6e6;*background-color:#d9d9d9;}
-body .btn.btn-mini{padding:6px 12px}
-body .btn.btn-small{padding:8px 15px}
-body .btn.btn-large{padding:12px 21px}
-.btn{background-color:#ff5d2a !important}
-.btn:hover{background-color:#fe4502 !important}
-.btn.btn-primary{background-color:#006dcc !important}
-.btn.btn-primary:hover{background-color:#0044cc !important}
-.btn.btn-info{background-color:#49afcd !important}
-.btn.btn-info:hover{background-color:#2f96b4 !important}
-.btn.btn-success{background-color:#5bb75b !important}
-.btn.btn-success:hover{background-color:#51a351 !important}
-.btn.btn-warning{background-color:#faa732 !important}
-.btn.btn-warning:hover{background-color:#f89406 !important}
-.btn.btn-danger{background-color:#da4f49 !important}
-.btn.btn-danger:hover{background-color:#bd362f !important}
-.btn.btn-inverse{background-color:#363636 !important}
-.btn.btn-inverse:hover{background-color:#222222 !important}
-/*horizontal tabs*/
-body .ffs-tabbed-nav .resp-tabs-list li{ position: relative; z-index: 1; background: none; cursor: pointer; float: none; margin: 0; padding: 15px 20px !important; width: auto; border:0; color: #111111; font-size: 13px; font-weight: normal; line-height: 18px; outline: 0 none; }
-body .ffs-tabbed-nav .resp-tabs-list li.resp-tab-active,body .ffs-tabbed-nav .resp-tabs-list li:hover{ background: none repeat scroll 0 0 #EEEEEE; border-bottom: 3px solid #333333; margin-bottom:0 !important; }
-body .ffs-tabbed-nav ul.resp-tabs-list{border-bottom: 1px solid rgba(0, 0, 0, 0.15);}
-body .resp-tab-content{border:0}
-/*vartical tabs*/
-body .ffs-tabbed-nav .resp-vtabs li.resp-tab-item{ position: relative; z-index: 1; background: none; cursor: pointer; float: none; margin: 0; padding: 15px 0 15px 20px !important; width: auto; border:0; color: #111111; display: block; font-size: 13px; font-weight: normal; line-height: 18px; outline: 0 none; }
-body .ffs-tabbed-nav.resp-vtabs li.resp-tab-active,body .resp-vtabs li.resp-tab-item:hover{margin:0; background: none repeat scroll 0 0 #EEEEEE; border:0;border-right: 3px solid #333333; margin-right:-3px !important; }
-body .ffs-tabbed-nav.resp-vtabs ul.resp-tabs-list{margin:0;border:0;border-right: 1px solid rgba(0, 0, 0, 0.15);}
-body .resp-vtabs .resp-tabs-container{border:0}
-/*end of styles for Fruitful Shortcodes Plugin*/
-
-
 /*Custom Tabs*/
 /*
 .custom-tabs {
@@ -2402,3 +2369,71 @@ html[dir="rtl"] body.page .entry-thumbnail {float:right}
 	html[dir="rtl"] #masthead .social-icon{float: right;}
 	html[dir="rtl"] .blog_post .date_of_post {right:0px;}
 }
+/*end of RTL styles*/
+
+
+
+/*STYLES FOR SOME PLUGINS*/
+
+/*Styles for Fruitful Shortcodes Plugin*/
+/*buttons*/
+body .btn{padding:10px 18px;margin-bottom:0;font-size:14px;line-height:20px;text-shadow:none;background-image:none;filter:none;border-width:0;-webkit-border-radius:0px;-moz-border-radius:0px;border-radius:0px;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;transition: all 0.3s ease-in-out;}.btn:hover,.btn:focus,.btn:active,.btn.active,.btn.disabled,.btn[disabled]{color:#333333;background-color:#e6e6e6;*background-color:#d9d9d9;}
+body .btn.btn-mini{padding:6px 12px}
+body .btn.btn-small{padding:8px 15px}
+body .btn.btn-large{padding:12px 21px}
+.btn{background-color:#ff5d2a !important}
+.btn:hover{background-color:#fe4502 !important}
+.btn.btn-primary{background-color:#006dcc !important}
+.btn.btn-primary:hover{background-color:#0044cc !important}
+.btn.btn-info{background-color:#49afcd !important}
+.btn.btn-info:hover{background-color:#2f96b4 !important}
+.btn.btn-success{background-color:#5bb75b !important}
+.btn.btn-success:hover{background-color:#51a351 !important}
+.btn.btn-warning{background-color:#faa732 !important}
+.btn.btn-warning:hover{background-color:#f89406 !important}
+.btn.btn-danger{background-color:#da4f49 !important}
+.btn.btn-danger:hover{background-color:#bd362f !important}
+.btn.btn-inverse{background-color:#363636 !important}
+.btn.btn-inverse:hover{background-color:#222222 !important}
+/*horizontal tabs*/
+body .ffs-tabbed-nav .resp-tabs-list li{ position: relative; z-index: 1; background: none; cursor: pointer; float: none; margin: 0; padding: 15px 20px !important; width: auto; border:0; color: #111111; font-size: 13px; font-weight: normal; line-height: 18px; outline: 0 none; }
+body .ffs-tabbed-nav .resp-tabs-list li.resp-tab-active,body .ffs-tabbed-nav .resp-tabs-list li:hover{ background: none repeat scroll 0 0 #EEEEEE; border-bottom: 3px solid #333333; margin-bottom:0 !important; }
+body .ffs-tabbed-nav ul.resp-tabs-list{border-bottom: 1px solid rgba(0, 0, 0, 0.15);}
+body .resp-tab-content{border:0}
+/*vartical tabs*/
+body .ffs-tabbed-nav .resp-vtabs li.resp-tab-item{ position: relative; z-index: 1; background: none; cursor: pointer; float: none; margin: 0; padding: 15px 0 15px 20px !important; width: auto; border:0; color: #111111; display: block; font-size: 13px; font-weight: normal; line-height: 18px; outline: 0 none; }
+body .ffs-tabbed-nav.resp-vtabs li.resp-tab-active,body .resp-vtabs li.resp-tab-item:hover{margin:0; background: none repeat scroll 0 0 #EEEEEE; border:0;border-right: 3px solid #333333; margin-right:-3px !important; }
+body .ffs-tabbed-nav.resp-vtabs ul.resp-tabs-list{margin:0;border:0;border-right: 1px solid rgba(0, 0, 0, 0.15);}
+body .resp-vtabs .resp-tabs-container{border:0}
+/*end of styles for Fruitful Shortcodes Plugin*/
+
+
+/*Styles for Buddy Press plugin*/
+#buddypress input[type=submit]{
+	background:#f15a23;
+	border:none;
+    font-family:"Open Sans";
+    color: #fff;
+	text-transform:uppercase;
+    cursor:pointer;
+    font-size:1.4rem;
+    font-size:14px;
+	padding: 10px 18px ;
+	-webkit-appearance: none;
+	-webkit-transition: background 0.2s ease-in-out; 
+	-moz-transition: background 0.2s ease-in-out; 
+	-khtml-transition: background 0.2s ease-in-out; 
+	-o-transition: background 0.2s ease-in-out; 
+	-ms-transition: background 0.2s ease-in-out; 
+	transition: background 0.2s ease-in-out;
+	line-height:100%;
+}
+#buddypress input[type=submit]:hover,
+#buddypress input[type=submit]:active{
+	border:0;
+	color:white;
+}
+#buddypress #whats-new-options{
+	height:auto !important;
+}
+/*end of styles for Buddy Press plugin*/
