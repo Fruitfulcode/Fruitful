@@ -237,6 +237,7 @@ add_action( 'widgets_init', 'fruitful_widgets_init' );
  */
 if ( ! function_exists( 'fruitful_scripts' ) ) {
 function fruitful_scripts() {
+	$prefix = '_fruitful_';
 	$theme_options = fruitful_ret_options("fruitful_theme_options");
 	$front_page_id = get_option('page_on_front');
 	$slider_options = get_post_meta( $front_page_id, $prefix . 'slider_layout');
@@ -901,14 +902,19 @@ add_action('wp_enqueue_scripts', 'fruitful_get_responsive_style', 99);
 
 if ( ! function_exists( 'fruitful_get_sliders' ) ) {
 function fruitful_get_sliders() {
+	$prefix = '_fruitful_';
 	$theme_options = fruitful_ret_options("fruitful_theme_options");
-	if (!empty($theme_options['select_slider'])) {
-		if ($theme_options['select_slider'] == "1") {
-			echo fruitful_get_slider_options_flex(); 
-		} else if ($theme_options['select_slider'] == "2") {
-			echo fruitful_get_slider_options_nivo();
-		}	
-	}	
+	$front_page_id = get_option('page_on_front');
+	$slider_options = get_post_meta( $front_page_id, $prefix . 'slider_layout');
+	if ($slider_options){
+		if (!empty($theme_options['select_slider'])) {
+			if ($theme_options['select_slider'] == "1") {
+				echo fruitful_get_slider_options_flex(); 
+			} else if ($theme_options['select_slider'] == "2") {
+				echo fruitful_get_slider_options_nivo();
+			}	
+		}
+	}
 }
 }
 
