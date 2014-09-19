@@ -99,6 +99,23 @@ Files: .pot, ru_Ru.po, ru_Ru.mo icluded. Default language is english.
     Changelog
 -------------------------------------------------------
 
+= 2.2 =
+19.09.14
+
+* New option: Display Featured image on single post page
+* New: Social tab, tumblr icon
+* New: Social tab, soundcloud icon
+* New: Print CSS
+* New: bbPress support 
+* Improvements: Slider js only for home page
+* Improvements: Facebook Comments support
+* Improvements: Author and Updated correction
+* Bug fix: Slider options
+* Bug fix: Responsive menu, on resize window
+* Bug fix: WooCommerce edit profile, drop down
+* Bug fix: WooCommerce checkout styles
+
+
 = 2.1.1=
 08.08.14
 
