@@ -408,7 +408,7 @@ function fruitful_get_slider() {
 	/*Full Backend Options*/
 	if(isset($theme_options['slides']) && (count($theme_options['slides']) > 0)) {
 		foreach ($theme_options['slides'] as $key=>$slide) {
-			$path_to_img = $val = $empty_slider_html = '';
+			$path_to_img = $val = '';
 			$val = wp_get_attachment_image_src( esc_attr($slide['attach_id']), 'full');
 			$path_to_img = esc_url_raw($val[0]);
 		}
@@ -424,6 +424,8 @@ function fruitful_get_slider() {
 							$slider_ .= '<div class= "flexslider" id="' . $id . '">';
 								$slider_ .= '<ul class="slides">';
 								foreach ($theme_options['slides'] as $key=>$slide) {
+									$val = wp_get_attachment_image_src( esc_attr($slide['attach_id']), 'full');
+									$path_to_img = esc_url_raw($val[0]);
 									$slider_ .= '<li>';
 										if (!empty($slide['link'])) {
 											if (!empty($slide['is_blank'])) {
@@ -450,6 +452,8 @@ function fruitful_get_slider() {
 					
 						$slider_ .= '<div id="nivo-slider-'. $id . '" class="nivoSlider">';
 						foreach ($theme_options['slides'] as $key=>$slide) {
+							$val = wp_get_attachment_image_src( esc_attr($slide['attach_id']), 'full');
+							$path_to_img = esc_url_raw($val[0]);
 							if (!empty($slide['link'])) {
 								if (!empty($slide['is_blank'])) {
 									$slider_ .= '<a href="'.esc_url($slide['link']).'" target="_blank">';
