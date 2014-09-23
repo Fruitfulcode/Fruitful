@@ -407,11 +407,9 @@ blockquote, q {
 a:hover, a:active {
     outline:0;
 }
-.site-content .entry-content p a img, .site-content .entry-content p img {
-	/*box-shadow: 0 0px 1px rgba(0, 0, 0, 0.5) */
-    height: 100%;
-    max-width: 100%;
-    width: 100%;
+img.size-full{
+	width:100%;
+	height:auto;
 }
 
 .entry-content img, .entry-summary img, .comment-content img, .widget img, .wp-caption {
@@ -1480,16 +1478,66 @@ header.post-header .post-title a {
 	margin:0;
 }
 #page .container #secondary .widget ul.children{
-	padding-left:15px;
+	padding-left:20px;
 }
 #page .container #secondary .widget ul li.cat-item  a{
-    background:url(images/arrow_cat.png) no-repeat 0 1px transparent;
-    padding:0 0 0 15px;
+    padding:0 0 0 5px;
 	margin-bottom:10px;
 	float:left;
 }
-#page .container #secondary .widget ul li.current-cat a,#page .container #secondary .widget ul li.cat-item a:hover {
-    background:url(images/arrow_cat.png) no-repeat 0 -15px transparent;
+#page .container #secondary .widget ul li.cat-item  a:before{
+	content: "\f105";
+	color: #333333;
+	font-family: FontAwesome;
+	margin-right: 6px;
+	font-size: 1em;
+	font-weight: bold;
+}
+#page .container #secondary .widget ul li.current-cat a:before,
+#page .container #secondary .widget ul li.cat-item a:hover:before{
+    color: #ff5d2a;
+}
+#page .container #secondary>.widget_nav_menu a{
+	float:left;
+	padding:0;
+	margin:0 0 10px 0;	
+}
+#page .container #secondary>.widget_nav_menu li,
+#page .container #secondary>.widget_nav_menu li ul li{
+	float:left;
+	margin:0;
+}
+#page .container #secondary>.widget_nav_menu>div>ul>li{
+	width:100%;
+	margin:0;
+}
+#page .container #secondary>.widget_nav_menu>div>ul li>ul{
+	margin-left:20px;
+	width:calc(100% - 15px);
+}
+#page .container #secondary>.widget_nav_menu>div>ul>li ul>li>a{
+	padding-left:5px;
+}
+#page .container #secondary>.widget_nav_menu>div>ul>li ul>li>a:before{
+	content: "\f105";
+	color: #333333;
+	font-family: FontAwesome;
+	margin-right: 6px;
+	font-size: 1em;
+	font-weight: bold;
+}
+#page .container #secondary>.widget_nav_menu>div>ul>li ul>li>a:hover:before,
+#page .container #secondary>.widget_nav_menu>div>ul>li ul>li.current-menu-item>a:hover:before{
+	color: #ff5d2a;
+}
+#page .container #secondary>.widget_nav_menu>div>ul>li ul>li>a:hover{
+	padding-left:5px;
+}
+#page .container #secondary>.widget_nav_menu li.current-menu-item>a{
+	color:#ff5d2a;
+}
+#page .container #secondary>.widget_nav_menu>div>ul>li>ul>li>ul>li>ul{
+	display:none;
 }
 
 /*calendar widget*/
@@ -2342,7 +2390,7 @@ html[dir="rtl"] article.format-image .wp-caption a:after{left:initial;right:0;}
 html[dir="rtl"] #page .container #secondary .widget ul {margin:0 8px 0 0;}
 html[dir="rtl"] #page .container #secondary .widget ul.children{padding-right:15px;}
 html[dir="rtl"] #page .container #secondary .widget ul li.cat-item  a{background:url(images/arrow_cat.png) no-repeat right 1px transparent;padding:0 15px 0 0;float:right;}
-html[dir="rtl"] #page .container #secondary .widget ul li.current-cat a, html[dir="rtl"] #page .container #secondary .widget ul li.cat-item a:hover {background:url(images/arrow_cat.png) no-repeat right -15px transparent;}
+html[dir="rtl"] #page .container #secondary .widget ul li.current-cat a, html[dir="rtl"] #page .container #secondary .widget ul li.cat-item a:hover {background:url(images/arrow_cat.png) no-repeat right -115px transparent;}
 html[dir="rtl"] input#s { background:url("images/search_icon_rtl.png") no-repeat scroll 3% 5px transparent;padding:4px 5px 4px 32px;float:right}
 html[dir="rtl"] #comments.comments-area ol.commentlist li.comment .comment-author {float:right}
 html[dir="rtl"] #comments.comments-area ol.commentlist li.comment .comment-author cite.fn {float:right}
@@ -2446,5 +2494,6 @@ body .resp-vtabs .resp-tabs-container{border:0}
 /* Styles for plugin "SEO Facebook Comments" */
 div#fbSEOComments{
 	float:left;
+	width:100%;
 }
 /* end styles for plugin "SEO Facebook Comments" */
