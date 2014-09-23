@@ -313,7 +313,7 @@ function fruitful_add_custom_fonts() {
 		$http_ = 'https://';
 	}
 	
-	$font_url[] = $http_ .'fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300';
+	$font_url[] = $http_ .'fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300&subset=latin,latin-ext';
 	$font_url[] = $http_ .'fonts.googleapis.com/css?family=Josefin+Slab:400,100,100italic,300,300italic,400italic,600,600italic,700,700italic';
 	$font_url[] = $http_ .'fonts.googleapis.com/css?family=Lobster&subset=cyrillic-ext,latin-ext,latin,cyrillic';
 	$font_url[] = $http_ .'fonts.googleapis.com/css?family=Arvo:400,400italic,700,700italic';
