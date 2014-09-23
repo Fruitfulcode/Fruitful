@@ -1127,14 +1127,14 @@ body .woocommerce ul#shipping_method li, body.woocommerce-page ul#shipping_metho
 .woocommerce-account .woocommerce-page form.login{width:272px;border:0;padding:0;}
 .woocommerce-account .woocommerce form.register,
 .woocommerce-account.woocommerce-page form.register{width:270px;border:0;padding:0;}
-.woocommerce-account .woocommerce form.login label,
-.woocommerce-account .woocommerce-page form.login label,
-.woocommerce-account .woocommerce form.register label,
-.woocommerce-account.woocommerce-page form.register label{display:none}
 .woocommerce-account .woocommerce form .form-row, 
 .woocommerce-account.woocommerce-page form .form-row{float:left;width:100%;border: 0;padding: 0;margin: 0 0 18px 0;}
 .woocommerce-account .woocommerce form .form-row input, 
 .woocommerce-account.woocommerce-page form .form-row input{float:left ;width:100%;box-shadow:none;-webkit-border-radius: 0;-moz-border-radius: 0;	border-radius: 0;border:1px solid #cccccc;background-color:initial;}
+.woocommerce-account .woocommerce form .form-row .inline, 
+.woocommerce-account.woocommerce-page form .form-row .inline{width:100%;float:left;margin-top:10px;}
+.woocommerce-account .woocommerce form .form-row .inline #rememberme, 
+.woocommerce-account.woocommerce-page form .form-row .inline #rememberme{width:auto;margin:6px;}
 
 .woocommerce-account .woocommerce  .form-row .lost_password,
 .woocommerce-account.woocommerce-page .form-row .lost_password	{float: left;padding: 5px 0 5px 20px;text-decoration: none;}
