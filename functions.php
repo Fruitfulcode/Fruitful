@@ -1589,20 +1589,18 @@ if ( ! function_exists( 'fruitful_get_content_with_custom_sidebar' ) ) {
 				} else {
 						
 					if (class_exists('BuddyPress')){
-						
-						$bp_pages = get_option('bp-pages');
-						$bp_pages_list = array('activity', 'members', 'register', 'activate');
-						
-						foreach ($bp_pages_list as $bp_page_slug){
-							$bp_page_id = $bp_pages[$bp_page_slug];
-							if (bp_is_current_component($bp_page_slug) == $bp_page_id){
+						$bp_pages = get_option('bp-pages');			//possible pages - activity, members, register, activate
+						foreach ($bp_pages as $bp_page_slug => $bp_page_id){
+							if (bp_is_current_component($bp_page_slug)){
 								$curr_template = (get_post_meta( $bp_page_id , '_fruitful_page_layout', true ))?(get_post_meta( $bp_page_id , '_fruitful_page_layout', true )-1):0;
+							} else {
+								$curr_template = $default_page_template;
 							}
 						}
-						
 					} else {
 						$curr_template = $default_page_template;
 					}
+					
 				}
 			} else {
 				if (is_single()){

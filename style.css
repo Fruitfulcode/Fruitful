@@ -2436,6 +2436,10 @@ body .resp-vtabs .resp-tabs-container{border:0}
 #buddypress #whats-new-options{
 	height:auto !important;
 }
+#buddypress form#whats-new-form textarea{
+	width:100%;
+	min-height:40px;
+}
 /* end of styles for plugin "BuddyPress" */
 
 
