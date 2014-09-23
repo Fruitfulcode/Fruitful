@@ -2174,7 +2174,7 @@ body .resp-vtabs .resp-tabs-container{border:0}
 	height:auto !important;
 }
 #buddypress form#whats-new-form textarea{
-	width:100%;
+	width:calc(100% - 14px);
 	min-height:40px;
 }
 /* end of styles for plugin "BuddyPress" */
