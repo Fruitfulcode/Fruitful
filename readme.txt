@@ -99,6 +99,17 @@ Files: .pot, ru_Ru.po, ru_Ru.mo icluded. Default language is english.
     Changelog
 -------------------------------------------------------
 
+= 2.2.1 =
+23.09.14
+
+* New: Custom menu css styles
+* Improvement: css changes
+* Improvement: Adding the subset=latin-ext to the Open Sans font
+* Bug fix: BuddyPress textarea css styles
+* Bug fix: WooCommerce my account page, labels display
+* Bug fix: Content Image size
+* Bug fix: Slider display after version 2.2
+
 = 2.2 =
 19.09.14
 
