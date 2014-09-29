@@ -795,15 +795,25 @@ function fruitful_get_responsive_style () {
 			if (!empty($theme_options['a_font_color']))   		{ 
 				$style_ .= 'a    {color : '. esc_js($theme_options['a_font_color']) .'; } ' . "\n"; 
 				$style_ .= '#page .container #secondary>.widget_nav_menu>div>ul>li ul>li>a:before {color : '. esc_js($theme_options['a_font_color']) .'; } ' . "\n"; 
-				$style_ .= '#page .container #secondary .widget ul li.cat-item  a:before {color : '. esc_js($theme_options['a_font_color']) .'; } '  . "\n"; 
+				$style_ .= '#page .container #secondary .widget ul li.cat-item a:before {color : '. esc_js($theme_options['a_font_color']) .'; } '  . "\n"; 
+				$style_ .= 'html[dir="rtl"] #page .container #secondary>.widget_nav_menu>div>ul>li ul>li>a:after {color : '. esc_js($theme_options['a_font_color']) .'; } ' . "\n"; 
+				$style_ .= 'html[dir="rtl"] #page .container #secondary .widget ul li.cat-item a:after {color : '. esc_js($theme_options['a_font_color']) .'; } '  . "\n"; 
 			}
 			if (!empty($theme_options['a_hover_font_color']))   { 
 				$style_ .= 'a:hover   {color : '. esc_js($theme_options['a_hover_font_color']) .'; } '  . "\n"; 
 				$style_ .= '#page .container #secondary>.widget_nav_menu li.current-menu-item>a {color : '. esc_js($theme_options['a_hover_font_color']) .'; } '  . "\n"; 
 				$style_ .= '#page .container #secondary>.widget_nav_menu>div>ul>li ul>li>a:hover:before,'  . "\n"; 
+				$style_ .= '#page .container #secondary>.widget_nav_menu>div>ul>li ul>li.current-menu-item>a:before,'  . "\n"; 
 				$style_ .= '#page .container #secondary>.widget_nav_menu>div>ul>li ul>li.current-menu-item>a:hover:before{color : '. esc_js($theme_options['a_hover_font_color']) .'; } '  . "\n"; 
-				$style_ .= '#page .container #secondary .widget ul li.current-cat a:before,'  . "\n"; 
+				$style_ .= '#page .container #secondary .widget ul li.current-cat>a,'  . "\n"; 
+				$style_ .= '#page .container #secondary .widget ul li.current-cat>a:before,'  . "\n"; 
 				$style_ .= '#page .container #secondary .widget ul li.cat-item a:hover:before{color : '. esc_js($theme_options['a_hover_font_color']) .'; } '  . "\n"; 
+				$style_ .= 'html[dir="rtl"] #page .container #secondary>.widget_nav_menu>div>ul>li ul>li>a:hover:after,'  . "\n"; 
+				$style_ .= 'html[dir="rtl"] #page .container #secondary>.widget_nav_menu>div>ul>li ul>li.current-menu-item>a:after,'  . "\n"; 
+				$style_ .= 'html[dir="rtl"] #page .container #secondary>.widget_nav_menu>div>ul>li ul>li.current-menu-item>a:hover:after{color : '. esc_js($theme_options['a_hover_font_color']) .'; } '  . "\n"; 
+				$style_ .= 'html[dir="rtl"] #page .container #secondary .widget ul li.current-cat>a,'  . "\n"; 
+				$style_ .= 'html[dir="rtl"] #page .container #secondary .widget ul li.current-cat>a:after,'  . "\n"; 
+				$style_ .= 'html[dir="rtl"] #page .container #secondary .widget ul li.cat-item a:hover:after{color : '. esc_js($theme_options['a_hover_font_color']) .'; } '  . "\n"; 
 			}
 			if (!empty($theme_options['a_focus_font_color']))   { $style_ .= 'a:focus   {color : '. esc_js($theme_options['a_focus_font_color']) .'; } '  . "\n"; }
 			if (!empty($theme_options['a_active_font_color']))  { $style_ .= 'a:active  {color : '. esc_js($theme_options['a_active_font_color']) .'; } ' . "\n"; }

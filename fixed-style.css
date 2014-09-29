@@ -1367,7 +1367,7 @@ header.post-header .post-title a {
 	float:left;
 	margin:0;
 }
-#page .container #secondary>.widget_nav_menu>div>ul>li{
+#page .container #secondary>.widget_nav_menu>div ul>li{
 	width:100%;
 	margin:0;
 }
@@ -1389,9 +1389,6 @@ header.post-header .post-title a {
 #page .container #secondary>.widget_nav_menu>div>ul>li ul>li>a:hover:before,
 #page .container #secondary>.widget_nav_menu>div>ul>li ul>li.current-menu-item>a:hover:before{
 	color: #ff5d2a;
-}
-#page .container #secondary>.widget_nav_menu>div>ul>li ul>li>a:hover{
-	padding-left:5px;
 }
 #page .container #secondary>.widget_nav_menu li.current-menu-item>a{
 	color:#ff5d2a;
@@ -2137,10 +2134,24 @@ html[dir="rtl"] article.format-link header.post-header .post-title				{padding: 
 html[dir="rtl"] article[class*=tag-twitter] header.post-header .post-title		{padding: 0 4.4% 13px 10%;background:url(images/post-twitter.png) no-repeat 3% 0 transparent;}
 html[dir="rtl"] article.format-quote header.post-header .post-title			{padding: 0 4.4% 13px 10%;background:url(images/post-quote.png) no-repeat 3% 0 transparent;}
 html[dir="rtl"] article.format-image .wp-caption a:after{left:initial;right:0;}
-html[dir="rtl"] #page .container #secondary .widget ul {margin:0 8px 0 0;}
-html[dir="rtl"] #page .container #secondary .widget ul.children{padding-right:15px;}
-html[dir="rtl"] #page .container #secondary .widget ul li.cat-item  a{background:url(images/arrow_cat.png) no-repeat right 1px transparent;padding:0 15px 0 0;float:right;}
-html[dir="rtl"] #page .container #secondary .widget ul li.current-cat a, html[dir="rtl"] #page .container #secondary .widget ul li.cat-item a:hover {background:url(images/arrow_cat.png) no-repeat right -115px transparent;}
+html[dir="rtl"] #page .container #secondary .widget ul {float:right;margin:0 8px 0 0;}
+html[dir="rtl"] #page .container #secondary>.widget_nav_menu a{float:right;}
+html[dir="rtl"] #page .container #secondary .widget ul.children{padding-right:20px;padding-left:0}
+html[dir="rtl"] #page .container #secondary>.widget_nav_menu>div>ul>li ul>li>a{padding-left:0;padding-right:5px;}
+html[dir="rtl"] #page .container #secondary>.widget_nav_menu>div>ul li>ul{margin-left:0;margin-right:20px;float:right;}
+html[dir="rtl"] #page .container #secondary>.widget_nav_menu>div>ul>li ul>li>a:before{display:none;}
+html[dir="rtl"] #page .container #secondary>.widget_nav_menu>div>ul>li ul>li>a:after{content: "\f104";color: #333333;font-family: FontAwesome;margin-left: 6px;font-size: 1em;font-weight: bold;}
+html[dir="rtl"] #page .container #secondary>.widget_nav_menu>div>ul>li ul>li>a:hover:after{color: #ff5d2a;}
+html[dir="rtl"] #page .container #secondary>.widget_nav_menu li, 
+html[dir="rtl"] #page .container #secondary>.widget_nav_menu li ul li{float:right}
+html[dir="rtl"] #page .container #secondary .widget ul li.cat-item a{padding: 0 5px 0 0;float: right;}
+html[dir="rtl"] #page .container #secondary .widget ul li.cat-item a:before{display:none;}
+html[dir="rtl"] #page .container #secondary .widget ul li.cat-item a:after{content: "\f104";color: #333333;font-family: FontAwesome;margin-left: 6px;font-size: 1em;font-weight: bold;}
+html[dir="rtl"] #page .container #secondary .widget ul li.current-cat>a, 
+html[dir="rtl"] #page .container #secondary .widget ul li.current-cat>a:after, 
+html[dir="rtl"] #page .container #secondary .widget ul li.cat-item a:hover,
+html[dir="rtl"] #page .container #secondary .widget ul li.cat-item a:hover:after {color: #ff5d2a;}
+html[dir="rtl"] #page .container #secondary .widget ul li.cat-item{float: right;width: 95%;}
 html[dir="rtl"] input#s { background:url("images/search_icon_rtl.png") no-repeat scroll 3% 5px transparent;padding:4px 5px 4px 32px;float:right}
 html[dir="rtl"] #comments.comments-area ol.commentlist li.comment .comment-author {float:right}
 html[dir="rtl"] #comments.comments-area ol.commentlist li.comment .comment-author cite.fn {float:right}
