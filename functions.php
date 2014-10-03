@@ -1447,19 +1447,11 @@ if ( ! function_exists( 'fruitful_get_content_with_custom_sidebar' ) ) {
 			<div id="primary" class="content-area">
 				<div id="content" class="site-content" role="main">	
 			<?php			
-				/* Start the Loop */ 
-				if (is_page() && get_option('page_on_front') &&  get_option('page_for_posts') && (get_option('page_on_front') == get_option('page_for_posts'))) {
-					$args = array(
-						'orderby' 		 => 'date',
-						'order' 		 => 'DESC',
-						'post_type' 	 => 'post',
-						'post_status' 	 => 'publish',
-						'posts_per_page' => 10
-					);
-					$loop = new WP_Query($args);
-					while ( $loop->have_posts() ) : $loop->the_post(); 
-						get_template_part( 'content', get_post_format() ); 
-					endwhile; 
+				/* Start the Loop */
+				$page_on_front = get_option('page_on_front');
+				$page_for_posts = get_option('page_for_posts');
+				if (is_page() && !empty($page_on_front) &&  !empty($page_for_posts) && ($page_on_front == $page_for_posts)) {
+					echo '<div class="alert alert-danger"><strong>'.__("Front page displays Error.", 'fruitful').'</strong> '.__('Select different pages!', 'fruitful').'</div>';
 				} else {
 					if (!is_archive()){
 						if (is_home()) {
