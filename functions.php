@@ -952,6 +952,8 @@ if (class_exists('Woocommerce')) {
 			$theme_options = fruitful_ret_options("fruitful_theme_options");
 			if (!empty($theme_options['shop_num_row'])){
 				return esc_attr($theme_options['shop_num_row']);
+			} else {
+				return '4';
 			}
 		}
 	}
