@@ -510,7 +510,10 @@ body.woocommerce-page #content nav.woocommerce-pagination ul li a.next:hover{tex
 .post-type-archive-product  .woocommerce-message{float: left; width:100%; max-width: 620px;}
 .tax-product_cat  .woocommerce-info,
 .tax-product_cat  .woocommerce-error,
-.tax-product_cat  .woocommerce-message{float: left; width:100%; max-width: 620px;}
+.tax-product_cat  .woocommerce-message{float: left;width:auto;width:877px; max-width: 877px;}
+.tax-product_cat  .eleven.columns .woocommerce-info,
+.tax-product_cat  .eleven.columns .woocommerce-error,
+.tax-product_cat  .eleven.columns .woocommerce-message{float: left;width:auto;width:577px; max-width: 577px;}
 
 .single-product .woocommerce-message:before,
 .woocommerce .woocommerce-info:before,.woocommerce-page .woocommerce-info:before,
