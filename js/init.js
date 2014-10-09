@@ -73,7 +73,7 @@ jQuery(document).ready(function($) {
 		/*fix touch event for related and upsells product single product page*/
 		var element = $('.upsells .product, .related .product');
 		element.bind('touchstart click', function(){
-			var link = element.find('a').attr('href');
+			var link = this.find('a').attr('href');
 			location.href = link;
 			return false
 		});
