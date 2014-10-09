@@ -1273,7 +1273,7 @@ article.format-image .wp-caption a:hover:after{
 .mejs-controls .mejs-time-rail .mejs-time-loaded {
 	background:#fff !important
 }
-.entry-content iframe{max-height:650px}
+/* .entry-content iframe{max-height:650px} */
 
 .logo-description {
 	float:left;
