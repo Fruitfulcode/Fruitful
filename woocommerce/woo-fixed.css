@@ -451,7 +451,7 @@ body.woocommerce-page #content nav.woocommerce-pagination ul li a.next:hover{tex
 .single-product.woocommerce div.product,
 .single-product.woocommerce-page div.product,
 .single-product.woocommerce #content div.product,
-.single-product.woocommerce-page #content div.product{float:left}
+.single-product.woocommerce-page #content div.product{float:left;width:100%;}
 
 .single .woocommerce-message,
 .single .woocommerce-error,
