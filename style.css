@@ -1460,7 +1460,8 @@ header.post-header .post-title a {
 }
 #page .container #secondary .widget ul {
     float:left;
-    width:100%;
+	width:98%;
+	width:calc(100% - 8px);
     list-style:none;
     margin:0 0 0 8px
 }
@@ -1473,7 +1474,7 @@ header.post-header .post-title a {
 }
 #page .container #secondary .widget ul li.cat-item {
     float:left;
-    width:95%;
+    width:100%;
     padding:0;
 	margin:0;
 }
@@ -1481,11 +1482,14 @@ header.post-header .post-title a {
 	padding-left:20px;
 }
 #page .container #secondary .widget ul li.cat-item  a{
-    padding:0 0 0 5px;
+	padding:0;
 	margin-bottom:10px;
 	float:left;
 }
-#page .container #secondary .widget ul li.cat-item  a:before{
+#page .container #secondary .widget ul li.cat-item  ul li a{
+    padding:0 0 0 5px;
+}
+#page .container #secondary .widget ul li.cat-item  ul li a:before{
 	content: "\f105";
 	color: #333333;
 	font-family: FontAwesome;
@@ -1505,6 +1509,7 @@ header.post-header .post-title a {
 #page .container #secondary>.widget_nav_menu li,
 #page .container #secondary>.widget_nav_menu li ul li{
 	float:left;
+	width:100%;
 	margin:0;
 }
 #page .container #secondary>.widget_nav_menu>div ul>li{
