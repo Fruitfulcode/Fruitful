@@ -507,7 +507,7 @@ body.woocommerce-page #content nav.woocommerce-pagination ul li a.next:hover{tex
 
 .post-type-archive-product  .woocommerce-info,
 .post-type-archive-product  .woocommerce-error,
-.post-type-archive-product  .woocommerce-message{float: left; width:100%; max-width: 620px;}
+.post-type-archive-product  .woocommerce-message{float: left;width:auto;width:calc(100% - 63px); max-width: 877px;}
 .tax-product_cat  .woocommerce-info,
 .tax-product_cat  .woocommerce-error,
 .tax-product_cat  .woocommerce-message{float: left;width:auto;width:877px; max-width: 877px;}

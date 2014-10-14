@@ -492,7 +492,7 @@ body.woocommerce-page #content nav.woocommerce-pagination ul li a.next:hover{tex
 
 .post-type-archive-product  .woocommerce-info,
 .post-type-archive-product  .woocommerce-error,
-.post-type-archive-product  .woocommerce-message{float: left;max-width: 620px;}
+.post-type-archive-product  .woocommerce-message{float: left;width:auto;width:calc(100% - 63px); max-width: 877px;}
 .tax-product_cat  .woocommerce-info,
 .tax-product_cat  .woocommerce-error,
 .tax-product_cat  .woocommerce-message{float: left;width:auto;width:calc(100% - 63px); max-width: 877px;}
@@ -1198,7 +1198,7 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 	/*shop*/
 	.nav-links.shop .pages-links .page-numbers,.nav-links.shop .nav-next a,.nav-links.shop .nav-previous a{padding: 10px 18px;}
 	.woocommerce a.added_to_cart, body.woocommerce-page a.added_to_cart{clear:both}
-	.post-type-archive-product  .woocommerce-info,.post-type-archive-product  .woocommerce-error,.post-type-archive-product  .woocommerce-message{width: 100%;}
+	.post-type-archive-product  .woocommerce-info,.post-type-archive-product  .woocommerce-error,.post-type-archive-product  .woocommerce-message{float: left;width:auto;width:calc(100% - 63px); max-width: 877px;}
 	/*cart*/
 	.woocommerce-cart .woocommerce .cart-collaterals .cart_totals, body.woocommerce-cart.woocommerce-page .cart-collaterals .cart_totals{max-width:450px}
 	.woocommerce-cart .woocommerce .cart-collaterals .shipping_calculator section, body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator section{max-width:450px}
