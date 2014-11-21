@@ -1373,11 +1373,11 @@ function fruitful_wp_corenavi() {
 			$wp_rewrite;  
 	$next_label = $prev_label = '';
 	if (wp_is_mobile()) {
-		$next_label = ' &laquo; '; 
-		$prev_label = ' &raquo; ';
+		$next_label = __(' &laquo; ','fruitful'); 
+		$prev_label = __(' &raquo; ','fruitful');
 	} else {
-		$next_label = '&laquo; Previous Page';
-		$prev_label = 'Next Page &raquo;'; 
+		$next_label = __('&laquo; Previous Page','fruitful');
+		$prev_label = __('Next Page &raquo;','fruitful'); 
 	}
 	
 	$pages = '';  
