@@ -627,11 +627,17 @@ function fruitful_get_responsive_style () {
 	fruitful_add_custom_fonts();
 	if (isset($theme_options['responsive']) && ($theme_options['responsive'] == 'on')) {
 		if (class_exists('woocommerce')){wp_enqueue_style( 'woo-style', get_template_directory_uri() . '/woocommerce/woo.css');}
+		if (!class_exists('ffs')){
+			wp_enqueue_style('fontawesome-style',  get_stylesheet_directory_uri() . '/css/font-awesome.min.css');
+		}
 		wp_enqueue_style('main-style',  get_stylesheet_uri());
 	} else {
 		if (class_exists('woocommerce')){wp_enqueue_style( 'woo-style', get_template_directory_uri() . '/woocommerce/woo-fixed.css');}
+		if (!class_exists('ffs')){
+			wp_enqueue_style('fontawesome-style',  get_stylesheet_directory_uri() . '/css/font-awesome.min.css');
+		}
 		wp_enqueue_style('main-style',  get_stylesheet_directory_uri()  .'/fixed-style.css');
-	} 
+	}
  
 	if (!empty($theme_options['styletheme'])) {
 		if ($theme_options['styletheme'] == 'off') {
