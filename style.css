@@ -670,7 +670,7 @@ a:hover,a:focus,a:active {
 	height:100%;
 	margin: 10px 0 0;
 	padding:0;
-	z-index:99999999;
+	z-index:8002;
 	clear:both;
 }
 #header_language_select ul{
@@ -720,7 +720,7 @@ ul#lang-select-popup{
 	margin:20px 0 0 0;
 	_margin: 0; /*IE6 only*/
 	visibility:hidden;
-	z-index:999999;
+	z-index:8001;
 }
 #header_language_select ul li:hover > ul {
     margin: 0;
@@ -774,7 +774,7 @@ ul#lang-select-popup{
     background:none #fff;
     position:absolute;
     top:35px;
-    z-index:99999;
+    z-index:8000;
 	-webkit-transition: all 0.2s ease-in-out; 
 	-moz-transition: all 0.2s ease-in-out; 
 	-khtml-transition: all 0.2s ease-in-out; 
@@ -1149,7 +1149,10 @@ section {
 	z-index:999
 }
 
-#page {position:relative;}
+#page {
+	position:relative;
+	z-index:1;
+}
 #page .container .btm_header, #page .container .entry-header {
 	border:0;
 	margin: 0 0 10px;
@@ -1853,7 +1856,6 @@ address {
 	width:100%;
 	display:block;
 	background-repeat:no-repeat;
-	z-index:9999;
 }
 
 .head-container.fixed {
@@ -1866,7 +1868,7 @@ address {
 	min-height: 0 !important;
 	background-attachment:scroll !important;
 	background-image:none !important;
-	z-index: 99999;
+	z-index: 8000;
 	background-color:#fff;
 }
 
