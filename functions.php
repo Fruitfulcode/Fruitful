@@ -902,7 +902,18 @@ function fruitful_get_responsive_style () {
 					$woo_style_ .= 'body.woocommerce #content div.product p.price, ' . "\n";
 					$woo_style_ .= 'body.woocommerce-page #content div.product p.price{color : '. esc_js($theme_options['a_hover_font_color']) .'; } ' . "\n"; 
 				}
-				
+				/*buttons color*/
+				if (!empty($theme_options['btn_color'])) {
+					$woo_style_ .= '.woocommerce .woocommerce-message, .woocommerce-page .woocommerce-message{border-top:3px solid '.esc_js($theme_options['btn_color']).';}' . "\n";
+					$woo_style_ .= '.woocommerce .woocommerce-info, .woocommerce-page .woocommerce-info{border-top:3px solid '.esc_js($theme_options['btn_color']).';}' . "\n";
+					$woo_style_ .= '.woocommerce .woocommerce-message:before, .woocommerce-page .woocommerce-message:before{background-color:'.esc_js($theme_options['btn_color']).';}' . "\n";
+					$woo_style_ .= '.woocommerce .woocommerce-info:before, .woocommerce-page .woocommerce-info:before{background-color:'.esc_js($theme_options['btn_color']).';}' . "\n";
+					$woo_style_ .= '.single-product .woocommerce-message .button{background-color:'.esc_js($theme_options['btn_color']).';}' . "\n";
+				}
+				/*buttons hover color*/
+				if (!empty($theme_options['btn_active_color'])) {
+					$woo_style_ .= '.single-product .woocommerce-message .button:hover{background-color:'.esc_js($theme_options['btn_active_color']).';}' . "\n";
+				}
 			}
 			
 			if (class_exists('BuddyPress')){
