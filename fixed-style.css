@@ -968,6 +968,9 @@ embed,iframe,object {
     width:100%;
 	position: relative;
 }
+.main-slider-container .flexslider{
+	margin:0;
+}
 .flex-direction-nav a {
 	z-index:999
 }

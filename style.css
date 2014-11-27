@@ -1135,6 +1135,9 @@ embed,iframe,object {
 	height: 100%;
 	overflow: hidden;
 }
+.main-slider-container .flexslider{
+	margin:0;
+}
 
 section {
 	overflow: hidden;
