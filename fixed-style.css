@@ -2184,6 +2184,8 @@ body .btn.btn-large{padding:12px 21px}
 .btn.btn-danger:hover{background-color:#bd362f !important}
 .btn.btn-inverse{background-color:#363636 !important}
 .btn.btn-inverse:hover{background-color:#222222 !important}
+.ffs-info-box a {text-decoration:none}
+.fruitful_description a {text-decoration:none}
 /*horizontal tabs*/
 body .ffs-tabbed-nav .resp-tabs-list li{ position: relative; z-index: 1; background: none; cursor: pointer; float: none; margin: 0; padding: 15px 20px !important; width: auto; border:0; color: #111111; font-size: 13px; font-weight: normal; line-height: 18px; outline: 0 none; }
 body .ffs-tabbed-nav .resp-tabs-list li.resp-tab-active,body .ffs-tabbed-nav .resp-tabs-list li:hover{ background: none repeat scroll 0 0 #EEEEEE; border-bottom: 3px solid #333333; margin-bottom:0 !important; }
