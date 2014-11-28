@@ -99,6 +99,23 @@ Files: .pot, ru_Ru.po, ru_Ru.mo icluded. Default language is english.
     Changelog
 -------------------------------------------------------
 
+= 2.3 =
+28.11.14
+
+* Improvement: Custom menu widget, RTL support
+* Improvement: WooCommerce CSS
+* Improvement: WooCommerce 4 products per row, by default
+* Improvement: FontAwesome script activation with Fruitful shortcodes
+* Improvement: Ability to translate navigation labels
+* Improvement: Sticky header now with background image
+* Bug fix: WooCommerce Related products
+* Bug fix: Youtube iframe fullscreen
+* Bug fix: WooCommerce Product with empty content
+* Bug fix: WooCommerce Child Category fix
+* Bug fix: conflict with Fancybox
+* Bug fix: Extra margin removed
+
+
 = 2.2.1 =
 23.09.14
 
