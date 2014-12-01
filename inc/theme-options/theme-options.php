@@ -823,7 +823,6 @@ function fruitful_theme_options_render_page() {
 	<form method="post" action="/" enctype="multipart/form-data"  class="form-admin-fruitful" id="form-admin-fruitful">
 		<div id="save_options" class="save-options"></div>	
 		<div class="header">
-			<?php screen_icon(); ?>
 			<h2 class="title_theme"><?php _e( 'Theme Options', 'fruitful' ); ?></h2> 
 			<?php submit_button(__( 'Save', 'fruitful' )); ?>
 			<?php settings_errors(); ?>
