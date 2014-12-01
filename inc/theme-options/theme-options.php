@@ -883,7 +883,7 @@ function fruitful_theme_options_render_page() {
 				<h3><?php _e('Check our latest theme', 'fruitful'); ?></h3>
 				<div>
 					<a target="_blank" href="http://themeforest.net/item/anaglyph-one-page-multi-page-wordpress-theme/7874320/?ref=fruitfulcode">
-						<img src="<?php echo get_bloginfo('template_url'); ?>/inc/images/sidebar-anaglyph.png" alt="" width="253" height="130" />
+						<img src="<?php echo get_template_directory_uri(); ?>/inc/images/sidebar-anaglyph.png" alt="" width="253" height="130" />
 					</a>
 				</div>
 			</div>
