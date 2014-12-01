@@ -1230,56 +1230,6 @@ function fruitful_customize_preview_js() {
 add_action( 'customize_preview_init', 'fruitful_customize_preview_js' );
 }	
 
-
-if ( ! function_exists( 'fruitful_tabs_main' ) ) {
-function fruitful_tabs_main($atts, $content = null) {
-	global $tab_counter_2;
-	$output = '';
-	shortcode_atts(array('tab' => array('')), $atts, 'tabs');
-	$tab_counter_1 = 1;
-	$tab_counter_2 = 1;
-	$tabs = array();
-	if (!empty( $atts)) {
-		$tabs = $atts;
-	}
-	
-	$output .= '<div class="tabbed-nav" id="tabbed-nav">';
-		$output .= '<ul class="resp-tabs-list">';
-	if (count($tabs) > 0) {
-		foreach ($tabs as $tab) {
-			$in_array = explode('=', $tab);
-			$output .= '<li><a>';
-			if (!empty($in_array[1])) {
-				$output .= esc_attr($in_array[1]);
-			}	
-			$output .= '</a></li>';
-			$tab_counter_1++;
-		}
-	}	
-	 
-	$output .= '</ul>';
-	$output .= '<div class="resp-tabs-container">';
-		$output .= fruitful_esc_content_pbr(do_shortcode($content));
-	$output .= '</div>';
-	$output .='</div>';
-	return $output;
-	unset($tab_counter_2);
-}
-	add_shortcode('tabs', 'fruitful_tabs_main');
-}	
-
-if ( ! function_exists( 'fruitful_tab_elements' ) ) {
-function fruitful_tab_elements($atts, $content = null) {
-	global $tab_counter_2;
-	$out_tab = '';
-	shortcode_atts(array(), $atts);
-	$out_tab .= '<div>' . do_shortcode($content) . '</div>';
-	$tab_counter_2++;
-	return $out_tab;
-}
-	add_shortcode('tab', 'fruitful_tab_elements');
-}	
-
 if ( ! function_exists( 'fruitful_metadevice' ) ) {
 function fruitful_metadevice() {
 	$browser = '';				
