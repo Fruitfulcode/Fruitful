@@ -1206,7 +1206,7 @@ function fruitful_customize_register( $wp_customize ) {
 							   'priority' => 10,
 							));
 	
-	$wp_customize->add_setting( 'themeoptions_button_control' );
+	$wp_customize->add_setting( 'themeoptions_button_control', array('sanitize_callback'=>'fruitful_theme_options_validate') );
  
 	$wp_customize->add_control(
 		new Fruitful_Theme_Options_Button_Control (
@@ -1222,6 +1222,12 @@ function fruitful_customize_register( $wp_customize ) {
 }
 add_action( 'customize_register', 'fruitful_customize_register' );
 }
+
+if ( ! function_exists( 'fruitful_theme_options_validate' ) ) {
+function fruitful_theme_options_validate($value) {
+	return $value;
+}
+}	
 
 if ( ! function_exists( 'fruitful_customize_preview_js' ) ) {
 function fruitful_customize_preview_js() {
