@@ -484,7 +484,7 @@ function fruitful_get_slider() {
 		if ($slider_options != 1) {
 			$slider_ = '<div class="container"><div class="sixteen columns">' . $slider_ . '</div></div>';
 		} 
-		echo $slider_;
+		echo '<div id="slider-container">'.$slider_.'</div>';
 	}
 }
 }

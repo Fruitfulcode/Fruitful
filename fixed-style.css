@@ -988,6 +988,9 @@ embed,iframe,object {
 	border:0;
 }
 
+#page-header .head-container{
+	z-index:9;
+}
 #page-header .container header .header-hgroup.left-pos {
     float:left;
     margin: 0 15px 0 0;
