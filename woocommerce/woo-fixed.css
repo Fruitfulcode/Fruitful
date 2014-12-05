@@ -1158,7 +1158,25 @@ body.woocommerce .woocommerce-breadcrumb,
 body.woocommerce-page .woocommerce-breadcrumb a {font-size:14px; color:#333333; }
 
 .woocommerce ul.products li.product .price ,
-.woocommerce-page ul.products li.product .price {color: #ea3c00; font-size:14px !important;word-wrap: break-word;max-width: 75px;}
+.woocommerce-page ul.products li.product .price {color: #ea3c00; font-size:14px !important;word-wrap: break-word;}
+
+.woocommerce .prod_num_row-5 ul.products li.product .price ,
+.woocommerce-page .prod_num_row-5 ul.products li.product .price {width:114px;}
+.woocommerce .prod_num_row-4 ul.products li.product .price ,
+.woocommerce-page .prod_num_row-4 ul.products li.product .price {width:159px;}
+.woocommerce .prod_num_row-3 ul.products li.product .price ,
+.woocommerce-page .prod_num_row-3 ul.products li.product .price {width:239px;}
+.woocommerce .prod_num_row-2 ul.products li.product .price ,
+.woocommerce-page .prod_num_row-2 ul.products li.product .price {width:389px;}
+
+.woocommerce .eleven.columns.prod_num_row-5 ul.products li.product .price ,
+.woocommerce-page .eleven.columns.prod_num_row-5 ul.products li.product .price {width:59px;}
+.woocommerce .eleven.columns.prod_num_row-4 ul.products li.product .price ,
+.woocommerce-page .eleven.columns.prod_num_row-4 ul.products li.product .price {width:90px;}
+.woocommerce .eleven.columns.prod_num_row-3 ul.products li.product .price ,
+.woocommerce-page .eleven.columns.prod_num_row-3 ul.products li.product .price {width:144px;}
+.woocommerce .eleven.columns.prod_num_row-2 ul.products li.product .price ,
+.woocommerce-page .eleven.columns.prod_num_row-2 ul.products li.product .price {width:247px;}
 
 .woocommerce-cart .cart_totals  table td{color:#333333; font-weight:bold;}
 .woocommerce-cart .cart_totals  table td select{font-weight:initial}
