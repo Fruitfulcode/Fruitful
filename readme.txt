@@ -22,8 +22,12 @@ Fruitful is distributed under the GPLv2 license (http://www.gnu.org/licenses/gpl
     Demo
 -------------------------------------------------------
 
-http://themes.fruitfulcode.com/fruitful/
-Demo website configured via features and theme options. Used html, css and shortcodes for display content.
+If you want to get demo content pages like on demo website http://themes.fruitfulcode.com/fruitful/
+
+1. Install plugin WordPress Importer 
+2. Download http://themes.fruitfulcode.com/fruitful/dummy_data.xml 
+3. Visit Tools -> Import in the WordPress dashboard and select dummy_data.xml which you saved.
+4. Push "Upload file and import" button
  
 
 -------------------------------------------------------
@@ -98,6 +102,15 @@ Files: .pot, ru_Ru.po, ru_Ru.mo icluded. Default language is english.
 -------------------------------------------------------
     Changelog
 -------------------------------------------------------
+
+= 2.3.1 =
+08.12.14
+
+* Bug fix: Slider z-index
+* Bug fix: WooCommerce "add setting method"
+* Bug fix: WooCommerce price width
+* Bug fix: Remove deprecated function
+* Bug fix: Remove get blog info from theme backend
 
 = 2.3 =
 28.11.14
