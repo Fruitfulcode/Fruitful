@@ -21,7 +21,7 @@ function fruitful_theme_options_init() {
 	register_setting(
 		'fruitful_options', 		// Options group, see settings_fields() call in fruitful_theme_options_render_page()
 		'fruitful_theme_options', 	// Database option, see fruitful_get_theme_options()
-		'' // The sanitization callback, see fruitful_theme_options_validate()
+		'' 							// The sanitization callback, see fruitful_theme_options_validate()
 	);
 	$is_demo_content_installed = get_option('fruitful_demo_content');
 	
@@ -45,7 +45,8 @@ function fruitful_theme_options_init() {
 	add_settings_field( 'general_rs', 		__( 'Layout', 	'fruitful' ),	'fruitful_get_responsive_design',	'theme_options',  'general', array('info' => __( 'Theme supported 2 types of html layout. Default responsive  setting which adapt for mobile devices and static page with fixed width. Uncheck arrow below if you need static website display. ', 'fruitful' )));
 	add_settings_field( 'general_cm',		__( 'Comments', 'fruitful' ), 	'fruitful_get_general_comment',  	'theme_options',  'general', array('info' => __( 'If you want to display comments on your post page or page, select options below.', 'fruitful' )));
 	add_settings_field( 'general_ds',		__( 'Default theme styles',  'fruitful' ),'fruitful_get_style_theme', 'theme_options',  'general', array('info' => __( 'Default CSS. Theme option for styling is not working, if this option enable.', 'fruitful' )));
-	add_settings_field( 'general_lp',		__( 'Front page display latest posts', 'fruitful' ),'fruitful_latest_posts_template','theme_options',  'general', array('info' => __( 'Set template for latest posts.', 'fruitful' )));
+	add_settings_field( 'general_lp',		__( 'Front page display latest posts',    'fruitful' ),'fruitful_latest_posts_template','theme_options',  'general', array('info' => __( 'Set template for latest posts.', 'fruitful' )));
+	add_settings_field( 'general_cp',		__( 'Custom wordpress pages layout',   'fruitful' ),   'fruitful_custom_pages_layout','theme_options',  'general',   array('info' => __( 'Set template for custom pages.', 'fruitful' )));
 	add_settings_field( 'general_sf',		__( 'Show Featured image on single post', 'fruitful' ),'fruitful_show_featured_single_post','theme_options',  'general', array('info' => __( 'Select option below for show featured image on single post page.', 'fruitful' )));
 	if(function_exists('icl_get_languages')){ // if WPML is activated
 		add_settings_field( 'general_wpml',		__( 'Multilingual Switch in Header (WPML)', 'fruitful' ), 'fruitful_wpml_ready',  'theme_options',  'general', array('info' => __( 'If you wish to show Language Switch in header, select option below. ', 'fruitful' )));
@@ -75,6 +76,9 @@ function fruitful_theme_options_init() {
 	add_settings_field( 'separator_style',		__( 'Color for lines', 'fruitful' ),		'fruitful_sep_style_color',				'theme_options', 'colors', array('info' => __( 'Choose your colors for lines and separators', 'fruitful' )) );
 	add_settings_field( 'button_style',			__( 'Color for buttons', 'fruitful' ),		'fruitful_but_style_color',				'theme_options', 'colors', array('info' => __( 'Choose your colors for buttons', 'fruitful' ), 'newrow' => true) );
 	add_settings_field( 'social_style',			__( 'Color for social icons', 'fruitful' ),	'fruitful_soc_icon_style_color',		'theme_options', 'colors', array('info' => __( 'Choose your colors for social icons', 'fruitful' )) );
+	if (class_exists('Woocommerce')) { 
+		add_settings_field( 'woocommerce_style',	__( 'WooCommerce colors', 'fruitful' ),		'fruitful_woo_colors',					'theme_options', 'colors', array('info' => __( 'Choose your colors for WooCommerce', 'fruitful' ), 'newrow' => true) );
+	}	
 	
 	
 	add_settings_field( 'fonts_options', 	__( 'Fonts', 'fruitful' ), 	'fruitful_fonts_options',	'theme_options', 'fonts', 		array('info' => __( 'Popular web safe font collection, select and use for your needs.', 'fruitful' )) );
@@ -86,7 +90,7 @@ function fruitful_theme_options_init() {
 	add_settings_field( 'fonts_size', 		__( 'Font size', 'fruitful' ), 		'fruitful_fonts_size',		'theme_options', 'fonts',  array('info' => __( 'Choose font size for specific html elements. Set size as number, without px.', 'fruitful' )) );
 	add_settings_field( 'slider_select',	__( 'Slider', 'fruitful' ),	'fruitful_slider_select',	'theme_options', 'slider', array('info' => __( 'Select a slider type that will be used by default.', 'fruitful' )) );
 	add_settings_field( 'slider_options',	__( 'Slider Options', 'fruitful' ),	'fruitful_slider_options',	'theme_options', 'slider', array('info' => __( 'Choose needed options for slider: animation type, sliding direction, speed of animations, etc', 'fruitful' )) );
-	add_settings_field( 'slider_image',		__( 'Slides', 'fruitful' ), 		'fruitful_slider_images',	'theme_options', 'slider', array('info' => __( 'Add images to slider (Supported files .png, .jpg, .gif). If you want to change order, just drag and drop it. Image size for slides is original from media gallery, please upload images in same size, to get best display on page. To display slider in needed place use shortcode [fruitful_slider]. Current theme version support only one slider per website. ', 'fruitful' )) );
+	add_settings_field( 'slider_image',		__( 'Slides', 'fruitful' ), 		'fruitful_slider_images',	'theme_options', 'slider', array('info' => __( 'Add images to slider (.png, .jpg, .gif). Drag and drop to rearrange slide order. Slider will display images in original size that you load to media gallery. Please upload images of the same size, to get the best look on the page. To display slider use home page slider settings. Current theme version supports only one slider per website. ', 'fruitful' )) );
 	
 	add_settings_field( 'socials_links_position', 	__( 'Socials Links Position', 'fruitful' ), 	'fruitful_settings_field_socials_links_position', 'theme_options', 'links', array('info' => __( 'Choose place where social links will be displayed.', 'fruitful' )) );
 	add_settings_field( 'socials_links', 	__( 'Socials Links', 'fruitful' ), 	'fruitful_settings_field_socials_links', 'theme_options', 'links', array('info' => __( 'Add link to your social media profiles. Icons with link will be display in header or footer.', 'fruitful' )) );
@@ -282,24 +286,25 @@ function fruitful_settings_field_socials_links() {
 	$options = fruitful_get_theme_options();
 	?>
 	<div class="socials">
-		<h4>Facebook</h4>		<input id="facebook_url" 	class="text-input" name="fruitful_theme_options[facebook_url]" 	type="text"   value="<?php echo esc_url( $options['facebook_url'] ); ?>"/>
-		<h4>Twitter</h4>		<input id="twitter_url" 	class="text-input" name="fruitful_theme_options[twitter_url]" 	type="text"   value="<?php echo esc_url( $options['twitter_url'] ); ?>"/>
-		<h4>LinkedIn</h4>		<input id="linkedin_url" 	class="text-input" name="fruitful_theme_options[linkedin_url]" 	type="text"   value="<?php echo esc_url( $options['linkedin_url'] ); ?>"/>
-		<h4>MySpace</h4>		<input id="myspace_url" 	class="text-input" name="fruitful_theme_options[myspace_url]" 	type="text"   value="<?php echo esc_url( $options['myspace_url'] ); ?>"/>
-		<h4>Google Plus+</h4>	<input id="googleplus_url" 	class="text-input" name="fruitful_theme_options[googleplus_url]" type="text"  value="<?php echo esc_url( $options['googleplus_url'] ); ?>"/>
-		<h4>Dribbble</h4>		<input id="dribbble_url" 	class="text-input" name="fruitful_theme_options[dribbble_url]" 	type="text"   value="<?php echo esc_url( $options['dribbble_url'] ); ?>"/>
-		<h4>Skype</h4>			<input id="skype_link" 		class="text-input" name="fruitful_theme_options[skype_link]" 	type="text"   value="<?php echo esc_attr( $options['skype_link'] ); ?>"/>
-		<h4>Flickr</h4>			<input id="flickr_link" 	class="text-input" name="fruitful_theme_options[flickr_link]" 	type="text"   value="<?php echo esc_url( $options['flickr_link'] ); ?>"/>
-		<h4>You Tube</h4>		<input id="youtube_url" 	class="text-input" name="fruitful_theme_options[youtube_url]"	type="text"   value="<?php echo esc_url( $options['youtube_url'] ); ?>"/>
-		<h4>RSS</h4>			<input id="rss_link" 		class="text-input" name="fruitful_theme_options[rss_link]" 		type="text"   value="<?php echo esc_url( $options['rss_link'] ); ?>"/>
-		<h4>Vk.com</h4>			<input id="vk_link" 		class="text-input" name="fruitful_theme_options[vk_link]" 		type="text"   value="<?php echo esc_url( $options['vk_link'] ); ?>"/>
-		<h4>Instagram</h4>		<input id="instagram_url"	class="text-input" name="fruitful_theme_options[instagram_url]"	type="text"   value="<?php echo esc_url( $options['instagram_url'] ); ?>"/>
-		<h4>Pinterest</h4>		<input id="pinterest_url"	class="text-input" name="fruitful_theme_options[pinterest_url]"	type="text"   value="<?php echo esc_url( $options['pinterest_url'] ); ?>"/>
-		<h4>Yelp</h4>			<input id="yelp_url"		class="text-input" name="fruitful_theme_options[yelp_url]"		type="text"   value="<?php echo esc_url( $options['yelp_url'] ); ?>"/>
-		<h4>E-mail</h4>			<input id="email_link" 		class="text-input" name="fruitful_theme_options[email_link]" 	type="text"   value="<?php echo sanitize_email( $options['email_link'] ); ?>"/>
-		<h4>Github</h4>			<input id="github_link"		class="text-input" name="fruitful_theme_options[github_link]" 	type="text"   value="<?php echo esc_url( $options['github_link'] ); ?>"/>
-		<h4>Tumblr</h4>			<input id="tumblr_link"		class="text-input" name="fruitful_theme_options[tumblr_link]" 	type="text"   value="<?php echo esc_url( $options['tumblr_link'] ); ?>"/>
-		<h4>Soundcloud</h4>		<input id="soundcloud_link"	class="text-input" name="fruitful_theme_options[soundcloud_link]" type="text" value="<?php echo esc_url( $options['soundcloud_link'] ); ?>"/>
+		<h4><?php _e('Facebook', 'fruitful'); ?></h4>		<input id="facebook_url" 	class="text-input" name="fruitful_theme_options[facebook_url]" 	type="text"   value="<?php echo esc_url( $options['facebook_url'] ); ?>"/>
+		<h4><?php _e('Twitter', 'fruitful'); ?></h4>		<input id="twitter_url" 	class="text-input" name="fruitful_theme_options[twitter_url]" 	type="text"   value="<?php echo esc_url( $options['twitter_url'] ); ?>"/>
+		<h4><?php _e('LinkedIn', 'fruitful'); ?></h4>		<input id="linkedin_url" 	class="text-input" name="fruitful_theme_options[linkedin_url]" 	type="text"   value="<?php echo esc_url( $options['linkedin_url'] ); ?>"/>
+		<h4><?php _e('MySpace', 'fruitful'); ?></h4>		<input id="myspace_url" 	class="text-input" name="fruitful_theme_options[myspace_url]" 	type="text"   value="<?php echo esc_url( $options['myspace_url'] ); ?>"/>
+		<h4><?php _e('Google Plus+', 'fruitful'); ?></h4>	<input id="googleplus_url" 	class="text-input" name="fruitful_theme_options[googleplus_url]" type="text"  value="<?php echo esc_url( $options['googleplus_url'] ); ?>"/>
+		<h4><?php _e('Dribbble', 'fruitful'); ?></h4>		<input id="dribbble_url" 	class="text-input" name="fruitful_theme_options[dribbble_url]" 	type="text"   value="<?php echo esc_url( $options['dribbble_url'] ); ?>"/>
+		<h4><?php _e('Skype', 'fruitful'); ?></h4>			<input id="skype_link" 		class="text-input" name="fruitful_theme_options[skype_link]" 	type="text"   value="<?php echo esc_attr( $options['skype_link'] ); ?>"/>
+		<h4><?php _e('Flickr', 'fruitful'); ?></h4>			<input id="flickr_link" 	class="text-input" name="fruitful_theme_options[flickr_link]" 	type="text"   value="<?php echo esc_url( $options['flickr_link'] ); ?>"/>
+		<h4><?php _e('You Tube', 'fruitful'); ?></h4>		<input id="youtube_url" 	class="text-input" name="fruitful_theme_options[youtube_url]"	type="text"   value="<?php echo esc_url( $options['youtube_url'] ); ?>"/>
+		<h4><?php _e('Vimeo', 'fruitful'); ?></h4>			<input id="viemo_url" 		class="text-input" name="fruitful_theme_options[vimeo_url]"		type="text"   value="<?php echo esc_url( $options['vimeo_url'] ); ?>"/>
+		<h4><?php _e('RSS', 'fruitful'); ?></h4>			<input id="rss_link" 		class="text-input" name="fruitful_theme_options[rss_link]" 		type="text"   value="<?php echo esc_url( $options['rss_link'] ); ?>"/>
+		<h4><?php _e('Vk.com', 'fruitful'); ?></h4>			<input id="vk_link" 		class="text-input" name="fruitful_theme_options[vk_link]" 		type="text"   value="<?php echo esc_url( $options['vk_link'] ); ?>"/>
+		<h4><?php _e('Instagram', 'fruitful'); ?></h4>		<input id="instagram_url"	class="text-input" name="fruitful_theme_options[instagram_url]"	type="text"   value="<?php echo esc_url( $options['instagram_url'] ); ?>"/>
+		<h4><?php _e('Pinterest', 'fruitful'); ?></h4>		<input id="pinterest_url"	class="text-input" name="fruitful_theme_options[pinterest_url]"	type="text"   value="<?php echo esc_url( $options['pinterest_url'] ); ?>"/>
+		<h4><?php _e('Yelp', 'fruitful'); ?></h4>			<input id="yelp_url"		class="text-input" name="fruitful_theme_options[yelp_url]"		type="text"   value="<?php echo esc_url( $options['yelp_url'] ); ?>"/>
+		<h4><?php _e('E-mail', 'fruitful'); ?></h4>			<input id="email_link" 		class="text-input" name="fruitful_theme_options[email_link]" 	type="text"   value="<?php echo sanitize_email( $options['email_link'] ); ?>"/>
+		<h4><?php _e('Github', 'fruitful'); ?></h4>			<input id="github_link"		class="text-input" name="fruitful_theme_options[github_link]" 	type="text"   value="<?php echo esc_url( $options['github_link'] ); ?>"/>
+		<h4><?php _e('Tumblr', 'fruitful'); ?></h4>			<input id="tumblr_link"		class="text-input" name="fruitful_theme_options[tumblr_link]" 	type="text"   value="<?php echo esc_url( $options['tumblr_link'] ); ?>"/>
+		<h4><?php _e('Soundcloud', 'fruitful'); ?></h4>		<input id="soundcloud_link"	class="text-input" name="fruitful_theme_options[soundcloud_link]" type="text" value="<?php echo esc_url( $options['soundcloud_link'] ); ?>"/>
 	</div>
 	<?php
 }	
@@ -370,8 +375,21 @@ function fruitful_latest_posts_template() {
 	$options = fruitful_get_theme_options();
 	?>
 	<div class="box-option">
-		<?php fruitful_get_select_fields('latest_posts_templ', $options, fruitful_latest_posts_select(), 'latest_posts_template'); ?>		
+		<?php fruitful_get_select_fields('latest_posts_templ', $options, fruitful_custom_layouts(), 'latest_posts_template'); ?>		
 	</div>	
+<?php	
+}
+
+function fruitful_custom_pages_layout() {
+	$options = fruitful_get_theme_options();
+	?>
+	
+	<div class="box-option"><?php fruitful_get_select_fields('layout_archive_templ', $options, fruitful_custom_layouts(), 'layout_archive_template', 	__('Archive:', 'fruitful' )); ?></div>	
+	<div class="box-option"><?php fruitful_get_select_fields('layout_author_templ',	 $options, fruitful_custom_layouts(), 'layout_author_template', 	__('Author:', 'fruitful' )); ?></div>	
+	<div class="box-option"><?php fruitful_get_select_fields('layout_cat_templ',	 $options, fruitful_custom_layouts(), 'layout_cat_template', 		__('Category:', 'fruitful' )); ?></div>	
+	<div class="box-option"><?php fruitful_get_select_fields('layout_tag_templ',	 $options, fruitful_custom_layouts(), 'layout_tag_template', 		__('Tags:', 'fruitful' )); ?></div>	
+	<div class="box-option"><?php fruitful_get_select_fields('layout_404_templ',	 $options, fruitful_custom_layouts(), 'layout_404_template', 		__('404:', 'fruitful' )); ?></div>	
+	<div class="box-option"><?php fruitful_get_select_fields('layout_search_templ',  $options, fruitful_custom_layouts(), 'layout_search_template', 	__('Search:', 'fruitful' )); ?></div>	
 <?php	
 }
 
@@ -793,6 +811,34 @@ function fruitful_soc_icon_style_color() {
 
 }	
 	
+function fruitful_woo_colors() {
+	$options = fruitful_get_theme_options();
+	?>
+		<div class="box-options">
+			<h4><?php _e( 'Sale price color', 'fruitful' ); ?></h4>
+			<fieldset>
+				<input type="text" id="woo_sale_price_color" class="colorPicker" name="fruitful_theme_options[woo_sale_price_color]" value="<?php echo esc_attr($options['woo_sale_price_color']); ?>" data-default-color="#333333" />
+			</fieldset>
+		</div>
+		
+		<div class="box-options">
+			<h4><?php _e( 'Rating color (regular) ', 'fruitful' ); ?></h4>
+			<fieldset>
+				<input type="text" id="woo_rating_color_regular" class="colorPicker" name="fruitful_theme_options[woo_rating_color_regular]" value="<?php echo esc_attr($options['woo_rating_color_regular']); ?>" data-default-color="#333333" />
+			</fieldset>
+		</div>
+		
+		<div class="box-options">
+			<h4><?php _e( 'Rating color (hover, active) ', 'fruitful' ); ?></h4>
+			<fieldset>
+				<input type="text" id="woo_rating_color_active" class="colorPicker" name="fruitful_theme_options[woo_rating_color_active]" value="<?php echo esc_attr($options['woo_rating_color_active']); ?>" data-default-color="#ff5d2a" />
+			</fieldset>
+		</div>
+		
+	<?php 
+
+}	
+	
 function fruitful_get_background_color () {
 	$options = fruitful_get_theme_options();
 	?>
@@ -939,4 +985,3 @@ function fruitful_data_save() {
 	           die('1');  
 	    }
 }
-?>

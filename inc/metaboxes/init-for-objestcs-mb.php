@@ -36,7 +36,7 @@ function fruitful_all_metaboxes( array $meta_boxes ) {
 		'priority'   => 'low',
 		'show_names' => true, 
 		'pages'      => array( 'page'), 
-		'show_on'	 =>	array( 'key'=>'front-page', 'value' => '' ),
+		//'show_on'	 =>	array( 'key'=>'front-page', 'value' => '' ),
 		'fields'     => array(
 				array(
 					'name' 		=> __('Slider display', 'fruitful'),

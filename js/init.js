@@ -79,6 +79,7 @@ jQuery(document).ready(function($) {
 		});
 		
 		fixed_header();
+		setSlidersMaxHeight();
 });
 
 jQuery(window).bind('resize', function() { 
@@ -101,6 +102,7 @@ jQuery(window).bind('resize', function() {
 	autoWidthMenu();
 	jQuery(window).scroll();
 	fixed_header();
+	setSlidersMaxHeight();
 	
 });
 
@@ -163,12 +165,33 @@ jQuery(window).bind('scroll', function() {
 
 function fixed_header(){
 	if (ThGlobal.is_fixed_header == 1){
-		if (jQuery('.home .main-slider-container').length > 0){
-			jQuery('.home .main-slider-container').css({'margin-top':jQuery(".head-container").outerHeight()+10});
+		if (jQuery('.main-slider-container').length > 0){
+			jQuery('.main-slider-container').css({'margin-top':jQuery(".head-container").outerHeight()+10});
 		} else {
 			jQuery('#page').css({'margin-top':jQuery(".head-container").outerHeight()});
 		}
 	} else {
 		jQuery('#page').css({'margin-top':0});
+	}
+}
+
+function setSlidersMaxHeight() {
+	var vWHeight = jQuery(window).height();
+	var vHHeight = jQuery("#page-header").outerHeight();
+
+	if (ThGlobal.is_fixed_header != 1){
+		vWHeight = vWHeight - vHHeight - 20;
+	}
+	
+	if (jQuery('.flexslider').length > 0) {
+		jQuery('.flexslider .slides img').each(function() {
+			jQuery(this).css({'max-height': vWHeight});
+		});
+	}
+	
+	if (jQuery('.nivoSlider').length > 0) {
+		jQuery('.nivoSlider img').each(function() {
+			jQuery(this).css({'max-height': vWHeight});
+		});
 	}
 }

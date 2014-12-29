@@ -9,7 +9,8 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-$template = get_option( 'template' );
+$template = strtolower(get_option( 'template' ));
+$woo_sidebar = fruitful_get_woo_sidebar();
 
 switch( $template ) {
 	case 'twentyeleven' :
@@ -33,9 +34,9 @@ switch( $template ) {
 				$prod_num_row_class = 'prod_num_row-'.$prod_num_row;
 			}
 		}
-		if (fruitful_get_woo_sidebar() == 1){
+		if ($woo_sidebar == 1){
 			echo '<div class="woo-loop-content alpha omega '.$prod_num_row_class.'"><div id="container"><div id="content" role="main">';
-		} elseif(fruitful_get_woo_sidebar() == 2) {
+		} elseif($woo_sidebar == 2) {
 			echo '<div class="eleven columns woo-loop-content omega '.$prod_num_row_class.'"><div id="container"><div id="content" role="main">';
 		} else {
 			echo '<div class="eleven columns woo-loop-content alpha '.$prod_num_row_class.'"><div id="container"><div id="content" role="main">';

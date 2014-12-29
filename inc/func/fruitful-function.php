@@ -73,7 +73,7 @@ function fruitful_elem_position() {
 	return apply_filters( 'fruitful_elem_position', $elem_pos );
 }
 
-function fruitful_latest_posts_select() {
+function fruitful_custom_layouts() {
 	$latest_posts_pos = array(
 		'0' => array(
 			'value' =>	   '0',
@@ -89,7 +89,7 @@ function fruitful_latest_posts_select() {
 		)
 	);
 
-	return apply_filters( 'fruitful_latest_posts_select', $latest_posts_pos );
+	return apply_filters( 'fruitful_custom_layouts', $latest_posts_pos );
 }
 
 function fruitful_woo_shop_sidebar_list() {
@@ -523,8 +523,10 @@ function fruitful_get_box_upload_slide($attach_id, $link_url, $is_blank, $ind, $
 }
 
 
-function fruitful_get_select_fields($field_name, $options, $array_of_values, $class_name = "selected") {
+function fruitful_get_select_fields($field_name, $options, $array_of_values, $class_name = "selected", $title = '') {
 		$out = '';
+		
+		if (!empty($title)) $out .= '<h4><strong>'.$title.'</strong></h4>';
 		$out .= '<select class="'. $class_name .'" name="fruitful_theme_options['.$field_name.']" id="options-'.$field_name.'">';
 		$selected = $options[$field_name];
 		$p = $r = '';
@@ -544,7 +546,6 @@ function fruitful_ret_options ($name_options) {
    return $options = array_filter((array) get_option($name_options));
 }
 
-
 function fruitful_get_default_array() {
 return array(
 				/*General Settings*/
@@ -554,7 +555,14 @@ return array(
 				'is_fixed_header'	=> 'off',
 				'styletheme'		=> 'off',
 				'is_wpml_ready'		=> 'on',
-				'latest_posts_templ'=> '3',
+				'latest_posts_templ'	=> '0',
+				'layout_404_templ'		=> '0',
+				'layout_search_templ'	=> '1',
+				'layout_cat_templ'		=> '1',
+				'layout_tag_templ'		=> '1',
+				'layout_author_templ'	=> '1',
+				'layout_archive_templ'	=> '1',
+				
 				'show_featured_single'=> 'off',
 
 				/*Header image*/
@@ -610,6 +618,12 @@ return array(
 				/*Color for social icons*/
 				'soc_icon_bg_color'		=>	'#333333',
 				'soc_icon_color'		=>	'#ffffff',
+				
+				/*Woo Colors*/
+				'woo_sale_price_color'	   => '#919191',
+				'woo_rating_color_regular' => '#333333',
+				'woo_rating_color_active'  => '#FF5D2A',
+				
 				
 				/*fonts*/
 				'h_font_family'		=> 'Open Sans, sans-serif',
@@ -677,6 +691,7 @@ return array(
 				'skype_link'		=> '',
 				'flickr_link'		=> '',
 				'youtube_url'		=> '',
+				'vimeo_url'			=> '',
 				'rss_link'			=> '',
 				'vk_link'			=> '',
 				'instagram_url'		=> '',

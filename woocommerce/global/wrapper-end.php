@@ -8,7 +8,8 @@
  */
 
 
-$template = get_option( 'template' );
+$template    = strtolower(get_option( 'template' ));
+$woo_sidebar = fruitful_get_woo_sidebar();
 
 switch( $template ) {
 	case 'twentyeleven' :
@@ -25,12 +26,12 @@ switch( $template ) {
 		get_sidebar( 'content' );
 		break;
 	case 'fruitful' :
-		if (fruitful_get_woo_sidebar() == 1){
+		if ($woo_sidebar == 1) {
 			echo '</div></div></div>';
-		} elseif(fruitful_get_woo_sidebar() == 2) {
+		} elseif($woo_sidebar == 2) {
 			echo '</div></div></div>';
 			echo '<div class="five columns alpha woo-loop-sidebar">';
-				if (is_shop() || is_product_category()){
+				if (is_shop() || is_product_category()) {
 					get_sidebar( 'shop' );
 				} else {
 					get_sidebar( 'product' );

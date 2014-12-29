@@ -143,9 +143,9 @@
 					
 			<?php } ?>
 	</div><!-- .header-container -->
-	<?php
-		if (is_front_page()) fruitful_get_slider();
-	?>
+	
+	<?php fruitful_get_slider(); ?>
+	
 	<div id="page" class="page-container">		
 		<div class="container">		
 			<?php do_action( 'before' ); ?>		

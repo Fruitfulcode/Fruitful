@@ -54,7 +54,8 @@ body.post-type-archive input#s{padding-left: 12px;max-width:234px}
 /*---SHOP PAGE---*/
 .page-description{float:left; width:100%;}
 .woocommerce .products div.star-rating,
-.woocommerce-page .products div.star-rating{margin-left:15px}
+.woocommerce-page .products div.star-rating{margin-left:15px; height:1.05em;}
+.woocommerce .star-rating, .woocommerce-page .star-rating {height:1.05em;}
 
 /*shop, product category*/
 .woocommerce ul.products li.product.first, .woocommerce-page ul.products li.product.first{margin-left:0 !important}

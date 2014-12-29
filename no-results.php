@@ -12,12 +12,11 @@
 
 <article id="post-0" class="post no-results not-found">
 	<header class="post-header">
-		<h1 class="post-title entry-title"><?php _e( 'Nothing Found', 'fruitful' ); ?></h1>
+		<h2 class="post-title entry-title"><?php _e( 'Nothing Found', 'fruitful' ); ?></h2>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
 		<?php if ( is_home() ) : ?>
-
 			<p><?php printf( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'fruitful' ), admin_url( 'post-new.php' ) ); ?></p>
 
 		<?php elseif ( is_search() ) : ?>

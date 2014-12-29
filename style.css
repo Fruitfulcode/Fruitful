@@ -928,6 +928,7 @@ ul#lang-select-popup{
 .social-icon a.skype .fa:before		{content: "\f17e";}
 .social-icon a.flickr .fa:before		{content: "\f16e";}
 .social-icon a.youtube .fa:before	{content: "\f167";}
+.social-icon a.vimeo .fa:before		{content: "\f194";}
 .social-icon a.rss .fa:before		{content: "\f09e";}
 .social-icon a.vk .fa:before			{content: "\f189";}
 .social-icon a.pinterest .fa:before	{content: "\f0d2";}
@@ -1425,12 +1426,13 @@ article.format-image .wp-caption a:hover:after{
 }
 
 header.post-header .post-title {
-    float:left;
-    width:91.21%;
-    margin:14px 0 0;
-    padding: 0 4.4% 13px ;
-	word-wrap: break-word;
-	border-bottom:2px solid #f15a23;
+    border-bottom: 2px solid #f15a23;
+    float: left;
+    font-size: 27px;
+    margin: 14px 0 0;
+    padding: 0 4.4% 13px;
+    width: 91.21%;
+    word-wrap: break-word;
 }
 header.post-header .post-title a {
     text-decoration:none;
