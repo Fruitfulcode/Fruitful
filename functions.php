@@ -243,14 +243,20 @@ function fruitful_scripts() {
 	$prefix = '_fruitful_';
 	$theme_options  = fruitful_ret_options("fruitful_theme_options");
 	$front_page_id  = get_option('page_on_front');
+	$blog_page_id   = get_option('page_for_posts ');
+	
+	
 	if (is_page() && !is_front_page() && !is_home()) {
 		$slider_layout  = get_post_meta( $post->ID, $prefix . 'slider_layout', true);
+	} elseif(!is_front_page() && is_home() && ($blog_page_id != 0)) {
+		/*Only for blog posts loop*/
+		$slider_layout  = get_post_meta( $blog_page_id, $prefix . 'slider_layout', true);
 	} else {
 		$slider_layout  = get_post_meta( $front_page_id, $prefix . 'slider_layout');
 	}	
 	
 	if ($slider_layout) {
-		if (isset($theme_options['select_slider'])){
+		if (isset($theme_options['select_slider'])) {
 			  if ($theme_options['select_slider'] == "1") {
 					wp_enqueue_style( 'flex-slider', 			get_template_directory_uri() . '/js/flex_slider/slider.css');
 					wp_enqueue_script('flex-fitvid-j',			get_template_directory_uri() . '/js/flex_slider/jquery.flexslider-min.js', array( 'jquery' ), '20130930', false );
@@ -346,8 +352,19 @@ if (!function_exists('fruitful_get_slider_layout_flex')) {
 		global $post;
 		$prefix = '_fruitful_';	
 		$out = "";
-		$slider_layout = get_post_meta( $post->ID, $prefix . 'slider_layout');
 		$theme_options  = fruitful_ret_options("fruitful_theme_options");
+		$front_page_id  = get_option('page_on_front');
+		$blog_page_id   = get_option('page_for_posts ');
+	
+	
+		if (is_page() && !is_front_page() && !is_home()) {
+			$slider_layout  = get_post_meta( $post->ID, $prefix . 'slider_layout', true);
+		} elseif(!is_front_page() && is_home() && ($blog_page_id != 0)) {
+			/*Only for blog posts loop*/
+			$slider_layout  = get_post_meta( $blog_page_id, $prefix . 'slider_layout', true);
+		} else {
+			$slider_layout  = get_post_meta( $front_page_id, $prefix . 'slider_layout');
+		}	
 			
 		if(!empty($slider_layout) && ($slider_layout)) {
 			$out .= '$(".flexslider").flexslider({' . "\n";
@@ -375,8 +392,19 @@ if (!function_exists('fruitful_get_slider_layout_nivo')) {
 		global $post;
 		$prefix = '_fruitful_';	
 		$out = "";
-		$slider_layout = get_post_meta( $post->ID, $prefix . 'slider_layout');
-		$theme_options = fruitful_ret_options("fruitful_theme_options");
+		$theme_options  = fruitful_ret_options("fruitful_theme_options");
+		$front_page_id  = get_option('page_on_front');
+		$blog_page_id   = get_option('page_for_posts ');
+	
+	
+		if (is_page() && !is_front_page() && !is_home()) {
+			$slider_layout  = get_post_meta( $post->ID, $prefix . 'slider_layout', true);
+		} elseif(!is_front_page() && is_home() && ($blog_page_id != 0)) {
+			/*Only for blog posts loop*/
+			$slider_layout  = get_post_meta( $blog_page_id, $prefix . 'slider_layout', true);
+		} else {
+			$slider_layout  = get_post_meta( $front_page_id, $prefix . 'slider_layout');
+		}	
 		
 		if(!empty($slider_layout) && ($slider_layout)){
 			$out .= '$(".nivoSlider").nivoSlider({' . "\n";
@@ -405,17 +433,24 @@ if (!function_exists('fruitful_get_slider_layout_nivo')) {
 if (!function_exists('fruitful_get_slider')) {
 	function fruitful_get_slider() {
 		if (is_404()) return;
-		
 		global $post;
 		$prefix 	= '_fruitful_';
 		$slider_  	= $slider_layout = '';
 		$id 		= 'fruitful-slider-'.rand(1, 250); 	
 		
 		$theme_options  = fruitful_ret_options("fruitful_theme_options");
-		$slider_layout  = get_post_meta( $post->ID, $prefix . 'slider_layout');
-		
-		if ($slider_layout)
-			$slider_layout = current($slider_layout);
+		$front_page_id  = get_option('page_on_front');
+		$blog_page_id   = get_option('page_for_posts ');
+	
+	
+		if (is_page() && !is_front_page() && !is_home()) {
+			$slider_layout  = get_post_meta( $post->ID, $prefix . 'slider_layout', true);
+		} elseif(!is_front_page() && is_home() && ($blog_page_id != 0)) {
+			/*Only for blog posts loop*/
+			$slider_layout  = get_post_meta( $blog_page_id, $prefix . 'slider_layout', true);
+		} else {
+			$slider_layout  = get_post_meta( $front_page_id, $prefix . 'slider_layout');
+		}	
 		
 		/*Full Backend Options*/
 		if(isset($theme_options['slides']) && (count($theme_options['slides']) > 0)) {
@@ -1047,7 +1082,18 @@ if ( ! function_exists( 'fruitful_get_sliders' ) ) {
 		global $post;
 		$prefix = '_fruitful_';
 		$theme_options  = fruitful_ret_options("fruitful_theme_options");
-		$slider_layout = get_post_meta( $post->ID, $prefix . 'slider_layout');
+		$front_page_id  = get_option('page_on_front');
+		$blog_page_id   = get_option('page_for_posts ');
+	
+	
+		if (is_page() && !is_front_page() && !is_home()) {
+			$slider_layout  = get_post_meta( $post->ID, $prefix . 'slider_layout', true);
+		} elseif(!is_front_page() && is_home() && ($blog_page_id != 0)) {
+			/*Only for blog posts loop*/
+			$slider_layout  = get_post_meta( $blog_page_id, $prefix . 'slider_layout', true);
+		} else {
+			$slider_layout  = get_post_meta( $front_page_id, $prefix . 'slider_layout');
+		}	
 		
 		if ($slider_layout){
 			if (!empty($theme_options['select_slider'])) {
