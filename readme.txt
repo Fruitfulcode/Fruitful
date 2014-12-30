@@ -103,6 +103,18 @@ Files: .pot, ru_Ru.po, ru_Ru.mo icluded. Default language is english.
     Changelog
 -------------------------------------------------------
 
+= 2.4.0 =
+30.12.14
+
+* New: Ability to choose slider for pages.
+* New: Theme options > Colors, Woocommerce styles
+* New: Theme options > General, added layout switcher for additional pages
+* New: Social icon "Vimeo"
+* Bug fix: WooCommerce layouts for pages
+* Improvements: Change entry title tag h1 -> h2 for loop pages
+* Improvements: Reorganize code
+* Improvements: Translation updates
+
 = 2.3.1 =
 08.12.14
 

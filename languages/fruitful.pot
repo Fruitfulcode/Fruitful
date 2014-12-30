@@ -1182,11 +1182,23 @@ msgid ""
 msgstr ""
 
 #: fruitful/inc/theme-options/theme-options.php:48
-msgid "Front page display latest posts"
+msgid "Front page template with latest posts"
 msgstr ""
 
 #: fruitful/inc/theme-options/theme-options.php:48
-msgid "Set template for latest posts."
+msgid "Settings > Reading > Front page displays > Your latest posts"
+msgstr ""
+
+#: fruitful/inc/theme-options/theme-options.php:49
+msgid "Custom wordpress pages layout"
+msgstr ""
+
+#: fruitful/inc/theme-options/theme-options.php:49
+msgid "Set template for custom pages."
+msgstr ""
+
+#: fruitful/inc/theme-options/theme-options.php:50
+msgid "Select option below for show featured image on single post page"
 msgstr ""
 
 #: fruitful/inc/theme-options/theme-options.php:50
@@ -1195,6 +1207,10 @@ msgstr ""
 
 #: fruitful/inc/theme-options/theme-options.php:50
 msgid "If you wish to show Language Switch in header, select option below. "
+msgstr ""
+
+#: fruitful/inc/theme-options/theme-options.php:50
+msgid "Show Featured image on single post"
 msgstr ""
 
 #: fruitful/inc/theme-options/theme-options.php:52
@@ -1844,3 +1860,4 @@ msgstr ""
 #: fruitful/inc/theme-options/theme-options.php:849
 msgid "Check our latest theme"
 msgstr ""
+
