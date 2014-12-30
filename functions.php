@@ -238,14 +238,18 @@ add_action( 'widgets_init', 'fruitful_widgets_init' );
  */
 if ( ! function_exists( 'fruitful_scripts' ) ) {
 function fruitful_scripts() {
+	global $post;
+	$slider_layout = false;
 	$prefix = '_fruitful_';
 	$theme_options  = fruitful_ret_options("fruitful_theme_options");
 	$front_page_id  = get_option('page_on_front');
-	$slider_layout = get_post_meta( $front_page_id, $prefix . 'slider_layout');
-	if ($slider_layout)
-		$slider_layout = current($slider_layout);
+	if (is_page() && !is_front_page() && !is_home()) {
+		$slider_layout  = get_post_meta( $post->ID, $prefix . 'slider_layout', true);
+	} else {
+		$slider_layout  = get_post_meta( $front_page_id, $prefix . 'slider_layout');
+	}	
 	
-	if ($slider_layout){
+	if ($slider_layout) {
 		if (isset($theme_options['select_slider'])){
 			  if ($theme_options['select_slider'] == "1") {
 					wp_enqueue_style( 'flex-slider', 			get_template_directory_uri() . '/js/flex_slider/slider.css');
