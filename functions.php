@@ -251,7 +251,7 @@ function fruitful_scripts() {
 	} elseif(!is_front_page() && is_home() && ($blog_page_id != 0)) {
 		/*Only for blog posts loop*/
 		$slider_layout  = get_post_meta( $blog_page_id, $prefix . 'slider_layout', true);
-	} else {
+	} elseif (is_front_page()) {
 		$slider_layout  = get_post_meta( $front_page_id, $prefix . 'slider_layout');
 	}	
 	
@@ -362,7 +362,7 @@ if (!function_exists('fruitful_get_slider_layout_flex')) {
 		} elseif(!is_front_page() && is_home() && ($blog_page_id != 0)) {
 			/*Only for blog posts loop*/
 			$slider_layout  = get_post_meta( $blog_page_id, $prefix . 'slider_layout', true);
-		} else {
+		} elseif (is_front_page()) {
 			$slider_layout  = get_post_meta( $front_page_id, $prefix . 'slider_layout');
 		}	
 			
@@ -402,7 +402,7 @@ if (!function_exists('fruitful_get_slider_layout_nivo')) {
 		} elseif(!is_front_page() && is_home() && ($blog_page_id != 0)) {
 			/*Only for blog posts loop*/
 			$slider_layout  = get_post_meta( $blog_page_id, $prefix . 'slider_layout', true);
-		} else {
+		} elseif (is_front_page()) {
 			$slider_layout  = get_post_meta( $front_page_id, $prefix . 'slider_layout');
 		}	
 		
@@ -448,7 +448,7 @@ if (!function_exists('fruitful_get_slider')) {
 		} elseif(!is_front_page() && is_home() && ($blog_page_id != 0)) {
 			/*Only for blog posts loop*/
 			$slider_layout  = get_post_meta( $blog_page_id, $prefix . 'slider_layout', true);
-		} else {
+		} elseif (is_front_page()) {
 			$slider_layout  = get_post_meta( $front_page_id, $prefix . 'slider_layout');
 		}	
 		
@@ -1091,7 +1091,7 @@ if ( ! function_exists( 'fruitful_get_sliders' ) ) {
 		} elseif(!is_front_page() && is_home() && ($blog_page_id != 0)) {
 			/*Only for blog posts loop*/
 			$slider_layout  = get_post_meta( $blog_page_id, $prefix . 'slider_layout', true);
-		} else {
+		} elseif (is_front_page()) {
 			$slider_layout  = get_post_meta( $front_page_id, $prefix . 'slider_layout');
 		}	
 		

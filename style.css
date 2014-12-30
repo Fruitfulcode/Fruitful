@@ -859,6 +859,10 @@ ul#lang-select-popup{
     margin:10px 0;
     min-height:60px;
 }
+.archive #content {
+	margin:0 0 10px 0;
+}
+
 #colophon{
 	position:relative;
 	margin:0;
