@@ -924,12 +924,31 @@ function fruitful_theme_options_render_page() {
 						echo ' <a target="_blank" href="http://fruitfulcode.com"> fruitfulcode.com </a> ';
 				?></p>
 			</div>
-			<div class="sidebar-promo-widget promo-anaglyph">
-				<h3><?php _e('Check our latest theme', 'fruitful'); ?></h3>
+			<div class="sidebar-promo-widget promo-themes">
+				<h3><?php _e('Premium WordpPess themes', 'fruitful'); ?></h3>
+				<?php
+					$rand_banner = rand(0, 2);
+			
+					$class ="anaglyph-theme";
+					$link = "http://themeforest.net/item/anaglyph-one-page-multi-page-wordpress-theme/7874320?ref=fruitfulcode";
+					$title = __('ANAGLYPH - One page / Multi Page WordPress Theme', 'maintenance');
+			
+					if ($rand_banner == 1) {
+						$class ="lovely-theme";
+						$link = "http://themeforest.net/item/lovely-simple-elegant-wordpress-theme/8428221?ref=fruitfulcode";
+						$title = __('Love.ly - Simple & Elegant WordPress theme', 'maintenance');
+					}
+			
+					if ($rand_banner == 2) {
+						$class ="zoner-theme";
+						$link = "http://themeforest.net/item/zoner-real-estate-wordpress-theme/9099226?ref=fruitfulcode";
+						$title = __('Zoner - Real Estate WordPress theme', 'maintenance');
+					}
+			
+				
+				?>
 				<div>
-					<a target="_blank" href="http://themeforest.net/item/anaglyph-one-page-multi-page-wordpress-theme/7874320/?ref=fruitfulcode">
-						<img src="<?php echo get_template_directory_uri(); ?>/inc/images/sidebar-anaglyph.png" alt="" width="253" height="130" />
-					</a>
+					<a class="<?php echo $class; ?>" target="_blank" title="<?php echo esc_attr($title); ?>" href="<?php echo esc_url($link); ?>"></a>
 				</div>
 			</div>
 		</div>
