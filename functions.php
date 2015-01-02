@@ -239,8 +239,8 @@ add_action( 'widgets_init', 'fruitful_widgets_init' );
 if ( ! function_exists( 'fruitful_scripts' ) ) {
 function fruitful_scripts() {
 	global $post;
+	$prefix 	   = '_fruitful_';
 	$slider_layout = false;
-	$prefix = '_fruitful_';
 	$theme_options  = fruitful_ret_options("fruitful_theme_options");
 	$front_page_id  = get_option('page_on_front');
 	$blog_page_id   = get_option('page_for_posts ');
@@ -252,7 +252,7 @@ function fruitful_scripts() {
 		/*Only for blog posts loop*/
 		$slider_layout  = get_post_meta( $blog_page_id, $prefix . 'slider_layout', true);
 	} elseif (is_front_page()) {
-		$slider_layout  = get_post_meta( $front_page_id, $prefix . 'slider_layout');
+		$slider_layout  = get_post_meta( $front_page_id, $prefix . 'slider_layout', true);
 	}	
 	
 	if ($slider_layout) {
@@ -350,8 +350,9 @@ function fruitful_add_custom_fonts() {
 if (!function_exists('fruitful_get_slider_layout_flex')) {
 	function fruitful_get_slider_layout_flex() {
 		global $post;
-		$prefix = '_fruitful_';	
 		$out = "";
+		$prefix = '_fruitful_';	
+		$slider_layout = false;
 		$theme_options  = fruitful_ret_options("fruitful_theme_options");
 		$front_page_id  = get_option('page_on_front');
 		$blog_page_id   = get_option('page_for_posts ');
@@ -363,7 +364,7 @@ if (!function_exists('fruitful_get_slider_layout_flex')) {
 			/*Only for blog posts loop*/
 			$slider_layout  = get_post_meta( $blog_page_id, $prefix . 'slider_layout', true);
 		} elseif (is_front_page()) {
-			$slider_layout  = get_post_meta( $front_page_id, $prefix . 'slider_layout');
+			$slider_layout  = get_post_meta( $front_page_id, $prefix . 'slider_layout', true);
 		}	
 			
 		if(!empty($slider_layout) && ($slider_layout)) {
@@ -390,8 +391,9 @@ if (!function_exists('fruitful_get_slider_layout_flex')) {
 if (!function_exists('fruitful_get_slider_layout_nivo')) {
 	function fruitful_get_slider_layout_nivo() {
 		global $post;
-		$prefix = '_fruitful_';	
 		$out = "";
+		$prefix = '_fruitful_';	
+		$slider_layout = false;
 		$theme_options  = fruitful_ret_options("fruitful_theme_options");
 		$front_page_id  = get_option('page_on_front');
 		$blog_page_id   = get_option('page_for_posts ');
@@ -403,7 +405,7 @@ if (!function_exists('fruitful_get_slider_layout_nivo')) {
 			/*Only for blog posts loop*/
 			$slider_layout  = get_post_meta( $blog_page_id, $prefix . 'slider_layout', true);
 		} elseif (is_front_page()) {
-			$slider_layout  = get_post_meta( $front_page_id, $prefix . 'slider_layout');
+			$slider_layout  = get_post_meta( $front_page_id, $prefix . 'slider_layout', true);
 		}	
 		
 		if(!empty($slider_layout) && ($slider_layout)){
@@ -447,9 +449,9 @@ if (!function_exists('fruitful_get_slider')) {
 			$slider_layout  = get_post_meta( $post->ID, $prefix . 'slider_layout', true);
 		} elseif(!is_front_page() && is_home() && ($blog_page_id != 0)) {
 			/*Only for blog posts loop*/
-			$slider_layout  = get_post_meta( $blog_page_id, $prefix . 'slider_layout', true);
+			$slider_layout  = get_post_meta( $blog_page_id, $prefix  . 'slider_layout', true);
 		} elseif (is_front_page()) {
-			$slider_layout  = get_post_meta( $front_page_id, $prefix . 'slider_layout');
+			$slider_layout  = get_post_meta( $front_page_id, $prefix . 'slider_layout', true);
 		}	
 		
 		/*Full Backend Options*/
@@ -462,11 +464,11 @@ if (!function_exists('fruitful_get_slider')) {
 			
 			if ($path_to_img){
 				if ($theme_options['select_slider'] == "1") {
-					
+						
 						if ($slider_layout == 1) {
-							$slider_ .= '<div class="main-slider-container">';
-						} else {
 							$slider_ .= '<div class="main-slider-container fullwidth">';
+						} else {
+							$slider_ .= '<div class="main-slider-container">';
 						}
 							$slider_ .= '<section class="slider">';
 								$slider_ .= '<div class= "flexslider" id="' . $id . '">';
@@ -493,9 +495,9 @@ if (!function_exists('fruitful_get_slider')) {
 				} else if ($theme_options['select_slider'] == "2") {
 						
 						if ($slider_layout == 1) {
-							$slider_ .= '<div class="main-slider-container slider-wrapper '. $theme_options['nv_skins'] .'">';
+							$slider_ .= '<div class="main-slider-container slider-wrapper fullwidth '. $theme_options['nv_skins'] .'">';
 						} else {
-							$slider_ .= '<div class="main-slider-container slider-wrapper fullwidth '. $theme_options['nv_skins'] .'">'; 
+							$slider_ .= '<div class="main-slider-container slider-wrapper '. $theme_options['nv_skins'] .'">'; 
 						}
 						
 							$slider_ .= '<div id="nivo-slider-'. $id . '" class="nivoSlider">';
@@ -1092,7 +1094,7 @@ if ( ! function_exists( 'fruitful_get_sliders' ) ) {
 			/*Only for blog posts loop*/
 			$slider_layout  = get_post_meta( $blog_page_id, $prefix . 'slider_layout', true);
 		} elseif (is_front_page()) {
-			$slider_layout  = get_post_meta( $front_page_id, $prefix . 'slider_layout');
+			$slider_layout  = get_post_meta( $front_page_id, $prefix . 'slider_layout', true);
 		}	
 		
 		if ($slider_layout){
