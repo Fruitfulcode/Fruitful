@@ -307,14 +307,35 @@ function fruitful_scripts() {
 add_action( 'wp_enqueue_scripts', 'fruitful_scripts' );
 
 if ( ! function_exists( 'fruitful_get_link_url' ) ) {
-function fruitful_get_link_url() {
-	$content = get_the_content();
-	$has_url = get_url_in_content( $content );
+	function fruitful_get_link_url() {
+		$content = get_the_content();
+		$has_url = get_url_in_content( $content );
 
-	return ( $has_url ) ? $has_url : apply_filters( 'the_permalink', get_permalink() );
-}
+		return ( $has_url ) ? $has_url : apply_filters( 'the_permalink', get_permalink() );
+	}
 }
 
+/*get cart button html*/
+if ( ! function_exists( 'fruitful_get_cart_button_html' ) ) {
+	function fruitful_get_cart_button_html() {
+		$btn_cart = '';
+		$theme_options = fruitful_ret_options("fruitful_theme_options");
+		
+		if (class_exists('Woocommerce')) { 
+			global $woocommerce;
+			if (!empty($theme_options['showcart']) && (esc_attr($theme_options['showcart']) == 'on')) {
+					$btn_cart = '<div class="cart-button">
+						<a href="'.get_permalink( woocommerce_get_page_id( 'cart' ) ).'" class="cart-contents">
+							<div class="cart_image"></div> 
+							<span class="num_of_product_cart">'.$woocommerce->cart->cart_contents_count.'</span>
+						</a>
+					</div>';
+			}
+		} 
+		echo $btn_cart;
+	}
+}	
+			
 
 /*function for including google fonts*/
 if ( ! function_exists( 'fruitful_add_custom_fonts' ) ) {
@@ -1406,27 +1427,23 @@ function fruitful_metadevice() {
 add_action( 'wp_head', 'fruitful_metadevice' );
 
 if ( ! function_exists( 'fruitful_esc_content_pbr' ) ) {
-function fruitful_esc_content_pbr($content = null) {
-	 $content = preg_replace( '%<p>&nbsp;\s*</p>%', '', $content );
-	 $Old     = array( '<br />', '<br>' );
-	 $New     = array( '','' );
-	 $content = str_replace( $Old, $New, $content );
-	 return $content;
-}
+	function fruitful_esc_content_pbr($content = null) {
+		 $content = preg_replace( '%<p>&nbsp;\s*</p>%', '', $content );
+		 $Old     = array( '<br />', '<br>' );
+		 $New     = array( '','' );
+		 $content = str_replace( $Old, $New, $content );
+		 return $content;
+	}
 }
 
 if ( ! function_exists( 'fruitful_get_class_pos' ) ) {
-function fruitful_get_class_pos($index)  {
-	if ($index == 0) {
-		$pos_class = 'left-pos';
-	} else if ($index == 1) {
-		$pos_class = 'center-pos';	
-	} else {
-		$pos_class = 'right-pos';		
+	function fruitful_get_class_pos($index)  {
+		if ($index == 0) { 		$pos_class = 'left-pos'; 	} 
+		else if ($index == 1) {	$pos_class = 'center-pos';	} 
+		else {  $pos_class = 'right-pos'; }
+		
+		return esc_attr($pos_class);
 	}
-	
-	return $pos_class;
-}
 }
 
 if ( ! function_exists( 'fruitful_kses_data' ) ) {

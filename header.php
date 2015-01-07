@@ -22,56 +22,26 @@
 <!--[if lt IE 9]><script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script><![endif]-->
 <?php wp_head(); ?> 
 </head>
-<body <?php 
-		$additional_body_classes = '';
-		if (class_exists('Woocommerce')) {
-			if (is_shop()) { $additional_body_classes .= 'shop-page '; }
-		} 
-		$theme_options = fruitful_ret_options("fruitful_theme_options");
-		if (isset($theme_options['responsive']) && ($theme_options['responsive'] == 'on')) {
-			$additional_body_classes .= 'responsive ';
-		}
-		body_class(trim($additional_body_classes)); 
-	  ?>>
-	<div id="page-header" class="hfeed site"><?php
+<body <?php body_class();?>>
+	<div id="page-header" class="hfeed site">
+	<?php
+		$theme_options  = fruitful_ret_options("fruitful_theme_options");
+		$logo_pos = $menu_pos = '';
+		
+		if (isset($theme_options['logo_position'])) 
+		$logo_pos = esc_attr($theme_options['logo_position']);
+		
+		if (isset($theme_options['menu_position'])) 
+		$menu_pos = esc_attr($theme_options['menu_position']);
+		
+		$logo_pos_class = fruitful_get_class_pos($logo_pos);
+		$menu_pos_class = fruitful_get_class_pos($menu_pos);
+		
+		$responsive_menu_type = esc_attr($theme_options['menu_type_responsive']);
+		$is_responsive  	  = (isset($theme_options['responsive']) && ($theme_options['responsive'] == 'on'));
+		
 			
-			/*get fruitful options*/
-			$options = fruitful_get_theme_options();
-			
-			/*get cart button html*/
-			$cart_content_header = '';
-			if (class_exists('Woocommerce')) { 
-				global $woocommerce;
-				if (!empty($theme_options['showcart'])) {
-					if (($theme_options['showcart']) == 'on'){
-						$cart_content_header = '<div class="cart-button">
-							<a href="'.get_permalink( woocommerce_get_page_id( 'cart' ) ).'" class="cart-contents">
-								<div class="cart_image"></div> 
-								<span class="num_of_product_cart">'.$woocommerce->cart->cart_contents_count.'</span>
-							</a>
-						</div>';
-					}
-				} 
-			}
-			
-			/*get logo and menu position and elements classes*/
-			$logo_pos_class = $menu_pos_class = '';
-			$logo_position = $options['logo_position'];
-			$menu_position = $options['menu_position'];
-			
-			$logo_pos_class = fruitful_get_class_pos($logo_position);
-			$menu_pos_class = fruitful_get_class_pos($menu_position);
-			
-			/*check if responsive option is ON*/
-			$is_responsive = false;
-			if (isset($theme_options['responsive']) && ($theme_options['responsive'] == 'on')) {
-				$is_responsive = true;
-			}
-			
-			/*get type of responsive menu*/
-			$responsive_menu_type = $options['menu_type_responsive'];
-			
-			if ( !$is_responsive || ( $is_responsive && ( $responsive_menu_type == 'inside_content' ) ) ){ ?>
+			if ( !$is_responsive || ( $is_responsive && ( $responsive_menu_type == 'inside_content' ) ) ) { ?>
 			
 					<div class="head-container">
 						<div class="container">
@@ -88,8 +58,7 @@
 										
 									<div data-originalstyle="<?php echo $menu_pos_class; ?>" class="menu-wrapper <?php echo $menu_pos_class; ?>">
 										<?php fruitful_get_languages_list(); ?>
-											
-										<?php echo $cart_content_header; ?>
+										<?php fruitful_get_cart_button_html(); ?>
 											
 										<nav role="navigation" class="site-navigation main-navigation">
 											<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
@@ -116,8 +85,7 @@
 									</div>	
 									<div data-originalstyle="<?php echo $menu_pos_class; ?>" class="menu-wrapper <?php echo $menu_pos_class; ?>">
 										<?php fruitful_get_languages_list(); ?>
-											
-										<?php echo $cart_content_header; ?>
+										<?php fruitful_get_cart_button_html(); ?>
 											
 										<nav role="navigation" class="site-navigation main-navigation">
 											<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
@@ -135,7 +103,7 @@
 									<span class="icon-bar"></span>
 								</button>
 							</div>
-							<div class="cart_wrapper"><?php echo $cart_content_header; ?></div>
+							<div class="cart_wrapper"><?php fruitful_get_cart_button_html(); ?></div>
 							<div class="language_switcher"><?php fruitful_get_languages_list(); ?></div>
 							<div class="menu_wrapper collapse"><?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?></div>
 						</div>

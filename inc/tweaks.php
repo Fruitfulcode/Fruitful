@@ -30,6 +30,16 @@ function fruitful_body_classes( $classes ) {
 	if ( is_multi_author() ) {
 		$classes[] = 'group-blog';
 	}
+	
+	if (class_exists('Woocommerce')) {
+		if (is_shop()) $classes[] = 'shop-page ';
+	} 
+	
+	$theme_options = fruitful_ret_options("fruitful_theme_options");
+	if (isset($theme_options['responsive']) && 
+			 ($theme_options['responsive'] == 'on')) {
+		$classes[] = 'responsive';
+	}
 
 	return $classes;
 }
