@@ -103,6 +103,12 @@ Files: .pot, ru_Ru.po, ru_Ru.mo icluded. Default language is english.
     Changelog
 -------------------------------------------------------
 
+= 2.4.1 =
+12.01.14
+
+* Bug fix: Full width slider for home page
+* Improvements: header.php
+
 = 2.4.0 =
 30.12.14
 
