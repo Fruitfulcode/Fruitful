@@ -437,9 +437,9 @@ function fruitful_custom_do_settings_fields($page, $section) {
 
 function fruitful_add_admin_style() {
 	if(is_rtl()){
-		wp_enqueue_style('admin-style', 		get_template_directory_uri() . '/inc/css/admin-rtl.css');
+		wp_enqueue_style('admin-style', 	get_template_directory_uri() . '/inc/css/admin-rtl.css');
 	} else {
-		wp_enqueue_style('admin-style', 		get_template_directory_uri() . '/inc/css/admin.css');
+		wp_enqueue_style('admin-style',		get_template_directory_uri() . '/inc/css/admin.css');
 	}
 	wp_enqueue_style('fonts-style', 		get_template_directory_uri() . '/inc/css/fonts-style.css');
 	wp_enqueue_style('ch-style',			get_template_directory_uri() . '/inc/js/ch/ch.css');
@@ -516,7 +516,7 @@ function fruitful_get_box_upload_slide($attach_id, $link_url, $is_blank, $ind, $
 	
 		$out .= '<input class="of-input" name="fruitful_theme_options[slides][slide-'.$ind.'][attach_id]" id="attach-'.$ind.'" type="hidden" value="'. intval($attach_id) .'" />';
 		$out .= '<div class="upload_button_div">';
-			$out .= '<span data-imagetype="slide" class="button '. $btnclassup .'" id="add-slide-btn-'. $ind .'">Upload Image</span>';
+			$out .= '<span data-imagetype="slide" class="button '. $btnclassup .'" id="add-slide-btn-'. $ind .'">'.__('Upload Image', 'fruitful') .'</span>';
 		$out .= '</div>';
 	$out .= '</div>';
 	return $out;
@@ -562,6 +562,8 @@ return array(
 				'layout_tag_templ'		=> '1',
 				'layout_author_templ'	=> '1',
 				'layout_archive_templ'	=> '1',
+				'layout_single_templ'	=> '1',
+				'layout_page_templ'		=> '1',
 				
 				'show_featured_single'=> 'off',
 

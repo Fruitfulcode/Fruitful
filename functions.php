@@ -335,35 +335,63 @@ if ( ! function_exists( 'fruitful_get_cart_button_html' ) ) {
 		echo $btn_cart;
 	}
 }	
-			
 
+if ( ! function_exists( 'fruitful_check_gg_custom_fonts' ) ) {
+	function fruitful_check_gg_custom_fonts($inFont = null) {
+		$font_name = null;
+		$http_ = 'http://';
+		if (is_ssl()) {
+			$http_ = 'https://';
+		}
+		
+		$fonts_ = array();
+		$fonts_[] = 'fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300&subset=latin,latin-ext';
+		$fonts_[] = 'fonts.googleapis.com/css?family=Lobster&subset=cyrillic-ext,latin-ext,latin,cyrillic';
+		$fonts_[] = 'fonts.googleapis.com/css?family=Josefin+Slab:400,100,100italic,300,300italic,400italic,600,600italic,700,700italic';
+		$fonts_[] = 'fonts.googleapis.com/css?family=Arvo:400,400italic,700,700italic';
+		$fonts_[] = 'fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic';
+		$fonts_[] = 'fonts.googleapis.com/css?family=Vollkorn:400,400italic,700,700italic';
+		$fonts_[] = 'fonts.googleapis.com/css?family=Abril+Fatface';
+		$fonts_[] = 'fonts.googleapis.com/css?family=Ubuntu:400,300italic,400italic,500,500italic,700,700italic,300&subset=latin,greek,latin-ext,cyrillic';
+		$fonts_[] = 'fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin,cyrillic';
+		$fonts_[] = 'fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic,700';
+		$fonts_[] = 'fonts.googleapis.com/css?family=Droid+Sans:400,700';	
+
+		if (!empty($inFont)) {
+			$font_name = $inFont;
+			$font_name = urlencode(substr($font_name, 0, strrpos($font_name, ',')));
+			$in 	   = preg_quote($font_name, '~'); 	
+			$res	   = preg_grep('~' . $in . '~', $fonts_);
+			if (!empty($res)) {
+				return $http_ . current($res);
+			} else 	{
+				return null;
+			}
+		}
+	}
+}	
+		
 /*function for including google fonts*/
 if ( ! function_exists( 'fruitful_add_custom_fonts' ) ) {
-function fruitful_add_custom_fonts() {
-    $font_url = array();
-	$http_ = 'http://';
-	if (is_ssl()) {
-		$http_ = 'https://';
+	function fruitful_add_custom_fonts() {
+		$font_url = array();
+		$theme_options = fruitful_ret_options("fruitful_theme_options");
+		
+		if (isset($theme_options['h_font_family'])) $font_url[] = fruitful_check_gg_custom_fonts(esc_attr($theme_options['h_font_family']));
+		if (isset($theme_options['m_font_family'])) $font_url[] = fruitful_check_gg_custom_fonts(esc_attr($theme_options['m_font_family']));
+		if (isset($theme_options['p_font_family'])) $font_url[] = fruitful_check_gg_custom_fonts(esc_attr($theme_options['p_font_family']));
+		
+		$font_url = array_filter($font_url);
+		$font_url = array_unique($font_url);
+		
+		if (!empty($font_url)) {
+			foreach ($font_url as $font) {
+				$unq_id = uniqid('custom_fonts_');
+				wp_register_style($unq_id, $font);
+				wp_enqueue_style($unq_id);
+			}
+		}	
 	}
-	
-	$font_url[] = $http_ .'fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300&subset=latin,latin-ext';
-	$font_url[] = $http_ .'fonts.googleapis.com/css?family=Josefin+Slab:400,100,100italic,300,300italic,400italic,600,600italic,700,700italic';
-	$font_url[] = $http_ .'fonts.googleapis.com/css?family=Lobster&subset=cyrillic-ext,latin-ext,latin,cyrillic';
-	$font_url[] = $http_ .'fonts.googleapis.com/css?family=Arvo:400,400italic,700,700italic';
-	$font_url[] = $http_ .'fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic';
-	$font_url[] = $http_ .'fonts.googleapis.com/css?family=Vollkorn:400,400italic,700,700italic';
-	$font_url[] = $http_ .'fonts.googleapis.com/css?family=Abril+Fatface';
-	$font_url[] = $http_ .'fonts.googleapis.com/css?family=Ubuntu:400,300italic,400italic,500,500italic,700,700italic,300&subset=latin,greek,latin-ext,cyrillic';
-	$font_url[] = $http_ .'fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin,cyrillic';
-	$font_url[] = $http_ .'fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic,700';
-	$font_url[] = $http_ .'fonts.googleapis.com/css?family=Droid+Sans:400,700';
-	
-	foreach ($font_url as $font) {
-		$unq_id = uniqid('custom_fonts_');
-		wp_register_style($unq_id, $font);
-		wp_enqueue_style($unq_id);
-	}
-}
 }
 
 
@@ -743,6 +771,7 @@ if ( ! function_exists( 'fruitful_get_responsive_style' ) ) {
 	 
 		if (!empty($theme_options['styletheme'])) {
 			if ($theme_options['styletheme'] == 'off') {
+				
 				$style_ .= 'h1 {font-size : '.esc_attr($theme_options['h1_size']) .'px; }' . "\n";
 				$style_ .= 'h2 {font-size : '.esc_attr($theme_options['h2_size']) .'px; }' . "\n";
 				$style_ .= 'h3 {font-size : '.esc_attr($theme_options['h3_size']) .'px; }' . "\n";
@@ -1027,8 +1056,6 @@ if ( ! function_exists( 'fruitful_get_responsive_style' ) ) {
 						
 						$woo_style_ .= '.woocommerce .woocommerce-message, .woocommerce-page .woocommerce-message{border-top:3px solid '.$btn_color.';}';
 						$woo_style_ .= '.woocommerce .woocommerce-info, .woocommerce-page .woocommerce-info{border-top:3px solid '.$btn_color.';}';
-						$woo_style_ .= '.woocommerce .woocommerce-message:before, .woocommerce-page .woocommerce-message:before{background-color:'.$btn_color.';}';
-						$woo_style_ .= '.woocommerce .woocommerce-info:before, .woocommerce-page .woocommerce-info:before{background-color:'.$btn_color.';}';
 						$woo_style_ .= '.single-product .woocommerce-message .button{background-color:'.$btn_color.';}';
 					}
 					
@@ -1108,7 +1135,7 @@ if ( ! function_exists( 'fruitful_get_sliders' ) ) {
 		$front_page_id  = get_option('page_on_front');
 		$blog_page_id   = get_option('page_for_posts ');
 	
-	
+		$slider_layout = 0;
 		if (is_page() && !is_front_page() && !is_home()) {
 			$slider_layout  = get_post_meta( $post->ID, $prefix . 'slider_layout', true);
 		} elseif(!is_front_page() && is_home() && ($blog_page_id != 0)) {
@@ -1752,8 +1779,8 @@ if ( ! function_exists( 'fruitful_get_content_with_custom_sidebar' ) ) {
 		} else {
 			$default_blog_template = (get_post_meta( get_option('page_for_posts', true), '_fruitful_page_layout', true ))?(get_post_meta( get_option('page_for_posts', true), '_fruitful_page_layout', true )-1) : 1;
 			
-			$default_post_template = (get_post_meta( $post->ID , '_fruitful_page_layout', true ))?(get_post_meta(  $post->ID , '_fruitful_page_layout', true )-1):1;
-			$default_page_template = (get_post_meta( $post->ID , '_fruitful_page_layout', true ))?(get_post_meta(  $post->ID , '_fruitful_page_layout', true )-1):0;
+			$default_post_template = (get_post_meta( $post->ID , '_fruitful_page_layout', true ))?(get_post_meta(  $post->ID , '_fruitful_page_layout', true )-1):esc_attr($options['layout_single_templ']);
+			$default_page_template = (get_post_meta( $post->ID , '_fruitful_page_layout', true ))?(get_post_meta(  $post->ID , '_fruitful_page_layout', true )-1):esc_attr($options['layout_page_templ']);
 			if (!fruitful_is_blog()) {
 				if (is_archive()) {
 					$curr_template = $default_blog_template;

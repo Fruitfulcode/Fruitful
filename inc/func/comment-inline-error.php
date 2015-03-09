@@ -3,18 +3,26 @@
 	Thnaks WP Inline Comment Errors
 	Author: "aviarts"
 */
+
+add_action('init', 'fruitful_setCustomSession');
+function fruitful_setCustomSession() {
+	if (session_id() == '') session_start();
+}	
+		
 if (!class_exists('fruitfulcFormInlineErrors')){
     class fruitfulcFormInlineErrors {
-        public function __construct() { add_action('init', array($this, 'init')); }
+        public function __construct() { 
+			add_action('init', array($this, 'init')); 
+		}
+		
         public function init() {
-            session_start();
             add_filter('wp_die_handler', 			 	array($this, 'getWpDieHandler'));
             add_action('comment_form_before_fields', 	array($this, 'fruitfulOutInlineErrors'));
             add_action('comment_form_logged_in_after', 	array($this, 'fruitfulOutInlineErrors'));
             add_filter('comment_form_default_fields',	array($this, 'fruitfulCFormDefVal'));
             add_filter('comment_form_field_comment',	array($this, 'fruitfulformCommentDefault'));
         }
-
+		
 		function getWpDieHandler($handler){ return array($this, 'fruitfulhandleWpCommentError'); }
         function fruitfulhandleWpCommentError($message, $title='', $args=array())
         {
@@ -51,9 +59,11 @@ if (!class_exists('fruitfulcFormInlineErrors')){
 				foreach($fields as $key => $field){
                 if($this->stringContains('input', $field)){
 						if($this->stringContains('type="text"', $field)){
+							if (isset($formFields[$key]))
 							$fields[$key] = str_replace('value=""', 'value="'. stripslashes($formFields[$key]) .'"', $field);
 						}
 					} elseif ($this->stringContains('</textarea>', $field)){
+						if (isset($formFields[$key]))
 						$fields[$key] = str_replace('</textarea>', stripslashes($formFields[$key]) .'</textarea>', $field);
 					}
 				}
