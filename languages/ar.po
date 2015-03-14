@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Fruitful theme\n"
 "POT-Creation-Date: 2014-07-31 11:49+0200\n"
-"PO-Revision-Date: 2015-03-09 12:08+0200\n"
+"PO-Revision-Date: 2015-03-14 16:44+0200\n"
 "Last-Translator: Muhammad Bashir Al-Noimi <mbnoimi@gmail.com>\n"
 "Language-Team: Fruitful Team\n"
 "MIME-Version: 1.0\n"
@@ -15,6 +15,7 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
 "Language: ar\n"
+"X-Poedit-SearchPath-0: ..\n"
 
 #: fruitful/404.php:17
 msgid "Oops! That page can&rsquo;t be found."
@@ -41,7 +42,7 @@ msgstr "عرض كل المقالات % s <span class=\"meta-nav\">←</span>"
 #: fruitful/comments.php:33
 #, php-format
 msgid "One thought on &ldquo;%2$s&rdquo;"
-msgstr "فكرة حول &ldquo;%2$s&rdquo;"
+msgstr "تعليق &ldquo;%2$s&rdquo;"
 
 #: fruitful/comments.php:40 fruitful/comments.php:60
 msgid "Comment navigation"
