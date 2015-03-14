@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Fruitful theme\n"
 "POT-Creation-Date: 2014-07-31 11:49+0200\n"
-"PO-Revision-Date: 2015-03-14 16:44+0200\n"
+"PO-Revision-Date: 2015-03-14 16:52+0200\n"
 "Last-Translator: Muhammad Bashir Al-Noimi <mbnoimi@gmail.com>\n"
 "Language-Team: Fruitful Team\n"
 "MIME-Version: 1.0\n"
@@ -37,7 +37,7 @@ msgstr "حول %s"
 #: fruitful/author-bio.php:20
 #, php-format
 msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
-msgstr "عرض كل المقالات % s <span class=\"meta-nav\">←</span>"
+msgstr "عرض كل المقالات % s <span class=\"meta-nav\">← </span>"
 
 #: fruitful/comments.php:33
 #, php-format
@@ -65,7 +65,7 @@ msgstr "التعليقات مغلقة."
 #: fruitful/content-link.php:32 fruitful/content-quote.php:32
 #: fruitful/content-status.php:32 fruitful/content-video.php:32
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
-msgstr "متابعة القراءة <span class=\"meta-nav\">&rarr;</span>"
+msgstr "متابعة القراءة <span class=\"meta-nav\">&rarr; </span>"
 
 #: fruitful/content-aside.php:33 fruitful/content-audio.php:34
 #: fruitful/content-chat.php:33 fruitful/content-gallery.php:33
@@ -120,7 +120,7 @@ msgstr "عرض كل ألـ % تعليق"
 
 #: fruitful/content.php:53
 msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
-msgstr "المزيد <span class=\"meta-nav\">&rarr;</span>"
+msgstr "المزيد <span class=\"meta-nav\">&rarr; </span>"
 
 #: fruitful/functions.php:71 fruitful/functions.php:77
 msgid "on"
@@ -361,11 +361,11 @@ msgstr "&rarr;"
 
 #: fruitful/inc/template-tags.php:37
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
-msgstr "<span class=\"meta-nav\">&rarr;</span> منشورات أقدم"
+msgstr "<span class=\"meta-nav\"> &rarr;</span> منشورات أقدم"
 
 #: fruitful/inc/template-tags.php:41
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
-msgstr "منشورات أحدث <span class=\"meta-nav\">&larr;</span>"
+msgstr "منشورات أحدث <span class=\"meta-nav\">&larr; </span>"
 
 #: fruitful/inc/template-tags.php:66
 msgid "Pingback:"
