@@ -103,6 +103,15 @@ Files: .pot, ru_Ru.po, ru_Ru.mo icluded. Default language is english.
     Changelog
 -------------------------------------------------------
 
+= 2.5 =
+17.03.14
+
+* New: Default layouts for single post and default pages
+* New: Arabic translations
+* Update: TGM plugin activation
+* Update: WooCommerce 2.3.6 support
+* Bug fix: Google fonts load only if you have selected
+
 = 2.4.1 =
 12.01.14
 
