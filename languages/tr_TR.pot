@@ -1,0 +1,1913 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Fruitful theme\n"
+"POT-Creation-Date: 2014-07-31 11:49+0200\n"
+"PO-Revision-Date: 2015-03-22 13:24+0200\n"
+"Last-Translator: \n"
+"Language-Team: Gürsel çetin <gurseldesign@gmail.com>\n"
+"Language: tr_TR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.5\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;_e;__;_x;_n;esc_attr_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: fruitful/404.php:17
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Hoop! Aradığın sayfa bulunamadı."
+
+#: fruitful/404.php:21
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"Hiçbir şey bu konumda bulunmuştur gibi görünüyor. Belki aşağıdaki "
+"bağlantıları veya arama birini deneyin?"
+
+#: fruitful/author-bio.php:16
+#, php-format
+msgid "About %s"
+msgstr "Hakkında %s"
+
+#: fruitful/author-bio.php:20
+#, php-format
+msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+"%s <span class= \"meta-nav \">&rarr;</span> tarafından tüm iletileri "
+"görüntüle ."
+
+#: fruitful/comments.php:33
+#, php-format
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgstr "Bir düşüncede &ldquo;%2$s&rdquo;"
+
+#: fruitful/comments.php:40 fruitful/comments.php:60
+msgid "Comment navigation"
+msgstr "Yorum navigasyonu"
+
+#: fruitful/comments.php:41 fruitful/comments.php:61
+msgid "&larr; Older Comments"
+msgstr "&larr; Daha Eski Yorumlar"
+
+#: fruitful/comments.php:42 fruitful/comments.php:62
+msgid "Newer Comments &rarr;"
+msgstr "Daha Yeni Yorumlar &rarr;"
+
+#: fruitful/comments.php:72
+msgid "Comments are closed."
+msgstr "Yorumlar kaptıldı."
+
+#: fruitful/content-aside.php:32 fruitful/content-audio.php:33
+#: fruitful/content-gallery.php:32 fruitful/content-image.php:33
+#: fruitful/content-link.php:32 fruitful/content-quote.php:32
+#: fruitful/content-status.php:32 fruitful/content-video.php:32
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Okumaya devam edin <span class=\"meta-nav\">&rarr;</span>"
+
+#: fruitful/content-aside.php:33 fruitful/content-audio.php:34
+#: fruitful/content-chat.php:33 fruitful/content-gallery.php:33
+#: fruitful/content-image.php:34 fruitful/content-link.php:33
+#: fruitful/content-page.php:22 fruitful/content-quote.php:33
+#: fruitful/content-single.php:33 fruitful/content-status.php:33
+#: fruitful/content-video.php:33 fruitful/content.php:54 fruitful/image.php:87
+msgid "Pages:"
+msgstr "Sayfalar:"
+
+#: fruitful/content-aside.php:39 fruitful/content-aside.php:46
+#: fruitful/content-audio.php:43 fruitful/content-chat.php:38
+#: fruitful/content-gallery.php:49 fruitful/content-image.php:49
+#: fruitful/content-link.php:41 fruitful/content-page.php:23
+#: fruitful/content-quote.php:43 fruitful/content-single.php:38
+#: fruitful/content-video.php:48 fruitful/content.php:65 fruitful/image.php:35
+#: fruitful/image.php:101
+msgid "Edit"
+msgstr "Düzenle"
+
+#: fruitful/content-chat.php:22 fruitful/content-quote.php:23
+#: fruitful/content.php:32 fruitful/functions.php:1056
+#, php-format
+msgid "Permalink to %s"
+msgstr "Permalink %s"
+
+#: fruitful/content-gallery.php:43 fruitful/content-image.php:42
+#: fruitful/content-quote.php:40 fruitful/content-video.php:41
+#: fruitful/content.php:62
+msgid "Leave a comment"
+msgstr "Bir yorum bırak"
+
+#: fruitful/content-gallery.php:43 fruitful/content.php:62
+msgid "1 Comment"
+msgstr "1 Yorum"
+
+#: fruitful/content-gallery.php:43 fruitful/content.php:62
+msgid "% Comments"
+msgstr "% Yorumlar"
+
+#: fruitful/content-image.php:42 fruitful/content-quote.php:40
+#: fruitful/content-video.php:41
+msgid "One comment so far"
+msgstr "Şimdiye kadar bir yorum"
+
+#: fruitful/content-image.php:42 fruitful/content-quote.php:40
+#: fruitful/content-video.php:41
+#, php-format
+msgid "View all % comments"
+msgstr "View all % comments"
+
+#: fruitful/content.php:53
+msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Daha Fazlasını Oku <span class=\"meta-nav\">&rarr;</span>"
+
+#: fruitful/functions.php:71 fruitful/functions.php:77
+msgid "on"
+msgstr "on"
+
+#: fruitful/functions.php:124
+msgid "Primary Menu"
+msgstr "Birincil menü"
+
+#: fruitful/functions.php:160
+#, php-format
+msgid "Page %s"
+msgstr "Sayfa %s"
+
+#: fruitful/functions.php:176
+msgid "Main Sidebar"
+msgstr "Ana Kenar Çubuğu"
+
+#: fruitful/functions.php:185
+msgid "Blog Sidebar"
+msgstr "Blog Kenar Çubuğu"
+
+#: fruitful/functions.php:194
+msgid "Single Post Sidebar"
+msgstr "Tek İleti Kenar Çubuğu"
+
+#: fruitful/functions.php:203
+msgid "Homepage Sidebar"
+msgstr "Anasayfa Kenar Çubuğu"
+
+#: fruitful/functions.php:213
+msgid "Shop Page Sidebar"
+msgstr "Dükkan Sayfası Kenar Çubuğu"
+
+#: fruitful/functions.php:222
+msgid "Product Page Sidebar"
+msgstr "Ürün Sayfası Kenar Çubuğu"
+
+#: fruitful/functions.php:453
+msgid "Please add images for slider in theme options!"
+msgstr "Tema seçenekleri kaydırmak için görüntüleri ekleyin!"
+
+#: fruitful/functions.php:949
+msgid "You may be interested in&hellip;"
+msgstr "Senin de ilgini çekebilir in&hellip;"
+
+#: fruitful/functions.php:998
+#, php-format
+msgid "%d "
+msgstr "%d "
+
+#: fruitful/functions.php:1025 fruitful/functions.php:1034
+msgid ", "
+msgstr ", "
+
+#: fruitful/functions.php:1028
+#, php-format
+msgid "Posted in %1$s"
+msgstr "Yayınlandı %1$s"
+
+#: fruitful/functions.php:1050
+#, php-format
+msgid "%1$s on %2$s"
+msgstr "%1$s üzerinde %2$s"
+
+#: fruitful/functions.php:1091
+#: fruitful/inc/theme-options/theme-options.php:141
+msgid "Fruitful Theme Options"
+msgstr "Fruitful Tema Seçenekleri"
+
+#: fruitful/functions.php:1307
+msgid "Search for products"
+msgstr "Ürünler için ara"
+
+#: fruitful/functions.php:1411
+#, php-format
+msgid "Category Archives: %s"
+msgstr "Kategori Arşivleri: %s"
+
+#: fruitful/functions.php:1414
+#, php-format
+msgid "Tag Archives: %s"
+msgstr "Etiket Arşivleri: %s"
+
+#: fruitful/functions.php:1418
+#, php-format
+msgid "Author Archives: %s"
+msgstr "Yazar Arşivleri: %s"
+
+#: fruitful/functions.php:1422
+#, php-format
+msgid "Daily Archives: %s"
+msgstr "Günlük Arşivler: %s"
+
+#: fruitful/functions.php:1425
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr "Aylık Arşivler: %s"
+
+#: fruitful/functions.php:1428
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr "Yıllık Arşivler: %s"
+
+#: fruitful/functions.php:1431 fruitful/sidebar-blogright.php:19
+#: fruitful/sidebar-homepage.php:19 fruitful/sidebar-page.php:19
+#: fruitful/sidebar-single-post.php:19 fruitful/sidebar.php:19
+msgid "Archives"
+msgstr "Arşivler"
+
+#: fruitful/functions.php:1544
+msgid ""
+"Attention! Fruitful theme version 2.0 got major updates. You may have a "
+"problems with display content in shortcodes, because we created this part as "
+"plugin. You need install "
+msgstr ""
+"Dikkat! Bereketli tema sürüm 2.0 önemli güncellemeleri var. Biz eklenti "
+"olarak bu bölümünü yarattı çünkü, kısa kod ekran içeriği ile ilgili sorunlar "
+"olabilir. Sen yüklemeye gerek"
+
+#: fruitful/functions.php:1546
+msgid " and use them."
+msgstr " ve bunları kullanıyor."
+
+#: fruitful/image.php:25
+#, php-format
+msgid ""
+"Published <span class=\"entry-date\"><time class=\"entry-date\" datetime="
+"\"%1$s\" pubdate>%2$s</time></span> at <a href=\"%3$s\" title=\"Link to full-"
+"size image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s"
+"\" rel=\"gallery\">%7$s</a>"
+msgstr ""
+"Yayınlandı <span class=\"entry-date\"><time class=\"entry-date\" datetime="
+"\"%1$s\" pubdate>%2$s</time></span> at <a href=\"%3$s\" title=\"Tam boyutlu "
+"görüntüye bağlantı\">%4$s &times; %5$s</a> de <a href=\"%6$s\" title=\"Geri "
+"dön %7$s\" rel=\"galeri\">%7$s</a>"
+
+#: fruitful/image.php:39
+msgid "&larr; Previous"
+msgstr "&larr; Önceki"
+
+#: fruitful/image.php:40
+msgid "Next &rarr;"
+msgstr "Sonraki &rarr;"
+
+#: fruitful/image.php:93
+#, php-format
+msgid ""
+"<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Post a "
+"comment</a> or leave a trackback: <a class=\"trackback-link\" href=\"%s\" "
+"title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+msgstr ""
+"<a class=\"comment-link\" href=\"#respond\" title=\"Yorum gönder\">Bir yorum "
+"gönder</a> ya da geri izleme bırak: <a class=\"trackback-link\" href=\"%s\" "
+"title=\"İletin için geri izleme\" rel=\"trackback\">Geri izleme URL</a>."
+
+#: fruitful/image.php:95
+#, php-format
+msgid ""
+"Comments are closed, but you can leave a trackback: <a class=\"trackback-link"
+"\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback"
+"\">Trackback URL</a>."
+msgstr ""
+"Yorumlar kapatıldı, ancak bir geri izleme bırakabilirsiniz: <a class="
+"\"trackback-link\" href=\"%s\" title=\"İletin için geri izleme\" rel="
+"\"trackback\">Geri izleme URL</a>."
+
+#: fruitful/image.php:97
+msgid ""
+"Trackbacks are closed, but you can <a class=\"comment-link\" href=\"#respond"
+"\" title=\"Post a comment\">post a comment</a>."
+msgstr ""
+"Geri izlemeler kapatıldı, ancak <a class=\"comment-link\" href=\"#respond\" "
+"title=\"Bir yorum gönder\">bir yorum gönderebilirsin</a>."
+
+#: fruitful/image.php:99
+msgid "Both comments and trackbacks are currently closed."
+msgstr "Her ikisi de yorum ve notların şu anda kapalı."
+
+#: fruitful/no-results.php:15
+msgid "Nothing Found"
+msgstr "Hiçbir şey Bulunamadı"
+
+#: fruitful/no-results.php:21
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"İlk yazı yayınlamak için hazır mısınız? <a href=\"%1$s\">Buradan başlayın</"
+"a>."
+
+#: fruitful/no-results.php:25
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Üzgünüz, ama hiçbir şey sizin arama terimlerinizi eşleşti. Bazı farklı "
+"anahtar kelimeler ile tekrar deneyin."
+
+#: fruitful/no-results.php:30
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"Biz &rsquo: edebilir gibi görünüyor; yeniden arıyor; &rsquo bulacaksınız. "
+"Belki yardımcı olabilir arıyor."
+
+#: fruitful/search.php:15
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Arama Sonuçları için %s"
+
+#: fruitful/searchform.php:11 fruitful/searchform.php:13
+msgid "Search"
+msgstr "Arama"
+
+#: fruitful/searchform.php:12
+msgid "Type Here to Search"
+msgstr "Arama için Buraya Yazın"
+
+#: fruitful/sidebar-blogright.php:26 fruitful/sidebar-homepage.php:26
+#: fruitful/sidebar-page.php:26 fruitful/sidebar-single-post.php:26
+#: fruitful/sidebar.php:26
+msgid "Meta"
+msgstr "Meta"
+
+#: fruitful/taxonomy-post_format.php:18
+#, php-format
+msgid "%s Archives"
+msgstr "%s Arşivler"
+
+#: fruitful/inc/template-tags.php:27
+msgid "Post navigation"
+msgstr "İleti navigasyonu"
+
+#: fruitful/inc/template-tags.php:31
+msgid "&larr;"
+msgstr "&larr;"
+
+#: fruitful/inc/template-tags.php:32
+msgid "&rarr;"
+msgstr "&rarr;"
+
+#: fruitful/inc/template-tags.php:37
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> Daha eski iletiler"
+
+#: fruitful/inc/template-tags.php:41
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Daha yeni iletiler <span class=\"meta-nav\">&rarr;</span>"
+
+#: fruitful/inc/template-tags.php:66
+msgid "Pingback:"
+msgstr "Pingback:"
+
+#: fruitful/inc/template-tags.php:66 fruitful/inc/template-tags.php:92
+msgid "(Edit)"
+msgstr "(Düzenle)"
+
+#: fruitful/inc/template-tags.php:85
+#, php-format
+msgid "%s"
+msgstr "%s"
+
+#: fruitful/inc/template-tags.php:90
+#, php-format
+msgid "%1$s at %2$s"
+msgstr "%1$s at %2$s"
+
+#: fruitful/inc/template-tags.php:96
+msgid "Your comment is awaiting moderation."
+msgstr "Yorumunuz onay bekliyor."
+
+#: fruitful/inc/template-tags.php:121
+#, php-format
+msgid ""
+"Posted on <a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class="
+"\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</time></a><span class=\"byline"
+"\"> by <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" "
+"title=\"%6$s\" rel=\"author\">%7$s</a></span></span>"
+msgstr ""
+"Şuraya iletildi <a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class="
+"\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</time></a><span class=\"byline"
+"\"> by <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" "
+"title=\"%6$s\" rel=\"author\">%7$s</a></span></span>"
+
+#: fruitful/inc/template-tags.php:127
+#, php-format
+msgid "View all posts by %s"
+msgstr "%s tarafından tüm iletileri gör"
+
+#: fruitful/inc/widgets.php:17
+msgid "News Archive"
+msgstr "Haber Arşivi"
+
+#: fruitful/inc/widgets.php:18
+msgid "Use this widget to list your Link posts"
+msgstr "Senin bağlantı mesajlarını listelemek için bu bileşeni kullanın"
+
+#: fruitful/inc/widgets.php:51 fruitful/inc/widgets.php:62
+msgid "News-Archive"
+msgstr "Haber-Arşivi"
+
+#: fruitful/inc/widgets.php:152
+msgid "Title:"
+msgstr "Title:"
+
+#: fruitful/inc/widgets.php:155
+msgid "Number of posts to show:"
+msgstr "Mesaj Sayısı göstermek için:"
+
+#: fruitful/inc/widgets.php:159
+msgid "Text Message:"
+msgstr "Metin Mesajı:"
+
+#: fruitful/inc/func/fruitful-function.php:7
+msgid "Full width position"
+msgstr "Tam genişlik konumu"
+
+#: fruitful/inc/func/fruitful-function.php:11
+msgid "Centered position"
+msgstr "Ortalanmış konum"
+
+#: fruitful/inc/func/fruitful-function.php:22
+msgid "default"
+msgstr "default"
+
+#: fruitful/inc/func/fruitful-function.php:26
+msgid "dark"
+msgstr "koyu"
+
+#: fruitful/inc/func/fruitful-function.php:30
+msgid "bar"
+msgstr "bar"
+
+#: fruitful/inc/func/fruitful-function.php:34
+msgid "light"
+msgstr "ışık"
+
+#: fruitful/inc/func/fruitful-function.php:45
+msgid "FlexSlider"
+msgstr "FlexSlider"
+
+#: fruitful/inc/func/fruitful-function.php:49
+msgid "Nivo Slider"
+msgstr "Nivo Slider"
+
+#: fruitful/inc/func/fruitful-function.php:61
+msgid "Left"
+msgstr "Sol"
+
+#: fruitful/inc/func/fruitful-function.php:65
+msgid "Center"
+msgstr "Merkez"
+
+#: fruitful/inc/func/fruitful-function.php:69
+msgid "Right"
+msgstr "Sağ"
+
+#: fruitful/inc/func/fruitful-function.php:80
+#: fruitful/inc/func/fruitful-function.php:99
+msgid "Full width"
+msgstr "Tam genişlik"
+
+#: fruitful/inc/func/fruitful-function.php:84
+#: fruitful/inc/func/fruitful-function.php:107
+msgid "Right sidebar"
+msgstr "Sağ kenar çubuğu"
+
+#: fruitful/inc/func/fruitful-function.php:88
+#: fruitful/inc/func/fruitful-function.php:103
+msgid "Left sidebar"
+msgstr "Sol kenar çubuğu"
+
+#: fruitful/inc/func/fruitful-function.php:118
+msgid "2 products"
+msgstr "2 ürünler"
+
+#: fruitful/inc/func/fruitful-function.php:122
+msgid "3 products"
+msgstr "3 ürünler"
+
+#: fruitful/inc/func/fruitful-function.php:126
+msgid "4 products"
+msgstr "4 ürünler"
+
+#: fruitful/inc/func/fruitful-function.php:130
+msgid "5 products"
+msgstr "5 ürünler"
+
+#: fruitful/inc/func/fruitful-function.php:141
+msgid "random"
+msgstr "rastgele"
+
+#: fruitful/inc/func/fruitful-function.php:145
+msgid "sliceDownRight"
+msgstr "sliceDownRight"
+
+#: fruitful/inc/func/fruitful-function.php:149
+msgid "sliceDownLeft"
+msgstr "sliceDownLeft"
+
+#: fruitful/inc/func/fruitful-function.php:153
+msgid "sliceUpRight"
+msgstr "sliceUpRight"
+
+#: fruitful/inc/func/fruitful-function.php:157
+msgid "sliceUpDown"
+msgstr "sliceUpDown"
+
+#: fruitful/inc/func/fruitful-function.php:161
+msgid "sliceUpDownLeft"
+msgstr "sliceUpDownLeft"
+
+#: fruitful/inc/func/fruitful-function.php:165
+msgid "fold"
+msgstr "fold"
+
+#: fruitful/inc/func/fruitful-function.php:169
+#: fruitful/inc/func/fruitful-function.php:201
+msgid "fade"
+msgstr "fade"
+
+#: fruitful/inc/func/fruitful-function.php:173
+msgid "boxRandom"
+msgstr "boxRandom"
+
+#: fruitful/inc/func/fruitful-function.php:177
+msgid "boxRain"
+msgstr "boxRain"
+
+#: fruitful/inc/func/fruitful-function.php:181
+msgid "boxRainReverse"
+msgstr "boxRainReverse"
+
+#: fruitful/inc/func/fruitful-function.php:185
+msgid "boxRainGrow"
+msgstr "boxRainGrow"
+
+#: fruitful/inc/func/fruitful-function.php:189
+msgid "boxRainGrowReverse"
+msgstr "boxRainGrowReverse"
+
+#: fruitful/inc/func/fruitful-function.php:205
+msgid "slide"
+msgstr "kaydırma"
+
+#: fruitful/inc/func/fruitful-function.php:216
+msgid "horizontal"
+msgstr "yatay"
+
+#: fruitful/inc/func/fruitful-function.php:220
+msgid "vertical"
+msgstr "dikey"
+
+#: fruitful/inc/func/fruitful-function.php:231
+msgid "true"
+msgstr "doğru"
+
+#: fruitful/inc/func/fruitful-function.php:235
+msgid "false"
+msgstr "yanlış"
+
+#: fruitful/inc/func/fruitful-function.php:245
+msgid "Button menu"
+msgstr "Düğme menü"
+
+#: fruitful/inc/func/fruitful-function.php:249
+msgid "Select menu"
+msgstr "Menü seç"
+
+#: fruitful/inc/func/fruitful-function.php:259
+msgid "Arial, Helvetica, sans-serif"
+msgstr "Arial, Helvetica, sans-serif"
+
+#: fruitful/inc/func/fruitful-function.php:263
+msgid "Arial Black, Gadget, sans-serif"
+msgstr "Arial Black, Gadget, sans-serif"
+
+#: fruitful/inc/func/fruitful-function.php:267
+msgid "Comic Sans MS, Textile, cursive"
+msgstr "Comic Sans MS, Textile, cursive"
+
+#: fruitful/inc/func/fruitful-function.php:271
+msgid "Courier New, Courier, monospace"
+msgstr "Courier New, Courier, monospace"
+
+#: fruitful/inc/func/fruitful-function.php:275
+msgid "Georgia, Times New Roman, Times, serif"
+msgstr "Georgia, Times New Roman, Times, serif"
+
+#: fruitful/inc/func/fruitful-function.php:279
+msgid "Impact, Charcoal, sans-serif"
+msgstr "Impact, Charcoal, sans-serif"
+
+#: fruitful/inc/func/fruitful-function.php:283
+msgid "Lucida Console, Monaco, monospace"
+msgstr "Lucida Console, Monaco, monospace"
+
+#: fruitful/inc/func/fruitful-function.php:287
+msgid "Lucida Sans Unicode, Lucida Grande, sans-serif"
+msgstr "Lucida Sans Unicode, Lucida Grande, sans-serif"
+
+#: fruitful/inc/func/fruitful-function.php:291
+msgid "Palatino Linotype, Book Antiqua, Palatino, serif"
+msgstr "Palatino Linotype, Book Antiqua, Palatino, serif"
+
+#: fruitful/inc/func/fruitful-function.php:295
+msgid "Tahoma, Geneva, sans-serif"
+msgstr "Tahoma, Geneva, sans-serif"
+
+#: fruitful/inc/func/fruitful-function.php:299
+msgid "Times New Roman, Times, serif"
+msgstr "Times New Roman, Times, serif"
+
+#: fruitful/inc/func/fruitful-function.php:303
+msgid "Trebuchet MS, Helvetica, sans-serif"
+msgstr "Trebuchet MS, Helvetica, sans-serif"
+
+#: fruitful/inc/func/fruitful-function.php:307
+msgid "Verdana, Geneva, sans-serif"
+msgstr "v"
+
+#: fruitful/inc/func/fruitful-function.php:311
+msgid "MS Sans Serif, Geneva, sans-serif"
+msgstr "MS Sans Serif, Geneva, sans-serif"
+
+#: fruitful/inc/func/fruitful-function.php:315
+msgid "MS Serif, New York, serif"
+msgstr "MS Serif, New York, serif"
+
+#: fruitful/inc/func/fruitful-function.php:321
+msgid "Open Sans, sans-serif"
+msgstr "Open Sans, sans-serif"
+
+#: fruitful/inc/func/fruitful-function.php:325
+msgid "Lobster, cursive"
+msgstr "Lobster, cursive"
+
+#: fruitful/inc/func/fruitful-function.php:329
+msgid "Josefin Slab, serif"
+msgstr "Josefin Slab, serif"
+
+#: fruitful/inc/func/fruitful-function.php:333
+msgid "Arvo, serif"
+msgstr "Arvo, serif"
+
+#: fruitful/inc/func/fruitful-function.php:337
+msgid "Lato, sans-serif"
+msgstr "Lato, sans-serif"
+
+#: fruitful/inc/func/fruitful-function.php:341
+msgid "Vollkorn, serif"
+msgstr "Vollkorn, serif"
+
+#: fruitful/inc/func/fruitful-function.php:345
+msgid "Abril Fatface, cursive"
+msgstr "Abril Fatface, cursive"
+
+#: fruitful/inc/func/fruitful-function.php:349
+msgid "Ubuntu, sans-serif"
+msgstr "Ubuntu, sans-serif"
+
+#: fruitful/inc/func/fruitful-function.php:353
+msgid "PT Sans, sans-serif"
+msgstr "PT Sans, sans-serif"
+
+#: fruitful/inc/func/fruitful-function.php:357
+msgid "Old Standard TT, serif"
+msgstr "Old Standard TT, serif"
+
+#: fruitful/inc/func/fruitful-function.php:361
+msgid "Droid Sans, sans-serif"
+msgstr "Droid Sans, sans-serif"
+
+#: fruitful/inc/func/fruitful-function.php:372
+#: fruitful/inc/theme-options/theme-options.php:801
+msgid "Header"
+msgstr "Üst Bölüm"
+
+#: fruitful/inc/func/fruitful-function.php:376
+#: fruitful/inc/theme-options/theme-options.php:808
+msgid "Footer"
+msgstr "Alt Bölüm"
+
+#: fruitful/inc/func/fruitful-function.php:485
+msgid "Upload Image"
+msgstr "Görüntü Yükle"
+
+#: fruitful/inc/func/fruitful-function.php:491
+#: fruitful/inc/metaboxes/helpers/cmb_Meta_Box_types.php:309
+#: fruitful/inc/metaboxes/helpers/cmb_Meta_Box_types.php:724
+#: fruitful/inc/metaboxes/helpers/cmb_Meta_Box_types.php:786
+msgid "Remove"
+msgstr "Kaldır"
+
+#: fruitful/inc/func/fruitful-function.php:509
+msgid "Link URL"
+msgstr "Bağlantı URL"
+
+#: fruitful/inc/func/fruitful-function.php:515
+msgid "Target \"_blank\""
+msgstr "Hedef \"_blank\""
+
+#: fruitful/inc/func/fruitful-function.php:661
+msgid "http://fruitfulcode.com"
+msgstr "http://fruitfulcode.com"
+
+#: fruitful/inc/func/fruitful-function.php:661
+msgid "http://wordpress.org"
+msgstr "http://wordpress.org"
+
+#: fruitful/inc/func/plugin-activation.php:155
+msgid "Install Required Plugins"
+msgstr "Gerekli Eklentileri Yükleyin"
+
+#: fruitful/inc/func/plugin-activation.php:156
+msgid "Install Plugins"
+msgstr "Eklentileri Yükle"
+
+#: fruitful/inc/func/plugin-activation.php:157
+#: fruitful/inc/func/plugins-included.php:38
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr "Eklentileri Yükle: %s"
+
+#: fruitful/inc/func/plugin-activation.php:158
+msgid "Something went wrong."
+msgstr "Bir şeyler yanlış gitti."
+
+#: fruitful/inc/func/plugin-activation.php:159
+#: fruitful/inc/func/plugins-included.php:40
+#, php-format
+msgid "Fruitful theme requires the following plugin: %1$s."
+msgstr "%1$s: Fruitful tema aşağıdaki eklenti gerektiriyor."
+
+#: fruitful/inc/func/plugin-activation.php:160
+#: fruitful/inc/func/plugins-included.php:41
+#, php-format
+msgid "Fruitful theme recommends the following plugin: %1$s."
+msgstr "%1$s: Fruitful tema aşağıdaki eklenti önerir."
+
+#: fruitful/inc/func/plugin-activation.php:161
+#: fruitful/inc/func/plugins-included.php:42
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to install the %s plugin. "
+"Contact the administrator of this site for help on getting the plugin "
+"installed."
+msgstr ""
+"Üzgünüz, ama% s eklentisini yüklemek için doğru izinlere sahip değilsiniz. "
+"Yüklü eklenti alma konusunda yardım için bu sitenin yöneticisine başvurun."
+
+#: fruitful/inc/func/plugin-activation.php:162
+#: fruitful/inc/func/plugins-included.php:43
+#, php-format
+msgid "The following required plugin is currently inactive: %1$s."
+msgstr "Aşağıdaki gerekli eklenti şu anda etkin değil:%1$s."
+
+#: fruitful/inc/func/plugin-activation.php:163
+#: fruitful/inc/func/plugins-included.php:44
+#, php-format
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgstr "Aşağıdaki önerilen eklenti şu anda etkin değil: %1$s."
+
+#: fruitful/inc/func/plugin-activation.php:164
+#: fruitful/inc/func/plugins-included.php:45
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to activate the %s "
+"plugin. Contact the administrator of this site for help on getting the "
+"plugin activated."
+msgstr ""
+"Üzgünüz, ama %s eklenti etkinleştirmek için doğru izinlere sahip değilsiniz. "
+"Aktive eklenti alma konusunda yardım için bu sitenin yöneticisine başvurun."
+
+#: fruitful/inc/func/plugin-activation.php:165
+#: fruitful/inc/func/plugins-included.php:46
+#, php-format
+msgid ""
+"The following plugin needs to be updated to its latest version to ensure "
+"maximum compatibility with Fruitful theme: %1$s."
+msgstr ""
+"%1$s: Aşağıdaki eklenti bereketli tema ile maksimum uyumluluk sağlamak için "
+"en son sürüme güncellenmiş olması gerekiyor."
+
+#: fruitful/inc/func/plugin-activation.php:166
+#: fruitful/inc/func/plugins-included.php:47
+#, php-format
+msgid ""
+"Sorry, but you do not have the correct permissions to update the %s plugin. "
+"Contact the administrator of this site for help on getting the plugin "
+"updated."
+msgstr ""
+"Üzgünüz, ama %s eklentisi güncelleştirmek için doğru izinlere sahip "
+"değilsiniz. Güncellenmiş eklenti alma konusunda yardım için bu sitenin "
+"yöneticisine başvurun."
+
+#: fruitful/inc/func/plugin-activation.php:167
+#: fruitful/inc/func/plugins-included.php:48
+msgid "Begin installing plugin"
+msgstr "Eklentiyi yüklemeye başlıyor"
+
+#: fruitful/inc/func/plugin-activation.php:168
+msgid "Begin activating plugin"
+msgstr "Eklentiyi etkinleştirmeye başlıyor"
+
+#: fruitful/inc/func/plugin-activation.php:169
+#: fruitful/inc/func/plugins-included.php:50
+msgid "Return to Required Plugins Installer"
+msgstr "Gerekli Eklentiler Yükleyicisne Geri Dön"
+
+#: fruitful/inc/func/plugin-activation.php:170
+msgid "Return to the dashboard"
+msgstr "Başlangıça geri dön"
+
+#: fruitful/inc/func/plugin-activation.php:171
+#: fruitful/inc/func/plugin-activation.php:1843
+#: fruitful/inc/func/plugins-included.php:51
+msgid "Plugin activated successfully."
+msgstr "Eklenti etkinleştirme başarılı."
+
+#: fruitful/inc/func/plugin-activation.php:172
+#: fruitful/inc/func/plugin-activation.php:1541
+msgid "The following plugin was activated successfully:"
+msgstr "Aşağıdaki eklenti başarıyla devreye girer:"
+
+#: fruitful/inc/func/plugin-activation.php:173
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr "Tüm eklentileri yüklü ve başarıyla devreye. %1$s"
+
+#: fruitful/inc/func/plugin-activation.php:174
+msgid "Dismiss this notice"
+msgstr "Bu bildiriyi reddet"
+
+#: fruitful/inc/func/plugin-activation.php:1088
+msgid "External Link"
+msgstr "Harici Bağlantı"
+
+#: fruitful/inc/func/plugin-activation.php:1093
+msgid "Private Repository"
+msgstr "Özel Deposu"
+
+#: fruitful/inc/func/plugin-activation.php:1096
+msgid "Pre-Packaged"
+msgstr "Ön-Paketlemiş"
+
+#: fruitful/inc/func/plugin-activation.php:1100
+msgid "WordPress Repository"
+msgstr "Wordpress Deposu"
+
+#: fruitful/inc/func/plugin-activation.php:1103
+msgid "Required"
+msgstr "Gerekli"
+
+#: fruitful/inc/func/plugin-activation.php:1103
+msgid "Recommended"
+msgstr "Önerilen"
+
+#: fruitful/inc/func/plugin-activation.php:1106
+msgid "Not Installed"
+msgstr "Yüklenmedi"
+
+#: fruitful/inc/func/plugin-activation.php:1108
+msgid "Installed But Not Activated"
+msgstr "Yüklü Ancak Etkin Değil"
+
+#: fruitful/inc/func/plugin-activation.php:1278
+#, php-format
+msgid ""
+"No plugins to install or activate. <a href=\"%1$s\" title=\"Return to the "
+"Dashboard\">Return to the Dashboard</a>"
+msgstr ""
+"Hiçbir eklentileri yüklenmedi veya etkinleştirilmedi. <a href=\"%1$s\" title="
+"\"Başlangıca Dön\">Başlangıca Dön</a>"
+
+#: fruitful/inc/func/plugin-activation.php:1294
+msgid "Plugin"
+msgstr "Eklenti"
+
+#: fruitful/inc/func/plugin-activation.php:1295
+msgid "Source"
+msgstr "Kaynak"
+
+#: fruitful/inc/func/plugin-activation.php:1296
+msgid "Type"
+msgstr "Tür"
+
+#: fruitful/inc/func/plugin-activation.php:1297
+msgid "Status"
+msgstr "Durum"
+
+#: fruitful/inc/func/plugin-activation.php:1315
+msgid "Install"
+msgstr "Yükle"
+
+#: fruitful/inc/func/plugin-activation.php:1316
+msgid "Activate"
+msgstr "Etkin"
+
+#: fruitful/inc/func/plugin-activation.php:1826
+msgid "Install package not available."
+msgstr "Yüklü paket mevcut değil."
+
+#: fruitful/inc/func/plugin-activation.php:1827
+#, php-format
+msgid "Downloading install package from <span class=\"code\">%s</span>&#8230;"
+msgstr "yükleme paketi indirliyor <span class=\"code\">%s</span>&#8230;"
+
+#: fruitful/inc/func/plugin-activation.php:1828
+msgid "Unpacking the package&#8230;"
+msgstr "Paket açılıyor&#8230;"
+
+#: fruitful/inc/func/plugin-activation.php:1829
+msgid "Installing the plugin&#8230;"
+msgstr "Ekletni kuruluyor&#8230;"
+
+#: fruitful/inc/func/plugin-activation.php:1830
+msgid "Plugin install failed."
+msgstr "Eklenti kurulumu başarısız."
+
+#: fruitful/inc/func/plugin-activation.php:1831
+msgid "Plugin installed successfully."
+msgstr "Eklenti başarıyla kuruldu."
+
+#: fruitful/inc/func/plugin-activation.php:1842
+msgid "Plugin activation failed."
+msgstr "Eklenti etkinleştirme başarısız."
+
+#: fruitful/inc/func/plugin-activation.php:1952
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+"Kurulum ve aktivasyon işlemi başlıyor. Bu süreç, bazı bilgisayarlar üzerinde "
+"bir süre alabilir, bu yüzden lütfen sabırlı olun olabilir."
+
+#: fruitful/inc/func/plugin-activation.php:1953
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr "%1$s yükleme ve etkinleştirme başarılı."
+
+#: fruitful/inc/func/plugin-activation.php:1953
+#: fruitful/inc/func/plugin-activation.php:1962
+msgid "Show Details"
+msgstr "Detayları Göster"
+
+#: fruitful/inc/func/plugin-activation.php:1953
+#: fruitful/inc/func/plugin-activation.php:1962
+msgid "Hide Details"
+msgstr "Gizli Detaylar"
+
+#: fruitful/inc/func/plugin-activation.php:1954
+msgid "All installations and activations have been completed."
+msgstr "Tüm kurulumlar ve etkinleştirmeler tamamlanmıştır."
+
+#: fruitful/inc/func/plugin-activation.php:1955
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr "Eklenti Kuruluyor ve Etkinleştiriliyor %1$s (%2$d/%3$d)"
+
+#: fruitful/inc/func/plugin-activation.php:1959
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+"Yükleme işlemi başlıyor. Bu, bazı bilgisayarlar üzerinde biaz zaman "
+"alabilir, bu yüzden lütfen sabırlı olun olabilir."
+
+#: fruitful/inc/func/plugin-activation.php:1960
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr "Yüklerken bir hata oluştu. %1$s: <strong>%2$s</strong>."
+
+#: fruitful/inc/func/plugin-activation.php:1961
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr "Yükleme %1$s başarısız."
+
+#: fruitful/inc/func/plugin-activation.php:1962
+#, php-format
+msgid "%1$s installed successfully."
+msgstr "%1$s başarıyla yüklendi."
+
+#: fruitful/inc/func/plugin-activation.php:1963
+msgid "All installations have been completed."
+msgstr "Tük kurulumlar tamamlandı."
+
+#: fruitful/inc/func/plugin-activation.php:1964
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr "Eklenti Kuruluyor %1$s (%2$d/%3$d)"
+
+#: fruitful/inc/func/plugin-activation.php:2055
+msgid "Return to the Dashboard"
+msgstr "Başlangıca Dön"
+
+#: fruitful/inc/func/plugins-included.php:36
+msgid "Fruitful Plugin Integration"
+msgstr "Fruitful Eklenti Entegrasyonu"
+
+#: fruitful/inc/func/plugins-included.php:37
+msgid "Plugin Integration"
+msgstr "Eklenti Entegrasyonu"
+
+#: fruitful/inc/func/plugins-included.php:39
+msgid "Something went wrong with the plugin API."
+msgstr "Eklenti API'ı ile bir şeyler yanlış oldu."
+
+#: fruitful/inc/func/plugins-included.php:49
+msgid "Activate installed plugin"
+msgstr "Yüklü eklentiyi etkinleştir"
+
+#: fruitful/inc/func/plugins-included.php:52
+#, php-format
+msgid "All plugins installed and activated successfully. %s"
+msgstr "Tüm eklentiler başarıyla kuruldu ve etkinleştirldi. %s"
+
+#: fruitful/inc/metaboxes/init-for-objestcs-mb.php:34
+msgid "Slider settings"
+msgstr "Kaydırma Ayarları"
+
+#: fruitful/inc/metaboxes/init-for-objestcs-mb.php:42
+msgid "Slider display"
+msgstr "Kaydırma Ekranı"
+
+#: fruitful/inc/metaboxes/init-for-objestcs-mb.php:44
+msgid "Select the option to display the corresponding slider"
+msgstr "Ilgili kaydırıcıyı görüntülemek için seçeneği seçin"
+
+#: fruitful/inc/metaboxes/init-for-objestcs-mb.php:47
+msgid "Disable slider"
+msgstr "Kaydırıcıyı devre dışı bırak"
+
+#: fruitful/inc/metaboxes/init-for-objestcs-mb.php:48
+msgid "Full width slider"
+msgstr "Tam geniş kaydırıcı"
+
+#: fruitful/inc/metaboxes/init-for-objestcs-mb.php:49
+msgid "Boxed slider"
+msgstr "Kutulu kaydırıcı"
+
+#: fruitful/inc/metaboxes/init-for-objestcs-mb.php:59
+msgid "Page settings"
+msgstr "Sayfa ayarları"
+
+#: fruitful/inc/metaboxes/init-for-objestcs-mb.php:66
+#: fruitful/inc/metaboxes/init-for-objestcs-mb.php:85
+#: fruitful/inc/theme-options/theme-options.php:45
+msgid "Layout"
+msgstr "Düzen"
+
+#: fruitful/inc/metaboxes/init-for-objestcs-mb.php:67
+msgid "Select a specific layout for this page."
+msgstr "Bu sayfa için özel bir düzeni seçin."
+
+#: fruitful/inc/metaboxes/init-for-objestcs-mb.php:78
+msgid "Post settings"
+msgstr "İleti ayarları"
+
+#: fruitful/inc/metaboxes/init-for-objestcs-mb.php:86
+msgid "Select a specific layout for this post."
+msgstr "Bu yazı için özel bir düzeni seçin."
+
+#: fruitful/inc/metaboxes/init.php:258
+msgid "Clear"
+msgstr "Temiz"
+
+#: fruitful/inc/metaboxes/init.php:259
+msgid "Default"
+msgstr "Default"
+
+#: fruitful/inc/metaboxes/init.php:260
+msgid "Select Color"
+msgstr "Renk Seç"
+
+#: fruitful/inc/metaboxes/init.php:261
+msgid "Current Color"
+msgstr "Geçerli Renk"
+
+#: fruitful/inc/metaboxes/init.php:293
+msgid "Select / Deselect All"
+msgstr "Hepsini Seç / Seçimi Kaldır"
+
+#: fruitful/inc/metaboxes/init.php:1187
+#: fruitful/inc/theme-options/theme-options.php:794
+#: fruitful/inc/theme-options/theme-options.php:822
+msgid "Save"
+msgstr "Kaydet"
+
+#: fruitful/inc/metaboxes/helpers/cmb_Meta_Box_ajax.php:47
+msgid "Please Try Again"
+msgstr "Lütfen Tekrar Deneyin"
+
+#: fruitful/inc/metaboxes/helpers/cmb_Meta_Box_ajax.php:131
+msgid "Remove Embed"
+msgstr "Gömülüyü Kaldır"
+
+#: fruitful/inc/metaboxes/helpers/cmb_Meta_Box_ajax.php:134
+#, php-format
+msgid "No oEmbed Results Found for %s. View more info at"
+msgstr "Hiçbir Göm Sonuçları %s için Bulunamadı. Daha fazla bilgi görüntüle:"
+
+#: fruitful/inc/metaboxes/helpers/cmb_Meta_Box_field.php:460
+msgid "Add Group"
+msgstr "Grup Ekle"
+
+#: fruitful/inc/metaboxes/helpers/cmb_Meta_Box_field.php:461
+msgid "Remove Group"
+msgstr "Grubu Kaldır"
+
+#: fruitful/inc/metaboxes/helpers/cmb_Meta_Box_types.php:253
+msgid "Add Row"
+msgstr "Satır Ekle"
+
+#: fruitful/inc/metaboxes/helpers/cmb_Meta_Box_types.php:619
+#: fruitful/inc/metaboxes/helpers/cmb_Meta_Box_types.php:653
+msgid "No terms"
+msgstr "Koşul yok"
+
+#: fruitful/inc/metaboxes/helpers/cmb_Meta_Box_types.php:692
+#: fruitful/inc/metaboxes/helpers/cmb_Meta_Box_types.php:746
+msgid "Add or Upload File"
+msgstr "Dosya Ekle veya Yükle"
+
+#: fruitful/inc/metaboxes/helpers/cmb_Meta_Box_types.php:713
+#: fruitful/inc/metaboxes/helpers/cmb_Meta_Box_types.php:778
+msgid "Remove Image"
+msgstr "Görüntüyü Kaldır"
+
+#: fruitful/inc/metaboxes/helpers/cmb_Meta_Box_types.php:724
+#: fruitful/inc/metaboxes/helpers/cmb_Meta_Box_types.php:786
+msgid "File:"
+msgstr "Dosya:"
+
+#: fruitful/inc/metaboxes/helpers/cmb_Meta_Box_types.php:724
+#: fruitful/inc/metaboxes/helpers/cmb_Meta_Box_types.php:786
+msgid "Download"
+msgstr "Download"
+
+#: fruitful/inc/theme-options/theme-options.php:45
+msgid ""
+"Theme supported 2 types of html layout. Default responsive  setting which "
+"adapt for mobile devices and static page with fixed width. Uncheck arrow "
+"below if you need static website display. "
+msgstr ""
+"Tema html düzeni 2 tür destekledi. Mobil cihazlar ve sabit genişlikte statik "
+"sayfa için adapte duyarlı ayarını varsayılan. Eğer statik web sitesi ekran "
+"gerekiyorsa işaretini kaldırın aşağıda ok."
+
+#: fruitful/inc/theme-options/theme-options.php:46
+msgid "Comments"
+msgstr "Yorumlar"
+
+#: fruitful/inc/theme-options/theme-options.php:46
+msgid ""
+"If you want to display comments on your post page or page, select options "
+"below."
+msgstr ""
+"Eğer sizin sonrası sayfasında veya sayfadaki yorum görüntülemek aşağıdaki "
+"seçenekleri seçmek istiyorsanız."
+
+#: fruitful/inc/theme-options/theme-options.php:47
+msgid "Default theme styles"
+msgstr "Default tema biçimleri"
+
+#: fruitful/inc/theme-options/theme-options.php:47
+msgid ""
+"Default CSS. Theme option for styling is not working, if this option enable."
+msgstr ""
+"Standart CSS. Bu seçenek etkinleştirmek eğer şekillendirme için Tema "
+"seçeneği, çalışmıyor."
+
+#: fruitful/inc/theme-options/theme-options.php:48
+msgid "Front page template with latest posts"
+msgstr "Son mesajlar ön sayfa şablonu"
+
+#: fruitful/inc/theme-options/theme-options.php:48
+msgid "Settings > Reading > Front page displays > Your latest posts"
+msgstr "Ayarlar > okuma > Ön sayfayı görüntüle > Son yazıların"
+
+#: fruitful/inc/theme-options/theme-options.php:49
+msgid "Custom wordpress pages layout"
+msgstr "Özel wordpress sayfa düzeni"
+
+#: fruitful/inc/theme-options/theme-options.php:49
+msgid "Set template for custom pages."
+msgstr "Özel sayfalar için şablon ayarla"
+
+#: fruitful/inc/theme-options/theme-options.php:50
+msgid "Select option below for show featured image on single post page"
+msgstr ""
+"Göstermek için aşağıda seçeneğini seçin tek ayaklı sayfasında görüntüyü "
+"özellikli"
+
+#: fruitful/inc/theme-options/theme-options.php:50
+msgid "Multilingual Switch in Header (WPML)"
+msgstr "Üst Bölümde Çoklu Dil Değiştir (WPML)"
+
+#: fruitful/inc/theme-options/theme-options.php:50
+msgid "If you wish to show Language Switch in header, select option below. "
+msgstr ""
+"Eğer başlığında Dil Anahtarı göstermek aşağıda seçeneğini seçmek "
+"istiyorsanız."
+
+#: fruitful/inc/theme-options/theme-options.php:50
+msgid "Show Featured image on single post"
+msgstr "Tek yayında Çıkan görüntüyü göster"
+
+#: fruitful/inc/theme-options/theme-options.php:52
+msgid "Reset options"
+msgstr "Seçenekleri ayarla"
+
+#: fruitful/inc/theme-options/theme-options.php:52
+msgid "All theme options will be reset to default. "
+msgstr "Tüm tema seçenekleri varsayılan sıfırlanır olacaktır."
+
+#: fruitful/inc/theme-options/theme-options.php:54
+msgid "Sticky  header"
+msgstr "Yapışkan üst bölüm"
+
+#: fruitful/inc/theme-options/theme-options.php:54
+msgid "Options relating to the website header"
+msgstr "Web sitesi başlığına ilişkin Seçenekleri"
+
+#: fruitful/inc/theme-options/theme-options.php:55
+msgid "Background for header"
+msgstr "Başlık için Arkaplan"
+
+#: fruitful/inc/theme-options/theme-options.php:55
+msgid ""
+"Upload image with full width for background in header area. (Supported "
+"files .png, .jpg, .gif)  "
+msgstr ""
+"Başlık alanında arka tam genişliği ile resim yükleyin. (Desteklenen dosya ."
+"png, .jpg, .gif)"
+
+#: fruitful/inc/theme-options/theme-options.php:56
+msgid "Background image size"
+msgstr "Arka plan görüntü boyutu"
+
+#: fruitful/inc/theme-options/theme-options.php:56
+msgid "Choose size for background image - full width or only for content area."
+msgstr ""
+"Tam genişlik veya sadece içerik alanı için - arka plan görüntüsü boyutunu "
+"seçin."
+
+#: fruitful/inc/theme-options/theme-options.php:57
+msgid "Height for header area"
+msgstr "Başlık alanı için Yükseklik"
+
+#: fruitful/inc/theme-options/theme-options.php:57
+msgid "Minimum height in pixels"
+msgstr "Piksel Minimum yükseklik"
+
+#: fruitful/inc/theme-options/theme-options.php:58
+msgid "Menu Position"
+msgstr "Menü Konumu"
+
+#: fruitful/inc/theme-options/theme-options.php:58
+msgid "Set menu position."
+msgstr "Menü konumunu ayarla."
+
+#: fruitful/inc/theme-options/theme-options.php:59
+msgid "Type of Responsive menu"
+msgstr "Duyarlı Menü türü"
+
+#: fruitful/inc/theme-options/theme-options.php:59
+msgid "Set type of responsive menu."
+msgstr "Duyarlı menü türünü ayarla"
+
+#: fruitful/inc/theme-options/theme-options.php:61
+msgid "Background Image"
+msgstr "Arkaplan Görüntüsü"
+
+#: fruitful/inc/theme-options/theme-options.php:61
+msgid ""
+"Upload your background image for site background. (Supported files .png, ."
+"jpg, .gif)"
+msgstr ""
+"Sitesi arka plan için arka plan resmini yükleyin. (Desteklenen dosya .png, ."
+"jpg, .gif)"
+
+#: fruitful/inc/theme-options/theme-options.php:62
+msgid "Background Color "
+msgstr "Arkaplan rengi"
+
+#: fruitful/inc/theme-options/theme-options.php:62
+msgid "Choose color for body background"
+msgstr "Gövde arka plan rengini seçin"
+
+#: fruitful/inc/theme-options/theme-options.php:63
+msgid "Background color for content  "
+msgstr "Içerik arka plan rengi"
+
+#: fruitful/inc/theme-options/theme-options.php:63
+msgid "Choose color for main content area"
+msgstr "Choose color for main content area"
+
+#: fruitful/inc/theme-options/theme-options.php:65
+msgid "Logo image"
+msgstr "Logo görüntüsü"
+
+#: fruitful/inc/theme-options/theme-options.php:65
+msgid ""
+"Upload logo image for your website. Size is original (Supported files .png, ."
+"jpg, .gif)"
+msgstr ""
+"Web siteniz için logo resim yükleyin. Boyutu orijinal (Desteklenen dosya, ."
+"png .jpg, .gif)"
+
+#: fruitful/inc/theme-options/theme-options.php:67
+msgid "Favicon"
+msgstr "Favicon"
+
+#: fruitful/inc/theme-options/theme-options.php:67
+msgid "Upload needed image for site favicon. (Supported files .ico (16x16))"
+msgstr ""
+"Sitenin simgesine için gerekli resim yükleyin. (Desteklenen dosya .ıco "
+"(16x16))"
+
+#: fruitful/inc/theme-options/theme-options.php:68
+msgid "Logo Position"
+msgstr "Logo Konumu"
+
+#: fruitful/inc/theme-options/theme-options.php:68
+msgid "Set Logo Position"
+msgstr "Logo Konumunu Ayarla"
+
+#: fruitful/inc/theme-options/theme-options.php:71
+msgid "Main menu color"
+msgstr "Ana Manü rengi"
+
+#: fruitful/inc/theme-options/theme-options.php:71
+msgid "Choose your colors for main menu in header"
+msgstr "Başlığında ana menüde için renkleri seçin"
+
+#: fruitful/inc/theme-options/theme-options.php:72
+msgid "Dropdown menu color"
+msgstr "Açılır menü rengi"
+
+#: fruitful/inc/theme-options/theme-options.php:72
+msgid "Choose your colors for dropdown menu in header"
+msgstr "Başlığında açılan menü renkleri seçin"
+
+#: fruitful/inc/theme-options/theme-options.php:73
+msgid "General font color"
+msgstr "Genel font rengi"
+
+#: fruitful/inc/theme-options/theme-options.php:73
+msgid "Choose your colors for text and links"
+msgstr "Metin ve bağlantılar için renkleri seçin"
+
+#: fruitful/inc/theme-options/theme-options.php:74
+msgid "Color for lines"
+msgstr "Hatlar için Renk"
+
+#: fruitful/inc/theme-options/theme-options.php:74
+msgid "Choose your colors for lines and separators"
+msgstr "Hatları ve ayırıcılar için renkleri seçin"
+
+#: fruitful/inc/theme-options/theme-options.php:75
+msgid "Color for buttons"
+msgstr "Düğmeler için renk"
+
+#: fruitful/inc/theme-options/theme-options.php:75
+msgid "Choose your colors for buttons"
+msgstr "Düğmeler için renkleri seçin"
+
+#: fruitful/inc/theme-options/theme-options.php:78
+#: fruitful/inc/theme-options/theme-options.php:805
+msgid "Fonts"
+msgstr "Yazı Tipi"
+
+#: fruitful/inc/theme-options/theme-options.php:78
+msgid "Popular web safe font collection, select and use for your needs."
+msgstr ""
+"Popüler web güvenli yazı toplama, seçme ve ihtiyaçlarınız için kullanın."
+
+#: fruitful/inc/theme-options/theme-options.php:80
+msgid "Headers"
+msgstr "Üst Bölüm"
+
+#: fruitful/inc/theme-options/theme-options.php:80
+msgid "Choose font-family for all headlines."
+msgstr "Tüm başlıkları için font-ailesi seçin."
+
+#: fruitful/inc/theme-options/theme-options.php:81
+#: fruitful/inc/theme-options/theme-options.php:506
+msgid "Menu"
+msgstr "Menü"
+
+#: fruitful/inc/theme-options/theme-options.php:81
+msgid "Choose font-family for primary menu."
+msgstr "Birincil menü için font-ailesi seçin."
+
+#: fruitful/inc/theme-options/theme-options.php:82
+msgid "Body"
+msgstr "Gövde"
+
+#: fruitful/inc/theme-options/theme-options.php:82
+msgid "Choose font-family for content."
+msgstr "Içerik için font-ailesi seçin."
+
+#: fruitful/inc/theme-options/theme-options.php:84
+msgid "Font size"
+msgstr "Font boyutu"
+
+#: fruitful/inc/theme-options/theme-options.php:84
+msgid ""
+"Choose font size for specific html elements. Set size as number, without px."
+msgstr ""
+"Belirli html elemanları için yazı tipi boyutunu seçin. Px olmadan, sayı "
+"olarak boyutunu ayarlayın."
+
+#: fruitful/inc/theme-options/theme-options.php:85
+#: fruitful/inc/theme-options/theme-options.php:806
+msgid "Slider"
+msgstr "Kaydırıcı"
+
+#: fruitful/inc/theme-options/theme-options.php:85
+msgid "Select a slider type that will be used by default."
+msgstr "Varsayılan olarak kullanılacak bir kaydırıcı türü seçin."
+
+#: fruitful/inc/theme-options/theme-options.php:86
+msgid "Slider Options"
+msgstr "Kaydırıcı Seçenekleri"
+
+#: fruitful/inc/theme-options/theme-options.php:86
+msgid ""
+"Choose needed options for slider: animation type, sliding direction, speed "
+"of animations, etc"
+msgstr ""
+"Vb animasyon türü, sürgülü yönünü, animasyonlar hızını,: kaymak için gerekli "
+"seçenekleri seçin"
+
+#: fruitful/inc/theme-options/theme-options.php:87
+msgid "Slides"
+msgstr "Kaydırmalar"
+
+#: fruitful/inc/theme-options/theme-options.php:87
+msgid ""
+"Add images to slider (Supported files .png, .jpg, .gif). If you want to "
+"change order, just drag and drop it. Image size for slides is original from "
+"media gallery, please upload images in same size, to get best display on "
+"page. To display slider in needed place use shortcode [fruitful_slider]. "
+"Current theme version support only one slider per website. "
+msgstr ""
+"Kaymak görüntüleri ekleyin (Desteklenen dosya .png, .jpg, .gif). Eğer "
+"sırasını değiştirmek istiyorsanız, sadece sürükle ve bırak. Slaytlar için "
+"Görüntü boyutu medya galeri orijinal sayfa en iyi görüntüyü elde etmek için, "
+"aynı boyutta resim yüklemek lütfen. [Fruitful_slider] gerekli yerde kullanım "
+"SHORTCODE kaydırıcıyı görüntülemek için. Güncel tema sürüm desteği web "
+"sitesi başına sadece bir kaymak."
+
+#: fruitful/inc/theme-options/theme-options.php:89
+msgid "Socials Links Position"
+msgstr "Sosyal Bağlantılar Konumu"
+
+#: fruitful/inc/theme-options/theme-options.php:89
+msgid "Choose place where social links will be displayed."
+msgstr "Sosyal bağlantılar görüntülenir yer seçin."
+
+#: fruitful/inc/theme-options/theme-options.php:90
+msgid "Socials Links"
+msgstr "Sosyal Bağlantılar"
+
+#: fruitful/inc/theme-options/theme-options.php:90
+msgid ""
+"Add link to your social media profiles. Icons with link will be display in "
+"header or footer."
+msgstr ""
+"Sosyal medya profilleri bağlantı ekleyin. Bağlantıya sahip Simgeler üstbilgi "
+"veya altbilgi ekran olacak."
+
+#: fruitful/inc/theme-options/theme-options.php:91
+msgid "Footer options"
+msgstr "Alt bölüm seçenekleri"
+
+#: fruitful/inc/theme-options/theme-options.php:91
+msgid "Replace default theme copyright information and links"
+msgstr "Varsayılan tema telif hakkı bilgileri ve bağlantıları değiştirin"
+
+#: fruitful/inc/theme-options/theme-options.php:93
+#: fruitful/inc/theme-options/theme-options.php:809
+msgid "Custom CSS"
+msgstr "Özel CSS"
+
+#: fruitful/inc/theme-options/theme-options.php:93
+msgid ""
+"Theme has two css files style.css and fixed-style.css which use default "
+"styles for front-end responsive and static layout. Do not edit theme default "
+"css files, use textarea editor below for overwriting all css styles."
+msgstr ""
+"Tema iki css dosyaları style.css ve ön-uç duyarlı ve statik düzen için "
+"kullanılması varsayılan stilleri sabit style.css sahiptir. Tüm css stilleri "
+"yazılmadan için aşağıdaki tema varsayılan css dosyaları, kullanım textarea "
+"editörü düzenleme yok."
+
+#: fruitful/inc/theme-options/theme-options.php:96
+msgid "Show cart in header"
+msgstr "Başlığında göster sepeti"
+
+#: fruitful/inc/theme-options/theme-options.php:96
+msgid "If you want to display cart link in header select options below."
+msgstr ""
+"Aşağıdaki başlık seçme seçenekleri cart bağlantısını görüntülemek "
+"istiyorsanız."
+
+#: fruitful/inc/theme-options/theme-options.php:97
+msgid "Woocommerce Shop Sidebar"
+msgstr "WooCommerce Dükkanı Kenar Çubuğu"
+
+#: fruitful/inc/theme-options/theme-options.php:97
+#: fruitful/inc/theme-options/theme-options.php:98
+msgid "Show or hide sidebar"
+msgstr "Göster veya gizle kenar çubuğu"
+
+#: fruitful/inc/theme-options/theme-options.php:98
+msgid "Woocommerce Product Sidebar"
+msgstr "WooCommerce Ürün Kenar Çubuğu"
+
+#: fruitful/inc/theme-options/theme-options.php:99
+msgid "Woocommerce pages products per row"
+msgstr "Satır başına WooCommerce sayfa ürünler"
+
+#: fruitful/inc/theme-options/theme-options.php:99
+msgid "Choose number of products"
+msgstr "Ürün sayısını seçiniz"
+
+#: fruitful/inc/theme-options/theme-options.php:100
+msgid "Number of products on Shop pages"
+msgstr "Mağaza sayfalarında ürünlerin sayısı"
+
+#: fruitful/inc/theme-options/theme-options.php:100
+msgid "Choose number of products. Write -1 for show all products on one page"
+msgstr ""
+"Ürünlerin sayısını seçin. Yazın -1 göstermek için tüm ürünleri tek bir "
+"sayfada"
+
+#: fruitful/inc/theme-options/theme-options.php:142
+#: fruitful/inc/theme-options/theme-options.php:157
+#: fruitful/inc/theme-options/theme-options.php:793
+msgid "Theme Options"
+msgstr "Tema Seçenekleri"
+
+#: fruitful/inc/theme-options/theme-options.php:178
+msgid "Dummy data"
+msgstr "Sahte Veri"
+
+#: fruitful/inc/theme-options/theme-options.php:187
+msgid "Responsive"
+msgstr "Duyarlı"
+
+#: fruitful/inc/theme-options/theme-options.php:197
+msgid "Display comment on posts page"
+msgstr "Mesajlar sayfasında Ekran yorum"
+
+#: fruitful/inc/theme-options/theme-options.php:202
+msgid "Display comment on page"
+msgstr "Sayfadaki Ekran yorum"
+
+#: fruitful/inc/theme-options/theme-options.php:213
+msgid "Enabled"
+msgstr "Etkinleştirildi"
+
+#: fruitful/inc/theme-options/theme-options.php:224
+#: fruitful/inc/theme-options/theme-options.php:235
+#: fruitful/inc/theme-options/theme-options.php:254
+msgid "Enable"
+msgstr "Etkin"
+
+#: fruitful/inc/theme-options/theme-options.php:244
+msgid "Reset Defaults"
+msgstr "Defaults Ayarla"
+
+#: fruitful/inc/theme-options/theme-options.php:295
+msgid "Copyright section"
+msgstr "Telif bölümü"
+
+#: fruitful/inc/theme-options/theme-options.php:302
+msgid "Styles editor"
+msgstr "Biçim düzenleyici"
+
+#: fruitful/inc/theme-options/theme-options.php:316
+msgid "Background  repeat"
+msgstr "Arkaplanı tekrarla"
+
+#: fruitful/inc/theme-options/theme-options.php:330
+msgid "Header background-color"
+msgstr "Üst bölüm arkaplan rengi"
+
+#: fruitful/inc/theme-options/theme-options.php:450
+msgid "Width"
+msgstr "Genişlik"
+
+#: fruitful/inc/theme-options/theme-options.php:452
+msgid "Height"
+msgstr "Yükseklik"
+
+#: fruitful/inc/theme-options/theme-options.php:470
+#: fruitful/inc/theme-options/theme-options.php:481
+#: fruitful/inc/theme-options/theme-options.php:491
+msgid "Sample Font"
+msgstr "Örnek Font"
+
+#: fruitful/inc/theme-options/theme-options.php:500
+msgid "H1"
+msgstr "H1"
+
+#: fruitful/inc/theme-options/theme-options.php:501
+msgid "H2"
+msgstr "H2"
+
+#: fruitful/inc/theme-options/theme-options.php:502
+msgid "H3"
+msgstr "H3"
+
+#: fruitful/inc/theme-options/theme-options.php:503
+msgid "H4"
+msgstr "H4"
+
+#: fruitful/inc/theme-options/theme-options.php:504
+msgid "H5"
+msgstr "H5"
+
+#: fruitful/inc/theme-options/theme-options.php:505
+msgid "H6"
+msgstr "H6"
+
+#: fruitful/inc/theme-options/theme-options.php:507
+msgid "P"
+msgstr "P"
+
+#: fruitful/inc/theme-options/theme-options.php:522
+msgid "View Options"
+msgstr "Seçenekleri Görüntüle"
+
+#: fruitful/inc/theme-options/theme-options.php:525
+msgid "No Slider Select!"
+msgstr "Hiçbir Kaydırıcı Seçilmedi"
+
+#: fruitful/inc/theme-options/theme-options.php:528
+msgid "Animation type"
+msgstr "Canlandırma türü"
+
+#: fruitful/inc/theme-options/theme-options.php:529
+msgid "Sliding direction, \"horizontal\" or \"vertical\""
+msgstr "Kaydırma yönü \"yatay\" veya \"dikey\""
+
+#: fruitful/inc/theme-options/theme-options.php:530
+msgid "Reverse the animation direction"
+msgstr "Canlandırma yönünü ters çevir"
+
+#: fruitful/inc/theme-options/theme-options.php:531
+msgid "Animate slider automatically"
+msgstr "Otomatik kaydırma çubuğunu canlandırın"
+
+#: fruitful/inc/theme-options/theme-options.php:532
+msgid "Set the speed of the slideshow cycling, in milliseconds"
+msgstr "Milisaniye cinsinden, slayt bisiklet hızını ayarlama"
+
+#: fruitful/inc/theme-options/theme-options.php:533
+msgid "Set the speed of animations, in milliseconds"
+msgstr "Milisaniye cinsinden, animasyonlar hızını ayarlama"
+
+#: fruitful/inc/theme-options/theme-options.php:534
+msgid "Set an initialization delay, in milliseconds"
+msgstr "Milisaniye cinsinden bir başlatma gecikmesini ayarlayın"
+
+#: fruitful/inc/theme-options/theme-options.php:535
+msgid "Randomize slide order"
+msgstr "Rastgele kaydırma düzeni"
+
+#: fruitful/inc/theme-options/theme-options.php:536
+msgid "Manual control usage"
+msgstr "Elle denetim kullanımı"
+
+#: fruitful/inc/theme-options/theme-options.php:539
+msgid "Slider Skins"
+msgstr "Kaydırma Kabuğu"
+
+#: fruitful/inc/theme-options/theme-options.php:540
+msgid "Effect"
+msgstr "Etki"
+
+#: fruitful/inc/theme-options/theme-options.php:541
+msgid "For slice animations"
+msgstr "Dilim animasyonlar için"
+
+#: fruitful/inc/theme-options/theme-options.php:542
+msgid "For box animations (Cols)"
+msgstr "(Sütn) kutu animasyonlar için"
+
+#: fruitful/inc/theme-options/theme-options.php:543
+msgid "For box animations (Rows)"
+msgstr "Kutu animasyonlar için (Satırlar)"
+
+#: fruitful/inc/theme-options/theme-options.php:544
+msgid "Slide transition speed"
+msgstr "Slayt geçiş hızı"
+
+#: fruitful/inc/theme-options/theme-options.php:545
+msgid "How long each slide will show"
+msgstr "Her slayt gösterecektir ne kadar süre"
+
+#: fruitful/inc/theme-options/theme-options.php:546
+msgid "Set starting Slide (0 index)"
+msgstr "Set başlangıç Slayt (0 indeks)"
+
+#: fruitful/inc/theme-options/theme-options.php:547
+msgid "Next & Prev navigation"
+msgstr "Next & Önceki navigasyon"
+
+#: fruitful/inc/theme-options/theme-options.php:548
+msgid "1,2,3... navigation"
+msgstr "1,2,3 ... navigasyon"
+
+#: fruitful/inc/theme-options/theme-options.php:549
+msgid "Use thumbnails for Control Nav"
+msgstr "Denetim Nav için minik kullanın"
+
+#: fruitful/inc/theme-options/theme-options.php:550
+msgid "Stop animation while hovering"
+msgstr "Üzerine geldiğinde animasyonu durdur"
+
+#: fruitful/inc/theme-options/theme-options.php:551
+msgid "Force manual transitions"
+msgstr "Elle geçişlere zorla"
+
+#: fruitful/inc/theme-options/theme-options.php:552
+msgid "Prev directionNav text"
+msgstr "Önceki directionNav metin"
+
+#: fruitful/inc/theme-options/theme-options.php:553
+msgid "Next directionNav text"
+msgstr "Sonraki directionNav metin"
+
+#: fruitful/inc/theme-options/theme-options.php:554
+msgid "Start on a random slide"
+msgstr "Rastgele bir slayt başlayın"
+
+#: fruitful/inc/theme-options/theme-options.php:564
+#, php-format
+msgid "Slide # %1$d"
+msgstr "Kaydırma # %1$d"
+
+#: fruitful/inc/theme-options/theme-options.php:584
+msgid "Collapse all"
+msgstr "Hepsini kapa"
+
+#: fruitful/inc/theme-options/theme-options.php:585
+msgid "Expand all"
+msgstr "Hepsini genişlet"
+
+#: fruitful/inc/theme-options/theme-options.php:607
+msgid "Add New Slide"
+msgstr "Yeni Kaydırma Ekle"
+
+#: fruitful/inc/theme-options/theme-options.php:615
+#: fruitful/inc/theme-options/theme-options.php:645
+msgid "Background color"
+msgstr "Arkaplan rengi"
+
+#: fruitful/inc/theme-options/theme-options.php:621
+#: fruitful/inc/theme-options/theme-options.php:651
+msgid "Menu button color"
+msgstr "Menü düğmesi rengi"
+
+#: fruitful/inc/theme-options/theme-options.php:627
+#: fruitful/inc/theme-options/theme-options.php:657
+#: fruitful/inc/theme-options/theme-options.php:677
+msgid "Font color"
+msgstr "Font rengi"
+
+#: fruitful/inc/theme-options/theme-options.php:633
+#: fruitful/inc/theme-options/theme-options.php:663
+msgid "Font color (active and hover)"
+msgstr "Font rengi (aktif ve vurgulu)"
+
+#: fruitful/inc/theme-options/theme-options.php:686
+msgid "Link color"
+msgstr "Bağlantı rengi"
+
+#: fruitful/inc/theme-options/theme-options.php:692
+msgid "Link color (hover)"
+msgstr "Bağlantı rengi (üzerine gelindiğinde)"
+
+#: fruitful/inc/theme-options/theme-options.php:698
+msgid "Link color (focus)"
+msgstr "Bağlantı rengi (focus)"
+
+#: fruitful/inc/theme-options/theme-options.php:704
+msgid "Link color (active)"
+msgstr "Bağlantı rengi (active)"
+
+#: fruitful/inc/theme-options/theme-options.php:717
+msgid "Widget separator color"
+msgstr "Bileşen ayırıcı rengi"
+
+#: fruitful/inc/theme-options/theme-options.php:724
+msgid "Blog post date color"
+msgstr "Blog yazısı tarihi rengi"
+
+#: fruitful/inc/theme-options/theme-options.php:731
+msgid "Date font color"
+msgstr "Tarih fontu rengi"
+
+#: fruitful/inc/theme-options/theme-options.php:745
+msgid "Button background color"
+msgstr "Düğme arka plan rengi"
+
+#: fruitful/inc/theme-options/theme-options.php:752
+msgid "Button background color (hover, active, focus, current page - pagenavi)"
+msgstr "Düğme arka plan rengi (hover, etkin, odak, geçerli sayfa - PageNavi)"
+
+#: fruitful/inc/theme-options/theme-options.php:800
+msgid "General"
+msgstr "Genel"
+
+#: fruitful/inc/theme-options/theme-options.php:802
+msgid "Background"
+msgstr "Arkaplan"
+
+#: fruitful/inc/theme-options/theme-options.php:803
+msgid "Logo"
+msgstr "Logo"
+
+#: fruitful/inc/theme-options/theme-options.php:804
+msgid "Colors"
+msgstr "Renkler"
+
+#: fruitful/inc/theme-options/theme-options.php:807
+msgid "Social Links"
+msgstr "Sosyal Bağlantılar"
+
+#: fruitful/inc/theme-options/theme-options.php:811
+msgid "Woocommerce"
+msgstr "Woocommerce"
+
+#: fruitful/inc/theme-options/theme-options.php:830
+msgid "Support"
+msgstr "Destek"
+
+#: fruitful/inc/theme-options/theme-options.php:832
+msgid "If You faced with problems or find error or bug, please"
+msgstr ""
+"Sen sorunları ile karşı karşıya ya da varsa, hata veya hata lütfen bulmak"
+
+#: fruitful/inc/theme-options/theme-options.php:833
+msgid "submit request."
+msgstr "istek gönder"
+
+#: fruitful/inc/theme-options/theme-options.php:834
+msgid "On official "
+msgstr "resmi günü"
+
+#: fruitful/inc/theme-options/theme-options.php:834
+msgid "Support forum"
+msgstr "Forum desteği"
+
+#: fruitful/inc/theme-options/theme-options.php:835
+msgid "You may find answers on Your questions."
+msgstr "Sizin soruların cevapları bulabilirsiniz."
+
+#: fruitful/inc/theme-options/theme-options.php:839
+msgid "Additional customization"
+msgstr "Ek özelleştirme"
+
+#: fruitful/inc/theme-options/theme-options.php:841
+msgid "Our team is available for any type of WordPress development. "
+msgstr "Ekibimiz WordPress gelişme herhangi bir türü için kullanılabilir."
+
+#: fruitful/inc/theme-options/theme-options.php:842
+msgid "If You want customize theme or add new features, You can"
+msgstr ""
+"Sen istiyorsanız yapabilirsiniz, tema özelleştirmek veya yeni özellikler "
+"eklemek"
+
+#: fruitful/inc/theme-options/theme-options.php:843
+msgid "submit order"
+msgstr "siparişi gönder"
+
+#: fruitful/inc/theme-options/theme-options.php:844
+msgid "on our website"
+msgstr "websitemizde"
+
+#: fruitful/inc/theme-options/theme-options.php:849
+msgid "Check our latest theme"
+msgstr "Son temayı denetle"
