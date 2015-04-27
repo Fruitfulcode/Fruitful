@@ -1437,19 +1437,19 @@ add_action( 'customize_preview_init', 'fruitful_customize_preview_js' );
 }	
 
 if ( ! function_exists( 'fruitful_metadevice' ) ) {
-function fruitful_metadevice() {
-	$browser = '';				
-	$browser_ip	= strpos($_SERVER['HTTP_USER_AGENT'],"iPhone");		
-	$browser_an	= strpos($_SERVER['HTTP_USER_AGENT'],"Android");		
-	$browser_ipad = strpos($_SERVER['HTTP_USER_AGENT'],"iPad");			 
-	if ($browser_ip  	== true) { $browser = 'iphone';  }	 
-	if ($browser_an		== true) { $browser = 'android'; } 	 
-	if ($browser_ipad 	== true) { $browser = 'ipad'; }
+	function fruitful_metadevice() {
+		$browser = '';				
+		$browser_ip	= strpos($_SERVER['HTTP_USER_AGENT'],"iPhone");		
+		$browser_an	= strpos($_SERVER['HTTP_USER_AGENT'],"Android");		
+		$browser_ipad = strpos($_SERVER['HTTP_USER_AGENT'],"iPad");			 
+		if ($browser_ip  	== true) { $browser = 'iphone';  }	 
+		if ($browser_an		== true) { $browser = 'android'; } 	 
+		if ($browser_ipad 	== true) { $browser = 'ipad'; }
 
-	if($browser == 'iphone') 	{ echo '<meta name="viewport" content="width=480, maximum-scale=1, user-scalable=0"/>';  } 
-    if($browser == 'android') 	{ echo '<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width" />'; } 
-	if($browser == 'ipad') 		{ echo '<meta name="viewport" content="width=768px, minimum-scale=1.0, maximum-scale=1.0" />'; } 
-}
+		if($browser == 'iphone') 	{ echo '<meta name="viewport" content="width=480, maximum-scale=1, user-scalable=0"/>';  } 
+		if($browser == 'android') 	{ echo '<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width" />'; } 
+		if($browser == 'ipad') 		{ echo '<meta name="viewport" content="width=768px, minimum-scale=1.0, maximum-scale=1.0" />'; } 
+	}
 }
 add_action( 'wp_head', 'fruitful_metadevice' );
 
