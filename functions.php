@@ -1611,8 +1611,10 @@ if(!function_exists('fruitful_is_latest_posts_page')){
 if ( ! function_exists( 'fruitful_get_content_with_custom_sidebar' ) ) {
 	function fruitful_get_content_with_custom_sidebar($curr_sidebar = null) {
 		global $post;
+		
 		function get_content_part() {
 			global $post;
+			
 			?>
 			<div id="primary" class="content-area">
 				<div id="content" class="site-content" role="main">	
@@ -1623,8 +1625,9 @@ if ( ! function_exists( 'fruitful_get_content_with_custom_sidebar' ) ) {
 				
 				if (is_page() && !empty($page_on_front) &&  !empty($page_for_posts) && ($page_on_front == $page_for_posts)) {
 					echo '<div class="alert alert-danger"><strong>'.__("Front page displays Error.", 'fruitful').'</strong> '.__('Select different pages!', 'fruitful').'</div>';
+					
 				} else {
-					if (!is_archive()) {
+					if (!is_archive() && !is_search() && !is_404()) {
 						if (is_home()) {
 							if ( have_posts() ) : 
 								/* The loop */ 
@@ -1636,6 +1639,7 @@ if ( ! function_exists( 'fruitful_get_content_with_custom_sidebar' ) ) {
 								get_template_part( 'no-results', 'index' ); 
 							endif;
 						} else {
+							
 							if ( have_posts() ) {
 								while ( have_posts() ) : the_post();
 									if (is_page() && !is_front_page() && !is_home()) {
@@ -1666,30 +1670,33 @@ if ( ! function_exists( 'fruitful_get_content_with_custom_sidebar' ) ) {
 										<header class="page-header">
 											<h1 class="page-title">
 												<?php
-													if ( is_category() ) {
-														printf( __( 'Category Archives: %s', 'fruitful' ), '<span>' . single_cat_title( '', false ) . '</span>' );
+													
+													if ( is_archive()) {
+														if ( is_category() ) {
+															printf( __( 'Category Archives: %s', 'fruitful' ), '<span>' . single_cat_title( '', false ) . '</span>' );
+														} elseif ( is_tag() ) {
+															printf( __( 'Tag Archives: %s', 'fruitful' ), '<span>' . single_tag_title( '', false ) . '</span>' );
+														} elseif ( is_author() ) {
+															the_post();
+															printf( __( 'Author Archives: %s', 'fruitful' ), '<span class="vcard"><a class="url fn n" href="' . get_author_posts_url( get_the_author_meta( "ID" ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' );
+															rewind_posts();
 
-													} elseif ( is_tag() ) {
-														printf( __( 'Tag Archives: %s', 'fruitful' ), '<span>' . single_tag_title( '', false ) . '</span>' );
+														} elseif ( is_day() ) {
+															printf( __( 'Daily Archives: %s', 'fruitful' ), '<span>' . get_the_date() . '</span>' );
+	
+														} elseif ( is_month() ) {
+															printf( __( 'Monthly Archives: %s', 'fruitful' ), '<span>' . get_the_date( 'F Y' ) . '</span>' );
 
-													} elseif ( is_author() ) {
-														the_post();
-														printf( __( 'Author Archives: %s', 'fruitful' ), '<span class="vcard"><a class="url fn n" href="' . get_author_posts_url( get_the_author_meta( "ID" ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' );
-														rewind_posts();
+														} elseif ( is_year() ) {
+															printf( __( 'Yearly Archives: %s', 'fruitful' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
 
-													} elseif ( is_day() ) {
-														printf( __( 'Daily Archives: %s', 'fruitful' ), '<span>' . get_the_date() . '</span>' );
-
-													} elseif ( is_month() ) {
-														printf( __( 'Monthly Archives: %s', 'fruitful' ), '<span>' . get_the_date( 'F Y' ) . '</span>' );
-
-													} elseif ( is_year() ) {
-														printf( __( 'Yearly Archives: %s', 'fruitful' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
-
-													} else {
-														_e( 'Archives', 'fruitful' );
-
+														} else {
+															_e( 'Archives', 'fruitful' );
+														}
 													}
+													
+													if (is_search())
+														printf( __( 'Search Results for: %s', 'fruitful' ), '<span>' . get_search_query() . '</span>' ); 
 												?>
 											</h1>
 											<?php
@@ -1713,8 +1720,11 @@ if ( ! function_exists( 'fruitful_get_content_with_custom_sidebar' ) ) {
 										fruitful_content_nav( 'nav-below' );
 										
 									else : 
-									
-										get_template_part( 'no-results', 'archive' );
+										if (is_404()) {
+											get_template_part( 'content', '404' );	
+										} else {
+											get_template_part( 'no-results', 'archive' );
+										}	
 										
 									endif; ?>
 
@@ -1765,17 +1775,19 @@ if ( ! function_exists( 'fruitful_get_content_with_custom_sidebar' ) ) {
 		if (fruitful_is_latest_posts_page()) {
 			$curr_template = esc_attr($options['latest_posts_templ']);
 		} elseif (is_archive()) {
-			$curr_template = esc_attr($options['layout_archive_templ']); 
+			if (is_tag()) {
+				$curr_template = esc_attr($options['layout_tag_templ']);	
+			} elseif (is_category()) {
+				$curr_template = esc_attr($options['layout_cat_templ']);
+			} elseif (is_author()) {
+				$curr_template = esc_attr($options['layout_author_templ']);
+			} else {
+				$curr_template = esc_attr($options['layout_archive_templ']); 
+			}	
 		} elseif (is_404()) {
 			$curr_template = esc_attr($options['layout_404_templ']);
 		} elseif (is_search()) {
 			$curr_template = esc_attr($options['layout_search_templ']);
-		} elseif (is_category()) {
-			$curr_template = esc_attr($options['layout_cat_templ']);
-		} elseif (is_tag()) {
-			$curr_template = esc_attr($options['layout_tag_templ']);
-		} elseif (is_author()) {
-			$curr_template = esc_attr($options['layout_author_templ']);
 		} else {
 			$default_blog_template = (get_post_meta( get_option('page_for_posts', true), '_fruitful_page_layout', true ))?(get_post_meta( get_option('page_for_posts', true), '_fruitful_page_layout', true )-1) : 1;
 			
