@@ -3,7 +3,7 @@
  * Plugin installation and activation for WordPress themes.
  *
  * @package   TGM-Plugin-Activation
- * @version   2.4.0
+ * @version   2.4.1
  * @author    Thomas Griffin <thomasgriffinmedia.com>
  * @author    Gary Jones <gamajo.com>
  * @copyright Copyright (c) 2012, Thomas Griffin
@@ -260,7 +260,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
         /**
          * Handles calls to show plugin information via links in the notices.
          *
-         * We get the links in the admin notices to point to the fruitful page, rather
+         * We get the links in the admin notices to point to the TGMPA page, rather
          * than the typical plugin-install.php file, so we can prepare everything
          * beforehand.
          *
@@ -275,7 +275,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
          *
          * @global string $tab Used as iframe div class names, helps with styling
          * @global string $body_id Used as the iframe body ID, helps with styling
-         * @return null Returns early if not the fruitful page.
+         * @return null Returns early if not the TGMPA page.
          */
         public function admin_init() {
 
@@ -367,7 +367,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
         public function install_plugins_page() {
 
             // Store new instance of plugin table in object.
-            $plugin_table = new fruitful_List_Table;
+            $plugin_table = new TGMPA_List_Table;
 
             // Return early if processing a plugin installation action.
             if ( isset( $_POST['action'] ) && 'fruitful-bulk-install' == $_POST['action'] && $plugin_table->process_bulk_actions() || $this->do_plugin_install() ) {
@@ -377,6 +377,9 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
             ?>
             <div class="fruitful wrap">
 
+                <?php if ( version_compare( $this->wp_version, '3.8', '<' ) ) {
+                    screen_icon( apply_filters( 'fruitful_default_screen_icon', 'themes' ) );
+                } ?>
                 <h2><?php echo esc_html( get_admin_page_title() ); ?></h2>
                 <?php $plugin_table->prepare_items(); ?>
 
@@ -431,10 +434,10 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
                 $url = wp_nonce_url(
                     add_query_arg(
                         array(
-                            'page'          => $this->menu,
-                            'plugin'        => $plugin['slug'],
-                            'plugin_name'   => $plugin['name'],
-                            'plugin_source' => $plugin['source'],
+                            'page'          => urlencode( $this->menu ),
+                            'plugin'        => urlencode( $plugin['slug'] ),
+                            'plugin_name'   => urlencode( $plugin['name'] ),
+                            'plugin_source' => urlencode( $plugin['source'] ),
                             'fruitful-install' => 'install-plugin',
                         ),
                         network_admin_url( 'themes.php' )
@@ -444,12 +447,12 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
                 $method = ''; // Leave blank so WP_Filesystem can populate it as necessary.
                 $fields = array( 'fruitful-install' ); // Extra fields to pass to WP_Filesystem.
 
-                if ( false === ( $creds = request_filesystem_credentials( $url, $method, false, false, $fields ) ) ) {
+                if ( false === ( $creds = request_filesystem_credentials( esc_url_raw( $url ), $method, false, false, $fields ) ) ) {
                     return true;
                 }
 
                 if ( ! WP_Filesystem( $creds ) ) {
-                    request_filesystem_credentials( $url, $method, true, false, $fields ); // Setup WP_Filesystem.
+                    request_filesystem_credentials( esc_url_raw( $url ), $method, true, false, $fields ); // Setup WP_Filesystem.
                     return true;
                 }
 
@@ -474,10 +477,12 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
                 // Prep variables for Plugin_Installer_Skin class.
                 $title = sprintf( $this->strings['installing'], $plugin['name'] );
-                $url   = add_query_arg( array( 'action' => 'install-plugin', 'plugin' => $plugin['slug'] ), 'update.php' );
+                $url   = add_query_arg( array( 'action' => 'install-plugin', 'plugin' => urlencode( $plugin['slug'] ) ), 'update.php' );
                 if ( isset( $_GET['from'] ) ) {
                     $url .= add_query_arg( 'from', urlencode( stripslashes( $_GET['from'] ) ), $url );
                 }
+
+                $url   = esc_url_raw( $url );
 
                 $nonce = 'install-plugin_' . $plugin['slug'];
 
@@ -501,7 +506,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
                     if ( is_wp_error( $activate ) ) {
                         echo '<div id="message" class="error"><p>' . $activate->get_error_message() . '</p></div>';
-                        echo '<p><a href="' . add_query_arg( 'page', $this->menu, network_admin_url( 'themes.php' ) ) . '" title="' . esc_attr( $this->strings['return'] ) . '" target="_parent">' . $this->strings['return'] . '</a></p>';
+                        echo '<p><a href="' . esc_url( add_query_arg( 'page', urlencode( $this->menu ), network_admin_url( 'themes.php' ) ) ) . '" title="' . esc_attr( $this->strings['return'] ) . '" target="_parent">' . $this->strings['return'] . '</a></p>';
                         return true; // End it here if there is an error with automatic activation
                     }
                     else {
@@ -513,7 +518,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
                 $complete = array();
                 foreach ( $this->plugins as $plugin ) {
                     if ( ! is_plugin_active( $plugin['file_path'] ) ) {
-                        echo '<p><a href="' . add_query_arg( 'page', $this->menu, network_admin_url( 'themes.php' ) ) . '" title="' . esc_attr( $this->strings['return'] ) . '" target="_parent">' . $this->strings['return'] . '</a></p>';
+                        echo '<p><a href="' . esc_url( add_query_arg( 'page', urlencode( $this->menu ), network_admin_url( 'themes.php' ) ) ) . '" title="' . esc_attr( $this->strings['return'] ) . '" target="_parent">' . $this->strings['return'] . '</a></p>';
                         $complete[] = $plugin;
                         break;
                     }
@@ -528,7 +533,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
                 // All plugins are active, so we display the complete string and hide the plugin menu.
                 if ( empty( $complete ) ) {
-                    echo '<p>' .  sprintf( $this->strings['complete'], '<a href="' . network_admin_url() . '" title="' . __( 'Return to the Dashboard', 'fruitful' ) . '">' . __( 'Return to the Dashboard', 'fruitful' ) . '</a>' ) . '</p>';
+                    echo '<p>' .  sprintf( $this->strings['complete'], '<a href="' . esc_url( network_admin_url() ) . '" title="' . esc_attr__( 'Return to the Dashboard', 'fruitful' ) . '">' . __( 'Return to the Dashboard', 'fruitful' ) . '</a>' ) . '</p>';
                     echo '<style type="text/css">#adminmenu .wp-submenu li.current { display: none !important; }</style>';
                 }
 
@@ -550,7 +555,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
                 if ( is_wp_error( $activate ) ) {
                     echo '<div id="message" class="error"><p>' . $activate->get_error_message() . '</p></div>';
-                    echo '<p><a href="' . add_query_arg( 'page', $this->menu, network_admin_url( 'themes.php' ) ) . '" title="' . esc_attr( $this->strings['return'] ) . '" target="_parent">' . $this->strings['return'] . '</a></p>';
+                    echo '<p><a href="' . esc_url( add_query_arg( 'page', urlencode( $this->menu ), network_admin_url( 'themes.php' ) ) ) . '" title="' . esc_attr( $this->strings['return'] ) . '" target="_parent">' . $this->strings['return'] . '</a></p>';
                     return true; // End it here if there is an error with activation.
                 }
                 else {
@@ -688,13 +693,13 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
                         $source       = $this->_get_plugin_data_from_name( $plugin_group_single_name, 'source' );
 
                         if ( $external_url && preg_match( '|^http(s)?://|', $external_url ) ) {
-                            $linked_plugin_groups[] = '<a href="' . esc_url( $external_url ) . '" title="' . $plugin_group_single_name . '" target="_blank">' . $plugin_group_single_name . '</a>';
+                            $linked_plugin_groups[] = '<a href="' . esc_url( $external_url ) . '" title="' . esc_attr( $plugin_group_single_name ) . '" target="_blank">' . $plugin_group_single_name . '</a>';
                         }
                         elseif ( ! $source || preg_match( '|^http://wordpress.org/extend/plugins/|', $source ) ) {
                             $url = add_query_arg(
                                 array(
                                     'tab'       => 'plugin-information',
-                                    'plugin'    => $this->_get_plugin_data_from_name( $plugin_group_single_name ),
+                                    'plugin'    => urlencode( $this->_get_plugin_data_from_name( $plugin_group_single_name ) ),
                                     'TB_iframe' => 'true',
                                     'width'     => '640',
                                     'height'    => '500',
@@ -702,7 +707,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
                                 network_admin_url( 'plugin-install.php' )
                             );
 
-                            $linked_plugin_groups[] = '<a href="' . esc_url( $url ) . '" class="thickbox" title="' . $plugin_group_single_name . '">' . $plugin_group_single_name . '</a>';
+                            $linked_plugin_groups[] = '<a href="' . esc_url( $url ) . '" class="thickbox" title="' . esc_attr( $plugin_group_single_name ) . '">' . $plugin_group_single_name . '</a>';
                         }
                         else {
                             $linked_plugin_groups[] = $plugin_group_single_name; // No hyperlink.
@@ -720,8 +725,8 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
                 }
 
                 // Setup variables to determine if action links are needed.
-                $show_install_link  = $install_link ? '<a href="' . add_query_arg( 'page', $this->menu, network_admin_url( 'themes.php' ) ) . '">' . translate_nooped_plural( $this->strings['install_link'], $install_link_count, 'fruitful' ) . '</a>' : '';
-                $show_activate_link = $activate_link ? '<a href="' . add_query_arg( 'page', $this->menu, network_admin_url( 'themes.php' ) ) . '">' . translate_nooped_plural( $this->strings['activate_link'], $activate_link_count, 'fruitful' ) . '</a>'  : '';
+                $show_install_link  = $install_link ? '<a href="' . esc_url( add_query_arg( 'page', urlencode( $this->menu ), network_admin_url( 'themes.php' ) ) ) . '">' . translate_nooped_plural( $this->strings['install_link'], $install_link_count, 'fruitful' ) . '</a>' : '';
+                $show_activate_link = $activate_link ? '<a href="' . esc_url( add_query_arg( 'page', urlencode( $this->menu ), network_admin_url( 'themes.php' ) ) ) . '">' . translate_nooped_plural( $this->strings['activate_link'], $activate_link_count, 'fruitful' ) . '</a>'  : '';
 
                 // Define all of the action links.
                 $action_links = apply_filters(
@@ -729,7 +734,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
                     array(
                         'install'  => ( current_user_can( 'install_plugins' ) )  ? $show_install_link  : '',
                         'activate' => ( current_user_can( 'activate_plugins' ) ) ? $show_activate_link : '',
-                        'dismiss'  => $this->dismissable ? '<a class="dismiss-notice" href="' . add_query_arg( 'fruitful-dismiss', 'dismiss_admin_notices' ) . '" target="_parent">' . $this->strings['dismiss'] . '</a>' : '',
+                        'dismiss'  => $this->dismissable ? '<a class="dismiss-notice" href="' . esc_url( add_query_arg( 'fruitful-dismiss', 'dismiss_admin_notices' ) ) . '" target="_parent">' . $this->strings['dismiss'] . '</a>' : '',
                     )
                 );
 
@@ -830,7 +835,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
          */
         public function actions( $install_actions ) {
 
-            // Remove action links on the fruitful install page.
+            // Remove action links on the TGMPA install page.
             if ( $this->is_fruitful_page() ) {
                 return false;
             }
@@ -913,11 +918,11 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
         }
 
         /**
-         * Determine if we're on the fruitful Install page.
+         * Determine if we're on the TGMPA Install page.
          *
          * @since 2.1.0
          *
-         * @return boolean True when on the fruitful page, false otherwise.
+         * @return boolean True when on the TGMPA page, false otherwise.
          */
         protected function is_fruitful_page() {
 
@@ -1060,7 +1065,7 @@ if ( ! class_exists( 'WP_List_Table' ) ) {
     require_once( ABSPATH . 'wp-admin/includes/class-wp-list-table.php' );
 }
 
-if ( ! class_exists( 'fruitful_List_Table' ) ) {
+if ( ! class_exists( 'TGMPA_List_Table' ) ) {
     /**
      * List table class for handling plugins.
      *
@@ -1078,12 +1083,12 @@ if ( ! class_exists( 'fruitful_List_Table' ) ) {
      * @author  Thomas Griffin <thomas@thomasgriffinmedia.com>
      * @author  Gary Jones <gamajo@gamajo.com>
      */
-    class fruitful_List_Table extends WP_List_Table {
+    class TGMPA_List_Table extends WP_List_Table {
 
         /**
          * References parent constructor and sets defaults for class.
          *
-         * The constructor also grabs a copy of $instance from the fruitful class
+         * The constructor also grabs a copy of $instance from the TGMPA class
          * and stores it in the global object TGM_Plugin_Activation::$instance.
          *
          * @since 2.2.0
@@ -1136,21 +1141,21 @@ if ( ! class_exists( 'fruitful_List_Table' ) ) {
                 $source       = $this->_get_plugin_data_from_name( $plugin['name'], 'source' );
 
                 if ( $external_url && preg_match( '|^http(s)?://|', $external_url ) ) {
-                    $table_data[$i]['plugin'] = '<strong><a href="' . esc_url( $external_url ) . '" title="' . $plugin['name'] . '" target="_blank">' . $plugin['name'] . '</a></strong>';
+                    $table_data[$i]['plugin'] = '<strong><a href="' . esc_url( $external_url ) . '" title="' . esc_attr( $plugin['name'] ) . '" target="_blank">' . $plugin['name'] . '</a></strong>';
                 }
                 elseif ( ! $source || preg_match( '|^http://wordpress.org/extend/plugins/|', $source ) ) {
                     $url = add_query_arg(
                         array(
-                            'tab'       => 'plugin-information',
-                            'plugin'    => $this->_get_plugin_data_from_name( $plugin['name'] ),
-                            'TB_iframe' => 'true',
-                            'width'     => '640',
-                            'height'    => '500',
+                           'tab'       => 'plugin-information',
+                           'plugin'    => urlencode( $this->_get_plugin_data_from_name( $plugin['name'] ) ),
+                           'TB_iframe' => 'true',
+                           'width'     => '640',
+                           'height'    => '500',
                         ),
                         network_admin_url( 'plugin-install.php' )
                     );
 
-                    $table_data[$i]['plugin'] = '<strong><a href="' . esc_url( $url ) . '" class="thickbox" title="' . $plugin['name'] . '">' . $plugin['name'] . '</a></strong>';
+                    $table_data[$i]['plugin'] = '<strong><a href="' . esc_url( $url ) . '" class="thickbox" title="' . esc_attr( $plugin['name'] ) . '">' . $plugin['name'] . '</a></strong>';
                 }
                 else {
                     $table_data[$i]['plugin'] = '<strong>' . $plugin['name'] . '</strong>'; // No hyperlink.
@@ -1284,19 +1289,21 @@ if ( ! class_exists( 'fruitful_List_Table' ) ) {
             if ( ! isset( $installed_plugins[$item['file_path']] ) ) {
                 $actions = array(
                     'install' => sprintf(
-                        '<a href="%1$s" title="' . __( 'Install', 'fruitful' ) . ' %2$s">' . __( 'Install', 'fruitful' ) . '</a>',
-                        wp_nonce_url(
-                            add_query_arg(
-                                array(
-                                    'page'          => TGM_Plugin_Activation::$instance->menu,
-                                    'plugin'        => $item['slug'],
-                                    'plugin_name'   => $item['sanitized_plugin'],
-                                    'plugin_source' => $item['url'],
-                                    'fruitful-install' => 'install-plugin',
+                        '<a href="%1$s" title="' . esc_attr__( 'Install', 'fruitful' ) . ' %2$s">' . __( 'Install', 'fruitful' ) . '</a>',
+                        esc_url(
+						    wp_nonce_url(
+                                add_query_arg(
+                                    array(
+                                        'page'          => urlencode( TGM_Plugin_Activation::$instance->menu ),
+                                        'plugin'        => urlencode( $item['slug'] ),
+                                        'plugin_name'   => urlencode( $item['sanitized_plugin'] ),
+                                        'plugin_source' => urlencode( $item['url'] ),
+                                        'fruitful-install' => 'install-plugin',
+                                    ),
+                                    network_admin_url( 'themes.php' )
                                 ),
-                                network_admin_url( 'themes.php' )
-                            ),
-                            'fruitful-install'
+                               'fruitful-install'
+                            )
                         ),
                         $item['sanitized_plugin']
                     ),
@@ -1306,17 +1313,19 @@ if ( ! class_exists( 'fruitful_List_Table' ) ) {
             elseif ( is_plugin_inactive( $item['file_path'] ) ) {
                 $actions = array(
                     'activate' => sprintf(
-                        '<a href="%1$s" title="' . __( 'Activate', 'fruitful' ) . ' %2$s">' . __( 'Activate', 'fruitful' ) . '</a>',
-                        add_query_arg(
-                            array(
-                                'page'                 => TGM_Plugin_Activation::$instance->menu,
-                                'plugin'               => $item['slug'],
-                                'plugin_name'          => $item['sanitized_plugin'],
-                                'plugin_source'        => $item['url'],
-                                'fruitful-activate'       => 'activate-plugin',
-                                'fruitful-activate-nonce' => wp_create_nonce( 'fruitful-activate' ),
-                            ),
-                            network_admin_url( 'themes.php' )
+                        '<a href="%1$s" title="' . esc_attr__( 'Activate', 'fruitful' ) . ' %2$s">' . __( 'Activate', 'fruitful' ) . '</a>',
+                        esc_url(
+                            add_query_arg(
+                                array(
+                                    'page'                 => urlencode( TGM_Plugin_Activation::$instance->menu ),
+                                    'plugin'               => urlencode( $item['slug'] ),
+                                    'plugin_name'          => urlencode( $item['sanitized_plugin'] ),
+                                    'plugin_source'        => urlencode( $item['url'] ),
+                                    'fruitful-activate'       => 'activate-plugin',
+                                    'fruitful-activate-nonce' => urlencode( wp_create_nonce( 'fruitful-activate' ) ),
+                                ),
+                                network_admin_url( 'themes.php' )
+                            )
                         ),
                         $item['sanitized_plugin']
                     ),
@@ -1339,8 +1348,9 @@ if ( ! class_exists( 'fruitful_List_Table' ) ) {
          */
         public function column_cb( $item ) {
 
-            $value = $item['file_path'] . ',' . $item['url'] . ',' . $item['sanitized_plugin'];
-            return sprintf( '<input type="checkbox" name="%1$s[]" value="%2$s" id="%3$s" />', $this->_args['singular'], $value, $item['sanitized_plugin'] );
+        	$plugin_url = ( 'repo' === $item['url'] ) ? $item['url'] : esc_url( $item['url'] );
+            $value = $item['file_path'] . ',' . $plugin_url . ',' . $item['sanitized_plugin'];
+            return sprintf( '<input type="checkbox" name="%1$s[]" value="%2$s" id="%3$s" />', esc_attr( $this->_args['singular'] ), esc_attr( $value ), esc_attr( $item['sanitized_plugin'] ) );
 
         }
 
@@ -1519,7 +1529,7 @@ if ( ! class_exists( 'fruitful_List_Table' ) ) {
                 $url = wp_nonce_url(
                     add_query_arg(
                         array(
-                            'page'          => TGM_Plugin_Activation::$instance->menu,
+                            'page'          => urlencode( TGM_Plugin_Activation::$instance->menu ),
                             'fruitful-action'  => 'install-selected',
                             'plugins'       => urlencode( implode( ',', $plugins ) ),
                             'plugin_paths'  => urlencode( implode( ',', $plugin_paths ) ),
@@ -1532,12 +1542,12 @@ if ( ! class_exists( 'fruitful_List_Table' ) ) {
                 $method = ''; // Leave blank so WP_Filesystem can populate it as necessary.
                 $fields = array( 'action', '_wp_http_referer', '_wpnonce' ); // Extra fields to pass to WP_Filesystem.
 
-                if ( false === ( $creds = request_filesystem_credentials( $url, $method, false, false, $fields ) ) ) {
+                if ( false === ( $creds = request_filesystem_credentials( esc_url_raw( $url ), $method, false, false, $fields ) ) ) {
                     return true;
                 }
 
                 if ( ! WP_Filesystem( $creds ) ) {
-                    request_filesystem_credentials( $url, $method, true, false, $fields ); // Setup WP_Filesystem.
+                    request_filesystem_credentials( esc_url_raw( $url ), $method, true, false, $fields ); // Setup WP_Filesystem.
                     return true;
                 }
 
@@ -1568,7 +1578,7 @@ if ( ! class_exists( 'fruitful_List_Table' ) ) {
                 }
 
                 // Finally, all the data is prepared to be sent to the installer.
-                $url   = add_query_arg( array( 'page' => TGM_Plugin_Activation::$instance->menu ), network_admin_url( 'themes.php' ) );
+                $url   = esc_url_raw( add_query_arg( array( 'page' => urlencode( TGM_Plugin_Activation::$instance->menu ) ), network_admin_url( 'themes.php' ) ) );
                 $nonce = 'bulk-plugins';
                 $names = $plugin_names;
 
@@ -1577,6 +1587,9 @@ if ( ! class_exists( 'fruitful_List_Table' ) ) {
 
                 // Wrap the install process with the appropriate HTML.
                 echo '<div class="fruitful wrap">';
+                    if ( version_compare( TGM_Plugin_Activation::$instance->wp_version, '3.8', '<' ) ) {
+                        screen_icon( apply_filters( 'fruitful_default_screen_icon', 'themes' ) );
+                    }
                     echo '<h2>' . esc_html( get_admin_page_title() ) . '</h2>';
                     // Process the bulk installation submissions.
                     $installer->bulk_install( $sources );
@@ -1791,7 +1804,7 @@ if ( ! class_exists( 'WP_Upgrader' ) && ( isset( $_GET['page'] ) && TGM_Plugin_A
              * Performs the actual installation of each plugin.
              *
              * This method also activates the plugin in the automatic flag has been
-             * set to true for the fruitful class.
+             * set to true for the TGMPA class.
              *
              * @since 2.2.0
              *
@@ -2138,7 +2151,7 @@ if ( ! class_exists( 'WP_Upgrader' ) && ( isset( $_GET['page'] ) && TGM_Plugin_A
                 $complete = array();
                 foreach ( TGM_Plugin_Activation::$instance->plugins as $plugin ) {
                     if ( ! is_plugin_active( $plugin['file_path'] ) ) {
-                        echo '<p><a href="' . add_query_arg( 'page', TGM_Plugin_Activation::$instance->menu, network_admin_url( 'themes.php' ) ) . '" title="' . esc_attr( TGM_Plugin_Activation::$instance->strings['return'] ) . '" target="_parent">' . TGM_Plugin_Activation::$instance->strings['return'] . '</a></p>';
+                        echo '<p><a href="' . esc_url( add_query_arg( 'page', urlencode( TGM_Plugin_Activation::$instance->menu ), network_admin_url( 'themes.php' ) ) ) . '" title="' . esc_attr( TGM_Plugin_Activation::$instance->strings['return'] ) . '" target="_parent">' . TGM_Plugin_Activation::$instance->strings['return'] . '</a></p>';
                         $complete[] = $plugin;
                         break;
                     }
@@ -2153,7 +2166,7 @@ if ( ! class_exists( 'WP_Upgrader' ) && ( isset( $_GET['page'] ) && TGM_Plugin_A
 
                 // All plugins are active, so we display the complete string and hide the menu to protect users.
                 if ( empty( $complete ) ) {
-                    echo '<p>' .  sprintf( TGM_Plugin_Activation::$instance->strings['complete'], '<a href="' . network_admin_url() . '" title="' . __( 'Return to the Dashboard', 'fruitful' ) . '">' . __( 'Return to the Dashboard', 'fruitful' ) . '</a>' ) . '</p>';
+                    echo '<p>' .  sprintf( TGM_Plugin_Activation::$instance->strings['complete'], '<a href="' . esc_url( network_admin_url() ) . '" title="' . esc_attr__( 'Return to the Dashboard', 'fruitful' ) . '">' . __( 'Return to the Dashboard', 'fruitful' ) . '</a>' ) . '</p>';
                     echo '<style type="text/css">#adminmenu .wp-submenu li.current { display: none !important; }</style>';
                 }
 
