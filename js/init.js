@@ -5,6 +5,12 @@ jQuery(document).ready(function($) {
 			subMenuDash: '&nbsp;&nbsp;&ndash;'
 		});
 		
+		var fancySelect = $('.widget select');
+			fancySelect.each(function() {
+				$(this).fancySelect();	
+			});
+
+		
 		$('#wp-calendar td:not(#next, #prev):has(a)').addClass('cal_has_posts');
 		
 		/*Fancy Box*/

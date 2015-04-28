@@ -14,6 +14,27 @@ Responsive Styles for Woocommerce.
 .woocommerce h2{margin:20px 0}
 .woocommerce .head-container h2{margin:0}
 
+.woocommerce-product-search > input[type="submit"] {
+	display:none;
+}
+
+.woocommerce-product-search > .screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+}	
+
+.woocommerce-product-search > input.search-field {
+    background:url("../images/search_icon.png") no-repeat scroll 97% 5px transparent;
+    border-radius:2px 2px 2px 2px;
+    font-size:13px;
+    height:22px;
+    line-height:1.2em;
+	padding:4px 32px 4px 12px;
+    width:234px;
+	border: 1px solid #e5e5e5;
+	color: #45494c;
+}
+
 /*header*/
 .cart-button{display:block;float: right;padding:0;position:relative;margin:14px 10px 10px;clear:left}
 .cart-button a,

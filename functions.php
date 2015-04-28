@@ -283,6 +283,9 @@ function fruitful_scripts() {
 	wp_enqueue_script('fn-box',				get_template_directory_uri() . '/js/fnBox/jquery.fancybox.pack.js',   array( 'jquery' ), '20140525', false );
 	wp_enqueue_style( 'fn-box-style',		get_template_directory_uri() . '/js/fnBox/jquery.fancybox.css');
 	
+	wp_enqueue_script('fancy-select',		get_template_directory_uri() . '/js/fancySelect.js',   array( 'jquery' ), '20140525', false );
+	wp_enqueue_style( 'fancy-select',		get_template_directory_uri() . '/css/fancySelect.css');
+	
 	wp_enqueue_script('resp-dropdown',		get_template_directory_uri() . '/js/mobile-dropdown.min.js', 	array( 'jquery' ), '20130930', false );
 	wp_enqueue_script('init',				get_template_directory_uri() . '/js/init.min.js', array( 'jquery' ), '20130930', false );
 	
@@ -417,20 +420,21 @@ if (!function_exists('fruitful_get_slider_layout_flex')) {
 		}	
 			
 		if(!empty($slider_layout) && ($slider_layout)) {
-			$out .= '$(".flexslider").flexslider({' . "\n";
-			$out .= 'animation: "'			. esc_attr($theme_options['s_animation'])		.'",' . "\n";
-			$out .= 'direction: "'  		. esc_attr($theme_options['s_direction'])   	.'",' . "\n";
-			$out .= 'reverse: '				. esc_attr($theme_options['s_reverse']) 		. ',' . "\n";
-			$out .= 'slideshow: ' 		  	. esc_attr($theme_options['s_slideshow']) 		. ',' . "\n";
-			$out .= 'slideshowSpeed: ' 		. esc_attr($theme_options['s_slideshowSpeed']) 	. ',' . "\n";
-			$out .= 'animationSpeed: ' 		. esc_attr($theme_options['s_animationSpeed']) 	. ',' . "\n";
-			$out .= 'controlNav: ' 			. esc_attr($theme_options['s_controlnav']) 		. ',' . "\n";
+			$out .= '$(".flexslider").flexslider({';
+			$out .= 'animation: "'			. esc_attr($theme_options['s_animation'])		.'",';
+			$out .= 'direction: "'  		. esc_attr($theme_options['s_direction'])   	.'",';
+			$out .= 'reverse: '				. esc_attr($theme_options['s_reverse']) 		. ',';
+			$out .= 'slideshow: ' 		  	. esc_attr($theme_options['s_slideshow']) 		. ',';
+			$out .= 'slideshowSpeed: ' 		. esc_attr($theme_options['s_slideshowSpeed']) 	. ',';
+			$out .= 'animationSpeed: ' 		. esc_attr($theme_options['s_animationSpeed']) 	. ',';
+			$out .= 'controlNav: ' 			. esc_attr($theme_options['s_controlnav']) 		. ',';
+			$out .= 'touch: ' 				. esc_attr($theme_options['s_touch']) 			. ',';
 			
 			if (isset($theme_options['s_initDelay'])) {
-				$out .= 'initDelay: ' . $theme_options['s_initDelay'] .',' . "\n";
+				$out .= 'initDelay: ' . $theme_options['s_initDelay'] .',';
 			}
-			$out .= 'randomize: '	. $theme_options['s_randomize'] . "\n";
-			$out .= '});' . "\n";
+			$out .= 'randomize: '	. $theme_options['s_randomize'];
+			$out .= '});';
 		}
 		
 		return $out;
@@ -459,21 +463,21 @@ if (!function_exists('fruitful_get_slider_layout_nivo')) {
 		
 		if(!empty($slider_layout) && ($slider_layout)){
 			$out .= '$(".nivoSlider").nivoSlider({' . "\n";
-			$out .= 'effect: "'				. esc_attr($theme_options['nv_animation'])		. '",' . "\n";
-			$out .= 'slices: '				. esc_attr($theme_options['nv_slice'])			.  ',' . "\n";
-			$out .= 'boxCols: '				. esc_attr($theme_options['nv_boxCols'])		.  ',' . "\n";
-			$out .= 'boxRows: '				. esc_attr($theme_options['nv_boxRows'])		.  ',' . "\n";
-			$out .= 'animSpeed: '			. esc_attr($theme_options['nv_animSpeed'])		.  ',' . "\n";
-			$out .= 'pauseTime: '			. esc_attr($theme_options['nv_pauseTime'])		.  ',' . "\n";
-			$out .= 'startSlide:' . (isset($theme_options['nv_startSlide']) ? $theme_options['nv_startSlide'] : 0) . ',' . "\n";
-			$out .= 'directionNav: '		. esc_attr($theme_options['nv_directionNav'])		.  ',' . "\n";
-			$out .= 'controlNav: '			. esc_attr($theme_options['nv_controlNav'])			.  ',' . "\n";
-			$out .= 'controlNavThumbs: '	. esc_attr($theme_options['nv_controlNavThumbs'])	.  ',' . "\n";
-			$out .= 'pauseOnHover: '		. esc_attr($theme_options['nv_pauseOnHover'])	.  ',' . "\n";
-			$out .= 'manualAdvance: '		. esc_attr($theme_options['nv_manualAdvance'])	.  ',' . "\n";
-			$out .= 'prevText: "'			. esc_attr($theme_options['nv_prevText'])		.  '",' . "\n";
-			$out .= 'nextText: "'			. esc_attr($theme_options['nv_nextText'])		.  '",' . "\n";
-			$out .= 'randomStart: '			. esc_attr($theme_options['nv_randomStart']) . "\n";
+			$out .= 'effect: "'				. esc_attr($theme_options['nv_animation'])		. '",';
+			$out .= 'slices: '				. esc_attr($theme_options['nv_slice'])			.  ',';
+			$out .= 'boxCols: '				. esc_attr($theme_options['nv_boxCols'])		.  ',';
+			$out .= 'boxRows: '				. esc_attr($theme_options['nv_boxRows'])		.  ',';
+			$out .= 'animSpeed: '			. esc_attr($theme_options['nv_animSpeed'])		.  ',';
+			$out .= 'pauseTime: '			. esc_attr($theme_options['nv_pauseTime'])		.  ',';
+			$out .= 'startSlide:' . (isset($theme_options['nv_startSlide']) ? $theme_options['nv_startSlide'] : 0) . ',';
+			$out .= 'directionNav: '		. esc_attr($theme_options['nv_directionNav'])		.  ',';
+			$out .= 'controlNav: '			. esc_attr($theme_options['nv_controlNav'])			.  ',';
+			$out .= 'controlNavThumbs: '	. esc_attr($theme_options['nv_controlNavThumbs'])	.  ',';
+			$out .= 'pauseOnHover: '		. esc_attr($theme_options['nv_pauseOnHover'])	.  ',';
+			$out .= 'manualAdvance: '		. esc_attr($theme_options['nv_manualAdvance'])	.  ',';
+			$out .= 'prevText: "'			. esc_attr($theme_options['nv_prevText'])		.  '",';
+			$out .= 'nextText: "'			. esc_attr($theme_options['nv_nextText'])		.  '",';
+			$out .= 'randomStart: '			. esc_attr($theme_options['nv_randomStart']);
 			$out .= '});';
 		}
 		
@@ -592,19 +596,27 @@ if (!function_exists('fruitful_get_slider')) {
 if (!function_exists('fruitful_get_logo')) {
 	function fruitful_get_logo () {
 		$theme_options  = fruitful_ret_options("fruitful_theme_options");
-		$url_logo = '';
+		$url_logo = $url_retina_logo = '';
 	
 		if (!empty($theme_options['logo_img'])) { $url_logo_id	= esc_attr($theme_options['logo_img']); } else { $url_logo_id 	= ''; }
+		if (!empty($theme_options['logo_img_retina'])) { $url_retina_logo_id	= esc_attr($theme_options['logo_img_retina']); } else { $url_retina_logo_id 	= ''; }
 	
 		/*Full Backend Options*/
 		$description  = $name = '';
 		$description  = esc_attr(get_bloginfo('description'));
 		$name  		  = esc_attr(get_bloginfo('name'));
 	
-		if ($url_logo_id != "") {
+		if (!empty($url_logo_id) || !empty($url_retina_logo_id)) {
 			$url_logo = wp_get_attachment_image_src($url_logo_id, 'full');
 			$url_logo = esc_url_raw($url_logo[0]);
-			echo  '<a href="' . esc_url( home_url( '/' ) ) . '" title="' . $description .'" rel="home"><img class="logo" src="'. $url_logo  .'" alt="' . $description . '"/></a>';
+			
+			$url_retina_logo = wp_get_attachment_image_src($url_retina_logo_id, 'full');
+			$url_retina_logo = esc_url_raw($url_retina_logo[0]);
+			
+			if (!empty($url_logo)) 	echo  '<a class="link-logo" href="' . esc_url( home_url( '/' ) ) . '" title="' . $description .'" rel="home"><img class="logo" src="'. $url_logo  .'" alt="' . $description . '"/></a>';
+			if (!empty($url_retina_logo)) echo  '<a class="link-logo-retina" href="' . esc_url( home_url( '/' ) ) . '" title="' . $description .'" rel="home"><img class="logo retina" src="'. $url_retina_logo  .'" alt="' . $description . '"/></a>';
+			
+			
 		} else {
 			echo  '<a class="logo-description" href="' . esc_url( home_url( '/' ) ) . '" title="' . $description .'" rel="home"><h1 class="site-title">'. $name .'</h1><h2 class="site-description">'. $description .'</h2></a>';
 		}	
@@ -614,24 +626,61 @@ if (!function_exists('fruitful_get_logo')) {
 /*Get Favicon*/
 if (!function_exists('fruitful_get_favicon')) {
 	function fruitful_get_favicon () {
-		$out_fav_html = '';
+		$out_fav_html 	= null;
+		$url_favicon = $fav_icon_iphone = $fav_icon_iphone_retina = $fav_icon_ipad = $fav_icon_ipad_retina = null;
 		$theme_options  = fruitful_ret_options("fruitful_theme_options");
 		
 		if (isset($theme_options['fav_icon'])) {
-			$url_favicon = esc_attr($theme_options['fav_icon']);
-			$url_favicon = wp_get_attachment_image_src($url_favicon, 'full');
-			$url_favicon = esc_url_raw($url_favicon[0]);
-		} else {
-			$url_favicon = '';
-		}	
+			$fav_icon = esc_attr($theme_options['fav_icon']);
+			$fav_icon = wp_get_attachment_image_src($fav_icon, 'full');
+			$fav_icon = esc_url_raw($fav_icon[0]);
+			
+			$out_fav_html .=  '<link rel="shortcut icon" href="'. esc_url($fav_icon) .'">';	
+			$out_fav_html .=  '<link rel="apple-touch-icon-precomposed" sizes="16x16" href="'. esc_url($fav_icon) .'">';	
+		} 	
 		
-		if ($url_favicon != "") {
-			$out_fav_html .=  '<link rel="shortcut icon" href="'. $url_favicon .'">';	
-			$out_fav_html .=  '<link rel="apple-touch-icon-precomposed" sizes="16x16" href="'. $url_favicon .'">';	
-		} else {
-			/*Default favicon file*/
-		}	
+		if (isset($theme_options['fav_icon_iphone'])) {
+			$fav_icon_iphone = esc_attr($theme_options['fav_icon_iphone']);
+			$fav_icon_iphone = wp_get_attachment_image_src($fav_icon_iphone, 'full');
+			$fav_icon_iphone = esc_url_raw($fav_icon_iphone[0]);
+			
+			$out_fav_html .= '<link rel="apple-touch-icon" 	href="' . esc_url($fav_icon_iphone) .'">';
+		}
+		
+		if (isset($theme_options['fav_icon_iphone_retina'])) {
+			$fav_icon_iphone_retina = esc_attr($theme_options['fav_icon_iphone_retina']);
+			$fav_icon_iphone_retina = wp_get_attachment_image_src($fav_icon_iphone_retina, 'full');
+			$fav_icon_iphone_retina = esc_url_raw($fav_icon_iphone_retina[0]);
+			
+			$out_fav_html .= '<link rel="apple-touch-icon" sizes="114x114" 	href="'. esc_url($fav_icon_iphone_retina) .' ">';
+		}
+		
+		if (isset($theme_options['fav_icon_ipad'])) {
+			$fav_icon_ipad = esc_attr($theme_options['fav_icon_ipad']);
+			$fav_icon_ipad = wp_get_attachment_image_src($fav_icon_ipad, 'full');
+			$fav_icon_ipad = esc_url_raw($fav_icon_ipad[0]);
+			
+			$out_fav_html .= '<link rel="apple-touch-icon" sizes="72x72" 	href="'. esc_url($fav_icon_ipad) .'">'; 
+		}
+		
+		if (isset($theme_options['fav_icon_ipad_retina'])) {
+			$fav_icon_ipad_retina = esc_attr($theme_options['fav_icon_ipad_retina']);
+			$fav_icon_ipad_retina = wp_get_attachment_image_src($fav_icon_ipad_retina, 'full');
+			$fav_icon_ipad_retina = esc_url_raw($fav_icon_ipad_retina[0]);
+			
+			$out_fav_html .= '<link rel="apple-touch-icon" sizes="144x144" 	href="'. esc_url($fav_icon_ipad_retina) .'">'; 
+		}
+		
 		echo $out_fav_html;
+	}
+}
+
+
+if ( ! function_exists( 'spotter_add_favicon' ) ) {				
+	function spotter_add_favicon() {
+		global $spotter_config, $prefix;
+		
+		
 	}
 }
 

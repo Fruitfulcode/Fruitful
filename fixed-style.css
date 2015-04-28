@@ -1267,6 +1267,10 @@ article.format-image .wp-caption a:hover:after{
 }
 /* .entry-content iframe{max-height:650px} */
 
+.header-hgroup a.link-logo-retina {
+	display:none;
+}
+
 .logo-description {
 	float:left;
 	display:block;
@@ -2245,3 +2249,13 @@ div#fbSEOComments{
 	width:100%;
 }
 /* end styles for plugin "SEO Facebook Comments" */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+	   only screen and (   min--moz-device-pixel-ratio: 2),
+	   only screen and (     -o-min-device-pixel-ratio: 2/1),
+	   only screen and (        min-device-pixel-ratio: 2),
+	   only screen and (                min-resolution: 192dpi),
+	   only screen and (                min-resolution: 2dppx) { 
+		.header-hgroup a.link-logo	  	  { display: none; }
+		.header-hgroup a.link-logo-retina { display: inline-block; width:50%;}
+}

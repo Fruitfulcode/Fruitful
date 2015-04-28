@@ -463,6 +463,7 @@ function fruitful_add_jquery_script() {
 	wp_enqueue_script('slJq',				get_template_directory_uri() . "/inc/js/sl/jquery.formstyler.min.js", array('jquery'));
 	wp_enqueue_script('dialog', 			get_template_directory_uri() . "/inc/js/dialogBox/jquery-impromptu.min.js",  array('jquery'));
 	wp_enqueue_script('uploads_',			get_template_directory_uri() . "/inc/js/uploads_.js", array('jquery'));
+	wp_enqueue_script('cookie_',			get_template_directory_uri() . "/inc/js/cookie_.js", array('jquery'));
 	wp_enqueue_script('admin-jQuery-fruit',	get_template_directory_uri() . "/inc/js/main.js", array('jquery'));
 }
 
@@ -582,7 +583,12 @@ return array(
 				
 				/*logo*/
 				'logo_img'			=> '',
+				'logo_img_retina'	=> '',
 				'fav_icon'			=> '',
+				'fav_icon_iphone'	=> '',
+				'fav_icon_iphone_retina' => '',
+				'fav_icon_ipad' 	 	 => '',
+				'fav_icon_ipad_retina' 	 => '',
 				
 				'logo_position'		=> '0',
 				'menu_position'		=> '2',
@@ -657,6 +663,7 @@ return array(
 				's_initDelay'		=> '0',
 				's_randomize'		=> 'false',
 				's_controlnav'		=> 'true',
+				's_touch'			=> 'false',
 				
 				/*slider nivo*/
 				'nv_skins'				=> 'theme-bar',

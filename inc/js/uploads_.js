@@ -32,24 +32,10 @@ jQuery(document).ready(function() {
 						var image_url = attachment.url,
 							image_id  = attachment.id;
 							
-							if 		(customData  == 'slide')   { customClass = 'custom-slide';} 
-							else if (customData  == 'logo')    { customClass = 'logo'; } 
-							else if (customData  == 'favicon') { customClass = 'favicon'; } 
-							else if (customData  == 'headerbackground') { customClass = 'headerbackground'; customId = 'headerbackground'; }  
-							else 	{ customClass = ''; }
-							
 							vLinkElem.parent().parent().find('.img-container').remove();
-							if (customClass == '') {
-								vLinkElem.parent().parent().prepend('<div class="img-container"><img src="' + image_url + '" alt="" /></div>');
-							}
-							else if (customClass == 'headerbackground') {
-								vLinkElem.parent().parent().prepend('<div class="img-container"><img id="headerimgbackground" src="' + image_url + '" alt="" /></div>');
-							}
-							else {
-								console.log(vLinkElem.parent().parent().find('.img-container img'));
-								vLinkElem.parent().parent().prepend('<div class="img-container ' + customClass + '"><img src="' + image_url + '" alt="" /></div>');
-							}							
+							vLinkElem.parent().parent().prepend('<div class="img-container"><img src="' + image_url + '" alt="" /></div>');
 							vLinkElem.parent().parent().find('input[type="hidden"]').val(image_id);
+							vLinkElem.parent().parent().find('.upload_button_div').append('<span class="button reset_btn">Remove</span>');
 					});
 
 			});

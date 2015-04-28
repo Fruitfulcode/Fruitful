@@ -64,9 +64,15 @@ function fruitful_theme_options_init() {
 	add_settings_field( 'background_color', __( 'Background Color ', 'fruitful' ), 'fruitful_get_background_color', 'theme_options',  'background', array('info' => __( 'Choose color for body background', 'fruitful' )));
 	add_settings_field( 'content_background_color', __( 'Background color for content  ', 'fruitful' ), 'fruitful_get_container_background_color', 'theme_options',  'background', array('info' => __( 'Choose color for main content area', 'fruitful' )));
 		
-	add_settings_field( 'logo_image', 		__( 'Logo image', 'fruitful' ), 	'fruitful_get_logo_img', 		'theme_options', 'logo',  	array('info' => __( 'Upload logo image for your website. Size is original (Supported files .png, .jpg, .gif)', 'fruitful' )));
-  //add_settings_field( 'logo_size', 		__( 'Logo Size', 'fruitful' ), 		'fruitful_get_logo_wh',	 		'theme_options', 'logo',  	array('info' => __( 'Specify resolution for your logo image. Our theme will crop (timthumb) your image for need size.', 'fruitful' )) );
-	add_settings_field( 'fav_icon', 		__( 'Favicon', 'fruitful' ), 		'fruitful_get_fav_icon', 		'theme_options', 'logo',  	array('info' => __( 'Upload needed image for site favicon. (Supported files .ico (16x16))', 'fruitful' )));
+	add_settings_field( 'logo_image', 			__( 'Logo image', 'fruitful' ), 		'fruitful_get_logo_img', 				'theme_options', 'logo',  	array('info' => __( 'Upload logo image for your website. Size is original (Supported files .png, .jpg, .gif)', 'fruitful' )));
+	add_settings_field( 'logo_image_retina',	__( 'Logo image retina', 'fruitful' ), 	'fruitful_get_logo_img_retina', 		'theme_options', 'logo',  	array('info' => __( 'Upload your Retina Logo. This should be your Logo in double size (If your logo is 100 x 20px, it should be 200 x 40px)', 'fruitful' )));
+  //add_settings_field( 'logo_size', 			__( 'Logo Size', 'fruitful' ), 			'fruitful_get_logo_wh',	 				'theme_options', 'logo',  	array('info' => __( 'Specify resolution for your logo image. Our theme will crop (timthumb) your image for need size.', 'fruitful' )) );
+	add_settings_field( 'fav_icon', 				__( 'Favicon', 'fruitful' ), 				'fruitful_get_fav_icon', 				'theme_options', 'logo',  	array('info' => __( 'A favicon is a 16x16 pixel icon that represents your site; upload your custom Favicon here.', 'fruitful' )));
+	add_settings_field( 'fav_icon_iphone',			__( 'Favicon iPhone', 'fruitful' ), 		'fruitful_get_fav_icon_iphone',			'theme_options', 'logo',  	array('info' => __( 'Upload a custom favicon for iPhone (57x57 pixel png).', 'fruitful' )));
+	add_settings_field( 'fav_icon_iphone_retina',	__( 'Favicon iPhone Retina', 'fruitful' ), 	'fruitful_get_fav_icon_iphone_retina',	'theme_options', 'logo',  	array('info' => __( 'Upload a custom favicon for iPhone retina (114x114 pixel png).', 'fruitful' )));
+	add_settings_field( 'fav_icon_ipad',			__( 'Favicon iPad', 'fruitful' ), 			'fruitful_get_fav_icon_ipad',			'theme_options', 'logo',  	array('info' => __( 'Upload a custom favicon for iPad (72x72 pixel png).', 'fruitful' )));
+	add_settings_field( 'fav_icon_ipad_retina',		__( 'Favicon iPad Retina', 'fruitful' ),	'fruitful_get_fav_icon_ipad_retina',	'theme_options', 'logo',  	array('info' => __( 'Upload a custom favicon for iPhone retina (144x144 pixel png).', 'fruitful' )));
+	
 	add_settings_field( 'logo_position', 	__( 'Logo Position', 'fruitful' ), 	'fruitful_set_logo_position', 	'theme_options', 'logo',  	array('info' => __( 'Set Logo Position', 'fruitful' )));
 	
 	
@@ -453,8 +459,15 @@ function fruitful_woo_shop_prod() {
 function fruitful_get_logo_img () {
 	$options = fruitful_get_theme_options();
 	$upload  = intval($options['logo_img']);
-
+	
 	echo fruitful_get_box_upload_image($upload, 'logo_img', 'upload_btn', 'reset_btn', 'logo'); 
+}
+
+function fruitful_get_logo_img_retina () {
+	$options = fruitful_get_theme_options();
+	$upload  = intval($options['logo_img_retina']);
+
+	echo fruitful_get_box_upload_image($upload, 'logo_img_retina', 'upload_btn', 'reset_btn', 'logo_retina'); 
 }
 
 
@@ -465,8 +478,33 @@ function fruitful_get_fav_icon () {
 	echo fruitful_get_box_upload_image($upload, 'fav_icon', 'upload_btn', 'reset_btn', 'favicon');
 }
 
+function fruitful_get_fav_icon_iphone () {
+	$options = fruitful_get_theme_options();
+	$upload  = intval($options['fav_icon_iphone']);
 
+	echo fruitful_get_box_upload_image($upload, 'fav_icon_iphone', 'upload_btn', 'reset_btn', 'favicon_iphone');
+}
 
+function fruitful_get_fav_icon_iphone_retina () {
+	$options = fruitful_get_theme_options();
+	$upload  = intval($options['fav_icon_iphone_retina']);
+
+	echo fruitful_get_box_upload_image($upload, 'fav_icon_iphone_retina', 'upload_btn', 'reset_btn', 'favicon_iphone_retina');
+}
+
+function fruitful_get_fav_icon_ipad () {
+	$options = fruitful_get_theme_options();
+	$upload  = intval($options['fav_icon_ipad']);
+
+	echo fruitful_get_box_upload_image($upload, 'fav_icon_ipad', 'upload_btn', 'reset_btn', 'favicon_ipad');
+}
+
+function fruitful_get_fav_icon_ipad_retina () {
+	$options = fruitful_get_theme_options();
+	$upload  = intval($options['fav_icon_ipad']);
+
+	echo fruitful_get_box_upload_image($upload, 'fav_icon_ipad_retina', 'upload_btn', 'reset_btn', 'favicon_ipad_retina');
+}	
 
 function fruitful_set_logo_position() {
 	$options = fruitful_get_theme_options();
@@ -569,6 +607,7 @@ function fruitful_slider_options() {
 				<div class="option_block"><h4><?php _e( 'Set an initialization delay, in milliseconds', 'fruitful' ); ?></h4><input type="text" id="init-delay" class="text-input" name="fruitful_theme_options[s_initDelay]" value="<?php echo esc_attr($options['s_initDelay']); ?>"/></div>	
 				<div class="option_block"><h4><?php _e( 'Randomize slide order', 'fruitful' ); ?></h4><?php fruitful_get_select_fields('s_randomize',$options, fruitful_bool_list()); ?></div>	
 				<div class="option_block"><h4><?php _e( 'Manual control usage', 'fruitful' ); ?></h4><?php fruitful_get_select_fields('s_controlnav',$options, fruitful_bool_list()); ?></div>	
+				<div class="option_block"><h4><?php _e( 'Touch swipe', 'fruitful' ); ?></h4><?php fruitful_get_select_fields('s_touch',$options, fruitful_bool_list()); ?></div>	
 			</div>
 			<div class="nivo-slider">
 				<div class="option_block"><h4><?php _e( 'Slider Skins', 'fruitful' ); ?></h4><?php fruitful_get_select_fields('nv_skins',$options, fruitful_slide_skins_select()); ?></div>	
@@ -878,7 +917,7 @@ function fruitful_theme_options_render_page() {
 			<div class="content">
 				<div class="menu-options">
 					<ul>
-						<li class="current"><a  id="item_0" href="javascript:void(0)" 	title="General "><span class="menu-img" id="menu_img_0"></span><span class="menu-text"><?php _e( 'General', 'fruitful' ); ?></span></a></li>
+						<li><a  id="item_0" href="javascript:void(0)" 	title="General "><span class="menu-img" id="menu_img_0"></span><span class="menu-text"><?php _e( 'General', 'fruitful' ); ?></span></a></li>
 						<li><a  id="item_1" href="javascript:void(0)" title="<?php _e( 'Header', 	 'fruitful' ); ?>"><span class="menu-img" id="menu_img_1"></span><span class="menu-text"><?php _e( 'Header',	 'fruitful' ); ?></span></a></li>
 						<li><a  id="item_2" href="javascript:void(0)" title="<?php _e( 'Background', 'fruitful' ); ?>"><span class="menu-img" id="menu_img_2"></span><span class="menu-text"><?php _e( 'Background', 'fruitful' ); ?></span></a></li>
 						<li><a  id="item_3" href="javascript:void(0)" title="<?php _e( 'Logo',		 'fruitful' ); ?>"><span class="menu-img" id="menu_img_3"></span><span class="menu-text"><?php _e( 'Logo',		 'fruitful' ); ?></span></a></li>
@@ -995,14 +1034,14 @@ function fruitful_data_save() {
 	if (!isset($data['showcart'])) 	 	  {$data['showcart'] 		= 'off'; }
 	if (!isset($data['is_wpml_ready']))   {$data['is_wpml_ready']	= 'off'; }
 	if (!isset($data['bg_repeating'])) 	  {$data['bg_repeating'] 	= 'off'; }
-	
+
 	if(!empty($data)) {
-	   if(update_option('fruitful_theme_options', $data)) {
-	           die('1');
-	        } else {
-	           die('0');
-	        }
-	    } else {
-	           die('1');  
-	    }
+		if(update_option('fruitful_theme_options', $data)) {
+			die('1');
+		} else {
+			die('0');
+		}
+	} else {
+		die('1');  
+	}
 }

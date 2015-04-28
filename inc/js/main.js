@@ -1,4 +1,7 @@
-﻿jQuery(document).ready(function() {  
+﻿jQuery(window).load(function() {
+});
+
+jQuery(document).ready(function() {  
 	jQuery('input[type=checkbox]').ezMark();  
 	if (document.body.clientWidth > 580){
 		jQuery('select').styler();    
@@ -39,8 +42,33 @@
 		}	
 		return false;  
 	});		    
-		
-	jQuery('#settings-section-0').fadeIn("slow");  
+	
+	/*Displayd current menu tab*/
+	var currMenuTab = jQuery.cookie("curr_menu_tab");
+	if (currMenuTab) {
+		var currTab = jQuery('.form-admin-fruitful .content .menu-options ul li').find('#' + currMenuTab);
+					  jQuery('.form-admin-fruitful .content .menu-options ul li').removeClass("current");
+			currTab.parent().addClass("current");		
+			currTab.parent().css({'border-top':'1px solid #E5E5E5'});		
+			currTab.parent().css({'border-bottom':'1px solid #E5E5E5'});		
+			currTab.parent().prev().css({'border-bottom':'0'});		
+			currTab.parent().next().css({'border-top':'0'});			
+			index_a = currMenuTab;
+			index_a = index_a.substr(index_a.indexOf('_') + 1);		
+			
+			jQuery('#settings-section-' + index_a).fadeIn("slow");  
+	} else {
+		var currTab = jQuery('.form-admin-fruitful .content .menu-options ul li').first();
+			currTab.addClass("current");		
+			currTab.css({'border-top':'1px solid #E5E5E5'});		
+			currTab.css({'border-bottom':'1px solid #E5E5E5'});		
+			currTab.prev().css({'border-bottom':'0'});		
+			currTab.next().css({'border-top':'0'});			
+			
+			jQuery('#settings-section-0').fadeIn("slow");  	
+	}
+	
+	
 	jQuery('.form-admin-fruitful .content .menu-options ul li').click(function() {  	
 		jQuery('.form-admin-fruitful .content .menu-options ul li').removeClass("current");		
 		jQuery(this).addClass("current");		
@@ -52,6 +80,8 @@
 		var index_a = jQuery(this).find('a').attr("id");		
 			index_a = index_a.substr(index_a.indexOf('_') + 1);		
 			jQuery('#settings-section-' + index_a).fadeIn("slow");  
+			
+		jQuery.cookie("curr_menu_tab", jQuery(this).find('a').attr('id'), { expires : 31 });	
 	});		
 	
 	jQuery("#upload_bg_button").click(function() { 
