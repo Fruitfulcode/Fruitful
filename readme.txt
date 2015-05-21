@@ -103,8 +103,21 @@ Files: .pot, ru_Ru.po, ru_Ru.mo icluded. Default language is english.
     Changelog
 -------------------------------------------------------
 
+= 2.6 =
+21.05.15
+
+* New: Retina logo
+* New: Retina favicons
+* New: French translations
+* Improvements: Theme options > General > Custom wordpress pages layout
+* Improvements: Code optimizations
+* Update: WordPress 4.2.2 ready
+* Update: WooCommerce 2.3.9 ready
+* Update: TGM plugin Activation 2.4.1
+* Bug fix: TGM Notice duplicated on Yoast admin page
+
 = 2.5 =
-17.03.14
+17.03.15
 
 * New: Default layouts for single post and default pages
 * New: Arabic translations
@@ -113,7 +126,7 @@ Files: .pot, ru_Ru.po, ru_Ru.mo icluded. Default language is english.
 * Bug fix: Google fonts load only if you have selected
 
 = 2.4.1 =
-12.01.14
+12.01.15
 
 * Bug fix: Full width slider for home page
 * Improvements: header.php
