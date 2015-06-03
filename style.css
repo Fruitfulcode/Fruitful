@@ -2515,12 +2515,12 @@ div#fbSEOComments{
 }
 /* end styles for plugin "SEO Facebook Comments" */
 
-@media only screen and (-webkit-min-device-pixel-ratio: 2),
-	   only screen and (   min--moz-device-pixel-ratio: 2),
-	   only screen and (     -o-min-device-pixel-ratio: 2/1),
-	   only screen and (        min-device-pixel-ratio: 2),
-	   only screen and (                min-resolution: 192dpi),
-	   only screen and (                min-resolution: 2dppx) { 
-		.header-hgroup a.link-logo	  	  { display: none; }
-		.header-hgroup a.link-logo-retina { display: inline-block; width:50%;}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+	.header-hgroup a.link-logo	  	  { display: none; }
+	.header-hgroup a.link-logo-retina { display: inline-block; width:50%;}
+}
+
+@media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) { 
+	.header-hgroup a.link-logo	  	  { display: none; }
+	.header-hgroup a.link-logo-retina { display: inline-block; width:50%;}
 }
