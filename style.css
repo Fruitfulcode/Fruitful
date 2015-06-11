@@ -2516,11 +2516,11 @@ div#fbSEOComments{
 /* end styles for plugin "SEO Facebook Comments" */
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
-	.header-hgroup a.link-logo	  	  { display: none; }
-	.header-hgroup a.link-logo-retina { display: inline-block; width:50%;}
+	#page-header .container header .header-hgroup a.link-logo	  	    {display: none;}
+	#page-header .container header .header-hgroup a.link-logo-retina  {display:block; width:50%; margin:0 auto}
 }
 
-@media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) { 
-	.header-hgroup a.link-logo	  	  { display: none; }
-	.header-hgroup a.link-logo-retina { display: inline-block; width:50%;}
-}
+ @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) { 
+	#page-header .container header .header-hgroup a.link-logo	  	     {display: none;}
+	#page-header .container header .header-hgroup a.link-logo-retina  {display:block; width:50%; margin:0 auto}
+} 
