@@ -433,7 +433,7 @@ function fruitful_woo_product_sidebar() {
 	$options = fruitful_get_theme_options();
 	?>
 	<div class="box-option">
-		<?php fruitful_get_select_fields('woo_product_sidebar', $options, fruitful_woo_shop_sidebar_list(), 'woocommerce'); ?>		
+		<?php fruitful_get_select_fields('woo_product_sidebar', $options, fruitful_woo_product_sidebar_list(), 'woocommerce'); ?>		
 	</div>	
 <?php	
 }

@@ -111,6 +111,33 @@ function fruitful_woo_shop_sidebar_list() {
 	return apply_filters( 'fruitful_woo_shop_sidebar_list', $num_row );
 }
 
+function fruitful_woo_product_sidebar_list() {
+	$num_row = array(
+		'0' => array(
+			'value' =>	   '1',
+			'label' => __( 'Full width with tabs on left side', 'fruitful' )
+		),
+		'1' => array(
+			'value' =>	   '2',
+			'label' => __( 'Left sidebar', 'fruitful' )
+		),
+		'2' => array(
+			'value' =>	   '3',
+			'label' => __( 'Right sidebar', 'fruitful' )
+		),
+		'3' => array(
+			'value' =>	   '4',
+			'label' => __( 'Full width with tabs on right side', 'fruitful' )
+		),
+		'4' => array(
+			'value' =>	   '5',
+			'label' => __( 'Full width with tabs in center', 'fruitful' )
+		)
+	);
+
+	return apply_filters( 'fruitful_woo_product_sidebar_list', $num_row );
+}
+
 function fruitful_number_per_row() {
 	$num_row = array(
 		'0' => array(

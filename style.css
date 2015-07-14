@@ -1179,16 +1179,16 @@ section {
 }
 
 #page-header .container header .header-hgroup.center-pos {
-	float: right;
-	margin:0;
-	width:100%;
-	display:inline-block;
-	text-align:center;
+ float: right;
+ margin:0;
+ width:100%;
+ display:inline-block;
+ text-align:center;
 }
 
 #page-header .container header .header-hgroup.center-pos a {
-	text-align:center;
-	float:none;
+ text-align:center;
+ float:none;
 }
 
 #page-header .container header .header-hgroup.right-pos  {
@@ -2515,12 +2515,17 @@ div#fbSEOComments{
 }
 /* end styles for plugin "SEO Facebook Comments" */
 
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
-	#page-header .container header .header-hgroup a.link-logo	  	    {display: none;}
-	#page-header .container header .header-hgroup a.link-logo-retina  {display:block; width:50%; margin:0 auto}
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+	   only screen and (   min--moz-device-pixel-ratio: 2),
+	   only screen and (     -o-min-device-pixel-ratio: 2/1),
+	   only screen and (        min-device-pixel-ratio: 2),
+	   only screen and (                min-resolution: 192dpi),
+	   only screen and (                min-resolution: 2dppx) { 
+		#page-header .container header .header-hgroup a.link-logo	  	    {display: none;}
+		#page-header .container header .header-hgroup a.link-logo-retina  {display:block; width:50%; margin:0 auto}
 }
 
- @media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) { 
+@media (-webkit-min-device-pixel-ratio: 3), (min-resolution: 288dpi) { 
 	#page-header .container header .header-hgroup a.link-logo	  	     {display: none;}
 	#page-header .container header .header-hgroup a.link-logo-retina  {display:block; width:50%; margin:0 auto}
 } 
