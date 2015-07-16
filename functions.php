@@ -277,7 +277,7 @@ function fruitful_scripts() {
 	}
 	
 	/*add woocommerce styles for ie*/
-	wp_enqueue_style( 'ie-style',		get_template_directory_uri() . '/woocommerce/ie.css');
+	wp_enqueue_style( 'ie-style', get_template_directory_uri() . '/woocommerce/ie.css');
 	
 	/*add fancybox*/
 	wp_enqueue_script('fn-box',				get_template_directory_uri() . '/js/fnBox/jquery.fancybox.pack.js',   array( 'jquery' ), '20140525', false );
