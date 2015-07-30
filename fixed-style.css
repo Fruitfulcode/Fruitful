@@ -999,14 +999,14 @@ embed,iframe,object {
 
 #page-header .container header .header-hgroup.center-pos {
 	float:right;
-    margin: 0 15px 0 15px;
+    margin: 0;
 	width:100%;
-	display:block;
+    display: inline-block;
+    text-align: center;
 }
 
 #page-header .container header .header-hgroup.center-pos a {
 	text-align:center;
-	display:block;
 	float:none;
 }
 
