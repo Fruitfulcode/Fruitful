@@ -1902,65 +1902,68 @@ if (!class_exists('ffs')){
 }
 
 
-	
-function fruitful_init_woo_actions() {
-	function go_hooks() {
-		remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10);
-		remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_images', 20);
-		remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_sale_flash', 10);
-		remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5);
-		remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10);		
-		remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10);
-		add_action( 'woocommerce_before_single_product_summary', 'woocommerce_template_single_title', 5);
-		add_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_images', 10);
-		add_action( 'woocommerce_before_single_product_summary', 'woocommerce_template_single_rating', 20);		
-		add_action( 'woocommerce_before_single_product_summary', 'woocommerce_template_single_price', 20); 
-		add_action( 'woocommerce_before_single_product_summary', 'woocommerce_output_product_data_tabs', 25);
-		
-	}
-	
-	$woo_tabs_pos = fruitful_get_woo_sidebar();
-	if ($woo_tabs_pos == 4)
-		go_hooks();
-		
-}
-
-add_action( 'wp', 'fruitful_init_woo_actions' , 10);
-
-function fruitful_init_woo_styles() {
-	
-	function go_woo_tabs_left(){
-		$style_ = $back_style = $woo_style_ = '';
-		$theme_options  = fruitful_ret_options("fruitful_theme_options"); 
-		$style_ .= '@media only screen and (min-width: 1024px) {body.woocommerce div.product div.summary, body.woocommerce-page div.product div.summary, body.woocommerce #content div.product div.summary, body.woocommerce-page #content div.product div.summary {max-width : 100%; }}' . "\n";
-		$style_ .= '@media only screen and (min-width: 1024px) {body.woocommerce div.product .woocommerce-tabs, body.woocommerce-page div.product .woocommerce-tabs, body.woocommerce #content div.product .woocommerce-tabs, body.woocommerce-page #content div.product .woocommerce-tabs {float: left; }}' . "\n";
-		$style_ .= '@media only screen and (max-width: 1024px) {body.woocommerce div.product .woocommerce-tabs, body.woocommerce-page div.product .woocommerce-tabs, body.woocommerce #content div.product .woocommerce-tabs, body.woocommerce-page #content div.product .woocommerce-tabs {margin: 0 0 15px 0;}}' . "\n";
-		$style_ .= '@media only screen and (min-width: 1024px) {body.woocommerce div.product div.images, body.woocommerce-page div.product div.images, body.woocommerce #content div.product div.images, body.woocommerce-page #content div.product div.images {margin: 0 0 0 25px; float: right}}' . "\n";
-		$style_ .= '.single.woocommerce span.onsale, .single.woocommerce-page span.onsale {  top: 6px; right:15px; left: auto; position: absolute;  display: block;}' . "\n";
-		$style_ .= '@media only screen and (max-width: 1024px) {body.woocommerce div.product div.images, body.woocommerce-page div.product div.images, body.woocommerce #content div.product div.images, body.woocommerce-page #content div.product div.images{ clear: both; position: relative; margin: 20px auto; }}' . "\n";
-		$style_ .= '@media only screen and (min-width: 1024px) {.entry-title, .woocommerce-product-rating, div[itemprop="offers"], div[itemprop="offers"].price{ display:inline-block; width: 565px;}}' . "\n";
-		wp_add_inline_style( 'main-style', fruitful_compress_code($style_)); 
-		if ($woo_style_ != '') {
-			wp_add_inline_style( 'woo-style', fruitful_compress_code($woo_style_)); 
-		}	
-	}
-	
-		function go_woo_tabs_center(){
-		$style_ = $back_style = $woo_style_ = '';
-		$theme_options  = fruitful_ret_options("fruitful_theme_options"); 
-		$style_ .= '@media only screen and (min-width: 1024px) {body.woocommerce div.product .woocommerce-tabs, body.woocommerce-page div.product .woocommerce-tabs, body.woocommerce #content div.product .woocommerce-tabs, body.woocommerce-page #content div.product .woocommerce-tabs {max-width : 100%; margin-top: 20px;}}' . "\n";
-			wp_add_inline_style( 'main-style', fruitful_compress_code($style_)); 
-		if ($woo_style_ != '') {
-			wp_add_inline_style( 'woo-style', fruitful_compress_code($woo_style_)); 
-		}	
+if (class_exists('Woocommerce')) { 	
+	function fruitful_init_woo_actions() {
+		function go_hooks() {
+			remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10);
+			remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_images', 20);
+			remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_sale_flash', 10);
+			remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5);
+			remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_rating', 10);		
+			remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10);
+			add_action( 'woocommerce_before_single_product_summary', 'woocommerce_template_single_title', 5);
+			add_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_images', 10);
+			add_action( 'woocommerce_before_single_product_summary', 'woocommerce_template_single_rating', 20);		
+			add_action( 'woocommerce_before_single_product_summary', 'woocommerce_template_single_price', 20); 
+			add_action( 'woocommerce_before_single_product_summary', 'woocommerce_output_product_data_tabs', 25);
+			
 		}
-	
-	$woo_tabs_pos = fruitful_get_woo_sidebar();
-	if ($woo_tabs_pos == 4)
-		go_woo_tabs_left();
-	if ($woo_tabs_pos == 5)
-		go_woo_tabs_center();
+		
+		$woo_tabs_pos = fruitful_get_woo_sidebar();
+		if ($woo_tabs_pos == 4)
+			go_hooks();
+			
+	}
 
+	add_action( 'wp', 'fruitful_init_woo_actions' , 10);
 }
 
-add_action(	'wp_enqueue_scripts', 'fruitful_init_woo_styles', 100);
+if (class_exists('Woocommerce')) { 	
+	function fruitful_init_woo_styles() {
+		
+		function go_woo_tabs_left(){
+			$style_ = $back_style = $woo_style_ = '';
+			$theme_options  = fruitful_ret_options("fruitful_theme_options"); 
+			$style_ .= '@media only screen and (min-width: 1024px) {body.woocommerce div.product div.summary, body.woocommerce-page div.product div.summary, body.woocommerce #content div.product div.summary, body.woocommerce-page #content div.product div.summary {max-width : 100%; }}' . "\n";
+			$style_ .= '@media only screen and (min-width: 1024px) {body.woocommerce div.product .woocommerce-tabs, body.woocommerce-page div.product .woocommerce-tabs, body.woocommerce #content div.product .woocommerce-tabs, body.woocommerce-page #content div.product .woocommerce-tabs {float: left; }}' . "\n";
+			$style_ .= '@media only screen and (max-width: 1024px) {body.woocommerce div.product .woocommerce-tabs, body.woocommerce-page div.product .woocommerce-tabs, body.woocommerce #content div.product .woocommerce-tabs, body.woocommerce-page #content div.product .woocommerce-tabs {margin: 0 0 15px 0;}}' . "\n";
+			$style_ .= '@media only screen and (min-width: 1024px) {body.woocommerce div.product div.images, body.woocommerce-page div.product div.images, body.woocommerce #content div.product div.images, body.woocommerce-page #content div.product div.images {margin: 0 0 0 25px; float: right}}' . "\n";
+			$style_ .= '.single.woocommerce span.onsale, .single.woocommerce-page span.onsale {  top: 6px; right:15px; left: auto; position: absolute;  display: block;}' . "\n";
+			$style_ .= '@media only screen and (max-width: 1024px) {body.woocommerce div.product div.images, body.woocommerce-page div.product div.images, body.woocommerce #content div.product div.images, body.woocommerce-page #content div.product div.images{ clear: both; position: relative; margin: 20px auto; }}' . "\n";
+			$style_ .= '@media only screen and (min-width: 1024px) {.entry-title, .woocommerce-product-rating, div[itemprop="offers"], div[itemprop="offers"].price{ display:inline-block; width: 565px;}}' . "\n";
+			wp_add_inline_style( 'main-style', fruitful_compress_code($style_)); 
+			if ($woo_style_ != '') {
+				wp_add_inline_style( 'woo-style', fruitful_compress_code($woo_style_)); 
+			}	
+		}
+		
+			function go_woo_tabs_center(){
+			$style_ = $back_style = $woo_style_ = '';
+			$theme_options  = fruitful_ret_options("fruitful_theme_options"); 
+			$style_ .= '@media only screen and (min-width: 1024px) {body.woocommerce div.product .woocommerce-tabs, body.woocommerce-page div.product .woocommerce-tabs, body.woocommerce #content div.product .woocommerce-tabs, body.woocommerce-page #content div.product .woocommerce-tabs {max-width : 100%; margin-top: 20px;}}' . "\n";
+				wp_add_inline_style( 'main-style', fruitful_compress_code($style_)); 
+			if ($woo_style_ != '') {
+				wp_add_inline_style( 'woo-style', fruitful_compress_code($woo_style_)); 
+			}	
+			}
+		
+		$woo_tabs_pos = fruitful_get_woo_sidebar();
+		if ($woo_tabs_pos == 4)
+			go_woo_tabs_left();
+		if ($woo_tabs_pos == 5)
+			go_woo_tabs_center();
+
+	}
+
+	add_action(	'wp_enqueue_scripts', 'fruitful_init_woo_styles', 100);
+}
