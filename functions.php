@@ -599,7 +599,11 @@ if (!function_exists('fruitful_get_logo')) {
 		$url_logo = $url_retina_logo = '';
 	
 		if (!empty($theme_options['logo_img'])) { $url_logo_id	= esc_attr($theme_options['logo_img']); } else { $url_logo_id 	= ''; }
+		if (!empty($theme_options['logo_w'])) { $logo_width	= esc_attr($theme_options['logo_w']); } else { $logo_width 	= ''; }
+		if (!empty($theme_options['logo_h'])) { $logo_height = esc_attr($theme_options['logo_h']); } else { $logo_height 	= ''; }		
 		if (!empty($theme_options['logo_img_retina'])) { $url_retina_logo_id	= esc_attr($theme_options['logo_img_retina']); } else { $url_retina_logo_id 	= ''; }
+		if (!empty($theme_options['logo_retina_w'])) { $logo_width	= esc_attr($theme_options['logo_retina_w']); } else { $logo_retina_width 	= ''; }
+		if (!empty($theme_options['logo_retina_h'])) { $logo_height = esc_attr($theme_options['logo_retina_h']); } else { $logo_retina_height 	= ''; }	
 	
 		/*Full Backend Options*/
 		$description  = $name = '';
@@ -613,8 +617,8 @@ if (!function_exists('fruitful_get_logo')) {
 			$url_retina_logo = wp_get_attachment_image_src($url_retina_logo_id, 'full');
 			$url_retina_logo = esc_url_raw($url_retina_logo[0]);
 			
-			if (!empty($url_logo)) 	echo  '<a class="link-logo" href="' . esc_url( home_url( '/' ) ) . '" title="' . $description .'" rel="home"><img class="logo" src="'. $url_logo  .'" alt="' . $description . '"/></a>';
-			if (!empty($url_retina_logo)) echo  '<a class="link-logo-retina" href="' . esc_url( home_url( '/' ) ) . '" title="' . $description .'" rel="home"><img class="logo retina" src="'. $url_retina_logo  .'" alt="' . $description . '"/></a>';
+			if (!empty($url_logo)) 	echo  '<a class="link-logo" href="' . esc_url( home_url( '/' ) ) . '" title="' . $description .'" rel="home"><img class="logo" src="'. $url_logo  .'" width="' . $logo_width . '" height="' . $logo_height . '" alt="' . $description . '"/></a>';
+			if (!empty($url_retina_logo)) echo  '<a class="link-logo-retina" href="' . esc_url( home_url( '/' ) ) . '" title="' . $description .'" rel="home"><img class="logo retina" src="'. $url_retina_logo  .'" width="' . $logo_retina_width . '" height="' . $logo_retina_height . '" alt="' . $description . '"/></a>';
 			
 			
 		} else {
@@ -893,6 +897,12 @@ if ( ! function_exists( 'fruitful_get_responsive_style' ) ) {
 					} else {
 						$style_ .= '.head-container {position : relative; }' . "\n";  
 					}
+				}
+				if (!empty($theme_options['logo_h'])) {
+					$style_ .= '.site-header img {height : '.esc_attr($theme_options['logo_h']).'px; }' . "\n";  
+				}
+				if (!empty($theme_options['logo_retina_h'])) {
+					$style_ .= '.site-header img {height : '.esc_attr($theme_options['logo_retina_h']).'px; }' . "\n";  
 				}
 				/*end of header styles*/
 				

@@ -65,8 +65,9 @@ function fruitful_theme_options_init() {
 	add_settings_field( 'content_background_color', __( 'Background color for content  ', 'fruitful' ), 'fruitful_get_container_background_color', 'theme_options',  'background', array('info' => __( 'Choose color for main content area', 'fruitful' )));
 		
 	add_settings_field( 'logo_image', 			__( 'Logo image', 'fruitful' ), 		'fruitful_get_logo_img', 				'theme_options', 'logo',  	array('info' => __( 'Upload logo image for your website. Size is original (Supported files .png, .jpg, .gif)', 'fruitful' )));
+	add_settings_field( 'logo_size', 			__( 'Logo size', 'fruitful' ), 			'fruitful_get_logo_wh',	 				'theme_options', 'logo',  	array('info' => __( 'Specify resolution for your logo image in pixels. Our theme will crop (timthumb) your image for need size.', 'fruitful' )) );
 	add_settings_field( 'logo_image_retina',	__( 'Logo image retina', 'fruitful' ), 	'fruitful_get_logo_img_retina', 		'theme_options', 'logo',  	array('info' => __( 'Upload your Retina Logo. This should be your Logo in double size (If your logo is 100 x 20px, it should be 200 x 40px)', 'fruitful' )));
-  //add_settings_field( 'logo_size', 			__( 'Logo Size', 'fruitful' ), 			'fruitful_get_logo_wh',	 				'theme_options', 'logo',  	array('info' => __( 'Specify resolution for your logo image. Our theme will crop (timthumb) your image for need size.', 'fruitful' )) );
+	add_settings_field( 'logo_retina_size', 			__( 'Retina logo size', 'fruitful' ), 			'fruitful_get_retina_logo_wh',	 				'theme_options', 'logo',  	array('info' => __( 'Specify resolution for your retina logo image in pixels. Our theme will crop (timthumb) your image for need size.', 'fruitful' )) );
 	add_settings_field( 'fav_icon', 				__( 'Favicon', 'fruitful' ), 				'fruitful_get_fav_icon', 				'theme_options', 'logo',  	array('info' => __( 'A favicon is a 16x16 pixel icon that represents your site; upload your custom Favicon here.', 'fruitful' )));
 	add_settings_field( 'fav_icon_iphone',			__( 'Favicon iPhone', 'fruitful' ), 		'fruitful_get_fav_icon_iphone',			'theme_options', 'logo',  	array('info' => __( 'Upload a custom favicon for iPhone (57x57 pixel png).', 'fruitful' )));
 	add_settings_field( 'fav_icon_iphone_retina',	__( 'Favicon iPhone Retina', 'fruitful' ), 	'fruitful_get_fav_icon_iphone_retina',	'theme_options', 'logo',  	array('info' => __( 'Upload a custom favicon for iPhone retina (114x114 pixel png).', 'fruitful' )));
@@ -517,12 +518,24 @@ function fruitful_set_logo_position() {
 
 
 function fruitful_get_logo_wh () {
-	$options = fruitful_get_theme_options();
+	$options = fruitful_ret_options("fruitful_theme_options");
 	$upload  = intval($options['logo_img']);
 	?>
 	<h4 class="full-width"><?php _e( 'Width', 'fruitful' ); ?></h4>
 	<input type="text" name="fruitful_theme_options[logo_w]"  id="logo-w" class="text-input" value ="<?php echo intval($options['logo_w']); ?>"/>
-	<h4 class="full-width"><?php _e( 'Height', 'fruitful' ); ?></h4><input type="text" name="fruitful_theme_options[logo_h]" id="logo-h"  class="text-input" value ="<?php echo intval($options['logo_h']); ?>"/>
+	<h4 class="full-width"><?php _e( 'Height', 'fruitful' ); ?></h4>
+	<input type="text" name="fruitful_theme_options[logo_h]" id="logo-h"  class="text-input" value ="<?php echo intval($options['logo_h']); ?>"/>
+
+	<?php }
+	
+function fruitful_get_retina_logo_wh () {
+	$options = fruitful_get_theme_options();
+	$upload  = intval($options['logo_img_retina']);
+	?>
+	<h4 class="full-width"><?php _e( 'Width', 'fruitful' ); ?></h4>
+	<input type="text" name="fruitful_theme_options[logo_retina_w]"  id="logo_retina_w" class="text-input" value ="<?php echo intval($options['logo_retina_w']); ?>"/>
+	<h4 class="full-width"><?php _e( 'Height', 'fruitful' ); ?></h4>
+	<input type="text" name="fruitful_theme_options[logo_retina_h]" id="logo_retina_h"  class="text-input" value ="<?php echo intval($options['logo_retina_h']); ?>"/>
 
 	<?php }
 	

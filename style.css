@@ -1029,7 +1029,7 @@ ul#lang-select-popup{
 .site-header img,.entry-content img,img[class*="align"],img[class*="wp-image-"] {
     height:auto;
 }
-.site-header img, img.size-full {
+img.size-full {
     width:auto !important;
 	max-width: 100%;
 }
