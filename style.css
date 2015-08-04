@@ -1408,7 +1408,7 @@ article.format-image .wp-caption a:hover:after{
 }
 /* .entry-content iframe{max-height:650px} */
 
-.header-hgroup a.link-logo-retina {
+.header-hgroup a.link-logo-retina, .site-header a.link-logo-retina {
 	display:none;
 }
 
