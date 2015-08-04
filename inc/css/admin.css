@@ -114,7 +114,7 @@ a:hover, a:active, a:focus {	outline: 0; }
 .sidebar-promo p {color:#3e3e3e; font-size:14px; margin:0 0 1.5em 0; padding:0; font-family:Arial; line-height:24px;}
 .form-admin-fruitful .content .settings-section .settings-form-row .box-options #slider_main_options {display:none; float: left; margin: 0 0 20px 0;}
 .box-options .upload_button_div .reset_btn,.box-options ul.slides li.slide .slide-content .upload_button_div .reset_slide_btn  {margin-left:5px}
-#logo-w, #logo-h, #logo_retina_w, #logo_retina_h {width:105px}
+#logo-w, #logo-h {width:105px}
 #tracking_code {width:150px}
 .no-slider-select, .flex-slider, .nivo-slider {display:none}
 .box-image {float:left; display:block; width:100%; clear:both;}

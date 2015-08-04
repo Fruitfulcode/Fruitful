@@ -596,14 +596,16 @@ if (!function_exists('fruitful_get_slider')) {
 if (!function_exists('fruitful_get_logo')) {
 	function fruitful_get_logo () {
 		$theme_options  = fruitful_ret_options("fruitful_theme_options");
+		if (!empty($theme_options['logo_w'])) {$logo_w = intval($theme_options['logo_w']); }
+		if (!empty($theme_options['logo_h'])) {$logo_h = intval($theme_options['logo_h']); }
 		$url_logo = $url_retina_logo = '';
 	
 		if (!empty($theme_options['logo_img'])) { $url_logo_id	= esc_attr($theme_options['logo_img']); } else { $url_logo_id 	= ''; }
-		if (!empty($theme_options['logo_w'])) { $logo_width	= esc_attr($theme_options['logo_w']); } else { $logo_width 	= ''; }
-		if (!empty($theme_options['logo_h'])) { $logo_height = esc_attr($theme_options['logo_h']); } else { $logo_height 	= ''; }		
+		if (!empty($logo_w)) { $logo_width	= $logo_w; } else { $logo_width 	= ''; }
+		if (!empty($logo_h)) { $logo_height = $logo_h; } else { $logo_height 	= ''; }		
 		if (!empty($theme_options['logo_img_retina'])) { $url_retina_logo_id	= esc_attr($theme_options['logo_img_retina']); } else { $url_retina_logo_id 	= ''; }
-		if (!empty($theme_options['logo_retina_w'])) { $logo_width	= esc_attr($theme_options['logo_retina_w']); } else { $logo_retina_width 	= ''; }
-		if (!empty($theme_options['logo_retina_h'])) { $logo_height = esc_attr($theme_options['logo_retina_h']); } else { $logo_retina_height 	= ''; }	
+		if (!empty($logo_w)) { $logo_retina_width	= $logo_width; } else { $logo_retina_width 	= ''; }
+		if (!empty($logo_h)) { $logo_retina_height = $logo_height; } else { $logo_retina_height 	= ''; }	
 	
 		/*Full Backend Options*/
 		$description  = $name = '';
