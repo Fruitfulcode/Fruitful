@@ -65,8 +65,8 @@ function fruitful_theme_options_init() {
 	add_settings_field( 'content_background_color', __( 'Background color for content  ', 'fruitful' ), 'fruitful_get_container_background_color', 'theme_options',  'background', array('info' => __( 'Choose color for main content area', 'fruitful' )));
 		
 	add_settings_field( 'logo_position', 	__( 'Logo Position', 'fruitful' ), 	'fruitful_set_logo_position', 	'theme_options', 'logo',  	array('info' => __( 'Set Logo Position', 'fruitful' )));
-	add_settings_field( 'logo_image', 			__( 'Logo image', 'fruitful' ), 		'fruitful_get_logo_img', 				'theme_options', 'logo',  	array('info' => __( 'Upload logo image for your website. Size is original (Supported files .png, .jpg, .gif)', 'fruitful' )));
 	add_settings_field( 'logo_size', 			__( 'Logo size', 'fruitful' ), 			'fruitful_get_logo_wh',	 				'theme_options', 'logo',  	array('info' => __( 'Specify resolution for your logo image in pixels. Our theme will crop (timthumb) your image for need size.', 'fruitful' )) );
+	add_settings_field( 'logo_image', 			__( 'Logo image', 'fruitful' ), 		'fruitful_get_logo_img', 				'theme_options', 'logo',  	array('info' => __( 'Upload logo image for your website. Size is original (Supported files .png, .jpg, .gif)', 'fruitful' )));
 	add_settings_field( 'logo_image_retina',	__( 'Logo image retina', 'fruitful' ), 	'fruitful_get_logo_img_retina', 		'theme_options', 'logo',  	array('info' => __( 'Upload your Retina Logo. This should be your Logo in double size (If your logo is 100 x 20px, it should be 200 x 40px)', 'fruitful' )));
 		
 	add_settings_field( 'fav_icon', 				__( 'Favicon', 'fruitful' ), 				'fruitful_get_fav_icon', 				'theme_options', 'logo',  	array('info' => __( 'A favicon is a 16x16 pixel icon that represents your site; upload your custom Favicon here.', 'fruitful' )));
