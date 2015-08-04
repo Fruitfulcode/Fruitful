@@ -901,10 +901,10 @@ if ( ! function_exists( 'fruitful_get_responsive_style' ) ) {
 					}
 				}
 				if (!empty($theme_options['logo_h'])) {
-					$style_ .= '.site-header img {height : '.esc_attr($theme_options['logo_h']).'px; }' . "\n";  
+					$style_ .= '.site-header img {max-height : '.esc_attr($theme_options['logo_h']).'px; }' . "\n";  
 				}
 				if (!empty($theme_options['logo_retina_h'])) {
-					$style_ .= '.site-header img {height : '.esc_attr($theme_options['logo_retina_h']).'px; }' . "\n";  
+					$style_ .= '.site-header img {max-height : '.esc_attr($theme_options['logo_retina_h']).'px; }' . "\n";  
 				}
 				/*end of header styles*/
 				
