@@ -690,7 +690,7 @@ return array(
 				's_initDelay'		=> '0',
 				's_randomize'		=> 'false',
 				's_controlnav'		=> 'true',
-				's_touch'			=> 'false',
+				's_touch'			=> 'true',
 				
 				/*slider nivo*/
 				'nv_skins'				=> 'theme-bar',
