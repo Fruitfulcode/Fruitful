@@ -103,6 +103,17 @@ Files: .pot, ru_Ru.po, ru_Ru.mo icluded. Default language is english.
     Changelog
 -------------------------------------------------------
 
+= 2.7 =
+05.08.2015
+
+* New: WooCoomerce product sidebar options
+* Update: WooCommerce 2.3.13 ready
+* Update: FlexSlider.js 2.5.0
+* Update: ru_Ru translations
+* Bug fix: Retina logo
+* Bug fix: Social media icons
+
+
 = 2.6 =
 21.05.15
 

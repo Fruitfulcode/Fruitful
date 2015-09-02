@@ -46,7 +46,7 @@ function fruitful_theme_options_init() {
 	add_settings_field( 'general_cm',		__( 'Comments', 'fruitful' ), 	'fruitful_get_general_comment',  	'theme_options',  'general', array('info' => __( 'If you want to display comments on your post page or page, select options below.', 'fruitful' )));
 	add_settings_field( 'general_ds',		__( 'Default theme styles',  'fruitful' ),'fruitful_get_style_theme', 'theme_options',  'general', array('info' => __( 'Default CSS. Theme option for styling is not working, if this option enable.', 'fruitful' )));
 	add_settings_field( 'general_lp',		__( 'Front page template with latest posts',    'fruitful' ),'fruitful_latest_posts_template','theme_options',  'general', array('info' => __( 'Settings > Reading > Front page displays > Your latest posts', 'fruitful' )));
-	add_settings_field( 'general_cp',		__( 'Custom wordpress pages layout',   'fruitful' ),   'fruitful_custom_pages_layout','theme_options',  'general',   array('info' => __( 'Set default template for pages.', 'fruitful' )));
+	add_settings_field( 'general_cp',		__( 'Page templates by default',   'fruitful' ),   'fruitful_custom_pages_layout','theme_options',  'general',   array('info' => __( 'Choose default display for templates.', 'fruitful' )));
 	add_settings_field( 'general_sf',		__( 'Show Featured image on single post', 'fruitful' ),'fruitful_show_featured_single_post','theme_options',  'general', array('info' => __( 'Select option below for show featured image on single post page.', 'fruitful' )));
 	if(function_exists('icl_get_languages')){ // if WPML is activated
 		add_settings_field( 'general_wpml',		__( 'Multilingual Switch in Header (WPML)', 'fruitful' ), 'fruitful_wpml_ready',  'theme_options',  'general', array('info' => __( 'If you wish to show Language Switch in header, select option below. ', 'fruitful' )));
@@ -54,20 +54,20 @@ function fruitful_theme_options_init() {
 	add_settings_field( 'general_rb',		__( 'Reset options', 'fruitful' ), 'fruitful_reset_btn',  'theme_options',  'general', array('info' => __( 'All theme options will be reset to default. ', 'fruitful' )));
 	
 	add_settings_field( 'header_hd',		__( 'Sticky  header', 	 		 'fruitful' ), 	'fruitful_get_general_header', 	'theme_options',  'header', array('info' => __( 'Options relating to the website header', 'fruitful' )));
+	add_settings_field( 'header_mp',		__( 'Menu Position', 			 'fruitful' ), 	'fruitful_set_menu_position', 	'theme_options',  'header', array('info' => __( 'Set menu position.', 'fruitful' )));
+	add_settings_field( 'header_rt',		__( 'Type of Responsive menu', 	 'fruitful' ), 	'fruitful_get_menu_type_resp', 	'theme_options',  'header', array('info' => __( 'Set type of responsive menu.', 'fruitful' )));
 	add_settings_field( 'header_hi',		__( 'Background for header', 	 'fruitful' ), 	'fruitful_get_header_img', 		'theme_options',  'header', array('info' => __( 'Upload image with full width for background in header area. (Supported files .png, .jpg, .gif)  ', 'fruitful' )));
 	add_settings_field( 'header_hs',		__( 'Background image size', 	 'fruitful' ), 	'fruitful_get_header_img_size', 'theme_options',  'header', array('info' => __( 'Choose size for background image - full width or only for content area.', 'fruitful' )));
 	add_settings_field( 'header_hh',		__( 'Height for header area', 	 'fruitful' ), 	'fruitful_get_header_height', 	'theme_options',  'header', array('info' => __( 'Minimum height in pixels', 'fruitful' )));
-	add_settings_field( 'header_mp',		__( 'Menu Position', 			 'fruitful' ), 	'fruitful_set_menu_position', 	'theme_options',  'header', array('info' => __( 'Set menu position.', 'fruitful' )));
-	add_settings_field( 'header_rt',		__( 'Type of Responsive menu', 	 'fruitful' ), 	'fruitful_get_menu_type_resp', 	'theme_options',  'header', array('info' => __( 'Set type of responsive menu.', 'fruitful' )));
 		
 	add_settings_field( 'background_image', __( 'Background Image', 'fruitful' ),  'fruitful_get_background_img',   'theme_options',  'background', array('info' => __( 'Upload your background image for site background. (Supported files .png, .jpg, .gif)', 'fruitful' )));
 	add_settings_field( 'background_color', __( 'Background Color ', 'fruitful' ), 'fruitful_get_background_color', 'theme_options',  'background', array('info' => __( 'Choose color for body background', 'fruitful' )));
 	add_settings_field( 'content_background_color', __( 'Background color for content  ', 'fruitful' ), 'fruitful_get_container_background_color', 'theme_options',  'background', array('info' => __( 'Choose color for main content area', 'fruitful' )));
 		
 	add_settings_field( 'logo_position', 	__( 'Logo Position', 'fruitful' ), 	'fruitful_set_logo_position', 	'theme_options', 'logo',  	array('info' => __( 'Set Logo Position', 'fruitful' )));
-	add_settings_field( 'logo_size', 			__( 'Logo size', 'fruitful' ), 			'fruitful_get_logo_wh',	 				'theme_options', 'logo',  	array('info' => __( 'Specify resolution for your logo image in pixels. Our theme will crop (timthumb) your image for need size.', 'fruitful' )) );
+	add_settings_field( 'logo_size', 			__( 'Logo size', 'fruitful' ), 			'fruitful_get_logo_wh',	 				'theme_options', 'logo',  	array('info' => __( 'Specify resolution for your logo image', 'fruitful' )) );
 	add_settings_field( 'logo_image', 			__( 'Logo image', 'fruitful' ), 		'fruitful_get_logo_img', 				'theme_options', 'logo',  	array('info' => __( 'Upload logo image for your website. Size is original (Supported files .png, .jpg, .gif)', 'fruitful' )));
-	add_settings_field( 'logo_image_retina',	__( 'Logo image retina', 'fruitful' ), 	'fruitful_get_logo_img_retina', 		'theme_options', 'logo',  	array('info' => __( 'Upload your Retina Logo. This should be your Logo in double size (If your logo is 100 x 20px, it should be 200 x 40px)', 'fruitful' )));
+	add_settings_field( 'logo_image_retina',	__( 'Logo image retina', 'fruitful' ), 	'fruitful_get_logo_img_retina', 		'theme_options', 'logo',  	array('info' => __( 'Upload logo in double size (If your logo is 100 x 20px, it should be 200 x 40px)', 'fruitful' )));
 		
 	add_settings_field( 'fav_icon', 				__( 'Favicon', 'fruitful' ), 				'fruitful_get_fav_icon', 				'theme_options', 'logo',  	array('info' => __( 'A favicon is a 16x16 pixel icon that represents your site; upload your custom Favicon here.', 'fruitful' )));
 	add_settings_field( 'fav_icon_iphone',			__( 'Favicon iPhone', 'fruitful' ), 		'fruitful_get_fav_icon_iphone',			'theme_options', 'logo',  	array('info' => __( 'Upload a custom favicon for iPhone (57x57 pixel png).', 'fruitful' )));
