@@ -339,14 +339,8 @@ if ( ! function_exists( 'fruitful_get_cart_button_html' ) ) {
 	}
 }	
 
-if ( ! function_exists( 'fruitful_check_gg_custom_fonts' ) ) {
-	function fruitful_check_gg_custom_fonts($inFont = null) {
-		$font_name = null;
-		$http_ = 'http://';
-		if (is_ssl()) {
-			$http_ = 'https://';
-		}
-		
+if ( ! function_exists( 'fruitful_get_google_fonts_lib' ) ) {
+	function fruitful_get_google_fonts_lib() {
 		$fonts_ = array();
 		$fonts_[] = 'fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300&subset=latin,latin-ext';
 		$fonts_[] = 'fonts.googleapis.com/css?family=Lobster&subset=cyrillic-ext,latin-ext,latin,cyrillic';
@@ -359,12 +353,27 @@ if ( ! function_exists( 'fruitful_check_gg_custom_fonts' ) ) {
 		$fonts_[] = 'fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin,cyrillic';
 		$fonts_[] = 'fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic,700';
 		$fonts_[] = 'fonts.googleapis.com/css?family=Droid+Sans:400,700';	
-
+		
+		return apply_filters( 'fruitful_fonts_google_library', $fonts_ );
+	}	
+}	
+		
+if ( ! function_exists( 'fruitful_check_gg_custom_fonts' ) ) {
+	function fruitful_check_gg_custom_fonts($inFont = null) {
+		$font_name = null;
+		$http_ = 'http://';
+		if (is_ssl()) {
+			$http_ = 'https://';
+		}
+		
+		$fonts_ = fruitful_get_google_fonts_lib();
+		
 		if (!empty($inFont)) {
 			$font_name = $inFont;
 			$font_name = urlencode(substr($font_name, 0, strrpos($font_name, ',')));
 			$in 	   = preg_quote($font_name, '~'); 	
 			$res	   = preg_grep('~' . $in . '~', $fonts_);
+			
 			if (!empty($res)) {
 				return $http_ . current($res);
 			} else 	{
