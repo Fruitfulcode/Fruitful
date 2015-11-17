@@ -975,7 +975,7 @@ function fruitful_theme_options_render_page() {
 				?></p>
 			</div>
 			<div class="sidebar-promo-widget promo-themes">
-				<h3><?php _e('Premium WordpPess themes', 'fruitful'); ?></h3>
+				<h3><?php _e('Premium WordPress themes', 'fruitful'); ?></h3>
 				<?php
 					$rand_banner = rand(0, 2);
 			
