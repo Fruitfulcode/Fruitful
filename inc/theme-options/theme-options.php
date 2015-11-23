@@ -56,6 +56,7 @@ function fruitful_theme_options_init() {
 	add_settings_field( 'header_hd',		__( 'Sticky  header', 	 		 'fruitful' ), 	'fruitful_get_general_header', 	'theme_options',  'header', array('info' => __( 'Options relating to the website header', 'fruitful' )));
 	add_settings_field( 'header_mp',		__( 'Menu Position', 			 'fruitful' ), 	'fruitful_set_menu_position', 	'theme_options',  'header', array('info' => __( 'Set menu position.', 'fruitful' )));
 	add_settings_field( 'header_rt',		__( 'Type of Responsive menu', 	 'fruitful' ), 	'fruitful_get_menu_type_resp', 	'theme_options',  'header', array('info' => __( 'Set type of responsive menu.', 'fruitful' )));
+	add_settings_field( 'header_mc',		__( 'Menu icon color', 	 'fruitful' ), 	'fruitful_get_menu_icon_color', 'theme_options',  'header', array('info' => __( 'Chose color for collapsing menu icon. ', 'fruitful' )));
 	add_settings_field( 'header_hi',		__( 'Background for header', 	 'fruitful' ), 	'fruitful_get_header_img', 		'theme_options',  'header', array('info' => __( 'Upload image with full width for background in header area. (Supported files .png, .jpg, .gif)  ', 'fruitful' )));
 	add_settings_field( 'header_hs',		__( 'Background image size', 	 'fruitful' ), 	'fruitful_get_header_img_size', 'theme_options',  'header', array('info' => __( 'Choose size for background image - full width or only for content area.', 'fruitful' )));
 	add_settings_field( 'header_hh',		__( 'Height for header area', 	 'fruitful' ), 	'fruitful_get_header_height', 	'theme_options',  'header', array('info' => __( 'Minimum height in pixels', 'fruitful' )));
@@ -356,6 +357,15 @@ function fruitful_get_header_img () {
 		<h4><?php _e( 'Header background-color', 'fruitful' ); ?></h4>
 		<input type="text" id="header_bg_color" class="colorPicker" name="fruitful_theme_options[header_bg_color]" value="<?php echo esc_attr($options['header_bg_color']); ?>" data-default-color="#ffffff"/>
 	</div>
+	<?php
+}
+
+function fruitful_get_menu_icon_color () {
+	$options = fruitful_get_theme_options();
+	?>
+		<fieldset>
+			<input type="text" id="menu_icon_color" class="colorPicker" name="fruitful_theme_options[menu_icon_color]" value="<?php echo esc_attr($options['menu_icon_color']); ?>"  data-default-color="#ffffff" />
+		</fieldset>
 	<?php
 }
 
