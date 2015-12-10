@@ -35,112 +35,34 @@ function fruitful_add_jquery_script() {
 
 function fruitful_fonts_list() {
 	$font_family_options = array(
-		'0' => array(
-			'value' =>	   'Arial, Helvetica, sans-serif',
-			'label' => __( 'Arial, Helvetica, sans-serif', 'fruitful' )
-		),
-		'1' => array(
-			'value' =>	   'Arial Black, Gadget, sans-serif',
-			'label' => __( 'Arial Black, Gadget, sans-serif', 'fruitful' )
-		),
-		'2' => array(
-			'value' => 	   	'Comic Sans MS, Textile, cursive',
-			'label' => __( 	'Comic Sans MS, Textile, cursive', 'fruitful' )
-		),
-		'3' => array(
-			'value' => 	   'Courier New, Courier, monospace',
-			'label' => __( 'Courier New, Courier, monospace', 'fruitful' )
-		),
-		'4' => array(
-			'value' => 	   'Georgia, Times New Roman, Times, serif',
-			'label' => __( 'Georgia, Times New Roman, Times, serif', 'fruitful' )
-		),
-		'5' => array(
-			'value' => 	   'Impact, Charcoal, sans-serif',
-			'label' => __( 'Impact, Charcoal, sans-serif', 'fruitful' )
-		),
-		'6' => array(
-			'value' => 	   'Lucida Console, Monaco, monospace',
-			'label' => __( 'Lucida Console, Monaco, monospace', 'fruitful' )
-		),
-		'7' => array(
-			'value' => 	   'Lucida Sans Unicode, Lucida Grande, sans-serif',
-			'label' => __( 'Lucida Sans Unicode, Lucida Grande, sans-serif', 'fruitful' )
-		),
-		'8' => array(
-			'value' => 	   'Palatino Linotype, Book Antiqua, Palatino, serif',
-			'label' => __( 'Palatino Linotype, Book Antiqua, Palatino, serif', 'fruitful' )
-		),
-		'9' => array(
-			'value' => 	   'Tahoma, Geneva, sans-serif',
-			'label' => __( 'Tahoma, Geneva, sans-serif', 'fruitful' )
-		),
-		'10' => array(
-			'value' => 	   'Times New Roman, Times, serif',
-			'label' => __( 'Times New Roman, Times, serif', 'fruitful' )
-		),
-		'11' => array(
-			'value' => 	   'Trebuchet MS, Helvetica, sans-serif',
-			'label' => __( 'Trebuchet MS, Helvetica, sans-serif', 'fruitful' )
-		),
-		'12' => array(
-			'value' => 	   'Verdana, Geneva, sans-serif',
-			'label' => __( 'Verdana, Geneva, sans-serif', 'fruitful' )
-		),
-		'13' => array(
-			'value' => 	   'MS Sans Serif, Geneva, sans-serif',
-			'label' => __( 'MS Sans Serif, Geneva, sans-serif', 'fruitful' )
-		),
-		'14' => array(
-			'value' => 	   'MS Serif, New York, serif',
-			'label' => __( 'MS Serif, New York, serif', 'fruitful' )
-		),
-		
-		/*Google fonts*/	
-		'15' => array(
-			'value' => 	   'Open Sans, sans-serif',
-			'label' => __( 'Open Sans, sans-serif', 'fruitful' )
-		),
-		'16' => array(
-			'value' => 	   'Lobster, cursive',
-			'label' => __( 'Lobster, cursive', 'fruitful' )
-		),
-		'17' => array(
-			'value' => 	   'Josefin Slab, serif',
-			'label' => __( 'Josefin Slab, serif', 'fruitful' )
-		),
-		'18' => array(
-			'value' => 	   'Arvo, serif',
-			'label' => __( 'Arvo, serif', 'fruitful' )
-		),
-		'19' => array(
-			'value' => 	   'Lato, sans-serif',
-			'label' => __( 'Lato, sans-serif', 'fruitful' )
-		),
-		'20' => array(
-			'value' => 	   'Vollkorn, serif',
-			'label' => __( 'Vollkorn, serif', 'fruitful' )
-		),
-		'21' => array(
-			'value' => 	   'Abril Fatface, cursive',
-			'label' => __( 'Abril Fatface, cursive', 'fruitful' )
-		),
-		'22' => array(
-			'value' => 	   'Ubuntu, sans-serif',
-			'label' => __( 'Ubuntu, sans-serif', 'fruitful' )
-		),
-		'23' => array(
-			'value' => 	   'PT Sans, sans-serif',
-			'label' => __( 'PT Sans, sans-serif', 'fruitful' )
-		),
-		'24' => array(
-			'value' => 	   'Old Standard TT, serif',
-			'label' => __( 'Old Standard TT, serif', 'fruitful' )
-		),
-		'25' => array(
-			'value' => 	   'Droid Sans, sans-serif',
-			'label' => __( 'Droid Sans, sans-serif', 'fruitful' )
-		)
+			'Arial, Helvetica, sans-serif'  				    => __( 'Arial, Helvetica, sans-serif', 'fruitful' ),
+			'Arial Black, Gadget, sans-serif'				    => __( 'Arial Black, Gadget, sans-serif', 'fruitful' ),
+			'Comic Sans MS, Textile, cursive' 				    => __( 	'Comic Sans MS, Textile, cursive', 'fruitful' ),
+			'Courier New, Courier, monospace'			 	    => __( 'Courier New, Courier, monospace', 'fruitful' ),
+			'Georgia, Times New Roman, Times, serif'	 	    => __( 'Georgia, Times New Roman, Times, serif', 'fruitful' ),
+			'Impact, Charcoal, sans-serif' 				 	    => __( 'Impact, Charcoal, sans-serif', 'fruitful' ),
+			'Lucida Console, Monaco, monospace' 			    => __( 'Lucida Console, Monaco, monospace', 'fruitful' ),
+			'Lucida Sans Unicode, Lucida Grande, sans-serif'	=> __( 'Lucida Sans Unicode, Lucida Grande, sans-serif', 'fruitful' ),
+			'Palatino Linotype, Book Antiqua, Palatino, serif' 	=> __( 'Palatino Linotype, Book Antiqua, Palatino, serif', 'fruitful' ),
+			'Tahoma, Geneva, sans-serif' 						=> __( 'Tahoma, Geneva, sans-serif', 'fruitful' ),
+			'Times New Roman, Times, serif'						=> __( 'Times New Roman, Times, serif', 'fruitful' ),
+			'Trebuchet MS, Helvetica, sans-serif' 				=> __( 'Trebuchet MS, Helvetica, sans-serif', 'fruitful' ),
+			'Verdana, Geneva, sans-serif'						=> __( 'Verdana, Geneva, sans-serif', 'fruitful' ),
+			'MS Sans Serif, Geneva, sans-serif' 				=> __( 'MS Sans Serif, Geneva, sans-serif', 'fruitful' ),
+			'MS Serif, New York, serif' 						=> __( 'MS Serif, New York, serif', 'fruitful' ),
+			
+			/*Google fonts*/	
+			'Open Sans, sans-serif' 							=> __( 'Open Sans, sans-serif', 'fruitful' ),
+			'Lobster, cursive' 									=> __( 'Lobster, cursive', 'fruitful' ),
+			'Josefin Slab, serif' 								=> __( 'Josefin Slab, serif', 'fruitful' ),
+			'Arvo, serif' 										=> __( 'Arvo, serif', 'fruitful' ),
+			'Lato, sans-serif' 									=> __( 'Lato, sans-serif', 'fruitful' ),
+			'Vollkorn, serif' 									=> __( 'Vollkorn, serif', 'fruitful' ),
+			'Abril Fatface, cursive' 							=> __( 'Abril Fatface, cursive', 'fruitful' ),
+			'Ubuntu, sans-serif'								=> __( 'Ubuntu, sans-serif', 'fruitful' ),
+			'PT Sans, sans-serif'								=> __( 'PT Sans, sans-serif', 'fruitful' ),
+			'Old Standard TT, serif' 							=> __( 'Old Standard TT, serif', 'fruitful' ),
+			'Droid Sans, sans-serif' 							=> __( 'Droid Sans, sans-serif', 'fruitful' ),
 	);
 
 	return apply_filters( 'fruitful_fonts_list', $font_family_options );
@@ -328,14 +250,37 @@ add_action('wp_ajax_fruitful_theme_options_action', 'fruitful_data_save');
 function fruitful_data_save() {
 global $fruitful_theme_options;
 	$data = $_POST[$fruitful_theme_options->args['opt_name']];
+
 	if (!isset($data['responsive'])) 	  {$data['responsive'] 		= 'off'; }
 	if (!isset($data['postcomment'])) 	  {$data['postcomment'] 	= 'off'; }
 	if (!isset($data['pagecomment'])) 	  {$data['pagecomment'] 	= 'off'; }
 	if (!isset($data['is_fixed_header'])) {$data['is_fixed_header'] = 'off'; }
-	if (!isset($data['styletheme'])) 	  {$data['styletheme'] 		= 'off'; }
+	//if (!isset($data['styletheme'])) 	  {$data['styletheme'] 		= 'off'; }
 	if (!isset($data['showcart'])) 	 	  {$data['showcart'] 		= 'off'; }
 	if (!isset($data['is_wpml_ready']))   {$data['is_wpml_ready']	= 'off'; }
-	if (!isset($data['bg_repeating'])) 	  {$data['bg_repeating'] 	= 'off'; }	
+	if (!isset($data['bg_repeating'])) 	  {$data['bg_repeating'] 	= 'off'; }
+	if (($data['responsive'] = '1')) 	  {$data['responsive'] 		= 'on'; }
+	if (($data['postcomment'] = '1')) 	  {$data['postcomment'] 	= 'on'; }
+	if (($data['pagecomment'] = '1')) 	  {$data['pagecomment'] 	= 'on'; }
+	if (($data['is_fixed_header'] = '1')) {$data['is_fixed_header'] = 'on'; }
+	//if (($data['styletheme'] = '1')) 	  {$data['styletheme'] 		= 'on'; }
+	if (($data['showcart'] = '1')) 	 	  {$data['showcart'] 		= 'on'; }
+	if (($data['is_wpml_ready'] = '1'))   {$data['is_wpml_ready']	= 'on'; }
+	if (($data['bg_repeating'] = '1')) 	  {$data['bg_repeating'] 	= 'on'; }		
+	if (isset ($data) && ($data != null) ) {
+		foreach ($data as $key=>$val) {
+			update_option( $key, $val );
+			if (($data['responsive'] == 'off')) 		{update_option('responsive','');}
+			if (($data['postcomment'] =='off')) 		{update_option('postcomment','');}
+			if (($data['pagecomment'] == 'off')) 		{update_option('pagecomment','');}
+			if (($data['is_fixed_header'] == 'off'))	{update_option('is_fixed_header','');}
+			//if (($data['styletheme'] == 'off')) 		{update_option('styletheme','');}
+			if (($data['showcart'] == 'off')) 	 		{update_option('showcart','');}
+			if (($data['is_wpml_ready'] == 'off'))  	{update_option('is_wpml_ready','');}
+			if (($data['bg_repeating'] == 'off')) 		{update_option('bg_repeating','');}	
+			if (($data['responsive'] == 'on')) 			{update_option('responsive','1');} 			if (($data['postcomment'] =='on')) 			{update_option('postcomment','1');} 			if (($data['pagecomment'] == 'on')) 		{update_option('pagecomment','1');} 			if (($data['is_fixed_header'] == 'on')) 	{update_option('is_fixed_header','1');} 			//if (($data['styletheme'] == 'on')) 			{update_option('styletheme','1');} 			if (($data['showcart'] == 'on')) 	 		{update_option('showcart','1');} 			if (($data['is_wpml_ready'] == 'on'))   	{update_option('is_wpml_ready','1');} 			if (($data['bg_repeating'] == 'on')) 		{update_option('bg_repeating','1');}				
+		}
+	}		
 	if(!empty($data)) {
 		if(update_option('fruitful_theme_options', $data)) {
 			die('1');
@@ -345,6 +290,7 @@ global $fruitful_theme_options;
 	} else {
 		die('1');  
 	}
+
 }
 
 function fruitful_get_theme_options() {
@@ -358,6 +304,10 @@ global $fruitful_theme_options;
 add_action('wp_ajax_fruitful_reset_btn', 'fruitful_reset_action');
 function fruitful_reset_action() {
 global $fruitful_theme_options;
+	// $data = get_option($fruitful_theme_options->args['opt_name']);	
+	// foreach ($data as $key=>$val){
+		// delete_option($key);
+	// }	
 	delete_option($fruitful_theme_options->args['opt_name']);
 	die();
 }

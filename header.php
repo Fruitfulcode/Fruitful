@@ -27,18 +27,17 @@
 	<?php
 		$theme_options  = fruitful_get_theme_options();
 		$logo_pos = $menu_pos = '';
+		if (get_option('logo_position') !== null)
+		$logo_pos = esc_attr(get_option('logo_position'));
 		
-		if (isset($theme_options['logo_position'])) 
-		$logo_pos = esc_attr($theme_options['logo_position']);
-		
-		if (isset($theme_options['menu_position'])) 
-		$menu_pos = esc_attr($theme_options['menu_position']);
+		if (get_option('menu_position')) 
+		$menu_pos = esc_attr(get_option('menu_position'));
 		
 		$logo_pos_class = fruitful_get_class_pos($logo_pos);
 		$menu_pos_class = fruitful_get_class_pos($menu_pos);
 		
-		$responsive_menu_type = esc_attr($theme_options['menu_type_responsive']);
-		$is_responsive  	  = (isset($theme_options['responsive']) && ($theme_options['responsive'] == 'on'));
+		$responsive_menu_type = esc_attr(get_option('menu_type_responsive'));
+		$is_responsive  	  = ((get_option('responsive')) && (get_option('responsive') == '1'));
 		
 			
 			if ( !$is_responsive || ( $is_responsive && ( $responsive_menu_type == 'inside_content' ) ) ) { ?>

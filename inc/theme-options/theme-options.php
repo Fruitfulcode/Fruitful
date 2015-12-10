@@ -65,12 +65,13 @@ class fruitful_theme_options {
 		fruitful_add_admin_style();
 	}
 
-	private function settings_fields () {
+	public function settings_fields () {
 
 	/*General*/
 
 		$this->sections['general'] = array(
 			'title'		=> __( 'General', 'fruitful' ),
+			'id'		=> 'general',
 			'fields'	=> array(
 				array(
 					'id' 			=> 'responsive',
@@ -99,14 +100,14 @@ class fruitful_theme_options {
 						),				
 					)
 				),	
-				array(
-					'id' 			=> 'styletheme',
-					'label'			=> __( 'Default theme styles' , 'fruitful' ),
-					'info'          => __( 'Default CSS. Theme option for styling is not working, if this option enable.', 'fruitful' ),
-					'description'	=> __( 'Enable', 'fruitful' ),
-					'type'			=> 'checkbox',
-					'default'		=> 'off',
-				),
+				// array(
+					// 'id' 			=> 'styletheme',
+					// 'label'			=> __( 'Default theme styles' , 'fruitful' ),
+					// 'info'          => __( 'Default CSS. Theme option for styling is not working, if this option enable.', 'fruitful' ),
+					// 'description'	=> __( 'Enable', 'fruitful' ),
+					// 'type'			=> 'checkbox',
+					// 'default'		=> 'off',
+				// ),
 				array(
 					'id' 			=> 'latest_posts_templ',
 					'label'			=> __( 'Front page template with latest posts', 'fruitful' ),
@@ -227,7 +228,7 @@ class fruitful_theme_options {
 					'label'			=> __( 'Multilingual Switch in Header (WPML)', 'fruitful' ),
 					'info'          => __( 'If you wish to show Language Switch in header, select option below.', 'fruitful' ),
 					'description'	=> __( 'Enable', 'fruitful' ),
-					'default'		=> ''		
+					'default'		=> 'off'		
 				),				
 				array(
 					'id' 			=> 'reset',
@@ -245,6 +246,7 @@ class fruitful_theme_options {
 
 		$this->sections['header'] = array(
 			'title'		=> __( 'Header', 'fruitful' ),
+			'id'		=> 'header',
 			'fields'	=> array(	
 				array(
 					'id' 			=> 'is_fixed_header',
@@ -320,6 +322,7 @@ class fruitful_theme_options {
 
 		$this->sections['background'] = array(
 			'title'		=> __( 'Background', 'fruitful' ),
+			'id'		=> 'background',
 			'fields'	=> array(
 				array(
 					'label'			=> __( 'Background Image' , 'fruitful' ),
@@ -335,7 +338,7 @@ class fruitful_theme_options {
 							'id' 			=> 'bg_repeating',
 							'description'	=> __( 'Background repeat', 'fruitful' ),
 							'type'			=> 'checkbox',
-							'default'		=> '',
+							'default'		=> 'off',
 						),				
 					)
 				),
@@ -359,6 +362,7 @@ class fruitful_theme_options {
 	/*Logo*/
 		$this->sections['logo'] = array(
 			'title'		=> __( 'Logo', 'fruitful' ),
+			'id'		=> 'logo',
 			'fields'	=> array(
 				array(
 					'id' 			=> 'logo_position',
@@ -453,6 +457,7 @@ class fruitful_theme_options {
 	/*Colors*/
 		$this->sections['colors'] = array(
 			'title'		=> __( 'Colors', 'fruitful' ),
+			'id'		=> 'main-colors',
 			'fields'	=> array(
 				array(
 					'id'			=> 'menu-color',
@@ -650,6 +655,7 @@ class fruitful_theme_options {
 	/*Fonts*/
 		$this->sections['fonts'] = array(
 			'title'		=> __( 'Fonts', 'fruitful' ),
+			'id'		=> 'fonts',
 			'fields'	=> array(
 				array(
 					'label'			=> __( 'Fonts' , 'fruitful' ),
@@ -741,6 +747,7 @@ class fruitful_theme_options {
 	/*Slider*/
 		$this->sections['slider'] = array(
 			'title'		=> __( 'Slider', 'fruitful' ),
+			'id'		=> 'slider',
 			'fields'	=> array(	
 				array(
 					'id'	 		=> 'select_slider',
@@ -1030,6 +1037,7 @@ class fruitful_theme_options {
 	/*Social Links*/
 		$this->sections['social-links'] = array( 
 			'title'		=> __( 'Social Links', 'fruitful' ),
+			'id'		=> 'social-links',
 			'fields'	=> array(	
 				array (
 					'id' 		=> 'sl_position',
@@ -1166,6 +1174,7 @@ class fruitful_theme_options {
 	/*Footer*/
 		$this->sections['footer'] = array(
 			'title'		=> __( 'Footer', 'fruitful' ),
+			'id'	=> 'footer',
 			'fields'	=> array(	
 				array(
 				'id'		=> 'footer_text',
@@ -1181,6 +1190,7 @@ class fruitful_theme_options {
 	/*Custom CSS*/
 		$this->sections['custom-css'] = array(
 			'title'					=> __( 'Custom CSS', 'fruitful' ),
+			'id'		=> 'custom-css',
 			'fields'				=> array(	
 				array(
 				'id'		=> 'custom_css',
@@ -1196,6 +1206,7 @@ class fruitful_theme_options {
 	/*Woocommerce*/
 		$this->sections['woo'] = array(
 			'title'		=> __( 'Woocommerce', 'fruitful' ),
+			'id'		=> 'woo',
 			'fields'	=> array(	
 				array(
 					'id'			=> 'showcart',
@@ -1266,16 +1277,24 @@ class fruitful_theme_options {
 		$option_name .= $field['id'];
 		$option = get_option( $this->args['opt_name'] );
 		
-		if ( isset( $option) ) {
+
+		// if ( get_option($option_name) != null) {
+			 // $data = get_option($option_name);
+		// }
+		//else {
+		 if ( isset( $option) ) {
 			$data = $option[$option_name];
-		}
+		  }
+	//	}
+		
 		if ($data === null && isset( $field['default']) ) {
 			$data = $field['default'];
+			//update_option($option_name,$field['default']);		
 		} elseif ( $data === null ) {
 			$data = '';
 		}
+		 
 		$html = '';
-
 		switch( $field['type'] ) {
 
 			case 'text':
@@ -1313,10 +1332,17 @@ class fruitful_theme_options {
 					if ($data != '') {
 						$html .= '<div class="img-container">';
 							$image_attributes = wp_get_attachment_image_src( $data, 'full');
+							 if (!empty($image_attributes)) {
+								$image_link = esc_url_raw($image_attributes[0]);
+							 }
+							 else {
+								$image_link = $data;
+							 }
+							
 							if ($imgid != '') {
-								$html .= '<img id="'.$imgid.'" src="'.esc_url_raw($image_attributes[0]).'" alt="" />';
+								$html .= '<img id="'.$imgid.'" src="'.$image_link.'" alt="" />';
 							} else {
-								$html .= '<img src="'.esc_url_raw($image_attributes[0]).'" alt="" />';
+								$html .= '<img src="'.$image_link.'" alt="" />';
 							}					
 						$html .= '</div>	';
 					}
@@ -1341,15 +1367,15 @@ class fruitful_theme_options {
 				$html .= '<div class="text_fonts">';
 					$html .= '<div id="menu_sample_font" class="sample_text">'.__('Sample Font', 'fruitful').'</div>';
 					$html .= '<select class="select-fonts" name="'.$this->args['opt_name'].'['.esc_attr($field['id']).']" id="options-'.esc_attr($field['id']).'">';
-					foreach ( $field['options'] as $f_option ) {
+					foreach ( $field['options'] as $k => $v ) {
 						$value = $f_option['value'];
 						$label = $f_option['label'];
 						
 						$selected = false;
-						if ( $value == $data ) {
+						if ( $k == $data ) {
 							$selected = true;
 						}
-						$html .= '<option ' . selected( $selected, true, false ) . ' value="'.esc_attr($value).'">'.esc_attr($label).'</option>';
+						$html .= '<option ' . selected( $selected, true, false ) . ' value="'.esc_attr($k).'">'.esc_attr($v).'</option>';
 					}
 					$html .= '</select> ';	
 				$html .= '</div>';		
