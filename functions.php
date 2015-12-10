@@ -60,7 +60,7 @@ require get_template_directory() . '/inc/metaboxes/init-for-objestcs-mb.php';
  * Custom Theme Options
  */
 require get_template_directory() . '/inc/theme-options/theme-options.php';
-require get_template_directory() . 'inc/theme-options/customizer/customizer.php';
+require get_template_directory() . '/inc/theme-options/customizer/customizer.php';
 
 function fruitful_fonts_url() {
 	$fonts_url = '';

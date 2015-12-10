@@ -14,7 +14,7 @@ class fruitful_theme_options_customizer {
 
 	public function init_settings () {
 		$this->settings_fields();
-		require_once get_template_directory() . '/customizer/class-customize-control.php';	
+		require_once get_template_directory() . '/inc/theme-options/customizer/class-customize-control.php';
 		require_once get_template_directory() . '/inc/theme-options/theme-options.php';		
 	}	
 	
