@@ -1278,22 +1278,21 @@ class fruitful_theme_options {
 		$option = get_option( $this->args['opt_name'] );
 		
 
-		// if ( get_option($option_name) != null) {
-			 // $data = get_option($option_name);
-		// }
-		//else {
-		 if ( isset( $option) ) {
-			$data = $option[$option_name];
-		  }
-	//	}
-		
-		if ($data === null && isset( $field['default']) ) {
-			$data = $field['default'];
-			//update_option($option_name,$field['default']);		
-		} elseif ( $data === null ) {
-			$data = '';
+		if ( get_option($option_name) != null) {
+			 $data = get_option($option_name); 
 		}
-		 
+		//else {
+		 // if ( isset($option) ) {
+			// $data = $option[$option_name];
+		 // }
+		//	}
+
+		if ($data == null && isset( $field['default']) ) {
+			$data = $field['default'];
+		} 
+		 elseif ( $data === null ) {
+			 $data = '';
+		}
 		$html = '';
 		switch( $field['type'] ) {
 

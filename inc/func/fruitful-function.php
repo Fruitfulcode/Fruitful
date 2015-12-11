@@ -259,28 +259,35 @@ global $fruitful_theme_options;
 	if (!isset($data['showcart'])) 	 	  {$data['showcart'] 		= 'off'; }
 	if (!isset($data['is_wpml_ready']))   {$data['is_wpml_ready']	= 'off'; }
 	if (!isset($data['bg_repeating'])) 	  {$data['bg_repeating'] 	= 'off'; }
-	if (($data['responsive'] = '1')) 	  {$data['responsive'] 		= 'on'; }
-	if (($data['postcomment'] = '1')) 	  {$data['postcomment'] 	= 'on'; }
-	if (($data['pagecomment'] = '1')) 	  {$data['pagecomment'] 	= 'on'; }
-	if (($data['is_fixed_header'] = '1')) {$data['is_fixed_header'] = 'on'; }
-	//if (($data['styletheme'] = '1')) 	  {$data['styletheme'] 		= 'on'; }
-	if (($data['showcart'] = '1')) 	 	  {$data['showcart'] 		= 'on'; }
-	if (($data['is_wpml_ready'] = '1'))   {$data['is_wpml_ready']	= 'on'; }
-	if (($data['bg_repeating'] = '1')) 	  {$data['bg_repeating'] 	= 'on'; }		
-	if (isset ($data) && ($data != null) ) {
-		foreach ($data as $key=>$val) {
-			update_option( $key, $val );
-			if (($data['responsive'] == 'off')) 		{update_option('responsive','');}
-			if (($data['postcomment'] =='off')) 		{update_option('postcomment','');}
-			if (($data['pagecomment'] == 'off')) 		{update_option('pagecomment','');}
-			if (($data['is_fixed_header'] == 'off'))	{update_option('is_fixed_header','');}
-			//if (($data['styletheme'] == 'off')) 		{update_option('styletheme','');}
-			if (($data['showcart'] == 'off')) 	 		{update_option('showcart','');}
-			if (($data['is_wpml_ready'] == 'off'))  	{update_option('is_wpml_ready','');}
-			if (($data['bg_repeating'] == 'off')) 		{update_option('bg_repeating','');}	
-			if (($data['responsive'] == 'on')) 			{update_option('responsive','1');} 			if (($data['postcomment'] =='on')) 			{update_option('postcomment','1');} 			if (($data['pagecomment'] == 'on')) 		{update_option('pagecomment','1');} 			if (($data['is_fixed_header'] == 'on')) 	{update_option('is_fixed_header','1');} 			//if (($data['styletheme'] == 'on')) 			{update_option('styletheme','1');} 			if (($data['showcart'] == 'on')) 	 		{update_option('showcart','1');} 			if (($data['is_wpml_ready'] == 'on'))   	{update_option('is_wpml_ready','1');} 			if (($data['bg_repeating'] == 'on')) 		{update_option('bg_repeating','1');}				
-		}
-	}		
+	// if (($data['responsive'] = '1')) 	  {$data['responsive'] 		= 'on'; }
+	// if (($data['postcomment'] = '1')) 	  {$data['postcomment'] 	= 'on'; }
+	// if (($data['pagecomment'] = '1')) 	  {$data['pagecomment'] 	= 'on'; }
+	// if (($data['is_fixed_header'] = '1')) {$data['is_fixed_header'] = 'on'; }
+	// //if (($data['styletheme'] = '1')) 	  {$data['styletheme'] 		= 'on'; }
+	// if (($data['showcart'] = '1')) 	 	  {$data['showcart'] 		= 'on'; }
+	// if (($data['is_wpml_ready'] = '1'))   {$data['is_wpml_ready']	= 'on'; }
+	// if (($data['bg_repeating'] = '1')) 	  {$data['bg_repeating'] 	= 'on'; }		
+	// if (isset ($data) && ($data != null) ) {
+		// foreach ($data as $key=>$val) {
+			// update_option( $key, $val );
+			// if (($data['responsive'] == 'off')) 		{update_option('responsive','');}
+			// if (($data['postcomment'] =='off')) 		{update_option('postcomment','');}
+			// if (($data['pagecomment'] == 'off')) 		{update_option('pagecomment','');}
+			// if (($data['is_fixed_header'] == 'off'))	{update_option('is_fixed_header','');}
+			// //if (($data['styletheme'] == 'off')) 		{update_option('styletheme','');}
+			// if (($data['showcart'] == 'off')) 	 		{update_option('showcart','');}
+			// if (($data['is_wpml_ready'] == 'off'))  	{update_option('is_wpml_ready','');}
+			// if (($data['bg_repeating'] == 'off')) 		{update_option('bg_repeating','');}	
+			// if (($data['responsive'] == 'on')) 			{update_option('responsive','1');}
+ 			// if (($data['postcomment'] =='on')) 			{update_option('postcomment','1');}
+ 			// if (($data['pagecomment'] == 'on')) 		{update_option('pagecomment','1');}
+ 			// if (($data['is_fixed_header'] == 'on')) 	{update_option('is_fixed_header','1');}
+ 			// //if (($data['styletheme'] == 'on')) 			{update_option('styletheme','1');}
+ 			// if (($data['showcart'] == 'on')) 	 		{update_option('showcart','1');}
+ 			// if (($data['is_wpml_ready'] == 'on'))   	{update_option('is_wpml_ready','1');} 
+			// if (($data['bg_repeating'] == 'on')) 		{update_option('bg_repeating','1');}				
+		// }
+	// }		
 	if(!empty($data)) {
 		if(update_option('fruitful_theme_options', $data)) {
 			die('1');
@@ -304,12 +311,24 @@ global $fruitful_theme_options;
 add_action('wp_ajax_fruitful_reset_btn', 'fruitful_reset_action');
 function fruitful_reset_action() {
 global $fruitful_theme_options;
-	// $data = get_option($fruitful_theme_options->args['opt_name']);	
-	// foreach ($data as $key=>$val){
-		// delete_option($key);
-	// }	
-	delete_option($fruitful_theme_options->args['opt_name']);
-	die();
-}
 
+	$a = $fruitful_theme_options->settings_fields();	
+	if ( is_array($a ) ) {
+		foreach ($a as $section => $data ) {
+			foreach ( $data['fields'] as $field ) {
+				$option_name_id = $field['id'];
+				delete_option($option_name_id);
+				if (!empty($field['fields'])) {
+					foreach ($field['fields'] as $key=>$group) {
+						$option_name_id = $group['id'];
+						delete_option($option_name_id);
+					}
+				}
+			}
+		}
+	}	
+	 delete_option($fruitful_theme_options->args['opt_name']);
+	 die();	
+
+}
 ?>
