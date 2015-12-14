@@ -34,7 +34,7 @@ switch( $template ) {
 				$prod_num_row_class = 'prod_num_row-'.$prod_num_row;
 			}
 		}
-		if ($woo_sidebar == 1){
+		if ($woo_sidebar == 1 || $woo_sidebar == 4 || $woo_sidebar == 5){
 			echo '<div class="woo-loop-content alpha omega '.$prod_num_row_class.'"><div id="container"><div id="content" role="main">';
 		} elseif($woo_sidebar == 2) {
 			echo '<div class="eleven columns woo-loop-content omega '.$prod_num_row_class.'"><div id="container"><div id="content" role="main">';

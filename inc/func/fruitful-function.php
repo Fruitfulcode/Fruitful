@@ -115,7 +115,7 @@ function fruitful_woo_product_sidebar_list() {
 	$num_row = array(
 		'0' => array(
 			'value' =>	   '1',
-			'label' => __( 'Full width with tabs on left side', 'fruitful' )
+			'label' => __( 'Full width with tabs on right side', 'fruitful' )
 		),
 		'1' => array(
 			'value' =>	   '2',
@@ -127,7 +127,7 @@ function fruitful_woo_product_sidebar_list() {
 		),
 		'3' => array(
 			'value' =>	   '4',
-			'label' => __( 'Full width with tabs on right side', 'fruitful' )
+			'label' => __( 'Full width with tabs on left side', 'fruitful' )
 		),
 		'4' => array(
 			'value' =>	   '5',
