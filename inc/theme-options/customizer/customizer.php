@@ -34,7 +34,6 @@ class fruitful_theme_options_customizer {
 
 	public function register_settings ($wp_customize) {
 		global $fruitful_theme_options;
-
 		$opt_name = $fruitful_theme_options->args['opt_name'];	
 
 		$wp_customize->add_panel( $opt_name, array(
@@ -47,6 +46,7 @@ class fruitful_theme_options_customizer {
 		$type = 'option'; 
 		if ( is_array($this->sections ) ) {
 			foreach ($this->sections as $option ) {
+
 				$wp_customize->add_section( esc_attr( $option['id'] ), array(
 					'priority'          => $option['priority'],
 					'title'             => $option['title'],
@@ -57,8 +57,9 @@ class fruitful_theme_options_customizer {
 
 				if (!empty($field['fields'])) {
 					foreach ($field['fields'] as $key=>$group) {
-
-						$wp_customize->add_setting( esc_attr( $group['id'] ), array(
+					$g_id = $group['id'];
+ 					$id = ''.$opt_name.'['.$g_id.']';
+						$wp_customize->add_setting(esc_attr( $id ), array(
 							'default'           => $group['default'],
 							'type'              => $type,
 							'capability'        => $capability,
@@ -74,7 +75,7 @@ class fruitful_theme_options_customizer {
 
 						 switch ( $group['type'] ) {
 							case 'checkbox':
-								$wp_customize->add_control( new Fruitful_Customize_Checkbox_Control( $wp_customize, esc_attr( $group['id'] ), array(
+								$wp_customize->add_control( new Fruitful_Customize_Checkbox_Control( $wp_customize, esc_attr( $id ), array(
 									'type'              => 'checkbox',
 									'priority'          => $priority,
 									'section'           => $option['id'],
@@ -87,7 +88,7 @@ class fruitful_theme_options_customizer {
 								)));
 							break;
 							case 'text':
-								$wp_customize->add_control( new Fruitful_Customize_Text_Control( $wp_customize, esc_attr( $group['id'] ), array(
+								$wp_customize->add_control( new Fruitful_Customize_Text_Control( $wp_customize, esc_attr( $id ), array(
 									'type'              => 'text',
 									'priority'          => $priority,
 									'section'           => $option['id'],
@@ -102,7 +103,7 @@ class fruitful_theme_options_customizer {
 							case 'select':
 								$choices  = ( isset( $group['options'] ) ) ? $group['options'] : array();
 
-								$wp_customize->add_control( new Fruitful_Customize_Select_Control( $wp_customize, esc_attr( $group['id'] ), array(
+								$wp_customize->add_control( new Fruitful_Customize_Select_Control( $wp_customize, esc_attr( $id ), array(
 									'type'              => 'select',
 									'priority'          => $priority,
 									'section'           => $option['id'],
@@ -116,7 +117,7 @@ class fruitful_theme_options_customizer {
 								)));
 							break;
 							case 'image':
-								$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, esc_attr( $group['id'] ), array(
+								$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, esc_attr( $id ), array(
 									'priority'          => $priority,
 									'section'           => $option['id'],
 									'label'             => $field['label'],
@@ -124,7 +125,7 @@ class fruitful_theme_options_customizer {
 								)));
 							break;
 							case 'color':
-								$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, esc_attr(  $group['id'] ), array(
+								$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, esc_attr(  $id ), array(
 									'priority'          => $priority,
 									'section'           => $option['id'],
 									'label'             => $top_label,
@@ -133,7 +134,7 @@ class fruitful_theme_options_customizer {
 								)));
 							break;
 							case 'textarea':
-								$wp_customize->add_control( new Fruitful_Customize_Textarea_Control( $wp_customize, esc_attr( $group['id'] ), array(
+								$wp_customize->add_control( new Fruitful_Customize_Textarea_Control( $wp_customize, esc_attr( $id ), array(
 									'priority'          => $priority,
 									'section'           => $option['id'],
 									'label'             => $group['label'],
@@ -144,7 +145,9 @@ class fruitful_theme_options_customizer {
 						}					
 					}
 				}	
-					$wp_customize->add_setting( esc_attr( $field['id'] ), array(
+					$g_id = $field['id'];
+ 					$id = ''.$opt_name.'['.$g_id.']';
+					$wp_customize->add_setting( esc_attr( $id ), array(
 						'default'           => $field['default'],
 						'type'              => $type,
 						'capability'        => $capability,
@@ -152,7 +155,7 @@ class fruitful_theme_options_customizer {
 			
 					switch ( $field['type'] ) {
 						case 'checkbox':
-							$wp_customize->add_control( new Fruitful_Customize_Checkbox_Control( $wp_customize, esc_attr( $field['id'] ), array(
+							$wp_customize->add_control( new Fruitful_Customize_Checkbox_Control( $wp_customize, esc_attr( $id ), array(
 								'type'              => 'checkbox',
 								'priority'          => $priority,
 								'section'           => $option['id'],
@@ -162,7 +165,7 @@ class fruitful_theme_options_customizer {
 							)));
 						break;
 						case 'text':
-							$wp_customize->add_control( new Fruitful_Customize_Text_Control( $wp_customize, esc_attr( $field['id'] ), array(
+							$wp_customize->add_control( new Fruitful_Customize_Text_Control( $wp_customize, esc_attr( $id ), array(
 								'type'              => 'text',
 								'priority'          => $priority,
 								'section'           => $option['id'],
@@ -174,7 +177,7 @@ class fruitful_theme_options_customizer {
 						case 'select':
 							$choices  = ( isset( $field['options'] ) ) ? $field['options'] : array();
 
-							$wp_customize->add_control( new Fruitful_Customize_Select_Control( $wp_customize, esc_attr( $field['id'] ), array(
+							$wp_customize->add_control( new Fruitful_Customize_Select_Control( $wp_customize, esc_attr( $id ), array(
 								'type'              => 'select',
 								'priority'          => $priority,
 								'section'           => $option['id'],
@@ -187,7 +190,7 @@ class fruitful_theme_options_customizer {
 						case 'font':
 							$choices  = ( isset( $field['options'] ) ) ? $field['options'] : array();
 
-							$wp_customize->add_control( new Fruitful_Customize_Font_Control( $wp_customize, esc_attr( $field['id'] ), array(
+							$wp_customize->add_control( new Fruitful_Customize_Font_Control( $wp_customize, esc_attr( $id ), array(
 								'type'              => 'select',
 								'priority'          => $priority,
 								'section'           => $option['id'],
@@ -198,7 +201,7 @@ class fruitful_theme_options_customizer {
 							)));
 						break;						
 						case 'image':
-							$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, esc_attr( $field['id'] ), array(
+							$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, esc_attr( $id ), array(
 								'priority'          => $priority,
 								'section'           => $option['id'],
 								'label'             => $field['label'],
@@ -206,7 +209,7 @@ class fruitful_theme_options_customizer {
 							)));
 						break;
 						case 'color':
-							$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, esc_attr(  $field['id'] ), array(
+							$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, esc_attr(  $id ), array(
 								'priority'          => $priority,
 								'section'           => $option['id'],
 								'label'             => $field['label'],
@@ -214,7 +217,7 @@ class fruitful_theme_options_customizer {
 							)));
 						break;
 						case 'textarea':
-							$wp_customize->add_control( new Fruitful_Customize_Textarea_Control( $wp_customize, esc_attr( $field['id'] ), array(
+							$wp_customize->add_control( new Fruitful_Customize_Textarea_Control( $wp_customize, esc_attr( $id ), array(
 								'priority'          => $priority,
 								'section'           => $option['id'],
 								'label'             => $field['label'],

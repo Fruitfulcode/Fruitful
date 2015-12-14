@@ -1277,15 +1277,9 @@ class fruitful_theme_options {
 		$option_name .= $field['id'];
 		$option = get_option( $this->args['opt_name'] );
 		
-
-		if ( get_option($option_name) != null) {
-			 $data = get_option($option_name); 
+		if ( isset($option) ) {
+			$data = $option[$option_name];
 		}
-		//else {
-		 // if ( isset($option) ) {
-			// $data = $option[$option_name];
-		 // }
-		//	}
 
 		if ($data == null && isset( $field['default']) ) {
 			$data = $field['default'];
@@ -1293,6 +1287,7 @@ class fruitful_theme_options {
 		 elseif ( $data === null ) {
 			 $data = '';
 		}
+		var_dump($data);
 		$html = '';
 		switch( $field['type'] ) {
 
@@ -1306,7 +1301,7 @@ class fruitful_theme_options {
 			break;			
 			case 'checkbox':
 				if (!empty($field['box-title'])) $html .= '<h4>'.esc_attr($field['box-title']).'</h4>';
-				$html .= '<label for="'.esc_attr($field['id']).'"><input type="checkbox" id="'.esc_attr( $field['id']). '" name="'.$this->args['opt_name'].'['.esc_attr($field['id']).']" '.checked('on', $data, false).'/> '.esc_attr($field['description']).'</label>';
+				$html .= '<label for="'.esc_attr($field['id']).'"><input value="'.$data.'" type="checkbox" id="'.esc_attr( $field['id']). '" name="'.$this->args['opt_name'].'['.esc_attr($field['id']).']" '.checked('on', $data, false).'/> '.esc_attr($field['description']).'</label>';
 			break;
 			
 			case 'select':
