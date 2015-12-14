@@ -1287,7 +1287,7 @@ class fruitful_theme_options {
 		 elseif ( $data === null ) {
 			 $data = '';
 		}
-		var_dump($data);
+
 		$html = '';
 		switch( $field['type'] ) {
 
