@@ -601,6 +601,7 @@ return array(
 				'header_img_size'	=> 'full',
 				'header_height' 	=> '80',
 				'menu_type_responsive'=> 'inside_content',
+				'menu_icon_color'=> '#ffffff',
 				
 				/*Background Image*/
 				'backgroung_img'    => '',

@@ -29,10 +29,10 @@
 		$logo_pos = $menu_pos = '';
 		
 		if (isset($theme_options['logo_position'])) 
-		$logo_pos = esc_attr($theme_options['logo_position']);
+			$logo_pos = esc_attr($theme_options['logo_position']);
 		
 		if (isset($theme_options['menu_position'])) 
-		$menu_pos = esc_attr($theme_options['menu_position']);
+			$menu_pos = esc_attr($theme_options['menu_position']);
 		
 		$logo_pos_class = fruitful_get_class_pos($logo_pos);
 		$menu_pos_class = fruitful_get_class_pos($menu_pos);
@@ -40,7 +40,10 @@
 		$responsive_menu_type = esc_attr($theme_options['menu_type_responsive']);
 		$is_responsive  	  = (isset($theme_options['responsive']) && ($theme_options['responsive'] == 'on'));
 		
-			
+		if (isset($theme_options['menu_icon_color'])) 
+			$menu_icon_color = $theme_options['menu_icon_color'];
+
+
 			if ( !$is_responsive || ( $is_responsive && ( $responsive_menu_type == 'inside_content' ) ) ) { ?>
 			
 					<div class="head-container">
@@ -98,9 +101,9 @@
 							<div class="logo_wrapper"><?php echo fruitful_get_logo(); ?></div>
 							<div class="menu_button collapsed">
 								<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
+									<span class="icon-bar" style="background-color: <?php echo $menu_icon_color?>"></span>
+									<span class="icon-bar" style="background-color: <?php echo $menu_icon_color?>"></span>
+									<span class="icon-bar" style="background-color: <?php echo $menu_icon_color?>"></span>
 								</button>
 							</div>
 							<div class="cart_wrapper"><?php fruitful_get_cart_button_html(); ?></div>

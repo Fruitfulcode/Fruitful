@@ -1,15 +1,40 @@
 jQuery(document).ready(function($) {
+
 		$('.menu').mobileMenu({
 			defaultText: 'Navigate to...',
 			className: 	 'select-menu',
 			subMenuDash: '&nbsp;&nbsp;&ndash;'
 		});
+
+		function getBaseURL() {
+			var url = location.href;
+			var baseURL = url.substring(0, url.indexOf('/', 14));
+			if (baseURL.indexOf('http://localhost') != -1) {
+				var url = location.href;
+				var pathname = location.pathname;
+				var index1 = url.indexOf(pathname);
+				var index2 = url.indexOf("/", index1 + 1);
+				var baseLocalUrl = url.substr(0, index2);
+
+				return baseLocalUrl + "/";
+			}
+			else {
+				return baseURL + "/";
+			}
+		}
 		
 		var fancySelect = $('.widget select');
-			fancySelect.each(function() {
+		fancySelect.each(function() {
+			if($(this).hasClass('dropdown_product_cat')) {
+				$(this).fancySelect().on('change.fs', function() {
+					window.location  = getBaseURL() + '/?product_cat=' + fancySelect.val();
+				});				
+			}
+			else {
 				$(this).fancySelect();	
-			});
-
+			}
+		});
+		
 		
 		$('#wp-calendar td:not(#next, #prev):has(a)').addClass('cal_has_posts');
 		
