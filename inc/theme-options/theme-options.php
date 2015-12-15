@@ -657,10 +657,10 @@ class fruitful_theme_options {
 			'title'		=> __( 'Fonts', 'fruitful' ),
 			'id'		=> 'fonts',
 			'fields'	=> array(
-				array(
-					'label'			=> __( 'Fonts' , 'fruitful' ),
-					'info'			=> __( 'Popular web safe font collection, select and use for your needs.', 'fruitful' ),
-				),	
+				// array(
+					// 'label'			=> __( 'Fonts' , 'fruitful' ),
+					// 'info'			=> __( 'Popular web safe font collection, select and use for your needs.', 'fruitful' ),
+				// ),	
 				array(
 					'id' 			=> 'h_font_family',
 					'label'			=>  __( 'Headers' , 'fruitful' ),
@@ -1274,7 +1274,10 @@ class fruitful_theme_options {
 		$field = $data;
 		$option_name = $data = '';
 
-		$option_name .= $field['id'];
+		$id   = (isset( $field['id']))  ? $field['id'] : '';
+		$type = (isset($field['type'])) ? $field['type'] : '';
+		
+		$option_name = $id;
 		$option = get_option( $this->args['opt_name'] );
 		
 		if ( isset($option) ) {
@@ -1289,8 +1292,7 @@ class fruitful_theme_options {
 		}
 
 		$html = '';
-		switch( $field['type'] ) {
-
+		switch($type) {
 			case 'text':
 				if (!empty($field['box-title'])) $html .= '<h4>'.esc_attr($field['box-title']).'</h4>';
 				$html .= '<input class="text-input" id="'.esc_attr($field['id']).'" type="text" name="'.$this->args['opt_name'].'['.esc_attr($field['id']).']" value="'.$data.'" />' . "\n";
@@ -1303,8 +1305,8 @@ class fruitful_theme_options {
 				if (!empty($field['box-title'])) $html .= '<h4>'.esc_attr($field['box-title']).'</h4>';
 				$html .= '<label for="'.esc_attr($field['id']).'"><input value="'.$data.'" type="checkbox" id="'.esc_attr( $field['id']). '" name="'.$this->args['opt_name'].'['.esc_attr($field['id']).']" '.checked('on', $data, false).'/> '.esc_attr($field['description']).'</label>';
 			break;
-			
 			case 'select':
+				$class = '';
 				if (!empty($field['box-title'])) $html .= '<h4>'.esc_attr($field['box-title']).'</h4>';
 				if (!empty($field['class'])) {$class = esc_attr($field['class']);}
 				$html .= '<select class="'.$class.'" name="'.$this->args['opt_name'].'['.esc_attr($field['id']).']" id="'.esc_attr($field['id']).'">';
@@ -1320,7 +1322,6 @@ class fruitful_theme_options {
 			case 'button':
 				$html .= '<input class="'.esc_attr($field['class']).'" name="'.esc_attr($field['id']).'" value="'.esc_attr($field['default']).'" id="'.esc_attr($field['id']).'" />';
 			break;		
-			
 			case 'image':
 				 $html .= '<div class="box-image">';
 					if ($data != '') {
@@ -1332,12 +1333,7 @@ class fruitful_theme_options {
 							 else {
 								$image_link = $data;
 							 }
-							
-							if ($imgid != '') {
-								$html .= '<img id="'.$imgid.'" src="'.$image_link.'" alt="" />';
-							} else {
-								$html .= '<img src="'.$image_link.'" alt="" />';
-							}					
+							$html .= '<img src="'.$image_link.'" alt="" />';
 						$html .= '</div>	';
 					}
 					
@@ -1362,9 +1358,6 @@ class fruitful_theme_options {
 					$html .= '<div id="menu_sample_font" class="sample_text">'.__('Sample Font', 'fruitful').'</div>';
 					$html .= '<select class="select-fonts" name="'.$this->args['opt_name'].'['.esc_attr($field['id']).']" id="options-'.esc_attr($field['id']).'">';
 					foreach ( $field['options'] as $k => $v ) {
-						$value = $f_option['value'];
-						$label = $f_option['label'];
-						
 						$selected = false;
 						if ( $k == $data ) {
 							$selected = true;
@@ -1378,11 +1371,9 @@ class fruitful_theme_options {
 				fruitful_slider_images();				
 			break;						
 		}
-
 		if ( ! $echo ) {
 			return $html;
 		}
-
 		echo $html;
 	}
 
@@ -1392,8 +1383,10 @@ class fruitful_theme_options {
 			foreach ( $this->sections as $section => $data ) {
 				add_settings_section( $section, $data['title'], '__return_false', $this->args['opt_slug']);
 				foreach ( $data['fields'] as $field ) {
+					$id 	= (isset($field['id' ]))   ? $field['id'] : '';
+					$label 	= (isset($field['label'])) ? $field['label'] : '';
 					register_setting( $this->args['opt_group'], $this->args['opt_name'], '' );
-					add_settings_field( $field['id'], $field['label'], array( $this, 'display_field' ), $this->args['opt_slug'], $section, $field);
+					add_settings_field( $id, $label, array( $this, 'display_field' ), $this->args['opt_slug'], $section, $field);
 				}
 			}
 		}
