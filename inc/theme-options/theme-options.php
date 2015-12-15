@@ -401,6 +401,7 @@ function fruitful_custom_pages_layout() {
 	?>
 	
 	<div class="box-option"><?php fruitful_get_select_fields('layout_page_templ',  	 $options, fruitful_custom_layouts(), 'layout_page_templ', 			__('Page:', 'fruitful' )); ?></div>	
+	<div class="box-option"><?php fruitful_get_select_fields('layout_blog_templ',  	 $options, fruitful_custom_layouts(), 'layout_blog_templ', 			__('Blog:', 'fruitful' )); ?></div>	
 	<div class="box-option"><?php fruitful_get_select_fields('layout_single_templ',  $options, fruitful_custom_layouts(), 'layout_single_templ', 		__('Single Post:', 'fruitful' )); ?></div>	
 	<div class="box-option"><?php fruitful_get_select_fields('layout_archive_templ', $options, fruitful_custom_layouts(), 'layout_archive_template', 	__('Archive:', 'fruitful' )); ?></div>	
 	<div class="box-option"><?php fruitful_get_select_fields('layout_author_templ',	 $options, fruitful_custom_layouts(), 'layout_author_template', 	__('Author:', 'fruitful' )); ?></div>	

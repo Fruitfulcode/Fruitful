@@ -1849,7 +1849,8 @@ if ( ! function_exists( 'fruitful_get_content_with_custom_sidebar' ) ) {
 		$options = fruitful_get_theme_options();
 		
 		if (fruitful_is_latest_posts_page()) {
-			$curr_template = esc_attr($options['latest_posts_templ']);
+			$curr_template = esc_attr($options['layout_blog_templ']);
+			
 		} elseif (is_archive()) {
 			if (is_tag()) {
 				$curr_template = esc_attr($options['layout_tag_templ']);	

@@ -592,6 +592,7 @@ return array(
 				'layout_archive_templ'	=> '1',
 				'layout_single_templ'	=> '1',
 				'layout_page_templ'		=> '1',
+				'layout_blog_templ'		=> '1',
 				
 				'show_featured_single'=> 'off',
 
