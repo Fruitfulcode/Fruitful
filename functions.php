@@ -914,7 +914,7 @@ if ( ! function_exists( 'fruitful_get_responsive_style' ) ) {
 						$image_link = esc_url_raw($header_url[0]);
 					 }
 					 else {
-						$image_link = get_option('header_img');
+						$image_link = $theme_options['header_img'];
 					 }	
 					$style_ .= '.head-container {background-image : url(' .esc_attr($image_link) . '); } ' . "\n";  
 					
@@ -1551,7 +1551,9 @@ if ( ! function_exists( 'fruitful_get_languages_list' ) ) {
 		$theme_options = fruitful_ret_options("fruitful_theme_options");
 		if( function_exists('icl_get_languages') && $theme_options['is_wpml_ready'] == 'on' ){ 
 			$languages = icl_get_languages('skip_missing=0');
+			
 			if(!empty($languages)){
+			
 				echo '<div id="header_language_select"><ul id="lang-select-block">';
 				foreach($languages as $l){
 					if($l['active']) {

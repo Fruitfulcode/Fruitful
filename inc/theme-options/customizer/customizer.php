@@ -63,6 +63,12 @@ class fruitful_theme_options_customizer {
 					$f_choices  	= (isset($field['options'])) ? $field['options'] : array();
 					$section 		= (isset($option['id'])) ? esc_attr($option['id']) : '';
 			
+					if ($f_type == 'checkbox') {
+						$sanitize =  'fruitful_theme_sanitize_checkbox';
+					}	
+					else {
+						$sanitize = '';
+					}							
 					if (!empty($field['fields'])) {
 						foreach ($field['fields'] as $key=>$group) {
 							$g_default 		= (isset($group['default'])) ? esc_attr($group['default']) : '';
@@ -73,12 +79,19 @@ class fruitful_theme_options_customizer {
 							$g_type 		= (isset($group['type'])) ? esc_attr($group['type']) : '';	
 							$g_choices 		= (isset($group['options'] )) ? $group['options'] : array();
 							$g_id 			= (isset($group['id'])) ? esc_attr($group['id']) : '';	
-
+							
+							if ($g_type == 'checkbox') {
+								$sanitize =  'fruitful_theme_sanitize_checkbox';
+							}
+							else {
+								$sanitize = '';
+							}
 							$id = $opt_name . '['.$g_id.']';
 							$wp_customize->add_setting(esc_attr($id), array(
 								'default'           => $g_default,
 								'type'              => $type,
 								'capability'        => '',
+								'sanitize_callback'	=> $sanitize
 							));
 							 if ($key == 0) {
 								$top_label = $field['label'];
@@ -165,6 +178,7 @@ class fruitful_theme_options_customizer {
 						'default'           => $f_default,
 						'type'              => $type,
 						'capability'        => '',
+						'sanitize_callback'	=> $sanitize
 					) );
 			
 					switch ($f_type) {

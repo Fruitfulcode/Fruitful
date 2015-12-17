@@ -113,7 +113,8 @@ function fruitful_custom_do_settings_fields($page, $section) {
 			print '</h3>';
 				print '<span class="add_element_info">'. $field['args']['info'] .'</span>';
 				if (!empty($field['args']['fields'])) {
-					if($field['args']['id'] == 'slider-options' ) {
+					$id = (isset($field['args']['id'])) ? $field['args']['id'] : '';
+					if($id == 'slider-options' ) {
 						print '<div class="box-options">';
 							print '<input type="button" id="view_all_options" class="button-secondary" value="'.__( 'View Options','fruitful').'" />'; 
 							print '<div id="slider_main_options" class="slider-main-options">';
@@ -259,6 +260,7 @@ global $fruitful_theme_options;
 	if (!isset($data['showcart'])) 	 	  {$data['showcart'] 		= 'off'; }
 	if (!isset($data['is_wpml_ready']))   {$data['is_wpml_ready']	= 'off'; }
 	if (!isset($data['bg_repeating'])) 	  {$data['bg_repeating'] 	= 'off'; }
+	if (!isset($data['reset'])) 	  	  {$data['reset'] 			= 'reset';}
 	if(!empty($data)) {
 		if(update_option('fruitful_theme_options', $data)) {
 			die('1');
@@ -289,4 +291,9 @@ global $fruitful_theme_options;
 	 delete_option($fruitful_theme_options->args['opt_name']);
 	 die();	
 }
+
+function fruitful_theme_sanitize_checkbox( $input ) {
+    if ( $input == 1 ) {return 'on';} else {return 'off';}
+}
+
 ?>

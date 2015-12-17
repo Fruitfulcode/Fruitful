@@ -1289,8 +1289,7 @@ class fruitful_theme_options {
 		} 
 		 elseif ( $data === null ) {
 			 $data = '';
-		}
-
+		} 
 		$html = '';
 		switch($type) {
 			case 'text':

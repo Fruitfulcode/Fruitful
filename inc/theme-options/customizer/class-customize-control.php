@@ -24,7 +24,6 @@ class Fruitful_Customize_Text_Control extends WP_Customize_Control {
             <?php
        }
 }	 
-	
 	 
 class Fruitful_Customize_Textarea_Control extends WP_Customize_Control {
 	public $type = 'textarea';
@@ -49,11 +48,6 @@ class Fruitful_Customize_Textarea_Control extends WP_Customize_Control {
 
 }
 
-// class My_Customize_Image_Reloaded_Control extends WP_Customize_Image_Control {
-
-// }
-
-
 class Fruitful_Customize_Checkbox_Control extends WP_Customize_Control {
     public $type 	= 'checkbox';
 	public $class	= ''; 
@@ -67,20 +61,20 @@ class Fruitful_Customize_Checkbox_Control extends WP_Customize_Control {
 			<span class="customize-control-title"><?php echo esc_html( $this->label ); ?><?php if(!empty ($this->top_label)):?><?php echo esc_html( $this->top_label ); ?><?php endif; ?></span>
 			<?php if ( ! empty( $this->top_info ) ) : ?><span class="add_element_info"><?php echo $this->top_info; ?></span><?php endif; ?>
 			<?php if ( ! empty( $this->info ) ) : ?><span class="add_element_info"><?php echo $this->info; ?></span><?php endif; ?>
-			<span class="description customize-control-description"><input type="checkbox" value="<?php echo $this->value();?>" <?php $this->link(); ?>>	<?php if ( ! empty( $this->description ) ) : ?><?php echo $this->description; ?><?php endif; ?></span>
+			<span class="description customize-control-description"><input type="checkbox" value="<?php echo $this->value();?>" <?php $this->link(); ?>><?php if ( ! empty( $this->description ) ) : ?><?php echo $this->description; ?><?php endif; ?></span>
 		</label>	
 		<?php
 
     }
 }
 
-
 class Fruitful_Customize_Select_Control extends WP_Customize_Control {
-	public $type 		= 'select';
-	public $info		= ''; 
-	public $top_label	= ''; 
-	public $top_info	= ''; 	
-	public $box_title ='';	
+	public $type 			= 'select';
+	public $info			= ''; 
+	public $top_label		= ''; 
+	public $top_info		= ''; 	
+	public $box_title 		='';	
+	public $option_block 	= '';
 	public function render_content() {
 	?>
 		<label>
