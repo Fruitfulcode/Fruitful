@@ -290,7 +290,7 @@ class cmb_Meta_Box {
 			'ajaxurl'         => admin_url( '/admin-ajax.php' ),
 			'up_arrow'        => '<span class="order-up"></span>',
 			'down_arrow'      => '<span class="order-down"></span>',
-			'check_toggle'    => __( 'Select / Deselect All', 'cmb' ),
+			'check_toggle'    => __( 'Select / Deselect All', 'fruitful' ),
 		) ) );
 
 		wp_register_style( 'cmb-check',  CMB_META_BOX_URL 	. 'js/check/skins/minimal/_all.css');

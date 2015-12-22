@@ -1486,4 +1486,3 @@ class fruitful_theme_options {
 }	
 global $fruitful_theme_options;	
 $fruitful_theme_options = new fruitful_theme_options();
-
