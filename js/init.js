@@ -140,6 +140,7 @@ jQuery(window).bind('resize', function() {
 function autoWidthMenu () {
 	if (jQuery(document).width() > 767){
 		var vElemsWidth = 0;
+		var vElemsPadding = 0;
 		var cartButtonWidth = 0;
 		var wpmlButtonWidth = 0;
 		var sum = 0;
@@ -150,8 +151,11 @@ function autoWidthMenu () {
 			if (jQuery('#header_language_select').length > 0){
 				wpmlButtonWidth = jQuery('#header_language_select').outerWidth(true);
 			}
-			jQuery('.site-navigation .menu>li').each( function(){ sum += jQuery(this).outerWidth(true); });
-			sum += cartButtonWidth + wpmlButtonWidth;
+			jQuery('.site-navigation .menu>li').each( function(){ 
+				sum += jQuery(this)[0].getBoundingClientRect().width; 
+				vElemsPadding += parseInt(jQuery(this).css('margin-left'));
+			});
+			sum += vElemsPadding + cartButtonWidth + wpmlButtonWidth;
 			jQuery('.menu-wrapper').css({'max-width': sum + 'px'});
 		} else {
 			jQuery('.menu-wrapper').css({'max-width': 'none'})
