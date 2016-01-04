@@ -717,15 +717,6 @@ if (!function_exists('fruitful_get_favicon')) {
 	}
 }
 
-
-if ( ! function_exists( 'spotter_add_favicon' ) ) {				
-	function spotter_add_favicon() {
-		global $spotter_config, $prefix;
-		
-		
-	}
-}
-
 /*Get footer text*/
 if (!function_exists('fruitful_get_footer_text')) {
 	function fruitful_get_footer_text () {
