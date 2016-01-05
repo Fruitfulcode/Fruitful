@@ -1050,6 +1050,8 @@ img.size-full {
 	padding:0 4.4%;
     width: 100%;
     box-sizing: border-box;
+    -moz-box-sizing: border-box;  
+    -webkit-box-sizing: border-box;	
 	margin:20px 0 0;
 	height:auto;
 }
@@ -1442,6 +1444,8 @@ header.post-header .post-title {
     padding: 0 4.4% 13px;
     width: 100%;
     box-sizing: border-box;
+    -moz-box-sizing: border-box;  
+    -webkit-box-sizing: border-box;	
     word-wrap: break-word;
 }
 header.post-header .post-title a {
@@ -2146,6 +2150,8 @@ body.page .entry-thumbnail {
     margin: 0 0 20px;
     width: 100%;
     box-sizing: border-box;
+    -moz-box-sizing: border-box;  
+    -webkit-box-sizing: border-box;	
     padding: 0 4.4%;
 }
 body.page .entry-thumbnail .wp-post-image {
