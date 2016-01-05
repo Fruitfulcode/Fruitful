@@ -10,6 +10,10 @@ function fruitful_custom_layout_sidebars( $field, $meta ) {
     ?>
 		<ul class="list-layouts">
 			<li>
+				<input type="radio" id="remove-all-wrappers" value="0" name="<?php echo $field['id'];?>" <?php checked( $layout, '0' ); ?>/>
+				<img src="<?php echo CMB_META_BOX_URL . 'images/without-container.png'; ?>" alt="" />
+			</li>		
+			<li>
 				<input type="radio" id="full-width" value="1" name="<?php echo $field['id'];?>"  <?php checked( $layout, '1' ); ?>/>
 				<img src="<?php echo CMB_META_BOX_URL . 'images/full.png'; ?>" alt="" />
 			</li>
