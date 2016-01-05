@@ -295,8 +295,11 @@ function fruitful_scripts() {
 		$is_fixed_header = 1;
 	}
 	
-	wp_localize_script( 'init', 'ThGlobal', 	array( 'ajaxurl' 			=> admin_url( 'admin-ajax.php' ), 
-													   'is_fixed_header' 	=> $is_fixed_header ) );  
+	wp_localize_script( 'init', 'ThGlobal', 	array( 'ajaxurl' 				  => admin_url( 'admin-ajax.php' ), 
+													   'is_fixed_header' 		  => $is_fixed_header,
+													   'mobile_menu_default_text' => __('Navigate to...', 'fruitful'),
+													 ) 
+					  );  
 	
 	wp_enqueue_script('small-menu-select', get_template_directory_uri() . '/js/small-menu-select.js', array( 'jquery' ), '20130930', false );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

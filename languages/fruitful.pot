@@ -1,7 +1,8 @@
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Fruitful theme\n"
-"POT-Creation-Date: 2014-07-31 11:49+0200\n"
+"POT-Creation-Date: 2016-01-05 14:51+0200\n"
 "PO-Revision-Date: 2014-07-31 11:50+0200\n"
 "Last-Translator: \n"
 "Language-Team: Fruitful Team\n"
@@ -9,7 +10,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.3\n"
+"X-Generator: Poedit 1.8.6\n"
 "X-Poedit-KeywordsList: _;gettext;gettext_noop;_e;__;_x;_n;esc_attr_e\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
@@ -39,18 +40,15 @@ msgstr ""
 msgid "One thought on &ldquo;%2$s&rdquo;"
 msgstr ""
 
-#: fruitful/comments.php:40
-#: fruitful/comments.php:60
+#: fruitful/comments.php:40 fruitful/comments.php:60
 msgid "Comment navigation"
 msgstr ""
 
-#: fruitful/comments.php:41
-#: fruitful/comments.php:61
+#: fruitful/comments.php:41 fruitful/comments.php:61
 msgid "&larr; Older Comments"
 msgstr ""
 
-#: fruitful/comments.php:42
-#: fruitful/comments.php:62
+#: fruitful/comments.php:42 fruitful/comments.php:62
 msgid "Newer Comments &rarr;"
 msgstr ""
 
@@ -58,84 +56,58 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: fruitful/content-aside.php:32
-#: fruitful/content-audio.php:33
-#: fruitful/content-gallery.php:32
-#: fruitful/content-image.php:33
-#: fruitful/content-link.php:32
-#: fruitful/content-quote.php:32
-#: fruitful/content-status.php:32
-#: fruitful/content-video.php:32
+#: fruitful/content-aside.php:32 fruitful/content-audio.php:33
+#: fruitful/content-gallery.php:32 fruitful/content-image.php:33
+#: fruitful/content-link.php:32 fruitful/content-quote.php:32
+#: fruitful/content-status.php:32 fruitful/content-video.php:32
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: fruitful/content-aside.php:33
-#: fruitful/content-audio.php:34
-#: fruitful/content-chat.php:33
-#: fruitful/content-gallery.php:33
-#: fruitful/content-image.php:34
-#: fruitful/content-link.php:33
-#: fruitful/content-page.php:22
-#: fruitful/content-quote.php:33
-#: fruitful/content-single.php:33
-#: fruitful/content-status.php:33
-#: fruitful/content-video.php:33
-#: fruitful/content.php:54
-#: fruitful/image.php:87
+#: fruitful/content-aside.php:33 fruitful/content-audio.php:34
+#: fruitful/content-chat.php:33 fruitful/content-gallery.php:33
+#: fruitful/content-image.php:34 fruitful/content-link.php:33
+#: fruitful/content-page.php:22 fruitful/content-quote.php:33
+#: fruitful/content-single.php:33 fruitful/content-status.php:33
+#: fruitful/content-video.php:33 fruitful/content.php:54 fruitful/image.php:87
 msgid "Pages:"
 msgstr ""
 
-#: fruitful/content-aside.php:39
-#: fruitful/content-aside.php:46
-#: fruitful/content-audio.php:43
-#: fruitful/content-chat.php:38
-#: fruitful/content-gallery.php:49
-#: fruitful/content-image.php:49
-#: fruitful/content-link.php:41
-#: fruitful/content-page.php:23
-#: fruitful/content-quote.php:43
-#: fruitful/content-single.php:38
-#: fruitful/content-video.php:48
-#: fruitful/content.php:65
-#: fruitful/image.php:35
+#: fruitful/content-aside.php:39 fruitful/content-aside.php:46
+#: fruitful/content-audio.php:43 fruitful/content-chat.php:38
+#: fruitful/content-gallery.php:49 fruitful/content-image.php:49
+#: fruitful/content-link.php:41 fruitful/content-page.php:23
+#: fruitful/content-quote.php:43 fruitful/content-single.php:38
+#: fruitful/content-video.php:48 fruitful/content.php:65 fruitful/image.php:35
 #: fruitful/image.php:101
 msgid "Edit"
 msgstr ""
 
-#: fruitful/content-chat.php:22
-#: fruitful/content-quote.php:23
-#: fruitful/content.php:32
-#: fruitful/functions.php:1056
+#: fruitful/content-chat.php:22 fruitful/content-quote.php:23
+#: fruitful/content.php:32 fruitful/functions.php:1056
 #, php-format
 msgid "Permalink to %s"
 msgstr ""
 
-#: fruitful/content-gallery.php:43
-#: fruitful/content-image.php:42
-#: fruitful/content-quote.php:40
-#: fruitful/content-video.php:41
+#: fruitful/content-gallery.php:43 fruitful/content-image.php:42
+#: fruitful/content-quote.php:40 fruitful/content-video.php:41
 #: fruitful/content.php:62
 msgid "Leave a comment"
 msgstr ""
 
-#: fruitful/content-gallery.php:43
-#: fruitful/content.php:62
+#: fruitful/content-gallery.php:43 fruitful/content.php:62
 msgid "1 Comment"
 msgstr ""
 
-#: fruitful/content-gallery.php:43
-#: fruitful/content.php:62
+#: fruitful/content-gallery.php:43 fruitful/content.php:62
 msgid "% Comments"
 msgstr ""
 
-#: fruitful/content-image.php:42
-#: fruitful/content-quote.php:40
+#: fruitful/content-image.php:42 fruitful/content-quote.php:40
 #: fruitful/content-video.php:41
 msgid "One comment so far"
 msgstr ""
 
-#: fruitful/content-image.php:42
-#: fruitful/content-quote.php:40
+#: fruitful/content-image.php:42 fruitful/content-quote.php:40
 #: fruitful/content-video.php:41
 #, php-format
 msgid "View all % comments"
@@ -145,8 +117,7 @@ msgstr ""
 msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: fruitful/functions.php:71
-#: fruitful/functions.php:77
+#: fruitful/functions.php:71 fruitful/functions.php:77
 msgid "on"
 msgstr ""
 
@@ -183,6 +154,10 @@ msgstr ""
 msgid "Product Page Sidebar"
 msgstr ""
 
+#: fruitful/functions.php:300
+msgid "Navigate to..."
+msgstr ""
+
 #: fruitful/functions.php:453
 msgid "Please add images for slider in theme options!"
 msgstr ""
@@ -196,8 +171,7 @@ msgstr ""
 msgid "%d "
 msgstr ""
 
-#: fruitful/functions.php:1025
-#: fruitful/functions.php:1034
+#: fruitful/functions.php:1025 fruitful/functions.php:1034
 msgid ", "
 msgstr ""
 
@@ -211,8 +185,7 @@ msgstr ""
 msgid "%1$s on %2$s"
 msgstr ""
 
-#: fruitful/functions.php:1091
-#: fruitful/inc/theme-options/theme-options.php:141
+#: fruitful/functions.php:1091 fruitful/inc/theme-options/theme-options.php:141
 msgid "Fruitful Theme Options"
 msgstr ""
 
@@ -250,12 +223,9 @@ msgstr ""
 msgid "Yearly Archives: %s"
 msgstr ""
 
-#: fruitful/functions.php:1431
-#: fruitful/sidebar-blogright.php:19
-#: fruitful/sidebar-homepage.php:19
-#: fruitful/sidebar-page.php:19
-#: fruitful/sidebar-single-post.php:19
-#: fruitful/sidebar.php:19
+#: fruitful/functions.php:1431 fruitful/sidebar-blogright.php:19
+#: fruitful/sidebar-homepage.php:19 fruitful/sidebar-page.php:19
+#: fruitful/sidebar-single-post.php:19 fruitful/sidebar.php:19
 msgid "Archives"
 msgstr ""
 
@@ -268,6 +238,14 @@ msgstr ""
 
 #: fruitful/functions.php:1546
 msgid " and use them."
+msgstr ""
+
+#: fruitful/functions.php:1590
+msgid "&laquo; Previous Page"
+msgstr ""
+
+#: fruitful/functions.php:1591
+msgid "Next Page &raquo;"
 msgstr ""
 
 #: fruitful/image.php:25
@@ -340,8 +318,7 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr ""
 
-#: fruitful/searchform.php:11
-#: fruitful/searchform.php:13
+#: fruitful/searchform.php:11 fruitful/searchform.php:13
 msgid "Search"
 msgstr ""
 
@@ -349,10 +326,8 @@ msgstr ""
 msgid "Type Here to Search"
 msgstr ""
 
-#: fruitful/sidebar-blogright.php:26
-#: fruitful/sidebar-homepage.php:26
-#: fruitful/sidebar-page.php:26
-#: fruitful/sidebar-single-post.php:26
+#: fruitful/sidebar-blogright.php:26 fruitful/sidebar-homepage.php:26
+#: fruitful/sidebar-page.php:26 fruitful/sidebar-single-post.php:26
 #: fruitful/sidebar.php:26
 msgid "Meta"
 msgstr ""
@@ -386,8 +361,7 @@ msgstr ""
 msgid "Pingback:"
 msgstr ""
 
-#: fruitful/inc/template-tags.php:66
-#: fruitful/inc/template-tags.php:92
+#: fruitful/inc/template-tags.php:66 fruitful/inc/template-tags.php:92
 msgid "(Edit)"
 msgstr ""
 
@@ -427,8 +401,7 @@ msgstr ""
 msgid "Use this widget to list your Link posts"
 msgstr ""
 
-#: fruitful/inc/widgets.php:51
-#: fruitful/inc/widgets.php:62
+#: fruitful/inc/widgets.php:51 fruitful/inc/widgets.php:62
 msgid "News-Archive"
 msgstr ""
 
@@ -1860,4 +1833,3 @@ msgstr ""
 #: fruitful/inc/theme-options/theme-options.php:849
 msgid "Check our latest theme"
 msgstr ""
-

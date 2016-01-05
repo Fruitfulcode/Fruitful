@@ -1,7 +1,7 @@
 jQuery(document).ready(function($) {
 
 		$('.menu').mobileMenu({
-			defaultText: 'Navigate to...',
+			defaultText: ThGlobal.mobile_menu_default_text,
 			className: 	 'select-menu',
 			subMenuDash: '&nbsp;&nbsp;&ndash;'
 		});
