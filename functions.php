@@ -648,13 +648,13 @@ if (!function_exists('fruitful_get_favicon')) {
 		$theme_options  = fruitful_ret_options("fruitful_theme_options");
 		
 		if (isset($theme_options['fav_icon'])) {
-			$fav_icon = esc_attr($theme_options['fav_icon']);
-			$fav_icon = wp_get_attachment_image_src($fav_icon, 'full');
-			 if (!empty($fav_icon)) {
-				$image_link = esc_url_raw($fav_icon[0]);
+			$fav_icon_url = esc_attr($theme_options['fav_icon']);
+			$fav_icon_id = wp_get_attachment_image_src($fav_icon_url, 'full');
+			 if (!empty($fav_icon_id)) {
+				$image_link = esc_url_raw($fav_icon_id[0]);
 			 }
 			 else {
-				$image_link = $fav_icon;
+				$image_link = $fav_icon_url;
 			 }	
 			
 			$out_fav_html .=  '<link rel="shortcut icon" href="'. esc_url($image_link) .'">';	
@@ -662,52 +662,52 @@ if (!function_exists('fruitful_get_favicon')) {
 		} 	
 		
 		if (isset($theme_options['fav_icon_iphone'])) {
-			$fav_icon_iphone = esc_attr($theme_options['fav_icon_iphone']);
-			$fav_icon_iphone = wp_get_attachment_image_src($fav_icon_iphone, 'full');
-			 if (!empty($fav_icon_iphone)) {
-				$image_link = esc_url_raw($fav_icon_iphone[0]);
+			$fav_icon_iphone_url = esc_attr($theme_options['fav_icon_iphone']);
+			$fav_icon_iphone_id = wp_get_attachment_image_src($fav_icon_iphone_url, 'full');
+			 if (!empty($fav_icon_iphone_id)) {
+				$image_link = esc_url_raw($fav_icon_iphone_id[0]);
 			 }
 			 else {
-				$image_link = $fav_icon_iphone;
+				$image_link = $fav_icon_iphone_url;
 			 }				
 			
 			$out_fav_html .= '<link rel="apple-touch-icon" 	href="' .esc_url($image_link) .'">';
 		}
 		
 		if (isset($theme_options['fav_icon_iphone_retina'])) {
-			$fav_icon_iphone_retina = esc_attr($theme_options['fav_icon_iphone_retina']);
-			$fav_icon_iphone_retina = wp_get_attachment_image_src($fav_icon_iphone_retina, 'full');
-			 if (!empty($fav_icon_iphone_retina)) {
-				$image_link = esc_url_raw($fav_icon_iphone_retina[0]);
+			$fav_icon_iphone_retina_url = esc_attr($theme_options['fav_icon_iphone_retina']);
+			$fav_icon_iphone_retina_id = wp_get_attachment_image_src($fav_icon_iphone_retina_url, 'full');
+			 if (!empty($fav_icon_iphone_retina_id)) {
+				$image_link = esc_url_raw($fav_icon_iphone_retina_id[0]);
 			 }
 			 else {
-				$image_link = $fav_icon_iphone_retina;
+				$image_link = $fav_icon_iphone_retina_url;
 			 }
 			
 			$out_fav_html .= '<link rel="apple-touch-icon" sizes="114x114" 	href="'. esc_url($image_link) .' ">';
 		}
 		
 		if (isset($theme_options['fav_icon_ipad'])) {
-			$fav_icon_ipad = esc_attr($theme_options['fav_icon_ipad']);
-			$fav_icon_ipad = wp_get_attachment_image_src($fav_icon_ipad, 'full');
-			 if (!empty($fav_icon_ipad)) {
-				$image_link = esc_url_raw($fav_icon_ipad[0]);
+			$fav_icon_ipad_url = esc_attr($theme_options['fav_icon_ipad']);
+			$fav_icon_ipad_id = wp_get_attachment_image_src($fav_icon_ipad_url, 'full');
+			 if (!empty($fav_icon_ipad_id)) {
+				$image_link = esc_url_raw($fav_icon_ipad_id[0]);
 			 }
 			 else {
-				$image_link = $fav_icon_ipad;
+				$image_link = $fav_icon_ipad_url;
 			 }	
 			
 			$out_fav_html .= '<link rel="apple-touch-icon" sizes="72x72" 	href="'. esc_url($image_link) .'">'; 
 		}
 		
 		if (isset($theme_options['fav_icon_ipad_retina'])) {
-			$fav_icon_ipad_retina = esc_attr($theme_options['fav_icon_ipad_retina']);
-			$fav_icon_ipad_retina = wp_get_attachment_image_src($fav_icon_ipad_retina, 'full');
-			 if (!empty($fav_icon_ipad_retina)) {
-				$image_link = esc_url_raw($fav_icon_ipad_retina[0]);
+			$fav_icon_ipad_retina_url = esc_attr($theme_options['fav_icon_ipad_retina']);
+			$fav_icon_ipad_retina_id = wp_get_attachment_image_src($fav_icon_ipad_retina_url, 'full');
+			 if (!empty($fav_icon_ipad_retina_id)) {
+				$image_link = esc_url_raw($fav_icon_ipad_retina_id[0]);
 			 }
 			 else {
-				$image_link = $fav_icon_ipad_retina;
+				$image_link = $fav_icon_ipad_retina_url;
 			 }		
 			
 			$out_fav_html .= '<link rel="apple-touch-icon" sizes="144x144" 	href="'. esc_url($image_link) .'">'; 
