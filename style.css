@@ -1048,7 +1048,8 @@ img.size-full {
 	display: block;
     float: left;
 	padding:0 4.4%;
-    width: 91.2%;
+    width: 100%;
+    box-sizing: border-box;
 	margin:20px 0 0;
 	height:auto;
 }
@@ -1439,7 +1440,8 @@ header.post-header .post-title {
     font-size: 27px;
     margin: 14px 0 0;
     padding: 0 4.4% 13px;
-    width: 91.21%;
+    width: 100%;
+    box-sizing: border-box;
     word-wrap: break-word;
 }
 header.post-header .post-title a {
@@ -2142,7 +2144,8 @@ body.page .entry-thumbnail {
     float: left;
     height: auto;
     margin: 0 0 20px;
-    max-width: 91.2%;
+    width: 100%;
+    box-sizing: border-box;
     padding: 0 4.4%;
 }
 body.page .entry-thumbnail .wp-post-image {
