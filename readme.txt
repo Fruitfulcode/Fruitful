@@ -103,6 +103,23 @@ Files: .pot, ru_Ru.po, ru_Ru.mo icluded. Default language is english.
     Changelog
 -------------------------------------------------------
 
+= 3.0 =
+11.01.2016
+
+* New: Customizer support
+* New: Ability to add fields in theme options with child theme
+* New: Color for hamburger menu
+* New: WooCommerce product, tabs position
+* New: Page templates by default > Blog
+* Update: FontAwesome
+* Update: Translation files
+* Update: WordPress 4.4.1 support
+* Update: WooCommerce 2.4.12 ready 
+* Bug fix: Enable touch swipe on Flexslider
+* Bug fix: If retina logo field is epmty, display regular logo
+* Bug fix: When turn off the Sticky header option, the mobile optimized screen wont show the slider
+
+
 = 2.7 =
 05.08.2015
 
