@@ -151,7 +151,7 @@ function autoWidthMenu () {
 			if (jQuery('#header_language_select').length > 0){
 				wpmlButtonWidth = jQuery('#header_language_select').outerWidth(true);
 			}
-			jQuery('.site-navigation .menu>li').each( function(){ 
+			jQuery('.site-navigation .menu>li,.site-navigation .menu ul >li').each( function(){ 
 				sum += jQuery(this)[0].getBoundingClientRect().width; 
 				vElemsPadding += parseInt(jQuery(this).css('margin-left'));
 			});
