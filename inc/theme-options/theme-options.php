@@ -280,6 +280,13 @@ class fruitful_theme_options {
 					'default'		=> 'inside_content'
 				),	
 				array(
+					'id' 			=> 'menu_icon_color',
+					'label'			=> __( 'Menu icon color' , 'fruitful' ),
+					'info'			=> __( 'Chose color for collapsing menu icon', 'fruitful' ),						
+					'type'			=> 'color',
+					'default'		=> '#ffffff',
+				),				
+				array(
 					'label'			=> __( 'Background for header' , 'fruitful' ),
 					'info'			=> __( 'Upload image with full width for background in header area. (Supported files .png, .jpg, .gif)', 'fruitful' ),			
 					'fields'		=>  array (	
