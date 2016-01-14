@@ -1211,67 +1211,68 @@ class fruitful_theme_options {
 		);	
 
 	/*Woocommerce*/
-		$this->sections['woo'] = array(
-			'title'		=> __( 'Woocommerce', 'fruitful' ),
-			'id'		=> 'woo',
-			'fields'	=> array(	
-				array(
-					'id'			=> 'showcart',
-					'label'			=> __('Show cart in header','fruitful'),
-					'info'			=> __('If you want to display cart link in header select options below.','fruitful'),
-					'type'			=> 'checkbox',
-					'description'	=> __('Enable','fruitful'),
-					'default'		=> 'on',
-				),
-				array(
-					'id'		=> 'woo_shop_sidebar',
-					'label'		=> __('Woocommerce Shop Sidebar','fruitful'),
-					'info'		=> __('Show or hide sidebar','fruitful'),
-					'type'		=> 'select',
-					'options'	=>  array( 
-										'2' => __('Left sidebar', 'fruitful'), 
-										'1' => __('Full width', 'fruitful'),
-										'3' => __('Right sidebar', 'fruitful')
-									),
-					'default'	=> '2',			
-				),
-				array(
-					'id'		=> 'woo_product_sidebar',
-					'label'		=> __('Woocommerce Product Sidebar','fruitful'),
-					'info'		=> __('Show or hide sidebar','fruitful'),
-					'type'		=> 'select',
-					'options'	=>  array( 
-										'1' => __('Full width with tabs on right side', 'fruitful'), 
-										'2' => __('Left sidebar', 'fruitful'),
-										'3' => __('Right sidebar', 'fruitful'), 
-										'4' => __('Full width with tabs on left side', 'fruitful'),
-										'5' => __('Full width with tabs in center', 'fruitful')
-									),
-					'default'	=> '1',			
-				),
-				array(
-					'id'		=> 'shop_num_row',
-					'label'		=> __('Woocommerce pages products per row','fruitful'),
-					'info'		=> __('Choose number of products','fruitful'),
-					'type'		=> 'select',
-					'options'	=>  array( 
-										'4' => __('4 products', 'fruitful'), 
-										'2' => __('2 products', 'fruitful'),
-										'3' => __('3 products', 'fruitful'), 
-										'1' => __('5 products', 'fruitful')
-									),
-					'default'	=> '4',			
-				),
-				array(
-					'id'		=> 'woo_shop_num_prod',
-					'label'		=> __('Number of products on Shop pages','fruitful'),
-					'info'		=> __('Choose number of products. Write -1 for show all products on one page','fruitful'),
-					'type'		=> 'text',
-					'default'	=> '10',			
-				),		
-			)
-		);		
-		
+	if (class_exists('Woocommerce')) { 
+			$this->sections['woo'] = array(
+				'title'		=> __( 'Woocommerce', 'fruitful' ),
+				'id'		=> 'woo',
+				'fields'	=> array(	
+					array(
+						'id'			=> 'showcart',
+						'label'			=> __('Show cart in header','fruitful'),
+						'info'			=> __('If you want to display cart link in header select options below.','fruitful'),
+						'type'			=> 'checkbox',
+						'description'	=> __('Enable','fruitful'),
+						'default'		=> 'on',
+					),
+					array(
+						'id'		=> 'woo_shop_sidebar',
+						'label'		=> __('Woocommerce Shop Sidebar','fruitful'),
+						'info'		=> __('Show or hide sidebar','fruitful'),
+						'type'		=> 'select',
+						'options'	=>  array( 
+											'2' => __('Left sidebar', 'fruitful'), 
+											'1' => __('Full width', 'fruitful'),
+											'3' => __('Right sidebar', 'fruitful')
+										),
+						'default'	=> '2',			
+					),
+					array(
+						'id'		=> 'woo_product_sidebar',
+						'label'		=> __('Woocommerce Product Sidebar','fruitful'),
+						'info'		=> __('Show or hide sidebar','fruitful'),
+						'type'		=> 'select',
+						'options'	=>  array( 
+											'1' => __('Full width with tabs on right side', 'fruitful'), 
+											'2' => __('Left sidebar', 'fruitful'),
+											'3' => __('Right sidebar', 'fruitful'), 
+											'4' => __('Full width with tabs on left side', 'fruitful'),
+											'5' => __('Full width with tabs in center', 'fruitful')
+										),
+						'default'	=> '1',			
+					),
+					array(
+						'id'		=> 'shop_num_row',
+						'label'		=> __('Woocommerce pages products per row','fruitful'),
+						'info'		=> __('Choose number of products','fruitful'),
+						'type'		=> 'select',
+						'options'	=>  array( 
+											'4' => __('4 products', 'fruitful'), 
+											'2' => __('2 products', 'fruitful'),
+											'3' => __('3 products', 'fruitful'), 
+											'1' => __('5 products', 'fruitful')
+										),
+						'default'	=> '4',			
+					),
+					array(
+						'id'		=> 'woo_shop_num_prod',
+						'label'		=> __('Number of products on Shop pages','fruitful'),
+						'info'		=> __('Choose number of products. Write -1 for show all products on one page','fruitful'),
+						'type'		=> 'text',
+						'default'	=> '10',			
+					),		
+				)
+			);		
+		}
 		
 		$this->sections = apply_filters('settings_fields', $this->sections);
 		return $this->sections;
