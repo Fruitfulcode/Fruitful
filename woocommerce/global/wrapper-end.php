@@ -26,7 +26,7 @@ switch( $template ) {
 		get_sidebar( 'content' );
 		break;
 	case 'fruitful' :
-		if ($woo_sidebar == 1) {
+		if ($woo_sidebar == 1 || $woo_sidebar == 4 || $woo_sidebar == 5) {
 			echo '</div></div></div>';
 		} elseif($woo_sidebar == 2) {
 			echo '</div></div></div>';
