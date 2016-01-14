@@ -1241,10 +1241,10 @@ class fruitful_theme_options {
 					'info'		=> __('Show or hide sidebar','fruitful'),
 					'type'		=> 'select',
 					'options'	=>  array( 
-										'1' => __('Full width with tabs on left side', 'fruitful'), 
+										'1' => __('Full width with tabs on right side', 'fruitful'), 
 										'2' => __('Left sidebar', 'fruitful'),
 										'3' => __('Right sidebar', 'fruitful'), 
-										'4' => __('Full width with tabs on right side', 'fruitful'),
+										'4' => __('Full width with tabs on left side', 'fruitful'),
 										'5' => __('Full width with tabs in center', 'fruitful')
 									),
 					'default'	=> '1',			
