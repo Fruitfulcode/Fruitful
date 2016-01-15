@@ -1310,7 +1310,7 @@ class fruitful_theme_options {
 			break;			
 			case 'checkbox':
 				if (!empty($field['box-title'])) $html .= '<h4>'.esc_attr($field['box-title']).'</h4>';
-				$html .= '<label for="'.esc_attr($field['id']).'"><input value="'.$data.'" type="checkbox" id="'.esc_attr( $field['id']). '" name="'.$this->args['opt_name'].'['.esc_attr($field['id']).']" '.checked('on', $data, false).'/> '.esc_attr($field['description']).'</label>';
+				$html .= '<label for="'.esc_attr($field['id']).'"><input type="checkbox" id="'.esc_attr( $field['id']). '" name="'.$this->args['opt_name'].'['.esc_attr($field['id']).']" '.checked('on', $data, false).'/> '.esc_attr($field['description']).'</label>';
 			break;
 			case 'select':
 				$class = '';
