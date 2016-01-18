@@ -137,8 +137,18 @@ jQuery(window).bind('resize', function() {
 	
 });
 
+function viewport() {
+    var e = window, a = 'inner';
+    if (!('innerWidth' in window )) {
+        a = 'client';
+        e = document.documentElement || document.body;
+    }
+    return { width : e[ a+'Width' ] , height : e[ a+'Height' ] };
+}
+
 function autoWidthMenu () {
-	if (jQuery(document).width() > 767){
+var vpWidth = viewport().width;
+	if (vpWidth > 767){
 		var vElemsWidth = 0;
 		var vElemsPadding = 0;
 		var cartButtonWidth = 0;
