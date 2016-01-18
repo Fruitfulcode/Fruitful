@@ -222,13 +222,23 @@ class fruitful_theme_options {
 					'type'			=> 'checkbox',
 					'default'		=> 'on',
 				),
-				array (
-					'id'			=> 'is_wpml_ready',
-					'type'			=> 'checkbox',
-					'label'			=> __( 'Multilingual Switch in Header (WPML)', 'fruitful' ),
-					'info'          => __( 'If you wish to show Language Switch in header, select option below.', 'fruitful' ),
-					'description'	=> __( 'Enable', 'fruitful' ),
-					'default'		=> 'off'		
+				((function_exists('icl_get_languages')) ?
+					array (
+						'id'			=> 'is_wpml_ready',
+						'type'			=> 'checkbox',
+						'label'			=> __( 'Multilingual Switch in Header (WPML)', 'fruitful' ),
+						'info'          => __( 'If you wish to show Language Switch in header, select option below.', 'fruitful' ),
+						'description'	=> __( 'Enable', 'fruitful' ),
+						'default'		=> 'off'		
+					): 
+					array(
+						'id' 			=> 'reset',
+						'label'			=> __( 'Reset options' , 'fruitful' ),
+						'info'			=> __( 'All theme options will be reset to default.', 'fruitful' ),
+						'type'			=> 'button',
+						'default'		=> 'Reset Defaults',
+						'class'			=> 'button-primary reset-btn',
+					)
 				),				
 				array(
 					'id' 			=> 'reset',
@@ -238,9 +248,10 @@ class fruitful_theme_options {
 					'default'		=> 'Reset Defaults',
 					'class'			=> 'button-primary reset-btn',
 				),				
-				
 			)
 		);
+
+
 		
 	/*Header*/
 
