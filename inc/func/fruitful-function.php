@@ -251,16 +251,25 @@ add_action('wp_ajax_fruitful_theme_options_action', 'fruitful_data_save');
 function fruitful_data_save() {
 global $fruitful_theme_options;
 	$data = $_POST[$fruitful_theme_options->args['opt_name']];
-
-	if (!isset($data['responsive'])) 	  {$data['responsive'] 		= 'off'; }
-	if (!isset($data['postcomment'])) 	  {$data['postcomment'] 	= 'off'; }
-	if (!isset($data['pagecomment'])) 	  {$data['pagecomment'] 	= 'off'; }
-	if (!isset($data['is_fixed_header'])) {$data['is_fixed_header'] = 'off'; }
-	//if (!isset($data['styletheme'])) 	  {$data['styletheme'] 		= 'off'; }
-	if (!isset($data['showcart'])) 	 	  {$data['showcart'] 		= 'off'; }
-	if (!isset($data['is_wpml_ready']))   {$data['is_wpml_ready']	= 'off'; }
-	if (!isset($data['bg_repeating'])) 	  {$data['bg_repeating'] 	= 'off'; }
-	if (!isset($data['reset'])) 	  	  {$data['reset'] 			= 'reset';}
+	foreach ( $fruitful_theme_options->sections as $section => $data_f ) {
+		foreach ( $data_f['fields'] as $field ) {
+			$id = (isset($field['id' ])) ? $field['id'] : '';
+			$type = (isset($field['type'])) ? $field['type'] : '';
+				if ($type == 'checkbox') {
+					if (!isset($data[$id])) {$data[$id] = 'off'; }
+				}
+			if (!empty ($field['fields'])) {
+				foreach ($field['fields'] as $sub_field) {
+					$id  = (isset($sub_field['id' ])) ? $sub_field['id'] : '';
+					$type = (isset($sub_field['type'])) ? $sub_field['type'] : '';
+					if ($type == 'checkbox') {
+						if (!isset($data[$id])) {$data[$id] = 'off'; }
+					}							
+				}
+			}					
+		}
+	}	
+	if (!isset($data['reset'])) {$data['reset']	= 'reset';}
 	if(!empty($data)) {
 		if(update_option('fruitful_theme_options', $data)) {
 			die('1');
