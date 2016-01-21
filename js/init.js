@@ -161,7 +161,7 @@ var vpWidth = viewport().width;
 			if (jQuery('#header_language_select').length > 0){
 				wpmlButtonWidth = jQuery('#header_language_select').outerWidth(true);
 			}
-			jQuery('.menu-main-nav-container > ul,.site-navigation .menu > ul').children('li').each( function(){ 
+			jQuery('.site-navigation ul.menu,.site-navigation .menu > ul').children('li').each( function(){ 
 				sum += jQuery(this)[0].getBoundingClientRect().width; 
 				vElemsPadding += parseInt(jQuery(this).css('margin-left'));
 			});
