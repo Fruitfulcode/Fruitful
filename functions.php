@@ -979,7 +979,7 @@ if ( ! function_exists( 'fruitful_get_responsive_style' ) ) {
 					if (!empty($theme_options['dd_menu_font_color']))  { $style_ .= 'color : '.esc_attr($theme_options['dd_menu_font_color']) . ';  ' . "\n"; }
 				$style_ .= ' } ' . "\n"; 
 
-				$style_ .= '#masthead div .main-navigation ul > li > ul > li > ul li:hover a {' . "\n";
+				$style_ .= '#masthead div .main-navigation ul > li > ul > li  ul li:hover a {' . "\n";
 					if (!empty($theme_options['dd_menu_btn_color']))    { $style_ .= 'background-color : '. esc_attr($theme_options['dd_menu_btn_color']) . '; ' . "\n"; }
 					if (!empty($theme_options['dd_menu_hover_color']))  { $style_ .= 'color : '.esc_attr($theme_options['dd_menu_hover_color']) . ';  ' . "\n"; }
 				$style_ .= ' } ' . "\n"; 
