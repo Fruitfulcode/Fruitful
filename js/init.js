@@ -223,9 +223,10 @@ function fixed_header(){
 function setSlidersMaxHeight() {
 	var vWHeight = jQuery(window).height();
 	var vHHeight = jQuery("#page-header").outerHeight();
-
-	if (ThGlobal.is_fixed_header != 1){
-		vWHeight = vWHeight - vHHeight - 20;
+	if (jQuery(window).width() > 767) {
+		if (ThGlobal.is_fixed_header != 1){
+			vWHeight = vWHeight - vHHeight - 20;
+		}
 	}
 	
 	if (jQuery('.flexslider').length > 0) {
