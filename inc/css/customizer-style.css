@@ -39,8 +39,8 @@
 	float:left;
 	margin: 0 10px 0 0;	
 }
-
-.accordion-sub-container #accordion-section-general  h3.accordion-section-title:before {background-position:-677px 0;}
+.accordion-sub-container .control-section-default  h3.accordion-section-title:before,
+.accordion-sub-container #accordion-section-general  h3.accordion-section-title:before {background-position:-648px 0;}
 .accordion-sub-container #accordion-section-header  h3.accordion-section-title:before  {background-position:-829px 0;}
 .accordion-sub-container #accordion-section-background  h3.accordion-section-title:before  {background-position:0 0;}
 .accordion-sub-container #accordion-section-logo  h3.accordion-section-title:before  {background-position: -93px 0;}
@@ -50,10 +50,11 @@
 .accordion-sub-container #accordion-section-social-links  h3.accordion-section-title:before  {background-position:-463px 0;}
 .accordion-sub-container #accordion-section-footer  h3.accordion-section-title:before  {background-position:-555px 0;}
 .accordion-sub-container #accordion-section-custom-css  h3.accordion-section-title:before  {background-position:-738px 0;}
-.accordion-sub-container #accordion-section-woo  h3.accordion-section-title:before  {background-position:-648px 0;}
+.accordion-sub-container #accordion-section-woo  h3.accordion-section-title:before  {background-position:-925px 0;}
 
 /* Disable hover on iPhone */
 @media only screen and (min-device-width : 641px) { 
+.accordion-sub-container .control-section-default  h3.accordion-section-title:hover:before,
 .accordion-sub-container #accordion-section-general  h3.accordion-section-title:hover:before {background-position:-706px 0;}
 .accordion-sub-container #accordion-section-header  h3.accordion-section-title:hover:before  {background-position:-891px 0;}
 .accordion-sub-container #accordion-section-background  h3.accordion-section-title:hover:before {background-position:-62px 0;}

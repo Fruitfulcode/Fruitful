@@ -1433,7 +1433,7 @@ class fruitful_theme_options {
 							$idx = 0;
 							$idm = 0;
 							foreach ( $this->sections as $section => $data )
-								echo '<li><a  id="item_'.$idx++ .'" href="javascript:void(0)"><span class="menu-img" id="menu_img_'.$idm++ .'"></span><span class="menu-text">' . $data['title'] . '</a></li>';
+								echo '<li id="'.$section.'"><a  id="item_'.$idx++ .'" href="javascript:void(0)"><span class="menu-img" id="menu_img_'.$idm++ .'"></span><span class="menu-text">' . $data['title'] . '</a></li>';
 						?>
 
 						</ul>
