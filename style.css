@@ -1174,7 +1174,7 @@ section {
 }
 
 #page-header .head-container{
-	z-index:9;
+	z-index:1000;
 }
 #page-header .container header .header-hgroup.left-pos {
     float:left;
