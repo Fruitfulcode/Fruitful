@@ -295,7 +295,7 @@ class fruitful_theme_options {
 					'label'			=> __( 'Menu icon color' , 'fruitful' ),
 					'info'			=> __( 'Chose color for collapsing menu icon', 'fruitful' ),						
 					'type'			=> 'color',
-					'default'		=> '#ffffff',
+					'default'		=> '#333333',
 				),				
 				array(
 					'label'			=> __( 'Background for header' , 'fruitful' ),
