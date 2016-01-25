@@ -1317,7 +1317,7 @@ class fruitful_theme_options {
 			break;
 			case 'textarea':
 				if (!empty($field['box-title'])) $html .= '<h4>'.esc_attr($field['box-title']).'</h4>';
-				$html .= '<textarea class="large-text" id="'.esc_attr( $field['id']).'" rows="20" cols="50" name="'.$this->args['opt_name'].'['.esc_attr( $field['id']).']" >'.$data.'</textarea>'. "\n";
+				$html .= '<textarea class="large-text" id="'.esc_attr( $field['id']).'" rows="20" cols="50" name="'.$this->args['opt_name'].'['.esc_attr( $field['id']).']" >'.stripslashes($data).'</textarea>'. "\n";
 			break;			
 			case 'checkbox':
 				if (!empty($field['box-title'])) $html .= '<h4>'.esc_attr($field['box-title']).'</h4>';
