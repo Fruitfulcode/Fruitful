@@ -1214,7 +1214,7 @@ if ( ! function_exists( 'fruitful_get_responsive_style' ) ) {
 				
 			//} 
 			//else {
-				$style_ .= 'body {font-family:Open Sans, sans-serif}' . "\n";
+				//$style_ .= 'body {font-family:Open Sans, sans-serif}' . "\n";
 			//}
 		//} 
 			
