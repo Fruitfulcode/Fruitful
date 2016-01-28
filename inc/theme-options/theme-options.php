@@ -25,6 +25,7 @@ class fruitful_theme_options {
 		add_action( 'init', array( $this, 'init_settings' ), 11 );
 		add_action( 'admin_init' , array( $this, 'register_settings' ) );
 		add_action( 'admin_menu' , array( $this, 'add_menu_item' ) );
+		add_action( 'admin_bar_menu', array( $this, 'fruitful_add_custom_link_options'), 1000 );
 	}
 
 	public function init_settings () {
@@ -58,6 +59,15 @@ class fruitful_theme_options {
 		);
 		add_action( 'admin_print_scripts-' . $admin_page, array( &$this, 'settings_assets' ) );
 	}
+	
+	public function fruitful_add_custom_link_options() {
+		global $wp_admin_bar, $wpdb;
+			if ( !is_super_admin() || !is_admin_bar_showing() )
+			return;
+
+		/* Add the main siteadmin menu item */
+		$wp_admin_bar->add_menu( array( 'id' => 'fruitfultheme_options', 'title' => __( 'Theme Options', 'fruitful' ), 'href' => admin_url('admin.php?page=theme_options')));	
+	}		
 
 	public function settings_assets () {
 		wp_print_scripts( 'jquery-ui-tabs' );
@@ -1297,7 +1307,7 @@ class fruitful_theme_options {
 		$type = (isset($field['type'])) ? $field['type'] : '';
 		
 		$option_name = $id;
-		$option = get_option( $this->args['opt_name'] );
+		$option = fruitful_get_theme_options();
 		
 		if ( isset($option) ) {
 			$data = $option[$option_name];

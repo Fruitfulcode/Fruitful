@@ -25,7 +25,7 @@
 <body <?php body_class();?>>
 	<div id="page-header" class="hfeed site">
 	<?php
-		$theme_options  = fruitful_ret_options("fruitful_theme_options");
+		$theme_options  = fruitful_get_theme_options();
 		$logo_pos = $menu_pos = '';
 		if (isset($theme_options['logo_position'])) 
 			$logo_pos = esc_attr($theme_options['logo_position']);

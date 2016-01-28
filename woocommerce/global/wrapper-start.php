@@ -26,7 +26,7 @@ switch( $template ) {
 		echo '<div id="primary" class="content-area"><div id="content" role="main" class="site-content twentyfourteen"><div class="tfwc">';
 		break;
 	case 'fruitful' :
-		$theme_options = fruitful_ret_options("fruitful_theme_options");
+		$theme_options = fruitful_get_theme_options();
 		$prod_num_row_class = '';
 		if (is_shop() || is_product_category()) {
 			if (!empty($theme_options['shop_num_row'])){

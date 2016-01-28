@@ -282,16 +282,32 @@ global $fruitful_theme_options;
 
 }
 
-function fruitful_get_theme_options() {
+function fruitful_get_default_array() {
 global $fruitful_theme_options;
-	$saved = get_option($fruitful_theme_options->args['opt_name']);
-	if (isset( $saved)) {
-		return $saved;
+	$output = array();
+	foreach ( $fruitful_theme_options->sections as $section => $data_f ) {
+		foreach ( $data_f['fields'] as $field ) {
+			$id = (isset($field['id' ])) ? $field['id'] : '';
+			$default =  (isset($field['default' ])) ? $field['default'] : '';
+			$output[$id] = $default;
+			if (!empty ($field['fields'])) {
+				foreach ($field['fields'] as $sub_field) {
+					$id  = (isset($sub_field['id' ])) ? $sub_field['id'] : '';
+					$default =  (isset($sub_field['default' ])) ? $sub_field['default'] : '';	
+					$output[$id] = $default;
+				}
+			}	
+		}
 	}
+	return apply_filters( 'themeslug_option_defaults', $output );
 }
 
-function fruitful_ret_options ($name_options) {
-   return $options = array_filter((array) get_option($name_options));
+function fruitful_get_theme_options() {
+	global $fruitful_theme_options;
+    return wp_parse_args( 
+        get_option($fruitful_theme_options->args['opt_name'], array() ), 
+        fruitful_get_default_array() 
+    );
 }
 
 add_action('wp_ajax_fruitful_reset_btn', 'fruitful_reset_action');

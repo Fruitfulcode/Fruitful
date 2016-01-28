@@ -44,10 +44,11 @@ class fruitful_theme_options_customizer {
 		if ( is_array($this->sections)) {
 			foreach ($this->sections as $option ) {
 				$priority 		= (isset($option['priority'])) ? $option['priority'] : 10;
+				$id 			= (isset($option['id'])) ? $option['id'] : '';
 				$title 			= (isset($option['title'])) ? esc_attr($option['title']) : '' ;
 				$description 	= (isset($option['description'])) ? esc_attr($option['description']) : '';
 
-				$wp_customize->add_section(esc_attr($option['id']), array(
+				$wp_customize->add_section(esc_attr($id), array(
 					'priority'          => $priority,
 					'title'             => $title,
 					'description'       => $description,
