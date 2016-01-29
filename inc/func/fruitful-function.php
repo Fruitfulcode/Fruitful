@@ -258,13 +258,19 @@ global $fruitful_theme_options;
 				if ($type == 'checkbox') {
 					if (!isset($data[$id])) {$data[$id] = 'off'; }
 				}
+				if ($type == 'textarea') {
+					if (isset($data[$id])) {$data[$id] = stripslashes($data[$id]);}
+				}				
 			if (!empty ($field['fields'])) {
 				foreach ($field['fields'] as $sub_field) {
 					$id  = (isset($sub_field['id' ])) ? $sub_field['id'] : '';
 					$type = (isset($sub_field['type'])) ? $sub_field['type'] : '';
 					if ($type == 'checkbox') {
 						if (!isset($data[$id])) {$data[$id] = 'off'; }
-					}							
+					}
+					if ($type == 'textarea') {
+						if (isset($data[$id])) {$data[$id] = stripslashes($data[$id]);}
+					}					
 				}
 			}					
 		}
