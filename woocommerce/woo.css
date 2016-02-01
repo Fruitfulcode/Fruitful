@@ -38,7 +38,8 @@ Responsive Styles for Woocommerce.
 /*header*/
 .cart-button{display:block;float: right;padding:0;position:relative;margin:14px 10px 10px;clear:left}
 .cart-button a,
-.cart-button a .cart_image{display:block;float: left;margin: 0;padding:0;width:24px; height:21px;border:0;text-decoration:none;background:url(images/cart_image.png) no-repeat transparent;}
+.cart-button a .cart_image{display:block;float: left;margin: 0;padding:0;width:24px; height:21px;border:0;text-decoration:none;}
+.cart-button a .cart_image:before{font-family:FontAwesome; content:"\f07a";font-size:26px; position:absolute;top:-5px;}
 .num_of_product_cart{
 	display:block;
 	float:left;

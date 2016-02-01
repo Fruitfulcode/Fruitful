@@ -1075,7 +1075,11 @@ if ( ! function_exists( 'fruitful_get_responsive_style' ) ) {
 					$style_ .= '.blog_post .date_of_post  {color : '. esc_attr($theme_options['date_of_post_f_color']) .'; } ' . "\n";
 				}
 				
-				$woo_style_ .= '.num_of_product_cart {border-color: '. esc_attr($theme_options['menu_btn_color']) . '; }  ' . "\n"; 
+				//$woo_style_ .= '.num_of_product_cart {border-color: '. esc_attr($theme_options['menu_btn_color']) . '; }  ' . "\n"; 
+				if (!empty($theme_options['cart_color'])) {
+					$woo_style_ .= '.cart_image {color: '. esc_attr($theme_options['cart_color']) . '; }  ' . "\n"; 
+					$woo_style_ .= '.num_of_product_cart {border-color: '. esc_attr($theme_options['cart_color']) . '; }  ' . "\n"; 
+				}
 				
 				if (!empty($theme_options['btn_color'])) {
 					$btn_color = esc_attr($theme_options['btn_color']);

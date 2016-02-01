@@ -1246,6 +1246,13 @@ class fruitful_theme_options {
 						'default'		=> 'on',
 					),
 					array(
+						'label'			=> __('Cart color','fruitful'),
+						'info'			=> __('Choose color for cart icon','fruitful'),							
+						'id' 			=> 'cart_color',
+						'type'			=> 'color',
+						'default'		=> '#020202',
+					),						
+					array(
 						'id'		=> 'woo_shop_sidebar',
 						'label'		=> __('Woocommerce Shop Sidebar','fruitful'),
 						'info'		=> __('Show or hide sidebar','fruitful'),
