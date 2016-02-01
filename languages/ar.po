@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Fruitful theme\n"
 "POT-Creation-Date: 2014-07-31 11:49+0200\n"
-"PO-Revision-Date: 2015-03-14 16:52+0200\n"
+"PO-Revision-Date: 2015-03-17 19:46+0200\n"
 "Last-Translator: Muhammad Bashir Al-Noimi <mbnoimi@gmail.com>\n"
 "Language-Team: Fruitful Team\n"
 "MIME-Version: 1.0\n"
@@ -50,11 +50,11 @@ msgstr "تصفح التعليقات"
 
 #: fruitful/comments.php:41 fruitful/comments.php:61
 msgid "&larr; Older Comments"
-msgstr "&rarr; تعليقات اقدم"
+msgstr "تعليقات اقدم &larr;"
 
 #: fruitful/comments.php:42 fruitful/comments.php:62
 msgid "Newer Comments &rarr;"
-msgstr "تعليقات أحدث &larr;"
+msgstr "&rarr; تعليقات أحدث"
 
 #: fruitful/comments.php:72
 msgid "Comments are closed."
@@ -65,7 +65,7 @@ msgstr "التعليقات مغلقة."
 #: fruitful/content-link.php:32 fruitful/content-quote.php:32
 #: fruitful/content-status.php:32 fruitful/content-video.php:32
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
-msgstr "متابعة القراءة <span class=\"meta-nav\">&rarr; </span>"
+msgstr "متابعة القراءة <span class=\"meta-nav\">&larr;</span>"
 
 #: fruitful/content-aside.php:33 fruitful/content-audio.php:34
 #: fruitful/content-chat.php:33 fruitful/content-gallery.php:33
@@ -120,7 +120,7 @@ msgstr "عرض كل ألـ % تعليق"
 
 #: fruitful/content.php:53
 msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
-msgstr "المزيد <span class=\"meta-nav\">&rarr; </span>"
+msgstr "المزيد <span class=\"meta-nav\">&larr;</span>"
 
 #: fruitful/functions.php:71 fruitful/functions.php:77
 msgid "on"
@@ -260,11 +260,11 @@ msgstr ""
 
 #: fruitful/image.php:39
 msgid "&larr; Previous"
-msgstr "&rarr; السابق"
+msgstr "السابق &larr;"
 
 #: fruitful/image.php:40
 msgid "Next &rarr;"
-msgstr "التالي &larr;"
+msgstr "&rarr; التالي"
 
 #: fruitful/image.php:93
 #, php-format
@@ -361,11 +361,11 @@ msgstr "&rarr;"
 
 #: fruitful/inc/template-tags.php:37
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
-msgstr "<span class=\"meta-nav\"> &rarr;</span> منشورات أقدم"
+msgstr "منشورات أقدم <span class=\"meta-nav\">&larr;</span>"
 
 #: fruitful/inc/template-tags.php:41
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
-msgstr "منشورات أحدث <span class=\"meta-nav\">&larr; </span>"
+msgstr "منشورات أحدث <span class=\"meta-nav\">&rarr;</span>"
 
 #: fruitful/inc/template-tags.php:66
 msgid "Pingback:"
