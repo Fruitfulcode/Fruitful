@@ -32,7 +32,9 @@ class fruitful_theme_options_customizer {
 	public function register_settings ($wp_customize) {
 		global $fruitful_theme_options;
 		$opt_name = $fruitful_theme_options->args['opt_name'];	
-
+		$theme_options  = fruitful_get_theme_options();
+		$height = (isset($theme_options['header_height'])) ? $theme_options['header_height'] : 80;
+		
 		$wp_customize->add_panel($opt_name, array(
 			'priority'          => 10,
 			'capability'        => 'edit_theme_options',
@@ -80,7 +82,7 @@ class fruitful_theme_options_customizer {
 							$g_type 		= (isset($group['type'])) ? esc_attr($group['type']) : '';	
 							$g_choices 		= (isset($group['options'] )) ? $group['options'] : array();
 							$g_id 			= (isset($group['id'])) ? esc_attr($group['id']) : '';	
-							
+
 							if ($g_type == 'checkbox') {
 								$sanitize =  'fruitful_theme_sanitize_checkbox';
 							}
@@ -145,12 +147,26 @@ class fruitful_theme_options_customizer {
 									)));
 								break;
 								case 'image':
+								if ($id == $opt_name . '[header_img]') {
+										$wp_customize->add_control(new WP_Customize_Cropped_Image_Control( $wp_customize, esc_attr($id), array(
+											'priority'          => $priority,
+											'section'           => $section,
+											'label'             => $f_label,
+											'description'       => $f_info,
+											'flex_width'  => true, 
+											'flex_height' => false,
+											'width'       => 1600,
+											'height'      => $height									
+										)));
+								 }
+								 else {
 									$wp_customize->add_control(new WP_Customize_Image_Control( $wp_customize, esc_attr($id), array(
 										'priority'          => $priority,
 										'section'           => $section,
-										'label'             => $g_label,
+										'label'             => $f_label,
 										'description'       => $f_info,
 									)));
+								}	
 								break;
 								case 'color':
 									$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, esc_attr($id), array(
