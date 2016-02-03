@@ -635,7 +635,8 @@ if (!function_exists('fruitful_get_logo')) {
 
 			if (!empty($url_logo_id)) 	echo  '<a class="link-logo" href="' . esc_url( home_url( '/' ) ) . '" title="' . $description .'" rel="home"><img class="logo" src="'. $image_link  .'" width="' . $logo_width . '" height="' . $logo_height . '" alt="' . $description . '"/></a>';
 			if (!empty($url_retina_logo_id)) echo  '<a class="link-logo-retina" href="' . esc_url( home_url( '/' ) ) . '" title="' . $description .'" rel="home"><img class="logo retina" src="'. $image_link_retina	  .'" width="' . $logo_retina_width . '" height="' . $logo_retina_height . '" alt="' . $description . '"/></a>';
-			
+			if (!empty($url_logo_id) && empty($url_retina_logo_id)) echo  '<a class="link-logo-retina" href="' . esc_url( home_url( '/' ) ) . '" title="' . $description .'" rel="home"><img class="logo retina" src="'. $image_link  .'" width="' . $logo_retina_width . '" height="' . $logo_retina_height . '" alt="' . $description . '"/></a>';
+			if (empty($url_logo_id) && !empty($url_retina_logo_id)) echo  '<a class="link-logo" href="' . esc_url( home_url( '/' ) ) . '" title="' . $description .'" rel="home"><img class="logo" src="'. $image_link_retina  .'" width="' . $logo_width . '" height="' . $logo_height . '" alt="' . $description . '"/></a>';								
 			
 		} else {
 			echo  '<a class="logo-description" href="' . esc_url( home_url( '/' ) ) . '" title="' . $description .'" rel="home"><h1 class="site-title">'. $name .'</h1><h2 class="site-description">'. $description .'</h2></a>';
