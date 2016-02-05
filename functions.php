@@ -1414,15 +1414,11 @@ if (class_exists('Woocommerce')) {
 	if ( ! function_exists( 'fruitful_woocommerce_header_add_to_cart_fragment' ) ) {
 		function fruitful_woocommerce_header_add_to_cart_fragment( $fragments ) {
 			global $woocommerce;
-			ob_start();
-			?>
-			<a href="<?php echo get_permalink( woocommerce_get_page_id( 'cart' ) ); ?>" class="cart-contents">
-				<div class="cart_image"></div>
-				<span class="num_of_product_cart"><?php global $woocommerce;
-				 echo sprintf(_n('%d ', '%d ', $woocommerce->cart->cart_contents_count, 'fruitful'), $woocommerce->cart->cart_contents_count); ?> </span>
-			</a>
-			<?php
-			$fragments['a.cart-contents'] = ob_get_clean();
+			$out  = '<a href= '.get_permalink( woocommerce_get_page_id( 'cart' ) ).'" class="cart-contents">';
+			$out .= '<div class="cart_image"></div>';
+			$out .= '<span class="num_of_product_cart">';
+			$out .= sprintf(_n('%d ', '%d ', $woocommerce->cart->cart_contents_count, 'fruitful'), $woocommerce->cart->cart_contents_count) .'</span></a>';
+			$fragments['a.cart-contents'] = $out;
 			return $fragments;
 		}
 	}
