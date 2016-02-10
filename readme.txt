@@ -103,6 +103,24 @@ Files: .pot, ru_Ru.po, ru_Ru.mo icluded. Default language is english.
     Changelog
 -------------------------------------------------------
 
+= 3.1
+
+10.01.2016
+
+* New: Color for WooCommerce cart icon
+* Improvements: "Default theme styles". option disabled
+* Improvements: Header background image, added image crop in customizer.
+* Bug fix: Menu icon color
+* Bug fix: WooCommerce tabs position
+* Bug fix: Check if variable not empty, checkbox value on save
+* Bug fix: The 4th level of dropdown menu color
+* Bug fix: Menu position center, after update
+* Bug fix: The slider images are distored (width) in landscape mode
+* Bug fix: Stripslashes  - textarea theme options
+* Bug fix: microsoft lumia support
+
+
+
 = 3.0 =
 11.01.2016
 
