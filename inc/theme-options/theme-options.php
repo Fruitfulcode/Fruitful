@@ -51,8 +51,8 @@ class fruitful_theme_options {
 		 * @since Fruitful theme 1.0
 		 */
 		$admin_page = add_theme_page(
-		__( 'Theme Options' ),										 // Name of page
-		__( 'Theme Options' ), 										 // Label in menu
+		__( 'Theme Options', 'fruitful' ),							 // Name of page
+		__( 'Theme Options', 'fruitful' ), 							 // Label in menu
 			'edit_theme_options', 									 // Capability required
 			$this->args['opt_slug'], 								 // Menu slug, used to uniquely identify the page
 			array( &$this, 'fruitful_theme_options_render_page' )    // Function that renders the options page
