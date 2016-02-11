@@ -1115,7 +1115,7 @@ if ( ! function_exists( 'fruitful_get_responsive_style' ) ) {
 				/*Woocommerce styles*/
 				if (class_exists('woocommerce')){
 					
-					if (!empty($theme_options['woo_shop_sidebar'])){
+					if (!empty($theme_options['woo_shop_sidebar']) && !is_tax('product_tag')){
 						$shop_sidebar_template = $theme_options['woo_shop_sidebar'];
 						if ($shop_sidebar_template == 3){	/*right sidebar template*/
 							$woo_style_ .= '#page .container .woo-loop-content{float:left}'."\n";

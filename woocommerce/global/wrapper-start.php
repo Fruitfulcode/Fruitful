@@ -28,18 +28,30 @@ switch( $template ) {
 	case 'fruitful' :
 		$theme_options = fruitful_get_theme_options();
 		$prod_num_row_class = '';
-		if (is_shop() || is_product_category()) {
+		$curr_template = esc_attr($theme_options['layout_tag_templ']);
+		if (is_shop() || is_product_category() || is_tax('product_tag')) {
 			if (!empty($theme_options['shop_num_row'])){
 				$prod_num_row = $theme_options['shop_num_row'];
 				$prod_num_row_class = 'prod_num_row-'.$prod_num_row;
 			}
+		}		
+		if (is_tax('product_tag')) {
+			if ($curr_template == 0) { 
+				echo '<div class="woo-loop-content alpha omega '.$prod_num_row_class.'"><div id="container"><div id="content" role="main">';
+			} else if ($curr_template == 1) { 
+				echo '<div class="eleven columns woo-loop-content alpha '.$prod_num_row_class.'"><div id="container"><div id="content" role="main">';
+			} else if ($curr_template == 2) {
+				echo '<div class="eleven columns woo-loop-content omega '.$prod_num_row_class.'"><div id="container"><div id="content" role="main">';
+			}
 		}
-		if ($woo_sidebar == 1 || $woo_sidebar == 4 || $woo_sidebar == 5){
-			echo '<div class="woo-loop-content alpha omega '.$prod_num_row_class.'"><div id="container"><div id="content" role="main">';
-		} elseif($woo_sidebar == 2) {
-			echo '<div class="eleven columns woo-loop-content omega '.$prod_num_row_class.'"><div id="container"><div id="content" role="main">';
-		} else {
-			echo '<div class="eleven columns woo-loop-content alpha '.$prod_num_row_class.'"><div id="container"><div id="content" role="main">';
+		else {
+			if ($woo_sidebar == 1 || $woo_sidebar == 4 || $woo_sidebar == 5){
+				echo '<div class="woo-loop-content alpha omega '.$prod_num_row_class.'"><div id="container"><div id="content" role="main">';
+			} elseif($woo_sidebar == 2) {
+				echo '<div class="eleven columns woo-loop-content omega '.$prod_num_row_class.'"><div id="container"><div id="content" role="main">';
+			} else {
+				echo '<div class="eleven columns woo-loop-content alpha '.$prod_num_row_class.'"><div id="container"><div id="content" role="main">';
+			}		
 		}
 		break;
 	default :
