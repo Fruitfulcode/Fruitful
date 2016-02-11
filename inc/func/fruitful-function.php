@@ -183,6 +183,7 @@ function fruitful_get_box_upload_slide($attach_id, $link_url, $is_blank, $ind, $
 		$out .= '<input class="of-input" name="fruitful_theme_options[slides][slide-'.$ind.'][attach_id]" id="attach-'.$ind.'" type="hidden" value="'. intval($attach_id) .'" />';
 		$out .= '<div class="upload_button_div">';
 			$out .= '<span data-imagetype="slide" class="button '. $btnclassup .'" id="add-slide-btn-'. $ind .'">'.__('Upload Image', 'fruitful') .'</span>';
+			$out .= '<span class="button reset_btn">'.__('Remove', 'fruitful') .'</span>';
 		$out .= '</div>';
 	$out .= '</div>';
 	return $out;

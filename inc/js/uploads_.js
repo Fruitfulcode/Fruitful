@@ -17,6 +17,7 @@ function uploads_multimedia_init (title, btnName, editing, multiple) {
 }
 
 jQuery(document).ready(function() {
+   jQuery.fn.exists = function(){return this.length>0;}
    jQuery('.upload_btn').live('click', function( event ) {
 			event.preventDefault();
 			var vLinkElem   = jQuery(this);
@@ -35,7 +36,13 @@ jQuery(document).ready(function() {
 							vLinkElem.parent().parent().find('.img-container').remove();
 							vLinkElem.parent().parent().prepend('<div class="img-container"><img src="' + image_url + '" alt="" /></div>');
 							vLinkElem.parent().parent().find('input[type="hidden"]').val(image_id);
-							vLinkElem.parent().parent().find('.upload_button_div').append('<span class="button reset_btn">Remove</span>');
+							vLinkElem.parent().parent().find('.upload_button_div').each(function(){
+								if(!jQuery(this).find('.reset_btn').exists() || jQuery(this).find('.reset_btn.none').exists() ) {
+									jQuery(this).find('.reset_btn,.reset_btn.none').remove();
+									jQuery(this).append('<span class="button reset_btn">Remove</span>');
+								}
+							});
+
 					});
 
 			});
