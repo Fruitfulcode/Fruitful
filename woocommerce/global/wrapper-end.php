@@ -26,25 +26,6 @@ switch( $template ) {
 		get_sidebar( 'content' );
 		break;
 	case 'fruitful' :
-		$theme_options = fruitful_get_theme_options();
-		$curr_template = esc_attr($theme_options['layout_tag_templ']);	
-		
-		if (is_tax('product_tag')) {
-			if ($curr_template == 0) { 
-				return false;
-			} else if ($curr_template == 1) { 
-				echo '</div></div></div>';
-				echo '<div class="five columns alpha woo-loop-sidebar">';
-						get_sidebar( 'shop' );
-				echo '</div>';
-			} else if ($curr_template == 2) {
-				echo '</div></div></div>';
-				echo '<div class="five columns omega woo-loop-sidebar">';
-						get_sidebar( 'shop' );
-				echo '</div>';
-			}
-		}		
-		else {
 			if ($woo_sidebar == 1 || $woo_sidebar == 4 || $woo_sidebar == 5) {
 				echo '</div></div></div>';
 			} elseif($woo_sidebar == 2) {
@@ -66,7 +47,6 @@ switch( $template ) {
 					}
 				echo '</div>';
 			}
-		}
 		break;
 	default :
 		echo '</div></div>';

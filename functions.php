@@ -1315,7 +1315,7 @@ if (class_exists('Woocommerce')) {
 			$woo_sidebar = 2;
 
 			
-			if ( is_shop() || is_product_category() ) {
+			if ( is_shop() || is_product_category() || is_tax('product_tag')) {
 				$theme_options = fruitful_get_theme_options();
 				if (!empty($theme_options['woo_shop_sidebar'])){
 					$woo_sidebar =  esc_attr($theme_options['woo_shop_sidebar']);
