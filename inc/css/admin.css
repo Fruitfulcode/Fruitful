@@ -245,7 +245,7 @@ only screen and (min-resolution: 240dpi) {
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5) and (min-device-width : 641px),
 only screen and (min--moz-device-pixel-ratio: 1.5) and (min-device-width : 641px),
 only screen and (min-resolution: 240dpi) and (min-device-width : 641px) {
-	.form-admin-fruitful .content .menu-options ul li:hover > a .menu-img
+	.form-admin-fruitful .content .menu-options ul li:hover > a .menu-img,
 	.form-admin-fruitful .content .menu-options ul li#general:hover > a .menu-img {background-position:-704px 0}
 	.form-admin-fruitful .content .menu-options ul li#header:hover > a .menu-img {background-position:-891px 0}
 	.form-admin-fruitful .content .menu-options ul li#background:hover > a .menu-img {background-position:-62px 0}
