@@ -971,6 +971,11 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 
 .woocommerce-cart .woocommerce .cart-collaterals .cross-sells,
 .woocommerce-cart.woocommerce-page .cart-collaterals .cross-sells{width:100%;}
+.woocommerce-cart .woocommerce .cart-collaterals .cross-sells  ul.products li.product a.button.add_to_cart_button, 
+.woocommerce-cart .woocommerce .cart-collaterals .cross-sells  ul.products li.product a.button.product_type_simple, 
+.woocommerce-cart .woocommerce .cart-collaterals .cross-sells  ul.products li.product a.button.product_type_variable {
+	padding:0 !important;	
+}
 
 /*---CHEKOUT---*/
 .woocommerce-checkout #customer_details{display:block;float:left;width:100%;margin:0 ;}
