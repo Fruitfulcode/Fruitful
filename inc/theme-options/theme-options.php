@@ -1284,10 +1284,10 @@ class fruitful_theme_options {
 						'info'		=> __('Choose number of products','fruitful'),
 						'type'		=> 'select',
 						'options'	=>  array( 
-											'4' => __('4 products', 'fruitful'), 
 											'2' => __('2 products', 'fruitful'),
-											'3' => __('3 products', 'fruitful'), 
-											'1' => __('5 products', 'fruitful')
+											'3' => __('3 products', 'fruitful'),
+											'4' => __('4 products', 'fruitful'), 											
+											'5' => __('5 products', 'fruitful')
 										),
 						'default'	=> '4',			
 					),
