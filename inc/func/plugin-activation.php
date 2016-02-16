@@ -1669,8 +1669,8 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 						'tab'       => 'plugin-information',
 						'plugin'    => urlencode( $slug ),
 						'TB_iframe' => 'true',
-						'width'     => '640',
-						'height'    => '500',
+						'width'     => '750',
+						'height'    => '900',
 					),
 					self_admin_url( 'plugin-install.php' )
 				);
