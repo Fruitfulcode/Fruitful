@@ -1645,15 +1645,32 @@ table#wp-calendar td#next{
 }
 
 
+#searchform {
+	position:relative;
+}
+
+#searchform:after {
+    content: "\f002";
+    position: absolute;
+    font-family: FontAwesome;
+    right: 10px;
+    color: #45494c;
+    top: 6px;
+    font-size: 15px;
+    border-left: 1px solid #d7d7d7;
+    padding: 0px 0 0 11px;
+    line-height: 20px;
+}
+
 input#s {
-    background:url("images/search_icon.png") no-repeat scroll 97% 5px transparent;
     border-radius:2px 2px 2px 2px;
     font-size:13px;
     height:22px;
     line-height:1.2em;
-    padding:4px 32px 4px 5px;
+    padding:4px 32px 4px 12px;
     width:234px;
 }
+
 input[type="password"] {
 	border: 1px solid #e5e5e5;
 	border-radius:2px 2px 2px 2px;
