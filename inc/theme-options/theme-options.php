@@ -1365,7 +1365,8 @@ class fruitful_theme_options {
 					
 					$html .= '<input class="of-input" name="'.$this->args['opt_name'].'['.esc_attr($field['id']).']"   id="'.esc_attr($field['id']) . '_upload" type="hidden" value="'. $data .'" />';
 					$html .= '<div class="upload_button_div">';
-						$html .= '<span data-imagetype="'.esc_attr($field['imagetype']).'" class="button upload_btn" id="'.esc_attr($field['id']).'">'. __('Upload Image', 'fruitful') .'</span>';
+						$image_type = (isset($field['imagetype' ])) ? 'data-imagetype="'.$field['imagetype'].'"' : '';
+						$html .= '<span '.$image_type.' class="button upload_btn" id="'.esc_attr($field['id']).'">'. __('Upload Image', 'fruitful') .'</span>';
 					if(!empty($data)) {
 						$none = '';
 					} else { 
