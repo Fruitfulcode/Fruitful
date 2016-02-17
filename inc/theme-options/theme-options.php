@@ -315,7 +315,6 @@ class fruitful_theme_options {
 						'id' 			=> 'header_img',
 						'type'			=> 'image',
 						'imagetype'		=> 'headerbackground',
-						'class'			=> 'upload_btn'
 						),
 						array(
 						'id' 			=> 'header_bg_color',
@@ -360,7 +359,6 @@ class fruitful_theme_options {
 						'id' 			=> 'backgroung_img',
 						'type'			=> 'image',
 						'imagetype'		=> 'headerbackground',
-						'class'			=> 'upload_btn'
 						),
 						array(
 							'id' 			=> 'bg_repeating',
@@ -428,7 +426,6 @@ class fruitful_theme_options {
 					'info'			=> __( 'Upload logo image for your website. Size is original (Supported files .png, .jpg, .gif)', 'fruitful' ),					
 					'type'			=> 'image',
 					'imagetype'		=> 'logo',
-					'class'			=> 'upload_btn'
 				),
 				array(
 					'id' 			=> 'logo_img_retina',
@@ -436,7 +433,6 @@ class fruitful_theme_options {
 					'info'			=> __( 'Upload logo in double size (If your logo is 100 x 20px, it should be 200 x 40px)', 'fruitful' ),					
 					'type'			=> 'image',
 					'imagetype'		=> 'logo_retina',
-					'class'			=> 'upload_btn'
 				),		
 				array(
 					'id' 			=> 'fav_icon',
@@ -444,7 +440,6 @@ class fruitful_theme_options {
 					'info'			=> __( 'A favicon is a 16x16 pixel icon that represents your site; upload your custom Favicon here.', 'fruitful' ),					
 					'type'			=> 'image',
 					'imagetype'		=> 'favicon',
-					'class'			=> 'upload_btn'
 				),
 				array(
 					'id' 			=> 'fav_icon_iphone',
@@ -452,7 +447,6 @@ class fruitful_theme_options {
 					'info'			=> __( 'Upload a custom favicon for iPhone (57x57 pixel png).', 'fruitful' ),					
 					'type'			=> 'image',
 					'imagetype'		=> 'favicon_iphone',
-					'class'			=> 'upload_btn'
 				),			
 				array(
 					'id' 			=> 'fav_icon_iphone_retina',
@@ -460,7 +454,6 @@ class fruitful_theme_options {
 					'info'			=> __( 'Upload a custom favicon for iPhone retina (114x114 pixel png).', 'fruitful' ),					
 					'type'			=> 'image',
 					'imagetype'		=> 'favicon_iphone_retina',
-					'class'			=> 'upload_btn'
 				),	
 				array(
 					'id' 			=> 'fav_icon_ipad',
@@ -468,7 +461,6 @@ class fruitful_theme_options {
 					'info'			=> __( 'Upload a custom favicon for iPad (72x72 pixel png).', 'fruitful' ),					
 					'type'			=> 'image',
 					'imagetype'		=> 'favicon_ipad',
-					'class'			=> 'upload_btn'
 				),	
 				array(
 					'id' 			=> 'fav_icon_ipad_retina',
@@ -476,7 +468,6 @@ class fruitful_theme_options {
 					'info'			=> __( 'Upload a custom favicon for iPhone retina (144x144 pixel png).', 'fruitful' ),					
 					'type'			=> 'image',
 					'imagetype'		=> 'favicon_ipad_retina',
-					'class'			=> 'upload_btn'
 				),				
 				
 			)
@@ -1374,7 +1365,7 @@ class fruitful_theme_options {
 					
 					$html .= '<input class="of-input" name="'.$this->args['opt_name'].'['.esc_attr($field['id']).']"   id="'.esc_attr($field['id']) . '_upload" type="hidden" value="'. $data .'" />';
 					$html .= '<div class="upload_button_div">';
-						$html .= '<span data-imagetype="'.esc_attr($field['imagetype']).'" class="button '.esc_attr($field['class']).'" id="'.esc_attr($field['id']).'">'. __('Upload Image', 'fruitful') .'</span>';
+						$html .= '<span data-imagetype="'.esc_attr($field['imagetype']).'" class="button upload_btn" id="'.esc_attr($field['id']).'">'. __('Upload Image', 'fruitful') .'</span>';
 					if(!empty($data)) {
 						$none = '';
 					} else { 
