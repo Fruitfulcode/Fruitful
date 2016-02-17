@@ -147,7 +147,7 @@ class fruitful_theme_options_customizer {
 									)));
 								break;
 								case 'image':
-								if ($id == $opt_name . '[header_img]') {
+								if (class_exists( 'WP_Customize_Cropped_Image_Control' ) && $id == $opt_name . '[header_img]') {
 										$wp_customize->add_control(new WP_Customize_Cropped_Image_Control( $wp_customize, esc_attr($id), array(
 											'priority'          => $priority,
 											'section'           => $section,
