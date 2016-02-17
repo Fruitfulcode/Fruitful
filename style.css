@@ -2345,7 +2345,7 @@ aside #lang_sel {
 	/*styles for responsive full header*/
 	.resp_full_width_menu>.container{display:none;}
 	.resp_full_width_menu>.site-header{display:block;}
-	.resp_full_width_menu.head-container{background-image:none;float:left;min-height:0}
+	.resp_full_width_menu.head-container{float:left;min-height:0;max-height: 56px;}
 	.resp_full_width_menu #header_language_select{display:block;}
 	.resp_full_width_menu #header_language_select .current,
 	.resp_full_width_menu #header_language_select .current a,
@@ -2354,7 +2354,7 @@ aside #lang_sel {
 	.resp_full_width_menu #lang-select-block a{padding:7px}
 		
 	.resp_full_width_menu .site-header{ width:100%; float:left; min-height:56px; }
-	.resp_full_width_menu .site-header .logo_wrapper{ display:block; float:left; width:48%; margin:0 0 0 2%; }
+	.resp_full_width_menu .site-header .logo_wrapper{ display:block; float:left; width:48%; margin:10px 0 0 2%; }
 	.resp_full_width_menu .site-header .cart_wrapper, .resp_full_width_menu .site-header .menu_button{ display:block; float:right; margin-left:12px; margin-right:12px; }
 	.resp_full_width_menu .site-header .language_switcher{ display:block; float:right;}
 	.resp_full_width_menu .site-header .select-menu{ display:none; } 	
