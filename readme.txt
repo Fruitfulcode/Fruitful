@@ -103,8 +103,21 @@ Files: .pot, ru_Ru.po, ru_Ru.mo icluded. Default language is english.
     Changelog
 -------------------------------------------------------
 
-= 3.1
+= 3.2 =
+18.02.2016
 
+* Improvements: Header background with hamburger menu
+* Improvements: FontAwesome icon in search form
+* Update: TGM plugin activation 2.5.2
+* Bug fix: WooCommerce, cross sell products, add to cart
+* Bug fix: WooCommerce, 5 products per row
+* Bug fix: Link in cart /"
+* Bug fix: Sidebar position for tags template
+* Bug fix: Slider, remove button duplicated
+* Removed: class from image type( field options)
+
+
+= 3.1 = 
 10.01.2016
 
 * New: Color for WooCommerce cart icon
