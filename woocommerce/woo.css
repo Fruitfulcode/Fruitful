@@ -994,6 +994,12 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 	padding:0 !important;	
 }
 
+.woocommerce .blockUI.blockOverlay {
+  position: relative!important;
+  display: none!important;
+}
+
+
 /*---CHEKOUT---*/
 .woocommerce-checkout #customer_details{display:block;float:left;width:100%;margin:0 ;}
 .woocommerce-checkout #order_review_heading{float:none;width:100%;display:block;}
