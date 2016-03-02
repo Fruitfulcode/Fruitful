@@ -776,7 +776,8 @@ if (!function_exists('fruitful_get_socials_icon')) {
 		if(!empty($theme_options['email_link'])) 		{ $out .= '<a class="email" 	 title="email"		href="mailto:'.sanitize_email($theme_options['email_link']). '"><i class="fa"></i></a>'; }			
 		if(!empty($theme_options['github_link'])) 		{ $out .= '<a class="github" 	 title="github"		href="'	.	esc_url($theme_options['github_link']) 		. '" target="_blank"><i class="fa"></i></a>'; }			
 		if(!empty($theme_options['tumblr_link'])) 		{ $out .= '<a class="tumblr" 	 title="tumblr"		href="'	.	esc_url($theme_options['tumblr_link']) 		. '" target="_blank"><i class="fa"></i></a>'; }			
-		if(!empty($theme_options['soundcloud_link'])) 	{ $out .= '<a class="soundcloud" title="soundcloud" href="'	.	esc_url($theme_options['soundcloud_link']) 	. '" target="_blank"><i class="fa"></i></a>'; }			
+		if(!empty($theme_options['soundcloud_link'])) 	{ $out .= '<a class="soundcloud" title="soundcloud" href="'	.	esc_url($theme_options['soundcloud_link']) 	. '" target="_blank"><i class="fa"></i></a>'; }		
+		if(!empty($theme_options['tripadvisor_link'])) 	{ $out .= '<a class="tripadvisor" title="tripadvisor" href="'	.	esc_url($theme_options['tripadvisor_link']) 	. '" target="_blank"><i class="fa"></i></a>'; }			
 		
 		echo '<div class="social-icon">' . $out . '</div>';
 	}

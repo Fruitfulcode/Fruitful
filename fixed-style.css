@@ -765,7 +765,7 @@ ul#lang-select-popup{
 
 .social-icon>a>i{color:#fff;background: #333333; border-radius: 50%; padding: 5.5px; margin:1px; width: 17px; height: 17px; text-align: center; font-size: 17px;}
 .social-icon a>.fa:before{font-size:17px;}
-.social-icon a.soundcloud >i			{padding:5.5px 0;width:28px;}
+.social-icon a.soundcloud >i, .social-icon a.tripadvisor>i	{padding:5.5px 0;width:28px;}
 .social-icon a.facebook .fa:before	{content: "\f09a";}
 .social-icon a.twitter .fa:before	{content: "\f099";}
 .social-icon a.linkedin .fa:before	{content: "\f0e1";}
@@ -783,6 +783,7 @@ ul#lang-select-popup{
 .social-icon a.github .fa:before		{content: "\f09b";}
 .social-icon a.tumblr .fa:before		{content: "\f173";}
 .social-icon a.soundcloud .fa:before	{content: "\f1be";}
+.social-icon a.tripadvisor .fa:before{content: "\f262";}
 
 
 /* #masthead .social-icon a.twitter,
