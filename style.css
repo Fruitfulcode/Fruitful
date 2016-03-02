@@ -2568,3 +2568,40 @@ div#fbSEOComments{
 	#page-header .container header .header-hgroup a.link-logo-retina  {display:block; width:100%; margin:0 auto}
 	#page-header .container header .center-pos a.link-logo-retina {width:50%}
 } 
+
+@page {
+	size: A4;
+	margin: 0;
+}
+
+@media print {
+	.page-container {
+		padding-top: 60px;
+	}
+	.container {
+		width: 100%;
+		max-width: 100%;
+		box-sizing: border-box;
+		padding: 20px;
+	}
+	.container .sixteen.columns {
+		width: 100%;
+		max-width: 100%;
+		padding: 0 15px;
+		box-sizing: border-box;
+	}
+	.blog_post .post-content {
+		max-width: 100%;
+		width: 100%;
+	}
+	.container .eleven.columns {
+		width: 60%;
+	}
+	.container .five.columns {
+		width: 35%;
+		margin: 0;
+	}
+	#search{
+		display: none;
+	}
+}
