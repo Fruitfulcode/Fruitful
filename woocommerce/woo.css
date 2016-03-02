@@ -23,8 +23,24 @@ Responsive Styles for Woocommerce.
     position: absolute !important;
 }	
 
+.woocommerce-product-search {
+	position:relative;
+}
+
+.woocommerce-product-search:after {
+    content: "\f002";
+    position: absolute;
+    font-family: FontAwesome;
+    right: 10px;
+    color: #45494c;
+    top: 6px;
+    font-size: 15px;
+    border-left: 1px solid #d7d7d7;
+    padding: 0px 0 0 11px;
+    line-height: 20px;
+}
+
 .woocommerce-product-search > input.search-field {
-    background:url("../images/search_icon.png") no-repeat scroll 97% 5px transparent;
     border-radius:2px 2px 2px 2px;
     font-size:13px;
     height:22px;
@@ -33,12 +49,14 @@ Responsive Styles for Woocommerce.
     width:234px;
 	border: 1px solid #e5e5e5;
 	color: #45494c;
+	-webkit-appearance: none;
 }
 
 /*header*/
 .cart-button{display:block;float: right;padding:0;position:relative;margin:14px 10px 10px;clear:left}
 .cart-button a,
-.cart-button a .cart_image{display:block;float: left;margin: 0;padding:0;width:24px; height:21px;border:0;text-decoration:none;background:url(images/cart_image.png) no-repeat transparent;}
+.cart-button a .cart_image{display:block;float: left;margin: 0;padding:0;width:24px; height:21px;border:0;text-decoration:none;}
+.cart-button a .cart_image:before{font-family:FontAwesome; content:"\f07a";font-size:26px; position:absolute;top:-5px;}
 .num_of_product_cart{
 	display:block;
 	float:left;
@@ -970,6 +988,17 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 
 .woocommerce-cart .woocommerce .cart-collaterals .cross-sells,
 .woocommerce-cart.woocommerce-page .cart-collaterals .cross-sells{width:100%;}
+.woocommerce-cart .woocommerce .cart-collaterals .cross-sells  ul.products li.product a.button.add_to_cart_button, 
+.woocommerce-cart .woocommerce .cart-collaterals .cross-sells  ul.products li.product a.button.product_type_simple, 
+.woocommerce-cart .woocommerce .cart-collaterals .cross-sells  ul.products li.product a.button.product_type_variable {
+	padding:0 !important;	
+}
+
+.woocommerce .blockUI.blockOverlay {
+  position: relative!important;
+  display: none!important;
+}
+
 
 /*---CHEKOUT---*/
 .woocommerce-checkout #customer_details{display:block;float:left;width:100%;margin:0 ;}

@@ -103,6 +103,54 @@ Files: .pot, ru_Ru.po, ru_Ru.mo icluded. Default language is english.
     Changelog
 -------------------------------------------------------
 
+= 3.2 =
+18.02.2016
+
+* Improvements: Header background with hamburger menu
+* Improvements: FontAwesome icon in search form
+* Update: TGM plugin activation 2.5.2
+* Bug fix: WooCommerce, cross sell products, add to cart
+* Bug fix: WooCommerce, 5 products per row
+* Bug fix: Link in cart /"
+* Bug fix: Sidebar position for tags template
+* Bug fix: Slider, remove button duplicated
+* Removed: class from image type( field options)
+
+
+= 3.1 = 
+10.01.2016
+
+* New: Color for WooCommerce cart icon
+* Improvements: "Default theme styles". option disabled
+* Improvements: Header background image, added image crop in customizer.
+* Bug fix: Menu icon color
+* Bug fix: WooCommerce tabs position
+* Bug fix: Check if variable not empty, checkbox value on save
+* Bug fix: The 4th level of dropdown menu color
+* Bug fix: Menu position center, after update
+* Bug fix: The slider images are distored (width) in landscape mode
+* Bug fix: Stripslashes  - textarea theme options
+* Bug fix: microsoft lumia support
+
+
+
+= 3.0 =
+11.01.2016
+
+* New: Customizer support
+* New: Ability to add fields in theme options with child theme
+* New: Color for hamburger menu
+* New: WooCommerce product, tabs position
+* New: Page templates by default > Blog
+* Update: FontAwesome
+* Update: Translation files
+* Update: WordPress 4.4.1 support
+* Update: WooCommerce 2.4.12 ready 
+* Bug fix: Enable touch swipe on Flexslider
+* Bug fix: If retina logo field is epmty, display regular logo
+* Bug fix: When turn off the Sticky header option, the mobile optimized screen wont show the slider
+
+
 = 2.7 =
 05.08.2015
 

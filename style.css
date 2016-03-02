@@ -4,7 +4,7 @@ Theme URI: http://themes.fruitfulcode.com/fruitful
 Author: fruitfulcode
 Author URI: http://fruitfulcode.com
 Description: Fruitful - Free WordPress responsive theme with powerful theme options panel and simple clean front end design. Ability to modify styles and options according to your needs. Two different layout types responsive and fixed. Easily upload logo, background, edit colors, header and menu positions, slider, fonts, social icons, footer, custom css and much more. Translated to Russian, German, Spanish, French, Vietnamese, RTL ready. Works perfect with WooCommerce, BuddyPress, WPML, Contact form 7.
-Version: 2.7
+Version: 3.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: white, orange, light, theme-options, responsive-layout, fixed-layout, custom-header, custom-background, custom-menu, custom-colors, custom-background, translation-ready, featured-images, full-width-template, one-column, right-sidebar, left-sidebar, editor-style
@@ -606,15 +606,15 @@ button::-moz-focus-inner,input::-moz-focus-inner {
     border:0;
     padding:0;
 }
-input[type=text],input[type=email],input[type=url],textarea {
+input[type=text],input[type=email],input[type=url],textarea,input[type=tel],textarea,input[type=number],input[type=date], select {
     border:1px solid #e5e5e5;
     border-radius:3px;
     color:#45494c;
 }
-input[type=text]:focus,input[type=email]:focus,textarea:focus {
+input[type=text]:focus,input[type=email]:focus,textarea:focus,input[type=tel]:focus,input[type=number]:focus,input[type=date]:focus {
     color:#111;
 }
-input[type=text],input[type=email],input[type=url] {
+input[type=text],input[type=email],input[type=url],input[type=tel],input[type=number],input[type=date] {
     padding:3px;
 }
 textarea {
@@ -622,6 +622,12 @@ textarea {
     padding-left:3px;
     vertical-align:top;
     width:98%;
+}
+.wpcf7-list-item.first {
+    margin:0;
+}
+div.wpcf7-response-output {
+    margin: 2em 0em 1em;
 }
 a {
     color:#333333;
@@ -1048,7 +1054,10 @@ img.size-full {
 	display: block;
     float: left;
 	padding:0 4.4%;
-    width: 91.2%;
+    width: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;  
+    -webkit-box-sizing: border-box;	
 	margin:20px 0 0;
 	height:auto;
 }
@@ -1171,7 +1180,7 @@ section {
 }
 
 #page-header .head-container{
-	z-index:9;
+	z-index:1000;
 }
 #page-header .container header .header-hgroup.left-pos {
     float:left;
@@ -1439,7 +1448,10 @@ header.post-header .post-title {
     font-size: 27px;
     margin: 14px 0 0;
     padding: 0 4.4% 13px;
-    width: 91.21%;
+    width: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;  
+    -webkit-box-sizing: border-box;	
     word-wrap: break-word;
 }
 header.post-header .post-title a {
@@ -1633,15 +1645,32 @@ table#wp-calendar td#next{
 }
 
 
+#searchform {
+	position:relative;
+}
+
+#searchform:after {
+    content: "\f002";
+    position: absolute;
+    font-family: FontAwesome;
+    right: 10px;
+    color: #45494c;
+    top: 6px;
+    font-size: 15px;
+    border-left: 1px solid #d7d7d7;
+    padding: 0px 0 0 11px;
+    line-height: 20px;
+}
+
 input#s {
-    background:url("images/search_icon.png") no-repeat scroll 97% 5px transparent;
     border-radius:2px 2px 2px 2px;
     font-size:13px;
     height:22px;
     line-height:1.2em;
-    padding:4px 32px 4px 5px;
+    padding:4px 32px 4px 12px;
     width:234px;
 }
+
 input[type="password"] {
 	border: 1px solid #e5e5e5;
 	border-radius:2px 2px 2px 2px;
@@ -2142,7 +2171,10 @@ body.page .entry-thumbnail {
     float: left;
     height: auto;
     margin: 0 0 20px;
-    max-width: 91.2%;
+    width: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;  
+    -webkit-box-sizing: border-box;	
     padding: 0 4.4%;
 }
 body.page .entry-thumbnail .wp-post-image {
@@ -2313,7 +2345,7 @@ aside #lang_sel {
 	/*styles for responsive full header*/
 	.resp_full_width_menu>.container{display:none;}
 	.resp_full_width_menu>.site-header{display:block;}
-	.resp_full_width_menu.head-container{background-image:none;float:left;min-height:0}
+	.resp_full_width_menu.head-container{float:left;min-height:0;max-height: 56px;}
 	.resp_full_width_menu #header_language_select{display:block;}
 	.resp_full_width_menu #header_language_select .current,
 	.resp_full_width_menu #header_language_select .current a,
@@ -2322,7 +2354,7 @@ aside #lang_sel {
 	.resp_full_width_menu #lang-select-block a{padding:7px}
 		
 	.resp_full_width_menu .site-header{ width:100%; float:left; min-height:56px; }
-	.resp_full_width_menu .site-header .logo_wrapper{ display:block; float:left; width:48%; margin:0 0 0 2%; }
+	.resp_full_width_menu .site-header .logo_wrapper{ display:block; float:left; width:48%; margin:10px 0 0 2%; }
 	.resp_full_width_menu .site-header .cart_wrapper, .resp_full_width_menu .site-header .menu_button{ display:block; float:right; margin-left:12px; margin-right:12px; }
 	.resp_full_width_menu .site-header .language_switcher{ display:block; float:right;}
 	.resp_full_width_menu .site-header .select-menu{ display:none; } 	

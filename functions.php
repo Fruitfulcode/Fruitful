@@ -60,6 +60,7 @@ require get_template_directory() . '/inc/metaboxes/init-for-objestcs-mb.php';
  * Custom Theme Options
  */
 require get_template_directory() . '/inc/theme-options/theme-options.php';
+require get_template_directory() . '/inc/theme-options/customizer/customizer.php';
 
 function fruitful_fonts_url() {
 	$fonts_url = '';
@@ -241,7 +242,7 @@ function fruitful_scripts() {
 	global $post;
 	$prefix 	   = '_fruitful_';
 	$slider_layout = false;
-	$theme_options  = fruitful_ret_options("fruitful_theme_options");
+	$theme_options  = fruitful_get_theme_options();
 	$front_page_id  = get_option('page_on_front');
 	$blog_page_id   = get_option('page_for_posts ');
 	
@@ -294,8 +295,11 @@ function fruitful_scripts() {
 		$is_fixed_header = 1;
 	}
 	
-	wp_localize_script( 'init', 'ThGlobal', 	array( 'ajaxurl' 			=> admin_url( 'admin-ajax.php' ), 
-													   'is_fixed_header' 	=> $is_fixed_header ) );  
+	wp_localize_script( 'init', 'ThGlobal', 	array( 'ajaxurl' 				  => admin_url( 'admin-ajax.php' ), 
+													   'is_fixed_header' 		  => $is_fixed_header,
+													   'mobile_menu_default_text' => __('Navigate to...', 'fruitful'),
+													 ) 
+					  );  
 	
 	wp_enqueue_script('small-menu-select', get_template_directory_uri() . '/js/small-menu-select.js', array( 'jquery' ), '20130930', false );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -322,7 +326,7 @@ if ( ! function_exists( 'fruitful_get_link_url' ) ) {
 if ( ! function_exists( 'fruitful_get_cart_button_html' ) ) {
 	function fruitful_get_cart_button_html() {
 		$btn_cart = '';
-		$theme_options = fruitful_ret_options("fruitful_theme_options");
+		$theme_options = fruitful_get_theme_options();
 		
 		if (class_exists('Woocommerce')) { 
 			global $woocommerce;
@@ -339,8 +343,14 @@ if ( ! function_exists( 'fruitful_get_cart_button_html' ) ) {
 	}
 }	
 
-if ( ! function_exists( 'fruitful_get_google_fonts_lib' ) ) {
-	function fruitful_get_google_fonts_lib() {
+if ( ! function_exists( 'fruitful_check_gg_custom_fonts' ) ) {
+	function fruitful_check_gg_custom_fonts($inFont = null) {
+		$font_name = null;
+		$http_ = 'http://';
+		if (is_ssl()) {
+			$http_ = 'https://';
+		}
+		
 		$fonts_ = array();
 		$fonts_[] = 'fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300&subset=latin,latin-ext';
 		$fonts_[] = 'fonts.googleapis.com/css?family=Lobster&subset=cyrillic-ext,latin-ext,latin,cyrillic';
@@ -353,27 +363,12 @@ if ( ! function_exists( 'fruitful_get_google_fonts_lib' ) ) {
 		$fonts_[] = 'fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin,cyrillic';
 		$fonts_[] = 'fonts.googleapis.com/css?family=Old+Standard+TT:400,400italic,700';
 		$fonts_[] = 'fonts.googleapis.com/css?family=Droid+Sans:400,700';	
-		
-		return apply_filters( 'fruitful_fonts_google_library', $fonts_ );
-	}	
-}	
-		
-if ( ! function_exists( 'fruitful_check_gg_custom_fonts' ) ) {
-	function fruitful_check_gg_custom_fonts($inFont = null) {
-		$font_name = null;
-		$http_ = 'http://';
-		if (is_ssl()) {
-			$http_ = 'https://';
-		}
-		
-		$fonts_ = fruitful_get_google_fonts_lib();
-		
+
 		if (!empty($inFont)) {
 			$font_name = $inFont;
 			$font_name = urlencode(substr($font_name, 0, strrpos($font_name, ',')));
 			$in 	   = preg_quote($font_name, '~'); 	
 			$res	   = preg_grep('~' . $in . '~', $fonts_);
-			
 			if (!empty($res)) {
 				return $http_ . current($res);
 			} else 	{
@@ -387,7 +382,7 @@ if ( ! function_exists( 'fruitful_check_gg_custom_fonts' ) ) {
 if ( ! function_exists( 'fruitful_add_custom_fonts' ) ) {
 	function fruitful_add_custom_fonts() {
 		$font_url = array();
-		$theme_options = fruitful_ret_options("fruitful_theme_options");
+		$theme_options = fruitful_get_theme_options();
 		
 		if (isset($theme_options['h_font_family'])) $font_url[] = fruitful_check_gg_custom_fonts(esc_attr($theme_options['h_font_family']));
 		if (isset($theme_options['m_font_family'])) $font_url[] = fruitful_check_gg_custom_fonts(esc_attr($theme_options['m_font_family']));
@@ -414,7 +409,7 @@ if (!function_exists('fruitful_get_slider_layout_flex')) {
 		$out = "";
 		$prefix = '_fruitful_';	
 		$slider_layout = false;
-		$theme_options  = fruitful_ret_options("fruitful_theme_options");
+		$theme_options  = fruitful_get_theme_options();
 		$front_page_id  = get_option('page_on_front');
 		$blog_page_id   = get_option('page_for_posts ');
 	
@@ -456,7 +451,7 @@ if (!function_exists('fruitful_get_slider_layout_nivo')) {
 		$out = "";
 		$prefix = '_fruitful_';	
 		$slider_layout = false;
-		$theme_options  = fruitful_ret_options("fruitful_theme_options");
+		$theme_options  = fruitful_get_theme_options();
 		$front_page_id  = get_option('page_on_front');
 		$blog_page_id   = get_option('page_for_posts ');
 	
@@ -502,7 +497,7 @@ if (!function_exists('fruitful_get_slider')) {
 		$slider_  	= $slider_layout = '';
 		$id 		= 'fruitful-slider-'.rand(1, 250); 	
 		
-		$theme_options  = fruitful_ret_options("fruitful_theme_options");
+		$theme_options  = fruitful_get_theme_options();
 		$front_page_id  = get_option('page_on_front');
 		$blog_page_id   = get_option('page_for_posts ');
 	
@@ -517,7 +512,7 @@ if (!function_exists('fruitful_get_slider')) {
 		}	
 		
 		/*Full Backend Options*/
-		if(isset($theme_options['slides']) && (count($theme_options['slides']) > 0)) {
+		if(!empty($theme_options['slides']) && (count($theme_options['slides']) > 0)) {
 			foreach ($theme_options['slides'] as $key=>$slide) {
 				$path_to_img = $val = '';
 				$val = wp_get_attachment_image_src( esc_attr($slide['attach_id']), 'main-slider');
@@ -604,7 +599,7 @@ if (!function_exists('fruitful_get_slider')) {
 /*Get logo img*/
 if (!function_exists('fruitful_get_logo')) {
 	function fruitful_get_logo () {
-		$theme_options  = fruitful_ret_options("fruitful_theme_options");
+		$theme_options  = fruitful_get_theme_options();
 		if (!empty($theme_options['logo_w'])) {$logo_w = intval($theme_options['logo_w']); }
 		if (!empty($theme_options['logo_h'])) {$logo_h = intval($theme_options['logo_h']); }
 		$url_logo = $url_retina_logo = '';
@@ -622,6 +617,7 @@ if (!function_exists('fruitful_get_logo')) {
 		$name  		  = esc_attr(get_bloginfo('name'));
 	
 		if (!empty($url_logo_id) || !empty($url_retina_logo_id)) {
+<<<<<<< HEAD
 			$url_logo = wp_get_attachment_image_src($url_logo_id, 'full');
 			$url_logo = esc_url_raw($url_logo[0]);
 			
@@ -632,6 +628,28 @@ if (!function_exists('fruitful_get_logo')) {
 			if (!empty($url_retina_logo)) echo  '<a class="link-logo-retina" href="' . esc_url( home_url( '/' ) ) . '" title="' . $description .'" rel="home"><img class="logo retina" src="'. $url_retina_logo  .'" width="' . $logo_retina_width . '" height="' . $logo_retina_height . '" alt="' . $description . '"/></a>';
 			if (!empty($url_logo) && empty($url_retina_logo)) echo  '<a class="link-logo-retina" href="' . esc_url( home_url( '/' ) ) . '" title="' . $description .'" rel="home"><img class="logo retina" src="'. $url_logo  .'" width="' . $logo_retina_width . '" height="' . $logo_retina_height . '" alt="' . $description . '"/></a>';
 			if (empty($url_logo) && !empty($url_retina_logo)) echo  '<a class="link-logo" href="' . esc_url( home_url( '/' ) ) . '" title="' . $description .'" rel="home"><img class="logo" src="'. $url_retina_logo  .'" width="' . $logo_width . '" height="' . $logo_height . '" alt="' . $description . '"/></a>';
+=======
+			 $url_logo = wp_get_attachment_image_src($url_logo_id, 'full');
+			 if (!empty($url_logo)) {
+				$image_link = esc_url_raw($url_logo[0]);
+			 }
+			 else {
+				$image_link = $url_logo_id;
+			 }			
+			
+			 $url_retina_logo = wp_get_attachment_image_src($url_retina_logo_id, 'full');
+			 if (!empty($url_retina_logo)) {
+				$image_link_retina = esc_url_raw($url_retina_logo[0]);
+			 }
+			 else {
+				$image_link_retina = $url_retina_logo_id;
+			 }	
+
+			if (!empty($url_logo_id)) 	echo  '<a class="link-logo" href="' . esc_url( home_url( '/' ) ) . '" title="' . $description .'" rel="home"><img class="logo" src="'. $image_link  .'" width="' . $logo_width . '" height="' . $logo_height . '" alt="' . $description . '"/></a>';
+			if (!empty($url_retina_logo_id)) echo  '<a class="link-logo-retina" href="' . esc_url( home_url( '/' ) ) . '" title="' . $description .'" rel="home"><img class="logo retina" src="'. $image_link_retina	  .'" width="' . $logo_retina_width . '" height="' . $logo_retina_height . '" alt="' . $description . '"/></a>';
+			if (!empty($url_logo_id) && empty($url_retina_logo_id)) echo  '<a class="link-logo-retina" href="' . esc_url( home_url( '/' ) ) . '" title="' . $description .'" rel="home"><img class="logo retina" src="'. $image_link  .'" width="' . $logo_retina_width . '" height="' . $logo_retina_height . '" alt="' . $description . '"/></a>';
+			if (empty($url_logo_id) && !empty($url_retina_logo_id)) echo  '<a class="link-logo" href="' . esc_url( home_url( '/' ) ) . '" title="' . $description .'" rel="home"><img class="logo" src="'. $image_link_retina  .'" width="' . $logo_width . '" height="' . $logo_height . '" alt="' . $description . '"/></a>';								
+>>>>>>> refs/remotes/origin/master
 			
 		} else {
 			echo  '<a class="logo-description" href="' . esc_url( home_url( '/' ) ) . '" title="' . $description .'" rel="home"><h1 class="site-title">'. $name .'</h1><h2 class="site-description">'. $description .'</h2></a>';
@@ -644,59 +662,75 @@ if (!function_exists('fruitful_get_favicon')) {
 	function fruitful_get_favicon () {
 		$out_fav_html 	= null;
 		$url_favicon = $fav_icon_iphone = $fav_icon_iphone_retina = $fav_icon_ipad = $fav_icon_ipad_retina = null;
-		$theme_options  = fruitful_ret_options("fruitful_theme_options");
+		$theme_options  = fruitful_get_theme_options();
 		
 		if (isset($theme_options['fav_icon'])) {
-			$fav_icon = esc_attr($theme_options['fav_icon']);
-			$fav_icon = wp_get_attachment_image_src($fav_icon, 'full');
-			$fav_icon = esc_url_raw($fav_icon[0]);
+			$fav_icon_url = esc_attr($theme_options['fav_icon']);
+			$fav_icon_id = wp_get_attachment_image_src($fav_icon_url, 'full');
+			 if (!empty($fav_icon_id)) {
+				$image_link = esc_url_raw($fav_icon_id[0]);
+			 }
+			 else {
+				$image_link = $fav_icon_url;
+			 }	
 			
-			$out_fav_html .=  '<link rel="shortcut icon" href="'. esc_url($fav_icon) .'">';	
-			$out_fav_html .=  '<link rel="apple-touch-icon-precomposed" sizes="16x16" href="'. esc_url($fav_icon) .'">';	
+			$out_fav_html .=  '<link rel="shortcut icon" href="'. esc_url($image_link) .'">';	
+			$out_fav_html .=  '<link rel="apple-touch-icon-precomposed" sizes="16x16" href="'. $image_link .'">';	
 		} 	
 		
 		if (isset($theme_options['fav_icon_iphone'])) {
-			$fav_icon_iphone = esc_attr($theme_options['fav_icon_iphone']);
-			$fav_icon_iphone = wp_get_attachment_image_src($fav_icon_iphone, 'full');
-			$fav_icon_iphone = esc_url_raw($fav_icon_iphone[0]);
+			$fav_icon_iphone_url = esc_attr($theme_options['fav_icon_iphone']);
+			$fav_icon_iphone_id = wp_get_attachment_image_src($fav_icon_iphone_url, 'full');
+			 if (!empty($fav_icon_iphone_id)) {
+				$image_link = esc_url_raw($fav_icon_iphone_id[0]);
+			 }
+			 else {
+				$image_link = $fav_icon_iphone_url;
+			 }				
 			
-			$out_fav_html .= '<link rel="apple-touch-icon" 	href="' . esc_url($fav_icon_iphone) .'">';
+			$out_fav_html .= '<link rel="apple-touch-icon" 	href="' .esc_url($image_link) .'">';
 		}
 		
 		if (isset($theme_options['fav_icon_iphone_retina'])) {
-			$fav_icon_iphone_retina = esc_attr($theme_options['fav_icon_iphone_retina']);
-			$fav_icon_iphone_retina = wp_get_attachment_image_src($fav_icon_iphone_retina, 'full');
-			$fav_icon_iphone_retina = esc_url_raw($fav_icon_iphone_retina[0]);
+			$fav_icon_iphone_retina_url = esc_attr($theme_options['fav_icon_iphone_retina']);
+			$fav_icon_iphone_retina_id = wp_get_attachment_image_src($fav_icon_iphone_retina_url, 'full');
+			 if (!empty($fav_icon_iphone_retina_id)) {
+				$image_link = esc_url_raw($fav_icon_iphone_retina_id[0]);
+			 }
+			 else {
+				$image_link = $fav_icon_iphone_retina_url;
+			 }
 			
-			$out_fav_html .= '<link rel="apple-touch-icon" sizes="114x114" 	href="'. esc_url($fav_icon_iphone_retina) .' ">';
+			$out_fav_html .= '<link rel="apple-touch-icon" sizes="114x114" 	href="'. esc_url($image_link) .' ">';
 		}
 		
 		if (isset($theme_options['fav_icon_ipad'])) {
-			$fav_icon_ipad = esc_attr($theme_options['fav_icon_ipad']);
-			$fav_icon_ipad = wp_get_attachment_image_src($fav_icon_ipad, 'full');
-			$fav_icon_ipad = esc_url_raw($fav_icon_ipad[0]);
+			$fav_icon_ipad_url = esc_attr($theme_options['fav_icon_ipad']);
+			$fav_icon_ipad_id = wp_get_attachment_image_src($fav_icon_ipad_url, 'full');
+			 if (!empty($fav_icon_ipad_id)) {
+				$image_link = esc_url_raw($fav_icon_ipad_id[0]);
+			 }
+			 else {
+				$image_link = $fav_icon_ipad_url;
+			 }	
 			
-			$out_fav_html .= '<link rel="apple-touch-icon" sizes="72x72" 	href="'. esc_url($fav_icon_ipad) .'">'; 
+			$out_fav_html .= '<link rel="apple-touch-icon" sizes="72x72" 	href="'. esc_url($image_link) .'">'; 
 		}
 		
 		if (isset($theme_options['fav_icon_ipad_retina'])) {
-			$fav_icon_ipad_retina = esc_attr($theme_options['fav_icon_ipad_retina']);
-			$fav_icon_ipad_retina = wp_get_attachment_image_src($fav_icon_ipad_retina, 'full');
-			$fav_icon_ipad_retina = esc_url_raw($fav_icon_ipad_retina[0]);
+			$fav_icon_ipad_retina_url = esc_attr($theme_options['fav_icon_ipad_retina']);
+			$fav_icon_ipad_retina_id = wp_get_attachment_image_src($fav_icon_ipad_retina_url, 'full');
+			 if (!empty($fav_icon_ipad_retina_id)) {
+				$image_link = esc_url_raw($fav_icon_ipad_retina_id[0]);
+			 }
+			 else {
+				$image_link = $fav_icon_ipad_retina_url;
+			 }		
 			
-			$out_fav_html .= '<link rel="apple-touch-icon" sizes="144x144" 	href="'. esc_url($fav_icon_ipad_retina) .'">'; 
+			$out_fav_html .= '<link rel="apple-touch-icon" sizes="144x144" 	href="'. esc_url($image_link) .'">'; 
 		}
 		
 		echo $out_fav_html;
-	}
-}
-
-
-if ( ! function_exists( 'spotter_add_favicon' ) ) {				
-	function spotter_add_favicon() {
-		global $spotter_config, $prefix;
-		
-		
 	}
 }
 
@@ -704,7 +738,7 @@ if ( ! function_exists( 'spotter_add_favicon' ) ) {
 if (!function_exists('fruitful_get_footer_text')) {
 	function fruitful_get_footer_text () {
 		$out_footer_text = $footer_text = '';
-		$theme_options   = fruitful_ret_options("fruitful_theme_options"); 
+		$theme_options   = fruitful_get_theme_options(); 
 		if (!empty($theme_options['footer_text'])) {
 			$footer_text = fruitful_kses_data(stripslashes($theme_options['footer_text']));
 			
@@ -725,7 +759,7 @@ if (!function_exists('fruitful_get_footer_text')) {
 if (!function_exists('fruitful_is_social_header')) {
 	function fruitful_is_social_header () {
 		$pos = false;
-		$theme_options  = fruitful_ret_options("fruitful_theme_options"); 
+		$theme_options  = fruitful_get_theme_options(); 
 		if(!empty($theme_options['sl_position']))	{ $pos =  esc_attr($theme_options['sl_position']); }
 		return $pos;
 	}
@@ -735,7 +769,7 @@ if (!function_exists('fruitful_is_social_header')) {
 if (!function_exists('fruitful_get_socials_icon')) {
 	function fruitful_get_socials_icon () {
 		$out = '';
-		$theme_options  = fruitful_ret_options("fruitful_theme_options"); 
+		$theme_options  = fruitful_get_theme_options(); 
 		
 		if(!empty($theme_options['facebook_url'])) 		{ $out .= '<a class="facebook" 	 title="facebook"	href="'	.	esc_url($theme_options['facebook_url']) 	. '" target="_blank"><i class="fa"></i></a>'; }
 		if(!empty($theme_options['twitter_url']))		{ $out .= '<a class="twitter" 	 title="twitter"	href="'	.	esc_url($theme_options['twitter_url']) 		. '" target="_blank"><i class="fa"></i></a>'; }
@@ -765,7 +799,7 @@ if (!function_exists('fruitful_get_socials_icon')) {
 /*Enable Comment*/
 if ( ! function_exists( 'fruitful_state_post_comment' ) ) {
 	function fruitful_state_post_comment () {
-		$theme_options  = fruitful_ret_options("fruitful_theme_options"); 
+		$theme_options  = fruitful_get_theme_options(); 
 		if (!empty($theme_options['postcomment'])) {
 			return ($theme_options['postcomment'] == "on");
 		} else {
@@ -776,7 +810,7 @@ if ( ! function_exists( 'fruitful_state_post_comment' ) ) {
 
 if ( ! function_exists( 'fruitful_state_page_comment' ) ) {
 	function fruitful_state_page_comment () {
-		$theme_options  = fruitful_ret_options("fruitful_theme_options"); 
+		$theme_options  = fruitful_get_theme_options(); 
 		if (!empty($theme_options['pagecomment'])) {
 			return ($theme_options['pagecomment'] == "on");
 		} else {
@@ -818,7 +852,7 @@ if ( ! function_exists( 'fruitful_hex2rgb' ) ) {
 if ( ! function_exists( 'fruitful_get_responsive_style' ) ) {
 	function fruitful_get_responsive_style () {
 		$style_ = $back_style = $woo_style_ = '';
-		$theme_options  = fruitful_ret_options("fruitful_theme_options"); 
+		$theme_options  = fruitful_get_theme_options(); 
 		fruitful_add_custom_fonts();
 		if (isset($theme_options['responsive']) && ($theme_options['responsive'] == 'on')) {
 			if (class_exists('woocommerce')){wp_enqueue_style( 'woo-style', get_template_directory_uri() . '/woocommerce/woo.css');}
@@ -834,8 +868,8 @@ if ( ! function_exists( 'fruitful_get_responsive_style' ) ) {
 			wp_enqueue_style('main-style',  get_stylesheet_directory_uri()  .'/fixed-style.css');
 		}
 	 
-		if (!empty($theme_options['styletheme'])) {
-			if ($theme_options['styletheme'] == 'off') {
+		//if (!empty($theme_options['styletheme'])) {
+			//if ($theme_options['styletheme'] == 'off') {
 				
 				$style_ .= 'h1 {font-size : '.esc_attr($theme_options['h1_size']) .'px; }' . "\n";
 				$style_ .= 'h2 {font-size : '.esc_attr($theme_options['h2_size']) .'px; }' . "\n";
@@ -857,14 +891,20 @@ if ( ! function_exists( 'fruitful_get_responsive_style' ) ) {
 	  
 				if(!empty($theme_options['background_color']))  { $back_style .= ' background-color : '. esc_attr($theme_options['background_color']) .'; '; }
 				if(!empty($theme_options['backgroung_img']))    { 
-					$bg_url = array();
-					$bg_url = wp_get_attachment_image_src(intval($theme_options['backgroung_img']), 'full'); 
-					$bg_url = esc_url_raw($bg_url[0]);
+					$bg_url = esc_attr($theme_options['backgroung_img']); 
+					$image_attributes = wp_get_attachment_image_src($bg_url, 'full'); 
+	
+					 if (!empty($image_attributes)) {
+						$image_link = esc_url_raw($image_attributes[0]);
+					 }
+					 else {
+						$image_link = $bg_url;
+					 }	
 					
 					if(isset($theme_options['bg_repeating']) && ($theme_options['bg_repeating'] == 'on')) { 
-						$back_style .= 'background-image : url(' .$bg_url .'); background-repeat : repeat; ';  
+						$back_style .= 'background-image : url(' .$image_link .'); background-repeat : repeat; ';  
 					} else {
-						$back_style .= 'background-image : url(' .$bg_url .'); background-repeat : no-repeat; background-size:100% 100%; background-size:cover; background-attachment:fixed; ';  
+						$back_style .= 'background-image : url(' .$image_link .'); background-repeat : no-repeat; background-size:100% 100%; background-size:cover; background-attachment:fixed; ';  
 					}
 				}
 
@@ -875,11 +915,16 @@ if ( ! function_exists( 'fruitful_get_responsive_style' ) ) {
 				}
 	 
 				/*Header styles*/
-				if (!empty($theme_options['header_bg_color']))   { $style_ .= '.head-container, .head-container.fixed  {background-color : ' .esc_attr($theme_options['header_bg_color']) . '; }' . "\n";  }
+				if (($theme_options['header_bg_color']) != null)   { $style_ .= '.head-container, .head-container.fixed  {background-color : ' .esc_attr($theme_options['header_bg_color']) . '; }' . "\n";  }
 				if (!empty($theme_options['header_img']))    {
 					$header_url = wp_get_attachment_image_src(intval($theme_options['header_img']), 'full'); 
-					$header_url = esc_url_raw($header_url[0]);
-					$style_ .= '.head-container {background-image : url(' .esc_attr($header_url) . '); } ' . "\n";  
+					 if (!empty($header_url)) {
+						$image_link = esc_url_raw($header_url[0]);
+					 }
+					 else {
+						$image_link = $theme_options['header_img'];
+					 }	
+					$style_ .= '.head-container {background-image : url(' .esc_attr($image_link) . '); } ' . "\n";  
 					
 					if (!empty($theme_options['header_img_size'])){
 						if ($theme_options['header_img_size'] == 'full'){
@@ -948,7 +993,7 @@ if ( ! function_exists( 'fruitful_get_responsive_style' ) ) {
 					if (!empty($theme_options['dd_menu_font_color']))  { $style_ .= 'color : '.esc_attr($theme_options['dd_menu_font_color']) . ';  ' . "\n"; }
 				$style_ .= ' } ' . "\n"; 
 
-				$style_ .= '#masthead div .main-navigation ul > li > ul > li > ul li:hover a {' . "\n";
+				$style_ .= '#masthead div .main-navigation ul > li > ul > li  ul li:hover a {' . "\n";
 					if (!empty($theme_options['dd_menu_btn_color']))    { $style_ .= 'background-color : '. esc_attr($theme_options['dd_menu_btn_color']) . '; ' . "\n"; }
 					if (!empty($theme_options['dd_menu_hover_color']))  { $style_ .= 'color : '.esc_attr($theme_options['dd_menu_hover_color']) . ';  ' . "\n"; }
 				$style_ .= ' } ' . "\n"; 
@@ -1044,7 +1089,11 @@ if ( ! function_exists( 'fruitful_get_responsive_style' ) ) {
 					$style_ .= '.blog_post .date_of_post  {color : '. esc_attr($theme_options['date_of_post_f_color']) .'; } ' . "\n";
 				}
 				
-				$woo_style_ .= '.num_of_product_cart {border-color: '. esc_attr($theme_options['menu_btn_color']) . '; }  ' . "\n"; 
+				//$woo_style_ .= '.num_of_product_cart {border-color: '. esc_attr($theme_options['menu_btn_color']) . '; }  ' . "\n"; 
+				if (!empty($theme_options['cart_color'])) {
+					$woo_style_ .= '.cart_image {color: '. esc_attr($theme_options['cart_color']) . '; }  ' . "\n"; 
+					$woo_style_ .= '.num_of_product_cart {border-color: '. esc_attr($theme_options['cart_color']) . '; }  ' . "\n"; 
+				}
 				
 				if (!empty($theme_options['btn_color'])) {
 					$btn_color = esc_attr($theme_options['btn_color']);
@@ -1079,7 +1128,7 @@ if ( ! function_exists( 'fruitful_get_responsive_style' ) ) {
 				/*Woocommerce styles*/
 				if (class_exists('woocommerce')){
 					
-					if (!empty($theme_options['woo_shop_sidebar'])){
+					if (!empty($theme_options['woo_shop_sidebar']) && !is_tax('product_tag')){
 						$shop_sidebar_template = $theme_options['woo_shop_sidebar'];
 						if ($shop_sidebar_template == 3){	/*right sidebar template*/
 							$woo_style_ .= '#page .container .woo-loop-content{float:left}'."\n";
@@ -1181,10 +1230,11 @@ if ( ! function_exists( 'fruitful_get_responsive_style' ) ) {
 					}
 				}
 				
-			} else {
-				$style_ .= 'body {font-family:Open Sans, sans-serif}' . "\n";
-			}
-		} 
+			//} 
+			//else {
+				//$style_ .= 'body {font-family:Open Sans, sans-serif}' . "\n";
+			//}
+		//} 
 			
 		if (!empty($theme_options['custom_css'])) {
 			$style_ .= wp_kses_stripslashes($theme_options['custom_css']) . "\n";
@@ -1202,7 +1252,7 @@ if ( ! function_exists( 'fruitful_get_sliders' ) ) {
 	function fruitful_get_sliders() {
 		global $post;
 		$prefix = '_fruitful_';
-		$theme_options  = fruitful_ret_options("fruitful_theme_options");
+		$theme_options  = fruitful_get_theme_options();
 		$front_page_id  = get_option('page_on_front');
 		$blog_page_id   = get_option('page_for_posts ');
 	
@@ -1234,7 +1284,7 @@ if (class_exists('Woocommerce')) {
 	add_filter('loop_shop_columns', 'fruitful_loop_columns');
 	if (!function_exists('fruitful_loop_columns')) {
 		function fruitful_loop_columns() {
-			$theme_options = fruitful_ret_options("fruitful_theme_options");
+			$theme_options = fruitful_get_theme_options();
 			if (!empty($theme_options['shop_num_row'])){
 				return esc_attr($theme_options['shop_num_row']);
 			} else {
@@ -1247,7 +1297,7 @@ if (class_exists('Woocommerce')) {
 	add_filter( 'loop_shop_per_page', 'fruitful_loop_shop_per_page', 20);
 	if (!function_exists('fruitful_loop_shop_per_page')) {
 		function fruitful_loop_shop_per_page(){
-			$theme_options 	   = fruitful_ret_options("fruitful_theme_options");
+			$theme_options 	   = fruitful_get_theme_options();
 			$woo_shop_num_prod = get_option('posts_per_page');
 			if (!empty($theme_options['woo_shop_num_prod'])) $woo_shop_num_prod  = esc_attr($theme_options['woo_shop_num_prod']);
 			return $woo_shop_num_prod;
@@ -1278,14 +1328,14 @@ if (class_exists('Woocommerce')) {
 			$woo_sidebar = 2;
 
 			
-			if ( is_shop() || is_product_category() ) {
-				$theme_options = fruitful_ret_options("fruitful_theme_options");
+			if ( is_shop() || is_product_category() || is_tax('product_tag')) {
+				$theme_options = fruitful_get_theme_options();
 				if (!empty($theme_options['woo_shop_sidebar'])){
 					$woo_sidebar =  esc_attr($theme_options['woo_shop_sidebar']);
 				} 
 			}
 			if ( is_product() ) {
-				$theme_options = fruitful_ret_options("fruitful_theme_options");
+				$theme_options = fruitful_get_theme_options();
 				if (!empty($theme_options['woo_product_sidebar'])){
 					$woo_sidebar =  esc_attr($theme_options['woo_product_sidebar']);
 				} 
@@ -1377,15 +1427,11 @@ if (class_exists('Woocommerce')) {
 	if ( ! function_exists( 'fruitful_woocommerce_header_add_to_cart_fragment' ) ) {
 		function fruitful_woocommerce_header_add_to_cart_fragment( $fragments ) {
 			global $woocommerce;
-			ob_start();
-			?>
-			<a href="<?php echo get_permalink( woocommerce_get_page_id( 'cart' ) ); ?>" class="cart-contents">
-				<div class="cart_image"></div>
-				<span class="num_of_product_cart"><?php global $woocommerce;
-				 echo sprintf(_n('%d ', '%d ', $woocommerce->cart->cart_contents_count, 'fruitful'), $woocommerce->cart->cart_contents_count); ?> </span>
-			</a>
-			<?php
-			$fragments['a.cart-contents'] = ob_get_clean();
+			$out  = '<a href= "'.get_permalink( woocommerce_get_page_id( 'cart' ) ).'" class="cart-contents">';
+			$out .= '<div class="cart_image"></div>';
+			$out .= '<span class="num_of_product_cart">';
+			$out .= sprintf(_n('%d ', '%d ', $woocommerce->cart->cart_contents_count, 'fruitful'), $woocommerce->cart->cart_contents_count) .'</span></a>';
+			$fragments['a.cart-contents'] = $out;
 			return $fragments;
 		}
 	}
@@ -1450,49 +1496,6 @@ function fruitful_entry_date( $echo = true ) {
 }
 }
 
-if ( ! function_exists( 'fruitful_customize_register' ) ) {
-function fruitful_customize_register( $wp_customize ) {
-	class Fruitful_Theme_Options_Button_Control extends WP_Customize_Control {
-		public $type = 'button_link_control';
- 
-		public function render_content() {
-			?>
-				<label>
-					<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
-					<input class="button button-primary save link_to_options" type="button" value="Theme Options" onclick="javascript:location.href='<?php echo esc_url(admin_url('admin.php?page=theme_options')); ?>'"/>
-				</label>
-			<?php
-		}
-	}
-	
-	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
-	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
-	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
-	
-	$wp_customize->remove_section( 'colors');
-	$wp_customize->remove_section( 'header_image');
-	$wp_customize->remove_section( 'background_image');
-	
-	$wp_customize->add_section('fruitful_themeoptions_link', array(
-							   'title' => __('Fruitful Theme Options', 'fruitful'),
-							   'priority' => 10,
-							));
-	
-	$wp_customize->add_setting( 'themeoptions_button_control', array('sanitize_callback'=>'fruitful_theme_options_validate') );
-	$wp_customize->add_control(
-		new Fruitful_Theme_Options_Button_Control (
-			$wp_customize,
-			'button_link_control',
-			array(
-				'label' 	=> __('Advanced theme settings', 'fruitful'),
-				'section' 	=> 'fruitful_themeoptions_link',
-				'settings' 	=> 'themeoptions_button_control',
-			)
-		)
-	);
-}
-add_action( 'customize_register', 'fruitful_customize_register' );
-}
 
 if ( ! function_exists( 'fruitful_theme_options_validate' ) ) {
 function fruitful_theme_options_validate($value) {
@@ -1553,10 +1556,12 @@ function fruitful_kses_data($text = null) {
 
 if ( ! function_exists( 'fruitful_get_languages_list' ) ) {
 	function fruitful_get_languages_list(){
-		$theme_options = fruitful_ret_options("fruitful_theme_options");
+		$theme_options = fruitful_get_theme_options();
 		if( function_exists('icl_get_languages') && $theme_options['is_wpml_ready'] == 'on' ){ 
 			$languages = icl_get_languages('skip_missing=0');
+			
 			if(!empty($languages)){
+			
 				echo '<div id="header_language_select"><ul id="lang-select-block">';
 				foreach($languages as $l){
 					if($l['active']) {
@@ -1643,7 +1648,7 @@ if ( ! function_exists( 'fruitful_get_product_search_form' ) ) {
 		<form role="search" method="get" id="searchform" action="<?php echo esc_url( home_url( '/'  ) ); ?>">
 			<div>
 				<input type="text" value="<?php echo get_search_query(); ?>" name="s" id="s" placeholder="<?php _e( 'Search for products', 'woocommerce' ); ?>" />
-				<input type="submit" id="searchsubmit" value="<?php echo esc_attr__( 'Search' ); ?>" />
+				<input type="submit" id="searchsubmit" value="<?php echo esc_attr__( 'Search', 'woocommerce' ); ?>" />
 				<input type="hidden" name="post_type" value="product" />
 			</div>
 		</form>
@@ -1849,22 +1854,40 @@ if ( ! function_exists( 'fruitful_get_content_with_custom_sidebar' ) ) {
 		$options = fruitful_get_theme_options();
 		
 		if (fruitful_is_latest_posts_page()) {
+<<<<<<< HEAD
 			$curr_template = esc_attr($options['layout_blog_templ']);
 			
+=======
+			if (!empty($options['latest_posts_templ'])){
+				$curr_template = esc_attr($options['latest_posts_templ']);
+			}
+>>>>>>> refs/remotes/origin/master
 		} elseif (is_archive()) {
 			if (is_tag()) {
-				$curr_template = esc_attr($options['layout_tag_templ']);	
+				if (!empty($options['layout_tag_templ'])){
+					$curr_template = esc_attr($options['layout_tag_templ']);	
+				}
 			} elseif (is_category()) {
-				$curr_template = esc_attr($options['layout_cat_templ']);
+				if (!empty($options['layout_cat_templ'])){
+					$curr_template = esc_attr($options['layout_cat_templ']);
+				}
 			} elseif (is_author()) {
-				$curr_template = esc_attr($options['layout_author_templ']);
+				if (!empty($options['layout_author_templ'])){
+					$curr_template = esc_attr($options['layout_author_templ']);
+				}
 			} else {
-				$curr_template = esc_attr($options['layout_archive_templ']); 
+				if (!empty($options['layout_archive_templ'])){
+					$curr_template = esc_attr($options['layout_archive_templ']); 
+				}
 			}	
 		} elseif (is_404()) {
-			$curr_template = esc_attr($options['layout_404_templ']);
+			if (!empty($options['layout_404_templ'])){
+				$curr_template = esc_attr($options['layout_404_templ']);
+			}
 		} elseif (is_search()) {
-			$curr_template = esc_attr($options['layout_search_templ']);
+			if (!empty($options['layout_search_templ'])){
+				$curr_template = esc_attr($options['layout_search_templ']);
+			}
 		} else {
 			$default_blog_template = (get_post_meta( get_option('page_for_posts', true), '_fruitful_page_layout', true ))?(get_post_meta( get_option('page_for_posts', true), '_fruitful_page_layout', true )-1) : 1;
 			
@@ -1938,7 +1961,7 @@ if (class_exists('Woocommerce')) {
 			add_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_images', 10);
 			add_action( 'woocommerce_before_single_product_summary', 'woocommerce_template_single_rating', 20);		
 			add_action( 'woocommerce_before_single_product_summary', 'woocommerce_template_single_price', 20); 
-			add_action( 'woocommerce_before_single_product_summary', 'woocommerce_output_product_data_tabs', 25);
+			add_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10);
 			
 		}
 		
@@ -1956,7 +1979,11 @@ if (class_exists('Woocommerce')) {
 		
 		function go_woo_tabs_left(){
 			$style_ = $back_style = $woo_style_ = '';
+<<<<<<< HEAD
 			$theme_options  = fruitful_ret_options("fruitful_theme_options"); 
+=======
+			$theme_options  = fruitful_get_theme_options(); 
+>>>>>>> refs/remotes/origin/master
 			//$style_ .= '@media only screen and (min-width: 1024px) {body.woocommerce div.product div.summary, body.woocommerce-page div.product div.summary, body.woocommerce #content div.product div.summary, body.woocommerce-page #content div.product div.summary {max-width : 100%; }}' . "\n";
 			$style_ .= '@media only screen and (min-width: 1024px) {body.woocommerce div.product .woocommerce-tabs, body.woocommerce-page div.product .woocommerce-tabs, body.woocommerce #content div.product .woocommerce-tabs, body.woocommerce-page #content div.product .woocommerce-tabs {float: left; }}' . "\n";
 			$style_ .= '@media only screen and (max-width: 1024px) {body.woocommerce div.product .woocommerce-tabs, body.woocommerce-page div.product .woocommerce-tabs, body.woocommerce #content div.product .woocommerce-tabs, body.woocommerce-page #content div.product .woocommerce-tabs {margin: 0 0 15px 0;}}' . "\n";
@@ -1972,7 +1999,7 @@ if (class_exists('Woocommerce')) {
 		
 			function go_woo_tabs_center(){
 			$style_ = $back_style = $woo_style_ = '';
-			$theme_options  = fruitful_ret_options("fruitful_theme_options"); 
+			$theme_options  = fruitful_get_theme_options(); 
 			$style_ .= '@media only screen and (min-width: 1024px) {body.woocommerce div.product .woocommerce-tabs, body.woocommerce-page div.product .woocommerce-tabs, body.woocommerce #content div.product .woocommerce-tabs, body.woocommerce-page #content div.product .woocommerce-tabs {max-width : 100%; margin-top: 20px;}}' . "\n";
 				wp_add_inline_style( 'main-style', fruitful_compress_code($style_)); 
 			if ($woo_style_ != '') {

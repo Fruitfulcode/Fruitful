@@ -2,7 +2,7 @@
     $.fn.mobileMenu = function (options) {
 
         var defaults = {
-            defaultText: 'Navigate to...',
+            defaultText: ThGlobal.mobile_menu_default_text,
             className: 'select-menu',
             subMenuClass: 'sub-menu',
             subMenuDash: '&ndash;'
