@@ -26,29 +26,6 @@ switch( $template ) {
 		get_sidebar( 'content' );
 		break;
 	case 'fruitful' :
-<<<<<<< HEAD
-		if ($woo_sidebar == 1 || $woo_sidebar == 4 || $woo_sidebar == 5) {
-			echo '</div></div></div>';
-		} elseif($woo_sidebar == 2) {
-			echo '</div></div></div>';
-			echo '<div class="five columns alpha woo-loop-sidebar">';
-				if (is_shop() || is_product_category()) {
-					get_sidebar( 'shop' );
-				} else {
-					get_sidebar( 'product' );
-				}
-			echo '</div>';
-		} else {
-			echo '</div></div></div>';
-			echo '<div class="five columns omega woo-loop-sidebar">';
-				if (is_shop() || is_product_category()){
-					get_sidebar( 'shop' );
-				} else {
-					get_sidebar( 'product' );
-				}
-			echo '</div>';
-		}
-=======
 			if ($woo_sidebar == 1 || $woo_sidebar == 4 || $woo_sidebar == 5) {
 				echo '</div></div></div>';
 			} elseif($woo_sidebar == 2) {
@@ -70,7 +47,6 @@ switch( $template ) {
 					}
 				echo '</div>';
 			}
->>>>>>> refs/remotes/origin/master
 		break;
 	default :
 		echo '</div></div>';

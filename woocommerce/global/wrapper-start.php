@@ -33,12 +33,8 @@ switch( $template ) {
 				$prod_num_row = $theme_options['shop_num_row'];
 				$prod_num_row_class = 'prod_num_row-'.$prod_num_row;
 			}
-<<<<<<< HEAD
-		}
-=======
 		}		
 
->>>>>>> refs/remotes/origin/master
 		if ($woo_sidebar == 1 || $woo_sidebar == 4 || $woo_sidebar == 5){
 			echo '<div class="woo-loop-content alpha omega '.$prod_num_row_class.'"><div id="container"><div id="content" role="main">';
 		} elseif($woo_sidebar == 2) {

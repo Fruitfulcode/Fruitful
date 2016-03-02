@@ -617,18 +617,6 @@ if (!function_exists('fruitful_get_logo')) {
 		$name  		  = esc_attr(get_bloginfo('name'));
 	
 		if (!empty($url_logo_id) || !empty($url_retina_logo_id)) {
-<<<<<<< HEAD
-			$url_logo = wp_get_attachment_image_src($url_logo_id, 'full');
-			$url_logo = esc_url_raw($url_logo[0]);
-			
-			$url_retina_logo = wp_get_attachment_image_src($url_retina_logo_id, 'full');
-			$url_retina_logo = esc_url_raw($url_retina_logo[0]);
-			
-			if (!empty($url_logo)) 	echo  '<a class="link-logo" href="' . esc_url( home_url( '/' ) ) . '" title="' . $description .'" rel="home"><img class="logo" src="'. $url_logo  .'" width="' . $logo_width . '" height="' . $logo_height . '" alt="' . $description . '"/></a>';
-			if (!empty($url_retina_logo)) echo  '<a class="link-logo-retina" href="' . esc_url( home_url( '/' ) ) . '" title="' . $description .'" rel="home"><img class="logo retina" src="'. $url_retina_logo  .'" width="' . $logo_retina_width . '" height="' . $logo_retina_height . '" alt="' . $description . '"/></a>';
-			if (!empty($url_logo) && empty($url_retina_logo)) echo  '<a class="link-logo-retina" href="' . esc_url( home_url( '/' ) ) . '" title="' . $description .'" rel="home"><img class="logo retina" src="'. $url_logo  .'" width="' . $logo_retina_width . '" height="' . $logo_retina_height . '" alt="' . $description . '"/></a>';
-			if (empty($url_logo) && !empty($url_retina_logo)) echo  '<a class="link-logo" href="' . esc_url( home_url( '/' ) ) . '" title="' . $description .'" rel="home"><img class="logo" src="'. $url_retina_logo  .'" width="' . $logo_width . '" height="' . $logo_height . '" alt="' . $description . '"/></a>';
-=======
 			 $url_logo = wp_get_attachment_image_src($url_logo_id, 'full');
 			 if (!empty($url_logo)) {
 				$image_link = esc_url_raw($url_logo[0]);
@@ -649,7 +637,6 @@ if (!function_exists('fruitful_get_logo')) {
 			if (!empty($url_retina_logo_id)) echo  '<a class="link-logo-retina" href="' . esc_url( home_url( '/' ) ) . '" title="' . $description .'" rel="home"><img class="logo retina" src="'. $image_link_retina	  .'" width="' . $logo_retina_width . '" height="' . $logo_retina_height . '" alt="' . $description . '"/></a>';
 			if (!empty($url_logo_id) && empty($url_retina_logo_id)) echo  '<a class="link-logo-retina" href="' . esc_url( home_url( '/' ) ) . '" title="' . $description .'" rel="home"><img class="logo retina" src="'. $image_link  .'" width="' . $logo_retina_width . '" height="' . $logo_retina_height . '" alt="' . $description . '"/></a>';
 			if (empty($url_logo_id) && !empty($url_retina_logo_id)) echo  '<a class="link-logo" href="' . esc_url( home_url( '/' ) ) . '" title="' . $description .'" rel="home"><img class="logo" src="'. $image_link_retina  .'" width="' . $logo_width . '" height="' . $logo_height . '" alt="' . $description . '"/></a>';								
->>>>>>> refs/remotes/origin/master
 			
 		} else {
 			echo  '<a class="logo-description" href="' . esc_url( home_url( '/' ) ) . '" title="' . $description .'" rel="home"><h1 class="site-title">'. $name .'</h1><h2 class="site-description">'. $description .'</h2></a>';
@@ -1854,14 +1841,9 @@ if ( ! function_exists( 'fruitful_get_content_with_custom_sidebar' ) ) {
 		$options = fruitful_get_theme_options();
 		
 		if (fruitful_is_latest_posts_page()) {
-<<<<<<< HEAD
-			$curr_template = esc_attr($options['layout_blog_templ']);
-			
-=======
 			if (!empty($options['latest_posts_templ'])){
 				$curr_template = esc_attr($options['latest_posts_templ']);
 			}
->>>>>>> refs/remotes/origin/master
 		} elseif (is_archive()) {
 			if (is_tag()) {
 				if (!empty($options['layout_tag_templ'])){
@@ -1979,11 +1961,7 @@ if (class_exists('Woocommerce')) {
 		
 		function go_woo_tabs_left(){
 			$style_ = $back_style = $woo_style_ = '';
-<<<<<<< HEAD
-			$theme_options  = fruitful_ret_options("fruitful_theme_options"); 
-=======
 			$theme_options  = fruitful_get_theme_options(); 
->>>>>>> refs/remotes/origin/master
 			//$style_ .= '@media only screen and (min-width: 1024px) {body.woocommerce div.product div.summary, body.woocommerce-page div.product div.summary, body.woocommerce #content div.product div.summary, body.woocommerce-page #content div.product div.summary {max-width : 100%; }}' . "\n";
 			$style_ .= '@media only screen and (min-width: 1024px) {body.woocommerce div.product .woocommerce-tabs, body.woocommerce-page div.product .woocommerce-tabs, body.woocommerce #content div.product .woocommerce-tabs, body.woocommerce-page #content div.product .woocommerce-tabs {float: left; }}' . "\n";
 			$style_ .= '@media only screen and (max-width: 1024px) {body.woocommerce div.product .woocommerce-tabs, body.woocommerce-page div.product .woocommerce-tabs, body.woocommerce #content div.product .woocommerce-tabs, body.woocommerce-page #content div.product .woocommerce-tabs {margin: 0 0 15px 0;}}' . "\n";
