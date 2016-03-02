@@ -647,6 +647,10 @@ a:hover,a:focus,a:active {
 #commentform p.form-submit{
 	margin:0;
 }
+#commentform p.comment-form-rating{
+	display: inline-block;
+    margin: 0;
+}
 .form-allowed-tags{
 	display:none
 }
