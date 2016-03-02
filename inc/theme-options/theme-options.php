@@ -1184,7 +1184,13 @@ class fruitful_theme_options {
 							'type'		=> 'text',
 							'default'	=> '',
 							'box-title' => __('Soundcloud', 'fruitful')
-						),					
+						),	
+						array(
+							'id'		=> 'tripadvisor_link',
+							'type'		=> 'text',
+							'default'	=> '',
+							'box-title' => __('Tripadvisor', 'fruitful')
+						),								
 					)
 				),			
 			)
