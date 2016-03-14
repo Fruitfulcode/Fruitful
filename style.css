@@ -1132,7 +1132,14 @@ embed,iframe,object {
     margin:0 0 1.5em;
 }
 #searchsubmit {
-    display:none;
+    display: block;
+    top: 0;
+    right: 0;
+    position: absolute;
+    width: 25px;
+    height: 32px;
+    text-indent: -999px;
+    opacity: 0;
 }
 
 .no-slider-text {
@@ -1677,6 +1684,7 @@ table#wp-calendar td#next{
     border-left: 1px solid #d7d7d7;
     padding: 0px 0 0 11px;
     line-height: 20px;
+    pointer-events: none;
 }
 
 input#s {
