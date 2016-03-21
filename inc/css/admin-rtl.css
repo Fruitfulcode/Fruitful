@@ -111,7 +111,6 @@ a:hover, a:active, a:focus {	outline: 0; }
 .sidebar-promo h3 {color: #3e3e3e; font-weight: bold; font-size: 16px; padding: 6px 40px 6px 0; margin: 0 0 20px 0;}
 .sidebar-promo .promo-support h3 {background: url('../images/support.png') no-repeat right 0 transparent;}
 .sidebar-promo .promo-customization h3 {background: url('../images/customization.png') no-repeat right 0 transparent;}
-.sidebar-promo .promo-anaglyph h3 {background: url('../images/promo-anaglyph.png') no-repeat right 0 transparent;}
 .sidebar-promo p {color:#3e3e3e; font-size:14px; margin:0 0 1.5em 0; padding:0; font-family:Arial; line-height:24px;}
 .form-admin-fruitful .content .settings-section .settings-form-row .box-options #slider_main_options {display:none; float: right; margin: 0 0 20px 0;}
 .box-options .upload_button_div .reset_btn,.box-options ul.slides li.slide .slide-content .upload_button_div .reset_slide_btn  {margin-right:5px}
