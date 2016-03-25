@@ -1,79 +1,74 @@
-# Translation of Fruitful in Ukrainian
-# This file is distributed under the same license as the Fruitful package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Fruitful\n"
-"POT-Creation-Date: 2016-03-25 15:26+0200\n"
-"PO-Revision-Date: 2016-03-25 15:26+0200\n"
+"Project-Id-Version: Fruitful theme\n"
+"POT-Creation-Date: 2016-03-25 15:56+0200\n"
+"PO-Revision-Date: 2016-03-25 15:56+0200\n"
 "Last-Translator: Fruitfulcode\n"
-"Language-Team: \n"
-"Language: uk\n"
+"Language-Team: Gürsel çetin <gurseldesign@gmail.com>\n"
+"Language: tr_TR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Poedit 1.8.7\n"
-"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;_e;__;_x;_n;esc_attr_e\n"
 "X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: author-bio.php:16
 #, php-format
 msgid "About %s"
-msgstr "Про автора %s"
+msgstr ""
 
 #: author-bio.php:20
 #, php-format
 msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
-"Переглянути всі публікації від %s <span class=\"meta-nav\">&rarr;</span>"
 
 #: comments.php:33
-#, fuzzy, php-format
+#, php-format
 msgid "One thought on &ldquo;%2$s&rdquo;"
-msgstr "%1$s коментар до &ldquo;%2$s&rdquo;"
+msgstr ""
 
 #: comments.php:40 comments.php:60
 msgid "Comment navigation"
-msgstr "Навігація по коментарях"
+msgstr ""
 
 #: comments.php:41 comments.php:61
 msgid "&larr; Older Comments"
-msgstr "&larr; Старіші коментарі"
+msgstr ""
 
 #: comments.php:42 comments.php:62
 msgid "Newer Comments &rarr;"
-msgstr "Новіші коментарі &rarr;"
+msgstr ""
 
 #: comments.php:72
 msgid "Comments are closed."
-msgstr "Коментувати не дозволено."
+msgstr ""
 
 #: content-404.php:13
 msgid "Oops! That page can&rsquo;t be found."
-msgstr "Ой! Сторінка не знайдена."
+msgstr ""
 
 #: content-404.php:17
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
-"Нічого не знайдено. Спробуйте використати один з наведених нижче посилань, "
-"або скористайтесь форму пошуку."
 
 #: content-aside.php:32 content-audio.php:33 content-gallery.php:32
 #: content-image.php:33 content-link.php:32 content-quote.php:32
 #: content-status.php:32 content-video.php:32
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
-msgstr "Продовження <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
 
 #: content-aside.php:33 content-audio.php:34 content-chat.php:33
 #: content-gallery.php:33 content-image.php:34 content-link.php:33
 #: content-page.php:22 content-quote.php:33 content-single.php:33
 #: content-status.php:33 content-video.php:33 content.php:64 image.php:87
 msgid "Pages:"
-msgstr "Сторінки:"
+msgstr ""
 
 #: content-aside.php:39 content-aside.php:46 content-audio.php:43
 #: content-chat.php:38 content-gallery.php:49 content-image.php:49
@@ -81,34 +76,34 @@ msgstr "Сторінки:"
 #: content-single.php:38 content-video.php:48 content.php:75 image.php:35
 #: image.php:101
 msgid "Edit"
-msgstr "Редагувати"
+msgstr ""
 
 #: content-chat.php:22 content-quote.php:23 content.php:33 functions.php:1477
 #, php-format
 msgid "Permalink to %s"
-msgstr "Посилання до %s"
+msgstr ""
 
 #: content-gallery.php:43 content-image.php:42 content-quote.php:40
 #: content-video.php:41 content.php:72
 msgid "Leave a comment"
-msgstr "Залишити коментар"
+msgstr ""
 
 #: content-gallery.php:43 content.php:72
 msgid "1 Comment"
-msgstr "1 коментар"
+msgstr ""
 
 #: content-gallery.php:43 content.php:72
 msgid "% Comments"
-msgstr "%s коментарів"
+msgstr ""
 
 #: content-image.php:42 content-quote.php:40 content-video.php:41
 msgid "One comment so far"
-msgstr "1 коментар"
+msgstr ""
 
 #: content-image.php:42 content-quote.php:40 content-video.php:41
-#, fuzzy, php-format
+#, php-format
 msgid "View all % comments"
-msgstr "Коментарі (%)"
+msgstr ""
 
 #: content.php:63
 msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
@@ -120,16 +115,16 @@ msgstr ""
 
 #: functions.php:125
 msgid "Primary Menu"
-msgstr "Головне меню"
+msgstr ""
 
 #: functions.php:162
 #, php-format
 msgid "Page %s"
-msgstr "Сторінка %s"
+msgstr ""
 
 #: functions.php:178
 msgid "Main Sidebar"
-msgstr "Головний сайдбар"
+msgstr ""
 
 #: functions.php:187
 msgid "Blog Sidebar"
@@ -170,7 +165,7 @@ msgstr ""
 
 #: functions.php:1446 functions.php:1455
 msgid ", "
-msgstr ", "
+msgstr ""
 
 #: functions.php:1449
 #, php-format
@@ -192,11 +187,11 @@ msgstr ""
 
 #: functions.php:1595
 msgid "&laquo; Previous Page"
-msgstr "&laquo; Попередня сторінка"
+msgstr ""
 
 #: functions.php:1596
 msgid "Next Page &raquo;"
-msgstr "Наступна сторінка &raquo;"
+msgstr ""
 
 #: functions.php:1638
 msgid "Search for products"
@@ -213,42 +208,42 @@ msgstr ""
 #: functions.php:1743
 #, php-format
 msgid "Category Archives: %s"
-msgstr "Архів категорії: %s"
+msgstr ""
 
 #: functions.php:1745
 #, php-format
 msgid "Tag Archives: %s"
-msgstr "Архів теґу:  %s"
+msgstr ""
 
 #: functions.php:1748
 #, php-format
 msgid "Author Archives: %s"
-msgstr "Архів автора: %s"
+msgstr ""
 
 #: functions.php:1752
 #, php-format
 msgid "Daily Archives: %s"
-msgstr "Архів за день: %s"
+msgstr ""
 
 #: functions.php:1755
 #, php-format
 msgid "Monthly Archives: %s"
-msgstr "Архів за місяць: %s"
+msgstr ""
 
 #: functions.php:1758
 #, php-format
 msgid "Yearly Archives: %s"
-msgstr "Архів за рік: %s"
+msgstr ""
 
 #: functions.php:1761 sidebar-blogright.php:19 sidebar-homepage.php:19
 #: sidebar-page.php:19 sidebar-single-post.php:19 sidebar.php:19
 msgid "Archives"
-msgstr "Архіви"
+msgstr ""
 
 #: functions.php:1766
 #, php-format
 msgid "Search Results for: %s"
-msgstr "Результати пошуку для фрази: %s"
+msgstr ""
 
 #: functions.php:1925
 msgid ""
@@ -272,11 +267,11 @@ msgstr ""
 
 #: image.php:39
 msgid "&larr; Previous"
-msgstr "&larr; Попереднє"
+msgstr ""
 
 #: image.php:40
 msgid "Next &rarr;"
-msgstr "Наступне &rarr;"
+msgstr ""
 
 #: image.php:93
 #, php-format
@@ -418,7 +413,7 @@ msgstr ""
 
 #: inc/func/fruitful-function.php:175
 msgid "Link URL"
-msgstr "URL посилання"
+msgstr ""
 
 #: inc/func/fruitful-function.php:181
 msgid "Target \"_blank\""
@@ -426,7 +421,7 @@ msgstr ""
 
 #: inc/func/fruitful-function.php:185 inc/theme-options/theme-options.php:1375
 msgid "Upload Image"
-msgstr "Завантажити зображення"
+msgstr ""
 
 #: inc/func/fruitful-function.php:186
 #: inc/metaboxes/helpers/cmb_Meta_Box_types.php:309
@@ -434,7 +429,7 @@ msgstr "Завантажити зображення"
 #: inc/metaboxes/helpers/cmb_Meta_Box_types.php:786
 #: inc/theme-options/theme-options.php:1381
 msgid "Remove"
-msgstr "Видалити"
+msgstr ""
 
 #: inc/func/fruitful-function.php:195
 #, php-format
@@ -455,33 +450,33 @@ msgstr ""
 
 #: inc/func/plugin-activation.php:333
 msgid "Install Required Plugins"
-msgstr "Встановіть потрібні плагіни"
+msgstr ""
 
 #: inc/func/plugin-activation.php:334
 msgid "Install Plugins"
-msgstr "Встановити плаґіни"
+msgstr ""
 
 #: inc/func/plugin-activation.php:335 inc/func/plugins-included.php:40
 #, php-format
 msgid "Installing Plugin: %s"
-msgstr "Встановлення плаґіну: %s"
+msgstr ""
 
 #: inc/func/plugin-activation.php:336 inc/func/plugins-included.php:41
 msgid "Something went wrong with the plugin API."
-msgstr "Щось пішло не так з API плагіна."
+msgstr ""
 
 #: inc/func/plugin-activation.php:397 inc/func/plugins-included.php:87
 msgid "Return to Required Plugins Installer"
-msgstr "Повернутися до Устанвка необхідних плагінів"
+msgstr ""
 
 #: inc/func/plugin-activation.php:398
 msgid "Return to the dashboard"
-msgstr "Повернутися в консоль"
+msgstr ""
 
 #: inc/func/plugin-activation.php:399 inc/func/plugin-activation.php:3021
 #: inc/func/plugins-included.php:88
 msgid "Plugin activated successfully."
-msgstr "Плагін успішно активовано."
+msgstr ""
 
 #: inc/func/plugin-activation.php:400 inc/func/plugin-activation.php:2824
 msgid "The following plugin was activated successfully:"
@@ -502,11 +497,11 @@ msgstr ""
 #: inc/func/plugin-activation.php:403 inc/func/plugins-included.php:92
 #, php-format
 msgid "All plugins installed and activated successfully. %1$s"
-msgstr "Все плагіни успішно встановлені і активовані.%1$s"
+msgstr ""
 
 #: inc/func/plugin-activation.php:404
 msgid "Dismiss this notice"
-msgstr "Прибрати це повідомлення"
+msgstr ""
 
 #: inc/func/plugin-activation.php:405
 msgid "Please contact the administrator of this site for help."
@@ -519,15 +514,15 @@ msgstr ""
 
 #: inc/func/plugin-activation.php:2159
 msgid "Required"
-msgstr "Обов’язково"
+msgstr ""
 
 #: inc/func/plugin-activation.php:2162
 msgid "Recommended"
-msgstr "Рекомендований"
+msgstr ""
 
 #: inc/func/plugin-activation.php:2178
 msgid "WordPress Repository"
-msgstr "Репозиторій WordPress"
+msgstr ""
 
 #: inc/func/plugin-activation.php:2181
 msgid "External Source"
@@ -535,15 +530,15 @@ msgstr ""
 
 #: inc/func/plugin-activation.php:2184
 msgid "Pre-Packaged"
-msgstr "Пре-упаковані"
+msgstr ""
 
 #: inc/func/plugin-activation.php:2201
 msgid "Not Installed"
-msgstr "Не встановлено"
+msgstr ""
 
 #: inc/func/plugin-activation.php:2205
 msgid "Installed But Not Activated"
-msgstr "Встановлено, але не активований"
+msgstr ""
 
 #: inc/func/plugin-activation.php:2207
 msgid "Active"
@@ -606,15 +601,15 @@ msgstr ""
 
 #: inc/func/plugin-activation.php:2428
 msgid "Plugin"
-msgstr "Плаґін"
+msgstr ""
 
 #: inc/func/plugin-activation.php:2429
 msgid "Source"
-msgstr "Джерело"
+msgstr ""
 
 #: inc/func/plugin-activation.php:2430
 msgid "Type"
-msgstr "Тип"
+msgstr ""
 
 #: inc/func/plugin-activation.php:2434
 msgid "Version"
@@ -622,7 +617,7 @@ msgstr ""
 
 #: inc/func/plugin-activation.php:2435
 msgid "Status"
-msgstr "Статус"
+msgstr ""
 
 #: inc/func/plugin-activation.php:2483
 #, php-format
@@ -641,7 +636,7 @@ msgstr ""
 
 #: inc/func/plugin-activation.php:2595
 msgid "Install"
-msgstr "Встановити"
+msgstr ""
 
 #: inc/func/plugin-activation.php:2601
 msgid "Update"
@@ -649,7 +644,7 @@ msgstr ""
 
 #: inc/func/plugin-activation.php:2604
 msgid "Activate"
-msgstr "Активувати"
+msgstr ""
 
 #: inc/func/plugin-activation.php:2635
 msgid "No plugins were selected to be installed. No action taken."
@@ -669,7 +664,7 @@ msgstr ""
 
 #: inc/func/plugin-activation.php:3020
 msgid "Plugin activation failed."
-msgstr "Невдала активація плагіна."
+msgstr ""
 
 #: inc/func/plugin-activation.php:3354
 #, php-format
@@ -679,51 +674,47 @@ msgstr ""
 #: inc/func/plugin-activation.php:3356
 #, php-format
 msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
-msgstr "При установці%1$s виникла помилка: <strong>%2$s </strong>."
+msgstr ""
 
 #: inc/func/plugin-activation.php:3357
 #, php-format
 msgid "The installation of %1$s failed."
-msgstr "Установка %1$s завершилася невдало."
+msgstr ""
 
 #: inc/func/plugin-activation.php:3361
 msgid ""
 "The installation and activation process is starting. This process may take a "
 "while on some hosts, so please be patient."
 msgstr ""
-"Починається процес встановлення і активації. Це може зайняти тривалийчас на "
-"деяких системах, будь ласка, зачекайте."
 
 #: inc/func/plugin-activation.php:3362
 #, php-format
 msgid "%1$s installed and activated successfully."
-msgstr "%1$s встановлений і успішно активований."
+msgstr ""
 
 #: inc/func/plugin-activation.php:3363
 msgid "All installations and activations have been completed."
-msgstr "Всі установки і активації завершені."
+msgstr ""
 
 #: inc/func/plugin-activation.php:3364
 #, php-format
 msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
-msgstr "Встановлюємо і активуємо плагін %1$s (%2$d/%3$d)"
+msgstr ""
 
 #: inc/func/plugin-activation.php:3367
 msgid ""
 "The installation process is starting. This process may take a while on some "
 "hosts, so please be patient."
 msgstr ""
-"Починається процес установки. Це може зайняти тривалий час надеяких "
-"системах, будь ласка, зачекайте."
 
 #: inc/func/plugin-activation.php:3369
 msgid "All installations have been completed."
-msgstr "Всі установки були завершені."
+msgstr ""
 
 #: inc/func/plugin-activation.php:3370
 #, php-format
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
-msgstr "Встановлюємо плагін %1$s(%2$d/%3$d)"
+msgstr ""
 
 #: inc/func/plugins-included.php:38
 msgid "Fruitful Plugin Integration"
@@ -735,16 +726,16 @@ msgstr ""
 
 #: inc/metaboxes/helpers/cmb_Meta_Box_ajax.php:47
 msgid "Please Try Again"
-msgstr "Будь ласка, повторіть спробу"
+msgstr ""
 
 #: inc/metaboxes/helpers/cmb_Meta_Box_ajax.php:131
 msgid "Remove Embed"
-msgstr "Видалити Embed (?)"
+msgstr ""
 
 #: inc/metaboxes/helpers/cmb_Meta_Box_ajax.php:134
 #, php-format
 msgid "No oEmbed Results Found for %s. View more info at"
-msgstr "Результати oEmbed не знайдені %s. Подивитися боле інформації на"
+msgstr ""
 
 #: inc/metaboxes/helpers/cmb_Meta_Box_field.php:460
 msgid "Add Group"
@@ -756,7 +747,7 @@ msgstr ""
 
 #: inc/metaboxes/helpers/cmb_Meta_Box_types.php:253
 msgid "Add Row"
-msgstr "Додати рядок"
+msgstr ""
 
 #: inc/metaboxes/helpers/cmb_Meta_Box_types.php:619
 #: inc/metaboxes/helpers/cmb_Meta_Box_types.php:653
@@ -766,22 +757,22 @@ msgstr ""
 #: inc/metaboxes/helpers/cmb_Meta_Box_types.php:692
 #: inc/metaboxes/helpers/cmb_Meta_Box_types.php:746
 msgid "Add or Upload File"
-msgstr "Додати або завантажити файл"
+msgstr ""
 
 #: inc/metaboxes/helpers/cmb_Meta_Box_types.php:713
 #: inc/metaboxes/helpers/cmb_Meta_Box_types.php:778
 msgid "Remove Image"
-msgstr "Видалити зображення"
+msgstr ""
 
 #: inc/metaboxes/helpers/cmb_Meta_Box_types.php:724
 #: inc/metaboxes/helpers/cmb_Meta_Box_types.php:786
 msgid "File:"
-msgstr "Файл:"
+msgstr ""
 
 #: inc/metaboxes/helpers/cmb_Meta_Box_types.php:724
 #: inc/metaboxes/helpers/cmb_Meta_Box_types.php:786
 msgid "Download"
-msgstr "Завантажити"
+msgstr ""
 
 #: inc/metaboxes/init-for-objestcs-mb.php:34
 msgid "Slider settings"
@@ -797,7 +788,7 @@ msgstr ""
 
 #: inc/metaboxes/init-for-objestcs-mb.php:47
 msgid "Disable slider"
-msgstr "Відключити слайдер"
+msgstr ""
 
 #: inc/metaboxes/init-for-objestcs-mb.php:48
 msgid "Full width slider"
@@ -815,7 +806,7 @@ msgstr ""
 #: inc/metaboxes/init-for-objestcs-mb.php:85
 #: inc/theme-options/theme-options.php:88
 msgid "Layout"
-msgstr "Розмітка"
+msgstr ""
 
 #: inc/metaboxes/init-for-objestcs-mb.php:67
 msgid "Select a specific layout for this page."
@@ -831,19 +822,19 @@ msgstr ""
 
 #: inc/metaboxes/init.php:258
 msgid "Clear"
-msgstr "Очистити"
+msgstr ""
 
 #: inc/metaboxes/init.php:259
 msgid "Default"
-msgstr "Без обумовлення"
+msgstr ""
 
 #: inc/metaboxes/init.php:260
 msgid "Select Color"
-msgstr "Вибрати колір"
+msgstr ""
 
 #: inc/metaboxes/init.php:261
 msgid "Current Color"
-msgstr "Поточний колір"
+msgstr ""
 
 #: inc/metaboxes/init.php:293
 msgid "Select / Deselect All"
@@ -852,11 +843,11 @@ msgstr ""
 #: inc/metaboxes/init.php:1187 inc/theme-options/theme-options.php:1441
 #: inc/theme-options/theme-options.php:1463
 msgid "Save"
-msgstr "Зберегти"
+msgstr ""
 
 #: inc/template-tags.php:27
 msgid "Post navigation"
-msgstr "Навігація по запису"
+msgstr ""
 
 #: inc/template-tags.php:31
 msgid "&larr;"
@@ -868,33 +859,33 @@ msgstr ""
 
 #: inc/template-tags.php:37
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
-msgstr "<span class=\"meta-nav\">&larr;</span> Попередні записи"
+msgstr ""
 
 #: inc/template-tags.php:41
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
-msgstr "Наступні записи <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
 
 #: inc/template-tags.php:66
 msgid "Pingback:"
-msgstr "Пінгбек:"
+msgstr ""
 
 #: inc/template-tags.php:66 inc/template-tags.php:92
 msgid "(Edit)"
-msgstr "(Редагувати)"
+msgstr ""
 
 #: inc/template-tags.php:85
 #, php-format
 msgid "%s"
-msgstr "%s"
+msgstr ""
 
 #: inc/template-tags.php:90
 #, php-format
 msgid "%1$s at %2$s"
-msgstr "%1$s о %2$s"
+msgstr ""
 
 #: inc/template-tags.php:96
 msgid "Your comment is awaiting moderation."
-msgstr "Ваш коментар очікує узгодження."
+msgstr ""
 
 #: inc/template-tags.php:121
 #, php-format
@@ -908,18 +899,18 @@ msgstr ""
 #: inc/template-tags.php:127
 #, php-format
 msgid "View all posts by %s"
-msgstr "Подивитися всі записи автора %s"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:54
 #: inc/theme-options/theme-options.php:55
 #: inc/theme-options/theme-options.php:69
 #: inc/theme-options/theme-options.php:1440
 msgid "Theme Options"
-msgstr "Опції теми"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:83
 msgid "General"
-msgstr "Загальне"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:89
 msgid ""
@@ -930,11 +921,11 @@ msgstr ""
 
 #: inc/theme-options/theme-options.php:90
 msgid "Responsive"
-msgstr "Responsive"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:96
 msgid "Comments"
-msgstr "Коментарі"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:97
 msgid ""
@@ -983,7 +974,7 @@ msgstr ""
 #: inc/theme-options/theme-options.php:1260
 #: inc/theme-options/theme-options.php:1272
 msgid "Right sidebar"
-msgstr "Правий сайдбар"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:129
 #: inc/theme-options/theme-options.php:144
@@ -997,7 +988,7 @@ msgstr "Правий сайдбар"
 #: inc/theme-options/theme-options.php:1258
 #: inc/theme-options/theme-options.php:1271
 msgid "Left sidebar"
-msgstr "Лівий сайдбар"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:134
 msgid "Page templates by default"
@@ -1021,7 +1012,7 @@ msgstr ""
 
 #: inc/theme-options/theme-options.php:173
 msgid "Author:"
-msgstr "Автор:"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:184
 msgid "Category:"
@@ -1029,7 +1020,7 @@ msgstr ""
 
 #: inc/theme-options/theme-options.php:195
 msgid "Tags:"
-msgstr "Мітки:"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:206
 msgid "404:"
@@ -1062,7 +1053,7 @@ msgstr ""
 #: inc/theme-options/theme-options.php:241
 #: inc/theme-options/theme-options.php:1242
 msgid "Enable"
-msgstr "Увімкнути"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:246
 #: inc/theme-options/theme-options.php:255
@@ -1077,7 +1068,7 @@ msgstr ""
 #: inc/theme-options/theme-options.php:269
 #: inc/theme-options/theme-options.php:1066
 msgid "Header"
-msgstr "Верхня частина"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:274
 msgid "Sticky  header"
@@ -1089,7 +1080,7 @@ msgstr ""
 
 #: inc/theme-options/theme-options.php:276
 msgid "Enabled"
-msgstr "Увімкнено"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:282
 msgid "Menu Position"
@@ -1102,17 +1093,17 @@ msgstr ""
 #: inc/theme-options/theme-options.php:286
 #: inc/theme-options/theme-options.php:401
 msgid "Right"
-msgstr "Праворуч"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:287
 #: inc/theme-options/theme-options.php:399
 msgid "Left"
-msgstr "Ліворуч"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:288
 #: inc/theme-options/theme-options.php:400
 msgid "Center"
-msgstr "Центр"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:294
 msgid "Type of Responsive menu"
@@ -1178,11 +1169,11 @@ msgstr ""
 
 #: inc/theme-options/theme-options.php:351
 msgid "Background"
-msgstr "Фон"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:355
 msgid "Background Image"
-msgstr "Фонове зображення"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:356
 msgid ""
@@ -1212,7 +1203,7 @@ msgstr ""
 
 #: inc/theme-options/theme-options.php:390
 msgid "Logo"
-msgstr "Логотип"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:395
 msgid "Logo Position"
@@ -1232,11 +1223,11 @@ msgstr ""
 
 #: inc/theme-options/theme-options.php:413
 msgid "Width"
-msgstr "Ширина"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:419
 msgid "Height"
-msgstr "Висота"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:425
 msgid "Logo image"
@@ -1260,7 +1251,7 @@ msgstr ""
 
 #: inc/theme-options/theme-options.php:439
 msgid "Favicon"
-msgstr "Фавіконка"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:440
 msgid ""
@@ -1302,7 +1293,7 @@ msgstr ""
 
 #: inc/theme-options/theme-options.php:478
 msgid "Colors"
-msgstr "Кольори"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:483
 msgid "Main menu color"
@@ -1315,7 +1306,7 @@ msgstr ""
 #: inc/theme-options/theme-options.php:491
 #: inc/theme-options/theme-options.php:522
 msgid "Background color"
-msgstr "Фоновий колір"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:497
 #: inc/theme-options/theme-options.php:528
@@ -1351,7 +1342,7 @@ msgstr ""
 
 #: inc/theme-options/theme-options.php:560
 msgid "Link color"
-msgstr "Колір посилань"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:566
 msgid "Link color (hover)"
@@ -1449,7 +1440,7 @@ msgstr ""
 #: inc/theme-options/theme-options.php:693
 #: inc/theme-options/theme-options.php:752
 msgid "Menu"
-msgstr "Меню"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:694
 msgid "Choose font-family for primary menu."
@@ -1465,7 +1456,7 @@ msgstr ""
 
 #: inc/theme-options/theme-options.php:709
 msgid "Font size"
-msgstr "Розмір шрифту"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:710
 msgid ""
@@ -1503,7 +1494,7 @@ msgstr ""
 #: inc/theme-options/theme-options.php:768
 #: inc/theme-options/theme-options.php:774
 msgid "Slider"
-msgstr "Слайдер"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:775
 msgid "Select a slider type that will be used by default."
@@ -1519,7 +1510,7 @@ msgstr ""
 
 #: inc/theme-options/theme-options.php:785
 msgid "Slider Options"
-msgstr "Параметри слайд-шоу"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:786
 msgid ""
@@ -1534,7 +1525,7 @@ msgstr ""
 #: inc/theme-options/theme-options.php:795
 #: inc/theme-options/theme-options.php:913
 msgid "fade"
-msgstr "зникнення"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:796
 msgid "slide"
@@ -1622,15 +1613,15 @@ msgstr ""
 
 #: inc/theme-options/theme-options.php:894
 msgid "default"
-msgstr "Без обумовлення"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:895
 msgid "dark"
-msgstr "Темний"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:896
 msgid "light"
-msgstr "Світлий"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:904
 msgid "Effect"
@@ -1638,7 +1629,7 @@ msgstr ""
 
 #: inc/theme-options/theme-options.php:906
 msgid "random"
-msgstr "Випадково"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:907
 msgid "sliceDownRight"
@@ -1755,7 +1746,7 @@ msgstr ""
 
 #: inc/theme-options/theme-options.php:1058
 msgid "Social Links"
-msgstr "Посилання на соціальні мережі"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:1063
 msgid "Socials Links Position"
@@ -1768,7 +1759,7 @@ msgstr ""
 #: inc/theme-options/theme-options.php:1066
 #: inc/theme-options/theme-options.php:1201
 msgid "Footer"
-msgstr "Нижня частина"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:1071
 msgid "Socials Links"
@@ -1782,19 +1773,19 @@ msgstr ""
 
 #: inc/theme-options/theme-options.php:1078
 msgid "Facebook"
-msgstr "Фейсбук"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:1084
 msgid "Twitter"
-msgstr "Твіттер"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:1090
 msgid "LinkedIn"
-msgstr "LinkedIn"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:1096
 msgid "MySpace"
-msgstr "MySpace"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:1102
 msgid "Google Plus+"
@@ -1802,15 +1793,15 @@ msgstr ""
 
 #: inc/theme-options/theme-options.php:1108
 msgid "Dribbble"
-msgstr "Dribbble"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:1114
 msgid "Skype"
-msgstr "Skype"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:1120
 msgid "Flickr"
-msgstr "Flickr"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:1126
 msgid "You Tube"
@@ -1818,11 +1809,11 @@ msgstr ""
 
 #: inc/theme-options/theme-options.php:1132
 msgid "Vimeo"
-msgstr "Vimeo"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:1138
 msgid "RSS"
-msgstr "RSS"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:1144
 msgid "Vk.com"
@@ -1830,11 +1821,11 @@ msgstr ""
 
 #: inc/theme-options/theme-options.php:1150
 msgid "Instagram"
-msgstr "Instagram"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:1156
 msgid "Pinterest"
-msgstr "Pinterest"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:1162
 msgid "Yelp"
@@ -1842,19 +1833,19 @@ msgstr ""
 
 #: inc/theme-options/theme-options.php:1168
 msgid "E-mail"
-msgstr "E-mail"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:1174
 msgid "Github"
-msgstr "GitHub"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:1180
 msgid "Tumblr"
-msgstr "Tumblr"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:1186
 msgid "Soundcloud"
-msgstr "Soundcloud"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:1192
 msgid "Tripadvisor"
@@ -1862,7 +1853,7 @@ msgstr ""
 
 #: inc/theme-options/theme-options.php:1206
 msgid "Footer options"
-msgstr "Параметри нижнього колонтитулу"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:1207
 msgid "Replace default theme copyright information and links"
@@ -1881,7 +1872,7 @@ msgstr ""
 #: inc/theme-options/theme-options.php:1217
 #: inc/theme-options/theme-options.php:1222
 msgid "Custom CSS"
-msgstr "Користувальницький CSS"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:1223
 msgid ""
@@ -1977,7 +1968,7 @@ msgstr ""
 
 #: inc/theme-options/theme-options.php:1471
 msgid "Support"
-msgstr "Підтримка"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:1473
 msgid "If You faced with problems or find error or bug, please"
@@ -1993,7 +1984,7 @@ msgstr ""
 
 #: inc/theme-options/theme-options.php:1475
 msgid "Support forum"
-msgstr "Форум підтримки теми (англ.)"
+msgstr ""
 
 #: inc/theme-options/theme-options.php:1476
 msgid "You may find answers on Your questions."
@@ -2033,11 +2024,11 @@ msgstr ""
 
 #: inc/widgets.php:122
 msgid "Title:"
-msgstr "Назва:"
+msgstr ""
 
 #: inc/widgets.php:125
 msgid "Number of posts to show:"
-msgstr "Відображати таку кількість публікацій:"
+msgstr ""
 
 #: inc/widgets.php:129
 msgid "Text Message:"
@@ -2045,32 +2036,29 @@ msgstr ""
 
 #: no-results.php:15
 msgid "Nothing Found"
-msgstr "Нічого не знайдено"
+msgstr ""
 
 #: no-results.php:20
 #, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
-"Готові опублікувати свій перший запис? <a href=\"%1$s\">Почніть звідси</a>."
 
 #: no-results.php:24
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"Вибачте, за вашим запитом нічого не знайдено. Спробуйте інші ключові слова."
 
 #: no-results.php:29
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
-"Інформацію на запит знайти не вдалося. Можливо, буде корисний пошук по сайту."
 
 #: searchform.php:11 searchform.php:13
 msgid "Search"
-msgstr "Пошук"
+msgstr ""
 
 #: searchform.php:12
 msgid "Type Here to Search"
@@ -2079,88 +2067,13 @@ msgstr ""
 #: sidebar-blogright.php:26 sidebar-homepage.php:26 sidebar-page.php:26
 #: sidebar-single-post.php:26 sidebar.php:26
 msgid "Meta"
-msgstr "Мета"
+msgstr ""
 
 #: taxonomy-post_format.php:18
 #, php-format
 msgid "%s Archives"
-msgstr "Архів формату &laquo;%s&raquo;"
+msgstr ""
 
 #: woocommerce/single-product/product-image.php:44
 msgid "Placeholder"
 msgstr ""
-
-#~ msgid "Background Color "
-#~ msgstr "Фоновий колір"
-
-#~ msgctxt "Next post link"
-#~ msgid "&rarr;"
-#~ msgstr "&rarr;"
-
-#~ msgctxt "Previous post link"
-#~ msgid "&larr;"
-#~ msgstr "&larr;"
-
-#~ msgid "All plugins installed and activated successfully. %s"
-#~ msgstr "Все плагіни успішно встановлені і активовані.%s"
-
-#~ msgid "%1$s installed successfully."
-#~ msgstr "%1$s встановлений успішно."
-
-#~ msgid "Hide Details"
-#~ msgstr "Сховати деталі"
-
-#~ msgid "Show Details"
-#~ msgstr "Показати деталі"
-
-#~ msgid "Plugin installed successfully."
-#~ msgstr "Плаґін успішно встановлено."
-
-#~ msgid "Plugin install failed."
-#~ msgstr "Встановлення плаґіну невдале"
-
-#~ msgid "Installing the plugin&#8230;"
-#~ msgstr "Встановлення плаґіну&#8230;"
-
-#~ msgid "Unpacking the package&#8230;"
-#~ msgstr "Розпаковування архіву&#8230;"
-
-#~ msgid ""
-#~ "Downloading install package from <span class=\"code\">%s</span>&#8230;"
-#~ msgstr "Завантаження архіву плаґіну з <span class=\"code\">%s</span>&#8230;"
-
-#~ msgid "Install package not available."
-#~ msgstr "Пакет оновлення недоступний."
-
-#~ msgid "Return to the Dashboard"
-#~ msgstr "Повернутися в консоль"
-
-#~ msgid "Begin installing plugin"
-#~ msgid_plural "Begin installing plugins"
-#~ msgstr[0] "Початок встановлення плагіна"
-#~ msgstr[1] "Початок встановлення плагінів"
-#~ msgstr[2] ""
-
-#~ msgid "This theme requires the following plugin: %1$s."
-#~ msgid_plural "This theme requires the following plugins: %1$s."
-#~ msgstr[0] "Ця тема потребує наступного плагіна: %1$s."
-#~ msgstr[1] "Ця тема потребує наступних плагінів: %1$s."
-#~ msgstr[2] ""
-
-#~ msgid "http://wordpress.org"
-#~ msgstr "http://wordpress.org"
-
-#~ msgid "WordPress"
-#~ msgstr "WordPress"
-
-#~ msgctxt "1: post format name. 2: date"
-#~ msgid "%1$s on %2$s"
-#~ msgstr "%1$s від %2$s"
-
-#~ msgctxt "Bitter font: on or off"
-#~ msgid "on"
-#~ msgstr "увімкнено"
-
-#~ msgctxt "Source Sans Pro font: on or off"
-#~ msgid "on"
-#~ msgstr "увімкнено"

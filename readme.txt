@@ -6,15 +6,13 @@ We have created a theme based on our necessities and experience, we will be glad
 Our code is hand-made, so if you find a bug or have a wish to modify something, feel free to send us your feedback.
 We want to make our product even better and better and we need users support and feedbacks.
 
-Don't forget to visit our website http://fruitfulcode.com
-
 Thank you.
 
 -------------------------------------------------------
     Copyright
 -------------------------------------------------------
 
-Fruitful is a free WordPress responsive theme with theme options panel, designed and developed in Fruitful Code (www.fruitfulcode.com)
+Fruitful is a free WordPress responsive theme with theme options panel, designed and developed in Fruitful Code
 Feel free to use and modify this theme as you like.
 Fruitful is distributed under the GPLv2 license (http://www.gnu.org/licenses/gpl-2.0.html)
 
@@ -23,11 +21,11 @@ Fruitful is distributed under the GPLv2 license (http://www.gnu.org/licenses/gpl
 -------------------------------------------------------
 
 If you want to get demo content pages like on demo website http://themes.fruitfulcode.com/fruitful/
+Support http://fruitfulcode.zendesk.com/hc/en-us/requests/new
 
 1. Install plugin WordPress Importer 
-2. Download http://themes.fruitfulcode.com/fruitful/dummy_data.xml 
-3. Visit Tools -> Import in the WordPress dashboard and select dummy_data.xml which you saved.
-4. Push "Upload file and import" button
+2. Visit Tools -> Import in the WordPress dashboard and select dummy_data.xml from "demo-content" folder from .
+3. Push "Upload file and import" button
  
 
 -------------------------------------------------------

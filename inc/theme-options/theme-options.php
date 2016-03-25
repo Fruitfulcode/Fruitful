@@ -1207,7 +1207,7 @@ class fruitful_theme_options {
 				'info'		=> __('Replace default theme copyright information and links','fruitful'),
 				'box-title' =>  __('Copyright section','fruitful'),
 				'type'		=> 'textarea',
-				'default'	=> __('Fruitful theme by <a href="http://fruitfulcode.com">fruitfulcode</a> Powered by: <a href="http://wordpress.org">WordPress</a>','fruitful'),				
+				'default'	=> __('Fruitful theme by <a href="https://github.com/fruitfulcode/">fruitfulcode</a> Powered by: <a href="http://wordpress.org">WordPress</a>','fruitful'),				
 				)
 			)
 		);	
@@ -1471,7 +1471,7 @@ class fruitful_theme_options {
 					<h3><?php _e('Support', 'fruitful'); ?></h3>
 					<p class="sidebar-promo-content"><?php 
 							_e('If You faced with problems or find error or bug, please','fruitful'); 
-							echo ' <a target="_blank" href="http://support.fruitfulcode.com/hc/en-us/requests/new">'; _e('submit request.','fruitful'); echo '</a> ';
+							echo ' <a target="_blank" href="http://fruitfulcode.zendesk.com/hc/en-us/requests/new">'; _e('submit request.','fruitful'); echo '</a> ';
 							_e('On official ','fruitful'); echo ' <a target="_blank" href="http://wordpress.org/support/theme/fruitful">'; _e('Support forum','fruitful'); echo '</a> ';
 							_e('You may find answers on Your questions.','fruitful'); 
 					?></p>
@@ -1481,9 +1481,8 @@ class fruitful_theme_options {
 					<p class="sidebar-promo-content"><?php 
 							_e('Our team is available for any type of WordPress development. ','fruitful'); 
 							_e('If You want customize theme or add new features, You can','fruitful'); 
-							echo ' <a target="_blank" href="http://fruitfulcode.com/order/">'; _e('submit order','fruitful'); echo '</a> ';
+							echo ' '; _e('submit order','fruitful'); echo ' ';
 							_e('on our website','fruitful'); 
-							echo ' <a target="_blank" href="http://fruitfulcode.com"> fruitfulcode.com </a> ';
 					?></p>
 				</div>
 			</div>
