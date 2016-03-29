@@ -20,8 +20,7 @@ Fruitful is distributed under the GPLv2 license (http://www.gnu.org/licenses/gpl
     Demo
 -------------------------------------------------------
 
-If you want to get demo content pages like on demo website http://themes.fruitfulcode.com/fruitful/
-Support http://fruitfulcode.zendesk.com/hc/en-us/requests/new
+If you want to get demo content pages like on demo website
 
 1. Install plugin WordPress Importer 
 2. Visit Tools -> Import in the WordPress dashboard and select dummy_data.xml from "demo-content" folder from .
@@ -43,6 +42,8 @@ or find in Appearance > Themes > Install theme, type “Fruitful” in search fi
     User Guide and theme features
 -------------------------------------------------------
 
+=== Documentation ===
+https://github.com/Fruitfulcode/Fruitful/wiki
 
 === WP Version ===
 As this theme uses the WordPress customizer feature for most options, it requires at least version 3.4 to work properly.
@@ -100,6 +101,16 @@ Files: .pot, ru_Ru.po, ru_Ru.mo icluded. Default language is english.
 -------------------------------------------------------
     Changelog
 -------------------------------------------------------
+
+= 3.3 =
+29.03.2016
+
+* Update: FontAwesome 4.5.0
+* Update: Credits and links
+* Bug fix: Menu display for IE9
+* Bug fix: Search button
+* Bug fix: Header height for mobiles with hamburger menu
+
 
 = 3.2 =
 18.02.2016
