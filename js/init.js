@@ -111,6 +111,11 @@ jQuery(document).ready(function($) {
 		
 		fixed_header();
 		setSlidersMaxHeight();
+		
+		$('.resp_full_width_menu .site-header .menu_wrapper .menu li a').on( 'click', function() {
+			$('.resp_full_width_menu .menu_wrapper').fadeOut('slow').addClass('collapse');
+			$('.resp_full_width_menu button.navbar-toggle').addClass('collapsed');
+		});
 });
 
 jQuery(window).bind('resize', function() { 
