@@ -17,6 +17,17 @@ if ( ! isset( $content_width ) )
 /*woocommerce theme support*/
 add_theme_support( 'woocommerce' );
 
+
+/*Infinite scroll theme support*/
+add_theme_support( 'infinite-scroll', array(
+    'type'           => 'scroll',
+    'footer_widgets' => false,
+    'container'      => 'content',
+    'wrapper'        => false,
+    'render'         => false,
+    'posts_per_page' => false,
+) );
+
 if ( ! function_exists( 'fruitful_setup' ) ):
 /**
  * Sets up theme defaults and registers support for various WordPress features.
