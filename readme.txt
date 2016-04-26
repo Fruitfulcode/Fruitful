@@ -102,6 +102,15 @@ Files: .pot, ru_Ru.po, ru_Ru.mo icluded. Default language is english.
     Changelog
 -------------------------------------------------------
 
+= 3.3.1 =
+26.04.2016 
+
+* Improvements: Close menu in mobile and tablet after click
+* Update: Infinite scroll support
+* Bug fix: Mobile dropdown menu double click
+* Bug fix: display of comments using the Jetpack plugin
+
+
 = 3.3 =
 29.03.2016
 
