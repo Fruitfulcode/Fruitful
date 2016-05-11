@@ -662,7 +662,7 @@ if (!function_exists('fruitful_get_favicon')) {
 		$url_favicon = $fav_icon_iphone = $fav_icon_iphone_retina = $fav_icon_ipad = $fav_icon_ipad_retina = null;
 		$theme_options  = fruitful_get_theme_options();
 		
-		if (isset($theme_options['fav_icon'])) {
+		if (!empty($theme_options['fav_icon'])) {
 			$fav_icon_url = esc_attr($theme_options['fav_icon']);
 			$fav_icon_id = wp_get_attachment_image_src($fav_icon_url, 'full');
 			 if (!empty($fav_icon_id)) {
@@ -676,7 +676,7 @@ if (!function_exists('fruitful_get_favicon')) {
 			$out_fav_html .=  '<link rel="apple-touch-icon-precomposed" sizes="16x16" href="'. $image_link .'">';	
 		} 	
 		
-		if (isset($theme_options['fav_icon_iphone'])) {
+		if (!empty($theme_options['fav_icon_iphone'])) {
 			$fav_icon_iphone_url = esc_attr($theme_options['fav_icon_iphone']);
 			$fav_icon_iphone_id = wp_get_attachment_image_src($fav_icon_iphone_url, 'full');
 			 if (!empty($fav_icon_iphone_id)) {
@@ -689,7 +689,7 @@ if (!function_exists('fruitful_get_favicon')) {
 			$out_fav_html .= '<link rel="apple-touch-icon" 	href="' .esc_url($image_link) .'">';
 		}
 		
-		if (isset($theme_options['fav_icon_iphone_retina'])) {
+		if (!empty($theme_options['fav_icon_iphone_retina'])) {
 			$fav_icon_iphone_retina_url = esc_attr($theme_options['fav_icon_iphone_retina']);
 			$fav_icon_iphone_retina_id = wp_get_attachment_image_src($fav_icon_iphone_retina_url, 'full');
 			 if (!empty($fav_icon_iphone_retina_id)) {
@@ -702,7 +702,7 @@ if (!function_exists('fruitful_get_favicon')) {
 			$out_fav_html .= '<link rel="apple-touch-icon" sizes="114x114" 	href="'. esc_url($image_link) .' ">';
 		}
 		
-		if (isset($theme_options['fav_icon_ipad'])) {
+		if (!empty($theme_options['fav_icon_ipad'])) {
 			$fav_icon_ipad_url = esc_attr($theme_options['fav_icon_ipad']);
 			$fav_icon_ipad_id = wp_get_attachment_image_src($fav_icon_ipad_url, 'full');
 			 if (!empty($fav_icon_ipad_id)) {
@@ -715,7 +715,7 @@ if (!function_exists('fruitful_get_favicon')) {
 			$out_fav_html .= '<link rel="apple-touch-icon" sizes="72x72" 	href="'. esc_url($image_link) .'">'; 
 		}
 		
-		if (isset($theme_options['fav_icon_ipad_retina'])) {
+		if (!empty($theme_options['fav_icon_ipad_retina'])) {
 			$fav_icon_ipad_retina_url = esc_attr($theme_options['fav_icon_ipad_retina']);
 			$fav_icon_ipad_retina_id = wp_get_attachment_image_src($fav_icon_ipad_retina_url, 'full');
 			 if (!empty($fav_icon_ipad_retina_id)) {
