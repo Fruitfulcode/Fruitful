@@ -1,6 +1,6 @@
 jQuery(document).ready(function($) {
 
-		$('.menu').mobileMenu({
+		$('.menu').mobileMenuTop({
 			defaultText: ThGlobal.mobile_menu_default_text,
 			className: 	 'select-menu',
 			subMenuDash: '&nbsp;&nbsp;&ndash;'

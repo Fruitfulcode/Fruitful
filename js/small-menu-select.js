@@ -1,5 +1,5 @@
 (function ($) {
-    $.fn.mobileMenu = function (options) {
+    $.fn.mobileMenuTop = function (options) {
 
         var defaults = {
             defaultText: ThGlobal.mobile_menu_default_text,
