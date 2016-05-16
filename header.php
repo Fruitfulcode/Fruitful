@@ -99,7 +99,7 @@
 						<div class="site-header">
 							<div class="logo_wrapper"><?php echo fruitful_get_logo(); ?></div>
 							<div class="menu_button collapsed">
-								<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+								<button class="navbar-toggle collapsed" type="button">
 									<span class="icon-bar" style="background-color: <?php echo $menu_icon_color?>"></span>
 									<span class="icon-bar" style="background-color: <?php echo $menu_icon_color?>"></span>
 									<span class="icon-bar" style="background-color: <?php echo $menu_icon_color?>"></span>
