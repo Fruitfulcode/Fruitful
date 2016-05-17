@@ -163,7 +163,7 @@ jQuery(document).ready(function() {
 						jQuery.prompt.close();
 						setTimeout(function(){	
 							location.reload(true);						
-						}, 1000);
+						}, 2000);
 				}
 			}
 		});
