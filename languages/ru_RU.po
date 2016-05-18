@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Fruitful\n"
 "POT-Creation-Date: 2016-03-25 15:24+0200\n"
-"PO-Revision-Date: 2016-03-25 15:24+0200\n"
+"PO-Revision-Date: 2016-05-18 18:02+0300\n"
 "Last-Translator: Fruitfulcode\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -152,11 +152,11 @@ msgstr "Сайдбар Продукта"
 
 #: functions.php:300
 msgid "Navigate to..."
-msgstr ""
+msgstr "Перейти к..."
 
 #: functions.php:581 functions.php:586
 msgid "Please add images for slider in theme options!"
-msgstr ""
+msgstr "Пожалуйста, добавьте изображения для слайдера в настройках темы!"
 
 #: functions.php:1374
 msgid "You may be interested in&hellip;"
@@ -207,7 +207,7 @@ msgstr ""
 
 #: functions.php:1692
 msgid "Select different pages!"
-msgstr ""
+msgstr "Выберите разные страницы!"
 
 #: functions.php:1743
 #, php-format
@@ -503,7 +503,7 @@ msgstr "Этот плагин был успешно активирован:"
 #: inc/func/plugin-activation.php:401
 #, php-format
 msgid "No action taken. Plugin %1$s was already active."
-msgstr ""
+msgstr "Плагин %1$s уже активирован."
 
 #: inc/func/plugin-activation.php:402
 #, php-format
@@ -511,6 +511,8 @@ msgid ""
 "Plugin not activated. A higher version of %s is needed for this theme. "
 "Please update the plugin."
 msgstr ""
+"Плагин не активирован. Требуется более новая версия %s для этой темы. "
+"Пожалуйста, обновите плагин."
 
 #: inc/func/plugin-activation.php:403 inc/func/plugins-included.php:92
 #, php-format
@@ -523,7 +525,7 @@ msgstr "Игнорировать это уведомление"
 
 #: inc/func/plugin-activation.php:405
 msgid "Please contact the administrator of this site for help."
-msgstr ""
+msgstr "Пожалуйста, обратитесь к администратору этого сайта за помощью."
 
 #: inc/func/plugin-activation.php:1873
 #, php-format
@@ -540,11 +542,11 @@ msgstr "Рекомендуемый"
 
 #: inc/func/plugin-activation.php:2178
 msgid "WordPress Repository"
-msgstr "WordPress репозитория"
+msgstr "WordPress репозиторий"
 
 #: inc/func/plugin-activation.php:2181
 msgid "External Source"
-msgstr ""
+msgstr "Внешний источник"
 
 #: inc/func/plugin-activation.php:2184
 msgid "Pre-Packaged"
@@ -560,19 +562,19 @@ msgstr "Установлены, но не активированы"
 
 #: inc/func/plugin-activation.php:2207
 msgid "Active"
-msgstr ""
+msgstr "Активный"
 
 #: inc/func/plugin-activation.php:2213
 msgid "Required Update not Available"
-msgstr ""
+msgstr "Требуемое обновление не доступно"
 
 #: inc/func/plugin-activation.php:2216
 msgid "Requires Update"
-msgstr ""
+msgstr "Требуется обновление"
 
 #: inc/func/plugin-activation.php:2219
 msgid "Update recommended"
-msgstr ""
+msgstr "Рекомендуется обновление"
 
 #: inc/func/plugin-activation.php:2227
 #, php-format
@@ -582,33 +584,33 @@ msgstr ""
 #: inc/func/plugin-activation.php:2275
 #, php-format
 msgid "To Install <span class=\"count\">(%s)</span>"
-msgstr ""
+msgstr "Установить <span class=\"count\">(%s)</span>"
 
 #: inc/func/plugin-activation.php:2278
 #, php-format
 msgid "Update Available <span class=\"count\">(%s)</span>"
-msgstr ""
+msgstr "Доступно обновление <span class=\"count\">(%s)</span>"
 
 #: inc/func/plugin-activation.php:2281
 #, php-format
 msgid "To Activate <span class=\"count\">(%s)</span>"
-msgstr ""
+msgstr "Активировать <span class=\"count\">(%s)</span>"
 
 #: inc/func/plugin-activation.php:2363
 msgid "unknown"
-msgstr ""
+msgstr "неизвестно"
 
 #: inc/func/plugin-activation.php:2371
 msgid "Installed version:"
-msgstr ""
+msgstr "Установленная версия:"
 
 #: inc/func/plugin-activation.php:2379
 msgid "Minimum required version:"
-msgstr ""
+msgstr "Минимальная требуемая версия:"
 
 #: inc/func/plugin-activation.php:2391
 msgid "Available version:"
-msgstr ""
+msgstr "Доступные версия:"
 
 #: inc/func/plugin-activation.php:2414
 #, php-format
@@ -616,6 +618,8 @@ msgid ""
 "No plugins to install, update or activate. <a href=\"%1$s\">Return to the "
 "Dashboard</a>"
 msgstr ""
+"Нет плагинов для установки, обновления или активации. <a href=\"%1$s"
+"\">Вернуться к панели инструментов</a>"
 
 #: inc/func/plugin-activation.php:2428
 msgid "Plugin"
@@ -631,7 +635,7 @@ msgstr "Тип"
 
 #: inc/func/plugin-activation.php:2434
 msgid "Version"
-msgstr ""
+msgstr "Версия"
 
 #: inc/func/plugin-activation.php:2435
 msgid "Status"
@@ -640,17 +644,17 @@ msgstr "Статус"
 #: inc/func/plugin-activation.php:2483
 #, php-format
 msgid "Install %2$s"
-msgstr ""
+msgstr "Установить %2$s"
 
 #: inc/func/plugin-activation.php:2487
 #, php-format
 msgid "Update %2$s"
-msgstr ""
+msgstr "Обновить %2$s"
 
 #: inc/func/plugin-activation.php:2492
 #, php-format
 msgid "Activate %2$s"
-msgstr ""
+msgstr "Активировать %2$s"
 
 #: inc/func/plugin-activation.php:2595
 msgid "Install"
@@ -658,7 +662,7 @@ msgstr "Установить"
 
 #: inc/func/plugin-activation.php:2601
 msgid "Update"
-msgstr ""
+msgstr "Обновить"
 
 #: inc/func/plugin-activation.php:2604
 msgid "Activate"
@@ -666,19 +670,19 @@ msgstr "Активировать"
 
 #: inc/func/plugin-activation.php:2635
 msgid "No plugins were selected to be installed. No action taken."
-msgstr ""
+msgstr "Не выбраны плагины для установки."
 
 #: inc/func/plugin-activation.php:2637
 msgid "No plugins were selected to be updated. No action taken."
-msgstr ""
+msgstr "Не выбраны плагины для обновления."
 
 #: inc/func/plugin-activation.php:2673
 msgid "No plugins are available to be installed at this time."
-msgstr ""
+msgstr "Нет плагинов для установки."
 
 #: inc/func/plugin-activation.php:2675
 msgid "No plugins are available to be updated at this time."
-msgstr ""
+msgstr "Нет плагинов для обновления."
 
 #: inc/func/plugin-activation.php:3020
 msgid "Plugin activation failed."
@@ -687,7 +691,7 @@ msgstr "Активация плагина не удалась"
 #: inc/func/plugin-activation.php:3354
 #, php-format
 msgid "Updating Plugin %1$s (%2$d/%3$d)"
-msgstr ""
+msgstr "Обновление плагина %1$s (%2$d/%3$d)"
 
 #: inc/func/plugin-activation.php:3356
 #, php-format
@@ -761,7 +765,7 @@ msgstr "Результаты oEmbed не найдены %s. Посмотреть
 
 #: inc/metaboxes/helpers/cmb_Meta_Box_field.php:460
 msgid "Add Group"
-msgstr ""
+msgstr "Добавить группу"
 
 #: inc/metaboxes/helpers/cmb_Meta_Box_field.php:461
 msgid "Remove Group"
@@ -769,7 +773,7 @@ msgstr "Удалить Группу"
 
 #: inc/metaboxes/helpers/cmb_Meta_Box_types.php:253
 msgid "Add Row"
-msgstr ""
+msgstr "Добавить ряд"
 
 #: inc/metaboxes/helpers/cmb_Meta_Box_types.php:619
 #: inc/metaboxes/helpers/cmb_Meta_Box_types.php:653
@@ -806,7 +810,7 @@ msgstr "Отображение слайдера"
 
 #: inc/metaboxes/init-for-objestcs-mb.php:44
 msgid "Select the option to display the corresponding slider"
-msgstr ""
+msgstr "Выберите параметр, чтобы отобразить соответствующий слайдер"
 
 #: inc/metaboxes/init-for-objestcs-mb.php:47
 msgid "Disable slider"
@@ -832,7 +836,7 @@ msgstr "Разметка"
 
 #: inc/metaboxes/init-for-objestcs-mb.php:67
 msgid "Select a specific layout for this page."
-msgstr ""
+msgstr "Выберите макет для этой страницы."
 
 #: inc/metaboxes/init-for-objestcs-mb.php:78
 msgid "Post settings"
@@ -840,7 +844,7 @@ msgstr "Настройки записей"
 
 #: inc/metaboxes/init-for-objestcs-mb.php:86
 msgid "Select a specific layout for this post."
-msgstr ""
+msgstr "Выберите макет для этого поста."
 
 #: inc/metaboxes/init.php:258
 msgid "Clear"
@@ -860,7 +864,7 @@ msgstr "Текущий цвет"
 
 #: inc/metaboxes/init.php:293
 msgid "Select / Deselect All"
-msgstr ""
+msgstr "Выбрать все / Отменить выбор"
 
 #: inc/metaboxes/init.php:1187 inc/theme-options/theme-options.php:1441
 #: inc/theme-options/theme-options.php:1463
@@ -1020,11 +1024,11 @@ msgstr "Меню слева"
 
 #: inc/theme-options/theme-options.php:134
 msgid "Page templates by default"
-msgstr ""
+msgstr "Шаблоны страниц по умолчанию"
 
 #: inc/theme-options/theme-options.php:135
 msgid "Choose default display for templates."
-msgstr ""
+msgstr "Выберите отображение по умолчанию для шаблонов."
 
 #: inc/theme-options/theme-options.php:140
 msgid "Page:"
@@ -1032,11 +1036,11 @@ msgstr "Страницы:"
 
 #: inc/theme-options/theme-options.php:151
 msgid "Single Post:"
-msgstr ""
+msgstr "Пост:"
 
 #: inc/theme-options/theme-options.php:162
 msgid "Archive:"
-msgstr ""
+msgstr "Архив:"
 
 #: inc/theme-options/theme-options.php:173
 msgid "Author:"
@@ -1060,23 +1064,24 @@ msgstr "Поиск:"
 
 #: inc/theme-options/theme-options.php:229
 msgid "Show Featured image on single post"
-msgstr ""
+msgstr "Показать изображение на странице поста"
 
 #: inc/theme-options/theme-options.php:230
 msgid "Select option below for show featured image on single post page."
-msgstr ""
+msgstr "Выберите опцию ниже для показа изображения на странице поста."
 
 #: inc/theme-options/theme-options.php:231
 msgid "Show featured image"
-msgstr ""
+msgstr "Показывать изображение"
 
 #: inc/theme-options/theme-options.php:239
 msgid "Multilingual Switch in Header (WPML)"
-msgstr ""
+msgstr "Переключатель языков в шапке сайта (WPML)"
 
 #: inc/theme-options/theme-options.php:240
 msgid "If you wish to show Language Switch in header, select option below."
 msgstr ""
+"Для отображения переключателя языков в шапке сайта, выберите опцию внизу."
 
 #: inc/theme-options/theme-options.php:241
 #: inc/theme-options/theme-options.php:1242
@@ -1091,7 +1096,7 @@ msgstr "Сбросить настройки"
 #: inc/theme-options/theme-options.php:247
 #: inc/theme-options/theme-options.php:256
 msgid "All theme options will be reset to default."
-msgstr ""
+msgstr "Все опции темы будут сброшены."
 
 #: inc/theme-options/theme-options.php:269
 #: inc/theme-options/theme-options.php:1066
@@ -1135,27 +1140,27 @@ msgstr "По центру"
 
 #: inc/theme-options/theme-options.php:294
 msgid "Type of Responsive menu"
-msgstr ""
+msgstr "Тип отзывчивого меню"
 
 #: inc/theme-options/theme-options.php:295
 msgid "Set type of responsive menu."
-msgstr ""
+msgstr "Установить тип отзывчивого меню"
 
 #: inc/theme-options/theme-options.php:298
 msgid "Select menu"
-msgstr ""
+msgstr "Выберите меню"
 
 #: inc/theme-options/theme-options.php:299
 msgid "Button menu"
-msgstr ""
+msgstr "Кнопка меню"
 
 #: inc/theme-options/theme-options.php:305
 msgid "Menu icon color"
-msgstr ""
+msgstr "Цвет иконки меню"
 
 #: inc/theme-options/theme-options.php:306
 msgid "Chose color for collapsing menu icon"
-msgstr ""
+msgstr "Выберите цвет для иконки меню"
 
 #: inc/theme-options/theme-options.php:311
 msgid "Background for header"
@@ -1166,6 +1171,8 @@ msgid ""
 "Upload image with full width for background in header area. (Supported "
 "files .png, .jpg, .gif)"
 msgstr ""
+"Загрузить изображение для фона в шапки сайта. (Поддерживаемые файлы .png, ."
+"jpg, .gif)"
 
 #: inc/theme-options/theme-options.php:323
 msgid "Header background-color"
@@ -1215,11 +1222,11 @@ msgstr ""
 
 #: inc/theme-options/theme-options.php:365
 msgid "Background repeat"
-msgstr ""
+msgstr "Повтор фона"
 
 #: inc/theme-options/theme-options.php:373
 msgid "Background Color"
-msgstr ""
+msgstr "Цвет фона"
 
 #: inc/theme-options/theme-options.php:374
 msgid "Choose color for body background"
@@ -1227,7 +1234,7 @@ msgstr "Выберите основной цвет"
 
 #: inc/theme-options/theme-options.php:380
 msgid "Background color for content"
-msgstr ""
+msgstr "Цвет фона для контента"
 
 #: inc/theme-options/theme-options.php:381
 msgid "Choose color for main content area"
@@ -1251,7 +1258,7 @@ msgstr "Размер логотипа"
 
 #: inc/theme-options/theme-options.php:407
 msgid "Specify resolution for your logo image"
-msgstr ""
+msgstr "Укажите разрешение для изображения логотипа"
 
 #: inc/theme-options/theme-options.php:413
 msgid "Width"
@@ -1282,6 +1289,8 @@ msgid ""
 "Upload logo in double size (If your logo is 100 x 20px, it should be 200 x "
 "40px)"
 msgstr ""
+"Загрузите логотип в двойном размере (Если ваш логотип 100 х 20 пикселей, он "
+"должен быть 200 x 40px)"
 
 #: inc/theme-options/theme-options.php:439
 msgid "Favicon"
@@ -1292,6 +1301,8 @@ msgid ""
 "A favicon is a 16x16 pixel icon that represents your site; upload your "
 "custom Favicon here."
 msgstr ""
+"Favicon это иконка 16x16 пикселей, которая представляет ваш сайт; загрузить "
+"пользовательские Favicon здесь."
 
 #: inc/theme-options/theme-options.php:446
 msgid "Favicon iPhone"
@@ -1299,7 +1310,7 @@ msgstr ""
 
 #: inc/theme-options/theme-options.php:447
 msgid "Upload a custom favicon for iPhone (57x57 pixel png)."
-msgstr ""
+msgstr "Загрузить пользовательскую favicon для iPhone (57x57 pixel png)."
 
 #: inc/theme-options/theme-options.php:453
 msgid "Favicon iPhone Retina"
@@ -1308,6 +1319,7 @@ msgstr ""
 #: inc/theme-options/theme-options.php:454
 msgid "Upload a custom favicon for iPhone retina (114x114 pixel png)."
 msgstr ""
+"Загрузить пользовательскую favicon для iPhone retina (114x114 pixel png)."
 
 #: inc/theme-options/theme-options.php:460
 msgid "Favicon iPad"
@@ -1315,7 +1327,7 @@ msgstr ""
 
 #: inc/theme-options/theme-options.php:461
 msgid "Upload a custom favicon for iPad (72x72 pixel png)."
-msgstr ""
+msgstr "Загрузить пользовательскую favicon для iPad (72x72 pixel png)."
 
 #: inc/theme-options/theme-options.php:467
 msgid "Favicon iPad Retina"
@@ -1324,6 +1336,7 @@ msgstr ""
 #: inc/theme-options/theme-options.php:468
 msgid "Upload a custom favicon for iPhone retina (144x144 pixel png)."
 msgstr ""
+"Загрузить пользовательскую favicon для iPhone retina (144x144 pixel png)."
 
 #: inc/theme-options/theme-options.php:478
 msgid "Colors"
@@ -1431,35 +1444,35 @@ msgstr ""
 
 #: inc/theme-options/theme-options.php:629
 msgid "Color for social icons"
-msgstr ""
+msgstr "Цвет социальных иконок"
 
 #: inc/theme-options/theme-options.php:630
 msgid "Choose your colors for social icons"
-msgstr ""
+msgstr "Выберите цвет для социальных иконок"
 
 #: inc/theme-options/theme-options.php:636
 msgid "Social icons background color"
-msgstr ""
+msgstr "Фон социальных иконок"
 
 #: inc/theme-options/theme-options.php:648
 msgid "WooCommerce colors"
-msgstr ""
+msgstr "WooCommerce цвета"
 
 #: inc/theme-options/theme-options.php:649
 msgid "Choose your colors for WooCommerce"
-msgstr ""
+msgstr "Выберите цвета для WooCommerce"
 
 #: inc/theme-options/theme-options.php:655
 msgid "Sale price color"
-msgstr ""
+msgstr "Цвет цены со скидкой"
 
 #: inc/theme-options/theme-options.php:661
 msgid "Rating color (regular)"
-msgstr ""
+msgstr "Цвет рейтинга"
 
 #: inc/theme-options/theme-options.php:667
 msgid "Rating color (hover, active)"
-msgstr ""
+msgstr "Цвет рейтинга (при наведении, активный)"
 
 #: inc/theme-options/theme-options.php:676
 msgid "Fonts"
@@ -1498,6 +1511,8 @@ msgstr "Размер шрифта"
 msgid ""
 "Choose font size for specific html elements. Set size as number, without px.."
 msgstr ""
+"Выберите размер шрифта для конкретных HTML элементов. Установите размер без "
+"указания px .."
 
 #: inc/theme-options/theme-options.php:716
 msgid "H1"
@@ -1575,11 +1590,11 @@ msgstr "Направления скольжения, \"Горизонталь \"
 
 #: inc/theme-options/theme-options.php:806
 msgid "horizontal"
-msgstr ""
+msgstr "горизонтальный"
 
 #: inc/theme-options/theme-options.php:807
 msgid "vertical"
-msgstr ""
+msgstr "вертикальный"
 
 #: inc/theme-options/theme-options.php:815
 msgid "Reverse the animation direction"
@@ -1597,7 +1612,7 @@ msgstr "Обратная анимация"
 #: inc/theme-options/theme-options.php:1015
 #: inc/theme-options/theme-options.php:1040
 msgid "false"
-msgstr ""
+msgstr "ложь"
 
 #: inc/theme-options/theme-options.php:818
 #: inc/theme-options/theme-options.php:828
@@ -1611,7 +1626,7 @@ msgstr ""
 #: inc/theme-options/theme-options.php:1014
 #: inc/theme-options/theme-options.php:1039
 msgid "true"
-msgstr ""
+msgstr "правда"
 
 #: inc/theme-options/theme-options.php:826
 msgid "Animate slider automatically"
@@ -1671,7 +1686,7 @@ msgstr "Случайно"
 
 #: inc/theme-options/theme-options.php:907
 msgid "sliceDownRight"
-msgstr ""
+msgstr "Разделение вниз-вправо"
 
 #: inc/theme-options/theme-options.php:908
 msgid "sliceDownLeft"
@@ -1679,7 +1694,7 @@ msgstr "Разделение сверху-справа"
 
 #: inc/theme-options/theme-options.php:909
 msgid "sliceUpRight"
-msgstr ""
+msgstr "Разделение вверх-вправо"
 
 #: inc/theme-options/theme-options.php:910
 msgid "sliceUpDown"
@@ -1781,6 +1796,12 @@ msgid ""
 "page. To display slider in needed place use shortcode [fruitful_slider]. "
 "Current theme version support only one slider per website."
 msgstr ""
+"Добавьте изображения для слайдера (поддерживаемые файлы png, .jpg, .gif). "
+"Если хотите изменить порядок, просто перетащите изображение. Размер "
+"изображения для слайдов является оригинальным из медиа-галереи, пожалуйста, "
+"загрузите изображения того же размера для корректного отображения. Для "
+"отображения слайдера в нужном месте используйте шорткод [fruitful_slider]. "
+"Текущая версия темы поддерживает только один слайдер на сайте."
 
 #: inc/theme-options/theme-options.php:1058
 msgid "Social Links"
@@ -1942,11 +1963,11 @@ msgstr "Если Вы хотите отобразить корзину в заг
 
 #: inc/theme-options/theme-options.php:1246
 msgid "Cart color"
-msgstr ""
+msgstr "Цвет корзины"
 
 #: inc/theme-options/theme-options.php:1247
 msgid "Choose color for cart icon"
-msgstr ""
+msgstr "Выберите цвет для иконки корзины"
 
 #: inc/theme-options/theme-options.php:1254
 msgid "Woocommerce Shop Sidebar"
@@ -1963,15 +1984,15 @@ msgstr "Сайдбар Продукта "
 
 #: inc/theme-options/theme-options.php:1270
 msgid "Full width with tabs on right side"
-msgstr ""
+msgstr "На всю ширину с вкладками справа"
 
 #: inc/theme-options/theme-options.php:1273
 msgid "Full width with tabs on left side"
-msgstr ""
+msgstr "На всю ширину с вкладками слева"
 
 #: inc/theme-options/theme-options.php:1274
 msgid "Full width with tabs in center"
-msgstr ""
+msgstr "На всю ширину с вкладками по центру"
 
 #: inc/theme-options/theme-options.php:1280
 msgid "Woocommerce pages products per row"
@@ -2062,7 +2083,7 @@ msgstr "Архив новостей"
 
 #: inc/widgets.php:21
 msgid "Use this widget to list your Link posts."
-msgstr ""
+msgstr "Используйте этот виджет для вывода списка ссылок на посты."
 
 #: inc/widgets.php:41
 msgid "News-Archive"
@@ -2127,7 +2148,7 @@ msgstr "Архив формата &laquo;%s&raquo;"
 
 #: woocommerce/single-product/product-image.php:44
 msgid "Placeholder"
-msgstr ""
+msgstr "Заполнение"
 
 #~ msgid "Use this widget to list your Link posts"
 #~ msgstr "Используйте этот виджет, чтобы вывести свои сообщения"
