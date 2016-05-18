@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Fruitful theme\n"
 "POT-Creation-Date: 2016-03-25 15:56+0200\n"
-"PO-Revision-Date: 2016-03-25 15:56+0200\n"
+"PO-Revision-Date: 2016-05-18 17:28+0300\n"
 "Last-Translator: Fruitfulcode\n"
 "Language-Team: Gürsel çetin <gurseldesign@gmail.com>\n"
 "Language: tr_TR\n"
@@ -19,56 +19,60 @@ msgstr ""
 #: author-bio.php:16
 #, php-format
 msgid "About %s"
-msgstr ""
+msgstr "Hakkında %s"
 
 #: author-bio.php:20
 #, php-format
 msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
+"Tarafından gönderilen tüm mesajları görüntüle %s <span class=\"meta-nav"
+"\">&rarr;</span>"
 
 #: comments.php:33
 #, php-format
 msgid "One thought on &ldquo;%2$s&rdquo;"
-msgstr ""
+msgstr "One düşünce &ldquo;%2$s&rdquo;"
 
 #: comments.php:40 comments.php:60
 msgid "Comment navigation"
-msgstr ""
+msgstr "Yorum navigasyon"
 
 #: comments.php:41 comments.php:61
 msgid "&larr; Older Comments"
-msgstr ""
+msgstr "&larr; eski Yorumlar"
 
 #: comments.php:42 comments.php:62
 msgid "Newer Comments &rarr;"
-msgstr ""
+msgstr "Daha yeni yorumlar &rarr;"
 
 #: comments.php:72
 msgid "Comments are closed."
-msgstr ""
+msgstr "Yoruma kapalı."
 
 #: content-404.php:13
 msgid "Oops! That page can&rsquo;t be found."
-msgstr ""
+msgstr "Oops! Bu sayfa bulunamıyor."
 
 #: content-404.php:17
 msgid ""
 "It looks like nothing was found at this location. Maybe try one of the links "
 "below or a search?"
 msgstr ""
+"Hiçbir şey bu konumda bulunmuştur gibi görünüyor. Belki aşağıdaki "
+"bağlantıları ya da bir arama birini deneyin?"
 
 #: content-aside.php:32 content-audio.php:33 content-gallery.php:32
 #: content-image.php:33 content-link.php:32 content-quote.php:32
 #: content-status.php:32 content-video.php:32
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
+msgstr "Okumaya devam et <span class=\"meta-nav\">&rarr;</span>"
 
 #: content-aside.php:33 content-audio.php:34 content-chat.php:33
 #: content-gallery.php:33 content-image.php:34 content-link.php:33
 #: content-page.php:22 content-quote.php:33 content-single.php:33
 #: content-status.php:33 content-video.php:33 content.php:64 image.php:87
 msgid "Pages:"
-msgstr ""
+msgstr "Sayfalar:"
 
 #: content-aside.php:39 content-aside.php:46 content-audio.php:43
 #: content-chat.php:38 content-gallery.php:49 content-image.php:49
@@ -76,29 +80,29 @@ msgstr ""
 #: content-single.php:38 content-video.php:48 content.php:75 image.php:35
 #: image.php:101
 msgid "Edit"
-msgstr ""
+msgstr "Düzenleme"
 
 #: content-chat.php:22 content-quote.php:23 content.php:33 functions.php:1477
 #, php-format
 msgid "Permalink to %s"
-msgstr ""
+msgstr "Permalink to %s"
 
 #: content-gallery.php:43 content-image.php:42 content-quote.php:40
 #: content-video.php:41 content.php:72
 msgid "Leave a comment"
-msgstr ""
+msgstr "yorum Yap"
 
 #: content-gallery.php:43 content.php:72
 msgid "1 Comment"
-msgstr ""
+msgstr "1 yorum"
 
 #: content-gallery.php:43 content.php:72
 msgid "% Comments"
-msgstr ""
+msgstr "% Yorumlar"
 
 #: content-image.php:42 content-quote.php:40 content-video.php:41
 msgid "One comment so far"
-msgstr ""
+msgstr "Bir Yorum şimdiye kadar"
 
 #: content-image.php:42 content-quote.php:40 content-video.php:41
 #, php-format
@@ -107,56 +111,56 @@ msgstr ""
 
 #: content.php:63
 msgid "Read More <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
+msgstr "Daha fazla oku <span class=\"meta-nav\">&rarr;</span>"
 
 #: functions.php:72 functions.php:78
 msgid "on"
-msgstr ""
+msgstr "üzerinde"
 
 #: functions.php:125
 msgid "Primary Menu"
-msgstr ""
+msgstr "Birincil menü"
 
 #: functions.php:162
 #, php-format
 msgid "Page %s"
-msgstr ""
+msgstr "Sayfa %s"
 
 #: functions.php:178
 msgid "Main Sidebar"
-msgstr ""
+msgstr "ana Kenar Çubuğu"
 
 #: functions.php:187
 msgid "Blog Sidebar"
-msgstr ""
+msgstr "Blog Kenar Çubuğu"
 
 #: functions.php:196
 msgid "Single Post Sidebar"
-msgstr ""
+msgstr "Tekil Mesaj Kenar"
 
 #: functions.php:205
 msgid "Homepage Sidebar"
-msgstr ""
+msgstr "Anasayfa Kenar Çubuğu"
 
 #: functions.php:215
 msgid "Shop Page Sidebar"
-msgstr ""
+msgstr "Sayfa Kenar çubuğu alışveriş"
 
 #: functions.php:224
 msgid "Product Page Sidebar"
-msgstr ""
+msgstr "Ürün Sayfası Kenar Çubuğu"
 
 #: functions.php:300
 msgid "Navigate to..."
-msgstr ""
+msgstr "Şu yöne rotayı ayarla..."
 
 #: functions.php:581 functions.php:586
 msgid "Please add images for slider in theme options!"
-msgstr ""
+msgstr "Tema seçenekleri kaymak için görüntüleri ekleyin!"
 
 #: functions.php:1374
 msgid "You may be interested in&hellip;"
-msgstr ""
+msgstr "İlginizi çekebilir &hellip;"
 
 #: functions.php:1421
 #, php-format
@@ -170,7 +174,7 @@ msgstr ""
 #: functions.php:1449
 #, php-format
 msgid "Posted in %1$s"
-msgstr ""
+msgstr "Yayınlanan %1$s"
 
 #: functions.php:1471
 #, php-format
@@ -187,63 +191,63 @@ msgstr ""
 
 #: functions.php:1595
 msgid "&laquo; Previous Page"
-msgstr ""
+msgstr "&laquo; Önceki sayfa"
 
 #: functions.php:1596
 msgid "Next Page &raquo;"
-msgstr ""
+msgstr "Sonraki Sayfa &raquo;"
 
 #: functions.php:1638
 msgid "Search for products"
-msgstr ""
+msgstr "ürünler için ara"
 
 #: functions.php:1692
 msgid "Front page displays Error."
-msgstr ""
+msgstr "Ön sayfa görüntüler hata."
 
 #: functions.php:1692
 msgid "Select different pages!"
-msgstr ""
+msgstr "Farklı sayfaları seçin!"
 
 #: functions.php:1743
 #, php-format
 msgid "Category Archives: %s"
-msgstr ""
+msgstr "Kategori Arşivi: %s"
 
 #: functions.php:1745
 #, php-format
 msgid "Tag Archives: %s"
-msgstr ""
+msgstr "Tag Arşivi:: %s"
 
 #: functions.php:1748
 #, php-format
 msgid "Author Archives: %s"
-msgstr ""
+msgstr "Yazar Arşivi: %s"
 
 #: functions.php:1752
 #, php-format
 msgid "Daily Archives: %s"
-msgstr ""
+msgstr "Günlük arşivler: %s"
 
 #: functions.php:1755
 #, php-format
 msgid "Monthly Archives: %s"
-msgstr ""
+msgstr "Aylık Arşivler: %s"
 
 #: functions.php:1758
 #, php-format
 msgid "Yearly Archives: %s"
-msgstr ""
+msgstr "Yıllık Arşivler: %s"
 
 #: functions.php:1761 sidebar-blogright.php:19 sidebar-homepage.php:19
 #: sidebar-page.php:19 sidebar-single-post.php:19 sidebar.php:19
 msgid "Archives"
-msgstr ""
+msgstr "Arşiv"
 
 #: functions.php:1766
 #, php-format
 msgid "Search Results for: %s"
-msgstr ""
+msgstr "İçin arama sonuçları: %s"
 
 #: functions.php:1925
 msgid ""
@@ -251,10 +255,13 @@ msgid ""
 "problems with display content in shortcodes, because we created this part as "
 "plugin. You need install "
 msgstr ""
+"Dikkat! Fruitful tema sürüm 2.0 önemli güncellemeler var. Biz eklenti olarak "
+"bu bölümü yarattı, çünkü kısa kod ekran içeriği ile bir sorunları olabilir. "
+"Sen yüklemeye gereksinim"
 
 #: functions.php:1927
 msgid " and use them."
-msgstr ""
+msgstr "ve bunları kullanmak."
 
 #: image.php:25
 #, php-format
@@ -264,14 +271,18 @@ msgid ""
 "size image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s"
 "\" rel=\"gallery\">%7$s</a>"
 msgstr ""
+"Yayınlanan <span class=\"entry-date\"><time class=\"entry-date\" datetime="
+"\"%1$s\" pubdate>%2$s</time></span> at <a href=\"%3$s\" title=\"Link to full-"
+"size image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s"
+"\" rel=\"gallery\">%7$s</a>"
 
 #: image.php:39
 msgid "&larr; Previous"
-msgstr ""
+msgstr "&larr; Önceki"
 
 #: image.php:40
 msgid "Next &rarr;"
-msgstr ""
+msgstr "Sonraki &rarr;"
 
 #: image.php:93
 #, php-format
@@ -280,6 +291,9 @@ msgid ""
 "comment</a> or leave a trackback: <a class=\"trackback-link\" href=\"%s\" "
 "title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
 msgstr ""
+"<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Yorum "
+"bırak</a> or leave a trackback: <a class=\"trackback-link\" href=\"%s\" "
+"title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
 
 #: image.php:95
 #, php-format
@@ -288,16 +302,21 @@ msgid ""
 "\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback"
 "\">Trackback URL</a>."
 msgstr ""
+"Yoruma kapalı, ama bir trackback bırakabilirsiniz: <a class=\"trackback-link"
+"\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback"
+"\">Trackback URL</a>."
 
 #: image.php:97
 msgid ""
 "Trackbacks are closed, but you can <a class=\"comment-link\" href=\"#respond"
 "\" title=\"Post a comment\">post a comment</a>."
 msgstr ""
+"Trackbacks kapalı, ama sen yapabilirsin <a class=\"comment-link\" href="
+"\"#respond\" title=\"Post a comment\">yorum bırak</a>."
 
 #: image.php:99
 msgid "Both comments and trackbacks are currently closed."
-msgstr ""
+msgstr "Yorum ve notlarını hem şu anda kapalı."
 
 #: inc/func/fruitful-function.php:38
 msgid "Arial, Helvetica, sans-serif"
@@ -405,11 +424,11 @@ msgstr ""
 
 #: inc/func/fruitful-function.php:119
 msgid "View Options"
-msgstr ""
+msgstr "Görünüm Seçenekleri"
 
 #: inc/func/fruitful-function.php:123
 msgid "No Slider Select!"
-msgstr ""
+msgstr "Hayır Slider seçin!"
 
 #: inc/func/fruitful-function.php:175
 msgid "Link URL"
@@ -421,7 +440,7 @@ msgstr ""
 
 #: inc/func/fruitful-function.php:185 inc/theme-options/theme-options.php:1375
 msgid "Upload Image"
-msgstr ""
+msgstr "Fotoğraf yükleniyor"
 
 #: inc/func/fruitful-function.php:186
 #: inc/metaboxes/helpers/cmb_Meta_Box_types.php:309
@@ -429,63 +448,63 @@ msgstr ""
 #: inc/metaboxes/helpers/cmb_Meta_Box_types.php:786
 #: inc/theme-options/theme-options.php:1381
 msgid "Remove"
-msgstr ""
+msgstr "Kaldır"
 
 #: inc/func/fruitful-function.php:195
 #, php-format
 msgid "Slide # %1$d"
-msgstr ""
+msgstr "Slayt # %1$d"
 
 #: inc/func/fruitful-function.php:216
 msgid "Collapse all"
-msgstr ""
+msgstr "Tüm daraltmak"
 
 #: inc/func/fruitful-function.php:217
 msgid "Expand all"
-msgstr ""
+msgstr "Hepsini genişlet"
 
 #: inc/func/fruitful-function.php:239
 msgid "Add New Slide"
-msgstr ""
+msgstr "Yeni Slayt ekleme"
 
 #: inc/func/plugin-activation.php:333
 msgid "Install Required Plugins"
-msgstr ""
+msgstr "Gerekli Plugins yükleyin"
 
 #: inc/func/plugin-activation.php:334
 msgid "Install Plugins"
-msgstr ""
+msgstr "Eklentileri yükleyin"
 
 #: inc/func/plugin-activation.php:335 inc/func/plugins-included.php:40
 #, php-format
 msgid "Installing Plugin: %s"
-msgstr ""
+msgstr "Yükleme Eklentisi: %s"
 
 #: inc/func/plugin-activation.php:336 inc/func/plugins-included.php:41
 msgid "Something went wrong with the plugin API."
-msgstr ""
+msgstr "Bir şey plugin API ile ters gitti."
 
 #: inc/func/plugin-activation.php:397 inc/func/plugins-included.php:87
 msgid "Return to Required Plugins Installer"
-msgstr ""
+msgstr "Gerekli Eklentiler Installer dönmek"
 
 #: inc/func/plugin-activation.php:398
 msgid "Return to the dashboard"
-msgstr ""
+msgstr "Kontrol paneline dönmek"
 
 #: inc/func/plugin-activation.php:399 inc/func/plugin-activation.php:3021
 #: inc/func/plugins-included.php:88
 msgid "Plugin activated successfully."
-msgstr ""
+msgstr "Eklenti başarıyla çalıştırıldı."
 
 #: inc/func/plugin-activation.php:400 inc/func/plugin-activation.php:2824
 msgid "The following plugin was activated successfully:"
-msgstr ""
+msgstr "Aşağıdaki eklenti başarıyla devreye girer:"
 
 #: inc/func/plugin-activation.php:401
 #, php-format
 msgid "No action taken. Plugin %1$s was already active."
-msgstr ""
+msgstr "Önlem alınmamış. Plugin %1$s zaten aktif oldu."
 
 #: inc/func/plugin-activation.php:402
 #, php-format
@@ -493,19 +512,21 @@ msgid ""
 "Plugin not activated. A higher version of %s is needed for this theme. "
 "Please update the plugin."
 msgstr ""
+"Eklentisi etkin değil. %s daha yüksek bir sürümü bu tema için gereklidir. "
+"eklentiyi güncelleyin."
 
 #: inc/func/plugin-activation.php:403 inc/func/plugins-included.php:92
 #, php-format
 msgid "All plugins installed and activated successfully. %1$s"
-msgstr ""
+msgstr "Tüm eklentileri yüklü ve başarıyla aktif. %1$s"
 
 #: inc/func/plugin-activation.php:404
 msgid "Dismiss this notice"
-msgstr ""
+msgstr "Bu uyarıyı yoksay"
 
 #: inc/func/plugin-activation.php:405
 msgid "Please contact the administrator of this site for help."
-msgstr ""
+msgstr "Yardım için bu sitenin yöneticisine başvurun."
 
 #: inc/func/plugin-activation.php:1873
 #, php-format
@@ -514,11 +535,11 @@ msgstr ""
 
 #: inc/func/plugin-activation.php:2159
 msgid "Required"
-msgstr ""
+msgstr "Gereken"
 
 #: inc/func/plugin-activation.php:2162
 msgid "Recommended"
-msgstr ""
+msgstr "Tavsiye"
 
 #: inc/func/plugin-activation.php:2178
 msgid "WordPress Repository"
@@ -534,27 +555,27 @@ msgstr ""
 
 #: inc/func/plugin-activation.php:2201
 msgid "Not Installed"
-msgstr ""
+msgstr "Yüklü değil"
 
 #: inc/func/plugin-activation.php:2205
 msgid "Installed But Not Activated"
-msgstr ""
+msgstr "Yüklü Ama Aktif Değil"
 
 #: inc/func/plugin-activation.php:2207
 msgid "Active"
-msgstr ""
+msgstr "Aktif"
 
 #: inc/func/plugin-activation.php:2213
 msgid "Required Update not Available"
-msgstr ""
+msgstr "Gerekli Güncelleme Mevcut değil"
 
 #: inc/func/plugin-activation.php:2216
 msgid "Requires Update"
-msgstr ""
+msgstr "Güncelle gerektirir"
 
 #: inc/func/plugin-activation.php:2219
 msgid "Update recommended"
-msgstr ""
+msgstr "Güncelleme tavsiye"
 
 #: inc/func/plugin-activation.php:2227
 #, php-format
@@ -564,33 +585,33 @@ msgstr ""
 #: inc/func/plugin-activation.php:2275
 #, php-format
 msgid "To Install <span class=\"count\">(%s)</span>"
-msgstr ""
+msgstr "Yüklemek <span class=\"count\">(%s)</span>"
 
 #: inc/func/plugin-activation.php:2278
 #, php-format
 msgid "Update Available <span class=\"count\">(%s)</span>"
-msgstr ""
+msgstr "Güncelleme Mevcut <span class=\"count\">(%s)</span>"
 
 #: inc/func/plugin-activation.php:2281
 #, php-format
 msgid "To Activate <span class=\"count\">(%s)</span>"
-msgstr ""
+msgstr "Etkinleştirmek <span class=\"count\">(%s)</span>"
 
 #: inc/func/plugin-activation.php:2363
 msgid "unknown"
-msgstr ""
+msgstr "bilinmeyen"
 
 #: inc/func/plugin-activation.php:2371
 msgid "Installed version:"
-msgstr ""
+msgstr "Yüklü sürümü:"
 
 #: inc/func/plugin-activation.php:2379
 msgid "Minimum required version:"
-msgstr ""
+msgstr "Asgari gerekli versiyon:"
 
 #: inc/func/plugin-activation.php:2391
 msgid "Available version:"
-msgstr ""
+msgstr "Mevcut sürüm:"
 
 #: inc/func/plugin-activation.php:2414
 #, php-format
@@ -598,6 +619,8 @@ msgid ""
 "No plugins to install, update or activate. <a href=\"%1$s\">Return to the "
 "Dashboard</a>"
 msgstr ""
+"Hiçbir eklentileri yüklemek, güncelleme veya etkinleştirmek için. <a href="
+"\"%1$s\">Tablosu'na Dön.</a>"
 
 #: inc/func/plugin-activation.php:2428
 msgid "Plugin"
@@ -605,116 +628,120 @@ msgstr ""
 
 #: inc/func/plugin-activation.php:2429
 msgid "Source"
-msgstr ""
+msgstr "Kaynak"
 
 #: inc/func/plugin-activation.php:2430
 msgid "Type"
-msgstr ""
+msgstr "Tip"
 
 #: inc/func/plugin-activation.php:2434
 msgid "Version"
-msgstr ""
+msgstr "Versiyon"
 
 #: inc/func/plugin-activation.php:2435
 msgid "Status"
-msgstr ""
+msgstr "Durum"
 
 #: inc/func/plugin-activation.php:2483
 #, php-format
 msgid "Install %2$s"
-msgstr ""
+msgstr "Kurmak %2$s"
 
 #: inc/func/plugin-activation.php:2487
 #, php-format
 msgid "Update %2$s"
-msgstr ""
+msgstr "Güncelleştirme %2$s"
 
 #: inc/func/plugin-activation.php:2492
 #, php-format
 msgid "Activate %2$s"
-msgstr ""
+msgstr "Etkinleştirmek %2$s"
 
 #: inc/func/plugin-activation.php:2595
 msgid "Install"
-msgstr ""
+msgstr "Kurmak"
 
 #: inc/func/plugin-activation.php:2601
 msgid "Update"
-msgstr ""
+msgstr "Güncelleştirme"
 
 #: inc/func/plugin-activation.php:2604
 msgid "Activate"
-msgstr ""
+msgstr "Etkinleştirmek"
 
 #: inc/func/plugin-activation.php:2635
 msgid "No plugins were selected to be installed. No action taken."
-msgstr ""
+msgstr "Hiçbir eklentileri yüklü olması seçildi. Önlem alınmamış."
 
 #: inc/func/plugin-activation.php:2637
 msgid "No plugins were selected to be updated. No action taken."
-msgstr ""
+msgstr "Resim eklentileri güncelleme üzere seçildi. Önlem alınmamış."
 
 #: inc/func/plugin-activation.php:2673
 msgid "No plugins are available to be installed at this time."
-msgstr ""
+msgstr "Hiçbir eklentileri şu anda yüklü olması vardır."
 
 #: inc/func/plugin-activation.php:2675
 msgid "No plugins are available to be updated at this time."
-msgstr ""
+msgstr "Hiçbir eklentileri şu anda güncellenmesi mevcuttur."
 
 #: inc/func/plugin-activation.php:3020
 msgid "Plugin activation failed."
-msgstr ""
+msgstr "Eklenti etkinleştirme başarısız oldu."
 
 #: inc/func/plugin-activation.php:3354
 #, php-format
 msgid "Updating Plugin %1$s (%2$d/%3$d)"
-msgstr ""
+msgstr "Güncelleniyor Eklentisi %1$s (%2$d/%3$d)"
 
 #: inc/func/plugin-activation.php:3356
 #, php-format
 msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
-msgstr ""
+msgstr "Yüklenirken bir hata oluştu %1$s: <strong>%2$s</strong>."
 
 #: inc/func/plugin-activation.php:3357
 #, php-format
 msgid "The installation of %1$s failed."
-msgstr ""
+msgstr "kurulumu başarısız %1$s oldu."
 
 #: inc/func/plugin-activation.php:3361
 msgid ""
 "The installation and activation process is starting. This process may take a "
 "while on some hosts, so please be patient."
 msgstr ""
+"Kurulum ve aktivasyon işlemi başlıyor. Bu süreç bazı bilgisayarlar üzerinde "
+"bir süre alabilir, bu yüzden lütfen sabırlı olun olabilir."
 
 #: inc/func/plugin-activation.php:3362
 #, php-format
 msgid "%1$s installed and activated successfully."
-msgstr ""
+msgstr "%1$s Yüklü ve başarıyla aktif."
 
 #: inc/func/plugin-activation.php:3363
 msgid "All installations and activations have been completed."
-msgstr ""
+msgstr "Tüm tesisat ve aktivasyonlar tamamlanmıştır."
 
 #: inc/func/plugin-activation.php:3364
 #, php-format
 msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
-msgstr ""
+msgstr "Yükleme ve Plugin etkinleştirilmesi %1$s (%2$d/%3$d)"
 
 #: inc/func/plugin-activation.php:3367
 msgid ""
 "The installation process is starting. This process may take a while on some "
 "hosts, so please be patient."
 msgstr ""
+"Yükleme işlemi başlıyor. Bu süreç bazı bilgisayarlar üzerinde bir süre "
+"alabilir, bu yüzden lütfen sabırlı olun olabilir."
 
 #: inc/func/plugin-activation.php:3369
 msgid "All installations have been completed."
-msgstr ""
+msgstr "Tüm tesisler tamamlanmıştır."
 
 #: inc/func/plugin-activation.php:3370
 #, php-format
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
-msgstr ""
+msgstr "Yükleme Eklentisi %1$s (%2$d/%3$d)"
 
 #: inc/func/plugins-included.php:38
 msgid "Fruitful Plugin Integration"
@@ -726,69 +753,69 @@ msgstr ""
 
 #: inc/metaboxes/helpers/cmb_Meta_Box_ajax.php:47
 msgid "Please Try Again"
-msgstr ""
+msgstr "Lütfen tekrar deneyin"
 
 #: inc/metaboxes/helpers/cmb_Meta_Box_ajax.php:131
 msgid "Remove Embed"
-msgstr ""
+msgstr "Sitene Ekle Kaldır"
 
 #: inc/metaboxes/helpers/cmb_Meta_Box_ajax.php:134
 #, php-format
 msgid "No oEmbed Results Found for %s. View more info at"
-msgstr ""
+msgstr "Hiçbir oEmbed Sonuçları için Bulundu %s. Daha fazla bilgi görüntüle"
 
 #: inc/metaboxes/helpers/cmb_Meta_Box_field.php:460
 msgid "Add Group"
-msgstr ""
+msgstr "Grup ekle"
 
 #: inc/metaboxes/helpers/cmb_Meta_Box_field.php:461
 msgid "Remove Group"
-msgstr ""
+msgstr "Grubu Kaldır"
 
 #: inc/metaboxes/helpers/cmb_Meta_Box_types.php:253
 msgid "Add Row"
-msgstr ""
+msgstr "Satır ekle"
 
 #: inc/metaboxes/helpers/cmb_Meta_Box_types.php:619
 #: inc/metaboxes/helpers/cmb_Meta_Box_types.php:653
 msgid "No terms"
-msgstr ""
+msgstr "Hiçbir terimler"
 
 #: inc/metaboxes/helpers/cmb_Meta_Box_types.php:692
 #: inc/metaboxes/helpers/cmb_Meta_Box_types.php:746
 msgid "Add or Upload File"
-msgstr ""
+msgstr "Ekle veya Dosya Yükle"
 
 #: inc/metaboxes/helpers/cmb_Meta_Box_types.php:713
 #: inc/metaboxes/helpers/cmb_Meta_Box_types.php:778
 msgid "Remove Image"
-msgstr ""
+msgstr "Görüntü kaldır"
 
 #: inc/metaboxes/helpers/cmb_Meta_Box_types.php:724
 #: inc/metaboxes/helpers/cmb_Meta_Box_types.php:786
 msgid "File:"
-msgstr ""
+msgstr "Dosya:"
 
 #: inc/metaboxes/helpers/cmb_Meta_Box_types.php:724
 #: inc/metaboxes/helpers/cmb_Meta_Box_types.php:786
 msgid "Download"
-msgstr ""
+msgstr "Indir"
 
 #: inc/metaboxes/init-for-objestcs-mb.php:34
 msgid "Slider settings"
-msgstr ""
+msgstr "Slider ayarları"
 
 #: inc/metaboxes/init-for-objestcs-mb.php:42
 msgid "Slider display"
-msgstr ""
+msgstr "Slider ekran"
 
 #: inc/metaboxes/init-for-objestcs-mb.php:44
 msgid "Select the option to display the corresponding slider"
-msgstr ""
+msgstr "İlgili kaydırıcıyı görüntülemek için seçeneği seçin"
 
 #: inc/metaboxes/init-for-objestcs-mb.php:47
 msgid "Disable slider"
-msgstr ""
+msgstr "Devre Dışı Bırak kaymak"
 
 #: inc/metaboxes/init-for-objestcs-mb.php:48
 msgid "Full width slider"
@@ -800,54 +827,54 @@ msgstr ""
 
 #: inc/metaboxes/init-for-objestcs-mb.php:59
 msgid "Page settings"
-msgstr ""
+msgstr "Sayfa ayarları"
 
 #: inc/metaboxes/init-for-objestcs-mb.php:66
 #: inc/metaboxes/init-for-objestcs-mb.php:85
 #: inc/theme-options/theme-options.php:88
 msgid "Layout"
-msgstr ""
+msgstr "Düzen"
 
 #: inc/metaboxes/init-for-objestcs-mb.php:67
 msgid "Select a specific layout for this page."
-msgstr ""
+msgstr "Bu sayfa için özel bir düzen seçin."
 
 #: inc/metaboxes/init-for-objestcs-mb.php:78
 msgid "Post settings"
-msgstr ""
+msgstr "sonrası ayarları"
 
 #: inc/metaboxes/init-for-objestcs-mb.php:86
 msgid "Select a specific layout for this post."
-msgstr ""
+msgstr "Bu yazı için özel bir düzen seçin."
 
 #: inc/metaboxes/init.php:258
 msgid "Clear"
-msgstr ""
+msgstr "Açık"
 
 #: inc/metaboxes/init.php:259
 msgid "Default"
-msgstr ""
+msgstr "Varsayılan"
 
 #: inc/metaboxes/init.php:260
 msgid "Select Color"
-msgstr ""
+msgstr "Seçin renk"
 
 #: inc/metaboxes/init.php:261
 msgid "Current Color"
-msgstr ""
+msgstr "Geçerli renk"
 
 #: inc/metaboxes/init.php:293
 msgid "Select / Deselect All"
-msgstr ""
+msgstr "Seç / seçimini kaldırın Tüm"
 
 #: inc/metaboxes/init.php:1187 inc/theme-options/theme-options.php:1441
 #: inc/theme-options/theme-options.php:1463
 msgid "Save"
-msgstr ""
+msgstr "Kaydet"
 
 #: inc/template-tags.php:27
 msgid "Post navigation"
-msgstr ""
+msgstr "Mesaj navigasyon"
 
 #: inc/template-tags.php:31
 msgid "&larr;"
@@ -859,11 +886,11 @@ msgstr ""
 
 #: inc/template-tags.php:37
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
-msgstr ""
+msgstr "<span class=\"meta-nav\">&larr;</span> Eski postalar"
 
 #: inc/template-tags.php:41
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
+msgstr "En yeni paylaşımlar <span class=\"meta-nav\">&rarr;</span>"
 
 #: inc/template-tags.php:66
 msgid "Pingback:"
@@ -871,7 +898,7 @@ msgstr ""
 
 #: inc/template-tags.php:66 inc/template-tags.php:92
 msgid "(Edit)"
-msgstr ""
+msgstr "(Düzenleme)"
 
 #: inc/template-tags.php:85
 #, php-format
@@ -885,7 +912,7 @@ msgstr ""
 
 #: inc/template-tags.php:96
 msgid "Your comment is awaiting moderation."
-msgstr ""
+msgstr "Yorumunuz onay bekliyor."
 
 #: inc/template-tags.php:121
 #, php-format
@@ -895,22 +922,26 @@ msgid ""
 "\"> by <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" "
 "title=\"%6$s\" rel=\"author\">%7$s</a></span></span>"
 msgstr ""
+"Yayınlanan <a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class="
+"\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</time></a><span class=\"byline"
+"\"> by <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" "
+"title=\"%6$s\" rel=\"author\">%7$s</a></span></span>"
 
 #: inc/template-tags.php:127
 #, php-format
 msgid "View all posts by %s"
-msgstr ""
+msgstr "Tarafından gönderilen tüm mesajları görüntüle %s"
 
 #: inc/theme-options/theme-options.php:54
 #: inc/theme-options/theme-options.php:55
 #: inc/theme-options/theme-options.php:69
 #: inc/theme-options/theme-options.php:1440
 msgid "Theme Options"
-msgstr ""
+msgstr "Tema Ayarları"
 
 #: inc/theme-options/theme-options.php:83
 msgid "General"
-msgstr ""
+msgstr "Genel"
 
 #: inc/theme-options/theme-options.php:89
 msgid ""
@@ -918,36 +949,41 @@ msgid ""
 "adapt for mobile devices and static page with fixed width. Uncheck arrow "
 "below if you need static website display"
 msgstr ""
+"Tema html düzeni 2 tür destekledi. mobil cihazlar ve sabit genişlikte statik "
+"sayfa için adapte duyarlı ayarını varsayılan. Eğer statik web sitesi ekran "
+"gerekiyorsa işaretini kaldırın aşağıda ok"
 
 #: inc/theme-options/theme-options.php:90
 msgid "Responsive"
-msgstr ""
+msgstr "Duyarlı"
 
 #: inc/theme-options/theme-options.php:96
 msgid "Comments"
-msgstr ""
+msgstr "Yorumlar"
 
 #: inc/theme-options/theme-options.php:97
 msgid ""
 "If you want to display comments on your post page or page, select options "
 "below."
 msgstr ""
+"Eğer, mesajlarınızın sayfası veya sayfadaki açıklamaları görüntülemek "
+"aşağıdaki seçenekleri seçmek istiyorum."
 
 #: inc/theme-options/theme-options.php:101
 msgid "Display comment on posts page"
-msgstr ""
+msgstr "Mesajları sayfadaki Ekran yorum"
 
 #: inc/theme-options/theme-options.php:107
 msgid "Display comment on page"
-msgstr ""
+msgstr "Sayfadaki Ekran yorum"
 
 #: inc/theme-options/theme-options.php:123
 msgid "Front page template with latest posts"
-msgstr ""
+msgstr "Son mesajlar ön sayfa şablonu"
 
 #: inc/theme-options/theme-options.php:124
 msgid "Settings > Reading > Front page displays > Your latest posts"
-msgstr ""
+msgstr "Ayarlar > Okuma > Ön sayfa görüntüler > Sizin Tüm Mesajları"
 
 #: inc/theme-options/theme-options.php:127
 #: inc/theme-options/theme-options.php:143
@@ -960,7 +996,7 @@ msgstr ""
 #: inc/theme-options/theme-options.php:220
 #: inc/theme-options/theme-options.php:1259
 msgid "Full width"
-msgstr ""
+msgstr "Tam genişlik"
 
 #: inc/theme-options/theme-options.php:128
 #: inc/theme-options/theme-options.php:142
@@ -974,7 +1010,7 @@ msgstr ""
 #: inc/theme-options/theme-options.php:1260
 #: inc/theme-options/theme-options.php:1272
 msgid "Right sidebar"
-msgstr ""
+msgstr "Sağ kenar çubuğu"
 
 #: inc/theme-options/theme-options.php:129
 #: inc/theme-options/theme-options.php:144
@@ -988,39 +1024,39 @@ msgstr ""
 #: inc/theme-options/theme-options.php:1258
 #: inc/theme-options/theme-options.php:1271
 msgid "Left sidebar"
-msgstr ""
+msgstr "Sol kenar çubuğu"
 
 #: inc/theme-options/theme-options.php:134
 msgid "Page templates by default"
-msgstr ""
+msgstr "Varsayılan olarak sayfa şablonları"
 
 #: inc/theme-options/theme-options.php:135
 msgid "Choose default display for templates."
-msgstr ""
+msgstr "şablonlar için varsayılan ekranı seçin."
 
 #: inc/theme-options/theme-options.php:140
 msgid "Page:"
-msgstr ""
+msgstr "Sayfa:"
 
 #: inc/theme-options/theme-options.php:151
 msgid "Single Post:"
-msgstr ""
+msgstr "Tekil Mesaj:"
 
 #: inc/theme-options/theme-options.php:162
 msgid "Archive:"
-msgstr ""
+msgstr "Arşiv:"
 
 #: inc/theme-options/theme-options.php:173
 msgid "Author:"
-msgstr ""
+msgstr "Yazar:"
 
 #: inc/theme-options/theme-options.php:184
 msgid "Category:"
-msgstr ""
+msgstr "Kategori:"
 
 #: inc/theme-options/theme-options.php:195
 msgid "Tags:"
-msgstr ""
+msgstr "Etiketler:"
 
 #: inc/theme-options/theme-options.php:206
 msgid "404:"
@@ -1028,178 +1064,186 @@ msgstr ""
 
 #: inc/theme-options/theme-options.php:217
 msgid "Search:"
-msgstr ""
+msgstr "Arama:"
 
 #: inc/theme-options/theme-options.php:229
 msgid "Show Featured image on single post"
-msgstr ""
+msgstr "Tek yazı üzerine Çıkan görüntüyü göster"
 
 #: inc/theme-options/theme-options.php:230
 msgid "Select option below for show featured image on single post page."
 msgstr ""
+"göstermek için aşağıda seçeneğini seçin tek direkli görüntüyü sayfada yer "
+"aldı."
 
 #: inc/theme-options/theme-options.php:231
 msgid "Show featured image"
-msgstr ""
+msgstr "özellikli resim göstermek"
 
 #: inc/theme-options/theme-options.php:239
 msgid "Multilingual Switch in Header (WPML)"
-msgstr ""
+msgstr "Başlık Dilde Switcher (WPML)"
 
 #: inc/theme-options/theme-options.php:240
 msgid "If you wish to show Language Switch in header, select option below."
-msgstr ""
+msgstr "Aşağıda, başlığında seçin seçeneği Dil Switcher göstermek isterseniz."
 
 #: inc/theme-options/theme-options.php:241
 #: inc/theme-options/theme-options.php:1242
 msgid "Enable"
-msgstr ""
+msgstr "etkinleştirme"
 
 #: inc/theme-options/theme-options.php:246
 #: inc/theme-options/theme-options.php:255
 msgid "Reset options"
-msgstr ""
+msgstr "sıfırlama seçenekleri"
 
 #: inc/theme-options/theme-options.php:247
 #: inc/theme-options/theme-options.php:256
 msgid "All theme options will be reset to default."
-msgstr ""
+msgstr "Tüm tema seçenekleri varsayılan sıfırlanır."
 
 #: inc/theme-options/theme-options.php:269
 #: inc/theme-options/theme-options.php:1066
 msgid "Header"
-msgstr ""
+msgstr "üstbilgi"
 
 #: inc/theme-options/theme-options.php:274
 msgid "Sticky  header"
-msgstr ""
+msgstr "Sabit başlık"
 
 #: inc/theme-options/theme-options.php:275
 msgid "Options relating to the website header"
-msgstr ""
+msgstr "Web sitesi başlığına ilişkin seçenekler"
 
 #: inc/theme-options/theme-options.php:276
 msgid "Enabled"
-msgstr ""
+msgstr "Etkin"
 
 #: inc/theme-options/theme-options.php:282
 msgid "Menu Position"
-msgstr ""
+msgstr "Menü Konumu"
 
 #: inc/theme-options/theme-options.php:283
 msgid "Set menu position."
-msgstr ""
+msgstr "Set menü konumu."
 
 #: inc/theme-options/theme-options.php:286
 #: inc/theme-options/theme-options.php:401
 msgid "Right"
-msgstr ""
+msgstr "Sağ"
 
 #: inc/theme-options/theme-options.php:287
 #: inc/theme-options/theme-options.php:399
 msgid "Left"
-msgstr ""
+msgstr "Sol"
 
 #: inc/theme-options/theme-options.php:288
 #: inc/theme-options/theme-options.php:400
 msgid "Center"
-msgstr ""
+msgstr "Merkez"
 
 #: inc/theme-options/theme-options.php:294
 msgid "Type of Responsive menu"
-msgstr ""
+msgstr "Duyarlı menünün türü"
 
 #: inc/theme-options/theme-options.php:295
 msgid "Set type of responsive menu."
-msgstr ""
+msgstr "duyarlı menü ayarlama türü."
 
 #: inc/theme-options/theme-options.php:298
 msgid "Select menu"
-msgstr ""
+msgstr "Seç menüsü"
 
 #: inc/theme-options/theme-options.php:299
 msgid "Button menu"
-msgstr ""
+msgstr "Düğme menüsü"
 
 #: inc/theme-options/theme-options.php:305
 msgid "Menu icon color"
-msgstr ""
+msgstr "Menü simgesi rengi"
 
 #: inc/theme-options/theme-options.php:306
 msgid "Chose color for collapsing menu icon"
-msgstr ""
+msgstr "Menü simgesini çöken için renk seçin"
 
 #: inc/theme-options/theme-options.php:311
 msgid "Background for header"
-msgstr ""
+msgstr "Başlığı için arka plan"
 
 #: inc/theme-options/theme-options.php:312
 msgid ""
 "Upload image with full width for background in header area. (Supported "
 "files .png, .jpg, .gif)"
 msgstr ""
+"Başlık alanında arka plan için tam genişlikte resim yükleyin. (Desteklenen "
+"dosyalar .png, .jpg, .gif)"
 
 #: inc/theme-options/theme-options.php:323
 msgid "Header background-color"
-msgstr ""
+msgstr "Başlığının arka plan rengi"
 
 #: inc/theme-options/theme-options.php:329
 msgid "Background image size"
-msgstr ""
+msgstr "Arka plan görüntü boyutu"
 
 #: inc/theme-options/theme-options.php:330
 msgid "Choose size for background image - full width or only for content area."
 msgstr ""
+"Tam genişliği veya sadece içerik alanı için - arka plan görüntüsü boyutunu "
+"seçin."
 
 #: inc/theme-options/theme-options.php:333
 msgid "Full width position"
-msgstr ""
+msgstr "Tam genişlikte pozisyon"
 
 #: inc/theme-options/theme-options.php:334
 msgid "Centered position"
-msgstr ""
+msgstr "Merkezli pozisyon"
 
 #: inc/theme-options/theme-options.php:340
 msgid "Height for header area"
-msgstr ""
+msgstr "Başlık alanı için yükseklik"
 
 #: inc/theme-options/theme-options.php:341
 msgid "Minimum height in pixels"
-msgstr ""
+msgstr "piksel Minimum yükseklik"
 
 #: inc/theme-options/theme-options.php:351
 msgid "Background"
-msgstr ""
+msgstr "arka plan"
 
 #: inc/theme-options/theme-options.php:355
 msgid "Background Image"
-msgstr ""
+msgstr "Arka plan görüntüsü"
 
 #: inc/theme-options/theme-options.php:356
 msgid ""
 "Upload your background image for site background. (Supported files .png, ."
 "jpg, .gif)"
 msgstr ""
+"Site arka plan Arka plan resminizi yükleyin. (Desteklenen dosyalar .png, ."
+"jpg, .gif)"
 
 #: inc/theme-options/theme-options.php:365
 msgid "Background repeat"
-msgstr ""
+msgstr "Arkaplan tekrar"
 
 #: inc/theme-options/theme-options.php:373
 msgid "Background Color"
-msgstr ""
+msgstr "Arka plan rengi"
 
 #: inc/theme-options/theme-options.php:374
 msgid "Choose color for body background"
-msgstr ""
+msgstr "vücut arka plan rengini seçin"
 
 #: inc/theme-options/theme-options.php:380
 msgid "Background color for content"
-msgstr ""
+msgstr "içerik için arka plan rengi"
 
 #: inc/theme-options/theme-options.php:381
 msgid "Choose color for main content area"
-msgstr ""
+msgstr "Ana içerik alanı için renk seçin"
 
 #: inc/theme-options/theme-options.php:390
 msgid "Logo"
@@ -1207,47 +1251,50 @@ msgstr ""
 
 #: inc/theme-options/theme-options.php:395
 msgid "Logo Position"
-msgstr ""
+msgstr "Logo pozisyonu"
 
 #: inc/theme-options/theme-options.php:396
 msgid "Set Logo Position"
-msgstr ""
+msgstr "Set Logo Pozisyonu"
 
 #: inc/theme-options/theme-options.php:406
 msgid "Logo size"
-msgstr ""
+msgstr "Logo boyutu"
 
 #: inc/theme-options/theme-options.php:407
 msgid "Specify resolution for your logo image"
-msgstr ""
+msgstr "Logo görüntünün çözünürlüğünü belirtin"
 
 #: inc/theme-options/theme-options.php:413
 msgid "Width"
-msgstr ""
+msgstr "Genişlik"
 
 #: inc/theme-options/theme-options.php:419
 msgid "Height"
-msgstr ""
+msgstr "Yükseklik"
 
 #: inc/theme-options/theme-options.php:425
 msgid "Logo image"
-msgstr ""
+msgstr "Logo resmi"
 
 #: inc/theme-options/theme-options.php:426
 msgid ""
 "Upload logo image for your website. Size is original (Supported files .png, ."
 "jpg, .gif)"
 msgstr ""
+"Web siteniz için logo resmi yükleyin. Boyut orijinal (Desteklenen dosyalar, ."
+"png jpg, gif)"
 
 #: inc/theme-options/theme-options.php:432
 msgid "Logo image retina"
-msgstr ""
+msgstr "Logo resimi retina"
 
 #: inc/theme-options/theme-options.php:433
 msgid ""
 "Upload logo in double size (If your logo is 100 x 20px, it should be 200 x "
 "40px)"
 msgstr ""
+"(Logo x 20px 100 ise o 200px x 40px olmalıdır) çift boyutta logo yükleyin"
 
 #: inc/theme-options/theme-options.php:439
 msgid "Favicon"
@@ -1258,6 +1305,8 @@ msgid ""
 "A favicon is a 16x16 pixel icon that represents your site; upload your "
 "custom Favicon here."
 msgstr ""
+"Bir favicon sitenizi temsil eden bir 16x16 piksel simge olduğu; Burada özel "
+"Favicon yükleyin."
 
 #: inc/theme-options/theme-options.php:446
 msgid "Favicon iPhone"
@@ -1265,7 +1314,7 @@ msgstr ""
 
 #: inc/theme-options/theme-options.php:447
 msgid "Upload a custom favicon for iPhone (57x57 pixel png)."
-msgstr ""
+msgstr "Için özel bir favicon yükle iPhone (57x57 pixel png)."
 
 #: inc/theme-options/theme-options.php:453
 msgid "Favicon iPhone Retina"
@@ -1273,7 +1322,7 @@ msgstr ""
 
 #: inc/theme-options/theme-options.php:454
 msgid "Upload a custom favicon for iPhone retina (114x114 pixel png)."
-msgstr ""
+msgstr "Için özel bir favicon yükle iPhone retina (114x114 pixel png)."
 
 #: inc/theme-options/theme-options.php:460
 msgid "Favicon iPad"
@@ -1289,179 +1338,181 @@ msgstr ""
 
 #: inc/theme-options/theme-options.php:468
 msgid "Upload a custom favicon for iPhone retina (144x144 pixel png)."
-msgstr ""
+msgstr "Için özel bir favicon yükle iPhone retina (144x144 pixel png)."
 
 #: inc/theme-options/theme-options.php:478
 msgid "Colors"
-msgstr ""
+msgstr "Renkler"
 
 #: inc/theme-options/theme-options.php:483
 msgid "Main menu color"
-msgstr ""
+msgstr "Ana menü rengi"
 
 #: inc/theme-options/theme-options.php:484
 msgid "Choose your colors for main menu in header"
-msgstr ""
+msgstr "başlığında ana menüde için renkler seçin"
 
 #: inc/theme-options/theme-options.php:491
 #: inc/theme-options/theme-options.php:522
 msgid "Background color"
-msgstr ""
+msgstr "Arka plan rengi"
 
 #: inc/theme-options/theme-options.php:497
 #: inc/theme-options/theme-options.php:528
 msgid "Menu button color"
-msgstr ""
+msgstr "Menü düğmesi rengi"
 
 #: inc/theme-options/theme-options.php:503
 #: inc/theme-options/theme-options.php:534
 #: inc/theme-options/theme-options.php:554
 msgid "Font color"
-msgstr ""
+msgstr "Yazı rengi"
 
 #: inc/theme-options/theme-options.php:509
 #: inc/theme-options/theme-options.php:540
 msgid "Font color (active and hover)"
-msgstr ""
+msgstr "Yazı rengi (aktif ve vurgulu)"
 
 #: inc/theme-options/theme-options.php:515
 msgid "Dropdown menu color"
-msgstr ""
+msgstr "Menü rengini Açılır"
 
 #: inc/theme-options/theme-options.php:516
 msgid "Choose your colors for dropdown menu in header"
-msgstr ""
+msgstr "Başlığında açılan menüden için renkler seçin"
 
 #: inc/theme-options/theme-options.php:546
 msgid "General font color"
-msgstr ""
+msgstr "Genel font color"
 
 #: inc/theme-options/theme-options.php:547
 msgid "Choose your colors for text and links"
-msgstr ""
+msgstr "Metin ve bağlantılar için renkleri seçin"
 
 #: inc/theme-options/theme-options.php:560
 msgid "Link color"
-msgstr ""
+msgstr "Bağlantı rengi"
 
 #: inc/theme-options/theme-options.php:566
 msgid "Link color (hover)"
-msgstr ""
+msgstr "Bağlantı rengi (hover)"
 
 #: inc/theme-options/theme-options.php:572
 msgid "Link color (focus)"
-msgstr ""
+msgstr "Bağlantı rengi (focus)"
 
 #: inc/theme-options/theme-options.php:578
 msgid "Link color (active)"
-msgstr ""
+msgstr "Bağlantı rengi (active)"
 
 #: inc/theme-options/theme-options.php:584
 msgid "Color for lines"
-msgstr ""
+msgstr "Hatları için renk"
 
 #: inc/theme-options/theme-options.php:585
 msgid "Choose your colors for lines and separators"
-msgstr ""
+msgstr "Hatları ve ayırıcılar için renkler seçin"
 
 #: inc/theme-options/theme-options.php:591
 msgid "Widget separator color"
-msgstr ""
+msgstr "Widget ayırıcı rengi"
 
 #: inc/theme-options/theme-options.php:597
 msgid "Blog post date color"
-msgstr ""
+msgstr "Blog sonrası tarih renk"
 
 #: inc/theme-options/theme-options.php:603
 msgid "Date font color"
-msgstr ""
+msgstr "Tarih font color"
 
 #: inc/theme-options/theme-options.php:609
 msgid "Color for buttons"
-msgstr ""
+msgstr "Düğmeleri renk"
 
 #: inc/theme-options/theme-options.php:610
 msgid "Choose your colors for buttons"
-msgstr ""
+msgstr "Düğmeler için renkler seçin"
 
 #: inc/theme-options/theme-options.php:617
 msgid "Button background color"
-msgstr ""
+msgstr "Düğme arka plan rengi"
 
 #: inc/theme-options/theme-options.php:623
 #: inc/theme-options/theme-options.php:642
 msgid "Button background color (hover, active, focus, current page - pagenavi)"
-msgstr ""
+msgstr "Düğme arka plan rengi (hover, etkin, odak, geçerli sayfa - pagenavi)"
 
 #: inc/theme-options/theme-options.php:629
 msgid "Color for social icons"
-msgstr ""
+msgstr "sosyal simgeler için renk"
 
 #: inc/theme-options/theme-options.php:630
 msgid "Choose your colors for social icons"
-msgstr ""
+msgstr "sosyal simgeler için renkler seçin"
 
 #: inc/theme-options/theme-options.php:636
 msgid "Social icons background color"
-msgstr ""
+msgstr "Sosyal simgeler arka plan rengi"
 
 #: inc/theme-options/theme-options.php:648
 msgid "WooCommerce colors"
-msgstr ""
+msgstr "WooCommerce renkleri"
 
 #: inc/theme-options/theme-options.php:649
 msgid "Choose your colors for WooCommerce"
-msgstr ""
+msgstr "WooCommerce için renkler seçin"
 
 #: inc/theme-options/theme-options.php:655
 msgid "Sale price color"
-msgstr ""
+msgstr "Satış fiyatı rengi"
 
 #: inc/theme-options/theme-options.php:661
 msgid "Rating color (regular)"
-msgstr ""
+msgstr "Değerlendirme rengi (regular)"
 
 #: inc/theme-options/theme-options.php:667
 msgid "Rating color (hover, active)"
-msgstr ""
+msgstr "Değerlendirme rengi (hover, active)"
 
 #: inc/theme-options/theme-options.php:676
 msgid "Fonts"
-msgstr ""
+msgstr "Fontlar"
 
 #: inc/theme-options/theme-options.php:685
 msgid "Headers"
-msgstr ""
+msgstr "Başlıkları"
 
 #: inc/theme-options/theme-options.php:686
 msgid "Choose font-family for all headlines."
-msgstr ""
+msgstr "Tüm başlıkları için font-family seçin."
 
 #: inc/theme-options/theme-options.php:693
 #: inc/theme-options/theme-options.php:752
 msgid "Menu"
-msgstr ""
+msgstr "Menü"
 
 #: inc/theme-options/theme-options.php:694
 msgid "Choose font-family for primary menu."
-msgstr ""
+msgstr "Birincil menü için font-family seçin."
 
 #: inc/theme-options/theme-options.php:701
 msgid "Body"
-msgstr ""
+msgstr "Vücut"
 
 #: inc/theme-options/theme-options.php:702
 msgid "Choose font-family for content."
-msgstr ""
+msgstr "Içerik için font-family seçin."
 
 #: inc/theme-options/theme-options.php:709
 msgid "Font size"
-msgstr ""
+msgstr "Yazı Boyutu"
 
 #: inc/theme-options/theme-options.php:710
 msgid ""
 "Choose font size for specific html elements. Set size as number, without px.."
 msgstr ""
+"Belirli html elemanları için yazı tipi boyutunu seçin. px olmadan, sayı "
+"olarak boyutunu ayarlayın .."
 
 #: inc/theme-options/theme-options.php:716
 msgid "H1"
@@ -1498,7 +1549,7 @@ msgstr ""
 
 #: inc/theme-options/theme-options.php:775
 msgid "Select a slider type that will be used by default."
-msgstr ""
+msgstr "Varsayılan olarak kullanılacak bir kaydırıcı türü seçin."
 
 #: inc/theme-options/theme-options.php:778
 msgid "FlexSlider"
@@ -1510,42 +1561,44 @@ msgstr ""
 
 #: inc/theme-options/theme-options.php:785
 msgid "Slider Options"
-msgstr ""
+msgstr "Slider Seçenekleri"
 
 #: inc/theme-options/theme-options.php:786
 msgid ""
 "Choose needed options for slider: animation type, sliding direction, speed "
 "of animations, etc"
 msgstr ""
+"vb animasyon türü, sürgülü yönünü animasyonlar hızı: kaymak için gereken "
+"seçenekleri belirleyin"
 
 #: inc/theme-options/theme-options.php:793
 msgid "Animation type"
-msgstr ""
+msgstr "Animasyon türü"
 
 #: inc/theme-options/theme-options.php:795
 #: inc/theme-options/theme-options.php:913
 msgid "fade"
-msgstr ""
+msgstr "karartmak"
 
 #: inc/theme-options/theme-options.php:796
 msgid "slide"
-msgstr ""
+msgstr "slayt"
 
 #: inc/theme-options/theme-options.php:804
 msgid "Sliding direction, \"horizontal\" or \"vertical\""
-msgstr ""
+msgstr "yönü Sürme, \"yatay\" ya da \"dikey\""
 
 #: inc/theme-options/theme-options.php:806
 msgid "horizontal"
-msgstr ""
+msgstr "yatay"
 
 #: inc/theme-options/theme-options.php:807
 msgid "vertical"
-msgstr ""
+msgstr "dikey"
 
 #: inc/theme-options/theme-options.php:815
 msgid "Reverse the animation direction"
-msgstr ""
+msgstr "animasyon yönünü tersine çevirmek"
 
 #: inc/theme-options/theme-options.php:817
 #: inc/theme-options/theme-options.php:829
@@ -1559,7 +1612,7 @@ msgstr ""
 #: inc/theme-options/theme-options.php:1015
 #: inc/theme-options/theme-options.php:1040
 msgid "false"
-msgstr ""
+msgstr "yanlış"
 
 #: inc/theme-options/theme-options.php:818
 #: inc/theme-options/theme-options.php:828
@@ -1573,35 +1626,35 @@ msgstr ""
 #: inc/theme-options/theme-options.php:1014
 #: inc/theme-options/theme-options.php:1039
 msgid "true"
-msgstr ""
+msgstr "gerçek"
 
 #: inc/theme-options/theme-options.php:826
 msgid "Animate slider automatically"
-msgstr ""
+msgstr "otomatik kaydırma canlandırın"
 
 #: inc/theme-options/theme-options.php:837
 msgid "Set the speed of the slideshow cycling, in milliseconds"
-msgstr ""
+msgstr "Milisaniye cinsinden slayt bisiklet hızını ayarlama"
 
 #: inc/theme-options/theme-options.php:844
 msgid "Set the speed of animations, in milliseconds"
-msgstr ""
+msgstr "Milisaniye cinsinden animasyonların hızını ayarlama"
 
 #: inc/theme-options/theme-options.php:851
 msgid "Set an initialization delay, in milliseconds"
-msgstr ""
+msgstr "Milisaniye cinsinden bir başlatma gecikmesini ayarlayın"
 
 #: inc/theme-options/theme-options.php:858
 msgid "Randomize slide order"
-msgstr ""
+msgstr "slayt sırası rastgele"
 
 #: inc/theme-options/theme-options.php:869
 msgid "Manual control usage"
-msgstr ""
+msgstr "Manuel kontrol kullanımı"
 
 #: inc/theme-options/theme-options.php:880
 msgid "Touch swipe"
-msgstr ""
+msgstr "dokunmatik tokatlamak"
 
 #: inc/theme-options/theme-options.php:891
 msgid "Slider Skins"
@@ -1613,23 +1666,23 @@ msgstr ""
 
 #: inc/theme-options/theme-options.php:894
 msgid "default"
-msgstr ""
+msgstr "varsayılan"
 
 #: inc/theme-options/theme-options.php:895
 msgid "dark"
-msgstr ""
+msgstr "karanlık"
 
 #: inc/theme-options/theme-options.php:896
 msgid "light"
-msgstr ""
+msgstr "ışık"
 
 #: inc/theme-options/theme-options.php:904
 msgid "Effect"
-msgstr ""
+msgstr "Etki"
 
 #: inc/theme-options/theme-options.php:906
 msgid "random"
-msgstr ""
+msgstr "rasgele"
 
 #: inc/theme-options/theme-options.php:907
 msgid "sliceDownRight"
@@ -1689,19 +1742,19 @@ msgstr ""
 
 #: inc/theme-options/theme-options.php:947
 msgid "Slide transition speed"
-msgstr ""
+msgstr "Slayt geçiş hızı"
 
 #: inc/theme-options/theme-options.php:954
 msgid "How long each slide will show"
-msgstr ""
+msgstr "Her slayt gösterecek ne kadar süre"
 
 #: inc/theme-options/theme-options.php:961
 msgid "Set starting Slide (0 index)"
-msgstr ""
+msgstr "Set başlangıç Slayt (0 index)"
 
 #: inc/theme-options/theme-options.php:968
 msgid "Next & Prev navigation"
-msgstr ""
+msgstr "Sonraki & Önceki navigasyon"
 
 #: inc/theme-options/theme-options.php:979
 msgid "1,2,3... navigation"
@@ -1709,31 +1762,31 @@ msgstr ""
 
 #: inc/theme-options/theme-options.php:990
 msgid "Use thumbnails for Control Nav"
-msgstr ""
+msgstr "Kontrol Nav için küçük kullanın"
 
 #: inc/theme-options/theme-options.php:1001
 msgid "Stop animation while hovering"
-msgstr ""
+msgstr "Gezinip sırasında animasyonu durdurmak"
 
 #: inc/theme-options/theme-options.php:1012
 msgid "Force manual transitions"
-msgstr ""
+msgstr "Manuel geçişler zorla"
 
 #: inc/theme-options/theme-options.php:1023
 msgid "Prev directionNav text"
-msgstr ""
+msgstr "Önceki directionNav metin"
 
 #: inc/theme-options/theme-options.php:1030
 msgid "Next directionNav text"
-msgstr ""
+msgstr "Sonraki directionNav metin"
 
 #: inc/theme-options/theme-options.php:1037
 msgid "Start on a random slide"
-msgstr ""
+msgstr "Rastgele bir slayt üzerinde başlayın"
 
 #: inc/theme-options/theme-options.php:1050
 msgid "Slides"
-msgstr ""
+msgstr "Slaytlar"
 
 #: inc/theme-options/theme-options.php:1051
 msgid ""
@@ -1743,18 +1796,24 @@ msgid ""
 "page. To display slider in needed place use shortcode [fruitful_slider]. "
 "Current theme version support only one slider per website."
 msgstr ""
+"kaydırıcı resim ekleme (Desteklenen dosyalar .png, .jpg, .gif). Eğer "
+"sırasını değiştirmek istiyorsanız, sadece sürükle ve bırak. slaytlar için "
+"görüntü boyutu medya galeri orijinal sayfa en iyi görüntüyü elde etmek için, "
+"aynı boyutta görüntüleri yükleyin. Gerekli yerde kullanımı shortcode  "
+"[fruitful_slider]  kaydırıcıyı görüntülemek için. Geçerli tema sürüm destek "
+"web sitesinden başına sadece bir kaymak."
 
 #: inc/theme-options/theme-options.php:1058
 msgid "Social Links"
-msgstr ""
+msgstr "sosyal Bağlantılar"
 
 #: inc/theme-options/theme-options.php:1063
 msgid "Socials Links Position"
-msgstr ""
+msgstr "Socials Linkler Pozisyon"
 
 #: inc/theme-options/theme-options.php:1064
 msgid "Choose place where social links will be displayed."
-msgstr ""
+msgstr "Sosyal bağlantılar görüntülenir yer seçin."
 
 #: inc/theme-options/theme-options.php:1066
 #: inc/theme-options/theme-options.php:1201
@@ -1763,13 +1822,15 @@ msgstr ""
 
 #: inc/theme-options/theme-options.php:1071
 msgid "Socials Links"
-msgstr ""
+msgstr "Sosyal Bağlantılar"
 
 #: inc/theme-options/theme-options.php:1072
 msgid ""
 "Add link to your social media profiles. Icons with link will be display in "
 "header or footer."
 msgstr ""
+"Sosyal medya profilleri bağlantı ekleyin. Bağlantıya sahip Simgeler üstbilgi "
+"veya altbilgi görüntülenir."
 
 #: inc/theme-options/theme-options.php:1078
 msgid "Facebook"
@@ -1853,15 +1914,15 @@ msgstr ""
 
 #: inc/theme-options/theme-options.php:1206
 msgid "Footer options"
-msgstr ""
+msgstr "Altbilgi seçenekleri"
 
 #: inc/theme-options/theme-options.php:1207
 msgid "Replace default theme copyright information and links"
-msgstr ""
+msgstr "Varsayılan tema telif hakkı bilgileri ve bağlantıları değiştirin"
 
 #: inc/theme-options/theme-options.php:1208
 msgid "Copyright section"
-msgstr ""
+msgstr "Telif bölüm"
 
 #: inc/theme-options/theme-options.php:1210
 msgid ""
@@ -1880,10 +1941,14 @@ msgid ""
 "styles for front-end responsive and static layout. Do not edit theme default "
 "css files, use textarea editor below for overwriting all css styles."
 msgstr ""
+"Tema iki css dosyaları style.css ve ön uç duyarlı ve statik düzen için "
+"kullanım varsayılan stilleri sabit style.css sahiptir. Tüm css stilleri "
+"üzerine aşağıda tema varsayılan css dosyaları, kullanım textarea editörü "
+"düzenleme yok."
 
 #: inc/theme-options/theme-options.php:1224
 msgid "Styles editor"
-msgstr ""
+msgstr "Stiller editör"
 
 #: inc/theme-options/theme-options.php:1234
 msgid "Woocommerce"
@@ -1891,178 +1956,187 @@ msgstr ""
 
 #: inc/theme-options/theme-options.php:1239
 msgid "Show cart in header"
-msgstr ""
+msgstr "Başlığında göster arabası"
 
 #: inc/theme-options/theme-options.php:1240
 msgid "If you want to display cart link in header select options below."
 msgstr ""
+"Aşağıdaki başlık seçme seçenekleri cart bağlantısını görüntülemek "
+"istiyorsanız."
 
 #: inc/theme-options/theme-options.php:1246
 msgid "Cart color"
-msgstr ""
+msgstr "Sepet rengi"
 
 #: inc/theme-options/theme-options.php:1247
 msgid "Choose color for cart icon"
-msgstr ""
+msgstr "Sepeti simgesini renk seçin"
 
 #: inc/theme-options/theme-options.php:1254
 msgid "Woocommerce Shop Sidebar"
-msgstr ""
+msgstr "WooCommerce Dükkanı Kenar"
 
 #: inc/theme-options/theme-options.php:1255
 #: inc/theme-options/theme-options.php:1267
 msgid "Show or hide sidebar"
-msgstr ""
+msgstr "Gösterme veya gizleme kenar çubuğu"
 
 #: inc/theme-options/theme-options.php:1266
 msgid "Woocommerce Product Sidebar"
-msgstr ""
+msgstr "WooCommerce Ürün Kenar"
 
 #: inc/theme-options/theme-options.php:1270
 msgid "Full width with tabs on right side"
-msgstr ""
+msgstr "Sağ tarafta sekmeleri ile tam genişlikte"
 
 #: inc/theme-options/theme-options.php:1273
 msgid "Full width with tabs on left side"
-msgstr ""
+msgstr "Sol taraftaki sekmeleri ile tam genişlikte"
 
 #: inc/theme-options/theme-options.php:1274
 msgid "Full width with tabs in center"
-msgstr ""
+msgstr "Merkezde sekmeleri ile tam genişlikte"
 
 #: inc/theme-options/theme-options.php:1280
 msgid "Woocommerce pages products per row"
-msgstr ""
+msgstr "Satır başına WooCommerce sayfalar ürünler"
 
 #: inc/theme-options/theme-options.php:1281
 msgid "Choose number of products"
-msgstr ""
+msgstr "ürünlerin sayısını seçin"
 
 #: inc/theme-options/theme-options.php:1284
 msgid "2 products"
-msgstr ""
+msgstr "2 ürünler"
 
 #: inc/theme-options/theme-options.php:1285
 msgid "3 products"
-msgstr ""
+msgstr "3 ürünler"
 
 #: inc/theme-options/theme-options.php:1286
 msgid "4 products"
-msgstr ""
+msgstr "4 ürünler"
 
 #: inc/theme-options/theme-options.php:1287
 msgid "5 products"
-msgstr ""
+msgstr "5 ürünler"
 
 #: inc/theme-options/theme-options.php:1293
 msgid "Number of products on Shop pages"
-msgstr ""
+msgstr "Mağaza sayfalarındaki ürün sayısı"
 
 #: inc/theme-options/theme-options.php:1294
 msgid "Choose number of products. Write -1 for show all products on one page"
 msgstr ""
+"ürünlerin sayısını seçin. Yazın -1 göstermek için tüm ürünleri tek sayfada"
 
 #: inc/theme-options/theme-options.php:1391
 msgid "Sample Font"
-msgstr ""
+msgstr "örnek Yazı"
 
 #: inc/theme-options/theme-options.php:1471
 msgid "Support"
-msgstr ""
+msgstr "Destek"
 
 #: inc/theme-options/theme-options.php:1473
 msgid "If You faced with problems or find error or bug, please"
-msgstr ""
+msgstr "Sen sorunlarla karşı karşıya ya da varsa, hata veya hata lütfen bulmak"
 
 #: inc/theme-options/theme-options.php:1474
 msgid "submit request."
-msgstr ""
+msgstr "istek gönderin."
 
 #: inc/theme-options/theme-options.php:1475
 msgid "On official "
-msgstr ""
+msgstr "resmi üzerine"
 
 #: inc/theme-options/theme-options.php:1475
 msgid "Support forum"
-msgstr ""
+msgstr "Destek Forumu"
 
 #: inc/theme-options/theme-options.php:1476
 msgid "You may find answers on Your questions."
-msgstr ""
+msgstr "Sizin sorulara cevaplar bulabilirsiniz."
 
 #: inc/theme-options/theme-options.php:1480
 msgid "Additional customization"
-msgstr ""
+msgstr "Ek özelleştirme"
 
 #: inc/theme-options/theme-options.php:1482
 msgid "Our team is available for any type of WordPress development. "
-msgstr ""
+msgstr "Ekibimiz WordPress gelişme herhangi bir türü için kullanılabilir."
 
 #: inc/theme-options/theme-options.php:1483
 msgid "If You want customize theme or add new features, You can"
-msgstr ""
+msgstr "Sen istersen can, temasını özelleştirmek veya yeni özellikler eklemek"
 
 #: inc/theme-options/theme-options.php:1484
 msgid "submit order"
-msgstr ""
+msgstr "Sipariş teslim"
 
 #: inc/theme-options/theme-options.php:1485
 msgid "on our website"
-msgstr ""
+msgstr "Web sitemizde"
 
 #: inc/widgets.php:17
 msgid "News Archive"
-msgstr ""
+msgstr "Haber Arşivi"
 
 #: inc/widgets.php:21
 msgid "Use this widget to list your Link posts."
-msgstr ""
+msgstr "senin Link mesajları listelemek için bu widget kullanın."
 
 #: inc/widgets.php:41
 msgid "News-Archive"
-msgstr ""
+msgstr "Haber-Arşiv"
 
 #: inc/widgets.php:122
 msgid "Title:"
-msgstr ""
+msgstr "Başlık:"
 
 #: inc/widgets.php:125
 msgid "Number of posts to show:"
-msgstr ""
+msgstr "mesajların sayısı göstermek için:"
 
 #: inc/widgets.php:129
 msgid "Text Message:"
-msgstr ""
+msgstr "Metin mesajı:"
 
 #: no-results.php:15
 msgid "Nothing Found"
-msgstr ""
+msgstr "Hiçbirşey Bulunamadı"
 
 #: no-results.php:20
 #, php-format
 msgid ""
 "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
+"İlk yazı yayınlamak için hazır mısınız? <a href=\"%1$s\">Burada başlayın.</"
+"a>."
 
 #: no-results.php:24
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
+"Üzgünüz, ama hiçbir şey arama terimlerinizi eşleşti. Bazı farklı anahtar "
+"kelimeler ile tekrar deneyiniz."
 
 #: no-results.php:29
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
 msgstr ""
+"Biz sizin aradığınızı bulamıyor gibi görünüyor. Belki yardımcı olabilir "
+"arıyor."
 
 #: searchform.php:11 searchform.php:13
 msgid "Search"
-msgstr ""
+msgstr "Arama"
 
 #: searchform.php:12
 msgid "Type Here to Search"
-msgstr ""
+msgstr "Arama için yazın"
 
 #: sidebar-blogright.php:26 sidebar-homepage.php:26 sidebar-page.php:26
 #: sidebar-single-post.php:26 sidebar.php:26
@@ -2072,8 +2146,8 @@ msgstr ""
 #: taxonomy-post_format.php:18
 #, php-format
 msgid "%s Archives"
-msgstr ""
+msgstr "%s Arşivleri"
 
 #: woocommerce/single-product/product-image.php:44
 msgid "Placeholder"
-msgstr ""
+msgstr "Yer Tutucu"
