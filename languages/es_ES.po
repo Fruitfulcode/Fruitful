@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fruitful\n"
 "POT-Creation-Date: 2016-03-25 15:53+0200\n"
-"PO-Revision-Date: 2016-03-25 15:53+0200\n"
+"PO-Revision-Date: 2016-05-19 16:50+0300\n"
 "Last-Translator: Fruitfulcode\n"
 "Language-Team: Fruitfulcode\n"
 "Language: es_ES\n"
@@ -125,35 +125,35 @@ msgstr "Barra lateral principal"
 
 #: functions.php:187
 msgid "Blog Sidebar"
-msgstr ""
+msgstr "Blog de la barra lateral"
 
 #: functions.php:196
 msgid "Single Post Sidebar"
-msgstr ""
+msgstr "Mensaje Individual barra lateral"
 
 #: functions.php:205
 msgid "Homepage Sidebar"
-msgstr ""
+msgstr "Página de la barra lateral"
 
 #: functions.php:215
 msgid "Shop Page Sidebar"
-msgstr ""
+msgstr "Shop Página barra lateral"
 
 #: functions.php:224
 msgid "Product Page Sidebar"
-msgstr ""
+msgstr "Producto Página barra lateral"
 
 #: functions.php:300
 msgid "Navigate to..."
-msgstr ""
+msgstr "Navegar a..."
 
 #: functions.php:581 functions.php:586
 msgid "Please add images for slider in theme options!"
-msgstr ""
+msgstr "Por favor, añadir imágenes de corredera en las opciones del tema!"
 
 #: functions.php:1374
 msgid "You may be interested in&hellip;"
-msgstr ""
+msgstr "Usted puede estar interesado en&hellip;"
 
 #: functions.php:1446 functions.php:1455
 msgid ", "
@@ -187,15 +187,15 @@ msgstr ""
 
 #: functions.php:1638
 msgid "Search for products"
-msgstr ""
+msgstr "Búsqueda de productos"
 
 #: functions.php:1692
 msgid "Front page displays Error."
-msgstr ""
+msgstr "Aparecerá la página frontal de error."
 
 #: functions.php:1692
 msgid "Select different pages!"
-msgstr ""
+msgstr "Seleccionar diferentes páginas!"
 
 #: functions.php:1743
 #, php-format
@@ -243,10 +243,14 @@ msgid ""
 "problems with display content in shortcodes, because we created this part as "
 "plugin. You need install "
 msgstr ""
+"¡Atención! Fructífera versión 2.0 tema tiene grandes actualizaciones. Es "
+"posible que tenga un problema con el contenido de la pantalla en códigos "
+"cortos, porque hemos creado esta parte como complemento. Es necesario "
+"instalar"
 
 #: functions.php:1927
 msgid " and use them."
-msgstr ""
+msgstr "y utilizarlos."
 
 #: image.php:25
 #, php-format
@@ -455,42 +459,42 @@ msgstr "Añadir diapositiva nueva"
 
 #: inc/func/plugin-activation.php:333
 msgid "Install Required Plugins"
-msgstr ""
+msgstr "Se requiere instalar plugins"
 
 #: inc/func/plugin-activation.php:334
 msgid "Install Plugins"
-msgstr ""
+msgstr "instalar plugins"
 
 #: inc/func/plugin-activation.php:335 inc/func/plugins-included.php:40
 #, php-format
 msgid "Installing Plugin: %s"
-msgstr ""
+msgstr "Instalación de plugins: %s"
 
 #: inc/func/plugin-activation.php:336 inc/func/plugins-included.php:41
 msgid "Something went wrong with the plugin API."
-msgstr ""
+msgstr "Algo salió mal con la API de plugins."
 
 #: inc/func/plugin-activation.php:397 inc/func/plugins-included.php:87
 msgid "Return to Required Plugins Installer"
-msgstr ""
+msgstr "Volver a Necesario plugins instalador"
 
 #: inc/func/plugin-activation.php:398
 msgid "Return to the dashboard"
-msgstr ""
+msgstr "Regreso al panel de control"
 
 #: inc/func/plugin-activation.php:399 inc/func/plugin-activation.php:3021
 #: inc/func/plugins-included.php:88
 msgid "Plugin activated successfully."
-msgstr ""
+msgstr "Plugin activado correctamente."
 
 #: inc/func/plugin-activation.php:400
 msgid "The following plugin was activated successfully:"
-msgstr ""
+msgstr "La siguiente plugin está activado correctamente:"
 
 #: inc/func/plugin-activation.php:401
 #, php-format
 msgid "No action taken. Plugin %1$s was already active."
-msgstr ""
+msgstr "Ninguna acción tomada. Plugin %1$s ya estaba activo."
 
 #: inc/func/plugin-activation.php:402
 #, php-format
@@ -498,19 +502,23 @@ msgid ""
 "Plugin not activated. A higher version of %s is needed for this theme. "
 "Please update the plugin."
 msgstr ""
+"Plugin no activadas. Una versión más alta de %s se necesita para este tema. "
+"Por favor, actualice el plugin."
 
 #: inc/func/plugin-activation.php:403 inc/func/plugins-included.php:92
 #, php-format
 msgid "All plugins installed and activated successfully. %1$s"
-msgstr ""
+msgstr "Todos los plugins instalados y activados con éxito. %1$s"
 
 #: inc/func/plugin-activation.php:404
 msgid "Dismiss this notice"
-msgstr ""
+msgstr "Descartar este aviso"
 
 #: inc/func/plugin-activation.php:405
 msgid "Please contact the administrator of this site for help."
 msgstr ""
+"Por favor, póngase en contacto con el administrador de este sitio en busca "
+"de ayuda."
 
 #: inc/func/plugin-activation.php:1873
 #, php-format
@@ -519,47 +527,47 @@ msgstr ""
 
 #: inc/func/plugin-activation.php:2159
 msgid "Required"
-msgstr ""
+msgstr "Necesario"
 
 #: inc/func/plugin-activation.php:2162
 msgid "Recommended"
-msgstr ""
+msgstr "Recomendado"
 
 #: inc/func/plugin-activation.php:2178
 msgid "WordPress Repository"
-msgstr ""
+msgstr "WordPress repositorio"
 
 #: inc/func/plugin-activation.php:2181
 msgid "External Source"
-msgstr ""
+msgstr "Fuente externa"
 
 #: inc/func/plugin-activation.php:2184
 msgid "Pre-Packaged"
-msgstr ""
+msgstr "Pre-envasados"
 
 #: inc/func/plugin-activation.php:2201
 msgid "Not Installed"
-msgstr ""
+msgstr "No instalado"
 
 #: inc/func/plugin-activation.php:2205
 msgid "Installed But Not Activated"
-msgstr ""
+msgstr "Instalado pero no activado"
 
 #: inc/func/plugin-activation.php:2207
 msgid "Active"
-msgstr ""
+msgstr "Activo"
 
 #: inc/func/plugin-activation.php:2213
 msgid "Required Update not Available"
-msgstr ""
+msgstr "Se requiere actualización no disponible"
 
 #: inc/func/plugin-activation.php:2216
 msgid "Requires Update"
-msgstr ""
+msgstr "requiere de actualización"
 
 #: inc/func/plugin-activation.php:2219
 msgid "Update recommended"
-msgstr ""
+msgstr "Actualizacion recomendada"
 
 #: inc/func/plugin-activation.php:2227
 #, php-format
@@ -572,15 +580,15 @@ msgstr ""
 
 #: inc/func/plugin-activation.php:2371
 msgid "Installed version:"
-msgstr ""
+msgstr "La versión instalada:"
 
 #: inc/func/plugin-activation.php:2379
 msgid "Minimum required version:"
-msgstr ""
+msgstr "Versión mínima necesaria:"
 
 #: inc/func/plugin-activation.php:2391
 msgid "Available version:"
-msgstr ""
+msgstr "versión disponible:"
 
 #: inc/func/plugin-activation.php:2414
 #, php-format
@@ -588,209 +596,218 @@ msgid ""
 "No plugins to install, update or activate. <a href=\"%1$s\">Return to the "
 "Dashboard</a>"
 msgstr ""
+"No hay plugins para instalar, actualizar o activar. <a href=\"%1$s\"> vuelva "
+"al Panel </a>"
 
 #: inc/func/plugin-activation.php:2428
 msgid "Plugin"
-msgstr ""
+msgstr "Enchufar"
 
 #: inc/func/plugin-activation.php:2429
 msgid "Source"
-msgstr ""
+msgstr "Fuente"
 
 #: inc/func/plugin-activation.php:2430
 msgid "Type"
-msgstr ""
+msgstr "Tipo"
 
 #: inc/func/plugin-activation.php:2434
 msgid "Version"
-msgstr ""
+msgstr "Versión"
 
 #: inc/func/plugin-activation.php:2435
 msgid "Status"
-msgstr ""
+msgstr "Estado"
 
 #: inc/func/plugin-activation.php:2483
 #, php-format
 msgid "Install %2$s"
-msgstr ""
+msgstr "Instalar %2$s"
 
 #: inc/func/plugin-activation.php:2487
 #, php-format
 msgid "Update %2$s"
-msgstr ""
+msgstr "Actualizar %2$s"
 
 #: inc/func/plugin-activation.php:2492
 #, php-format
 msgid "Activate %2$s"
-msgstr ""
+msgstr "Activar %2$s"
 
 #: inc/func/plugin-activation.php:2595
 msgid "Install"
-msgstr ""
+msgstr "Instalar"
 
 #: inc/func/plugin-activation.php:2601
 msgid "Update"
-msgstr ""
+msgstr "Actualizar"
 
 #: inc/func/plugin-activation.php:2604
 msgid "Activate"
-msgstr ""
+msgstr "Activar"
 
 #: inc/func/plugin-activation.php:2635
 msgid "No plugins were selected to be installed. No action taken."
 msgstr ""
+"Fueron seleccionados para ser instalado ningún plugin. Ninguna acción tomada."
 
 #: inc/func/plugin-activation.php:2637
 msgid "No plugins were selected to be updated. No action taken."
 msgstr ""
+"Se seleccionaron ser actualizados No hay plugins. Ninguna acción tomada."
 
 #: inc/func/plugin-activation.php:2673
 msgid "No plugins are available to be installed at this time."
-msgstr ""
+msgstr "No hay plugins están disponibles para ser instalados en este momento."
 
 #: inc/func/plugin-activation.php:2675
 msgid "No plugins are available to be updated at this time."
-msgstr ""
+msgstr "No hay plugins están disponibles para ser actualizado en este momento."
 
 #: inc/func/plugin-activation.php:3020
 msgid "Plugin activation failed."
-msgstr ""
+msgstr "Plugin de activación falló."
 
 #: inc/func/plugin-activation.php:3354
 #, php-format
 msgid "Updating Plugin %1$s (%2$d/%3$d)"
-msgstr ""
+msgstr "Plugin de actualización %1$s (%2$d/%3$d)"
 
 #: inc/func/plugin-activation.php:3356
 #, php-format
 msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
 msgstr ""
+"Se produjo un error durante la instalación %1$s: <strong>%2$s</strong>."
 
 #: inc/func/plugin-activation.php:3357
 #, php-format
 msgid "The installation of %1$s failed."
-msgstr ""
+msgstr "falló la instalación de %1$s."
 
 #: inc/func/plugin-activation.php:3361
 msgid ""
 "The installation and activation process is starting. This process may take a "
 "while on some hosts, so please be patient."
 msgstr ""
+"El proceso de instalación y activación se está iniciando. Este proceso puede "
+"tardar varios minutos en algunas anfitriones, así que por favor sea paciente."
 
 #: inc/func/plugin-activation.php:3362
 #, php-format
 msgid "%1$s installed and activated successfully."
-msgstr ""
+msgstr "%1$s está instalado y activado correctamente."
 
 #: inc/func/plugin-activation.php:3363
 msgid "All installations and activations have been completed."
-msgstr ""
+msgstr "Todas las instalaciones y activaciones han sido completadas."
 
 #: inc/func/plugin-activation.php:3364
 #, php-format
 msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
-msgstr ""
+msgstr "Instalación y activación de Plugin %1$s (%2$d/%3$d)"
 
 #: inc/func/plugin-activation.php:3367
 msgid ""
 "The installation process is starting. This process may take a while on some "
 "hosts, so please be patient."
 msgstr ""
+"El proceso de instalación está iniciando. Este proceso puede tardar algún "
+"tiempo en algunos ejércitos, así que por favor sea paciente."
 
 #: inc/func/plugin-activation.php:3369
 msgid "All installations have been completed."
-msgstr ""
+msgstr "Todas las instalaciones se han completado."
 
 #: inc/func/plugin-activation.php:3370
 #, php-format
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
-msgstr ""
+msgstr "Plugin de instalar %1$s (%2$d/%3$d)"
 
 #: inc/func/plugins-included.php:38
 msgid "Fruitful Plugin Integration"
-msgstr ""
+msgstr "Integración plugin fructífera"
 
 #: inc/func/plugins-included.php:39
 msgid "Plugin Integration"
-msgstr ""
+msgstr "Integración plugin"
 
 #: inc/metaboxes/helpers/cmb_Meta_Box_ajax.php:47
 msgid "Please Try Again"
-msgstr ""
+msgstr "Inténtalo de nuevo"
 
 #: inc/metaboxes/helpers/cmb_Meta_Box_ajax.php:131
 msgid "Remove Embed"
-msgstr ""
+msgstr "Retire Insertar"
 
 #: inc/metaboxes/helpers/cmb_Meta_Box_ajax.php:134
 #, php-format
 msgid "No oEmbed Results Found for %s. View more info at"
-msgstr ""
+msgstr "No hay resultados encontrados para oEmbed %s. Ver más información en"
 
 #: inc/metaboxes/helpers/cmb_Meta_Box_field.php:460
 msgid "Add Group"
-msgstr ""
+msgstr "Añadir grupo"
 
 #: inc/metaboxes/helpers/cmb_Meta_Box_field.php:461
 msgid "Remove Group"
-msgstr ""
+msgstr "Eliminar grupo"
 
 #: inc/metaboxes/helpers/cmb_Meta_Box_types.php:253
 msgid "Add Row"
-msgstr ""
+msgstr "Añadir fila"
 
 #: inc/metaboxes/helpers/cmb_Meta_Box_types.php:619
 #: inc/metaboxes/helpers/cmb_Meta_Box_types.php:653
 msgid "No terms"
-msgstr ""
+msgstr "No hay términos"
 
 #: inc/metaboxes/helpers/cmb_Meta_Box_types.php:692
 #: inc/metaboxes/helpers/cmb_Meta_Box_types.php:746
 msgid "Add or Upload File"
-msgstr ""
+msgstr "Añadir o Cargar archivo"
 
 #: inc/metaboxes/helpers/cmb_Meta_Box_types.php:713
 #: inc/metaboxes/helpers/cmb_Meta_Box_types.php:778
 msgid "Remove Image"
-msgstr ""
+msgstr "Eliminar imagen"
 
 #: inc/metaboxes/helpers/cmb_Meta_Box_types.php:724
 #: inc/metaboxes/helpers/cmb_Meta_Box_types.php:786
 msgid "File:"
-msgstr ""
+msgstr "Archivo:"
 
 #: inc/metaboxes/helpers/cmb_Meta_Box_types.php:724
 #: inc/metaboxes/helpers/cmb_Meta_Box_types.php:786
 msgid "Download"
-msgstr ""
+msgstr "Descargar"
 
 #: inc/metaboxes/init-for-objestcs-mb.php:34
 msgid "Slider settings"
-msgstr ""
+msgstr "configuración del control deslizante"
 
 #: inc/metaboxes/init-for-objestcs-mb.php:42
 msgid "Slider display"
-msgstr ""
+msgstr "pantalla deslizador"
 
 #: inc/metaboxes/init-for-objestcs-mb.php:44
 msgid "Select the option to display the corresponding slider"
-msgstr ""
+msgstr "Seleccionar la opción de mostrar el control deslizante correspondiente"
 
 #: inc/metaboxes/init-for-objestcs-mb.php:47
 msgid "Disable slider"
-msgstr ""
+msgstr "Desactivar control deslizante"
 
 #: inc/metaboxes/init-for-objestcs-mb.php:48
 msgid "Full width slider"
-msgstr ""
+msgstr "Deslizador de ancho total"
 
 #: inc/metaboxes/init-for-objestcs-mb.php:49
 msgid "Boxed slider"
-msgstr ""
+msgstr "Deslizador en caja"
 
 #: inc/metaboxes/init-for-objestcs-mb.php:59
 msgid "Page settings"
-msgstr ""
+msgstr "Configuración de página"
 
 #: inc/metaboxes/init-for-objestcs-mb.php:66
 #: inc/metaboxes/init-for-objestcs-mb.php:85
@@ -800,40 +817,40 @@ msgstr "Diseño"
 
 #: inc/metaboxes/init-for-objestcs-mb.php:67
 msgid "Select a specific layout for this page."
-msgstr ""
+msgstr "Seleccione un diseño específico para esta página."
 
 #: inc/metaboxes/init-for-objestcs-mb.php:78
 msgid "Post settings"
-msgstr ""
+msgstr "Pon ajustes"
 
 #: inc/metaboxes/init-for-objestcs-mb.php:86
 msgid "Select a specific layout for this post."
-msgstr ""
+msgstr "Seleccione un diseño específico para este post."
 
 #: inc/metaboxes/init.php:258
 msgid "Clear"
-msgstr ""
+msgstr "Claro"
 
 #: inc/metaboxes/init.php:259
 msgid "Default"
-msgstr ""
+msgstr "Defecto"
 
 #: inc/metaboxes/init.php:260
 msgid "Select Color"
-msgstr ""
+msgstr "Seleccionar el color"
 
 #: inc/metaboxes/init.php:261
 msgid "Current Color"
-msgstr ""
+msgstr "color actual"
 
 #: inc/metaboxes/init.php:293
 msgid "Select / Deselect All"
-msgstr ""
+msgstr "Seleccionar / Deseleccionar todo"
 
 #: inc/metaboxes/init.php:1187 inc/theme-options/theme-options.php:1441
 #: inc/theme-options/theme-options.php:1463
 msgid "Save"
-msgstr ""
+msgstr "Salvar"
 
 #: inc/template-tags.php:27
 msgid "Post navigation"
@@ -904,7 +921,7 @@ msgstr "Opciones del tema"
 
 #: inc/theme-options/theme-options.php:83
 msgid "General"
-msgstr ""
+msgstr "General"
 
 #: inc/theme-options/theme-options.php:89
 msgid ""
@@ -912,6 +929,10 @@ msgid ""
 "adapt for mobile devices and static page with fixed width. Uncheck arrow "
 "below if you need static website display"
 msgstr ""
+"Tema soportadas 2 tipos de diseño HTML. Configuración predeterminada de "
+"respuesta que se adaptan para dispositivos móviles y página estática con "
+"ancho fijo. Deseleccionar flecha a continuación si necesita pantalla sitio "
+"web estático"
 
 #: inc/theme-options/theme-options.php:90
 msgid "Responsive"
@@ -939,7 +960,7 @@ msgstr "Mostrar comentario en la página"
 
 #: inc/theme-options/theme-options.php:123
 msgid "Front page template with latest posts"
-msgstr ""
+msgstr "Plantilla de portada con todos los mensajes"
 
 #: inc/theme-options/theme-options.php:124
 msgid "Settings > Reading > Front page displays > Your latest posts"
@@ -956,7 +977,7 @@ msgstr ""
 #: inc/theme-options/theme-options.php:220
 #: inc/theme-options/theme-options.php:1259
 msgid "Full width"
-msgstr ""
+msgstr "Anchura completa"
 
 #: inc/theme-options/theme-options.php:128
 #: inc/theme-options/theme-options.php:142
@@ -970,7 +991,7 @@ msgstr ""
 #: inc/theme-options/theme-options.php:1260
 #: inc/theme-options/theme-options.php:1272
 msgid "Right sidebar"
-msgstr ""
+msgstr "Barra lateral derecha"
 
 #: inc/theme-options/theme-options.php:129
 #: inc/theme-options/theme-options.php:144
@@ -984,39 +1005,39 @@ msgstr ""
 #: inc/theme-options/theme-options.php:1258
 #: inc/theme-options/theme-options.php:1271
 msgid "Left sidebar"
-msgstr ""
+msgstr "Barra lateral izquierda"
 
 #: inc/theme-options/theme-options.php:134
 msgid "Page templates by default"
-msgstr ""
+msgstr "Las plantillas de página por defecto"
 
 #: inc/theme-options/theme-options.php:135
 msgid "Choose default display for templates."
-msgstr ""
+msgstr "Elija de visualización por defecto para las plantillas."
 
 #: inc/theme-options/theme-options.php:140
 msgid "Page:"
-msgstr ""
+msgstr "Página:"
 
 #: inc/theme-options/theme-options.php:151
 msgid "Single Post:"
-msgstr ""
+msgstr "Mensaje Individual:"
 
 #: inc/theme-options/theme-options.php:162
 msgid "Archive:"
-msgstr ""
+msgstr "Archivo:"
 
 #: inc/theme-options/theme-options.php:173
 msgid "Author:"
-msgstr ""
+msgstr "Autor:"
 
 #: inc/theme-options/theme-options.php:184
 msgid "Category:"
-msgstr ""
+msgstr "Categoría:"
 
 #: inc/theme-options/theme-options.php:195
 msgid "Tags:"
-msgstr ""
+msgstr "Etiquetas:"
 
 #: inc/theme-options/theme-options.php:206
 msgid "404:"
@@ -1024,27 +1045,31 @@ msgstr ""
 
 #: inc/theme-options/theme-options.php:217
 msgid "Search:"
-msgstr ""
+msgstr "Buscar:"
 
 #: inc/theme-options/theme-options.php:229
 msgid "Show Featured image on single post"
-msgstr ""
+msgstr "Mostrar Imagen destacada en solo puesto"
 
 #: inc/theme-options/theme-options.php:230
 msgid "Select option below for show featured image on single post page."
 msgstr ""
+"Seleccione la opción de abajo para muestra contó con la imagen en la página "
+"solo puesto."
 
 #: inc/theme-options/theme-options.php:231
 msgid "Show featured image"
-msgstr ""
+msgstr "Mostrar imagen destacada"
 
 #: inc/theme-options/theme-options.php:239
 msgid "Multilingual Switch in Header (WPML)"
-msgstr ""
+msgstr "Multilingüe Switcher en Cabecera (WPML)"
 
 #: inc/theme-options/theme-options.php:240
 msgid "If you wish to show Language Switch in header, select option below."
 msgstr ""
+"Si desea mostrar Language Switcher en la cabecera, seleccione la opción a "
+"continuación."
 
 #: inc/theme-options/theme-options.php:241
 #: inc/theme-options/theme-options.php:1242
@@ -1060,6 +1085,7 @@ msgstr "Restablecer opciones"
 #: inc/theme-options/theme-options.php:256
 msgid "All theme options will be reset to default."
 msgstr ""
+"Todas las opciones del tema se restablecerán a los valores predeterminados."
 
 #: inc/theme-options/theme-options.php:269
 #: inc/theme-options/theme-options.php:1066
@@ -1080,50 +1106,50 @@ msgstr "Habilitado"
 
 #: inc/theme-options/theme-options.php:282
 msgid "Menu Position"
-msgstr ""
+msgstr "Posición del menú"
 
 #: inc/theme-options/theme-options.php:283
 msgid "Set menu position."
-msgstr ""
+msgstr "Posición de menú."
 
 #: inc/theme-options/theme-options.php:286
 #: inc/theme-options/theme-options.php:401
 msgid "Right"
-msgstr ""
+msgstr "Derecha"
 
 #: inc/theme-options/theme-options.php:287
 #: inc/theme-options/theme-options.php:399
 msgid "Left"
-msgstr ""
+msgstr "Izquierda"
 
 #: inc/theme-options/theme-options.php:288
 #: inc/theme-options/theme-options.php:400
 msgid "Center"
-msgstr ""
+msgstr "Centrar"
 
 #: inc/theme-options/theme-options.php:294
 msgid "Type of Responsive menu"
-msgstr ""
+msgstr "Tipo de menú de respuesta"
 
 #: inc/theme-options/theme-options.php:295
 msgid "Set type of responsive menu."
-msgstr ""
+msgstr "Establecer el tipo de menú de respuesta."
 
 #: inc/theme-options/theme-options.php:298
 msgid "Select menu"
-msgstr ""
+msgstr "Seleccione el menú"
 
 #: inc/theme-options/theme-options.php:299
 msgid "Button menu"
-msgstr ""
+msgstr "botón de menú"
 
 #: inc/theme-options/theme-options.php:305
 msgid "Menu icon color"
-msgstr ""
+msgstr "icono de menú de color"
 
 #: inc/theme-options/theme-options.php:306
 msgid "Chose color for collapsing menu icon"
-msgstr ""
+msgstr "Elegir el color para colapsar icono del menú"
 
 #: inc/theme-options/theme-options.php:311
 msgid "Background for header"
@@ -1134,6 +1160,8 @@ msgid ""
 "Upload image with full width for background in header area. (Supported "
 "files .png, .jpg, .gif)"
 msgstr ""
+"Sube imagen con ancho total para el fondo en el área de encabezado. "
+"(Archivos soportados .png, .jpg, .gif)"
 
 #: inc/theme-options/theme-options.php:323
 msgid "Header background-color"
@@ -1141,19 +1169,21 @@ msgstr "Color de fondo del encabezado"
 
 #: inc/theme-options/theme-options.php:329
 msgid "Background image size"
-msgstr ""
+msgstr "Antecedentes tamaño de la imagen"
 
 #: inc/theme-options/theme-options.php:330
 msgid "Choose size for background image - full width or only for content area."
 msgstr ""
+"Elija el tamaño de la imagen de fondo - ancho completo o sólo para el área "
+"de contenido."
 
 #: inc/theme-options/theme-options.php:333
 msgid "Full width position"
-msgstr ""
+msgstr "posición de ancho completo"
 
 #: inc/theme-options/theme-options.php:334
 msgid "Centered position"
-msgstr ""
+msgstr "posición centrada"
 
 #: inc/theme-options/theme-options.php:340
 msgid "Height for header area"
@@ -1181,11 +1211,11 @@ msgstr ""
 
 #: inc/theme-options/theme-options.php:365
 msgid "Background repeat"
-msgstr ""
+msgstr "fondo de la repetición"
 
 #: inc/theme-options/theme-options.php:373
 msgid "Background Color"
-msgstr ""
+msgstr "Color de fondo"
 
 #: inc/theme-options/theme-options.php:374
 msgid "Choose color for body background"
@@ -1193,11 +1223,11 @@ msgstr "Seleccionar color para el fondo del cuerpo"
 
 #: inc/theme-options/theme-options.php:380
 msgid "Background color for content"
-msgstr ""
+msgstr "color de fondo para el contenido"
 
 #: inc/theme-options/theme-options.php:381
 msgid "Choose color for main content area"
-msgstr ""
+msgstr "Elegir el color para el área de contenido principal"
 
 #: inc/theme-options/theme-options.php:390
 msgid "Logo"
@@ -1205,19 +1235,19 @@ msgstr "Logotipo"
 
 #: inc/theme-options/theme-options.php:395
 msgid "Logo Position"
-msgstr ""
+msgstr "Posición del logotipo"
 
 #: inc/theme-options/theme-options.php:396
 msgid "Set Logo Position"
-msgstr ""
+msgstr "Conjunto de la insignia Posición"
 
 #: inc/theme-options/theme-options.php:406
 msgid "Logo size"
-msgstr ""
+msgstr "tamaño del logotipo"
 
 #: inc/theme-options/theme-options.php:407
 msgid "Specify resolution for your logo image"
-msgstr ""
+msgstr "Especificar la resolución de su imagen del logotipo"
 
 #: inc/theme-options/theme-options.php:413
 msgid "Width"
@@ -1248,6 +1278,8 @@ msgid ""
 "Upload logo in double size (If your logo is 100 x 20px, it should be 200 x "
 "40px)"
 msgstr ""
+"Cargar el logotipo de doble tamaño (Si su logotipo es de 100 x 20 píxeles, "
+"debe ser 40px 200x)"
 
 #: inc/theme-options/theme-options.php:439
 msgid "Favicon"
@@ -1258,6 +1290,8 @@ msgid ""
 "A favicon is a 16x16 pixel icon that represents your site; upload your "
 "custom Favicon here."
 msgstr ""
+"Un favicon es un icono de 16x16 píxeles que representa a su sitio; subir su "
+"favicon personalizado aquí."
 
 #: inc/theme-options/theme-options.php:446
 msgid "Favicon iPhone"
@@ -1293,137 +1327,139 @@ msgstr ""
 
 #: inc/theme-options/theme-options.php:478
 msgid "Colors"
-msgstr ""
+msgstr "Colores"
 
 #: inc/theme-options/theme-options.php:483
 msgid "Main menu color"
-msgstr ""
+msgstr "Color principal del menú"
 
 #: inc/theme-options/theme-options.php:484
 msgid "Choose your colors for main menu in header"
-msgstr ""
+msgstr "Elija los colores para el menú principal en la cabecera"
 
 #: inc/theme-options/theme-options.php:491
 #: inc/theme-options/theme-options.php:522
 msgid "Background color"
-msgstr ""
+msgstr "Color de fondo"
 
 #: inc/theme-options/theme-options.php:497
 #: inc/theme-options/theme-options.php:528
 msgid "Menu button color"
-msgstr ""
+msgstr "color del botón de menú"
 
 #: inc/theme-options/theme-options.php:503
 #: inc/theme-options/theme-options.php:534
 #: inc/theme-options/theme-options.php:554
 msgid "Font color"
-msgstr ""
+msgstr "Color de fuente"
 
 #: inc/theme-options/theme-options.php:509
 #: inc/theme-options/theme-options.php:540
 msgid "Font color (active and hover)"
-msgstr ""
+msgstr "color de la fuente (activo y estacionario)"
 
 #: inc/theme-options/theme-options.php:515
 msgid "Dropdown menu color"
-msgstr ""
+msgstr "Desplegable color del menú"
 
 #: inc/theme-options/theme-options.php:516
 msgid "Choose your colors for dropdown menu in header"
-msgstr ""
+msgstr "Elija los colores de menú en la cabecera hacia abajo"
 
 #: inc/theme-options/theme-options.php:546
 msgid "General font color"
-msgstr ""
+msgstr "color de la fuente general"
 
 #: inc/theme-options/theme-options.php:547
 msgid "Choose your colors for text and links"
-msgstr ""
+msgstr "Elija los colores de texto y enlaces"
 
 #: inc/theme-options/theme-options.php:560
 msgid "Link color"
-msgstr ""
+msgstr "Color de enlace"
 
 #: inc/theme-options/theme-options.php:566
 msgid "Link color (hover)"
-msgstr ""
+msgstr "Color de los vínculos (flotar)"
 
 #: inc/theme-options/theme-options.php:572
 msgid "Link color (focus)"
-msgstr ""
+msgstr "Color de los vínculos (foco)"
 
 #: inc/theme-options/theme-options.php:578
 msgid "Link color (active)"
-msgstr ""
+msgstr "Color de enlace (activo)"
 
 #: inc/theme-options/theme-options.php:584
 msgid "Color for lines"
-msgstr ""
+msgstr "Color de las líneas"
 
 #: inc/theme-options/theme-options.php:585
 msgid "Choose your colors for lines and separators"
-msgstr ""
+msgstr "Elija los colores para las líneas y separadores"
 
 #: inc/theme-options/theme-options.php:591
 msgid "Widget separator color"
-msgstr ""
+msgstr "el color separador Widget"
 
 #: inc/theme-options/theme-options.php:597
 msgid "Blog post date color"
-msgstr ""
+msgstr "Color Blog fecha"
 
 #: inc/theme-options/theme-options.php:603
 msgid "Date font color"
-msgstr ""
+msgstr "Fecha color de la fuente"
 
 #: inc/theme-options/theme-options.php:609
 msgid "Color for buttons"
-msgstr ""
+msgstr "El color de los botones"
 
 #: inc/theme-options/theme-options.php:610
 msgid "Choose your colors for buttons"
-msgstr ""
+msgstr "Elija los colores de los botones"
 
 #: inc/theme-options/theme-options.php:617
 msgid "Button background color"
-msgstr ""
+msgstr "color de fondo del botón"
 
 #: inc/theme-options/theme-options.php:623
 #: inc/theme-options/theme-options.php:642
 msgid "Button background color (hover, active, focus, current page - pagenavi)"
 msgstr ""
+"color de fondo del botón (flotar, activa, el enfoque, la página actual - "
+"PageNavi)"
 
 #: inc/theme-options/theme-options.php:629
 msgid "Color for social icons"
-msgstr ""
+msgstr "El color de los iconos sociales"
 
 #: inc/theme-options/theme-options.php:630
 msgid "Choose your colors for social icons"
-msgstr ""
+msgstr "Elija los colores para los iconos sociales"
 
 #: inc/theme-options/theme-options.php:636
 msgid "Social icons background color"
-msgstr ""
+msgstr "iconos sociales color de fondo"
 
 #: inc/theme-options/theme-options.php:648
 msgid "WooCommerce colors"
-msgstr ""
+msgstr "colores WooCommerce"
 
 #: inc/theme-options/theme-options.php:649
 msgid "Choose your colors for WooCommerce"
-msgstr ""
+msgstr "Elegir los colores para WooCommerce"
 
 #: inc/theme-options/theme-options.php:655
 msgid "Sale price color"
-msgstr ""
+msgstr "de color precio de venta"
 
 #: inc/theme-options/theme-options.php:661
 msgid "Rating color (regular)"
-msgstr ""
+msgstr "Clasificación del color (regular)"
 
 #: inc/theme-options/theme-options.php:667
 msgid "Rating color (hover, active)"
-msgstr ""
+msgstr "Clasificación del color (flotar, activo)"
 
 #: inc/theme-options/theme-options.php:676
 msgid "Fonts"
@@ -1452,7 +1488,7 @@ msgstr "Cuerpo"
 
 #: inc/theme-options/theme-options.php:702
 msgid "Choose font-family for content."
-msgstr ""
+msgstr "Elija font-family para el contenido."
 
 #: inc/theme-options/theme-options.php:709
 msgid "Font size"
@@ -1462,6 +1498,8 @@ msgstr "Tamaño del fuente"
 msgid ""
 "Choose font size for specific html elements. Set size as number, without px.."
 msgstr ""
+"Elija el tamaño de fuente para los elementos HTML específicos. Establecer el "
+"tamaño como el número, sin px .."
 
 #: inc/theme-options/theme-options.php:716
 msgid "H1"
@@ -1747,6 +1785,13 @@ msgid ""
 "page. To display slider in needed place use shortcode [fruitful_slider]. "
 "Current theme version support only one slider per website."
 msgstr ""
+"Añadir imágenes a deslizador (archivos soportados .png, .jpg, .gif). Si "
+"desea cambiar el orden, simplemente arrastrarlo. tamaño de la imagen para "
+"diapositivas es original de la galería de los medios de comunicación, por "
+"favor, subir imágenes en el mismo tamaño, para obtener una mejor "
+"visualización de la página. Para mostrar barra de desplazamiento en el lugar "
+"del uso necesaria abreviado [fruitful_slider]. Versión tema actual apoyo "
+"único deslizador por sitio Web."
 
 #: inc/theme-options/theme-options.php:1058
 msgid "Social Links"
@@ -1754,11 +1799,11 @@ msgstr "Enlaces a redes sociales"
 
 #: inc/theme-options/theme-options.php:1063
 msgid "Socials Links Position"
-msgstr ""
+msgstr "Socials Enlaces Posición"
 
 #: inc/theme-options/theme-options.php:1064
 msgid "Choose place where social links will be displayed."
-msgstr ""
+msgstr "Elija el lugar donde se mostrarán los vínculos sociales."
 
 #: inc/theme-options/theme-options.php:1066
 #: inc/theme-options/theme-options.php:1201
@@ -1774,6 +1819,8 @@ msgid ""
 "Add link to your social media profiles. Icons with link will be display in "
 "header or footer."
 msgstr ""
+"Añadir enlace a sus perfiles en redes sociales. Los iconos con enlace se "
+"mostrarán en el encabezado o pie de página."
 
 #: inc/theme-options/theme-options.php:1078
 msgid "Facebook"
@@ -1862,6 +1909,8 @@ msgstr "Opciones de pie de página"
 #: inc/theme-options/theme-options.php:1207
 msgid "Replace default theme copyright information and links"
 msgstr ""
+"Vuelva a colocar el tema de la información y enlaces de derechos de autor "
+"por defecto"
 
 #: inc/theme-options/theme-options.php:1208
 msgid "Copyright section"
@@ -1899,76 +1948,80 @@ msgstr ""
 
 #: inc/theme-options/theme-options.php:1239
 msgid "Show cart in header"
-msgstr ""
+msgstr "Ver el carro en la cabecera"
 
 #: inc/theme-options/theme-options.php:1240
 msgid "If you want to display cart link in header select options below."
 msgstr ""
+"Si desea mostrar enlace de la compra en las cabeceras de las siguientes "
+"opciones de selección."
 
 #: inc/theme-options/theme-options.php:1246
 msgid "Cart color"
-msgstr ""
+msgstr "Cesta de color"
 
 #: inc/theme-options/theme-options.php:1247
 msgid "Choose color for cart icon"
-msgstr ""
+msgstr "Elegir el color para la compra icono"
 
 #: inc/theme-options/theme-options.php:1254
 msgid "Woocommerce Shop Sidebar"
-msgstr ""
+msgstr "WooCommerce Shop barra lateral"
 
 #: inc/theme-options/theme-options.php:1255
 #: inc/theme-options/theme-options.php:1267
 msgid "Show or hide sidebar"
-msgstr ""
+msgstr "Mostrar u ocultar la barra lateral"
 
 #: inc/theme-options/theme-options.php:1266
 msgid "Woocommerce Product Sidebar"
-msgstr ""
+msgstr "WooCommerce barra lateral del producto"
 
 #: inc/theme-options/theme-options.php:1270
 msgid "Full width with tabs on right side"
-msgstr ""
+msgstr "El ancho con pestañas en el lado derecho"
 
 #: inc/theme-options/theme-options.php:1273
 msgid "Full width with tabs on left side"
-msgstr ""
+msgstr "El ancho con pestañas en el lado izquierdo"
 
 #: inc/theme-options/theme-options.php:1274
 msgid "Full width with tabs in center"
-msgstr ""
+msgstr "El ancho con pestañas en el centro"
 
 #: inc/theme-options/theme-options.php:1280
 msgid "Woocommerce pages products per row"
-msgstr ""
+msgstr "Páginas productos WooCommerce por fila"
 
 #: inc/theme-options/theme-options.php:1281
 msgid "Choose number of products"
-msgstr ""
+msgstr "Elija el número de productos"
 
 #: inc/theme-options/theme-options.php:1284
 msgid "2 products"
-msgstr ""
+msgstr "2 productos"
 
 #: inc/theme-options/theme-options.php:1285
 msgid "3 products"
-msgstr ""
+msgstr "3 productos"
 
 #: inc/theme-options/theme-options.php:1286
 msgid "4 products"
-msgstr ""
+msgstr "4 productos"
 
 #: inc/theme-options/theme-options.php:1287
 msgid "5 products"
-msgstr ""
+msgstr "5 productos"
 
 #: inc/theme-options/theme-options.php:1293
 msgid "Number of products on Shop pages"
-msgstr ""
+msgstr "Número de productos en las páginas de tienda"
 
 #: inc/theme-options/theme-options.php:1294
 msgid "Choose number of products. Write -1 for show all products on one page"
 msgstr ""
+"Elija el número de productos. Escribe -1 para mostrar todos los productos en "
+"una sola página"
 
 #: inc/theme-options/theme-options.php:1391
 msgid "Sample Font"
@@ -1976,55 +2029,58 @@ msgstr "Fuente de ejemplo"
 
 #: inc/theme-options/theme-options.php:1471
 msgid "Support"
-msgstr ""
+msgstr "Apoyo"
 
 #: inc/theme-options/theme-options.php:1473
 msgid "If You faced with problems or find error or bug, please"
 msgstr ""
+"Si usted enfrenta con problemas o encontrar un error o fallo, por favor"
 
 #: inc/theme-options/theme-options.php:1474
 msgid "submit request."
-msgstr ""
+msgstr "Enviar peticion."
 
 #: inc/theme-options/theme-options.php:1475
 msgid "On official "
-msgstr ""
+msgstr "El oficial"
 
 #: inc/theme-options/theme-options.php:1475
 msgid "Support forum"
-msgstr ""
+msgstr "Foro de soporte"
 
 #: inc/theme-options/theme-options.php:1476
 msgid "You may find answers on Your questions."
-msgstr ""
+msgstr "Usted puede encontrar respuestas sobre sus preguntas."
 
 #: inc/theme-options/theme-options.php:1480
 msgid "Additional customization"
-msgstr ""
+msgstr "personalización adicional"
 
 #: inc/theme-options/theme-options.php:1482
 msgid "Our team is available for any type of WordPress development. "
 msgstr ""
+"Nuestro equipo está disponible para cualquier tipo de desarrollo de "
+"WordPress."
 
 #: inc/theme-options/theme-options.php:1483
 msgid "If You want customize theme or add new features, You can"
-msgstr ""
+msgstr "Si desea personalizar el tema o añadir nuevas características, puede"
 
 #: inc/theme-options/theme-options.php:1484
 msgid "submit order"
-msgstr ""
+msgstr "orden de envio"
 
 #: inc/theme-options/theme-options.php:1485
 msgid "on our website"
-msgstr ""
+msgstr "en nuestra página web"
 
 #: inc/widgets.php:17
 msgid "News Archive"
-msgstr ""
+msgstr "Archivo de noticias"
 
 #: inc/widgets.php:21
 msgid "Use this widget to list your Link posts."
-msgstr ""
+msgstr "Utilice este widget a su lista de mensajes Enlace."
 
 #: inc/widgets.php:41
 msgid "News-Archive"
@@ -2085,7 +2141,7 @@ msgstr "Archivos %s "
 
 #: woocommerce/single-product/product-image.php:44
 msgid "Placeholder"
-msgstr ""
+msgstr "marcador de posición"
 
 #~ msgid "All posts by %s"
 #~ msgstr "Todas las publicaciones por %s"
