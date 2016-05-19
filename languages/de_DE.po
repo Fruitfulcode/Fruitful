@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Fruitful\n"
 "POT-Creation-Date: 2016-03-25 15:31+0200\n"
-"PO-Revision-Date: 2016-03-25 15:31+0200\n"
+"PO-Revision-Date: 2016-05-19 12:57+0300\n"
 "Last-Translator: Fruitfulcode\n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -151,7 +151,7 @@ msgstr "Sidebar Produktseite"
 
 #: functions.php:300
 msgid "Navigate to..."
-msgstr ""
+msgstr "Navigieren Sie zu ..."
 
 #: functions.php:581 functions.php:586
 msgid "Please add images for slider in theme options!"
@@ -505,7 +505,7 @@ msgstr "Das folgende Plugin wurde erfolgreich aktiviert:"
 #: inc/func/plugin-activation.php:401
 #, php-format
 msgid "No action taken. Plugin %1$s was already active."
-msgstr ""
+msgstr "Keine Maßnahmen ergriffen. Plugin %1$s war bereits aktiv."
 
 #: inc/func/plugin-activation.php:402
 #, php-format
@@ -513,6 +513,8 @@ msgid ""
 "Plugin not activated. A higher version of %s is needed for this theme. "
 "Please update the plugin."
 msgstr ""
+"Plugin nicht aktiviert. Eine höhere Version von %s ist für dieses Thema "
+"erforderlich. Bitte aktualisieren Sie das Plugin."
 
 #: inc/func/plugin-activation.php:403 inc/func/plugins-included.php:92
 #, php-format
@@ -525,7 +527,7 @@ msgstr "Diesen Hinweis verwerfen"
 
 #: inc/func/plugin-activation.php:405
 msgid "Please contact the administrator of this site for help."
-msgstr ""
+msgstr "Bitte kontaktieren Sie den Administrator dieser Seite um Hilfe."
 
 #: inc/func/plugin-activation.php:1873
 #, php-format
@@ -546,7 +548,7 @@ msgstr "WordPress Repository"
 
 #: inc/func/plugin-activation.php:2181
 msgid "External Source"
-msgstr ""
+msgstr "Externe Quelle"
 
 #: inc/func/plugin-activation.php:2184
 msgid "Pre-Packaged"
@@ -562,19 +564,19 @@ msgstr "Installiert, aber nicht aktiviert"
 
 #: inc/func/plugin-activation.php:2207
 msgid "Active"
-msgstr ""
+msgstr "Aktiv"
 
 #: inc/func/plugin-activation.php:2213
 msgid "Required Update not Available"
-msgstr ""
+msgstr "Erforderliche Update nicht verfügbar"
 
 #: inc/func/plugin-activation.php:2216
 msgid "Requires Update"
-msgstr ""
+msgstr "Benötigt aktualisieren"
 
 #: inc/func/plugin-activation.php:2219
 msgid "Update recommended"
-msgstr ""
+msgstr "Update empfohlen"
 
 #: inc/func/plugin-activation.php:2227
 #, php-format
@@ -584,17 +586,17 @@ msgstr ""
 #: inc/func/plugin-activation.php:2275
 #, php-format
 msgid "To Install <span class=\"count\">(%s)</span>"
-msgstr ""
+msgstr "Installieren <span class=\"count\">(%s)</span>"
 
 #: inc/func/plugin-activation.php:2278
 #, php-format
 msgid "Update Available <span class=\"count\">(%s)</span>"
-msgstr ""
+msgstr "Update verfügbar <span class=\"count\">(%s)</span>"
 
 #: inc/func/plugin-activation.php:2281
 #, php-format
 msgid "To Activate <span class=\"count\">(%s)</span>"
-msgstr ""
+msgstr "Aktivieren <span class=\"count\">(%s)</span>"
 
 #: inc/func/plugin-activation.php:2363
 msgid "unknown"
@@ -602,15 +604,15 @@ msgstr ""
 
 #: inc/func/plugin-activation.php:2371
 msgid "Installed version:"
-msgstr ""
+msgstr "Die installierte Version:"
 
 #: inc/func/plugin-activation.php:2379
 msgid "Minimum required version:"
-msgstr ""
+msgstr "Erforderliche Mindestversion:"
 
 #: inc/func/plugin-activation.php:2391
 msgid "Available version:"
-msgstr ""
+msgstr "Verfügbare Version:"
 
 #: inc/func/plugin-activation.php:2414
 #, php-format
@@ -618,6 +620,8 @@ msgid ""
 "No plugins to install, update or activate. <a href=\"%1$s\">Return to the "
 "Dashboard</a>"
 msgstr ""
+"Keine Plugins zu installieren, zu aktualisieren oder zu aktivieren. <a href="
+"\"%1$s\"> Zurück zum Dashboard </a>"
 
 #: inc/func/plugin-activation.php:2428
 msgid "Plugin"
@@ -642,17 +646,17 @@ msgstr "Status"
 #: inc/func/plugin-activation.php:2483
 #, php-format
 msgid "Install %2$s"
-msgstr ""
+msgstr "Installieren %2$s"
 
 #: inc/func/plugin-activation.php:2487
 #, php-format
 msgid "Update %2$s"
-msgstr ""
+msgstr "Aktualisieren %2$s"
 
 #: inc/func/plugin-activation.php:2492
 #, php-format
 msgid "Activate %2$s"
-msgstr ""
+msgstr "Aktivieren %2$s"
 
 #: inc/func/plugin-activation.php:2595
 msgid "Install"
@@ -660,7 +664,7 @@ msgstr "Installieren"
 
 #: inc/func/plugin-activation.php:2601
 msgid "Update"
-msgstr ""
+msgstr "Aktualisieren"
 
 #: inc/func/plugin-activation.php:2604
 msgid "Activate"
@@ -669,18 +673,22 @@ msgstr "Aktivieren"
 #: inc/func/plugin-activation.php:2635
 msgid "No plugins were selected to be installed. No action taken."
 msgstr ""
+"Keine Plugins wurden installiert werden ausgewählt. Keine Maßnahmen "
+"ergriffen."
 
 #: inc/func/plugin-activation.php:2637
 msgid "No plugins were selected to be updated. No action taken."
 msgstr ""
+"Keine Plugins wurden aktualisiert werden ausgewählt. Keine Maßnahmen "
+"ergriffen."
 
 #: inc/func/plugin-activation.php:2673
 msgid "No plugins are available to be installed at this time."
-msgstr ""
+msgstr "Keine Plugins sind verfügbar zu diesem Zeitpunkt installiert werden."
 
 #: inc/func/plugin-activation.php:2675
 msgid "No plugins are available to be updated at this time."
-msgstr ""
+msgstr "Keine Plugins sind verfügbar zu diesem Zeitpunkt aktualisiert werden."
 
 #: inc/func/plugin-activation.php:3020
 msgid "Plugin activation failed."
@@ -689,7 +697,7 @@ msgstr "Plugin Aktivierung fehlgeschlagen."
 #: inc/func/plugin-activation.php:3354
 #, php-format
 msgid "Updating Plugin %1$s (%2$d/%3$d)"
-msgstr ""
+msgstr "Die Aktualisierung Plugin %1$s (%2$d/%3$d)"
 
 #: inc/func/plugin-activation.php:3356
 #, php-format
@@ -948,6 +956,10 @@ msgid ""
 "adapt for mobile devices and static page with fixed width. Uncheck arrow "
 "below if you need static website display"
 msgstr ""
+"Theme unterstützt zwei Arten von HTML-Layout. Standard ansprechende "
+"Einstellung, die für mobile Geräte und statische Seite mit fester Breite "
+"anzupassen. Deaktivieren Sie die Option Pfeil unten, wenn Sie statische "
+"Website Anzeige benötigen"
 
 #: inc/theme-options/theme-options.php:90
 msgid "Responsive"
@@ -1083,6 +1095,8 @@ msgstr "Mehrsprachige Schalter im Header (WPML)"
 #: inc/theme-options/theme-options.php:240
 msgid "If you wish to show Language Switch in header, select option below."
 msgstr ""
+"Wenn Sie möchten, unter Language Switcher in Header, wählen Sie die Option "
+"zu zeigen."
 
 #: inc/theme-options/theme-options.php:241
 #: inc/theme-options/theme-options.php:1242
@@ -1097,7 +1111,7 @@ msgstr "Einstellungen zurücksetzen"
 #: inc/theme-options/theme-options.php:247
 #: inc/theme-options/theme-options.php:256
 msgid "All theme options will be reset to default."
-msgstr ""
+msgstr "Alle Themenoptionen werden zurückgesetzt auf die Standard sein."
 
 #: inc/theme-options/theme-options.php:269
 #: inc/theme-options/theme-options.php:1066
@@ -1157,11 +1171,11 @@ msgstr "Button-Menü"
 
 #: inc/theme-options/theme-options.php:305
 msgid "Menu icon color"
-msgstr ""
+msgstr "Menüsymbol Farbe"
 
 #: inc/theme-options/theme-options.php:306
 msgid "Chose color for collapsing menu icon"
-msgstr ""
+msgstr "Wählen Sie die Farbe zum Zusammenmenüsymbol"
 
 #: inc/theme-options/theme-options.php:311
 msgid "Background for header"
@@ -1172,6 +1186,8 @@ msgid ""
 "Upload image with full width for background in header area. (Supported "
 "files .png, .jpg, .gif)"
 msgstr ""
+"Laden Bild mit voller Breite für den Hintergrund im Kopfbereich . "
+"(Unterstützte Dateien .png, .jpg, .gif)"
 
 #: inc/theme-options/theme-options.php:323
 msgid "Header background-color"
@@ -1221,11 +1237,11 @@ msgstr ""
 
 #: inc/theme-options/theme-options.php:365
 msgid "Background repeat"
-msgstr ""
+msgstr "Hintergrund Wiederholung"
 
 #: inc/theme-options/theme-options.php:373
 msgid "Background Color"
-msgstr ""
+msgstr "Hintergrundfarbe"
 
 #: inc/theme-options/theme-options.php:374
 msgid "Choose color for body background"
@@ -1233,7 +1249,7 @@ msgstr "Wähle die Farbe für den Body-Hintergrund"
 
 #: inc/theme-options/theme-options.php:380
 msgid "Background color for content"
-msgstr ""
+msgstr "Hintergrundfarbe für den Inhalt"
 
 #: inc/theme-options/theme-options.php:381
 msgid "Choose color for main content area"
@@ -1467,11 +1483,11 @@ msgstr "Farbe Verkaufspreis"
 
 #: inc/theme-options/theme-options.php:661
 msgid "Rating color (regular)"
-msgstr ""
+msgstr "Bewertung Farbe (regular)"
 
 #: inc/theme-options/theme-options.php:667
 msgid "Rating color (hover, active)"
-msgstr ""
+msgstr "Bewertung Farbe hover, active)"
 
 #: inc/theme-options/theme-options.php:676
 msgid "Fonts"
@@ -1510,6 +1526,8 @@ msgstr "Schriftgröße"
 msgid ""
 "Choose font size for specific html elements. Set size as number, without px.."
 msgstr ""
+"Wählen Sie die Schriftgröße für bestimmte HTML-Elemente. Set Größe als Zahl, "
+"ohne px .."
 
 #: inc/theme-options/theme-options.php:716
 msgid "H1"
@@ -1793,6 +1811,12 @@ msgid ""
 "page. To display slider in needed place use shortcode [fruitful_slider]. "
 "Current theme version support only one slider per website."
 msgstr ""
+"Hinzufügen von Bildern zu Schieber (Unterstützte Dateien .png, .jpg, .gif). "
+"Wenn Sie Auftrag ändern möchten, ziehen Sie sie einfach fallen lassen. "
+"Bildgröße für Dias ist Original von Mediengalerie , bitte laden Sie Bilder "
+"in gleicher Größe, um beste Display auf Seite bekommen. Zur Anzeige Schieber "
+"in gewünschten Stelle Verwendung Shortcode [fruitful_slider]. Aktuelles "
+"Thema Version Unterstützung nur ein Schieber pro Website."
 
 #: inc/theme-options/theme-options.php:1058
 msgid "Social Links"
@@ -1957,11 +1981,11 @@ msgstr ""
 
 #: inc/theme-options/theme-options.php:1246
 msgid "Cart color"
-msgstr ""
+msgstr "Warenkorb Farbe"
 
 #: inc/theme-options/theme-options.php:1247
 msgid "Choose color for cart icon"
-msgstr ""
+msgstr "Wählen Sie die Farbe für Einkaufswagen Symbol"
 
 #: inc/theme-options/theme-options.php:1254
 msgid "Woocommerce Shop Sidebar"
@@ -2079,7 +2103,7 @@ msgstr "Nachrichten-Archiv"
 
 #: inc/widgets.php:21
 msgid "Use this widget to list your Link posts."
-msgstr ""
+msgstr "Verwenden Sie dieses Widget Ihr Link-Beiträge aufzulisten."
 
 #: inc/widgets.php:41
 msgid "News-Archive"
