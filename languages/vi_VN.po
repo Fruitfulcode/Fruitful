@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fruitful\n"
 "POT-Creation-Date: 2016-03-25 15:53+0200\n"
-"PO-Revision-Date: 2016-03-25 15:53+0200\n"
+"PO-Revision-Date: 2016-05-19 12:50+0300\n"
 "Last-Translator: Fruitfulcode\n"
 "Language-Team: Fruitfulcode\n"
 "Language: vi_VN\n"
@@ -149,11 +149,11 @@ msgstr ""
 
 #: functions.php:581 functions.php:586
 msgid "Please add images for slider in theme options!"
-msgstr ""
+msgstr "Vui lòng thêm hình ảnh cho thanh trượt trong các tùy chọn chủ đề!"
 
 #: functions.php:1374
 msgid "You may be interested in&hellip;"
-msgstr ""
+msgstr "Bạn có thể quan tâm &hellip;"
 
 #: functions.php:1446 functions.php:1455
 msgid ", "
@@ -183,11 +183,11 @@ msgstr ""
 
 #: functions.php:1596
 msgid "Next Page &raquo;"
-msgstr ""
+msgstr "Trang tiếp theo &raquo;"
 
 #: functions.php:1638
 msgid "Search for products"
-msgstr ""
+msgstr "Tìm kiếm sản phẩm"
 
 #: functions.php:1692
 msgid "Front page displays Error."
@@ -195,7 +195,7 @@ msgstr ""
 
 #: functions.php:1692
 msgid "Select different pages!"
-msgstr ""
+msgstr "Chọn các trang khác nhau!"
 
 #: functions.php:1743
 #, php-format
@@ -243,10 +243,13 @@ msgid ""
 "problems with display content in shortcodes, because we created this part as "
 "plugin. You need install "
 msgstr ""
+"Chú ý! Fruitful chủ đề phiên bản 2.0 đã cập nhật lớn. Bạn có thể có một vấn "
+"đề với nội dung hiển thị trong shortcodes, bởi vì chúng tôi tạo ra phần này "
+"như là plugin. Bạn cần cài đặt"
 
 #: functions.php:1927
 msgid " and use them."
-msgstr ""
+msgstr "và sử dụng chúng."
 
 #: image.php:25
 #, php-format
@@ -454,42 +457,42 @@ msgstr "Thêm một trang trình bày"
 
 #: inc/func/plugin-activation.php:333
 msgid "Install Required Plugins"
-msgstr ""
+msgstr "Cài đặt Plugins buộc"
 
 #: inc/func/plugin-activation.php:334
 msgid "Install Plugins"
-msgstr ""
+msgstr "cài đặt Plugins"
 
 #: inc/func/plugin-activation.php:335 inc/func/plugins-included.php:40
 #, php-format
 msgid "Installing Plugin: %s"
-msgstr ""
+msgstr "Cài đặt Plugin: %s"
 
 #: inc/func/plugin-activation.php:336 inc/func/plugins-included.php:41
 msgid "Something went wrong with the plugin API."
-msgstr ""
+msgstr "Một cái gì đó đã đi sai với các API plugin."
 
 #: inc/func/plugin-activation.php:397 inc/func/plugins-included.php:87
 msgid "Return to Required Plugins Installer"
-msgstr ""
+msgstr "Quay trở lại buộc Plugins Installer"
 
 #: inc/func/plugin-activation.php:398
 msgid "Return to the dashboard"
-msgstr ""
+msgstr "Quay trở lại bảng điều khiển"
 
 #: inc/func/plugin-activation.php:399 inc/func/plugin-activation.php:3021
 #: inc/func/plugins-included.php:88
 msgid "Plugin activated successfully."
-msgstr ""
+msgstr "Plugin kích hoạt thành công."
 
 #: inc/func/plugin-activation.php:400
 msgid "The following plugin was activated successfully:"
-msgstr ""
+msgstr "Các plugin sau đây được kích hoạt thành công:"
 
 #: inc/func/plugin-activation.php:401
 #, php-format
 msgid "No action taken. Plugin %1$s was already active."
-msgstr ""
+msgstr "Không có hành động. Plugin %1$s đã kích hoạt sẵn."
 
 #: inc/func/plugin-activation.php:402
 #, php-format
@@ -497,19 +500,21 @@ msgid ""
 "Plugin not activated. A higher version of %s is needed for this theme. "
 "Please update the plugin."
 msgstr ""
+"Plugin không được kích hoạt. Một phiên bản cao hơn của %s là cần thiết cho "
+"chủ đề này. Vui lòng cập nhật các plugin."
 
 #: inc/func/plugin-activation.php:403 inc/func/plugins-included.php:92
 #, php-format
 msgid "All plugins installed and activated successfully. %1$s"
-msgstr ""
+msgstr "Tất cả các plugin được cài đặt và kích hoạt thành công. %1$s"
 
 #: inc/func/plugin-activation.php:404
 msgid "Dismiss this notice"
-msgstr ""
+msgstr "Loại bỏ thông báo này"
 
 #: inc/func/plugin-activation.php:405
 msgid "Please contact the administrator of this site for help."
-msgstr ""
+msgstr "Hãy liên hệ với quản trị viên của trang web này để được giúp đỡ."
 
 #: inc/func/plugin-activation.php:1873
 #, php-format
@@ -518,11 +523,11 @@ msgstr ""
 
 #: inc/func/plugin-activation.php:2159
 msgid "Required"
-msgstr ""
+msgstr "Cần thiết"
 
 #: inc/func/plugin-activation.php:2162
 msgid "Recommended"
-msgstr ""
+msgstr "Đề xuất"
 
 #: inc/func/plugin-activation.php:2178
 msgid "WordPress Repository"
@@ -538,27 +543,27 @@ msgstr ""
 
 #: inc/func/plugin-activation.php:2201
 msgid "Not Installed"
-msgstr ""
+msgstr "Chưa cài đặt"
 
 #: inc/func/plugin-activation.php:2205
 msgid "Installed But Not Activated"
-msgstr ""
+msgstr "Cài đặt Nhưng Không hoạt"
 
 #: inc/func/plugin-activation.php:2207
 msgid "Active"
-msgstr ""
+msgstr "hoạt động"
 
 #: inc/func/plugin-activation.php:2213
 msgid "Required Update not Available"
-msgstr ""
+msgstr "Yêu cầu Cập nhật không sẵn"
 
 #: inc/func/plugin-activation.php:2216
 msgid "Requires Update"
-msgstr ""
+msgstr "Yêu cầu cập nhật"
 
 #: inc/func/plugin-activation.php:2219
 msgid "Update recommended"
-msgstr ""
+msgstr "cập nhật khuyến cáo"
 
 #: inc/func/plugin-activation.php:2227
 #, php-format
@@ -571,15 +576,15 @@ msgstr ""
 
 #: inc/func/plugin-activation.php:2371
 msgid "Installed version:"
-msgstr ""
+msgstr "phiên bản cài đặt:"
 
 #: inc/func/plugin-activation.php:2379
 msgid "Minimum required version:"
-msgstr ""
+msgstr "Phiên bản tối thiểu cần thiết:"
 
 #: inc/func/plugin-activation.php:2391
 msgid "Available version:"
-msgstr ""
+msgstr "phiên bản có sẵn:"
 
 #: inc/func/plugin-activation.php:2414
 #, php-format
@@ -587,156 +592,162 @@ msgid ""
 "No plugins to install, update or activate. <a href=\"%1$s\">Return to the "
 "Dashboard</a>"
 msgstr ""
+"Không có plugin để cài đặt, cập nhật hoặc kích hoạt. <a href=\"%1$s\"> Quay "
+"trở lại Dashboard </a>"
 
 #: inc/func/plugin-activation.php:2428
 msgid "Plugin"
-msgstr ""
+msgstr "Cắm vào"
 
 #: inc/func/plugin-activation.php:2429
 msgid "Source"
-msgstr ""
+msgstr "nguồn"
 
 #: inc/func/plugin-activation.php:2430
 msgid "Type"
-msgstr ""
+msgstr "Kiểu"
 
 #: inc/func/plugin-activation.php:2434
 msgid "Version"
-msgstr ""
+msgstr "Phiên bản"
 
 #: inc/func/plugin-activation.php:2435
 msgid "Status"
-msgstr ""
+msgstr "Trạng thái"
 
 #: inc/func/plugin-activation.php:2483
 #, php-format
 msgid "Install %2$s"
-msgstr ""
+msgstr "Cài đặt %2$s"
 
 #: inc/func/plugin-activation.php:2487
 #, php-format
 msgid "Update %2$s"
-msgstr ""
+msgstr "cập nhật %2$s"
 
 #: inc/func/plugin-activation.php:2492
 #, php-format
 msgid "Activate %2$s"
-msgstr ""
+msgstr "Kích hoạt %2$s"
 
 #: inc/func/plugin-activation.php:2595
 msgid "Install"
-msgstr ""
+msgstr "Cài đặt"
 
 #: inc/func/plugin-activation.php:2601
 msgid "Update"
-msgstr ""
+msgstr "cập nhật"
 
 #: inc/func/plugin-activation.php:2604
 msgid "Activate"
-msgstr ""
+msgstr "Kích hoạt"
 
 #: inc/func/plugin-activation.php:2635
 msgid "No plugins were selected to be installed. No action taken."
-msgstr ""
+msgstr "Không có plugin đã được lựa chọn sẽ được cài đặt. Không có hành động."
 
 #: inc/func/plugin-activation.php:2637
 msgid "No plugins were selected to be updated. No action taken."
-msgstr ""
+msgstr "Không có plugin đã được lựa chọn để được cập nhật. Không có hành động."
 
 #: inc/func/plugin-activation.php:2673
 msgid "No plugins are available to be installed at this time."
-msgstr ""
+msgstr "Không có plugin có sẵn để được cài đặt tại thời điểm này."
 
 #: inc/func/plugin-activation.php:2675
 msgid "No plugins are available to be updated at this time."
-msgstr ""
+msgstr "Không có plugin có sẵn để được cập nhật tại thời điểm này."
 
 #: inc/func/plugin-activation.php:3020
 msgid "Plugin activation failed."
-msgstr ""
+msgstr "kích hoạt plugin."
 
 #: inc/func/plugin-activation.php:3354
 #, php-format
 msgid "Updating Plugin %1$s (%2$d/%3$d)"
-msgstr ""
+msgstr "Đang cập nhật Plugin %1$s (%2$d/%3$d)"
 
 #: inc/func/plugin-activation.php:3356
 #, php-format
 msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
-msgstr ""
+msgstr "Có lỗi xảy ra trong khi cài đặt %1$s: <strong>%2$s</strong>."
 
 #: inc/func/plugin-activation.php:3357
 #, php-format
 msgid "The installation of %1$s failed."
-msgstr ""
+msgstr "Việc lắp đặt %1$s thất bại."
 
 #: inc/func/plugin-activation.php:3361
 msgid ""
 "The installation and activation process is starting. This process may take a "
 "while on some hosts, so please be patient."
 msgstr ""
+"Việc cài đặt và kích hoạt quá trình được bắt đầu. Quá trình này có thể mất "
+"một thời gian trên một số máy chủ, vì vậy hãy kiên nhẫn."
 
 #: inc/func/plugin-activation.php:3362
 #, php-format
 msgid "%1$s installed and activated successfully."
-msgstr ""
+msgstr "%1$s được cài đặt và kích hoạt thành công."
 
 #: inc/func/plugin-activation.php:3363
 msgid "All installations and activations have been completed."
-msgstr ""
+msgstr "Tất cả các cài đặt và kích hoạt đã được hoàn thành."
 
 #: inc/func/plugin-activation.php:3364
 #, php-format
 msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
-msgstr ""
+msgstr "Cài đặt và kích hoạt Plugin %1$s (%2$d/%3$d)"
 
 #: inc/func/plugin-activation.php:3367
 msgid ""
 "The installation process is starting. This process may take a while on some "
 "hosts, so please be patient."
 msgstr ""
+"Quá trình cài đặt sẽ bắt đầu. Quá trình này có thể mất một lúc trên một số "
+"máy chủ, vì vậy hãy kiên nhẫn."
 
 #: inc/func/plugin-activation.php:3369
 msgid "All installations have been completed."
-msgstr ""
+msgstr "Tất cả các cài đặt đã được hoàn thành."
 
 #: inc/func/plugin-activation.php:3370
 #, php-format
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
-msgstr ""
+msgstr "Cài đặt Plugin %1$s (%2$d/%3$d)"
 
 #: inc/func/plugins-included.php:38
 msgid "Fruitful Plugin Integration"
-msgstr ""
+msgstr "Tích hợp Plugin hiệu quả"
 
 #: inc/func/plugins-included.php:39
 msgid "Plugin Integration"
-msgstr ""
+msgstr "Tích hợp Plugin"
 
 #: inc/metaboxes/helpers/cmb_Meta_Box_ajax.php:47
 msgid "Please Try Again"
-msgstr ""
+msgstr "Vui lòng thử lại"
 
 #: inc/metaboxes/helpers/cmb_Meta_Box_ajax.php:131
 msgid "Remove Embed"
-msgstr ""
+msgstr "Di Nhúng"
 
 #: inc/metaboxes/helpers/cmb_Meta_Box_ajax.php:134
 #, php-format
 msgid "No oEmbed Results Found for %s. View more info at"
-msgstr ""
+msgstr "Không có kết quả oEmbed Tìm thấy cho %s. Xem thêm thông tin tại"
 
 #: inc/metaboxes/helpers/cmb_Meta_Box_field.php:460
 msgid "Add Group"
-msgstr ""
+msgstr "Thêm nhóm"
 
 #: inc/metaboxes/helpers/cmb_Meta_Box_field.php:461
 msgid "Remove Group"
-msgstr ""
+msgstr "Di Nhóm"
 
 #: inc/metaboxes/helpers/cmb_Meta_Box_types.php:253
 msgid "Add Row"
-msgstr ""
+msgstr "Thêm dòng"
 
 #: inc/metaboxes/helpers/cmb_Meta_Box_types.php:619
 #: inc/metaboxes/helpers/cmb_Meta_Box_types.php:653
@@ -746,50 +757,50 @@ msgstr ""
 #: inc/metaboxes/helpers/cmb_Meta_Box_types.php:692
 #: inc/metaboxes/helpers/cmb_Meta_Box_types.php:746
 msgid "Add or Upload File"
-msgstr ""
+msgstr "Thêm hoặc tải lên tập tin"
 
 #: inc/metaboxes/helpers/cmb_Meta_Box_types.php:713
 #: inc/metaboxes/helpers/cmb_Meta_Box_types.php:778
 msgid "Remove Image"
-msgstr ""
+msgstr "Xóa ảnh"
 
 #: inc/metaboxes/helpers/cmb_Meta_Box_types.php:724
 #: inc/metaboxes/helpers/cmb_Meta_Box_types.php:786
 msgid "File:"
-msgstr ""
+msgstr "Tập tin:"
 
 #: inc/metaboxes/helpers/cmb_Meta_Box_types.php:724
 #: inc/metaboxes/helpers/cmb_Meta_Box_types.php:786
 msgid "Download"
-msgstr ""
+msgstr "Tải về"
 
 #: inc/metaboxes/init-for-objestcs-mb.php:34
 msgid "Slider settings"
-msgstr ""
+msgstr "thiết lập Slider"
 
 #: inc/metaboxes/init-for-objestcs-mb.php:42
 msgid "Slider display"
-msgstr ""
+msgstr "màn hình trượt"
 
 #: inc/metaboxes/init-for-objestcs-mb.php:44
 msgid "Select the option to display the corresponding slider"
-msgstr ""
+msgstr "Chọn tùy chọn để hiển thị các thanh trượt tương ứng"
 
 #: inc/metaboxes/init-for-objestcs-mb.php:47
 msgid "Disable slider"
-msgstr ""
+msgstr "Vô hiệu hóa thanh trượt"
 
 #: inc/metaboxes/init-for-objestcs-mb.php:48
 msgid "Full width slider"
-msgstr ""
+msgstr "trượt đầy đủ chiều rộng"
 
 #: inc/metaboxes/init-for-objestcs-mb.php:49
 msgid "Boxed slider"
-msgstr ""
+msgstr "trượt đóng hộp"
 
 #: inc/metaboxes/init-for-objestcs-mb.php:59
 msgid "Page settings"
-msgstr ""
+msgstr "trang cài"
 
 #: inc/metaboxes/init-for-objestcs-mb.php:66
 #: inc/metaboxes/init-for-objestcs-mb.php:85
@@ -799,40 +810,40 @@ msgstr "Bố cục"
 
 #: inc/metaboxes/init-for-objestcs-mb.php:67
 msgid "Select a specific layout for this page."
-msgstr ""
+msgstr "Chọn một bố trí cụ thể cho trang này."
 
 #: inc/metaboxes/init-for-objestcs-mb.php:78
 msgid "Post settings"
-msgstr ""
+msgstr "cài đặt bài đăng"
 
 #: inc/metaboxes/init-for-objestcs-mb.php:86
 msgid "Select a specific layout for this post."
-msgstr ""
+msgstr "Chọn một bố trí cụ thể cho bài này."
 
 #: inc/metaboxes/init.php:258
 msgid "Clear"
-msgstr ""
+msgstr "Trong sáng"
 
 #: inc/metaboxes/init.php:259
 msgid "Default"
-msgstr ""
+msgstr "Mặc định"
 
 #: inc/metaboxes/init.php:260
 msgid "Select Color"
-msgstr ""
+msgstr "chọn màu"
 
 #: inc/metaboxes/init.php:261
 msgid "Current Color"
-msgstr ""
+msgstr "Màu hiện tại"
 
 #: inc/metaboxes/init.php:293
 msgid "Select / Deselect All"
-msgstr ""
+msgstr "Chọn / Bỏ chọn tất cả"
 
 #: inc/metaboxes/init.php:1187 inc/theme-options/theme-options.php:1441
 #: inc/theme-options/theme-options.php:1463
 msgid "Save"
-msgstr ""
+msgstr "Tiết kiệm"
 
 #: inc/template-tags.php:27
 msgid "Post navigation"
@@ -903,7 +914,7 @@ msgstr "Tùy chọn theme"
 
 #: inc/theme-options/theme-options.php:83
 msgid "General"
-msgstr ""
+msgstr "Chung"
 
 #: inc/theme-options/theme-options.php:89
 msgid ""
@@ -911,6 +922,9 @@ msgid ""
 "adapt for mobile devices and static page with fixed width. Uncheck arrow "
 "below if you need static website display"
 msgstr ""
+"Theme hỗ trợ 2 loại bố trí html. Mặc định thiết lập đáp ứng mà thích ứng cho "
+"các thiết bị di động và các trang tĩnh với chiều rộng cố định. Bỏ chọn mũi "
+"tên bên dưới nếu bạn cần hiển thị trang web tĩnh"
 
 #: inc/theme-options/theme-options.php:90
 msgid "Responsive"
@@ -938,7 +952,7 @@ msgstr "Hiển thị bình luận trên trang"
 
 #: inc/theme-options/theme-options.php:123
 msgid "Front page template with latest posts"
-msgstr ""
+msgstr "mẫu trang phía trước với tất cả bài viết"
 
 #: inc/theme-options/theme-options.php:124
 msgid "Settings > Reading > Front page displays > Your latest posts"
@@ -955,7 +969,7 @@ msgstr ""
 #: inc/theme-options/theme-options.php:220
 #: inc/theme-options/theme-options.php:1259
 msgid "Full width"
-msgstr ""
+msgstr "Chiều rộng đầy đủ"
 
 #: inc/theme-options/theme-options.php:128
 #: inc/theme-options/theme-options.php:142
@@ -969,7 +983,7 @@ msgstr ""
 #: inc/theme-options/theme-options.php:1260
 #: inc/theme-options/theme-options.php:1272
 msgid "Right sidebar"
-msgstr ""
+msgstr "bên phải"
 
 #: inc/theme-options/theme-options.php:129
 #: inc/theme-options/theme-options.php:144
@@ -983,39 +997,39 @@ msgstr ""
 #: inc/theme-options/theme-options.php:1258
 #: inc/theme-options/theme-options.php:1271
 msgid "Left sidebar"
-msgstr ""
+msgstr "thanh bên trái"
 
 #: inc/theme-options/theme-options.php:134
 msgid "Page templates by default"
-msgstr ""
+msgstr "Các mẫu trang theo mặc định"
 
 #: inc/theme-options/theme-options.php:135
 msgid "Choose default display for templates."
-msgstr ""
+msgstr "Chọn hiển thị mặc định cho mẫu."
 
 #: inc/theme-options/theme-options.php:140
 msgid "Page:"
-msgstr ""
+msgstr "Trang:"
 
 #: inc/theme-options/theme-options.php:151
 msgid "Single Post:"
-msgstr ""
+msgstr "bài duy nhất:"
 
 #: inc/theme-options/theme-options.php:162
 msgid "Archive:"
-msgstr ""
+msgstr "lưu trữ:"
 
 #: inc/theme-options/theme-options.php:173
 msgid "Author:"
-msgstr ""
+msgstr "tác giả:"
 
 #: inc/theme-options/theme-options.php:184
 msgid "Category:"
-msgstr ""
+msgstr "Thể loại:"
 
 #: inc/theme-options/theme-options.php:195
 msgid "Tags:"
-msgstr ""
+msgstr "bịt đầu cán:"
 
 #: inc/theme-options/theme-options.php:206
 msgid "404:"
@@ -1023,27 +1037,30 @@ msgstr ""
 
 #: inc/theme-options/theme-options.php:217
 msgid "Search:"
-msgstr ""
+msgstr "Tìm kiếm:"
 
 #: inc/theme-options/theme-options.php:229
 msgid "Show Featured image on single post"
-msgstr ""
+msgstr "Hiển thị hình ảnh nổi bật về bài duy nhất"
 
 #: inc/theme-options/theme-options.php:230
 msgid "Select option below for show featured image on single post page."
 msgstr ""
+"Chọn tùy chọn bên dưới cho thấy đặc trưng hình ảnh trên bài duy nhất trang."
 
 #: inc/theme-options/theme-options.php:231
 msgid "Show featured image"
-msgstr ""
+msgstr "Hiển thị hình ảnh tính năng"
 
 #: inc/theme-options/theme-options.php:239
 msgid "Multilingual Switch in Header (WPML)"
-msgstr ""
+msgstr "Switcher đa ngôn ngữ trong Tiêu đề (WPML)"
 
 #: inc/theme-options/theme-options.php:240
 msgid "If you wish to show Language Switch in header, select option below."
 msgstr ""
+"Nếu bạn muốn hiển thị Language Switcher trong tiêu đề, chọn tùy chọn bên "
+"dưới."
 
 #: inc/theme-options/theme-options.php:241
 #: inc/theme-options/theme-options.php:1242
@@ -1058,7 +1075,7 @@ msgstr "Thiết lập lại tùy chọn"
 #: inc/theme-options/theme-options.php:247
 #: inc/theme-options/theme-options.php:256
 msgid "All theme options will be reset to default."
-msgstr ""
+msgstr "Tất cả các tùy chọn chủ đề sẽ được thiết lập lại để mặc định."
 
 #: inc/theme-options/theme-options.php:269
 #: inc/theme-options/theme-options.php:1066
@@ -1079,50 +1096,50 @@ msgstr "Bật"
 
 #: inc/theme-options/theme-options.php:282
 msgid "Menu Position"
-msgstr ""
+msgstr "vị trí trình đơn"
 
 #: inc/theme-options/theme-options.php:283
 msgid "Set menu position."
-msgstr ""
+msgstr "Đặt vị trí menu."
 
 #: inc/theme-options/theme-options.php:286
 #: inc/theme-options/theme-options.php:401
 msgid "Right"
-msgstr ""
+msgstr "Đúng"
 
 #: inc/theme-options/theme-options.php:287
 #: inc/theme-options/theme-options.php:399
 msgid "Left"
-msgstr ""
+msgstr "Trái"
 
 #: inc/theme-options/theme-options.php:288
 #: inc/theme-options/theme-options.php:400
 msgid "Center"
-msgstr ""
+msgstr "Trung tâm"
 
 #: inc/theme-options/theme-options.php:294
 msgid "Type of Responsive menu"
-msgstr ""
+msgstr "Loại đơn đáp ứng"
 
 #: inc/theme-options/theme-options.php:295
 msgid "Set type of responsive menu."
-msgstr ""
+msgstr "Thiết lập kiểu của menu đáp ứng."
 
 #: inc/theme-options/theme-options.php:298
 msgid "Select menu"
-msgstr ""
+msgstr "Chọn thực đơn"
 
 #: inc/theme-options/theme-options.php:299
 msgid "Button menu"
-msgstr ""
+msgstr "đơn nút"
 
 #: inc/theme-options/theme-options.php:305
 msgid "Menu icon color"
-msgstr ""
+msgstr "màu sắc biểu tượng menu"
 
 #: inc/theme-options/theme-options.php:306
 msgid "Chose color for collapsing menu icon"
-msgstr ""
+msgstr "Chọn màu sắc cho sụp đổ biểu tượng menu"
 
 #: inc/theme-options/theme-options.php:311
 msgid "Background for header"
@@ -1133,6 +1150,8 @@ msgid ""
 "Upload image with full width for background in header area. (Supported "
 "files .png, .jpg, .gif)"
 msgstr ""
+"Tải hình ảnh với đầy đủ chiều rộng cho nền trong khu vực tiêu đề. (Các tập "
+"tin được hỗ trợ .png, .jpg, .gif)"
 
 #: inc/theme-options/theme-options.php:323
 msgid "Header background-color"
@@ -1140,19 +1159,21 @@ msgstr "Màu nền tiêu đề trang"
 
 #: inc/theme-options/theme-options.php:329
 msgid "Background image size"
-msgstr ""
+msgstr "kích thước hình nền"
 
 #: inc/theme-options/theme-options.php:330
 msgid "Choose size for background image - full width or only for content area."
 msgstr ""
+"Chọn kích thước cho hình nền - chiều rộng đầy đủ hoặc chỉ cho khu vực nội "
+"dung."
 
 #: inc/theme-options/theme-options.php:333
 msgid "Full width position"
-msgstr ""
+msgstr "vị trí đầy đủ chiều rộng"
 
 #: inc/theme-options/theme-options.php:334
 msgid "Centered position"
-msgstr ""
+msgstr "vị trí trung tâm"
 
 #: inc/theme-options/theme-options.php:340
 msgid "Height for header area"
@@ -1180,11 +1201,11 @@ msgstr ""
 
 #: inc/theme-options/theme-options.php:365
 msgid "Background repeat"
-msgstr ""
+msgstr "Bối cảnh lặp lại"
 
 #: inc/theme-options/theme-options.php:373
 msgid "Background Color"
-msgstr ""
+msgstr "Màu nền"
 
 #: inc/theme-options/theme-options.php:374
 msgid "Choose color for body background"
@@ -1192,11 +1213,11 @@ msgstr "Chọn màu nền."
 
 #: inc/theme-options/theme-options.php:380
 msgid "Background color for content"
-msgstr ""
+msgstr "Màu nền cho nội dung"
 
 #: inc/theme-options/theme-options.php:381
 msgid "Choose color for main content area"
-msgstr ""
+msgstr "Chọn màu sắc cho khu vực nội dung chính"
 
 #: inc/theme-options/theme-options.php:390
 msgid "Logo"
@@ -1204,19 +1225,19 @@ msgstr "Logo"
 
 #: inc/theme-options/theme-options.php:395
 msgid "Logo Position"
-msgstr ""
+msgstr "vị trí logo"
 
 #: inc/theme-options/theme-options.php:396
 msgid "Set Logo Position"
-msgstr ""
+msgstr "vị trí logo bộ"
 
 #: inc/theme-options/theme-options.php:406
 msgid "Logo size"
-msgstr ""
+msgstr "kích thước Logo"
 
 #: inc/theme-options/theme-options.php:407
 msgid "Specify resolution for your logo image"
-msgstr ""
+msgstr "Xác định độ phân giải cho hình ảnh logo của bạn"
 
 #: inc/theme-options/theme-options.php:413
 msgid "Width"
@@ -1245,6 +1266,8 @@ msgid ""
 "Upload logo in double size (If your logo is 100 x 20px, it should be 200 x "
 "40px)"
 msgstr ""
+"Tải lên biểu trưng có kích thước gấp đôi (Nếu logo của bạn là 100 x 20px, nó "
+"phải là 200x 40px)"
 
 #: inc/theme-options/theme-options.php:439
 msgid "Favicon"
@@ -1290,137 +1313,138 @@ msgstr ""
 
 #: inc/theme-options/theme-options.php:478
 msgid "Colors"
-msgstr ""
+msgstr "Màu sắc"
 
 #: inc/theme-options/theme-options.php:483
 msgid "Main menu color"
-msgstr ""
+msgstr "màu menu chính"
 
 #: inc/theme-options/theme-options.php:484
 msgid "Choose your colors for main menu in header"
-msgstr ""
+msgstr "Chọn màu sắc của bạn cho trình đơn chính trong tiêu đề"
 
 #: inc/theme-options/theme-options.php:491
 #: inc/theme-options/theme-options.php:522
 msgid "Background color"
-msgstr ""
+msgstr "Màu nền"
 
 #: inc/theme-options/theme-options.php:497
 #: inc/theme-options/theme-options.php:528
 msgid "Menu button color"
-msgstr ""
+msgstr "nút Menu màu"
 
 #: inc/theme-options/theme-options.php:503
 #: inc/theme-options/theme-options.php:534
 #: inc/theme-options/theme-options.php:554
 msgid "Font color"
-msgstr ""
+msgstr "Màu chữ"
 
 #: inc/theme-options/theme-options.php:509
 #: inc/theme-options/theme-options.php:540
 msgid "Font color (active and hover)"
-msgstr ""
+msgstr "màu chữ (hoạt động và di chuột)"
 
 #: inc/theme-options/theme-options.php:515
 msgid "Dropdown menu color"
-msgstr ""
+msgstr "Thả xuống màu đơn"
 
 #: inc/theme-options/theme-options.php:516
 msgid "Choose your colors for dropdown menu in header"
-msgstr ""
+msgstr "Chọn màu sắc của bạn cho đơn thả xuống ở phần đầu xuống"
 
 #: inc/theme-options/theme-options.php:546
 msgid "General font color"
-msgstr ""
+msgstr "màu chữ chung"
 
 #: inc/theme-options/theme-options.php:547
 msgid "Choose your colors for text and links"
-msgstr ""
+msgstr "Chọn màu sắc cho văn bản và liên kết"
 
 #: inc/theme-options/theme-options.php:560
 msgid "Link color"
-msgstr ""
+msgstr "màu sắc liên kết"
 
 #: inc/theme-options/theme-options.php:566
 msgid "Link color (hover)"
-msgstr ""
+msgstr "màu liên kết (hover)"
 
 #: inc/theme-options/theme-options.php:572
 msgid "Link color (focus)"
-msgstr ""
+msgstr "màu liên kết (tập trung)"
 
 #: inc/theme-options/theme-options.php:578
 msgid "Link color (active)"
-msgstr ""
+msgstr "Liên kết màu (đang hoạt động)"
 
 #: inc/theme-options/theme-options.php:584
 msgid "Color for lines"
-msgstr ""
+msgstr "Màu cho dòng"
 
 #: inc/theme-options/theme-options.php:585
 msgid "Choose your colors for lines and separators"
-msgstr ""
+msgstr "Chọn màu sắc của bạn cho đường dây và dải phân cách"
 
 #: inc/theme-options/theme-options.php:591
 msgid "Widget separator color"
-msgstr ""
+msgstr "màu phân cách tùng"
 
 #: inc/theme-options/theme-options.php:597
 msgid "Blog post date color"
-msgstr ""
+msgstr "màu sắc trên blog ngày bài"
 
 #: inc/theme-options/theme-options.php:603
 msgid "Date font color"
-msgstr ""
+msgstr "màu chữ ngày"
 
 #: inc/theme-options/theme-options.php:609
 msgid "Color for buttons"
-msgstr ""
+msgstr "Màu cho các nút bấm"
 
 #: inc/theme-options/theme-options.php:610
 msgid "Choose your colors for buttons"
-msgstr ""
+msgstr "Chọn màu sắc của bạn cho các nút bấm"
 
 #: inc/theme-options/theme-options.php:617
 msgid "Button background color"
-msgstr ""
+msgstr "Màu nền của nút"
 
 #: inc/theme-options/theme-options.php:623
 #: inc/theme-options/theme-options.php:642
 msgid "Button background color (hover, active, focus, current page - pagenavi)"
 msgstr ""
+"Màu nền của nút (di chuột, hoạt động, tập trung, hiện tại trang - PageNavi)"
 
 #: inc/theme-options/theme-options.php:629
 msgid "Color for social icons"
-msgstr ""
+msgstr "Màu cho biểu tượng xã hội"
 
 #: inc/theme-options/theme-options.php:630
 msgid "Choose your colors for social icons"
-msgstr ""
+msgstr "Chọn màu sắc của bạn cho các biểu tượng xã hội"
 
 #: inc/theme-options/theme-options.php:636
 msgid "Social icons background color"
-msgstr ""
+msgstr "biểu tượng xã hội màu nền"
 
 #: inc/theme-options/theme-options.php:648
 msgid "WooCommerce colors"
-msgstr ""
+msgstr "WooCommerce màu sắc"
 
 #: inc/theme-options/theme-options.php:649
 msgid "Choose your colors for WooCommerce"
-msgstr ""
+msgstr "Chọn màu sắc của bạn cho WooCommerce"
 
 #: inc/theme-options/theme-options.php:655
 msgid "Sale price color"
-msgstr ""
+msgstr "màu giá bán"
 
 #: inc/theme-options/theme-options.php:661
 msgid "Rating color (regular)"
-msgstr ""
+msgstr "Đánh giá màu (thường xuyên)"
 
 #: inc/theme-options/theme-options.php:667
 msgid "Rating color (hover, active)"
-msgstr ""
+msgstr "Đánh giá màu sắc (di chuột, hoạt động)"
 
 #: inc/theme-options/theme-options.php:676
 msgid "Fonts"
@@ -1449,7 +1473,7 @@ msgstr "Thân"
 
 #: inc/theme-options/theme-options.php:702
 msgid "Choose font-family for content."
-msgstr ""
+msgstr "Chọn font-family cho nội dung."
 
 #: inc/theme-options/theme-options.php:709
 msgid "Font size"
@@ -1459,6 +1483,8 @@ msgstr "Kích thước Font"
 msgid ""
 "Choose font size for specific html elements. Set size as number, without px.."
 msgstr ""
+"Chọn kích thước phông chữ cho các yếu tố html cụ thể. Thiết lập kích thước "
+"như số lượng, mà không px .."
 
 #: inc/theme-options/theme-options.php:716
 msgid "H1"
@@ -1742,6 +1768,12 @@ msgid ""
 "page. To display slider in needed place use shortcode [fruitful_slider]. "
 "Current theme version support only one slider per website."
 msgstr ""
+"Thêm hình ảnh vào thanh trượt (các tập tin được hỗ trợ .png, .jpg, .gif). "
+"Nếu bạn muốn thay đổi thứ tự, chỉ cần kéo và thả nó. kích thước hình ảnh cho "
+"các slide là bản gốc từ thư viện media, xin vui lòng tải lên hình ảnh trong "
+"cùng một kích thước, để có được hiển thị tốt nhất trên trang. Để hiển thị "
+"thanh trượt trong cần thiết shortcode nơi sử dụng [fruitful_slider]. Phiên "
+"bản hiện tại chủ đề chỉ hỗ trợ một thanh trượt cho mỗi trang web."
 
 #: inc/theme-options/theme-options.php:1058
 msgid "Social Links"
@@ -1749,11 +1781,11 @@ msgstr "Social Links"
 
 #: inc/theme-options/theme-options.php:1063
 msgid "Socials Links Position"
-msgstr ""
+msgstr "vị trí socials liên kết"
 
 #: inc/theme-options/theme-options.php:1064
 msgid "Choose place where social links will be displayed."
-msgstr ""
+msgstr "Chọn nơi liên kết xã hội sẽ được hiển thị."
 
 #: inc/theme-options/theme-options.php:1066
 #: inc/theme-options/theme-options.php:1201
@@ -1769,6 +1801,8 @@ msgid ""
 "Add link to your social media profiles. Icons with link will be display in "
 "header or footer."
 msgstr ""
+"Thêm liên kết đến hồ sơ phương tiện truyền thông xã hội của bạn. Các biểu "
+"tượng có liên kết sẽ được hiển thị trong tiêu đề hoặc footer."
 
 #: inc/theme-options/theme-options.php:1078
 msgid "Facebook"
@@ -1856,7 +1890,7 @@ msgstr "tùy chọn chân trang"
 
 #: inc/theme-options/theme-options.php:1207
 msgid "Replace default theme copyright information and links"
-msgstr ""
+msgstr "Thay thế thông tin bản quyền mặc định chủ đề và liên kết"
 
 #: inc/theme-options/theme-options.php:1208
 msgid "Copyright section"
@@ -1894,76 +1928,78 @@ msgstr ""
 
 #: inc/theme-options/theme-options.php:1239
 msgid "Show cart in header"
-msgstr ""
+msgstr "Xem giỏ hàng trong tiêu đề"
 
 #: inc/theme-options/theme-options.php:1240
 msgid "If you want to display cart link in header select options below."
 msgstr ""
+"Nếu bạn muốn hiển thị liên kết giỏ trong tiêu đề chọn tùy chọn dưới đây."
 
 #: inc/theme-options/theme-options.php:1246
 msgid "Cart color"
-msgstr ""
+msgstr "Giỏ màu"
 
 #: inc/theme-options/theme-options.php:1247
 msgid "Choose color for cart icon"
-msgstr ""
+msgstr "Chọn màu cho biểu tượng giỏ hàng"
 
 #: inc/theme-options/theme-options.php:1254
 msgid "Woocommerce Shop Sidebar"
-msgstr ""
+msgstr "Woocommerce Cửa Sidebar"
 
 #: inc/theme-options/theme-options.php:1255
 #: inc/theme-options/theme-options.php:1267
 msgid "Show or hide sidebar"
-msgstr ""
+msgstr "Hiện, ẩn thanh bên"
 
 #: inc/theme-options/theme-options.php:1266
 msgid "Woocommerce Product Sidebar"
-msgstr ""
+msgstr "Woocommerce Sidebar sản phẩm"
 
 #: inc/theme-options/theme-options.php:1270
 msgid "Full width with tabs on right side"
-msgstr ""
+msgstr "Toàn chiều rộng với các tab trên bên phải"
 
 #: inc/theme-options/theme-options.php:1273
 msgid "Full width with tabs on left side"
-msgstr ""
+msgstr "Toàn chiều rộng với các tab trên bên trái"
 
 #: inc/theme-options/theme-options.php:1274
 msgid "Full width with tabs in center"
-msgstr ""
+msgstr "Toàn chiều rộng với các tab ở trung tâm"
 
 #: inc/theme-options/theme-options.php:1280
 msgid "Woocommerce pages products per row"
-msgstr ""
+msgstr "trang sản phẩm Woocommerce mỗi hàng"
 
 #: inc/theme-options/theme-options.php:1281
 msgid "Choose number of products"
-msgstr ""
+msgstr "Chọn số sản phẩm"
 
 #: inc/theme-options/theme-options.php:1284
 msgid "2 products"
-msgstr ""
+msgstr "2 các sản phẩm"
 
 #: inc/theme-options/theme-options.php:1285
 msgid "3 products"
-msgstr ""
+msgstr "3 các sản phẩm"
 
 #: inc/theme-options/theme-options.php:1286
 msgid "4 products"
-msgstr ""
+msgstr "4 các sản phẩm"
 
 #: inc/theme-options/theme-options.php:1287
 msgid "5 products"
-msgstr ""
+msgstr "5 các sản phẩm"
 
 #: inc/theme-options/theme-options.php:1293
 msgid "Number of products on Shop pages"
-msgstr ""
+msgstr "Số lượng sản phẩm trên các trang Cửa hàng"
 
 #: inc/theme-options/theme-options.php:1294
 msgid "Choose number of products. Write -1 for show all products on one page"
 msgstr ""
+"Chọn số sản phẩm. Viết -1 cho hiển thị tất cả các sản phẩm trên một trang"
 
 #: inc/theme-options/theme-options.php:1391
 msgid "Sample Font"
@@ -1975,51 +2011,51 @@ msgstr ""
 
 #: inc/theme-options/theme-options.php:1473
 msgid "If You faced with problems or find error or bug, please"
-msgstr ""
+msgstr "Nếu bạn phải đối mặt với vấn đề hoặc tìm lỗi hoặc lỗi, xin vui lòng"
 
 #: inc/theme-options/theme-options.php:1474
 msgid "submit request."
-msgstr ""
+msgstr "gửi lời đề nghị."
 
 #: inc/theme-options/theme-options.php:1475
 msgid "On official "
-msgstr ""
+msgstr "Ngày chính thức"
 
 #: inc/theme-options/theme-options.php:1475
 msgid "Support forum"
-msgstr ""
+msgstr "Diễn đàn hỗ trợ"
 
 #: inc/theme-options/theme-options.php:1476
 msgid "You may find answers on Your questions."
-msgstr ""
+msgstr "Bạn có thể tìm thấy câu trả lời về câu hỏi của bạn."
 
 #: inc/theme-options/theme-options.php:1480
 msgid "Additional customization"
-msgstr ""
+msgstr "chỉnh bổ sung"
 
 #: inc/theme-options/theme-options.php:1482
 msgid "Our team is available for any type of WordPress development. "
-msgstr ""
+msgstr "Nhóm chúng tôi là có sẵn cho bất kỳ loại hình phát triển WordPress."
 
 #: inc/theme-options/theme-options.php:1483
 msgid "If You want customize theme or add new features, You can"
-msgstr ""
+msgstr "Nếu bạn muốn tùy chỉnh chủ đề hoặc thêm các tính năng mới, bạn có thể"
 
 #: inc/theme-options/theme-options.php:1484
 msgid "submit order"
-msgstr ""
+msgstr "nộp đơn đặt hàng"
 
 #: inc/theme-options/theme-options.php:1485
 msgid "on our website"
-msgstr ""
+msgstr "trên trang web của chúng tôi"
 
 #: inc/widgets.php:17
 msgid "News Archive"
-msgstr ""
+msgstr "Tin tức lưu trữ"
 
 #: inc/widgets.php:21
 msgid "Use this widget to list your Link posts."
-msgstr ""
+msgstr "Sử dụng tiện ích này để liệt kê các bài viết liên kết của bạn."
 
 #: inc/widgets.php:41
 msgid "News-Archive"
@@ -2078,7 +2114,7 @@ msgstr "%s Lưu trữ"
 
 #: woocommerce/single-product/product-image.php:44
 msgid "Placeholder"
-msgstr ""
+msgstr "chổ giử đồ"
 
 #~ msgid "All posts by %s"
 #~ msgstr "Tất cả bài của %s"
