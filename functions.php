@@ -1116,7 +1116,7 @@ if ( ! function_exists( 'fruitful_get_responsive_style' ) ) {
 				if (!empty($theme_options['btn_color'])) {
 					$btn_color = esc_attr($theme_options['btn_color']);
 					
-					$style_		 .= 'button, input[type="button"], input[type="submit"], input[type="reset"]{background-color : '.$btn_color.' !important; } ';
+					$style_		 .= 'button, input[type="button"], input[type="submit"], input[type="reset"], .wc-proceed-to-checkout a{background-color : '.$btn_color.' !important; } ';
 					$style_		 .= 'body a.btn.btn-primary, body button.btn.btn-primary, body input[type="button"].btn.btn-primary , body input[type="submit"].btn.btn-primary {background-color : '.$btn_color.' !important; }';
 					$woo_style_  .= '.woocommerce table.my_account_orders .order-actions .button, .woocommerce-page table.my_account_orders .order-actions .button{background-color : '.$btn_color.' !important; }';
 					$style_ 	 .= '.nav-links.shop .pages-links .page-numbers, .nav-links.shop .nav-next a, .nav-links.shop .nav-previous a, .woocommerce .return-to-shop .button {background-color : '.$btn_color.' !important; }';
@@ -1127,7 +1127,7 @@ if ( ! function_exists( 'fruitful_get_responsive_style' ) ) {
 					
 					$style_ .= 'button:hover, button:active, button:focus{background-color : '.$btn_active_color.' !important; }';
 					$style_ .= 'input[type="button"]:hover, input[type="button"]:active, input[type="button"]:focus{background-color : '.$btn_active_color.' !important; }';
-					$style_ .= 'input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus{background-color : '.$btn_active_color.' !important; }';
+					$style_ .= 'input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus, .wc-proceed-to-checkout a:focus, .wc-proceed-to-checkout a:hover, .wc-proceed-to-checkout a:active{background-color : '.$btn_active_color.' !important; }';
 					$style_ .= 'input[type="reset"]:hover, input[type="reset"]:active, input[type="reset"]:focus{background-color : '.$btn_active_color.' !important; }';
 					$style_	.= 'body a.btn.btn-primary:hover, body button.btn.btn-primary:hover, body input[type="button"].btn.btn-primary:hover , body input[type="submit"].btn.btn-primary:hover {background-color : '.$btn_active_color.' !important; }';
 					$woo_style_  .= '.woocommerce table.my_account_orders .order-actions .button:hover, .woocommerce-page table.my_account_orders .order-actions .button:hover{background-color : '.$btn_active_color.' !important; }';
