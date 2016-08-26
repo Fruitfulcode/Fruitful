@@ -919,8 +919,10 @@ ul#lang-select-popup{
 }
 #masthead .social-icon a.myspace,
 #masthead .social-icon a.yelp,
+#masthead .social-icon a.ello,
 #colophon .social-icon a.myspace,
-#colophon .social-icon a.yelp {
+#colophon .social-icon a.yelp,
+#colophon .social-icon a.ello {
     background-image:url(images/social.png);
 }
 #masthead .social-icon a:hover, #masthead .social-icon a:active,
@@ -934,6 +936,11 @@ ul#lang-select-popup{
 #masthead .social-icon a.yelp,
 #colophon .social-icon a.yelp {
     background-position:-435px 0;
+}
+
+#masthead .social-icon a.ello,
+#colophon .social-icon a.ello {
+    background-position: -466px 0;
 }
 
 .social-icon>a>i{color:#fff;background: #333333; border-radius: 50%; padding: 5.5px; margin:1px; width: 17px; height: 17px; text-align: center; font-size: 17px;}

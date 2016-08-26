@@ -1190,7 +1190,13 @@ class fruitful_theme_options {
 							'type'		=> 'text',
 							'default'	=> '',
 							'box-title' => __('Tripadvisor', 'fruitful')
-						),								
+						),	
+						array(
+							'id'		=> 'ello_link',
+							'type'		=> 'text',
+							'default'	=> '',
+							'box-title' => __('Ello.co', 'fruitful')
+						),							
 					)
 				),			
 			)
