@@ -1,9 +1,9 @@
-.wp-full-overlay.expanded {
-	margin-left:0;
+.wp-full-overlay-sidebar,.expanded .wp-full-overlay-footer {
+	width:400px;
 }
 
-.wp-full-overlay-sidebar {
-	width:400px;
+.wp-full-overlay.expanded {
+    margin-left: 400px;
 }
 
 .wp-full-overlay.collapsed .wp-full-overlay-sidebar {
@@ -19,9 +19,11 @@
 	transition: opacity 0.5s ease-in-out;	
 }
 
-#customize-controls:hover {
+#customize-controls:hover,
+.wp-core-ui.wp-customizer.adding-menu-items #customize-controls {
     opacity: 1;
 }
+
 .customize-control-checkbox label, .customize-control-nav_menu_auto_add label, .customize-control-radio label {
 	margin-left:0;
 }
@@ -39,6 +41,7 @@
 	float:left;
 	margin: 0 10px 0 0;	
 }
+
 .accordion-sub-container .control-section-default  h3.accordion-section-title:before,
 .accordion-sub-container #accordion-section-general  h3.accordion-section-title:before {background-position:-648px 0;}
 .accordion-sub-container #accordion-section-header  h3.accordion-section-title:before  {background-position:-829px 0;}
@@ -51,6 +54,10 @@
 .accordion-sub-container #accordion-section-footer  h3.accordion-section-title:before  {background-position:-555px 0;}
 .accordion-sub-container #accordion-section-custom-css  h3.accordion-section-title:before  {background-position:-738px 0;}
 .accordion-sub-container #accordion-section-woo  h3.accordion-section-title:before  {background-position:-925px 0;}
+
+#accordion-section-static_front_page .customize-control-radio label {
+	margin-left:24px;
+}
 
 /* Disable hover on iPhone */
 @media only screen and (min-device-width : 641px) { 
@@ -79,18 +86,17 @@
 	width:295px;
 }
 
- #customize-controls  .accordion-sub-container .jq-selectbox__dropdown  {
-	width:350px;
- }
+#customize-controls  .accordion-sub-container .jq-selectbox__dropdown  {
+width:350px;
+}
  
- #accordion-section-slider .accordion-section-content .customize-control  {
+#accordion-section-slider .accordion-section-content .customize-control  {
 	float:none;
 }
 
 .customize-control .nivo-slider  {
 	display:none;
 }
-
 
 span.customize-control-title {
     color: #3e3e3e;
