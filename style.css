@@ -1505,7 +1505,8 @@ header.post-header .post-title a {
 #page .container #secondary .widget h3.widget-title, #page .container #secondary .widget h1.widget-title {
     border-bottom:2px solid #f15a23;
     padding:0 0 10px 0;
-    margin:0 0 20px 0
+    margin:0 0 20px 0;
+    font-size: 18px;
 }
 #page .container #secondary .widget ul {
     float:left;
