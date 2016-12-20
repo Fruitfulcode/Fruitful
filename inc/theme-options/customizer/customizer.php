@@ -93,7 +93,7 @@ class fruitful_theme_options_customizer {
 							$wp_customize->add_setting(esc_attr($id), array(
 								'default'           => $g_default,
 								'type'              => $type,
-								'capability'        => '',
+								'capability'        => 'edit_theme_options',
 								'sanitize_callback'	=> $sanitize
 							));
 							 if ($key == 0) {
@@ -194,7 +194,7 @@ class fruitful_theme_options_customizer {
 					$wp_customize->add_setting(esc_attr($id), array(
 						'default'           => $f_default,
 						'type'              => $type,
-						'capability'        => '',
+						'capability'        => 'edit_theme_options',
 						'sanitize_callback'	=> $sanitize
 					) );
 			
