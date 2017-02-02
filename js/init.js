@@ -1,22 +1,3 @@
-function readDeviceOrientation() {
-	vport = document.querySelector("meta[name=viewport]");
-	if ( orientation == 0 ) { 
-		vport.setAttribute('content', 'width=768px, minimum-scale=1.0, maximum-scale=1.0');
-	} else if ( orientation == 90 ) {  
-		vport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0');
-	} else if ( orientation == -90 ) {  
-		vport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0');
-	} else if ( orientation == 180 ) {  
-		vport.setAttribute('content', 'width=768px, minimum-scale=1.0, maximum-scale=1.0');
-	}  
-}
-
-window.onload = function () {
-	var is_iPad = navigator.userAgent.match(/iPad/i) != null;
-	if (is_iPad == true) {
-		window.onorientationchange = readDeviceOrientation;
-	}
-};
 jQuery(document).ready(function($) {
 
 		$('.menu').mobileMenuTop({
