@@ -561,21 +561,24 @@ if (!function_exists('fruitful_get_slider')) {
 								$slider_ .= '<div class= "flexslider" id="' . $id . '">';
 									$slider_ .= '<ul class="slides">';
 									foreach ($theme_options['slides'] as $key=>$slide) {
-										$val = wp_get_attachment_image_src( esc_attr($slide['attach_id']), 'main-slider');
-										$path_to_img = esc_url_raw($val[0]);
-										$slider_ .= '<li>';
-											if (!empty($slide['link'])) {
-												if (!empty($slide['is_blank'])) {
-													$slider_ .= '<a href="'.esc_url($slide['link']).'" target="_blank">';
+										if ( $slide['is_active'] == 'on' ) //ERICH is_active
+                                                                		{
+											$val = wp_get_attachment_image_src( esc_attr($slide['attach_id']), 'main-slider');
+											$path_to_img = esc_url_raw($val[0]);
+											$slider_ .= '<li>';
+												if (!empty($slide['link'])) {
+													if (!empty($slide['is_blank'])) {
+														$slider_ .= '<a href="'.esc_url($slide['link']).'" target="_blank">';
+													} else {
+														$slider_ .= '<a href="'.esc_url($slide['link']).'">';
+													}	
+														$slider_ .= '<img src="'.$path_to_img.'" />';
+													$slider_ .= '</a>';	
 												} else {
-													$slider_ .= '<a href="'.esc_url($slide['link']).'">';
-												}	
 													$slider_ .= '<img src="'.$path_to_img.'" />';
-												$slider_ .= '</a>';	
-											} else {
-												$slider_ .= '<img src="'.$path_to_img.'" />';
-											}
-										$slider_ .= '</li>';
+												}
+											$slider_ .= '</li>';
+										}
 									}
 									$slider_ .= '</ul></div></section></div>';
 									
@@ -589,18 +592,21 @@ if (!function_exists('fruitful_get_slider')) {
 						
 							$slider_ .= '<div id="nivo-slider-'. $id . '" class="nivoSlider">';
 							foreach ($theme_options['slides'] as $key=>$slide) {
-								$val = wp_get_attachment_image_src( esc_attr($slide['attach_id']), 'main-slider');
-								$path_to_img = esc_url_raw($val[0]);
-								if (!empty($slide['link'])) {
-									if (!empty($slide['is_blank'])) {
-										$slider_ .= '<a href="'.esc_url($slide['link']).'" target="_blank">';
+								if ( $slide['is_active'] == 'on' ) //ERICH is_active
+                                                                {
+									$val = wp_get_attachment_image_src( esc_attr($slide['attach_id']), 'main-slider');
+									$path_to_img = esc_url_raw($val[0]);
+									if (!empty($slide['link'])) {
+										if (!empty($slide['is_blank'])) {
+											$slider_ .= '<a href="'.esc_url($slide['link']).'" target="_blank">';
+										} else {
+											$slider_ .= '<a href="'.esc_url($slide['link']).'">';
+										}	
+											$slider_ .= '<img src="'. $path_to_img .'" data-thumb="'. $path_to_img .'" alt="" />';
+										$slider_ .= '</a>';	
 									} else {
-										$slider_ .= '<a href="'.esc_url($slide['link']).'">';
-									}	
 										$slider_ .= '<img src="'. $path_to_img .'" data-thumb="'. $path_to_img .'" alt="" />';
-									$slider_ .= '</a>';	
-								} else {
-									$slider_ .= '<img src="'. $path_to_img .'" data-thumb="'. $path_to_img .'" alt="" />';
+									}
 								}
 							}	
 							$slider_ .= '</div>';
