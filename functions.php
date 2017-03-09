@@ -1540,7 +1540,7 @@ if ( ! function_exists( 'fruitful_metadevice' ) ) {
 		if ($browser_ipad 	== true) { $browser = 'ipad'; }
 
         if ($browser == 'iphone') {
-            echo '<meta name="viewport" content="width=480, maximum-scale=1, user-scalable=0"/>';
+            echo '<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />';
         } elseif ($browser == 'android') {
             echo '<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width" />';
         } elseif ($browser == 'ipad') {
