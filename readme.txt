@@ -116,8 +116,8 @@ Files: .pot, ru_Ru.po, ru_Ru.mo icluded. Default language is english.
 - Bug fix: Customizer capability fix
 - Bug fix: Not sizing properly in landscape view on iPad
 - Bug fix: Woocommerce 3.0.0 select2.js
-- Improve: Thumbnails for fullwidth posts
-- Improve: Outdated copies of WooCommerce template file
+- improvement: Thumbnails for fullwidth posts
+- improvement: Outdated copies of WooCommerce template file
 - Update: Timeout for page reload
 - Update: Mobile dropdowm menu
 - Update: Demo content
