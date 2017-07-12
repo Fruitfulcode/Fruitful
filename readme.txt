@@ -6,6 +6,12 @@ We have created a theme based on our necessities and experience, we will be glad
 Our code is hand-made, so if you find a bug or have a wish to modify something, feel free to send us your feedback.
 We want to make our product even better and better and we need users support and feedbacks.
 
+Works perfect with WooCommerce till version 3.0. 
+
+Fruitful PRO – WordPress responsive theme contains all the options of FREE version plus more options like ability to change width for container grid and support latest WooCommerce version. 
+
+Find all the details by link https://fruitfulcode.com/product/fruitful-pro
+
 Thank you.
 
 -------------------------------------------------------
@@ -101,9 +107,8 @@ Files: .pot, ru_Ru.po, ru_Ru.mo icluded. Default language is english.
 -------------------------------------------------------
     Changelog
 -------------------------------------------------------
-
 = 3.4 =
-06.07.2017 
+12.07.2017 
 
 - Added: Social icon Ello.co
 - Bug fix: Mobile menu
