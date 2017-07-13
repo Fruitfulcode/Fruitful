@@ -1491,6 +1491,21 @@ class fruitful_theme_options {
 							_e('on our website','fruitful'); 
 					?></p>
 				</div>
+                <div class="sidebar-promo-widget promo-about">
+                    <h3><?php _e('Fruitful PRO', 'fruitful'); ?></h3>
+                    <p class="sidebar-promo-content"><?php
+                        echo ' <a target="_blank" href="https://fruitfulcode.com/product/fruitful-pro">'; _e('Fruitful PRO – WordPress responsive theme','fruitful'); echo '</a> ';
+                        _e(' that contains all the options of ','fruitful');
+                        echo ' <a target="_blank" href="https://wordpress.org/themes/fruitful/">'; _e('FREE version','fruitful'); echo '</a> ';
+                        _e(' plus:','fruitful');
+                        ?></p>
+                    <ul class="sidebar-promo-list"><?php
+                        echo '<li><span>More options</span> like ability to change width for container grid.</li>';
+                        echo '<li><span>Priority</span> Support 24/7 with access to Help Center.</li>';
+                        echo '<li><span>Support</span> latest <a target="_blank" href="https://wordpress.org/plugins/woocommerce/">WooCommerce</a></li>';
+                        echo '<li><span>1 hour for customization</span> of your theme by our specialists.</li>';
+                        ?></ul>
+                </div>
 			</div>
 		</div>
 		<?php

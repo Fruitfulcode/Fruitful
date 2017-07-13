@@ -98,10 +98,14 @@ a:hover, a:active, a:focus {	outline: 0; }
 .sidebar-promo {float: left; width:298px; max-width: 934px; padding: 0; min-height: 150px; background-color: #f1f1f1; margin:0;}
 .sidebar-promo-widget{float:left; width:254px; padding: 15px 22px 5px; margin:0;}
 .sidebar-promo .sidebar-promo-content{float: left;padding:15px 20px 25px; background-color: #ffffff; margin:0;}
+.sidebar-promo .promo-about .sidebar-promo-content {padding:15px 20px 5px;}
 .sidebar-promo h3 {color: #3e3e3e; font-weight: bold; font-size: 16px; padding: 6px 0 6px 40px; margin: 0 0 20px 0;}
 .sidebar-promo .promo-support h3 {background: url('../images/support.png') no-repeat 0 0 transparent;}
 .sidebar-promo .promo-customization h3 {background: url('../images/customization.png') no-repeat 0 0 transparent;}
 .sidebar-promo p {color:#3e3e3e; font-size:14px; margin:0 0 1.5em 0; padding:0; font-family:Arial; line-height:24px;}
+.sidebar-promo .sidebar-promo-list {background-color: #fff; display: inline-block; margin-top: 0; padding: 0 20px 25px 38px; list-style-type: square; font-size: 14px; font-family: Arial;}
+.sidebar-promo .sidebar-promo-list span {font-weight: 600;}
+.sidebar-promo .promo-about h3 {background: url('../images/about.png') no-repeat 0 0 transparent;}
 .form-admin-fruitful .content .settings-section .settings-form-row .box-options #slider_main_options {display:none; float: left; margin: 0 0 20px 0;}
 .box-options .upload_button_div .reset_btn,.box-options ul.slides li.slide .slide-content .upload_button_div .reset_slide_btn  {margin-left:5px}
 #logo-w, #logo-h {width:105px}
