@@ -110,23 +110,26 @@ Files: .pot, ru_Ru.po, ru_Ru.mo icluded. Default language is english.
 = 3.4 =
 12.07.2017 
 
-- Added: Social icon Ello.co
-- Bug fix: Mobile menu
-- Bug fix: Empty Favicon Tags
-- Bug fix: Menu conflict with the plugin Woocommerce Catalog Enquiry
-- Bug fix: Button doesn't change the color on cart page
-- Bug fix: Add menu item - bug fix css
-- Bug fix: Add slider images to xml, fix css h3 font-size
-- Bug fix: Viewport content and fix bug on Ipad
-- Bug fix: Customizer capability fix
-- Bug fix: Not sizing properly in landscape view on iPad
-- Bug fix: Woocommerce 3.0.0 select2.js
-- Improvement: Thumbnails for fullwidth posts
-- Improvement: Outdated copies of WooCommerce template file
-- Update: Timeout for page reload
-- Update: Mobile dropdowm menu
-- Update: Demo content
-- Update: Proceed to checkout button styles
+* Added: Social icon Ello.co
+* Bug fix: Mobile menu
+* Bug fix: Empty Favicon Tags
+* Bug fix: Menu conflict with the plugin Woocommerce Catalog Enquiry
+* Bug fix: Menu conflict with the plugin Woocommerce Catalog Enquiry
+* Bug fix: Button doesn't change the color on cart page
+* Bug fix: Add menu item - bug fix css
+* Bug fix: Add slider images to xml, fix css h3 font-size
+* Bug fix: Viewport content and fix bug on Ipad
+* Bug fix: Customizer capability fix
+* Bug fix: Not sizing properly in landscape view on iPad
+* Bug fix: Woocommerce 3.0.0 select2.js
+* Bug fix: Sprintf() bug on install plugins
+* Improvement: Thumbnails for fullwidth posts
+* Improvement: Outdated copies of WooCommerce template file
+* Update: Timeout for page reload
+* Update: Mobile dropdowm menu
+* Update: Demo content
+* Update: Proceed to checkout button styles
+* Update: Slider layout settings update
 
 = 3.3.1 =
 26.04.2016 
