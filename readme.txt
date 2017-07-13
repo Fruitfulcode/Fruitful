@@ -108,7 +108,7 @@ Files: .pot, ru_Ru.po, ru_Ru.mo icluded. Default language is english.
     Changelog
 -------------------------------------------------------
 = 3.4 =
-12.07.2017 
+13.07.2017 
 
 * Added: Social icon Ello.co
 * Bug fix: Mobile menu
