@@ -1402,7 +1402,7 @@ if (class_exists('Woocommerce')) {
 			$woocommerce_loop['columns'] 	= apply_filters( 'woocommerce_cross_sells_columns', 4 );
 			if ( $products->have_posts() ) : ?>
 				<div class="cross-sells">
-					<h2><?php _e( 'You may be interested in&hellip;', 'woocommerce' ) ?></h2>
+					<h2><?php _e( 'You may be interested in&hellip;', 'fruitful' ) ?></h2>
 					<?php woocommerce_product_loop_start(); ?>
 						<?php while ( $products->have_posts() ) : $products->the_post(); ?>
 							<?php woocommerce_get_template_part( 'content', 'product' ); ?>
@@ -1672,8 +1672,8 @@ if ( ! function_exists( 'fruitful_get_product_search_form' ) ) {
 		?>
 		<form role="search" method="get" id="searchform" action="<?php echo esc_url( home_url( '/'  ) ); ?>">
 			<div>
-				<input type="text" value="<?php echo get_search_query(); ?>" name="s" id="s" placeholder="<?php _e( 'Search for products', 'woocommerce' ); ?>" />
-				<input type="submit" id="searchsubmit" value="<?php echo esc_attr__( 'Search', 'woocommerce' ); ?>" />
+				<input type="text" value="<?php echo get_search_query(); ?>" name="s" id="s" placeholder="<?php _e( 'Search for products', 'fruitful' ); ?>" />
+				<input type="submit" id="searchsubmit" value="<?php echo esc_attr__( 'Search', 'fruitful' ); ?>" />
 				<input type="hidden" name="post_type" value="product" />
 			</div>
 		</form>
@@ -2032,4 +2032,10 @@ if (class_exists('Woocommerce')) {
 	}
 
 	add_action(	'wp_enqueue_scripts', 'fruitful_init_woo_styles', 100);
+}
+
+add_action( 'after_setup_theme', 'wpse_theme_setup' );
+
+function wpse_theme_setup() {
+	add_theme_support( 'title-tag' );
 }
