@@ -178,6 +178,11 @@ body.fancybox-lock {
 }
 /* #Tablet (Portrait)================================================== */
 /* Note:Design for a width of 768px */
+@media only screen and (min-width:959px) and (max-width:1024px) {
+    #colophon .social-icon{
+        padding-right: 41px;
+    }
+}
 @media only screen and (min-width:768px) and (max-width:959px) {
 .container {
     width:768px;
