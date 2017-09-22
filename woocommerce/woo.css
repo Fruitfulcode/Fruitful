@@ -1196,6 +1196,10 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
   top:5px;
   right:5px;
 }
+.woocommerce ul.products li.product .woocommerce-loop-category__title, .woocommerce ul.products li.product .woocommerce-loop-product__title, .woocommerce ul.products li.product h3{
+	padding-left: 15px;
+	padding-right: 15px;
+}
 
 @media (-webkit-min-device-pixel-ratio:2),(min-resolution:192dpi){
 
