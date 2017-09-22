@@ -1178,6 +1178,7 @@ body.woocommerce-checkout.woocommerce-page form .form-row textarea{color:#333333
 body.woocommerce-page #content div.product div.images .woocommerce-product-gallery__image{
 	width: 31%;
 	margin-right: 3%;
+	padding-top: 10px;
 }
 body.woocommerce-page #content div.product div.images .woocommerce-product-gallery__image:last-child{
 	margin-right: 0;
