@@ -39,6 +39,12 @@ if ( ! function_exists( 'fruitful_setup' ) ):
  * @since Fruitful theme 1.0
  */
 
+/* 
+*Elementor Partner ID 
+*/
+ if ( ! defined( ‘ELEMENTOR_PARTNER_ID’ ) ) { 
+define( ‘ELEMENTOR_PARTNER_ID’, 2120 ); 
+}
 
  /**
  * Implement the Custom Header feature

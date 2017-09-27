@@ -21,6 +21,12 @@ function fruitful_register_required_plugins() {
 			'required'  => true,
 		),
 		
+		array(
+			'name'     				=> 'Elementor', 
+			'slug'     				=> 'elementor ',
+			'required' 				=> false,
+		),
+		
 	);
 
 	$config = array(
