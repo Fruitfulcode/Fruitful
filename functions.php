@@ -42,8 +42,8 @@ if ( ! function_exists( 'fruitful_setup' ) ):
 /* 
 *Elementor Partner ID 
 */
- if ( ! defined( ‘ELEMENTOR_PARTNER_ID’ ) ) { 
-define( ‘ELEMENTOR_PARTNER_ID’, 2120 ); 
+ if ( ! defined( 'ELEMENTOR_PARTNER_ID' ) ) { 
+define( 'ELEMENTOR_PARTNER_ID', 2120 ); 
 }
 
  /**
