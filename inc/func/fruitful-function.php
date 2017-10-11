@@ -161,7 +161,7 @@ function fruitful_new_slide() {
 	die();
 }
 
-function fruitful_get_box_upload_slide($attach_id, $link_url, $is_blank, $ind, $btnclassup = 'upload_btn',  $btnclassr = 'reset_btn') {
+function fruitful_get_box_upload_slide($attach_id, $link_url, $is_blank, $is_active, $ind, $btnclassup = 'upload_btn',  $btnclassr = 'reset_btn') {
 	$out  = ''; 
 	$out .= '<div class="box-image">';
 	if ($attach_id != -1) {
@@ -180,6 +180,13 @@ function fruitful_get_box_upload_slide($attach_id, $link_url, $is_blank, $ind, $
 		$out .= '<input type="checkbox" name="fruitful_theme_options[slides][slide-'.$ind.'][is_blank]" id="link-blank-'.$ind.'" class="link-target-'.$ind.'" '. checked( 'on', $is_blank, false) .'/>';
 		$out .= __('Target "_blank"', 'fruitful') .'</label>';
 	
+	        // ADD IS_ACTIVE OPTION by ERICH
+		$out .= '<div class="clear" style="margin-bottom: 10px;"></div>';
+		$out .= '<label for="link-active-' . $ind . '">';
+		$out .= '<input type="checkbox" name="fruitful_theme_options[slides][slide-' . $ind . '][is_active]" id="link-active-' . $ind . '" class="link-target-' . $ind . '" ' . checked( 'on', $is_active, false ) . '/>';
+		$out .= __( 'Active (show sliderimage)', 'fruitful' ) . '</label>';
+  
+	
 		$out .= '<input class="of-input" name="fruitful_theme_options[slides][slide-'.$ind.'][attach_id]" id="attach-'.$ind.'" type="hidden" value="'. intval($attach_id) .'" />';
 		$out .= '<div class="upload_button_div">';
 			$out .= '<span data-imagetype="slide" class="button '. $btnclassup .'" id="add-slide-btn-'. $ind .'">'.__('Upload Image', 'fruitful') .'</span>';
@@ -189,7 +196,7 @@ function fruitful_get_box_upload_slide($attach_id, $link_url, $is_blank, $ind, $
 	return $out;
 }
 
-function fruitful_get_slide($ind, $id, $link_url = null, $is_blank = 'off') {
+function fruitful_get_slide($ind, $id, $link_url = null, $is_blank = 'off', $is_active = 'on') {
 	$out = '';
 	$out .= '<li class="slide" id="slide-image-' . $ind . '">';
 		$out .= '<h4 class="slide-header" id="slide-header-'. $ind .'">' . sprintf(__('Slide # %1$d', 'fruitful'),   $ind);
@@ -198,7 +205,7 @@ function fruitful_get_slide($ind, $id, $link_url = null, $is_blank = 'off') {
 		$out .= '</h4>';
 		
 		$out .= '<div class="slide-content" id="slide-content-'. $ind .'">';
-			$out .= fruitful_get_box_upload_slide($id, $link_url, $is_blank, $ind);
+			$out .= fruitful_get_box_upload_slide($id, $link_url, $is_blank, $is_active, $ind);
 		$out .= '</div>';
 	$out .= '</li>';
 	return $out;
@@ -227,11 +234,12 @@ function fruitful_slider_images() {
 							$attach_id 	  = $slide['attach_id'];
 							$link_url = null;
 							$is_blank = 'off';
+							$is_active = ( isset( $slide['is_active'] ) ) ? 'on' : 'off'; //ERICH
 							
 							$slide_inndex = trim(substr($key, strrpos($key, '-')+1, 5));
 							if (isset($slide['link'])) { $link_url = $slide['link']; }
 							if (isset($slide['is_blank'])) { $is_blank = $slide['is_blank']; }
-							echo fruitful_get_slide($slide_inndex, $attach_id, esc_url($link_url), $is_blank); 
+							echo fruitful_get_slide($slide_inndex, $attach_id, esc_url($link_url), $is_blank, $is_active); 
 						}
 					}
 			?>
