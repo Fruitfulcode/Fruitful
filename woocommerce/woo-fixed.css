@@ -11,7 +11,14 @@ Fixed Styles for Woocommerce.
 .woocommerce-page form .form-row-first,
 .woocommerce form .form-row-last,
 .woocommerce-page form .form-row-last {width: 100%;}
-.woocommerce h2{margin:20px 0}
+.woocommerce h2{margin:20px 0;
+}
+.woocommerce ul.products li.product .woocommerce-loop-product__title{
+	padding-left: 15px;
+	padding-right: 15px;
+	box-sizing: border-box;
+
+}
 .woocommerce .head-container h2{margin:0}
 
 .woocommerce-product-search > input[type="submit"] {
