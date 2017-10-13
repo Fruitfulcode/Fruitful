@@ -2054,9 +2054,10 @@ function wpse_theme_setup() {
 
 
 
-anaglyph_frontend_scripts_include_lightbox();
-function anaglyph_frontend_scripts_include_lightbox() {
+add_action('wp_enqueue_scripts', 'fruitful_frontend_scripts_include_lightbox');
+function fruitful_frontend_scripts_include_lightbox() {
     global $woocommerce;
+    if(!$woocommerce) return;
     $suffix      = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
     //$lightbox_en = get_option( 'woocommerce_enable_lightbox' ) == 'yes' ? true : false; //deprecated woocommerce 3.0 option. Need to update
     $lightbox_en = true;
