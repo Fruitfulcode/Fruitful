@@ -107,6 +107,18 @@ Files: .pot, ru_Ru.po, ru_Ru.mo icluded. Default language is english.
 -------------------------------------------------------
     Changelog
 -------------------------------------------------------
+= 3.5 =
+19.10.2017
+
+* Bug fix: Woocommerce lightbox function error
+* Bug fix: Updating WooCommerce templates version
+* Update: ELEMENTOR_PARTNER_ID
+* New: add Elementor support
+* Bug fix: Woccommerce update problem
+* Bug fix: Theme check errors
+* Update: Dummy Data update
+* Bug fix: Fixed back-top icon 
+
 = 3.4 =
 21.07.2017 
 
