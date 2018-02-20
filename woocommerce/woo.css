@@ -594,6 +594,7 @@ body.woocommerce #respond input#submit, body.woocommerce-page #respond input#sub
 .woocommerce-account .button[type='submit'], .woocommerce-account.woocommerce-page .button[type='submit'],
 body.woocommerce-page .woocommerce .cart-collaterals button.button,
 .woocommerce table.my_account_orders .order-actions .button, body.woocommerce-page table.my_account_orders .order-actions .button,
+.widget_shopping_cart_content .buttons a.button,
 body.woocommerce-page #content button.button{
 	padding: 10px 18px !important;
 	background: #333333;
