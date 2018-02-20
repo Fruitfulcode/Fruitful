@@ -594,7 +594,7 @@ body.woocommerce #respond input#submit, body.woocommerce-page #respond input#sub
 .woocommerce-account .button[type='submit'], .woocommerce-account.woocommerce-page .button[type='submit'],
 body.woocommerce-page .woocommerce .cart-collaterals button.button,
 .woocommerce table.my_account_orders .order-actions .button, body.woocommerce-page table.my_account_orders .order-actions .button,
-.widget_shopping_cart_content .buttons a.button{
+body.woocommerce-page #content button.button{
 	padding: 10px 18px !important;
 	background: #333333;
 	border: 0 !important;
@@ -1395,6 +1395,8 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 	.woocommerce-page table.cart td.actions input{width:45% !important}
 	body.woocommerce-page #content table.cart td.actions .coupon label{display:none}
 	body.woocommerce-page #content table.cart td.actions .coupon #coupon_code{margin-left:5px;}
+	.woocommerce-cart .woocommerce .cart-collaterals .cart_totals table td,
+	.woocommerce-cart.woocommerce-page .cart-collaterals .cart_totals table td{width: 100%;padding: 6px 0;}
 	/*checkout*/
 	body.woocommerce .order_details>li,body.woocommerce-page .order_details>li {border: 1px solid #d6d6d6 !important;border-width:1px 1px 0 1px !important;margin: 0 !important;width: 400px;padding:5px 10px}
 	body.woocommerce .order_details>li:last-child,body.woocommerce-page .order_details>li:last-child {border-width:1px 1px 1px 1px !important;}
@@ -1492,6 +1494,7 @@ body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2
 	.woocommerce-page table.cart td.actions .input-text,
 	.woocommerce-page table.cart td.actions input{width:60% !important;right:20%}
 	body.woocommerce-page #content table.cart td.actions .coupon label{display:none !important}
+	.woocommerce-page table.cart td.actions .button{right: 0 !important;}
 	.woocommerce table.cart td.actions .coupon, .woocommerce-page table.cart td.actions .coupon, .woocommerce #content table.cart td.actions .coupon, .woocommerce-page #content table.cart td.actions .coupon{text-align:center}
 	.woocommerce-cart.woocommerce-page #content table td.actions{text-align:center}
 	.woocommerce-cart.woocommerce-page #content table td.actions input{margin:5px 0 !important;padding:10px 0 !important; float:none !important; right:auto !important; left:auto !important; min-width:75%}
