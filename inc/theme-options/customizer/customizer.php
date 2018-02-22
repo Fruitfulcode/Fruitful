@@ -39,7 +39,7 @@ class fruitful_theme_options_customizer {
 			'priority'          => 10,
 			'capability'        => 'edit_theme_options',
 			'theme_supports'    => '',
-			'title'             => 'Fruitful Theme Options',
+			'title'             => __('Fruitful Theme Options', 'fruitful'),
 			'description'       => '',
 		));
 		$type = 'option'; 

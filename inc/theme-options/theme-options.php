@@ -246,7 +246,7 @@ class fruitful_theme_options {
 						'label'			=> __( 'Reset options' , 'fruitful' ),
 						'info'			=> __( 'All theme options will be reset to default.', 'fruitful' ),
 						'type'			=> 'button',
-						'default'		=> 'Reset Defaults',
+						'default'		=> __('Reset Defaults', 'fruitful' ),
 						'class'			=> 'button-primary reset-btn',
 					)
 				),				
@@ -255,7 +255,7 @@ class fruitful_theme_options {
 					'label'			=> __( 'Reset options' , 'fruitful' ),
 					'info'			=> __( 'All theme options will be reset to default.', 'fruitful' ),
 					'type'			=> 'button',
-					'default'		=> 'Reset Defaults',
+					'default'		=> __('Reset Defaults', 'fruitful' ),
 					'class'			=> 'button-primary reset-btn',
 				),				
 			)
@@ -1021,14 +1021,14 @@ class fruitful_theme_options {
 							'type'			=> 'text',
 							'option-block'	=> 'nivo-slider',
 							'box-title'		=> __('Prev directionNav text','fruitful'),
-							'default'		=> 'Prev' 	
+							'default'		=> __('Prev','fruitful')
 						),	
 						array(
 							'id'			=> 'nv_nextText',
 							'type'			=> 'text',
 							'option-block'	=> 'nivo-slider',
 							'box-title'		=> __('Next directionNav text','fruitful'),
-							'default'		=> 'Next' 	
+							'default'		=> __('Next','fruitful')
 						),	
 						array(
 							'id'			=> 'nv_randomStart',
