@@ -1466,6 +1466,20 @@ if (class_exists('Woocommerce')) {
 			return $fragments;
 		}
 	}
+
+	/*custom shop search form*/
+	add_filter( 'get_product_search_form' , 'woo_custom_product_searchform' );
+	function woo_custom_product_searchform( $form ) {
+
+		$form = '<form role="search" method="get" class="woocommerce-product-search" action="' . esc_url( home_url( '/' ) ) . '">
+            <label class="screen-reader-text" for="woocommerce-product-search-field-' . (isset( $index ) ? absint( $index ) : 0) . '">' . _e( '', 'woocommerce' ) . '</label>
+            <input type="search" id="woocommerce-product-search-field-' . (isset( $index ) ? absint( $index ) : 0) . '" class="search-field" placeholder="' . esc_attr__( 'Search products&hellip;', 'woocommerce' ) . '" value="' . get_search_query() . '" name="s" />
+            <input type="submit" value="' . esc_attr_x( 'Search', 'submit button', 'woocommerce' ) . '" />
+            <input type="hidden" name="post_type" value="product" />
+        </form>';
+		return $form;
+
+	}
 }
 
 if ( ! function_exists( 'fruitful_custom_css_and_slider_scripts' ) ) {
