@@ -107,16 +107,31 @@ Files: .pot, ru_Ru.po, ru_Ru.mo icluded. Default language is english.
 -------------------------------------------------------
     Changelog
 -------------------------------------------------------
+
+= 3.6 =
+04.04.2018
+
+* New: Add WPML support
+* Update: Woocommerce templates version
+* Update: Woocommerce depricated functions
+* Update: Removed title meta from header.php
+* Bug fix: Product image for Variable products
+* Bug fix: Related Products on Product page
+* Bug fix: Shop search form
+* Bug fix: Woocommerce "Update cart" button
+* Bug fix: Custom mataboxes issue
+* Bug fix: Javascript key navigation
+
 = 3.5 =
 19.10.2017
 
+* New: add Elementor support
+* Update: Dummy Data update
+* Update: ELEMENTOR_PARTNER_ID
 * Bug fix: Woocommerce lightbox function error
 * Bug fix: Updating WooCommerce templates version
-* Update: ELEMENTOR_PARTNER_ID
-* New: add Elementor support
 * Bug fix: Woccommerce update problem
 * Bug fix: Theme check errors
-* Update: Dummy Data update
 * Bug fix: Fixed back-top icon 
 
 = 3.4 =
