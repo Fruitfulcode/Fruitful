@@ -2,6 +2,19 @@
 Responsive Styles for Woocommerce.
 */
 
+/* woocommerce 3.0.5 change layout for variations */
+
+body #content a.woocommerce-product-gallery__image.flex-active-slide {
+	width: 100%;
+	height: auto;
+}
+.woocommerce-product-gallery__image {
+	/*width: 100px;*/
+	height: auto;
+}
+
+/*  End woocommerce 3.0.5 change layout for variations */
+
 .woocommerce div form .form-row input.input-text,
 .woocommerce-page form .form-row input.input-text,
 .woocommerce div form .form-row textarea,
@@ -1176,14 +1189,7 @@ body.woocommerce-page ul.products li.product h3 ,
 body.woocommerce-checkout.woocommerce-page form .form-row input.input-text,
 .woocommerce-checkout .woocommerce form .form-row textarea,
 body.woocommerce-checkout.woocommerce-page form .form-row textarea{color:#333333}
-body.woocommerce-page #content div.product div.images .woocommerce-product-gallery__image{
-	width: 31%;
-	margin-right: 3%;
-	padding-top: 10px;
-}
-body.woocommerce-page #content div.product div.images .woocommerce-product-gallery__image:last-child{
-	margin-right: 0;
-}
+
 body.woocommerce-cart .woocommerce .cart-collaterals .shipping_calculator h2 a,
 body.woocommerce-cart.woocommerce-page .cart-collaterals .shipping_calculator h2 a{text-decoration:none;color:#333333;}
 .woocommerce .term-description {float: left;}
