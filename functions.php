@@ -1425,33 +1425,34 @@ if (class_exists('Woocommerce')) {
 			wp_reset_query();
 		}
 	}
-		
-	/*4 of related products per row*/	
-	remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
-	add_action( 'woocommerce_after_single_product_summary', 'fruitful_after_single_product_summary', 20 );
-	if ( ! function_exists( 'fruitful_after_single_product_summary' ) ) {
-		function fruitful_after_single_product_summary() {
-			fruitful_woocommerce_related_products(4, 4);
-		}
-	}
-	
-	/*function for change posts per row and number of related products on single product page*/
-	if ( ! function_exists( 'fruitful_woocommerce_related_products' ) ) {
-		function fruitful_woocommerce_related_products($posts_per_page = 2, $columns = 2, $orderby = false){
-			$args = array(
-				'posts_per_page' => $posts_per_page,
-				'columns'        => $columns,
-				'orderby'        => $orderby,
-			);
-			$defaults = array(
-				'posts_per_page' => 2,
-				'columns'        => 2,
-				'orderby'        => 'rand'
-			);
-			$args = wp_parse_args( $args, $defaults );
-			wc_get_template( 'single-product/related.php', $args );
-		}
-	}
+
+    /*4 of related products per row*/
+    remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+    add_action( 'woocommerce_after_single_product_summary', 'fruitful_after_single_product_summary', 20 );
+    if ( ! function_exists( 'fruitful_after_single_product_summary' ) ) {
+        function fruitful_after_single_product_summary() {
+            $args = array(
+                'posts_per_page' => 2,
+                'columns'        => 2,
+                'orderby'        => 'rand'
+            );
+            fruitful_woocommerce_related_products( $args );
+        }
+    }
+
+    /*function for change posts per row and number of related products on single product page*/
+    if ( ! function_exists( 'fruitful_woocommerce_related_products' ) ) {
+        function fruitful_woocommerce_related_products( $args = array() ){
+            $defaults = array(
+                'posts_per_page' => 2,
+                'columns'        => 2,
+                'orderby'        => 'rand'
+            );
+            $args = wp_parse_args( $args, $defaults );
+            woocommerce_related_products( apply_filters( 'woocommerce_output_related_products_args', $args ) );
+            // wc_get_template( 'single-product/related.php', $args );
+        }
+    }
 	
 	/*Update cart contents update when products are added to the cart via AJAX */
 	add_filter('woocommerce_add_to_cart_fragments', 'fruitful_woocommerce_header_add_to_cart_fragment');
