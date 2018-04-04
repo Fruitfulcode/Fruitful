@@ -1424,7 +1424,7 @@ if (class_exists('Woocommerce')) {
 					<h2><?php _e( 'You may be interested in&hellip;', 'fruitful' ) ?></h2>
 					<?php woocommerce_product_loop_start(); ?>
 						<?php while ( $products->have_posts() ) : $products->the_post(); ?>
-							<?php woocommerce_get_template_part( 'content', 'product' ); ?>
+							<?php wc_get_template_part( 'content', 'product' ); ?>
 						<?php endwhile; // end of the loop. ?>
 					<?php woocommerce_product_loop_end(); ?>
 				</div>
