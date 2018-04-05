@@ -115,12 +115,17 @@ Files: .pot, ru_Ru.po, ru_Ru.mo icluded. Default language is english.
 * Update: Woocommerce templates version
 * Update: Woocommerce depricated functions
 * Update: Removed title meta from header.php
+* Update: Zoom icon on Product page
+* Update: Meta Viewport tag
+* Update: Deprecated function removed
 * Bug fix: Product image for Variable products
 * Bug fix: Related Products on Product page
 * Bug fix: Shop search form
 * Bug fix: Woocommerce "Update cart" button
 * Bug fix: Custom mataboxes issue
 * Bug fix: Javascript key navigation
+* Bug fix: Notices on FlexSlider
+* Bug fix: Product Widget layout
 
 = 3.5 =
 19.10.2017
