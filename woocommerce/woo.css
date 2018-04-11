@@ -758,7 +758,7 @@ body.woocommerce-page #content div.product form.cart .quantity .qty,
 .single-product .upsells.products{float:left;width:100%}
 
 body.single-product .upsells.products h2{float:left;width:100%;margin: 25px 0;}
-body.single-product .related.products h2{float:left;width:100%;margin:25px 0;border-bottom: 2px solid #F15A23;padding: 0 0 10px 0;font-size:17px}
+body.single-product .related.products h2{float:left;width:100%;margin:25px 0;border-bottom: 2px solid #F15A23;padding: 0 0 10px 0;font-size:17px;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
 .woocommerce .related ul.products li.product,
 .woocommerce-page .related ul.products li.product,
 .woocommerce .upsells.products ul.products li.product,
