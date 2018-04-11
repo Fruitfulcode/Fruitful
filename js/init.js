@@ -69,7 +69,7 @@ jQuery(document).ready(function($) {
     }
 
     $('#back-top a').click(function () {
-        $('body,html').animate({ scrollTop: 0}, 850)
+        $('body,html').animate({ scrollTop: 0}, 850);
         return false;
     });
 
@@ -102,9 +102,10 @@ jQuery(document).ready(function($) {
 
 
     /*fix touch event for related and upsells product single product page*/
+    //todo: Check if this feature is not superfluous
     var element = $('.upsells .product, .related .product');
-    element.bind('touchstart click', function(){
-        var link = this.find('a').attr('href');
+    element.bind('touchstart', function(){
+        var link = $(this).find('a.button').attr('href');
         location.href = link;
         return false
     });
