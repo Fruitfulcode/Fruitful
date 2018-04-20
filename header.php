@@ -96,6 +96,11 @@
 							</div>
 						</div>
 						<div class="site-header">
+							<?php
+							if (fruitful_is_social_header()) {
+								fruitful_get_socials_icon();
+							}
+							?>
 							<div class="logo_wrapper"><?php echo fruitful_get_logo(); ?></div>
 							<div class="menu_button collapsed">
 								<button class="navbar-toggle collapsed" type="button">

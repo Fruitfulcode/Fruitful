@@ -900,11 +900,24 @@ ul#lang-select-popup{
     width:420px;
     padding:8px 0;
 }
-#masthead .social-icon{
-    float:right;
-	width: 100%;
+#page-header .site-header .social-icon{
+    overflow: hidden;
+    width: auto;
 	margin-bottom: 10px;
 }
+.site-header .social-icon{
+    margin-right: 4px;
+}
+#page-header .site-header .social-icon a{
+    float:right;
+}
+
+#page-header .site-header .social-icon::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
 #colophon .social-icon {
     float:right
 }
@@ -915,9 +928,6 @@ ul#lang-select-popup{
     opacity:1;
     /* background-image:url(images/social.png); */
     background-repeat:no-repeat;
-}
-#masthead .social-icon a{
-	float:right;
 }
 #colophon .social-icon a {
     float:left;
@@ -2398,11 +2408,12 @@ aside #lang_sel {
 
 	.resp_full_width_menu .site-header{ width:100%; float:left; }
 	.resp_full_width_menu .site-header .logo_wrapper{ display:block; float:left; width:48%; margin:10px 0 0 2%; }
-	.resp_full_width_menu .site-header .cart_wrapper, .resp_full_width_menu .site-header .menu_button{ display:block; float:right; margin-left:12px; margin-right:12px; }
-	.resp_full_width_menu .site-header .language_switcher{ display:block; float:right;}
-	.resp_full_width_menu .site-header .select-menu{ display:none; }
-	.resp_full_width_menu .site-header .menu_button button{ background:none !important; float:left; margin: 15px 10px 9px; padding: 0; z-index: 9; background: none; border: 0; height: 30px; width: 35px; outline:none; }
-	.resp_full_width_menu .site-header .menu_button button span{ display: block; margin: 0 auto; margin-bottom: 5px; background: #333333; height: 5px; width: 35px; border-radius: 3px; }
+    .resp_full_width_menu .site-header .cart_wrapper, .resp_full_width_menu .site-header .menu_button{ display:block; float:right; margin-left:12px; margin-right:12px; }
+    .resp_full_width_menu .site-header .language_switcher{ display:block; float:right;}
+    .resp_full_width_menu .site-header .select-menu{ display:none; }
+    .resp_full_width_menu .site-header .menu_button button{ background:none !important; float:left; margin: 15px 10px 9px; padding: 0; z-index: 9; background: none; border: 0; height: 30px; width: 35px; outline:none; }
+    .resp_full_width_menu .site-header .menu_button button span{ display: block; margin: 0 auto; margin-bottom: 5px; background: #333333; height: 5px; width: 35px; border-radius: 3px; }
+    .resp_full_width_menu .site-header .social-icon{ margin: 10px 22px 10px 20px; }
 
 	.resp_full_width_menu .menu_wrapper{ float:left; width:100%; overflow-y:auto; }
 	.resp_full_width_menu .menu_wrapper.collapse{ display:none; }
@@ -2425,7 +2436,7 @@ aside #lang_sel {
 }
 
 @media only screen and (max-width:479px) {
-	#masthead .social-icon{float: left;clear: both;margin:20px 0;}
+	#page-header .site-header .social-icon{margin:20px 10px;}
 	.blog_post .date_of_post {width: 50px; height: 50px; float:none; left:0; top:1px}
 	.blog_post .date_of_post .day_post {font-size: 18px;}
 	.blog_post .post-content,
