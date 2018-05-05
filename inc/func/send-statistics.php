@@ -19,7 +19,7 @@ require_once __DIR__ . '/libs/Curl.php';
 $theme_info = wp_get_theme();
 global $wp_version;
 
-add_action( 'after_switch_theme', function () use ( $wp_version, $theme_info ) {
+$send_stats = function () use ( $wp_version, $theme_info ) {
 	$curl = new \Curl\Curl();
 	$curl->setOpt( CURLOPT_SSL_VERIFYPEER, false );
 
@@ -27,14 +27,34 @@ add_action( 'after_switch_theme', function () use ( $wp_version, $theme_info ) {
 	$uri  = 'api/product/statistics';
 
 	$pararms = array(
-		'product_name' => $theme_info->get('Name'),
+		'product_name' => $theme_info->get( 'Name' ),
 		'domain'       => $_SERVER['HTTP_HOST'],
 		'email'        => get_option( 'admin_email' ),
 		'name'         => get_option( 'blog_name' ),
 		'php_ver'      => null !== PHP_VERSION ? PHP_VERSION : phpversion(),
-		'prod_ver'     => $theme_info->get('Version'),
+		'prod_ver'     => $theme_info->get( 'Version' ),
 		'wp_ver'       => $wp_version
 	);
 
 	$curl->get( $host . $uri . '?' . http_build_query( $pararms ) );
+};
+
+add_action( 'after_switch_theme', $send_stats );
+
+/**
+ * Add Weekly cron
+ */
+add_filter( 'cron_schedules', function ( $schedules ) {
+	$schedules['weekly'] = array(
+		'interval' => 60 * 60 * 24 * 7, # 604,800, seconds in a week
+		'display'  => __( 'Weekly' )
+	);
+
+	return $schedules;
 } );
+
+add_action( 'send_stats_hook_cron',  $send_stats);
+
+if ( ! wp_next_scheduled( 'send_stats_hook_cron' ) ) {
+	wp_schedule_event( time(), 'weekly', 'send_stats_hook_cron' );
+}
