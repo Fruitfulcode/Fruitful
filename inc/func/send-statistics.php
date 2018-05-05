@@ -53,8 +53,6 @@ add_filter( 'cron_schedules', function ( $schedules ) {
 	return $schedules;
 } );
 
-add_action( 'send_stats_hook_cron',  $send_stats);
+add_action( 'send_stats_hook_cron', $send_stats );
 
-if ( ! wp_next_scheduled( 'send_stats_hook_cron' ) ) {
-	wp_schedule_event( time(), 'weekly', 'send_stats_hook_cron' );
-}
+wp_schedule_event( time(), 'weekly', 'send_stats_hook_cron' );
