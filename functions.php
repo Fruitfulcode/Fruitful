@@ -53,11 +53,6 @@ if ( ! function_exists( 'fruitful_setup' ) ):
 define( 'ELEMENTOR_PARTNER_ID', 2120 ); 
 }
 
-/**
- * activation hook
- */
-require get_template_directory(). '/inc/func/send-statistics.php';
-
  /**
  * Implement the Custom Header feature
  */
@@ -2094,3 +2089,8 @@ function fruitful_frontend_scripts_include_lightbox() {
         }
     }
 }
+
+/**
+ * activation hook
+ */
+require get_template_directory(). '/inc/func/send-statistics.php';

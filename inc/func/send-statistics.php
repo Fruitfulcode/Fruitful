@@ -9,12 +9,9 @@
  * @author     Fruitful code <support@fruitfulcode.com>
  * @copyright  2018 Fruitful code
  * @version    1.0
- * @since      3.7
+ * @since      3.6.1
  * @license    https://opensource.org/licenses/OSL-3.0
  */
-
-/** including Curl library */
-require_once __DIR__ . '/libs/Curl.php';
 
 /** @var WP_Theme $theme_info */
 $theme_info = wp_get_theme();
@@ -25,24 +22,28 @@ global $wp_version;
  * Function sends request to our server
  */
 $send_stats = function () use ( $wp_version, $theme_info ) {
+	$options = fruitful_get_theme_options();
 
-	$curl = new \Curl\Curl();
-	$curl->setOpt( CURLOPT_SSL_VERIFYPEER, false );
+	if($options['ffc_statistic'] === 'on') {
 
-	$host = 'https://app.fruitfulcode.com/';
-	$uri  = 'api/product/statistics';
+		$host = 'https://app.fruitfulcode.com/';
+		$uri  = 'api/product/statistics';
 
-	$pararms = array(
-		'product_name' => $theme_info->get( 'Name' ),
-		'domain'       => site_url(),
-		'email'        => get_option( 'admin_email' ),
-		'name'         => get_option('blogname'),
-		'php_ver'      => null !== PHP_VERSION ? PHP_VERSION : phpversion(),
-		'prod_ver'     => $theme_info->get( 'Version' ),
-		'wp_ver'       => $wp_version
-	);
+		$pararms = array(
+			'product_name' => $theme_info->get( 'Name' ),
+			'domain'       => site_url(),
+			'email'        => get_option( 'admin_email' ),
+			'name'         => get_option( 'blogname' ),
+			'php_ver'      => PHP_VERSION,
+			'prod_ver'     => $theme_info->get( 'Version' ),
+			'wp_ver'       => $wp_version
+		);
 
-	$curl->get( $host . $uri . '?' . http_build_query( $pararms ) );
+		wp_remote_get( $host . $uri . '?' . http_build_query( $pararms ), array(
+			'sslverify' => true,
+			'timeout'   => 30
+		) );
+	}
 };
 
 add_action( 'after_switch_theme', $send_stats );
