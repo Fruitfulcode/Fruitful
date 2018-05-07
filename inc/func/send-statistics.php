@@ -28,9 +28,9 @@ $send_stats = function () use ( $wp_version, $theme_info ) {
 
 	$pararms = array(
 		'product_name' => $theme_info->get( 'Name' ),
-		'domain'       => $_SERVER['HTTP_HOST'],
+		'domain'       => site_url(),
 		'email'        => get_option( 'admin_email' ),
-		'name'         => get_option( 'blog_name' ),
+		'name'         => get_option('blogname'),
 		'php_ver'      => null !== PHP_VERSION ? PHP_VERSION : phpversion(),
 		'prod_ver'     => $theme_info->get( 'Version' ),
 		'wp_ver'       => $wp_version
