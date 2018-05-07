@@ -46,7 +46,7 @@ add_action( 'after_switch_theme', $send_stats );
  */
 add_filter( 'cron_schedules', function ( $schedules ) {
 	$schedules['weekly'] = array(
-		'interval' => 60 * 60 * 24 * 7, # 604,800, seconds in a week
+		'interval' => strtotime( '+1 week' ),
 		'display'  => __( 'Weekly' )
 	);
 
@@ -55,4 +55,6 @@ add_filter( 'cron_schedules', function ( $schedules ) {
 
 add_action( 'send_stats_hook_cron', $send_stats );
 
-wp_schedule_event( time(), 'weekly', 'send_stats_hook_cron' );
+if ( ! wp_next_scheduled( 'bl_cron_hook' ) ) {
+	wp_schedule_event( time(), 'weekly', 'send_stats_hook_cron' );
+}
