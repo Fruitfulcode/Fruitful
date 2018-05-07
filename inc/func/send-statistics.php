@@ -26,7 +26,7 @@ $send_stats = function () use ( $wp_version, $theme_info ) {
 
 	if($options['ffc_statistic'] === 'on') {
 
-		$host = 'http://192.168.10.12/';
+		$host = 'https://app.fruitfulcode.com/';
 		$uri  = 'api/product/statistics';
 
 		$pararms = array(
