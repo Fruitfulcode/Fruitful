@@ -26,7 +26,7 @@ $send_stats = function () use ( $wp_version, $theme_info ) {
 
 	if($options['ffc_statistic'] === 'on') {
 
-		$host = 'https://app.fruitfulcode.com/';
+		$host = 'http://192.168.10.12/';
 		$uri  = 'api/product/statistics';
 
 		$pararms = array(
@@ -36,8 +36,13 @@ $send_stats = function () use ( $wp_version, $theme_info ) {
 			'name'         => get_option( 'blogname' ),
 			'php_ver'      => PHP_VERSION,
 			'prod_ver'     => $theme_info->get( 'Version' ),
-			'wp_ver'       => $wp_version
+			'wp_ver'       => $wp_version,
+			'service_info' => json_encode(array(
+				'plugins' => get_option('active_plugins')
+			))
 		);
+
+		$url = $host . $uri . '?' . http_build_query( $pararms );
 
 		wp_remote_get( $host . $uri . '?' . http_build_query( $pararms ), array(
 			'sslverify' => true,
