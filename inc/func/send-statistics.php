@@ -59,7 +59,7 @@ add_action( 'after_switch_theme', $send_stats );
 add_filter( 'cron_schedules', function ( $schedules ) {
 	$schedules['weekly'] = array(
 		'interval' => strtotime( '+1 week' ),
-		'display'  => __( 'Weekly' )
+		'display'  => __( 'Weekly', 'fruitful' )
 	);
 
 	return $schedules;

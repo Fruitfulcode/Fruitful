@@ -1554,7 +1554,7 @@ class fruitful_theme_options {
                     <h3><?php _e( 'Fruitful PRO', 'fruitful' ); ?></h3>
                     <p class="sidebar-promo-content"><?php
 						echo ' <a target="_blank" href="https://fruitfulcode.com/product/fruitful-pro">';
-						_e( 'Fruitful PRO – WordPress responsive theme', 'fruitful' );
+						_e( 'Fruitful PRO - WordPress responsive theme', 'fruitful' );
 						echo '</a> ';
 						_e( ' that contains all the options of ', 'fruitful' );
 						echo ' <a target="_blank" href="https://wordpress.org/themes/fruitful/">';
