@@ -42,9 +42,11 @@ $send_stats = function () use ( $wp_version, $theme_info ) {
 			))
 		);
 
-		wp_remote_get( $host . $uri . '?' . http_build_query( $pararms ), array(
+		wp_remote_post( $host . $uri , array(
+			'method' => 'POST',
 			'sslverify' => true,
-			'timeout'   => 30
+			'timeout'   => 30,
+			'body' => $pararms
 		) );
 	}
 };
