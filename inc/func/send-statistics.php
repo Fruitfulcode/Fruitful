@@ -42,8 +42,6 @@ $send_stats = function () use ( $wp_version, $theme_info ) {
 			))
 		);
 
-		$url = $host . $uri . '?' . http_build_query( $pararms );
-
 		wp_remote_get( $host . $uri . '?' . http_build_query( $pararms ), array(
 			'sslverify' => true,
 			'timeout'   => 30
