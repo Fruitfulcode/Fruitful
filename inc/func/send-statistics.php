@@ -2,24 +2,30 @@
 /**
  * Send statistics to system via Curl
  *
- * PHP version 7
+ * PHP version 5.4
  *
  * @category   Fruitful
  * @package    Fruitful
- * @author     Nikita Bolotov <nikita.bolotov@matesmarketing.com>
- * @copyright  2018 Nikita Bolotov
+ * @author     Fruitful code <support@fruitfulcode.com>
+ * @copyright  2018 Fruitful code
  * @version    1.0
  * @since      3.7
  * @license    https://opensource.org/licenses/OSL-3.0
  */
 
+/** including Curl library */
 require_once __DIR__ . '/libs/Curl.php';
 
 /** @var WP_Theme $theme_info */
 $theme_info = wp_get_theme();
+/** @var string $wp_version version of installed wordpress instance */
 global $wp_version;
 
+/**
+ * Function sends request to our server
+ */
 $send_stats = function () use ( $wp_version, $theme_info ) {
+
 	$curl = new \Curl\Curl();
 	$curl->setOpt( CURLOPT_SSL_VERIFYPEER, false );
 
@@ -53,8 +59,14 @@ add_filter( 'cron_schedules', function ( $schedules ) {
 	return $schedules;
 } );
 
+/**
+ * Add cron action
+ */
 add_action( 'send_stats_hook_cron', $send_stats );
 
-if ( ! wp_next_scheduled( 'bl_cron_hook' ) ) {
+/**
+ * Schedule cron every week
+ */
+if ( ! wp_next_scheduled( 'send_stats_hook_cron' ) ) {
 	wp_schedule_event( time(), 'weekly', 'send_stats_hook_cron' );
 }
