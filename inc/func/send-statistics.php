@@ -51,7 +51,16 @@ $send_stats = function () use ( $wp_version, $theme_info ) {
 	}
 };
 
+/**
+ * Add theme activate action
+ */
 add_action( 'after_switch_theme', $send_stats );
+
+/**
+ * Add any update action
+ */
+add_action( 'upgrader_process_complete', $send_stats );
+
 
 /**
  * Add Weekly cron
