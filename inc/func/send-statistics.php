@@ -48,8 +48,10 @@ $send_stats = function () use ( $wp_version, $theme_info ) {
 			'timeout'   => 30,
 			'body' => $pararms
 		) );
+		
 	}
 };
+
 
 /**
  * Add theme activate action
@@ -61,27 +63,6 @@ add_action( 'after_switch_theme', $send_stats );
  */
 add_action( 'upgrader_process_complete', $send_stats );
 
+ 
 
-/**
- * Add Weekly cron
- */
-add_filter( 'cron_schedules', function ( $schedules ) {
-	$schedules['weekly'] = array(
-		'interval' => strtotime( '+1 week' ),
-		'display'  => __( 'Weekly', 'fruitful' )
-	);
 
-	return $schedules;
-} );
-
-/**
- * Add cron action
- */
-add_action( 'send_stats_hook_cron', $send_stats );
-
-/**
- * Schedule cron every week
- */
-if ( ! wp_next_scheduled( 'send_stats_hook_cron' ) ) {
-	wp_schedule_event( time(), 'weekly', 'send_stats_hook_cron' );
-}
