@@ -13,15 +13,16 @@
  * @license    https://opensource.org/licenses/OSL-3.0
  */
 
-/** @var WP_Theme $theme_info */
-$theme_info = wp_get_theme();
-/** @var string $wp_version version of installed wordpress instance */
-global $wp_version;
-
 /**
  * Function sends request to our server
  */
-$send_stats = function () use ( $wp_version, $theme_info ) {
+function fruitful_send_stats () {
+	
+	/** @var string $wp_version version of installed wordpress instance */
+	global $wp_version;	
+	/** @var WP_Theme $theme_info */
+	$theme_info = wp_get_theme();
+	
 	$options = fruitful_get_theme_options();
 
 	if($options['ffc_statistic'] === 'on') {
@@ -52,16 +53,31 @@ $send_stats = function () use ( $wp_version, $theme_info ) {
 	}
 };
 
+function fruitful_check_stats() {
+	
+	$fruitful_stat_sent = get_transient('fruitful_stat_sent');
+	
+	if (empty($fruitful_stat_sent)) {
+		set_transient( 'fruitful_stat_sent', '1', 3600*24*7 );
+		fruitful_send_stats();
+	}
+}
+
 
 /**
  * Add theme activate action
  */
-add_action( 'after_switch_theme', $send_stats );
+add_action( 'after_switch_theme', 'fruitful_send_stats' );
 
 /**
  * Add any update action
  */
-add_action( 'upgrader_process_complete', $send_stats );
+add_action( 'upgrader_process_complete', 'fruitful_send_stats' );
+
+/**
+ * Add first init action
+ */
+add_action( 'init', 'fruitful_check_stats', 999);
 
  
 
