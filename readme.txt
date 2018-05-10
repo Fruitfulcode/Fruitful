@@ -107,20 +107,18 @@ Files: .pot, ru_Ru.po, ru_Ru.mo icluded. Default language is english.
 -------------------------------------------------------
     Changelog
 -------------------------------------------------------
-= 3.6.1 =
-07.05.2018
-* New: Collecting statistics
 
 = 3.6 =
-04.04.2018
+07.05.2018
 
-* New: Add WPML support
 * Update: Woocommerce templates version
 * Update: Woocommerce depricated functions
 * Update: Removed title meta from header.php
 * Update: Zoom icon on Product page
 * Update: Meta Viewport tag
 * Update: Deprecated function removed
+* New: Add WPML support
+* New: Collecting statistics
 * Bug fix: Product image for Variable products
 * Bug fix: Related Products on Product page
 * Bug fix: Shop search form

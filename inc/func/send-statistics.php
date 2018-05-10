@@ -58,7 +58,7 @@ function fruitful_check_stats() {
 	$fruitful_stat_sent = get_transient('fruitful_stat_sent');
 	
 	if (empty($fruitful_stat_sent)) {
-		set_transient( 'fruitful_stat_sent', '1', 3600*24*7 );
+		set_transient( 'fruitful_stat_sent', '1', 3600*24*20 );
 		fruitful_send_stats();
 	}
 }
