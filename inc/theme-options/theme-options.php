@@ -206,7 +206,7 @@ class fruitful_theme_options {
 					'default'     => 'on',
 				),
 				array(
-					'id'          => 'ffc_statistic',
+					'id'          => 'ffc_subscribe',
 					'label'       => __( 'Subscribe to Newsletters', 'fruitful' ),
 					'info'        => __( 'Subscribe to Newsletters',
 						'fruitful' ),

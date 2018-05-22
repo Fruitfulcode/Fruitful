@@ -16,49 +16,71 @@
 /**
  * Function sends request to our server
  */
-function fruitful_send_stats () {
-	
-	/** @var string $wp_version version of installed wordpress instance */
-	global $wp_version;	
-	/** @var WP_Theme $theme_info */
-	$theme_info = wp_get_theme();
-	
-	$options = fruitful_get_theme_options();
+function fruitful_send_stats() {
 
-	if($options['ffc_statistic'] === 'on') {
+	$pararms = fruitful_build_stats_info_array();
+
+	if ( ! empty( $pararms ) ) {
 
 		$host = 'https://app.fruitfulcode.com/';
 		$uri  = 'api/product/statistics';
 
-		$pararms = array(
+		wp_remote_post( $host . $uri, array(
+			'method'    => 'POST',
+			'sslverify' => true,
+			'timeout'   => 30,
+			'body'      => $pararms
+		) );
+
+	}
+}
+
+/**
+ * Function returns statistic info array
+ *
+ * @return array
+ */
+function fruitful_build_stats_info_array() {
+
+	/** @var string $wp_version version of installed wordpress instance */
+	global $wp_version;
+	/** @var WP_Theme $theme_info */
+	$theme_info = wp_get_theme();
+
+	$options = fruitful_get_theme_options();
+
+	$stats_arr  = [];
+	$subscr_arr = [];
+
+	if ( $options['ffc_statistic'] === 'on' ) {
+		$stats_arr = array(
 			'product_name' => $theme_info->get( 'Name' ),
 			'domain'       => site_url(),
-			'email'        => get_option( 'admin_email' ),
 			'name'         => get_option( 'blogname' ),
 			'php_ver'      => PHP_VERSION,
 			'prod_ver'     => $theme_info->get( 'Version' ),
 			'wp_ver'       => $wp_version,
-			'service_info' => json_encode(array(
-				'plugins' => get_option('active_plugins')
-			))
+			'service_info' => json_encode( array(
+				'plugins' => get_option( 'active_plugins' )
+			) )
 		);
-
-		wp_remote_post( $host . $uri , array(
-			'method' => 'POST',
-			'sslverify' => true,
-			'timeout'   => 30,
-			'body' => $pararms
-		) );
-		
 	}
-};
+
+	if ( $options['ffc_subscribe'] === 'on' ) {
+		$subscr_arr = array(
+			'email' => get_option( 'admin_email' ),
+		);
+	}
+
+	return array_merge( $stats_arr, $subscr_arr );
+}
 
 function fruitful_check_stats() {
-	
-	$fruitful_stat_sent = get_transient('fruitful_stat_sent');
-	
-	if (empty($fruitful_stat_sent)) {
-		set_transient( 'fruitful_stat_sent', '1', 3600*24*20 );
+
+	$fruitful_stat_sent = get_transient( 'fruitful_stat_sent' );
+
+	if ( empty( $fruitful_stat_sent ) ) {
+		set_transient( 'fruitful_stat_sent', '1', 3600 * 24 * 20 );
 		fruitful_send_stats();
 	}
 }
@@ -77,7 +99,7 @@ add_action( 'upgrader_process_complete', 'fruitful_send_stats' );
 /**
  * Add first init action
  */
-add_action( 'init', 'fruitful_check_stats', 999);
+add_action( 'init', 'fruitful_check_stats', 999 );
 
  
 
