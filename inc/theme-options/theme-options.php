@@ -205,7 +205,16 @@ class fruitful_theme_options {
 					'type'        => 'checkbox',
 					'default'     => 'on',
 				),
-                (( function_exists( 'icl_get_languages' ) ) ?
+				array(
+					'id'          => 'ffc_statistic',
+					'label'       => __( 'Subscribe to Newsletters', 'fruitful' ),
+					'info'        => __( 'Subscribe to Newsletters',
+						'fruitful' ),
+					'description' => __( 'Subscribe to Newsletters', 'fruitful' ),
+					'type'        => 'checkbox',
+					'default'     => 'off',
+				),
+				( ( function_exists( 'icl_get_languages' ) ) ?
 					array(
 						'id'          => 'is_wpml_ready',
 						'type'        => 'checkbox',
@@ -223,7 +232,7 @@ class fruitful_theme_options {
 						'default' => __( 'Reset Defaults', 'fruitful' ),
 						'class'   => 'button-primary reset-btn',
 					)
-                ),
+				),
 				array(
 					'id'      => 'reset',
 					'label'   => __( 'Reset options', 'fruitful' ),
@@ -1331,9 +1340,10 @@ class fruitful_theme_options {
 		}
 
 		/* Add the main siteadmin menu item */
-		$wp_admin_bar->add_menu( array( 'id'    => 'fruitfultheme_options',
-										'title' => __( 'Theme Options', 'fruitful' ),
-										'href'  => admin_url( 'admin.php?page=theme_options' )
+		$wp_admin_bar->add_menu( array(
+			'id'    => 'fruitfultheme_options',
+			'title' => __( 'Theme Options', 'fruitful' ),
+			'href'  => admin_url( 'admin.php?page=theme_options' )
 		) );
 	}
 
