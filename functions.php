@@ -1989,7 +1989,7 @@ if (!class_exists('ffs')){
 
 	    if ($options['ffc_subscribe'] === 'off' && empty($options['ffc_is_hide_subscribe_notification'])){
 		    echo '<div class="notice-info notice is-dismissible" id="subscribe-notification-container"><p>';
-		    echo __('Subscribe to newsletters? ','fruitful');
+			echo __('Subscribe to Fruitful newsletters? ','fruitful');
 		    echo '<a id="subscribe-to-newsletters-btn" href="#" >'.__('Allow', 'fruitful').'</a>';
 //		    echo '  |  ';
 //		    echo '<a href="http://wordpress.org/plugins/fruitful-shortcodes/" target="_blank">'.__('Disallow', 'fruitful').'</a>';

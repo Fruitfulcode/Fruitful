@@ -111,9 +111,9 @@ Files: .pot, ru_Ru.po, ru_Ru.mo icluded. Default language is english.
 = 3.6.1 =
 23.05.2018
 
-* New: Added ability to Send configuration information to Fruitfulcode
 * New: Added ability to Subscribe for newsletters option
 * New: Added Subscribe for newsletters notification in admin Dashboard
+* Bug fix: Post css margin fix
 
 = 3.6 =
 07.05.2018
