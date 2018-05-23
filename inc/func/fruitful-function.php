@@ -350,6 +350,14 @@ function fruitful_allow_subscribe(){
 	wp_send_json($response);
 }
 
+add_action('wp_ajax_fruitful_dismiss_subscribe_notification', 'fruitful_dismiss_subscribe_notification');
+function fruitful_dismiss_subscribe_notification(){
+	$options = fruitful_get_theme_options();
+	$options['ffc_is_hide_subscribe_notification'] = 'true';
+	update_option('fruitful_theme_options', $options);
+	wp_send_json('success');
+}
+
 add_action('wp_ajax_fruitful_reset_btn', 'fruitful_reset_action');
 function fruitful_reset_action() {
 global $fruitful_theme_options;
