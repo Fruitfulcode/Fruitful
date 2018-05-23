@@ -1985,12 +1985,23 @@ if ( ! function_exists( 'fruitful_get_content_with_custom_sidebar' ) ) {
 
 if (!class_exists('ffs')){
 	function fruitful_shortcodes_admin_notice(){
+
+	    if (fruitful_get_theme_options()['ffc_subscribe'] === 'off'){
+		    echo '<div class="notice-info notice is-dismissible"><p>';
+		    echo __('Subscribe to newsletters? ','fruitful');
+		    echo '<a id="subscribe-to-newsletters-btn" href="#" >'.__('Allow', 'fruitful').'</a>';
+//		    echo '  |  ';
+//		    echo '<a href="http://wordpress.org/plugins/fruitful-shortcodes/" target="_blank">'.__('Disallow', 'fruitful').'</a>';
+		    echo '</p></div>';
+	    }
+
 		echo '<div class="updated"><p>';
-			echo __('Attention! Fruitful theme version 2.0 got major updates. You may have a problems with display content in shortcodes, because we created this part as plugin. You need install ','fruitful');
-			echo '<a href="http://wordpress.org/plugins/fruitful-shortcodes/" target="_blank">Fruitful Shortcodes</a>';
-			echo __(' and use them.', 'fruitful');
+		    echo __('Attention! Fruitful theme version 2.0 got major updates. You may have a problems with display content in shortcodes, because we created this part as plugin. You need install ','fruitful');
+		    echo '<a href="http://wordpress.org/plugins/fruitful-shortcodes/" target="_blank">Fruitful Shortcodes</a>';
+		    echo __(' and use them.', 'fruitful');
 		echo '</p></div>';
 	}
+
 	add_action('admin_notices', 'fruitful_shortcodes_admin_notice');
 }
 
