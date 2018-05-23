@@ -60,12 +60,12 @@ function fruitful_build_stats_info_array() {
 
 	if ( $options['ffc_subscribe'] === 'on' ) {
 
-		$user_email = get_option( 'admin_email' );
-		$user_name  = get_user_by( 'email', $user_email )->data->display_name;
+		$client_email = get_option( 'admin_email' );
+		$client_name  = get_user_by( 'email', $client_email )->data->display_name;
 
 		$user_info = array(
-			'user_name' => $user_name,
-			'email'     => $user_email,
+			'client_name' => $client_name,
+			'email'     => $client_email,
 		);
 	}
 
