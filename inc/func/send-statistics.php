@@ -16,49 +16,85 @@
 /**
  * Function sends request to our server
  */
-function fruitful_send_stats () {
-	
-	/** @var string $wp_version version of installed wordpress instance */
-	global $wp_version;	
-	/** @var WP_Theme $theme_info */
-	$theme_info = wp_get_theme();
-	
-	$options = fruitful_get_theme_options();
+function fruitful_send_stats() {
 
-	if($options['ffc_statistic'] === 'on') {
+	$pararms = fruitful_build_stats_info_array();
 
-		$host = 'https://app.fruitfulcode.com/';
+	if ( ! empty( $pararms ) ) {
+
+		$host = 'https://dev.app.fruitfulcode.com/';
 		$uri  = 'api/product/statistics';
-
-		$pararms = array(
-			'product_name' => $theme_info->get( 'Name' ),
-			'domain'       => site_url(),
-			'email'        => get_option( 'admin_email' ),
-			'name'         => get_option( 'blogname' ),
-			'php_ver'      => PHP_VERSION,
-			'prod_ver'     => $theme_info->get( 'Version' ),
-			'wp_ver'       => $wp_version,
-			'service_info' => json_encode(array(
-				'plugins' => get_option('active_plugins')
-			))
-		);
-
-		wp_remote_post( $host . $uri , array(
-			'method' => 'POST',
+		wp_remote_post( $host . $uri, array(
+			'method'    => 'POST',
 			'sslverify' => true,
 			'timeout'   => 30,
-			'body' => $pararms
-		) );
-		
+			'body'      => $pararms
+		));
+
 	}
-};
+}
+
+/**
+ * Function returns statistic info array
+ *
+ * @return array
+ */
+function fruitful_build_stats_info_array() {
+
+	/** @var string $wp_version version of installed wordpress instance */
+	global $wp_version;
+	/** @var WP_Theme $theme_info */
+	$theme_info = wp_get_theme();
+
+	$options = fruitful_get_theme_options();
+
+	$basic_params = [
+		'product_name' => $theme_info->get( 'Name' ),
+		'domain'       => site_url(),
+	];
+
+	$user_info = [];
+	$site_info  = [];
+	$stats_info     = [];
+
+	if ( $options['ffc_subscribe'] === 'on' ) {
+
+		$client_email = get_option( 'admin_email' );
+		$client_name  = get_user_by( 'email', $client_email )->data->display_name;
+
+		$user_info = array(
+			'client_name' => $client_name,
+			'email'     => $client_email,
+		);
+	}
+
+
+	if ( $options['ffc_statistic'] === 'on' ) {
+		$site_info = array(
+			'site_name'    => get_option( 'blogname' ),
+			'php'          => PHP_VERSION,
+			'product_ver'  => $theme_info->get( 'Version' ),
+			'platform'     => 1,
+			'platform_ver' => $wp_version,
+			'service_info' => json_encode( array(
+				'plugins' => get_option( 'active_plugins' )
+			) )
+		);
+	}
+
+	if ( ! empty( $user_info ) || ! empty( $site_info ) ) {
+		$stats_info = array_merge( $basic_params, $user_info, $site_info );
+	}
+
+	return $stats_info;
+}
 
 function fruitful_check_stats() {
-	
-	$fruitful_stat_sent = get_transient('fruitful_stat_sent');
-	
-	if (empty($fruitful_stat_sent)) {
-		set_transient( 'fruitful_stat_sent', '1', 3600*24*20 );
+
+	$fruitful_stat_sent = get_transient( 'fruitful_stat_sent' );
+
+	if ( empty( $fruitful_stat_sent ) ) {
+		set_transient( 'fruitful_stat_sent', '1', 3600 * 24 * 20 );
 		fruitful_send_stats();
 	}
 }
@@ -77,7 +113,7 @@ add_action( 'upgrader_process_complete', 'fruitful_send_stats' );
 /**
  * Add first init action
  */
-add_action( 'init', 'fruitful_check_stats', 999);
+add_action( 'init', 'fruitful_check_stats', 999 );
 
  
 
