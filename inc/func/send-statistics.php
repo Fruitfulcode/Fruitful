@@ -49,30 +49,45 @@ function fruitful_build_stats_info_array() {
 
 	$options = fruitful_get_theme_options();
 
-	$stats_arr  = [];
-	$subscr_arr = [];
+	$basic_params = [
+		'product_name' => $theme_info->get( 'Name' ),
+		'domain'       => site_url(),
+	];
+
+	$user_info = [];
+	$site_info  = [];
+	$stats_info     = [];
+
+	if ( $options['ffc_subscribe'] === 'on' ) {
+
+		$user_email = get_option( 'admin_email' );
+		$user_name  = get_user_by( 'email', $user_email )->data->display_name;
+
+		$user_info = array(
+			'user_name' => $user_name,
+			'email'     => $user_email,
+		);
+	}
+
 
 	if ( $options['ffc_statistic'] === 'on' ) {
-		$stats_arr = array(
-			'product_name' => $theme_info->get( 'Name' ),
-			'domain'       => site_url(),
-			'name'         => get_option( 'blogname' ),
-			'php_ver'      => PHP_VERSION,
-			'prod_ver'     => $theme_info->get( 'Version' ),
-			'wp_ver'       => $wp_version,
+		$site_info = array(
+			'site_name'    => get_option( 'blogname' ),
+			'php'          => PHP_VERSION,
+			'product_ver'  => $theme_info->get( 'Version' ),
+			'platform'     => 1,
+			'platform_ver' => $wp_version,
 			'service_info' => json_encode( array(
 				'plugins' => get_option( 'active_plugins' )
 			) )
 		);
 	}
 
-	if ( $options['ffc_subscribe'] === 'on' ) {
-		$subscr_arr = array(
-			'email' => get_option( 'admin_email' ),
-		);
+	if ( ! empty( $user_info ) || ! empty( $site_info ) ) {
+		$result = array_merge( $basic_params, $user_info, $site_info );
 	}
 
-	return array_merge( $stats_arr, $subscr_arr );
+	return $stats_info;
 }
 
 function fruitful_check_stats() {
