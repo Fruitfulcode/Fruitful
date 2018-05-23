@@ -22,15 +22,14 @@ function fruitful_send_stats() {
 
 	if ( ! empty( $pararms ) ) {
 
-		$host = 'https://app.fruitfulcode.com/';
+		$host = 'https://dev.app.fruitfulcode.com/';
 		$uri  = 'api/product/statistics';
-
 		wp_remote_post( $host . $uri, array(
 			'method'    => 'POST',
 			'sslverify' => true,
 			'timeout'   => 30,
 			'body'      => $pararms
-		) );
+		));
 
 	}
 }
@@ -84,7 +83,7 @@ function fruitful_build_stats_info_array() {
 	}
 
 	if ( ! empty( $user_info ) || ! empty( $site_info ) ) {
-		$result = array_merge( $basic_params, $user_info, $site_info );
+		$stats_info = array_merge( $basic_params, $user_info, $site_info );
 	}
 
 	return $stats_info;
