@@ -1985,9 +1985,10 @@ if ( ! function_exists( 'fruitful_get_content_with_custom_sidebar' ) ) {
 
 if (!class_exists('ffs')){
 	function fruitful_shortcodes_admin_notice(){
+        $options = fruitful_get_theme_options();
 
-	    if (fruitful_get_theme_options()['ffc_subscribe'] === 'off'){
-		    echo '<div class="notice-info notice is-dismissible"><p>';
+	    if ($options['ffc_subscribe'] === 'off' && empty($options['ffc_is_hide_subscribe_notification'])){
+		    echo '<div class="notice-info notice is-dismissible" id="subscribe-notification-container"><p>';
 		    echo __('Subscribe to newsletters? ','fruitful');
 		    echo '<a id="subscribe-to-newsletters-btn" href="#" >'.__('Allow', 'fruitful').'</a>';
 //		    echo '  |  ';
