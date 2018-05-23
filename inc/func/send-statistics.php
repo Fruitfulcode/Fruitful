@@ -53,9 +53,9 @@ function fruitful_build_stats_info_array() {
 		'domain'       => site_url(),
 	];
 
-	$user_info = [];
-	$site_info  = [];
-	$stats_info     = [];
+	$user_info = array();
+	$site_info  = array();
+	$stats_info     = array();
 
 	if ( $options['ffc_subscribe'] === 'on' ) {
 
