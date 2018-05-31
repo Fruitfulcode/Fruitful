@@ -32,14 +32,6 @@ function fruitful_add_jquery_script() {
 	wp_enqueue_script('admin-jQuery-fruit',	get_template_directory_uri() . "/inc/js/main.js", array('jquery'));
 }
 
-/**
- * Enqueue scripts for all admin pages
- */
-add_action('admin_enqueue_scripts', 'fruitful_add_admin_scripts');
-function fruitful_add_admin_scripts(){
-	wp_enqueue_script('admin_scripts', get_template_directory_uri() . '/inc/js/admin_scripts.js', array('jquery'));
-}
-
 function fruitful_fonts_list() {
 	$font_family_options = array(
 			'Arial, Helvetica, sans-serif'  				    => __( 'Arial, Helvetica, sans-serif', 'fruitful' ),
@@ -330,32 +322,6 @@ function fruitful_get_theme_options() {
         get_option($fruitful_theme_options->args['opt_name'], array() ), 
         fruitful_get_default_array() 
     );
-}
-
-add_action('wp_ajax_fruitful_allow_subscribe', 'fruitful_allow_subscribe');
-function fruitful_allow_subscribe(){
-
-	$options = fruitful_get_theme_options();
-	$response = array(
-		'status' => 'failed',
-		'message' => __('Something went wrong. You can subscribe manually on Theme Options page.', 'fruitful')
-	);
-	if (isset($options['ffc_subscribe'])){
-		$options['ffc_subscribe'] = 'on';
-		update_option('fruitful_theme_options', $options);
-		$response['status'] = 'success';
-		$response['message'] = __('Thank You for Subscription', 'fruitful');
-    }
-
-	wp_send_json($response);
-}
-
-add_action('wp_ajax_fruitful_dismiss_subscribe_notification', 'fruitful_dismiss_subscribe_notification');
-function fruitful_dismiss_subscribe_notification(){
-	$options = fruitful_get_theme_options();
-	$options['ffc_is_hide_subscribe_notification'] = 'true';
-	update_option('fruitful_theme_options', $options);
-	wp_send_json('success');
 }
 
 add_action('wp_ajax_fruitful_reset_btn', 'fruitful_reset_action');

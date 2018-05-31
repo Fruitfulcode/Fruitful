@@ -196,24 +196,42 @@ class fruitful_theme_options {
 					'type'        => 'checkbox',
 					'default'     => 'on',
 				),
+
 				array(
-					'id'          => 'ffc_statistic',
-					'label'       => __( 'Fruitfulcode statistic', 'fruitful' ),
-					'info'        => __( 'Send configuration information to Fruitfulcode to help to improve this theme',
-						'fruitful' ),
-					'description' => __( 'Send configuration information', 'fruitful' ),
-					'type'        => 'checkbox',
-					'default'     => 'on',
+					'id'       => 'ffc_statistic',
+					'type'     => 'checkbox',
+					'label'    => __( 'Fruitful Code statistic', 'fruitful' ),
+					'info' => __( 'Send configuration information to Fruitful Code to help to improve this theme', 'fruitful' ),
+					'description'     => __( 'Yes', 'fruitful' ),
+					'default'  => 'on',
 				),
 				array(
-					'id'          => 'ffc_subscribe',
-					'label'       => __( 'Subscribe to Newsletters', 'fruitful' ),
-					'info'        => __( 'Subscribe to Newsletters',
-						'fruitful' ),
-					'description' => __( 'Subscribe to Newsletters', 'fruitful' ),
-					'type'        => 'checkbox',
-					'default'     => 'off',
+					'id'       => 'ffc_subscribe',
+					'type'     => 'checkbox',
+					'label'    => __( 'Subscribe to Newsletters', 'fruitful' ),
+					'info' => __( 'Subscribe to Newsletters', 'fruitful' ),
+					'description'     => __( 'Yes', 'fruitful' ),
+					'default'  => 'off',
 				),
+				array(
+					'id'          => 'ffc_subscribe_name',
+					'type'        => 'text',
+					'label'       => __( 'Name', 'fruitful' ),
+					'default'     => '',
+					'placeholder' => 'Your Name'
+				),
+				array(
+					'id'          => 'ffc_subscribe_email',
+					'type'        => 'text',
+					'label'       => __( 'E-mail', 'fruitful' ),
+					'default'     => '',
+				),
+				array(
+					'id'      => 'ffc_is_hide_subscribe_notification',
+					'type'    => 'checkbox',
+					'default' => 'off',
+				),
+
 				( ( function_exists( 'icl_get_languages' ) ) ?
 					array(
 						'id'          => 'is_wpml_ready',
