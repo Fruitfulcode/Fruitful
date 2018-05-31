@@ -95,6 +95,9 @@
     //Tweaks on theme options page
     document.addEventListener('DOMContentLoaded', function () {
         var subscribeToNewsCheckbox = document.getElementById('ffc_subscribe');
+        if (typeof subscribeToNewsCheckbox === 'undefined' || subscribeToNewsCheckbox === null){
+            return;
+        }
         var isHideModal = document.getElementById('ffc_is_hide_subscribe_notification');
 
         var subscribeNameInput = document.getElementById('ffc_subscribe_name');
