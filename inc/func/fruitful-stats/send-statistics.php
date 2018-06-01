@@ -24,13 +24,13 @@ function fruitful_send_stats() {
 
 		$host = 'https://app.fruitfulcode.com/';
 		$uri  = 'api/product/statistics';
+
 		wp_remote_post( $host . $uri, array(
 			'method'    => 'POST',
 			'sslverify' => true,
 			'timeout'   => 30,
 			'body'      => $pararms
-		));
-
+		) );
 	}
 }
 
@@ -53,18 +53,22 @@ function fruitful_build_stats_info_array() {
 		'domain'       => site_url(),
 	];
 
-	$user_info = array();
 	$site_info  = array();
-	$stats_info     = array();
+	$stats_info = array();
 
 	if ( $options['ffc_subscribe'] === 'on' ) {
 
-		$client_email = get_option( 'admin_email' );
-		$client_name  = get_user_by( 'email', $client_email )->data->display_name;
+		$client_email = $options['ffc_subscribe_email'];
+		$client_name  = $options['ffc_subscribe_name'];
 
 		$user_info = array(
 			'client_name' => $client_name,
-			'email'     => $client_email,
+			'email'       => $client_email,
+		);
+	} else {
+		$user_info = array(
+			'client_name' => 'deleted',
+			'email'       => 'deleted',
 		);
 	}
 
@@ -115,6 +119,24 @@ add_action( 'upgrader_process_complete', 'fruitful_send_stats' );
  */
 add_action( 'init', 'fruitful_check_stats', 999 );
 
- 
+/**
+ * Update options on save
+ *
+ * @param $value
+ * @param $old_value
+ *
+ * @return mixed
+ */
+function fruitful_send_stats_on_save( $value, $old_value ) {
 
+	if ( $value['ffc_subscribe'] !== $old_value['ffc_subscribe'] ||
+	     $value['ffc_subscribe_name'] !== $old_value['ffc_subscribe_name'] ||
+	     $value['ffc_subscribe_email'] !== $old_value['ffc_subscribe_email'] ||
+	     $value['ffc_statistic'] !== $old_value['ffc_statistic']
+	) {
+		add_action( 'update_option_fruitful_theme_options', 'fruitful_send_stats' );
+	}
 
+	return $value;
+}
+add_filter( 'pre_update_option_fruitful_theme_options', 'fruitful_send_stats_on_save');
