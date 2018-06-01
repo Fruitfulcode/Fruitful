@@ -70,6 +70,7 @@
 			}
 		}
 
+		fruitful_send_stats();
 		wp_send_json( $response );
 	}
 

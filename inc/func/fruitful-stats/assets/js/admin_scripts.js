@@ -108,7 +108,6 @@
 
         isHideModal.closest('.settings-form-row').classList.add('hidden');
 
-        console.log(subscribeToNewsCheckbox.checked);
         if (subscribeToNewsCheckbox.checked){
             nameRow.classList.remove('hidden');
             emailRow.classList.remove('hidden');
