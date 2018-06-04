@@ -127,7 +127,9 @@ add_action( 'init', 'fruitful_check_stats', 999 );
  *
  * @return mixed
  */
-function fruitful_send_stats_on_save( $value, $old_value ) {
+function fruitful_send_stats_on_save( $value ) {
+
+	$old_value = fruitful_get_theme_options();
 
 	if ( $value['ffc_subscribe'] !== $old_value['ffc_subscribe'] ||
 	     $value['ffc_subscribe_name'] !== $old_value['ffc_subscribe_name'] ||

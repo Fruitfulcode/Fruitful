@@ -218,17 +218,22 @@ class fruitful_theme_options {
 					'type'        => 'text',
 					'label'       => __( 'Name', 'fruitful' ),
 					'default'     => '',
-					'placeholder' => 'Your Name'
+					'info' => __( 'Please enter Your Name', 'fruitful' ),
+					'description' => ''
 				),
 				array(
 					'id'          => 'ffc_subscribe_email',
 					'type'        => 'text',
 					'label'       => __( 'E-mail', 'fruitful' ),
 					'default'     => '',
+					'info' => __( 'Please enter Your E-mail', 'fruitful' ),
+					'description' => ''
 				),
 				array(
 					'id'      => 'ffc_is_hide_subscribe_notification',
 					'type'    => 'checkbox',
+					'info' => '',
+					'description' => '',
 					'default' => 'off',
 				),
 
