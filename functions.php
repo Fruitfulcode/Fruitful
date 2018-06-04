@@ -86,7 +86,8 @@ require get_template_directory() . '/inc/metaboxes/init-for-objestcs-mb.php';
 require get_template_directory() . '/inc/theme-options/theme-options.php';
 require get_template_directory() . '/inc/theme-options/customizer/customizer.php';
 
-function fruitful_fonts_url() {
+if ( ! function_exists( 'fruitful_fonts_url' ) ) {
+    function fruitful_fonts_url() {
 	$fonts_url = '';
 
 	/* Translators: If there are characters in your language that are not
@@ -118,6 +119,7 @@ function fruitful_fonts_url() {
 	}
 
 	return $fonts_url;
+}
 }
 
 function fruitful_setup() {
