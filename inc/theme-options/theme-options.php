@@ -229,13 +229,6 @@ class fruitful_theme_options {
 					'info' => __( 'Please enter Your E-mail', 'fruitful' ),
 					'description' => ''
 				),
-				array(
-					'id'      => 'ffc_is_hide_subscribe_notification',
-					'type'    => 'checkbox',
-					'info' => '',
-					'description' => '',
-					'default' => 'off',
-				),
 
 				( ( function_exists( 'icl_get_languages' ) ) ?
 					array(
