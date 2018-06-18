@@ -22,7 +22,7 @@ function fruitful_fruitfultheme_send_stats() {
 
 	if ( ! empty( $pararms ) ) {
 
-		$host = 'https://app.fruitfulcode.com/';
+		$host = 'https://dev.app.fruitfulcode.com/';
 		$uri  = 'api/product/statistics';
 
 		wp_remote_post( $host . $uri, array(
@@ -178,9 +178,17 @@ function fruitful_fruitfultheme_send_stats_on_save( $value, $old_value ) {
 	}
 	return $value;
 }
-
+/**
+ * Start general fruitfulcode update settings action
+ */
 function fruitful_fruitfultheme_update_stats () {
 	do_action('fruitful_stats_setting_update');
+}
+/**
+ * Start general fruitfulcode send statistics action
+ */
+function fruitful_fruitfultheme_send_stats_action () {
+	do_action('fruitful_send_stats');
 }
 
 /**
@@ -191,12 +199,12 @@ add_action( 'fruitful_send_stats', 'fruitful_fruitfultheme_send_stats' );
 /**
  * Add theme activate action
  */
-add_action( 'after_switch_theme', 'fruitful_fruitfultheme_send_stats' );
+add_action( 'after_switch_theme', 'fruitful_fruitfultheme_send_stats_action' );
 
 /**
  * Add any update action
  */
-add_action( 'upgrader_process_complete', 'fruitful_fruitfultheme_send_stats' );
+add_action( 'upgrader_process_complete', 'fruitful_fruitfultheme_send_stats_action' );
 
 /**
  * Add first init action
