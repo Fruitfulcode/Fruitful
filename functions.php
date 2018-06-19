@@ -53,6 +53,19 @@ if ( ! function_exists( 'fruitful_setup' ) ):
 define( 'ELEMENTOR_PARTNER_ID', 2120 ); 
 }
 
+/**
+ * Set the WPForms ShareASale ID.
+ */
+function fruitful_wpforms_shareasale_id( $shareasale_id ) {
+    if ( ! empty( $shareasale_id ) ) {
+        return $shareasale_id;
+    }
+    $shareasale_id = '64312';
+    update_option( 'wpforms_shareasale_id', $shareasale_id );
+    return $shareasale_id;
+}
+add_filter( 'wpforms_shareasale_id', 'fruitful_wpforms_shareasale_id' );
+
  /**
  * Implement the Custom Header feature
  */
