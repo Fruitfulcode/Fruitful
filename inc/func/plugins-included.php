@@ -26,7 +26,13 @@ function fruitful_register_required_plugins() {
 			'slug'     				=> 'elementor ',
 			'required' 				=> false,
 		),
-		
+
+		array(
+			'name'    => 'WPForms Lite',
+			'slug'    => 'wpforms-lite',
+			'required'  => false,
+		),
+
 	);
 
 	$config = array(
