@@ -16,4 +16,4 @@ ffc_statistics_option['ffc_path_to_current_notification'] - path to Fruitfulcode
 General sending statistics hooks for all Fruitfulcode products:
 
 action: fruitful_send_stats
-action: fruitful_stats_setting_update
+action: fruitful_stats_settings_update

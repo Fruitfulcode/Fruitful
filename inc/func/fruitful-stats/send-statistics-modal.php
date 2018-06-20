@@ -1,9 +1,39 @@
 <?php
+
+class ffc_fruitful_stats_modal extends ffc_fruitful_stats
+{
 	/**
-	 * Enqueue scripts for all admin pages
+	 * Constructor
+	 **/
+	function __construct()
+	{
+		parent::__construct();
+		$this->run();
+	}
+
+	/**
+	 * Run actions for modal notification
+	 **/
+	function run() {
+
+		// Add action to enqueue modal notification scripts
+		add_action( 'admin_enqueue_scripts', array( $this, 'ffc_add_admin_scripts' ) );
+
+		// Add action to show modal notification
+		add_action( 'admin_footer', array( $this, 'ffc_shortcodes_admin_notice' ) );
+
+		// Add action on submit modal notification
+		add_action( 'wp_ajax_fruitfultheme_submit_modal', array( $this, 'ffc_submit_modal' ) );
+
+		// Add action on click close button modal notification
+		add_action( 'wp_ajax_fruitfultheme_dismiss_subscribe_notification', array( $this, 'ffc_dismiss_subscribe_notification' ) );
+
+	}
+
+	/**
+	 * Function enqueue scripts for all admin pages
 	 */
-	add_action( 'admin_enqueue_scripts', 'fruitfultheme_add_admin_scripts' );
-	function fruitfultheme_add_admin_scripts() {
+	public function ffc_add_admin_scripts() {
 		if(!wp_script_is( 'fruitful-stats-modal', 'enqueued' )) {
 			wp_enqueue_script( 'fruitful-stats-modal', get_template_directory_uri() . '/inc/func/fruitful-stats/assets/js/admin_scripts.js', array( 'jquery' ) );
 		}
@@ -13,15 +43,14 @@
 	}
 
 	/**
-	 * Checking is set fruitful statistic variable
-	 * And showing statistics settings modal if fruitful statistic variable not set
-	 * Or update fruitful theme settings options if fruitful statistic variable set and this is first init
+	 * Function show modal notification
+	 * And update fruitful theme settings options on first theme init
 	 */
-	add_action( 'admin_footer', 'fruitfultheme_shortcodes_admin_notice' );
-	function fruitfultheme_shortcodes_admin_notice() {
+	function ffc_shortcodes_admin_notice() {
 
 		$ffc_statistics_option = get_option('ffc_statistics_option');
 
+		//Checking is set ffc statistic option and showing modal notification if is not set
 		if( !$ffc_statistics_option ) {
 			update_option('ffc_statistics_option', array('ffc_is_now_showing_subscribe_notification' => '1', 'ffc_is_hide_subscribe_notification' => '0', 'ffc_path_to_current_notification' => __FILE__ ) );
 			require plugin_dir_path( __FILE__ ). '/view/send-statistics-modal-view.php';
@@ -37,9 +66,10 @@
 					}
 				}
 				else {
-					if(get_option('fruitfultheme_stat_first_init')!='1') // update fruitful theme settings options if fruitful statistic variable set and this is first init
+					// Update fruitful theme settings options if ffc statistic option set and this is first theme init
+					if(get_option('fruitfultheme_stat_first_init')!='1')
 					{
-						do_action('fruitful_stats_setting_update');
+						do_action('fruitful_stats_settings_update');
 						update_option('fruitfultheme_stat_first_init', '1');
 					}
 				}
@@ -48,10 +78,9 @@
 	}
 
 	/**
-	 * Action on submit statistics modal
+	 * Action on submit statistics modal notification
 	 */
-	add_action( 'wp_ajax_fruitfultheme_submit_modal', 'fruitfultheme_submit_modal' );
-	function fruitfultheme_submit_modal() {
+	function ffc_submit_modal() {
 
 		$request_data = $_POST['data'];
 
@@ -97,16 +126,15 @@
 				);
 			}
 		}
-		do_action('fruitful_stats_setting_update');
+		do_action('fruitful_stats_settings_update');
 		do_action('fruitful_send_stats');
 		wp_send_json( $response );
 	}
 
 	/**
-	 * Action click close button statistics modal
+	 * Action click close button statistics modal notification
 	 */
-	add_action( 'wp_ajax_fruitfultheme_dismiss_subscribe_notification', 'fruitfultheme_dismiss_subscribe_notification' );
-	function fruitfultheme_dismiss_subscribe_notification() {
+	function ffc_dismiss_subscribe_notification() {
 
 		$ffc_statistics_option = get_option('ffc_statistics_option');
 		$ffc_statistics_option['ffc_is_now_showing_subscribe_notification'] = '0';
@@ -116,45 +144,5 @@
 		do_action('fruitful_send_stats');
 		wp_send_json( 'success' );
 	}
-
-	/**
-	 * Update settings in fruitful theme theme customizer
-	 * when statistics settings changed in another fruitful products
-	 */
-	add_action( 'fruitful_stats_setting_update', 'fruitfultheme_statistics_settings_update' );
-	function fruitfultheme_statistics_settings_update() {
-
-		$ffc_statistics_option = get_option('ffc_statistics_option');
-		$options = fruitful_get_theme_options();
-
-		if( isset($ffc_statistics_option) ) {
-
-			if( isset($ffc_statistics_option['ffc_statistic']) ) {
-				$options['ffc_statistic'] = ($ffc_statistics_option['ffc_statistic']=="1") ? "on" : "off";
-			} else {
-				$options['ffc_statistic'] = 'on';
-			}
-
-			if( isset($ffc_statistics_option['ffc_subscribe']) ) {
-				$options['ffc_subscribe']= ($ffc_statistics_option['ffc_subscribe']=="1") ? "on" : "off";
-			} else {
-				$options['ffc_subscribe'] = 'off';
-			}
-
-			if( isset($ffc_statistics_option['ffc_subscribe_name']) ) {
-				$options['ffc_subscribe_name'] = $ffc_statistics_option['ffc_subscribe_name'];
-			} else {
-				$options['ffc_subscribe_name'] = '';
-			}
-
-			if( isset($ffc_statistics_option['ffc_subscribe_email']) ) {
-				$options['ffc_subscribe_email'] = $ffc_statistics_option['ffc_subscribe_email'];
-			} else {
-				$options['ffc_subscribe_email'] = '';
-			}
-
-			update_option('fruitful_theme_options', $options);
-			do_action('fruitful_send_stats');
-		}
-	}
+}
 
