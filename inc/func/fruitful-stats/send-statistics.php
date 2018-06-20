@@ -79,7 +79,7 @@ class ffc_fruitful_stats
 
 		if ( ! empty( $pararms ) ) {
 
-			$host = 'https://dev.app.fruitfulcode.com/';
+			$host = 'https://app.fruitfulcode.com/';
 			$uri  = 'api/product/statistics';
 
 			wp_remote_post( $host . $uri, array(
