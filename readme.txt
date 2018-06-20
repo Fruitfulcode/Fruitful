@@ -108,6 +108,12 @@ Files: .pot, ru_Ru.po, ru_Ru.mo icluded. Default language is english.
     Changelog
 -------------------------------------------------------
 
+= 3.6.2 =
+19.06.2018
+
+* New: Added WPForms support
+* Bug fix: Fixed styles for forms
+
 = 3.6.1 =
 23.05.2018
 
