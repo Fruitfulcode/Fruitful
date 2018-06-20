@@ -18,16 +18,8 @@ class ffc_fruitful_stats
 	/**
 	 * Constructor
 	 **/
-	function __construct()
+	public function __construct()
 	{
-		$this->run();
-	}
-
-	/**
-	 * Run "fruitful" theme statistics actions
-	 **/
-	function run() {
-
 		// Add general action hook for fruitful products to send stat
 		add_action( 'fruitful_send_stats', array( $this, 'ffc_send_stats') );
 
@@ -35,7 +27,7 @@ class ffc_fruitful_stats
 		add_action( 'after_switch_theme', function () {	do_action('fruitful_send_stats'); } );
 
 		// Add theme deactivation hook to clear option first theme init
-		add_action("switch_theme", array( $this, 'ffc_theme_deactivate'), 10 , 2);
+		add_action( 'switch_theme', array( $this, 'ffc_theme_deactivate'), 10 , 2);
 
 		// Add any update action to send stats
 		add_action( 'upgrader_process_complete', function () {	do_action('fruitful_send_stats'); } );
@@ -54,7 +46,6 @@ class ffc_fruitful_stats
 
 		// Load classes
 		$this->_dispatch();
-
 	}
 
 	/**
@@ -63,11 +54,11 @@ class ffc_fruitful_stats
 	 **/
 	private function _dispatch() {
 
-		$this->controller = new stdClass();
+		$controller = new stdClass();
 
 		// Controller for modal notification
 		require_once __DIR__ . '/send-statistics-modal.php';
-		$this->controller->modal = new ffc_fruitful_stats_modal();
+		$controller->modal = new ffc_fruitful_stats_modal();
 	}
 
 	/**
@@ -93,6 +84,8 @@ class ffc_fruitful_stats
 
 	/**
 	 * Function returns statistic info array
+	 *
+	 * @param bool $is_theme
 	 *
 	 * @return array
 	 */
@@ -124,6 +117,8 @@ class ffc_fruitful_stats
 			}
 		}
 
+		$plugin_data = [];
+
 		if( $is_theme ) {
 			$basic_params = [
 				'product_name' => $theme_info->get( 'Name' ),
@@ -134,7 +129,7 @@ class ffc_fruitful_stats
 			$path = plugin_dir_path( __FILE__ ).'/../fruitfultheme.php';
 
 			if( !function_exists('get_plugin_data') ){
-				require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+				require_once ABSPATH . 'wp-admin/includes/plugin.php';
 			}
 
 			$plugin_data = get_plugin_data( $path );
@@ -232,8 +227,8 @@ class ffc_fruitful_stats
 			) {
 				$ffc_statistics_option = get_option('ffc_statistics_option');
 
-				$ffc_statistics_option['ffc_statistic'] = ($value['ffc_statistic'] == "on") ? "1" : "0";
-				$ffc_statistics_option['ffc_subscribe'] = ($value['ffc_subscribe'] == "on") ? "1" : "0";
+				$ffc_statistics_option['ffc_statistic'] = ( $value['ffc_statistic'] == 'on' ) ? '1' : '0';
+				$ffc_statistics_option['ffc_subscribe'] = ( $value['ffc_subscribe'] == 'on' ) ? '1' : '0';
 				$ffc_statistics_option['ffc_subscribe_email'] = $value['ffc_subscribe_email'];
 				$ffc_statistics_option['ffc_subscribe_name'] = $value['ffc_subscribe_name'];
 
