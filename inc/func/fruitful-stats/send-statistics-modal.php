@@ -39,6 +39,7 @@ class ffc_fruitful_stats_modal
 	public function ffc_shortcodes_admin_notice() {
 
 		$ffc_statistics_option = get_option('ffc_statistics_option');
+		$first_init = (int) get_option('fruitfultheme_stat_first_init');
 
 		//Checking is set ffc statistic option and showing modal notification if is not set
 		if( !$ffc_statistics_option ) {
@@ -56,7 +57,7 @@ class ffc_fruitful_stats_modal
 					}
 				}
 				// Update fruitful theme settings options if ffc statistic option set and this is first theme init
-				elseif(get_option('fruitfultheme_stat_first_init')!==  1)
+				elseif( $first_init !==  1)
 				{
 					do_action('fruitful_stats_settings_update');
 					update_option('fruitfultheme_stat_first_init', 1);
