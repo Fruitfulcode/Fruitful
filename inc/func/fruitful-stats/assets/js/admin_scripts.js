@@ -72,38 +72,41 @@
 
 		});
 
-		modalForm.addEventListener('submit', function (e) {
+		if(typeof modalForm !== 'undefined') {
+			if (modalForm !== null ) {
+				modalForm.addEventListener('submit', function (e) {
 
-			e.preventDefault();
+					e.preventDefault();
 
-			var __notificationText = modalForm.querySelector('.frtfl-modal__content');
+					var __notificationText = modalForm.querySelector('.frtfl-modal__content');
 
-			var data = {
-				action: "fruitfultheme_submit_modal",
-				type: "json",
-				data: modalData
-			};
+					var data = {
+						action: "fruitfultheme_submit_modal",
+						type: "json",
+						data: modalData
+					};
 
-			jQuery.post(ajaxurl, data, function (response) {
-				var __title, __statMsg, __subscrMsg, __errMsg, __errDescr;
-				if (response.status === 'success'){
-					__title = "<h2>" + response.title + "</h2>";
-					__statMsg = "<p>" + response.stat_msg + "</p>";
-					__subscrMsg = "<p>" + response.subscr_msg + "</p>";
-					__errMsg = '';
-					__errDescr = '';
-				} else {
-					__title = '';
-					__statMsg = '';
-					__subscrMsg = '';
-					__errMsg = "<p>" + response.error_message + "</p>";
-					__errDescr = "<p>" + response.error_description + "</p>";
-				}
-				__notificationText.innerHTML = __title + __statMsg + __subscrMsg + __errMsg + __errDescr;
-			});
+					jQuery.post(ajaxurl, data, function (response) {
+						var __title, __statMsg, __subscrMsg, __errMsg, __errDescr;
+						if (response.status === 'success') {
+							__title = "<h2>" + response.title + "</h2>";
+							__statMsg = "<p>" + response.stat_msg + "</p>";
+							__subscrMsg = "<p>" + response.subscr_msg + "</p>";
+							__errMsg = '';
+							__errDescr = '';
+						} else {
+							__title = '';
+							__statMsg = '';
+							__subscrMsg = '';
+							__errMsg = "<p>" + response.error_message + "</p>";
+							__errDescr = "<p>" + response.error_description + "</p>";
+						}
+						__notificationText.innerHTML = __title + __statMsg + __subscrMsg + __errMsg + __errDescr;
+					});
 
-		});
-
+				});
+			}
+		}
 	});
 }());
 
