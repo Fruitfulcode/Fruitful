@@ -114,18 +114,28 @@ jQuery(document).ready(function() {
 	return false;	
 	});				
 	
-	jQuery('#form-admin-fruitful').submit(function() {	       
-		var data = jQuery(this).serialize();	       
-		jQuery.post(ajaxurl, data, function(response) {				
-			var vRes = parseInt(jQuery.trim(response));				   				
-			 if(vRes == 1) {	               
-				show_message(1);	               
-				t = setTimeout('fade_message()', 2000);	            
-			 } else {
-				show_message(2);	               
-				t = setTimeout('fade_message()', 2000);	            
-			 }	        
-		});	        
+	jQuery('#form-admin-fruitful').submit(function() {
+
+		var fields = check_requirements_stat_fields();
+
+		if ( fields == true ) {
+
+			var data = jQuery(this).serialize();
+			jQuery.post(ajaxurl, data, function(response) {
+				var vRes = parseInt(jQuery.trim(response));
+				 if(vRes == 1) {
+					show_message(1);
+					t = setTimeout('fade_message()', 2000);
+				 } else {
+					show_message(2);
+					t = setTimeout('fade_message()', 2000);
+				 }
+			});
+		}
+		else{
+			show_message(3, fields);
+			t = setTimeout('fade_message()', 2000);
+		}
 	return false;	
 	});				
 	
@@ -209,12 +219,80 @@ jQuery(document).ready(function() {
 			}
 		});
 	}
-	
+
 });
 
-function show_message(n) {	
-	if(n == 1) { jQuery('.save-options').html('<div class="icon-sc"></div><div class="message-text">Options saved</div>').show();  }  
-	else 	   { jQuery('.save-options').html('<div class="icon-al"></div><div class="message-text">Nothing new to save</div>').show();  }	
+//Tweaks subscribe to newsletters on theme options page
+document.addEventListener('DOMContentLoaded', function () {
+	var subscribeToNewsCheckbox = document.getElementById('ffc_subscribe');
+	if (typeof subscribeToNewsCheckbox === 'undefined' || subscribeToNewsCheckbox === null){
+		return;
+	}
+
+	var subscribeNameInput = document.getElementById('ffc_subscribe_name');
+	var subscribeEmailInput = document.getElementById('ffc_subscribe_email');
+
+	var nameRow = subscribeNameInput.closest('.settings-form-row');
+	var emailRow = subscribeEmailInput.closest('.settings-form-row');
+
+
+	if (subscribeToNewsCheckbox.checked){
+		nameRow.classList.remove('hidden');
+		emailRow.classList.remove('hidden');
+	} else {
+		nameRow.classList.add('hidden');
+		emailRow.classList.add('hidden');
+	}
+
+	subscribeToNewsCheckbox.addEventListener('click', function () {
+		nameRow.classList.toggle('hidden');
+		emailRow.classList.toggle('hidden');
+	})
+});
+
+function validateEmail(email) {
+	var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	return re.test(email);
+}
+
+function check_requirements_stat_fields() {
+	var subscribeNameInput = document.getElementById('ffc_subscribe_name');
+	var subscribeEmailInput = document.getElementById('ffc_subscribe_email');
+	var subscribeToNewsCheckbox = document.getElementById('ffc_subscribe');
+
+	if (subscribeToNewsCheckbox.checked){
+		var name = subscribeNameInput.value;
+		var email = subscribeEmailInput.value;
+		var message = '';
+		if(name.length < 1 ){
+			message += 'Name<br/>'
+		}
+		if(validateEmail(email) == false ){
+			message += 'E-mail<br/>'
+		}
+		if(message==''){
+			return true;
+		}
+		else {
+			return message;
+		}
+	}
+	else {
+		return true;
+	}
+}
+
+function show_message(n, fields) {
+	switch (n) {
+		case 3:
+			jQuery('.save-options').html('<div class="icon-al"></div><div class="message-text">Please fill out all required fields:<br/>' + fields + '</div>').show();
+			break;
+		case 1:
+			jQuery('.save-options').html('<div class="icon-sc"></div><div class="message-text">Options saved</div>').show();
+			break;
+		default:
+			jQuery('.save-options').html('<div class="icon-al"></div><div class="message-text">Nothing new to save</div>').show();
+	}
 }
 
 function fade_message() {	

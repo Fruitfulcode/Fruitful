@@ -2107,12 +2107,7 @@ function fruitful_frontend_scripts_include_lightbox() {
 }
 
 if (is_admin()) {
-	/**
-	 * activation hook
-	 */
+	// Fruitful statistics
 	require get_template_directory() . '/inc/func/fruitful-stats/send-statistics.php';
-	/**
-	 * modal form for request to sending statistics
-	 */
-	require get_template_directory() . '/inc/func/fruitful-stats/send-statistics-modal.php';
+	$ffc_stat = new ffc_fruitful_stats();
 }
