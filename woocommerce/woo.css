@@ -946,6 +946,7 @@ body.woocommerce-account table tbody tr:nth-child(even) td{color:initial}
 
 .woocommerce-cart.woocommerce-page #content table.shop_table.cart tbody tr:last-child td{padding:5px;}
 .woocommerce-cart.woocommerce-page #content table td.actions input.button,
+.woocommerce-cart.woocommerce-page #content table td.actions button.button,
 .woocommerce-cart.woocommerce-page #content table td.actions input.button:hover{float:right;margin:5px 10px 5px 5px;}
 
 .woocommerce-cart.woocommerce-page #content table td{text-align:center;border-top:0px}
