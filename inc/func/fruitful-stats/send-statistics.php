@@ -27,7 +27,7 @@ class FruitfulStatistic
 		add_action( 'admin_footer', array( $this, 'init_stats_option') );
 		
 		
-		// Add general action hook for fruitful products to send stat
+		// Add general action hook for fruitful PRODUCT to send stat
 		// --------------------------------------------------------------
 		add_action( 'fruitful_send_stats', array( $this, 'send_stats') );
 		
@@ -41,7 +41,7 @@ class FruitfulStatistic
 		} );
 		
 		
-		// Add general action hook for sync fruitful products options by ffc_statistics_option change
+		// Add general action hook for sync fruitful PRODUCT options by ffc_statistics_option change
 		// ----------------------------------------------------------------------------------
 		add_action( 'product_stats_settings_update', array( $this, 'product_stats_settings_update' ) );
 		
