@@ -1,4 +1,4 @@
-(function () {
+;(function () {
 	"use strict";
 
 	// 	Allow Subscribe for news
@@ -19,11 +19,7 @@
 
 			//Statistics checkbox event. If checked value=1
 			if (e.target === statsInput) {
-				if(statsInput.checked) {
-					statsInput.value=1;
-				} else {
-					statsInput.value=0;
-				}
+				statsInput.value = statsInput.checked ?  1 : 0;
 			}
 
 			//Subscribe checkbox event. If checked show additional inputs If checked value=1
@@ -37,11 +33,8 @@
 					userInfoContainer.querySelector('input[type="text"]').removeAttribute('disabled');
 				}
 
-				if(subscribeInput.checked) {
-					subscribeInput.value=1;
-				} else {
-					subscribeInput.value=0;
-				}
+				subscribeInput.value = subscribeInput.checked ?  1 : 0;
+
 			}
 
 			// Subscribe to newsletter click event - create modalData

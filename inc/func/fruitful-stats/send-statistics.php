@@ -13,72 +13,103 @@
  * @license    https://opensource.org/licenses/OSL-3.0
  */
 
-class ffc_fruitful_stats
+class FruitfulStatistic
 {
+	
+	public $controller;
+	
 	/**
 	 * Constructor
 	 **/
 	public function __construct()
 	{
+		// INIT LOGIC
+		add_action( 'admin_footer', array( $this, 'init_stats_option') );
+		
+		
 		// Add general action hook for fruitful products to send stat
-		add_action( 'fruitful_send_stats', array( $this, 'ffc_send_stats') );
-
-		// Add theme activate action to send stat
-		add_action( 'after_switch_theme', function () {	do_action('fruitful_send_stats'); } );
-
-		// Add theme deactivation hook to clear option first theme init
-		add_action('switch_theme', array( $this, 'ffc_theme_deactivate'), 10 , 2);
-
-		// Add any update action to send stats
-		add_action( 'upgrader_process_complete', function () {	do_action('fruitful_send_stats'); } );
-
-		// Add update general ffc statistics option action to change "fruitful" theme settings option
-		add_action( 'update_option_ffc_statistics_option', function () { do_action('fruitful_stats_settings_update'); } );
-
-		// Add general action hook for fruitful products on ffc statistics option change
-		add_action( 'fruitful_stats_settings_update', array( $this, 'ffc_theme_fruitful_stats_settings_update' ) );
-
-		// Add update "fruitful" theme settings option action to change general ffc statistics option
-		add_filter( 'pre_update_option_fruitful_theme_options', array( $this, 'ffc_fruitful_send_stats_on_save') , 10, 3 );
-
-		// Add first init action
-		add_action( 'init', array( $this, 'ffc_check_stats') , 999 );
-
-		// Load classes
+		// --------------------------------------------------------------
+		add_action( 'fruitful_send_stats', array( $this, 'send_stats') );
+		
+		// SENDING STATS by ffc_statistics_option changes
+		add_action( 'add_option_ffc_statistics_option', function () {
+			do_action('fruitful_send_stats');
+		} );
+		
+		add_action( 'update_option_ffc_statistics_option', function () {
+			do_action('fruitful_send_stats');
+		} );
+		
+		
+		// Add general action hook for sync fruitful products options by ffc_statistics_option change
+		// ----------------------------------------------------------------------------------
+		add_action( 'product_stats_settings_update', array( $this, 'product_stats_settings_update' ) );
+		
+		// Sync PRODUCT options by ffc_statistics_option(pre_update_option_{$option})(add|update_option_{$option})
+		add_action( 'add_option_ffc_statistics_option', function () {
+			do_action('product_stats_settings_update'); } );
+		
+		add_action( 'update_option_ffc_statistics_option', function () {
+			do_action('product_stats_settings_update'); } );
+		
+		
+		// Sync ffc_statistics_option by PRODUCT options(pre_update_option_{$option})
+		// ----------------------------------------------------------------------------
+		add_filter( 'pre_update_option_fruitful_theme_options', array( $this, 'sync_general_stats_option') , 10, 3 );
+		
+		
+		// Add any update THEME\PLUGIN action to send stats
+		// ------------------------------------------------
+		add_action( 'upgrader_process_complete', function () {
+			do_action('fruitful_send_stats');
+		} );
+		
+		
+		// Add sending stats periodically  by transient
+		// ------------------------------------------------
+		add_action( 'admin_footer', array( $this, 'check_stats') , 999 );
+		
+		
+		// Load additional classes
+		// ------------------------------------------------
 		$this->_dispatch();
 	}
 
 	/**
 	 * Load and instantiate all application
-	 * classes neccessary for ffc statistics
+	 * classes necessary for ffc statistics
 	 **/
 	private function _dispatch() {
-
-		$controller = new stdClass();
+		
+		$this->controller = new stdClass();
 
 		// Controller for modal notification
 		require_once __DIR__ . '/send-statistics-modal.php';
-		$controller->modal = new ffc_fruitful_stats_modal();
+		$this->controller->modal = new FruitfulStatisticModal();
 	}
 
 	/**
 	 * Function sends request to our server
 	 */
-	public function ffc_send_stats() {
+	public function send_stats() {
 
-		$pararms = $this->ffc_get_stats_info_array();
-
-		if ( ! empty( $pararms ) ) {
+		$params = $this->get_stats_info_array();
+		
+		if ( ! empty( $params ) ) {
 
 			$host = 'https://app.fruitfulcode.com/';
 			$uri  = 'api/product/statistics';
 
-			wp_remote_post( $host . $uri, array(
+			$success = wp_remote_post( $host . $uri, array(
 				'method'    => 'POST',
 				'sslverify' => true,
-				'timeout'   => 30,
-				'body'      => $pararms
+				'timeout'   => 20,
+				'blocking'  => false,
+				'body'      => $params
 			) );
+			
+			
+			return is_wp_error( $success ) ? false : true;
 		}
 	}
 
@@ -89,7 +120,7 @@ class ffc_fruitful_stats
 	 *
 	 * @return array
 	 */
-	public function ffc_get_stats_info_array ($is_theme = true) {
+	public function get_stats_info_array ($is_theme = true) {
 		$ffc_statistic = $ffc_subscribe = $ffc_email = $ffc_name = '';
 
 		/** General statistics option for all fruitfulcode products */
@@ -111,7 +142,7 @@ class ffc_fruitful_stats
 			}
 		}
 
-		return $this->ffc_build_stats_info_array ($ffc_statistic, $ffc_subscribe, $ffc_email, $ffc_name, $is_theme);
+		return $this->build_stats_info_array ($ffc_statistic, $ffc_subscribe, $ffc_email, $ffc_name, $is_theme);
 	}
 
 	/**
@@ -125,41 +156,49 @@ class ffc_fruitful_stats
 	 *
 	 * @return array
 	 */
-	public function ffc_build_stats_info_array($ffc_statistic, $ffc_subscribe, $ffc_email, $ffc_name, $is_theme = true) {
+	public function build_stats_info_array($ffc_statistic, $ffc_subscribe, $ffc_email, $ffc_name, $is_theme = true) {
 
 		/** @var string $wp_version version of installed wordpress instance */
 		global $wp_version;
 		/** @var WP_Theme $theme_info */
 		$theme_info = wp_get_theme();
-
-		$plugin_data = [];
-
+		
+		$all_info    = array();
+		$basic_info  = array();
+		$stat_info   = array();
+		$user_info   = array();
+		$plugin_data = array();
+		
+		
+		// basic_info
+		
 		if( $is_theme ) {
-			$basic_params = [
+			$basic_info = [
 				'product_name' => $theme_info->get( 'Name' ),
 				'domain'       => site_url(),
 			];
 		}
-		else {
-			$path = plugin_dir_path( __FILE__ ).'/../fruitfultheme.php';
+		else { // this block for plugins only
+			$path = plugin_dir_path( __FILE__ ).'/../fruitfultheme.php'; // change this filename for plugin
 
-			if( !function_exists('get_plugin_data') ){
+			if( !function_exists('get_plugin_data') ) {
 				require_once ABSPATH . 'wp-admin/includes/plugin.php';
 			}
 
 			$plugin_data = get_plugin_data( $path );
-			$basic_params = [
+			$basic_info = [
 				'product_name' => $plugin_data['Name'],
 				'domain'       => site_url(),
 			];
 		}
-		$site_info  = array();
-		$stats_info = array();
-
+		
+		
+		// user_info
+		
 		if ( $ffc_subscribe === 1 ) {
 
-			$client_email = $ffc_email;
-			$client_name  = $ffc_name;
+			$client_email = sanitize_email($ffc_email);
+			$client_name  = sanitize_text_field($ffc_name);
 
 			$user_info = array(
 				'client_name' => $client_name,
@@ -168,15 +207,18 @@ class ffc_fruitful_stats
 
 		} else {
 			$user_info = array(
-				'client_name' => 'deleted',
-				'email'       => 'deleted',
+				'client_name' => 'empty',
+				'email'       => 'empty',
 			);
 		}
-
+		
+		
+		// stat_info
+		
 		if ( $ffc_statistic === 1 ) {
 			if($is_theme)
 			{
-				$site_info = array(
+				$stat_info = array(
 					'site_name'    => get_option( 'blogname' ),
 					'php'          => PHP_VERSION,
 					'product_ver'  => $theme_info->get( 'Version' ),
@@ -187,7 +229,7 @@ class ffc_fruitful_stats
 					) )
 				);
 			} else {
-				$site_info = array(
+				$stat_info = array(
 					'site_name'    => get_option( 'blogname' ),
 					'php'          => PHP_VERSION,
 					'product_ver'  => $plugin_data['Version'],
@@ -199,18 +241,20 @@ class ffc_fruitful_stats
 				);
 			}
 		}
-
-		if ( ! empty( $user_info ) || ! empty( $site_info ) ) {
-			$stats_info = array_merge( $basic_params, $user_info, $site_info );
+		
+		// all_info
+		
+		if ( $ffc_subscribe === 1 || $ffc_statistic === 1 ) {
+			$all_info = array_merge( $basic_info, $user_info, $stat_info );
 		}
 
-		return $stats_info;
+		return $all_info;
 	}
 
 	/**
 	 * Function send statistics on first theme init
 	 */
-	public function ffc_check_stats() {
+	public function check_stats() {
 
 		$ffc_fruitfultheme_stat_sent = get_transient( 'ffc_fruitfultheme_stat_sent' );
 
@@ -221,43 +265,47 @@ class ffc_fruitful_stats
 	}
 
 	/**
-	 * Function update general ffc statistics options on save theme customizer option
+	 * Function update general ffc_statistics_option on save theme PRODUCT options
 	 *
 	 * @param $value
 	 * @param $old_value
 	 *
 	 * @return mixed
 	 */
-	public function ffc_fruitful_send_stats_on_save( $value, $old_value ) {
+	public function sync_general_stats_option( $value, $old_value ) {
 
-		if( !empty($value['ffc_subscribe']) && !empty($old_value['ffc_subscribe']) &&
-			!empty($value['ffc_subscribe_name']) && !empty($old_value['ffc_subscribe_name']) &&
-			!empty($value['ffc_subscribe_email']) && !empty($old_value['ffc_subscribe_email']) &&
-			!empty($value['ffc_statistic']) && !empty($old_value['ffc_statistic']) ) {
-
-			if ($value['ffc_subscribe'] !== $old_value['ffc_subscribe'] ||
-				$value['ffc_subscribe_name'] !== $old_value['ffc_subscribe_name'] ||
-				$value['ffc_subscribe_email'] !== $old_value['ffc_subscribe_email'] ||
-				$value['ffc_statistic'] !== $old_value['ffc_statistic']
-			) {
-				$ffc_statistics_option = get_option('ffc_statistics_option');
-
-				$ffc_statistics_option['ffc_statistic'] = ($value['ffc_statistic'] === 'on') ? 1 : 0;
-				$ffc_statistics_option['ffc_subscribe'] = ($value['ffc_subscribe'] === 'on') ? 1 : 0;
-				$ffc_statistics_option['ffc_subscribe_email'] = $value['ffc_subscribe_email'];
-				$ffc_statistics_option['ffc_subscribe_name'] = $value['ffc_subscribe_name'];
-
-				update_option('ffc_statistics_option', $ffc_statistics_option);
-				do_action('fruitful_send_stats');
-			}
+		
+		if( !isset($value['ffc_subscribe']) && !isset($old_value['ffc_subscribe']) &&
+			!isset($value['ffc_subscribe_name']) && !isset($old_value['ffc_subscribe_name']) &&
+			!isset($value['ffc_subscribe_email']) && !isset($old_value['ffc_subscribe_email']) &&
+			!isset($value['ffc_statistic']) && !isset($old_value['ffc_statistic']) ) {
+			
+			return $value;
 		}
+
+		if ($value['ffc_subscribe'] !== $old_value['ffc_subscribe'] ||
+			$value['ffc_subscribe_name'] !== $old_value['ffc_subscribe_name'] ||
+			$value['ffc_subscribe_email'] !== $old_value['ffc_subscribe_email'] ||
+			$value['ffc_statistic'] !== $old_value['ffc_statistic']
+		) {
+			$ffc_statistics_option = get_option('ffc_statistics_option');
+
+			$ffc_statistics_option['ffc_statistic'] = ($value['ffc_statistic'] === 'on') ? 1 : 0;
+			$ffc_statistics_option['ffc_subscribe'] = ($value['ffc_subscribe'] === 'on') ? 1 : 0;
+			$ffc_statistics_option['ffc_subscribe_email'] = sanitize_email($value['ffc_subscribe_email']);
+			$ffc_statistics_option['ffc_subscribe_name']  = sanitize_text_field($value['ffc_subscribe_name']);
+			
+			update_option('ffc_statistics_option', $ffc_statistics_option);
+		}
+		
 		return $value;
 	}
 
 	/**
 	 * Function update fruitful theme customizer option from general ffc statistic option
+	 * (individual for each product)
 	 */
-	public function ffc_theme_fruitful_stats_settings_update() {
+	public function product_stats_settings_update() {
 
 		$ffc_statistics_option = get_option('ffc_statistics_option');
 		$options = fruitful_get_theme_options();
@@ -277,27 +325,36 @@ class ffc_fruitful_stats
 			}
 
 			if( isset($ffc_statistics_option['ffc_subscribe_name']) ) {
-				$options['ffc_subscribe_name'] = $ffc_statistics_option['ffc_subscribe_name'];
+				$options['ffc_subscribe_name'] = sanitize_text_field($ffc_statistics_option['ffc_subscribe_name']);
 			} else {
 				$options['ffc_subscribe_name'] = '';
 			}
 
 			if( isset($ffc_statistics_option['ffc_subscribe_email']) ) {
-				$options['ffc_subscribe_email'] = $ffc_statistics_option['ffc_subscribe_email'];
+				$options['ffc_subscribe_email'] = sanitize_email($ffc_statistics_option['ffc_subscribe_email']);
 			} else {
 				$options['ffc_subscribe_email'] = '';
 			}
 
 			update_option('fruitful_theme_options', $options);
-			do_action('fruitful_send_stats');
 		}
 	}
-
-	/**
-	 * Function clearing first theme init option
-	 */
-	public function ffc_theme_deactivate () {
-		update_option('fruitfultheme_stat_first_init', 0);
+	
+	
+	public function init_stats_option () {
+		
+		$ffc_statistics_option = get_option('ffc_statistics_option');
+		
+		if ( ! empty($ffc_statistics_option) ) {
+			return;
+		}
+		
+		$ffc_statistics_option = array();
+		$ffc_statistics_option['ffc_statistic'] = 1;
+		$ffc_statistics_option['ffc_subscribe'] = 0;
+		
+		update_option('ffc_statistics_option', $ffc_statistics_option);
 	}
+	
 }
 
