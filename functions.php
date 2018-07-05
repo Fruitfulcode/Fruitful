@@ -2109,5 +2109,7 @@ function fruitful_frontend_scripts_include_lightbox() {
 if (is_admin()) {
 	// Fruitful statistics
 	require get_template_directory() . '/inc/func/fruitful-stats/send-statistics.php';
-	$FruitfulStatistic = new FruitfulStatistic();
+	
+	$FFStats = new FFStats( __FILE__ );
+	$FFStats->dispatch();
 }
