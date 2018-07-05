@@ -88,8 +88,8 @@ class FruitfulStatisticModal
 					'title'             => esc_html__( 'Thank you!', 'fruitful' ),
 					'error_message'     => '',
 					'error_description' => '',
-					'stat_msg'          => esc_html__( 'Thank you for being supportive, we appreciate your understanding and assistance!', 'fruitful' ),
-					'subscr_msg'        => $ffc_statistics_option['ffc_subscribe'] === 1 ? __( "Don't forget to check your inbox for our latest letter - you’d like that!", 'fruitful' ) : ''
+					'stat_msg'          => $ffc_statistics_option['ffc_statistic'] === 1 ? esc_html__( 'Thank you for being supportive, we appreciate your understanding and assistance!', 'fruitful' ) : '',
+					'subscr_msg'        => $ffc_statistics_option['ffc_subscribe'] === 1 ? esc_html__( 'Don\'t forget to check your inbox for our latest letter - you’d like that!', 'fruitful' ) : '',
 				);
 			} else {
 				$response = array(
