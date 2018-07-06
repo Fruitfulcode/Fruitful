@@ -17,9 +17,6 @@ if ( !class_exists('FruitfulStatisticModal')) {
 			// Add action to enqueue modal notification scripts
 			add_action( 'admin_enqueue_scripts', array( $this, 'add_admin_scripts' ) );
 			
-			// Add action to show modal notification
-			add_action( 'admin_footer', array( $this, 'admin_show_modal' ), 5 );
-			
 			// Add action on submit modal notification
 			add_action( 'wp_ajax_fruitfultheme_submit_modal', array( $this, 'submit_modal' ) );
 			
@@ -48,13 +45,9 @@ if ( !class_exists('FruitfulStatisticModal')) {
 		 */
 		public function admin_show_modal() {
 			
-			$ffc_statistics_option = get_option( 'ffc_statistics_option' );
+		
+			require $this->_super->stats_path . 'fruitful-stats/view/send-statistics-modal-view.php';
 			
-			//Checking is set ffc statistic option
-			if ( ! $ffc_statistics_option && !$this->_super->isModalShowed() ) {
-				$this->_super->setModalShowed();
-				require $this->_super->stats_path . 'fruitful-stats/view/send-statistics-modal-view.php';
-			}
 		}
 		
 		/**

@@ -32,7 +32,7 @@ if ( !class_exists('FruitfulStatistic')) {
 		
 		public $root_file;
 		
-		public static $modal_showed = false;
+
 		
 		/**
 		 * Constructor
@@ -339,6 +339,8 @@ if ( !class_exists('FruitfulStatistic')) {
 			if ( ! empty( $ffc_statistics_option ) ) {
 				return;
 			}
+			
+			$this->controller->modal->admin_show_modal();
 			
 			$ffc_statistics_option                  = array();
 			$ffc_statistics_option['ffc_statistic'] = 1;
