@@ -65,9 +65,9 @@ if ( !class_exists('FruitfulStatisticModal')) {
 			
 			$response = array(
 				'status'            => 'failed',
-				'title'             => esc_html__( 'Uh oh!', 'dr-plastic-surgery' ),
-				'error_message'     => esc_html__( 'Sorry, something went wrong, and we failed to receive the shared data from you.', 'dr-plastic-surgery' ),
-				'error_description' => esc_html__( 'No worries; go to the theme option to enter the required data manually and save changes.', 'dr-plastic-surgery' ),
+				'title'             => esc_html__( 'Uh oh!', 'fruitful-stats' ),
+				'error_message'     => esc_html__( 'Sorry, something went wrong, and we failed to receive the shared data from you.', 'fruitful-stats' ),
+				'error_description' => esc_html__( 'No worries; go to the theme option to enter the required data manually and save changes.', 'fruitful-stats' ),
 				'stat_msg'          => '',
 				'subscr_msg'        => ''
 			);
@@ -92,20 +92,20 @@ if ( !class_exists('FruitfulStatisticModal')) {
 				if ( $ffc_statistics_option['ffc_statistic'] === 1 || $ffc_statistics_option['ffc_subscribe'] === 1 ) {
 					$response = array(
 						'status'            => 'success',
-						'title'             => esc_html__( 'Thank you!', 'dr-plastic-surgery' ),
+						'title'             => esc_html__( 'Thank you!', 'fruitful-stats' ),
 						'error_message'     => '',
 						'error_description' => '',
-						'stat_msg'          => $ffc_statistics_option['ffc_statistic'] === 1 ? esc_html__( 'Thank you for being supportive, we appreciate your understanding and assistance!', 'dr-plastic-surgery' ) : '',
-						'subscr_msg'        => $ffc_statistics_option['ffc_subscribe'] === 1 ? esc_html__( 'Don\'t forget to check your inbox for our latest letter - you’d like that!', 'dr-plastic-surgery' ) : '',
+						'stat_msg'          => $ffc_statistics_option['ffc_statistic'] === 1 ? esc_html__( 'Thank you for being supportive, we appreciate your understanding and assistance!', 'fruitful-stats' ) : '',
+						'subscr_msg'        => $ffc_statistics_option['ffc_subscribe'] === 1 ? esc_html__( 'Don\'t forget to check your inbox for our latest letter - you’d like that!', 'fruitful-stats' ) : '',
 					);
 				} else {
 					$response = array(
 						'status'            => 'success',
-						'title'             => esc_html__( 'What a pity!', 'dr-plastic-surgery' ),
+						'title'             => esc_html__( 'What a pity!', 'fruitful-stats' ),
 						'error_message'     => '',
 						'error_description' => '',
-						'stat_msg'          => esc_html__( 'We wish you could have shared your site statistic and joined our community.', 'dr-plastic-surgery' ),
-						'subscr_msg'        => esc_html__( 'But if you ever change your mind, you can always do that in the theme options.', 'dr-plastic-surgery' )
+						'stat_msg'          => esc_html__( 'We wish you could have shared your site statistic and joined our community.', 'fruitful-stats' ),
+						'subscr_msg'        => esc_html__( 'But if you ever change your mind, you can always do that in the theme options.', 'fruitful-stats' )
 					);
 				}
 			}

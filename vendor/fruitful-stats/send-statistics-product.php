@@ -1,27 +1,16 @@
 <?php
 
-class FFStats extends FruitfulStatistic {
+class FruitfulShortcodes_Stats extends FruitfulStatistic {
 	
-	public $product_type = 'theme';
+	public $product_type = 'plugin';
 	
-	
-	
-    public $product_option_name = 'fruitful_theme_options';
+    public $product_option_name = 'fruitful-shortcodes';
     
-    
-    
-    
-	
-	
 	/**
 	 * Constructor
 	 **/
 	public function __construct( $root_file ) {
 		parent::__construct( $root_file );
-		
-		$this->stats_path = get_template_directory() . '/inc/func/';
-		
-		$this->stats_uri = get_template_directory_uri() . '/inc/func/';
 	}
     
     /**

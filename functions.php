@@ -2108,8 +2108,8 @@ function fruitful_frontend_scripts_include_lightbox() {
 
 if (is_admin()) {
 	// Fruitful statistics
-	require get_template_directory() . '/inc/func/fruitful-stats/send-statistics.php';
+	require get_template_directory() . '/vendor/fruitful-stats/send-statistics.php';
 	
-	$FFStats = new FFStats( __FILE__ );
-	$FFStats->dispatch();
+	$FruitfulTheme_Stats = new FruitfulTheme_Stats( __FILE__ );
+	$FruitfulTheme_Stats->dispatch();
 }

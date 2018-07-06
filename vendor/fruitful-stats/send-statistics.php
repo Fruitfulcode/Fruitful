@@ -5,7 +5,7 @@
  * PHP version 5.4
  *
  * @category   Fruitful
- * @package    Fruitful
+ * @package    Fruitful Stats
  * @author     Fruitful code <support@fruitfulcode.com>
  * @copyright  2018 Fruitful code
  * @version    1.0
@@ -38,6 +38,14 @@ if ( !class_exists('FruitfulStatistic')) {
 		public function __construct( $root_file ) {
 			
 			$this->root_file = $root_file;
+			
+			if ( $this->product_type == 'theme' ) {
+				$this->stats_path = get_template_directory() . '/vendor/';
+				$this->stats_uri = get_template_directory_uri() . '/vendor/';
+			} else {
+				$this->stats_path = plugin_dir_path( $this->root_file ) . '/vendor/';
+				$this->stats_uri = plugin_dir_url( $this->root_file )  . '/vendor/';
+			}
 			
 			// INIT LOGIC
 			add_action( 'admin_footer', array( $this, 'init_stats_option' ) );
