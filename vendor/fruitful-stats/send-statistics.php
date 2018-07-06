@@ -349,15 +349,6 @@ if ( !class_exists('FruitfulStatistic')) {
 			update_option( 'ffc_statistics_option', $ffc_statistics_option );
 		}
 		
-		public function isModalShowed() {
-			return self::$modal_showed;
-		}
-		
-		public function setModalShowed() {
-			self::$modal_showed = true;
-		}
-		
-		
 		/**
 		 * Function update fruitful theme customizer option from general ffc statistic option
 		 * (individual for each product)
