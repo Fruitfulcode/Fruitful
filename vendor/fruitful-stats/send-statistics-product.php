@@ -1,10 +1,10 @@
 <?php
 
-class FruitfulShortcodes_Stats extends FruitfulStatistic {
+class FruitfulTheme_Stats extends FruitfulStatistic {
 	
-	public $product_type = 'plugin';
+	public $product_type = 'theme';
 	
-    public $product_option_name = 'fruitful-shortcodes';
+    public $product_option_name = 'fruitful_theme_options';
     
 	/**
 	 * Constructor
