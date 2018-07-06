@@ -51,7 +51,8 @@ if ( !class_exists('FruitfulStatisticModal')) {
 			$ffc_statistics_option = get_option( 'ffc_statistics_option' );
 			
 			//Checking is set ffc statistic option
-			if ( ! $ffc_statistics_option ) {
+			if ( ! $ffc_statistics_option && !$this->_super->isModalShowed() ) {
+				$this->_super->setModalShowed();
 				require $this->_super->stats_path . 'fruitful-stats/view/send-statistics-modal-view.php';
 			}
 		}

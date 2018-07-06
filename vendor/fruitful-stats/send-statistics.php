@@ -32,6 +32,8 @@ if ( !class_exists('FruitfulStatistic')) {
 		
 		public $root_file;
 		
+		public static $modal_showed = false;
+		
 		/**
 		 * Constructor
 		 **/
@@ -264,7 +266,7 @@ if ( !class_exists('FruitfulStatistic')) {
 								'Version' => $theme_info->get( 'Version' ),
 								'Template' => $theme_info->get( 'Template' ),
 								'Status' => $theme_info->get( 'Status' ),
-								'Tags' => $theme_info->get( 'Tags' ),
+								'Tags' => implode(', ', $theme_info->get( 'Tags' )),
 							)
 						) )
 					);
@@ -344,6 +346,15 @@ if ( !class_exists('FruitfulStatistic')) {
 			
 			update_option( 'ffc_statistics_option', $ffc_statistics_option );
 		}
+		
+		public function isModalShowed() {
+			return self::$modal_showed;
+		}
+		
+		public function setModalShowed() {
+			self::$modal_showed = true;
+		}
+		
 		
 		/**
 		 * Function update fruitful theme customizer option from general ffc statistic option

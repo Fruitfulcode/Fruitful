@@ -52,13 +52,3 @@ class FruitfulTheme_Stats extends FruitfulStatistic {
 		}
 	}
 }
-
-/* usage :  
-
-$optAdapter = new FFStatOptionsAdapter();
-
-$optAdapter->sync_product_options_by_main();
-
-$optAdapter->sync_main_options_by_product();
-
-*/
