@@ -42,11 +42,11 @@ if ( !class_exists('FruitfulStatistic')) {
 			$this->root_file = $root_file;
 			
 			if ( $this->product_type == 'theme' ) {
-				$this->stats_path = get_template_directory() . 'vendor/';
-				$this->stats_uri = get_template_directory_uri() . 'vendor/';
+				$this->stats_path = get_template_directory() . '/vendor/';
+				$this->stats_uri = get_template_directory_uri() . '/vendor/';
 			} else {
-				$this->stats_path = plugin_dir_path( $this->root_file ) . 'vendor/';
-				$this->stats_uri = plugin_dir_url( $this->root_file )  . 'vendor/';
+				$this->stats_path = plugin_dir_path( $this->root_file ) . '/vendor/';
+				$this->stats_uri = plugin_dir_url( $this->root_file )  . '/vendor/';
 			}
 			
 			// INIT LOGIC
@@ -203,13 +203,13 @@ if ( !class_exists('FruitfulStatistic')) {
 			if ( $this->product_type == 'theme' ) {
 				$basic_info = [
 					'product_name' => $theme_info->get( 'Name' ),
-					'domain'       => site_url(),
+					'domain'       => esc_url(site_url()),
 				];
 			} else { // this block for plugins only
 				$plugin_data = get_plugin_data( $this->root_file );
 				$basic_info  = [
 					'product_name' => $plugin_data['Name'],
-					'domain'       => site_url(),
+					'domain'       => esc_url(site_url()),
 				];
 			}
 			
@@ -342,7 +342,7 @@ if ( !class_exists('FruitfulStatistic')) {
 			
 			$this->controller->modal->admin_show_modal();
 			
-			$ffc_statistics_option                  = array();
+			$ffc_statistics_option            = array();
 			$ffc_statistics_option['ffc_statistic'] = 1;
 			$ffc_statistics_option['ffc_subscribe'] = 0;
 			
