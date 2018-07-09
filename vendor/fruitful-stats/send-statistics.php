@@ -45,8 +45,8 @@ if ( !class_exists('FruitfulStatistic')) {
 				$this->stats_path = get_template_directory() . '/vendor/';
 				$this->stats_uri = get_template_directory_uri() . '/vendor/';
 			} else {
-				$this->stats_path = plugin_dir_path( $this->root_file ) . '/vendor/';
-				$this->stats_uri = plugin_dir_url( $this->root_file )  . '/vendor/';
+				$this->stats_path = plugin_dir_path( $this->root_file ) . 'vendor/';
+				$this->stats_uri = plugin_dir_url( $this->root_file )  . 'vendor/';
 			}
 			
 			// INIT LOGIC
