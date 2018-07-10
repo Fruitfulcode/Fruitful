@@ -124,7 +124,6 @@ if ( !class_exists('FruitfulStatistic')) {
 					'blocking'  => false,
 					'body'      => $params
 				) );
-				error_log(print_r($params,true));
 				
 				return is_wp_error( $success ) ? false : true;
 			}
