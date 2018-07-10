@@ -1,16 +1,20 @@
 <?php
 /**
- * Send statistics to system via Curl
+ * Fruitful send techical data libruary
+ *
+ * This libruary send anonymous technical data to app.fruitfulcode.com
+ * Also, if user subscribe to the Fruitful Code newsletters, system send to app.fruitfulcode user Name and Email for the latest updates.
  *
  * PHP version 5.4
  *
  * @category   Fruitful
  * @package    Fruitful Stats
  * @author     Fruitful code <support@fruitfulcode.com>
+ * @link       https://fruitfulcode.com
  * @copyright  2018 Fruitful code
  * @version    1.0
- * @since      3.6.1
- * @license    https://opensource.org/licenses/OSL-3.0
+ * @license    GPL-2.0+
+ * @textdomain fruitful-stats
  */
 
 
@@ -83,6 +87,9 @@ if ( !class_exists('FruitfulStatistic')) {
 			add_action( 'activated_plugin', array( $this, 'send_stats' ) );
 			
 			add_action( 'deactivated_plugin', array( $this, 'send_stats' ) );
+			
+			//Custom action to send stats (need do_action( 'fruitful_send_stats'))
+			add_action( 'fruitful_send_stats', array( $this, 'send_stats' ) );
 		}
 		
 		/**

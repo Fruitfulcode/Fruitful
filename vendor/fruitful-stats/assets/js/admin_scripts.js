@@ -16,6 +16,7 @@
 		var modalData = {};
 
 		modalContainer.addEventListener("click", function (e) {
+
 			//Statistics checkbox event. If checked value=1
 			if (e.target === statsInput) {
 				statsInput.value = statsInput.checked ?  1 : 0;

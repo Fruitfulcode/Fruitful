@@ -85,7 +85,7 @@ if ( !class_exists('FruitfulStatisticModal')) {
 						'error_message'     => '',
 						'error_description' => '',
 						'stat_msg'          => $ffc_statistics_option['ffc_statistic'] === 1 ? esc_html__( 'Thank you for being supportive, we appreciate your understanding and assistance!', 'fruitful-stats' ) : '',
-						'subscr_msg'        => $ffc_statistics_option['ffc_subscribe'] === 1 ? esc_html__( 'Don\'t forget to check your inbox for our latest letter - you’d like that!', 'fruitful-stats' ) : '',
+						'subscr_msg'        => $ffc_statistics_option['ffc_subscribe'] === 1 ? esc_html__( 'Don\'t forget to check your inbox for our latest letter - you’ll like that!', 'fruitful-stats' ) : '',
 					);
 				} else {
 					$response = array(
@@ -93,7 +93,7 @@ if ( !class_exists('FruitfulStatisticModal')) {
 						'title'             => esc_html__( 'What a pity!', 'fruitful-stats' ),
 						'error_message'     => '',
 						'error_description' => '',
-						'stat_msg'          => esc_html__( 'We wish you could have shared your site statistic and joined our community.', 'fruitful-stats' ),
+						'stat_msg'          => esc_html__( 'We wish you could have shared your site anonymous technical data and joined our community.', 'fruitful-stats' ),
 						'subscr_msg'        => esc_html__( 'But if you ever change your mind, you can always do that in the theme options.', 'fruitful-stats' )
 					);
 				}
