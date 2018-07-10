@@ -13,7 +13,7 @@
 					       id="modal-ffc-statistic"
 					       value="1"
 					       checked>
-					<?php _e( 'Send statistics to Fruitful Code', 'fruitful-stats' ) ?>
+					<?php _e( 'Send configuration information to Fruitful Code', 'fruitful-stats' ) ?>
 				</label>
 			</div>
 
