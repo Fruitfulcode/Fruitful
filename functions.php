@@ -2113,3 +2113,4 @@ if (is_admin()) {
 	$FruitfulTheme_Stats = new FruitfulTheme_Stats( __FILE__ );
 	$FruitfulTheme_Stats->dispatch();
 }
+

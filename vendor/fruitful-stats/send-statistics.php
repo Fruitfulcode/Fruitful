@@ -41,6 +41,9 @@ if ( !class_exists('FruitfulStatistic')) {
 			
 			$this->root_file = $root_file;
 			
+			/*
+			* Adding path and urls. Can change in extended class
+			*/
 			if ( $this->product_type == 'theme' ) {
 				$this->stats_path = get_template_directory() . '/vendor/';
 				$this->stats_uri = get_template_directory_uri() . '/vendor/';
@@ -52,58 +55,34 @@ if ( !class_exists('FruitfulStatistic')) {
 			// INIT LOGIC
 			add_action( 'admin_footer', array( $this, 'init_stats_option' ) );
 			
-			
-			// Add general action hook for fruitful PRODUCT to send stat
-			// --------------------------------------------------------------
-			add_action( 'fruitful_send_stats', array( $this, 'send_stats' ) );
-			
-			// SENDING STATS by ffc_statistics_option changes
+			/*
+			* Sync PRODUCT options by ffc_statistics_option (add|update_option_{$option})
+			* And SENDING STATS by ffc_statistics_option changes
+			*/
 			add_action( 'add_option_ffc_statistics_option', function () {
-				do_action( 'fruitful_send_stats' );
+				$this->product_stats_settings_update();
+				$this->send_stats();
 			} );
 			
 			add_action( 'update_option_ffc_statistics_option', function () {
-				do_action( 'fruitful_send_stats' );
+				$this->product_stats_settings_update();
+				$this->send_stats();
 			} );
 			
-			
-			// Add general action hook for sync fruitful PRODUCT options by ffc_statistics_option change
-			// ----------------------------------------------------------------------------------
-			add_action( 'product_stats_settings_update', array( $this, 'product_stats_settings_update' ) );
-			
-			// Sync PRODUCT options by ffc_statistics_option(pre_update_option_{$option})(add|update_option_{$option})
-			
-			add_action( 'add_option_ffc_statistics_option', function () {
-				do_action( 'product_stats_settings_update' );
-			} );
-			
-			add_action( 'update_option_ffc_statistics_option', function () {
-				do_action( 'product_stats_settings_update' );
-			} );
-			
-			
-			// Sync ffc_statistics_option by PRODUCT options(pre_update_option_{$option})
-			// ----------------------------------------------------------------------------
-			add_filter( 'pre_update_option_' . $this->product_option_name, array(
-				$this,
-				'sync_general_stats_option'
-			), 10, 3 );
+			/*
+			* Sync ffc_statistics_option by PRODUCT options(pre_update_option_{$product_option_name})
+			* --------------------------------------------------------------
+			*/
+			add_filter( 'pre_update_option_' . $this->product_option_name, array( $this, 'general_stats_option_update' ), 10, 3 );
 			
 			
 			// Add any update THEME\PLUGIN action to send stats
-			// ------------------------------------------------
-			add_action( 'upgrader_process_complete', function () {
-				do_action( 'fruitful_send_stats' );
-			} );
+			// --------------------------------------------------------------
+			add_action( 'upgrader_process_complete', array( $this, 'send_stats' ) );
 			
+			add_action( 'activated_plugin', array( $this, 'send_stats' ) );
 			
-			// Add sending stats periodically  by transient
-			// ------------------------------------------------
-			add_action( 'admin_footer', array( $this, 'check_stats' ), 999 );
-			
-			if ( ! function_exists( 'get_plugin_data' ) ) {
-				require_once ABSPATH . 'wp-admin/includes/plugin.php';
-			}
+			add_action( 'deactivated_plugin', array( $this, 'send_stats' ) );
 		}
 		
 		/**
@@ -125,7 +104,7 @@ if ( !class_exists('FruitfulStatistic')) {
 		public function send_stats() {
 			
 			$params = $this->get_stats_info_array();
-			
+
 			if ( ! empty( $params ) ) {
 				
 				$host = 'https://app.fruitfulcode.com/';
@@ -138,7 +117,7 @@ if ( !class_exists('FruitfulStatistic')) {
 					'blocking'  => false,
 					'body'      => $params
 				) );
-				
+				error_log(print_r($params,true));
 				
 				return is_wp_error( $success ) ? false : true;
 			}
@@ -170,7 +149,7 @@ if ( !class_exists('FruitfulStatistic')) {
 					$ffc_name = $ffc_statistics_option['ffc_subscribe_name'];
 				}
 			}
-			
+
 			return $this->build_stats_info_array( $ffc_statistic, $ffc_subscribe, $ffc_email, $ffc_name );
 		}
 		
@@ -196,7 +175,6 @@ if ( !class_exists('FruitfulStatistic')) {
 			$stat_info   = array();
 			$user_info   = array();
 			$plugin_data = array();
-			
 			
 			// basic_info
 			
@@ -248,6 +226,7 @@ if ( !class_exists('FruitfulStatistic')) {
 							'plugins' => get_option( 'active_plugins' )
 						) )
 					);
+
 				} else {
 					$stat_info = array(
 						'site_name'    => get_option( 'blogname' ),
@@ -283,55 +262,8 @@ if ( !class_exists('FruitfulStatistic')) {
 		}
 		
 		/**
-		 * Function send statistics on first theme init
+		 * Function check options on init in wp admin
 		 */
-		public function check_stats() {
-			
-			$ffc_fruitfultheme_stat_sent = get_transient( 'ffc_fruitfultheme_stat_sent' );
-			
-			if ( empty( $ffc_fruitfultheme_stat_sent ) ) {
-				set_transient( 'ffc_fruitfultheme_stat_sent', 1, 1728000 ); //1728000 = 3600 * 24 * 20
-				do_action( 'fruitful_send_stats' );
-			}
-		}
-		
-		/**
-		 * Function update general ffc_statistics_option on save theme PRODUCT options
-		 *
-		 * @param $value
-		 * @param $old_value
-		 *
-		 * @return mixed
-		 */
-		public function sync_general_stats_option( $value, $old_value ) {
-			
-			
-			if ( ! isset( $value['ffc_subscribe'] ) && ! isset( $old_value['ffc_subscribe'] ) &&
-			     ! isset( $value['ffc_subscribe_name'] ) && ! isset( $old_value['ffc_subscribe_name'] ) &&
-			     ! isset( $value['ffc_subscribe_email'] ) && ! isset( $old_value['ffc_subscribe_email'] ) &&
-			     ! isset( $value['ffc_statistic'] ) && ! isset( $old_value['ffc_statistic'] ) ) {
-				
-				return $value;
-			}
-			
-			if ( $value['ffc_subscribe'] !== $old_value['ffc_subscribe'] ||
-			     $value['ffc_subscribe_name'] !== $old_value['ffc_subscribe_name'] ||
-			     $value['ffc_subscribe_email'] !== $old_value['ffc_subscribe_email'] ||
-			     $value['ffc_statistic'] !== $old_value['ffc_statistic']
-			) {
-				$ffc_statistics_option = get_option( 'ffc_statistics_option' );
-				
-				$ffc_statistics_option['ffc_statistic']       = ( $value['ffc_statistic'] === 'on' ) ? 1 : 0;
-				$ffc_statistics_option['ffc_subscribe']       = ( $value['ffc_subscribe'] === 'on' ) ? 1 : 0;
-				$ffc_statistics_option['ffc_subscribe_email'] = sanitize_email( $value['ffc_subscribe_email'] );
-				$ffc_statistics_option['ffc_subscribe_name']  = sanitize_text_field( $value['ffc_subscribe_name'] );
-				
-				update_option( 'ffc_statistics_option', $ffc_statistics_option );
-			}
-			
-			return $value;
-		}
-		
 		public function init_stats_option() {
 			
 			$ffc_statistics_option = get_option( 'ffc_statistics_option' );
@@ -348,6 +280,17 @@ if ( !class_exists('FruitfulStatistic')) {
 			
 			update_option( 'ffc_statistics_option', $ffc_statistics_option );
 		}
+		
+		/**
+		 * Function update general ffc_statistics_option on save theme PRODUCT options
+		 * (individual for each product)
+		 *
+		 * @param $value
+		 * @param $old_value
+		 *
+		 * @return mixed
+		 */
+		abstract public function general_stats_option_update( $value, $old_value );
 		
 		/**
 		 * Function update fruitful theme customizer option from general ffc statistic option

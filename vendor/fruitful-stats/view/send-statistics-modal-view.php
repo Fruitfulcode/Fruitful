@@ -1,6 +1,6 @@
-<div class="frtfl-modal modal" id="subscribe-notification-container">
-	<form action="#" id="frtfl-modal-form">
-		<div class="frtfl-modal__content">
+<div class="ffst-modal modal" id="subscribe-notification-container">
+	<form action="#" id="ffst-modal-form">
+		<div class="ffst-modal__content">
 			<h2><?php _e( 'Please, help us perform better!', 'fruitful-stats' ); ?></h2>
 			<p class="description">
 				<?php _e( 'We would be happy if you assist us in becoming better. Share your site statistic to help us
@@ -25,7 +25,7 @@
 					<?php _e( 'Subscribe to the Fruitful Code newsletters', 'fruitful-stats' ) ?>
 				</label>
 
-				<div class="frtfl-modal__content_user-info hidden" id="frtfl-modal__content_user-info">
+				<div class="ffst-modal__content_user-info hidden" id="ffst-modal__content_user-info">
 					<div class="floating-placeholder__wrapper subscribe__input_name">
 						<input type="text" placeholder="Name" required disabled>
 						<label><?php _e( 'Name', 'fruitful-stats' ); ?>*</label>
@@ -38,7 +38,7 @@
 			</div>
 
 			<div class="form-group submit-btn__wrapper">
-				<button id="frtfl-modal__submit-btn"
+				<button id="ffst-modal__submit-btn"
 				        class="button button-primary"><?php _e( 'Submit', 'fruitful-stats' ); ?></button>
 			</div>
 		</div>

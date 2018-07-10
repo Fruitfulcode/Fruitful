@@ -9,14 +9,13 @@
 		}
 		var statsInput = document.getElementById('modal-ffc-statistic');
 		var subscribeInput = document.getElementById('modal-ffc-subscribe');
-		var userInfoContainer = document.getElementById("frtfl-modal__content_user-info");
+		var userInfoContainer = document.getElementById("ffst-modal__content_user-info");
 
-		var modalForm = document.getElementById("frtfl-modal-form");
-		var submitBtn = document.getElementById("frtfl-modal__submit-btn");
+		var modalForm = document.getElementById("ffst-modal-form");
+		var submitBtn = document.getElementById("ffst-modal__submit-btn");
 		var modalData = {};
 
 		modalContainer.addEventListener("click", function (e) {
-
 			//Statistics checkbox event. If checked value=1
 			if (e.target === statsInput) {
 				statsInput.value = statsInput.checked ?  1 : 0;
@@ -52,15 +51,7 @@
 
 			// Dismiss subscribe notification Event
 			if (e.target.classList.contains("notice-dismiss")) {
-				var data = {
-					action: "fruitfultheme_dismiss_subscribe_notification",
-					type: "json",
-				};
-
-				jQuery.post(ajaxurl, data, function (response) {
-					modalContainer.remove();
-					location.reload();
-				});
+				modalContainer.remove();
 			}
 
 		});
@@ -71,10 +62,10 @@
 
 					e.preventDefault();
 
-					var __notificationText = modalForm.querySelector('.frtfl-modal__content');
+					var __notificationText = modalForm.querySelector('.ffst-modal__content');
 
 					var data = {
-						action: "fruitfultheme_submit_modal",
+						action: "fruitful_statistic_submit_modal",
 						type: "json",
 						data: modalData
 					};

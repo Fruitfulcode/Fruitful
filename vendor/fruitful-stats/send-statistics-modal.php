@@ -18,13 +18,8 @@ if ( !class_exists('FruitfulStatisticModal')) {
 			add_action( 'admin_enqueue_scripts', array( $this, 'add_admin_scripts' ) );
 			
 			// Add action on submit modal notification
-			add_action( 'wp_ajax_fruitfultheme_submit_modal', array( $this, 'submit_modal' ) );
+			add_action( 'wp_ajax_fruitful_statistic_submit_modal', array( $this, 'submit_modal' ) );
 			
-			// Add action on click close button modal notification
-			add_action( 'wp_ajax_fruitfultheme_dismiss_subscribe_notification', array(
-				$this,
-				'dismiss_subscribe_notification'
-			) );
 		}
 		
 		/**
@@ -103,17 +98,9 @@ if ( !class_exists('FruitfulStatisticModal')) {
 					);
 				}
 			}
-			do_action( 'product_stats_settings_update' );
+
 			wp_send_json( $response );
 		}
 		
-		/**
-		 * Action click close button statistics modal notification
-		 */
-		public function dismiss_subscribe_notification() {
-			$ffc_statistics_option = get_option( 'ffc_statistics_option' );
-			update_option( 'ffc_statistics_option', $ffc_statistics_option );
-			wp_send_json( 'success' );
-		}
 	}
 }
