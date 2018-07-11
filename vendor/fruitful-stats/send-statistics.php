@@ -1,8 +1,8 @@
 <?php
 /**
- * Fruitful send techical data libruary
+ * Fruitful send techical data library
  *
- * This libruary send anonymous technical data to app.fruitfulcode.com
+ * This library send anonymous technical data to app.fruitfulcode.com
  * Also, if user subscribe to the Fruitful Code newsletters, system send to app.fruitfulcode user Name and Email for the latest updates.
  *
  * PHP version 5.4
