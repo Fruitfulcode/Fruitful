@@ -30,12 +30,9 @@ if ( !class_exists('FruitfulStatistic')) {
 		
 		public $controller;
 		
-		public $stats_path;
-		
-		public $stats_uri;
+		public $data;
 		
 		public $root_file;
-		
 
 		
 		/**
@@ -49,11 +46,11 @@ if ( !class_exists('FruitfulStatistic')) {
 			* Adding path and urls. Can change in extended class
 			*/
 			if ( $this->product_type == 'theme' ) {
-				$this->stats_path = get_template_directory() . '/vendor/';
-				$this->stats_uri = get_template_directory_uri() . '/vendor/';
+				$this->data['stats_path'] = get_template_directory() . '/vendor/';
+				$this->data['stats_uri'] = get_template_directory_uri() . '/vendor/';
 			} else {
-				$this->stats_path = plugin_dir_path( $this->root_file ) . 'vendor/';
-				$this->stats_uri = plugin_dir_url( $this->root_file )  . 'vendor/';
+				$this->data['stats_path'] = plugin_dir_path( $this->root_file ) . 'vendor/';
+				$this->data['stats_uri'] = plugin_dir_url( $this->root_file )  . 'vendor/';
 			}
 			
 			// INIT LOGIC
@@ -72,6 +69,14 @@ if ( !class_exists('FruitfulStatistic')) {
 				$this->product_stats_settings_update();
 				$this->send_stats();
 			} );
+			
+			if ( $this->product_type == 'theme' ) {
+				add_action( 'after_switch_theme', function () {
+					$this->product_stats_settings_update();
+				} );
+			} else {
+				register_activation_hook( $this->root_file, array( $this, 'product_stats_settings_update' ) );
+			}
 			
 			/*
 			* Sync ffc_statistics_option by PRODUCT options(pre_update_option_{$product_option_name})
@@ -102,7 +107,7 @@ if ( !class_exists('FruitfulStatistic')) {
 			
 			// Controller for modal notification
 			require_once __DIR__ . '/send-statistics-modal.php';
-			$this->controller->modal = new FruitfulStatisticModal( $this );
+			$this->controller->modal = new FruitfulStatisticModal( $this->data );
 		}
 		
 		/**
@@ -310,8 +315,3 @@ if ( !class_exists('FruitfulStatistic')) {
  * custom product class
  */
 require_once 'send-statistics-product.php';
-
-/**
- * modal form for request to sending statistics
- */
-require_once 'send-statistics-modal.php';

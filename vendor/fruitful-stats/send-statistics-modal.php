@@ -5,14 +5,14 @@ if ( !class_exists('FruitfulStatisticModal')) {
 	
 	class FruitfulStatisticModal {
 		
-		public $_super;
+		public $data;
 		
 		/**
 		 * Constructor
 		 **/
-		public function __construct( $_super ) {
+		public function __construct( $data ) {
 			
-			$this->_super = $_super;
+			$this->data = $data;
 			
 			// Add action to enqueue modal notification scripts
 			add_action( 'admin_enqueue_scripts', array( $this, 'add_admin_scripts' ) );
@@ -27,10 +27,10 @@ if ( !class_exists('FruitfulStatisticModal')) {
 		 */
 		public function add_admin_scripts() {
 			if ( ! wp_script_is( 'fruitful-stats-modal', 'enqueued' ) ) {
-				wp_enqueue_script( 'fruitful-stats-modal', $this->_super->stats_uri . 'fruitful-stats/assets/js/admin_scripts.js', array( 'jquery' ) );
+				wp_enqueue_script( 'fruitful-stats-modal', $this->data['stats_uri'] . 'fruitful-stats/assets/js/admin_scripts.js', array( 'jquery' ) );
 			}
 			if ( ! wp_style_is( 'fruitful-stats-modal-styles', 'enqueued' ) ) {
-				wp_enqueue_style( 'fruitful-stats-modal-styles', $this->_super->stats_uri . 'fruitful-stats/assets/styles/admin_styles.css' );
+				wp_enqueue_style( 'fruitful-stats-modal-styles', $this->data['stats_uri'] . 'fruitful-stats/assets/styles/admin_styles.css' );
 			}
 		}
 		
@@ -39,10 +39,7 @@ if ( !class_exists('FruitfulStatisticModal')) {
 		 * And update fruitful theme settings options on first theme init
 		 */
 		public function admin_show_modal() {
-			
-		
-			require $this->_super->stats_path . 'fruitful-stats/view/send-statistics-modal-view.php';
-			
+			require $this->data['stats_path'] . 'fruitful-stats/view/send-statistics-modal-view.php';
 		}
 		
 		/**
@@ -98,7 +95,7 @@ if ( !class_exists('FruitfulStatisticModal')) {
 					);
 				}
 			}
-
+			
 			wp_send_json( $response );
 		}
 		
