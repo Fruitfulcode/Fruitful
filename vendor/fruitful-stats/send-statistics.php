@@ -190,16 +190,16 @@ if ( !class_exists('FruitfulStatistic')) {
 			// basic_info
 			
 			if ( $this->product_type == 'theme' ) {
-				$basic_info = [
+				$basic_info = array(
 					'product_name' => $theme_info->get( 'Name' ),
 					'domain'       => esc_url(site_url()),
-				];
+				);
 			} else { // this block for plugins only
 				$plugin_data = get_plugin_data( $this->root_file );
-				$basic_info  = [
+				$basic_info  = array(
 					'product_name' => $plugin_data['Name'],
 					'domain'       => esc_url(site_url()),
-				];
+				);
 			}
 			
 			
