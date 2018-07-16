@@ -71,9 +71,7 @@ if ( !class_exists('FruitfulStatistic')) {
 			} );
 			
 			if ( $this->product_type == 'theme' ) {
-				add_action( 'after_switch_theme', function () {
-					$this->product_stats_settings_update();
-				} );
+				add_action( 'after_switch_theme', array( $this, 'product_stats_settings_update' ) ); 
 			} else {
 				register_activation_hook( $this->root_file, array( $this, 'product_stats_settings_update' ) );
 			}
