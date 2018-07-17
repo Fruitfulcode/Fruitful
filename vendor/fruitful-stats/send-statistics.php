@@ -193,6 +193,9 @@ if ( !class_exists('FruitfulStatistic')) {
 					'domain'       => esc_url(site_url()),
 				);
 			} else { // this block for plugins only
+				if( !function_exists('get_plugin_data') ){  //Need when theme options update by ajax
+					require_once ABSPATH . 'wp-admin/includes/plugin.php';
+				}
 				$plugin_data = get_plugin_data( $this->root_file );
 				$basic_info  = array(
 					'product_name' => $plugin_data['Name'],
