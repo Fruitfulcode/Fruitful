@@ -60,15 +60,9 @@ if ( !class_exists('FruitfulStatistic')) {
 			* Sync PRODUCT options by ffc_statistics_option (add|update_option_{$option})
 			* And SENDING STATS by ffc_statistics_option changes
 			*/
-			add_action( 'add_option_ffc_statistics_option', function () {
-				$this->product_stats_settings_update();
-				$this->send_stats();
-			} );
+			add_action( 'add_option_ffc_statistics_option', array( $this, 'sync_stat' ) );
 			
-			add_action( 'update_option_ffc_statistics_option', function () {
-				$this->product_stats_settings_update();
-				$this->send_stats();
-			} );
+			add_action( 'update_option_ffc_statistics_option', array( $this, 'sync_stat' ) );
 			
 			if ( $this->product_type == 'theme' ) {
 				add_action( 'after_switch_theme', array( $this, 'product_stats_settings_update' ) ); 
@@ -94,7 +88,16 @@ if ( !class_exists('FruitfulStatistic')) {
 			//Custom action to send stats (need do_action( 'fruitful_send_stats'))
 			add_action( 'fruitful_send_stats', array( $this, 'send_stats' ) );
 		}
-		
+
+		/**
+		 * Call product function for sync ffc_statistics_option with product options
+		 * Call sending statistic function
+		 */
+		public function sync_stat () {
+			$this->product_stats_settings_update();
+			$this->send_stats();
+		}
+
 		/**
 		 * Load and instantiate all application
 		 * classes necessary for ffc statistics
@@ -104,7 +107,7 @@ if ( !class_exists('FruitfulStatistic')) {
 			$this->controller = new stdClass();
 			
 			// Controller for modal notification
-			require_once __DIR__ . '/send-statistics-modal.php';
+			require_once dirname(__FILE__) . '/send-statistics-modal.php'; //dirname(__FILE__) used for php 5.2 compatibility
 			$this->controller->modal = new FruitfulStatisticModal( $this->data );
 		}
 		
