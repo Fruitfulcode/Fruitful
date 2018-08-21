@@ -6,7 +6,7 @@ We have created a theme based on our necessities and experience, we will be glad
 Our code is hand-made, so if you find a bug or have a wish to modify something, feel free to send us your feedback.
 We want to make our product even better and better and we need users support and feedbacks.
 
-Works perfect with WooCommerce till version 3.0. 
+Works perfect with WooCommerce till version 3.4
 
 Fruitful PRO – WordPress responsive theme contains all the options of FREE version plus more options like ability to change width for container grid and support latest WooCommerce version. 
 
@@ -108,18 +108,16 @@ Files: .pot, ru_Ru.po, ru_Ru.mo icluded. Default language is english.
     Changelog
 -------------------------------------------------------
 
-= 3.6.2 =
-19.06.2018
+= 3.7 =
+21.08.2018
 
+* Info: Check capability with latest woocommerce version
 * New: Added WPForms support
-* Bug fix: Fixed styles for forms
-
-= 3.6.1 =
-23.05.2018
-
 * New: Added ability to Subscribe for newsletters option
 * New: Added Subscribe for newsletters notification in admin Dashboard
+* Bug fix: Fixed styles for forms
 * Bug fix: Post css margin fix
+* Bug fix: Woocommerce styles
 
 = 3.6 =
 07.05.2018
