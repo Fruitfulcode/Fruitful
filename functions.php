@@ -1494,9 +1494,9 @@ if (class_exists('Woocommerce')) {
 	function woo_custom_product_searchform( $form ) {
 
 		$form = '<form role="search" method="get" class="woocommerce-product-search" action="' . esc_url( home_url( '/' ) ) . '">
-            <label class="screen-reader-text" for="woocommerce-product-search-field-' . (isset( $index ) ? absint( $index ) : 0) . '">' . _e( '', 'woocommerce' ) . '</label>
-            <input type="search" id="woocommerce-product-search-field-' . (isset( $index ) ? absint( $index ) : 0) . '" class="search-field" placeholder="' . esc_attr__( 'Search products&hellip;', 'woocommerce' ) . '" value="' . get_search_query() . '" name="s" />
-            <input type="submit" value="' . esc_attr_x( 'Search', 'submit button', 'woocommerce' ) . '" />
+            <label class="screen-reader-text" for="woocommerce-product-search-field-' . (isset( $index ) ? absint( $index ) : 0) . '">' . _e( '', 'fruitful' ) . '</label>
+            <input type="search" id="woocommerce-product-search-field-' . (isset( $index ) ? absint( $index ) : 0) . '" class="search-field" placeholder="' . esc_attr__( 'Search products&hellip;', 'fruitful' ) . '" value="' . get_search_query() . '" name="s" />
+            <input type="submit" value="' . esc_attr_x( 'Search', 'submit button', 'fruitful' ) . '" />
             <input type="hidden" name="post_type" value="product" />
         </form>';
 		return $form;

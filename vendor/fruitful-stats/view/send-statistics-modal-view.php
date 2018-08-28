@@ -4,7 +4,7 @@
 			<h2><?php _e( 'Please, help us perform better!', 'fruitful-stats' ); ?></h2>
 			<p class="description">
 				<?php _e( 'We would be happy if you assist us in becoming better. Share your site anonymous technical data to help us
-                        improve our products and services. Also, don’t forget to subscribe to the Fruitful Code
+                        improve our products and services. Also, don\'t forget to subscribe to the Fruitful Code
                         newsletters for the latest updates!', 'fruitful-stats' ); ?>
 			</p>
 			<div class="form-group">
