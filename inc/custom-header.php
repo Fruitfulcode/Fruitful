@@ -40,7 +40,7 @@ function fruitful_custom_header_setup() {
 		'flex-width' 			 => false,
 		'width'                  => 1000,
 		'height'                 => 250,
-		'default-text-color'     => '000',
+		'default-text-color'     => '333',
 		'random-default'         => false,
 		'header-text' 			 => false,
 		'uplodas'				 => true,
@@ -83,6 +83,7 @@ if ( ! function_exists( 'get_custom_header' ) ) {
 	}
 }
 
+
 if ( ! function_exists( 'fruitful_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog
@@ -94,8 +95,7 @@ if ( ! function_exists( 'fruitful_header_style' ) ) :
 function fruitful_header_style() {
 
 	// If no custom options for text are set, let's bail
-	// get_header_textcolor() options: HEADER_TEXTCOLOR is default, hide text (returns 'blank') or any hex value
-	if ( HEADER_TEXTCOLOR == get_header_textcolor() )
+	if ( get_header_textcolor() == '333' )
 		return;
 	// If we get this far, we have custom styles. Let's do this.
 	?>
