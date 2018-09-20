@@ -103,12 +103,16 @@ jQuery(document).ready(function($) {
 
     /*fix touch event for related and upsells product single product page*/
     //todo: Check if this feature is not superfluous
-    var element = $('.upsells .product, .related .product');
-    element.bind('touchstart', function(){
-        var link = $(this).find('a.button').attr('href');
-        location.href = link;
-        return false
-    });
+    //
+    // UPD: it caused bug, products on mobile got added to cart immediately on touch
+    // even while scrolling, had to comment this.
+    //
+    // var element = $('.upsells .product, .related .product');
+    // element.bind('touchstart', function(){
+    //     var link = $(this).find('a.button').attr('href');
+    //     location.href = link;
+    //     return false
+    // });
 
     fixed_header();
     setSlidersMaxHeight();
