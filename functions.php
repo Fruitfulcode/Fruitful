@@ -2107,10 +2107,10 @@ function fruitful_frontend_scripts_include_lightbox() {
 }
 
 if (is_admin()) {
-	// Fruitful statistics
-	require get_template_directory() . '/vendor/fruitful-stats/send-statistics.php';
-	
-	$FruitfulTheme_Stats = new FruitfulTheme_Stats( __FILE__ );
-	$FruitfulTheme_Stats->dispatch();
+	// Fruitful apps
+	require get_template_directory() . '/vendor/fruitful-app/fruitful-app-core.php';
+
+	$FF_FruitfulTheme_App = new FruitfulThemeApp( __FILE__ );
+	$FF_FruitfulTheme_App->dispatch();
 }
 

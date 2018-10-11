@@ -1,11 +1,11 @@
 <div class="ffst-modal modal" id="subscribe-notification-container">
 	<form action="#" id="ffst-modal-form">
 		<div class="ffst-modal__content">
-			<h2><?php _e( 'Please, help us perform better!', 'fruitful-stats' ); ?></h2>
+			<h2><?php _e( 'Please, help us perform better!', 'fruitful-app' ); ?></h2>
 			<p class="description">
 				<?php _e( 'We would be happy if you assist us in becoming better. Share your site anonymous technical data to help us
                         improve our products and services. Also, don\'t forget to subscribe to the Fruitful Code
-                        newsletters for the latest updates!', 'fruitful-stats' ); ?>
+                        newsletters for the latest updates!', 'fruitful-app' ); ?>
 			</p>
 			<div class="form-group">
 				<label>
@@ -13,7 +13,7 @@
 					       id="modal-ffc-statistic"
 					       value="1"
 					       checked>
-					<?php _e( 'Send configuration information to Fruitful Code', 'fruitful-stats' ) ?>
+					<?php _e( 'Send configuration information to Fruitful Code', 'fruitful-app' ) ?>
 				</label>
 			</div>
 
@@ -22,24 +22,24 @@
 					<input type="checkbox"
 					       id="modal-ffc-subscribe"
 					       value="0">
-					<?php _e( 'Subscribe to the Fruitful Code newsletters', 'fruitful-stats' ) ?>
+					<?php _e( 'Subscribe to the Fruitful Code newsletters', 'fruitful-app' ) ?>
 				</label>
 
 				<div class="ffst-modal__content_user-info hidden" id="ffst-modal__content_user-info">
 					<div class="floating-placeholder__wrapper subscribe__input_name">
 						<input type="text" placeholder="Name" required disabled>
-						<label><?php _e( 'Name', 'fruitful-stats' ); ?>*</label>
+						<label><?php _e( 'Name', 'fruitful-app' ); ?>*</label>
 					</div>
 					<div class="floating-placeholder__wrapper subscribe__input_email">
 						<input type="email" placeholder="E-mail" required disabled>
-						<label><?php _e( 'E-mail', 'fruitful-stats' ); ?>*</label>
+						<label><?php _e( 'E-mail', 'fruitful-app' ); ?>*</label>
 					</div>
 				</div>
 			</div>
 
 			<div class="form-group submit-btn__wrapper">
 				<button id="ffst-modal__submit-btn"
-				        class="button button-primary"><?php _e( 'Submit', 'fruitful-stats' ); ?></button>
+				        class="button button-primary"><?php _e( 'Submit', 'fruitful-app' ); ?></button>
 			</div>
 		</div>
 		<button type="button" class="notice-dismiss"></button>
