@@ -1551,7 +1551,22 @@ class fruitful_theme_options {
             </form>
 
             <div id="sidebar-promo" class="sidebar-promo">
-                <div class="sidebar-promo-widget promo-support">
+
+	        <?php   global $FF_FruitfulTheme_App;
+		            if( $FF_FruitfulTheme_App->controller->advertising->is_advertising_enabled() ) : ?>
+
+	            <div class="sidebar-promo-widget promo-advertising">
+		            <h3><?php _e( 'Fruitful Code projects', 'fruitful' ); ?></h3>
+		            <div class="sidebar-promo-content">
+			            <div class="advertising-wrapper">
+				            <?php do_action('display_advertising'); ?>
+			            </div>
+		            </div>
+	            </div>
+
+				<?php endif; ?>
+
+	            <div class="sidebar-promo-widget promo-support">
                     <h3><?php _e( 'Support', 'fruitful' ); ?></h3>
                     <p class="sidebar-promo-content"><?php
 						_e( 'If You faced with problems or find error or bug, please', 'fruitful' );

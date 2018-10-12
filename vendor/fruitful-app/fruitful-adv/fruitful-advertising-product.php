@@ -67,4 +67,17 @@
 				echo $adv['html'];
 			}
 		}
+
+		/**
+		* Check is advertising enabled
+		*/
+		public function is_advertising_enabled(){
+			$adv = get_option( 'ffc_advertising_option' );
+
+			if( ! empty($adv['html']) ) {
+				return true;
+			}
+
+			return false;
+		}
 	}

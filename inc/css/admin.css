@@ -97,12 +97,15 @@ a:hover, a:active, a:focus {	outline: 0; }
 .box-options label {font-family: Arial;}
 .sidebar-promo {float: left; width:298px; max-width: 934px; padding: 0; min-height: 150px; background-color: #f1f1f1; margin:0;}
 .sidebar-promo-widget{float:left; width:254px; padding: 15px 22px 5px; margin:0;}
-.sidebar-promo .sidebar-promo-content{float: left;padding:15px 20px 25px; background-color: #ffffff; margin:0;}
+.sidebar-promo .sidebar-promo-content{float: left;padding:15px 20px 25px; background-color: #ffffff; margin:0;box-sizing: border-box;}
 .sidebar-promo .promo-about .sidebar-promo-content {padding:15px 20px 5px;}
 .sidebar-promo h3 {color: #3e3e3e; font-weight: bold; font-size: 16px; padding: 6px 0 6px 40px; margin: 0 0 20px 0;}
 .sidebar-promo .promo-support h3 {background: url('../images/support.png') no-repeat 0 0 transparent;}
+.sidebar-promo .promo-advertising h3 {background: url('../images/advertising.png') no-repeat 0 0 transparent;}
 .sidebar-promo .promo-customization h3 {background: url('../images/customization.png') no-repeat 0 0 transparent;}
-.sidebar-promo p {color:#3e3e3e; font-size:14px; margin:0 0 1.5em 0; padding:0; font-family:Arial; line-height:24px;}
+.sidebar-promo  {color:#3e3e3e; font-size:14px; margin:0 0 1.5em 0; padding:0; font-family:Arial; line-height:24px;}
+.sidebar-promo .promo-advertising .advertising-wrapper {max-width: 214px; overflow: hidden;}
+.sidebar-promo .promo-advertising .advertising-wrapper img {max-width: 100%;}
 .sidebar-promo .sidebar-promo-list {background-color: #fff; display: inline-block; margin-top: 0; padding: 0 20px 25px 38px; list-style-type: square; font-size: 14px; font-family: Arial;}
 .sidebar-promo .sidebar-promo-list span {font-weight: 600;}
 .sidebar-promo .promo-about h3 {background: url('../images/about.png') no-repeat 0 0 transparent;}
@@ -147,8 +150,9 @@ div.updated, div.error { margin: 15px 0 15px; }
 }
 
 @media only screen and (max-width: 1199px) {
-	.sidebar-promo{width:auto;margin-top:25px;}
+	.sidebar-promo{width:auto;margin-top:25px; max-width: 100%;}
 	.sidebar-promo-widget{width:auto;padding:15px 0}
+	.sidebar-promo .promo-advertising .advertising-wrapper {max-width: 100%;}
 	.form-admin-fruitful{width:914px;width:calc(100% - 20px);}
 	.form-admin-fruitful .content{width:914px;width:calc(100% - 20px);}
 	.form-admin-fruitful .header, .form-admin-fruitful .footer{width: 904px;width:calc(100% - 10px);}
