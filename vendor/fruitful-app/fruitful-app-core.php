@@ -25,7 +25,7 @@ class FruitfulThemeApp {
 	}
 
 	/**
-	 * Load and instantiate all modules of fruitfulcode application
+	 * Load and initiate all modules of fruitfulcode application
 	 **/
 	public function dispatch() {
 

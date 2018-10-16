@@ -26,7 +26,7 @@
 			parent::__construct();
 
 			//Add action for display advertising on fruitfulcode product option page
-			add_action( 'display_advertising', array( $this, 'display_advertising' ) );
+			add_action( 'ffc_display_advertising', array( $this, 'display_advertising' ) );
 
 			// Add action to enqueue advertising styles and scripts
 			add_action( 'admin_enqueue_scripts', array( $this, 'add_admin_scripts' ) );

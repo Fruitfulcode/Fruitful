@@ -1559,7 +1559,7 @@ class fruitful_theme_options {
 		            <h3><?php _e( 'Fruitful Code projects', 'fruitful' ); ?></h3>
 		            <div class="sidebar-promo-content">
 			            <div class="advertising-wrapper">
-				            <?php do_action('display_advertising'); ?>
+				            <?php do_action('ffc_display_advertising'); ?>
 			            </div>
 		            </div>
 	            </div>
