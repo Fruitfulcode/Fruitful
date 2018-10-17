@@ -151,7 +151,6 @@ div.updated, div.error { margin: 15px 0 15px; }
 
 @media only screen and (max-width: 1199px) {
 	.sidebar-promo{width:auto;margin-top:25px; max-width: 100%;}
-	.sidebar-promo-widget{width:auto;padding:15px 0}
 	.sidebar-promo .promo-advertising .advertising-wrapper {max-width: 100%;}
 	.form-admin-fruitful{width:914px;width:calc(100% - 20px);}
 	.form-admin-fruitful .content{width:914px;width:calc(100% - 20px);}
