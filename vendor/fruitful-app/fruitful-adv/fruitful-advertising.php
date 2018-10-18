@@ -101,7 +101,7 @@ if ( !class_exists('FruitfulAdv')) {
 		public function init_advertising_option() {
 
 			if ( ! empty( get_option( 'ffc_advertising_option' ) ) && (bool) get_transient('ffc_advertising_option_actual') === true ) {
-				//return;
+				return;
 			}
 
 			$this->update_advertising();
