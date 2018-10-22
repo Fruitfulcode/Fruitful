@@ -82,7 +82,7 @@ if ( !class_exists('FruitfulAdv')) {
 		public function get_advertising() {
 
 			$host = 'https://dev.app.fruitfulcode.com/';
-			$uri  = 'api/product/advertising';
+			$uri  = 'api/advertising/get';
 
 			$params = $this->get_product_info_array();
 
