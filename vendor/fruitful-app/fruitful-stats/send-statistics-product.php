@@ -17,8 +17,13 @@ class FruitfulTheme_Stats extends FruitfulStatistic {
 		parent::__construct( $root_file );
 
 		//Redeclare path and uri ( in FruitfulStatistic construct it declared without /fruitful-app/ )
-		$this->data['stats_path'] = get_template_directory() . '/vendor/fruitful-app/';
-		$this->data['stats_uri'] = get_template_directory_uri() . '/vendor/fruitful-app/';
+        if($product_type === 'plugin') {
+            $this->data['stats_path'] = plugin_dir_path($root_file) . '/vendor/fruitful-app/';
+            $this->data['stats_uri'] = plugin_dir_url($root_file) . '/vendor/fruitful-app/';
+        } else {
+            $this->data['stats_path'] = get_template_directory() . '/vendor/fruitful-app/';
+            $this->data['stats_uri'] = get_template_directory_uri() . '/vendor/fruitful-app/';
+        }
 
 	}
 
