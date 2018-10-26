@@ -5,14 +5,15 @@
 		public $root_file;
 		public $root_url;
 		public $root_path;
-		public $product_type = 'theme'; //{theme|plugin}
+		public $product_type; //{theme|plugin}
 
 		/**
 		 * Constructor
 		 **/
-		public function __construct( $root_file ) {
+		public function __construct( $root_file, $product_type) {
 
 			$this->root_file = $root_file;
+            $this->product_type = $product_type;
 
 			//Adding path and urls
 			if ( $this->product_type == 'theme' ) {
@@ -71,7 +72,7 @@
 		/**
 		* Check is advertising enabled
 		*/
-		public function is_advertising_enabled(){
+		public function is_advertising_enabled() {
 			$adv = get_option( 'ffc_advertising_option' );
 
 			if( ! empty($adv['html']) ) {
