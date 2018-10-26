@@ -40,19 +40,21 @@
 
 			$adv = get_option( 'ffc_advertising_option' );
 
+			$product_info = $this->get_product_info_array();
+
 			//enqueue scripts for advertising
-			if( ! empty($adv['js']) ) {
+			if( ! empty($adv[ $product_info['product_name'] ]['js']) ) {
 				if ( ! wp_script_is( 'fruitful-app-advertising-scripts', 'enqueued' ) ) {
 					wp_enqueue_script( 'fruitful-app-advertising-scripts', $this->root_url . 'fruitful-adv/assets/js/scripts.js', array( 'jquery' ) );
-					wp_add_inline_script( 'fruitful-app-advertising-scripts', $adv['js'] );
+					wp_add_inline_script( 'fruitful-app-advertising-scripts', $adv[ $product_info['product_name'] ]['js'] );
 				}
 			}
 
 			//enqueue styles for advertising
-			if( ! empty($adv['css']) ) {
+			if( ! empty($adv[ $product_info['product_name'] ]['css']) ) {
 				if ( ! wp_style_is( 'fruitful-app-advertising-styles', 'enqueued' ) ) {
 					wp_enqueue_style( 'fruitful-app-advertising-styles', $this->root_url . 'fruitful-adv/assets/styles/styles.css');
-					wp_add_inline_style( 'fruitful-app-advertising-styles', $adv['css'] );
+					wp_add_inline_style( 'fruitful-app-advertising-styles', $adv[ $product_info['product_name'] ]['css'] );
 				}
 			}
 		}
@@ -60,12 +62,16 @@
 		/**
 		 * Display advertising on fruitfulcode product option page
 		 */
-		public function display_advertising() {
+		public function display_advertising( $return_value = false ) {
 
 			$adv = get_option( 'ffc_advertising_option' );
+            $product_info = $this->get_product_info_array();
 
-			if( ! empty($adv['html']) ) {
-				echo $adv['html'];
+			if( ! empty($adv[ $product_info['product_name'] ]['html']) ) {
+                if($return_value) {
+                    return $adv[ $product_info['product_name'] ]['html'];
+                }
+				echo $adv[ $product_info['product_name'] ]['html'];
 			}
 		}
 
@@ -74,8 +80,9 @@
 		*/
 		public function is_advertising_enabled() {
 			$adv = get_option( 'ffc_advertising_option' );
+            $product_info = $this->get_product_info_array();
 
-			if( ! empty($adv['html']) ) {
+			if( ! empty($adv[ $product_info['product_name'] ]['html']) ) {
 				return true;
 			}
 
