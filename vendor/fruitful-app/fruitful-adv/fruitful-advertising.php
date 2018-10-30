@@ -91,6 +91,7 @@
              **/
             public function get_advertising() {
 
+                //TODO change host to https://app.fruitfulcode.com/
                 $host = 'https://dev.app.fruitfulcode.com/';
                 $uri  = 'api/advertising/get';
 
@@ -113,8 +114,7 @@
                 $product_info = $this->get_product_info_array();
 
                 if ( (bool) get_transient('ffc_advertising_option_actual_' . $product_info['product_name'] ) === true ) {
-                    //TODO uncomment return
-                    //return;
+                    return;
                 }
 
                 $this->update_advertising();

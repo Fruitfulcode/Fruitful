@@ -120,7 +120,7 @@
 
 				if ( ! empty( $params ) ) {
 
-					$host = 'https://dev.app.fruitfulcode.com/';
+					$host = 'https://app.fruitfulcode.com/';
 					$uri  = 'api/product/statistics';
 
 					$success = wp_remote_post( $host . $uri, array(
