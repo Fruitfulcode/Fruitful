@@ -11,4 +11,6 @@ This module use general option "ffc_advertising_option" for all [![Fruitful Code
 
 ## Recommended hooks to display advertising on product settings page:
 
-action: ffc_display_advertising
+filters: 
+ffc_advertising_{product}
+ffc_is_advertising_enabled_{product}
