@@ -2110,7 +2110,6 @@ if (is_admin()) {
 	// Fruitful apps
 	require get_template_directory() . '/vendor/fruitful-app/fruitful-app-core.php';
 
-	global $FF_FruitfulTheme_App;
 	$FF_FruitfulTheme_App = new FruitfulThemeApp( __FILE__ );
 	$FF_FruitfulTheme_App->dispatch();
 }

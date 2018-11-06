@@ -1555,7 +1555,7 @@ class fruitful_theme_options {
 	        <?php if( apply_filters('ffc_is_advertising_enabled_fruitful', null) ) : ?>
 
 	            <div class="sidebar-promo-widget promo-advertising">
-		            <h3><?php _e( 'Fruitful Code projects', 'fruitful' ); ?></h3>
+		            <h3><?php _e( 'More projects', 'fruitful' ); ?></h3>
 		            <div class="sidebar-promo-content">
 			            <div class="advertising-wrapper">
 				            <?php

@@ -96,8 +96,7 @@
 			public function get_advertising()
 			{
 
-				//TODO change host to https://app.fruitfulcode.com/
-				$host = 'https://dev.app.fruitfulcode.com/';
+				$host = 'https://app.fruitfulcode.com/';
 				$uri = 'api/advertising/get';
 
 				$params = $this->get_product_info_array();
