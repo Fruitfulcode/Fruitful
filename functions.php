@@ -843,7 +843,7 @@ if (!function_exists('fruitful_get_socials_icon')) {
 		if(!empty($theme_options['tripadvisor_link'])) 	{ $out .= '<a class="tripadvisor" title="tripadvisor" href="'	.	esc_url($theme_options['tripadvisor_link']) 	. '" target="_blank"><i class="fa"></i></a>'; }	
 		if(!empty($theme_options['ello_link'])) 	{ $out .= '<a class="ello" title="ello" href="'	.	esc_url($theme_options['ello_link']) 	. '" target="_blank"></a>'; }			
 		
-		echo '<div class="social-icon">' . $out . '</div>';
+		echo '<div class="ff-social-icon social-icon">' . $out . '</div>';
 	}
 }
 
