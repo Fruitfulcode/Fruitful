@@ -206,16 +206,14 @@ function fruitful_wp_title( $title, $sep ) {
 }
 //Change thumbnail size by parameter sidebar
 if ( ! function_exists( 'fruitful_thumbnail_size' ) ) {
-	function fruitful_thumbnail_size( $html, $post_id, $post_thumbnail_id, $size ) {
-		//if ($size != 'post-thumbnails') return $html;
-
+	function fruitful_thumbnail_size( $html, $post_id ) {
 		$options = fruitful_get_theme_options();
-		if ((empty($options['layout_page_templ']) && is_page() )||
-			(empty($options['layout_single_templ']) && is_single()) ||
-			(empty($options['layout_tag_templ']) && is_archive()) ||
-			(empty($options['layout_cat_templ']) && is_archive()) ||
-			(empty($options['layout_archive_templ']) && is_archive())) {
-			$src = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), "full-post-thumbnails" );
+		if (($options['layout_page_templ'] === '0' && is_page() )||
+			($options['layout_single_templ']  === '0'  && is_single()) ||
+			($options['layout_tag_templ']  === '0' && is_archive()) ||
+			($options['layout_cat_templ'] === '0' && is_archive()) ||
+			($options['layout_archive_templ'] === '0' && is_archive())) {
+			$src = wp_get_attachment_image_src( get_post_thumbnail_id( $post_id ), 'full' );
 			$html = '<img class="attachment-post-thumbnail wp-post-image" src="'.$src[0].'"/>';
 		}
 		return $html;
