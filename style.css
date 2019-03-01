@@ -1013,7 +1013,8 @@ ul#lang-select-popup{
     background-position: -466px 0;
 }
 
-.social-icon>a>i{color:#fff;background: #333333; border-radius: 50%; padding: 5.5px; margin:1px; width: 17px; height: 17px; text-align: center; font-size: 17px;}
+.social-icon>a>i{color:#fff;background: #333333; border-radius: 50%; padding: 5.5px; margin:1px; width: 17px; height: 17px; text-align: center; font-size: 17px; box-sizing: content-box;}
+.ff-social-icon.social-icon>a>i{font-family: "FontAwesome";}
 .social-icon a>.fa:before{font-size:17px;}
 .social-icon a.soundcloud >i, .social-icon a.tripadvisor>i	{padding:5.5px 0;width:28px;}
 .social-icon a.facebook .fa:before	{content: "\f09a";}
