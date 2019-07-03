@@ -197,39 +197,6 @@ class fruitful_theme_options {
 					'default'     => 'on',
 				),
 
-				array(
-					'id'       => 'ffc_statistic',
-					'type'     => 'checkbox',
-					'label'    => __( 'Fruitful Code statistic', 'fruitful' ),
-					'info' => __( 'We would be happy if you assist us in becoming better. Share your site anonymous technical data to help us improve our products and services', 'fruitful' ),
-					'description'     => __( 'Yes', 'fruitful' ),
-					'default'  => 'on',
-				),
-				array(
-					'id'       => 'ffc_subscribe',
-					'type'     => 'checkbox',
-					'label'    => __( 'Subscribe to Newsletters', 'fruitful' ),
-					'info' => __( 'Subscribe to the Fruitful Code newsletters', 'fruitful' ),
-					'description'     => __( 'Yes', 'fruitful' ),
-					'default'  => 'off',
-				),
-				array(
-					'id'          => 'ffc_subscribe_name',
-					'type'        => 'text',
-					'label'       => __( 'Name', 'fruitful' ),
-					'default'     => '',
-					'info' => __( 'Please enter Your Name', 'fruitful' ),
-					'description' => ''
-				),
-				array(
-					'id'          => 'ffc_subscribe_email',
-					'type'        => 'text',
-					'label'       => __( 'E-mail', 'fruitful' ),
-					'default'     => '',
-					'info' => __( 'Please enter Your E-mail', 'fruitful' ),
-					'description' => ''
-				),
-
 				( ( function_exists( 'icl_get_languages' ) ) ?
 					array(
 						'id'          => 'is_wpml_ready',
