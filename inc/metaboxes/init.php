@@ -280,7 +280,7 @@ class cmb_Meta_Box {
 		wp_localize_script( 'cmb-scripts', 'cmb_l10', apply_filters( 'cmb_localized_data', array(
 			'ajax_nonce'      => wp_create_nonce( 'ajax_nonce' ),
 			'script_debug'    => defined('SCRIPT_DEBUG') && SCRIPT_DEBUG,
-			'new_admin_style' => version_compare( $wp_version, '3.7', '>' ),
+			'new_admin_style' => version_compare( $wp_version, '3.8', '>' ),
 			'object_type'     => self::get_object_type(),
 			'upload_file'     => __('Use this file', 'fruitful'),
 			'remove_image'    => __('Remove Image', 'fruitful'),

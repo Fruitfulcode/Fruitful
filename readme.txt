@@ -108,6 +108,12 @@ Files: .pot, ru_Ru.po, ru_Ru.mo icluded. Default language is english.
     Changelog
 -------------------------------------------------------
 
+= 3.8 =
+03.07.2019
+
+* Bug fix: Fixed slider on mobile devices
+* Optimization: Removed statistic
+
 = 3.7 =
 21.08.2018
 
