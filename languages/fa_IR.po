@@ -177,7 +177,7 @@ msgstr ""
 
 #: functions.php:1638
 msgid "Search for products"
-msgstr ""
+msgstr "محصولات را جست و جو کنید"
 
 #: functions.php:1692
 msgid "Front page displays Error."
@@ -185,7 +185,7 @@ msgstr ""
 
 #: functions.php:1692
 msgid "Select different pages!"
-msgstr ""
+msgstr "صفحات دیگری را انتخاب کنید!"
 
 #: functions.php:1743
 #, php-format
@@ -236,7 +236,7 @@ msgstr ""
 
 #: functions.php:1927
 msgid " and use them."
-msgstr ""
+msgstr " و از آنها استفاده کنید."
 
 #: image.php:25
 #, php-format
