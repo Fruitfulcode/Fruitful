@@ -1810,7 +1810,10 @@ if ( ! function_exists( 'fruitful_get_content_with_custom_sidebar' ) ) {
 							<section id="primary" class="content-area">
 								<div id="content" class="site-content" role="main">
 
-								<?php if ( have_posts() ) : ?>
+								<?php
+								// "site_content_override" allows page to provide customized content
+								$site_content_override = apply_filters( 'site_content_override', false );
+								if ( $site_content_override != true && have_posts() ) : ?>
 										<header class="page-header">
 											<h1 class="page-title">
 												<?php
@@ -1865,7 +1868,7 @@ if ( ! function_exists( 'fruitful_get_content_with_custom_sidebar' ) ) {
 										endwhile; 
 										fruitful_content_nav( 'nav-below' );
 										
-									else : 
+									elseif ( $site_content_override != true ) : 
 										if (is_404()) {
 											get_template_part( 'content', '404' );	
 										} else {
