@@ -1834,6 +1834,9 @@ if ( ! function_exists( 'fruitful_get_content_with_custom_sidebar' ) ) {
 														} elseif ( is_year() ) {
 															printf( __( 'Yearly Archives: %s', 'fruitful' ), '<span>' . get_the_date( 'Y' ) . '</span>' );
 
+														} elseif ( get_post_type() != "post" && !empty(get_post_type_object(get_post_type())->label) ) {
+															echo get_post_type_object(get_post_type())->label;
+															
 														} else {
 															_e( 'Archives', 'fruitful' );
 														}
