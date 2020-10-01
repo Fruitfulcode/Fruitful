@@ -73,8 +73,8 @@ Configure colors as you need.
 Choose web-safe fonts and 20 popular Google fonts.
 
 === 2 Jquery slider included ===
-- Nivoslider
-- Flex slide
+| * Nivoslider   |
+| * Flex slide   |
 
 === Social links ===
 Easy add your links to your social profiles, which will be display in footer or header as icons.
