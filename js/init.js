@@ -79,7 +79,7 @@ jQuery(document).ready(function($) {
     if ($('.resp_full_width_menu').length > 0){
         var respMenuMaxHeight = $(window).height()/2 + 50;
         $('.resp_full_width_menu .site-header .menu_wrapper').css({'max-height' : respMenuMaxHeight});
-        $('.resp_full_width_menu button.navbar-toggle').live('click', function(){
+        $('.resp_full_width_menu button.navbar-toggle').on('click', function(){
             if ($(this).hasClass('collapsed')){
                 $('.resp_full_width_menu .menu_wrapper').fadeIn('slow').removeClass('collapse');
                 $(this).removeClass('collapsed');
@@ -90,7 +90,7 @@ jQuery(document).ready(function($) {
         });
     }
 
-    $('.resp_full_width_menu .language_switcher .current').live('click', function(e) {
+    $('.resp_full_width_menu .language_switcher .current').on('click', function(e) {
         var el = $(this);
         var child = el.find('#lang-select-popup');
         if (child.hasClass('active')) {
