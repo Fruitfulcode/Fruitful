@@ -1191,8 +1191,7 @@ class fruitful_theme_options {
 					'info'      => __( 'Replace default theme copyright information and links', 'fruitful' ),
 					'box-title' => __( 'Copyright section', 'fruitful' ),
 					'type'      => 'textarea',
-					'default'   => __( 'Fruitful theme by <a href="https://github.com/fruitfulcode/">fruitfulcode</a> Powered by: <a href="http://wordpress.org">WordPress</a>',
-						'fruitful' ),
+					'default'   => sprintf( __( 'Fruitful theme by %1$sfruitfulcode%2$s Powered by: %3$sWordPress%2$s', 'fruitful' ), '<a href="' . esc_url( 'https://github.com/fruitfulcode/' ). '">', '</a>', '<a href="' . esc_url( 'http://wordpress.org' ). '">', '&#183;' ),
 				)
 			)
 		);
