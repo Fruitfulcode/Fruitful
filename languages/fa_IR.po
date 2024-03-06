@@ -120,7 +120,7 @@ msgstr "سایدبار اصلی"
 
 #: functions.php:187
 msgid "Blog Sidebar"
-msgstr ""
+msgstr "سایدبار وبلاگ"
 
 #: functions.php:196
 msgid "Single Post Sidebar"
@@ -140,7 +140,7 @@ msgstr ""
 
 #: functions.php:300
 msgid "Navigate to..."
-msgstr ""
+msgstr "بروید به ..."
 
 #: functions.php:581 functions.php:586
 msgid "Please add images for slider in theme options!"
@@ -177,7 +177,7 @@ msgstr ""
 
 #: functions.php:1638
 msgid "Search for products"
-msgstr ""
+msgstr "محصولات را جست و جو کنید"
 
 #: functions.php:1692
 msgid "Front page displays Error."
@@ -185,7 +185,7 @@ msgstr ""
 
 #: functions.php:1692
 msgid "Select different pages!"
-msgstr ""
+msgstr "صفحات دیگری را انتخاب کنید!"
 
 #: functions.php:1743
 #, php-format
@@ -236,7 +236,7 @@ msgstr ""
 
 #: functions.php:1927
 msgid " and use them."
-msgstr ""
+msgstr " و از آنها استفاده کنید."
 
 #: image.php:25
 #, php-format
